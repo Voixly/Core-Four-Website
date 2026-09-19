@@ -1,6 +1,6 @@
 # Dependencies
+node_modules/
 platform/vendor/
-platform/node_modules/
 
 # Laravel runtime state
 platform/.env
