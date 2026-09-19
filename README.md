@@ -27,19 +27,22 @@ Public pages are rendered two ways:
 
 ### Local preview
 
-The Laravel app needs a database. To iterate on layout without one,
-`scripts/build-preview.py` renders the same JSON to static HTML:
+To compare against the live site you need the pages as flat files. The
+`preview:build` command produces them by sending real requests through the HTTP
+kernel, so the output is exactly what a visitor is served — there is no second
+renderer to keep in sync. Only links are rewritten, to point at the neighbouring
+files:
 
 ```bash
 cd platform
-python3 scripts/build-preview.py     # writes public/preview/
+php artisan preview:build            # writes public/preview/
+php artisan preview:build blog.html  # or just one page
 php -S 127.0.0.1:8792 -t public      # http://127.0.0.1:8792/preview/
 ```
 
-The preview builder deliberately mirrors the Blade renderer. If you change how a
-page renders, change both, then confirm the generated HTML matches what you
-expect. Elfsight widgets (reviews, maps, Instagram) are locked to the live
-domain and will not appear on localhost.
+The page list comes from the route table, so a new page appears in the preview
+with no extra wiring. Elfsight widgets (reviews, maps, Instagram) are locked to
+the live domain and will not appear on localhost.
 
 ## Checking fidelity (`tools/`)
 

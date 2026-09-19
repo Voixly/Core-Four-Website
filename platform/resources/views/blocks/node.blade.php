@@ -16,14 +16,14 @@
 
 <div class="{{ $isWrap ? 'blk-wrap' : 'blk-col' }}{{ $hasSurface ? ' blk-surface' : '' }}{{ $light }}{{ $media }}{{ $row ? ' blk-row' : '' }}"
      style="{{ $vars }}{{ $style ? ';'.$style : '' }}{{ $row ? ';grid-template-columns:'.$row : '' }}">
-    @if($isWrap)
-        @foreach($node['columns'] ?? [] as $child)
-            @include('blocks.node', ['node' => $child, 'parent' => $node])
-        @endforeach
-        @foreach($node['wraps'] ?? [] as $child)
-            @include('blocks.node', ['node' => $child, 'parent' => $node])
-        @endforeach
-    @elseif(!empty($node['item']))
+    {{-- A node can carry children and an item at once, as the blog listing does. --}}
+    @foreach($node['columns'] ?? [] as $child)
+        @include('blocks.node', ['node' => $child, 'parent' => $node])
+    @endforeach
+    @foreach($node['wraps'] ?? [] as $child)
+        @include('blocks.node', ['node' => $child, 'parent' => $node])
+    @endforeach
+    @if(!empty($node['item']))
         @include('blocks.item', ['item' => $node['item']])
     @endif
 </div>

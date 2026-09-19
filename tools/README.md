@@ -25,7 +25,7 @@ serve them first:
 
 ```bash
 cd platform
-python3 scripts/build-preview.py
+php artisan preview:build
 php -S 127.0.0.1:8792 -t public
 ```
 
