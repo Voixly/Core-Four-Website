@@ -1,6 +1,6 @@
 # Hostinger VPS cutover
 
-Replace WordPress / Betheme / Voixly on `corefourroofing.com` with this Laravel app. Keep the same domain. Do not change city slugs.
+Replace the existing WordPress stack on `corefourroofing.com` with this Laravel app. Keep the same domain. Do not change city slugs.
 
 ## Server
 

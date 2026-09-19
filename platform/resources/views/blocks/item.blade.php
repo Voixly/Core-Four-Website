@@ -1,40 +1,40 @@
 @php
-    use App\Support\Betheme;
+    use App\Support\PageLayout;
     $type = $item['type'] ?? 'unknown';
 @endphp
 
 @switch($type)
     @case('heading')
         @php $level = min(6, max(1, $item['level'] ?? 2)); @endphp
-        <h{{ $level }} class="bt-h bt-h{{ $level }}{{ !empty($item['light']) ? ' light-text' : '' }}" style="{{ Betheme::typeStyle($item) }}">{!! $item['html'] !!}</h{{ $level }}>
+        <h{{ $level }} class="blk-h blk-h{{ $level }}{{ !empty($item['light']) ? ' light-text' : '' }}" style="{{ PageLayout::typeStyle($item) }}">{!! $item['html'] !!}</h{{ $level }}>
         @break
 
     @case('text')
-        @php $textHtml = Betheme::restoreIcons($item['html'] ?? ''); @endphp
+        @php $textHtml = PageLayout::restoreIcons($item['html'] ?? ''); @endphp
         @if(str_contains($textHtml, 'Roofing Partners') || str_contains($textHtml, 'Associate Memberships'))
             @include('partials.logo-tracks')
         @else
-            <div class="bt-text{{ !empty($item['light']) ? ' light-text' : '' }}" style="{{ Betheme::typeStyle($item) }}">{!! $textHtml !!}</div>
+            <div class="blk-text{{ !empty($item['light']) ? ' light-text' : '' }}" style="{{ PageLayout::typeStyle($item) }}">{!! $textHtml !!}</div>
         @endif
         @break
 
     @case('image')
-        <img class="bt-img" src="{{ $item['img']['src'] }}" alt="{{ $item['img']['alt'] }}"
+        <img class="blk-img" src="{{ $item['img']['src'] }}" alt="{{ $item['img']['alt'] }}"
              @if(!empty($item['img']['w'])) width="{{ $item['img']['w'] }}" height="{{ $item['img']['h'] }}" @endif
              loading="lazy" decoding="async">
         @break
 
     @case('button')
-        @php $href = Betheme::href($item['href'] ?? '#'); @endphp
-        <a class="{{ Betheme::buttonClass($item) }}" href="{{ $href }}">
+        @php $href = PageLayout::href($item['href'] ?? '#'); @endphp
+        <a class="{{ PageLayout::buttonClass($item) }}" href="{{ $href }}">
             {{ $item['text'] }}
             @if(!empty($item['icon']))<i class="{{ $item['icon'] }}" aria-hidden="true"></i>@endif
         </a>
         @break
 
     @case('faq')
-        <div class="faq bt-faq">
-            @foreach((!empty($item['items']) ? $item['items'] : Betheme::defaultFaq()) as $i => $q)
+        <div class="faq blk-faq">
+            @foreach((!empty($item['items']) ? $item['items'] : PageLayout::defaultFaq()) as $i => $q)
                 <details @if($i === 0) open @endif>
                     <summary><span class="step-num">{{ $i + 1 }}</span> {{ $q['q'] }}</summary>
                     <div class="faq-body">{!! $q['a'] !!}</div>
@@ -47,7 +47,7 @@
         @php
             preg_match('/<h3[^>]*>(.*?)<\/h3>/si', $item['html'] ?? '', $titleMatch);
             $boxTitle = trim(html_entity_decode(strip_tags($titleMatch[1] ?? '')));
-            $icon = Betheme::iconForTitle($boxTitle);
+            $icon = PageLayout::iconForTitle($boxTitle);
         @endphp
         <div class="icon-box">
             <div class="icon-wrapper"><i class="{{ $icon }}" aria-hidden="true"></i></div>
@@ -61,13 +61,13 @@
 
     @case('html')
         @php
-            $rawHtml = Betheme::restoreIcons($item['html'] ?? '');
-            $posts = Betheme::blogPosts($rawHtml);
+            $rawHtml = PageLayout::restoreIcons($item['html'] ?? '');
+            $posts = PageLayout::blogPosts($rawHtml);
         @endphp
         @if($posts)
-            <div class="bt-blog">{!! $posts !!}</div>
+            <div class="blk-blog">{!! $posts !!}</div>
         @else
-            <div class="bt-raw">{!! $rawHtml !!}</div>
+            <div class="blk-raw">{!! $rawHtml !!}</div>
         @endif
         @break
 
@@ -83,7 +83,7 @@
         @break
 
     @case('gallery')
-        <div class="bt-gallery" style="--cols:{{ Betheme::galleryColumns($item) }}">
+        <div class="blk-gallery" style="--cols:{{ PageLayout::galleryColumns($item) }}">
             @foreach($item['images'] as $img)
                 <img src="{{ $img['src'] }}" alt="{{ $img['alt'] }}"
                      @if(!empty($img['w']) && !empty($img['h'])) style="aspect-ratio:{{ $img['w'] }}/{{ $img['h'] }}" @endif
@@ -97,7 +97,7 @@
         @break
 
     @case('icon')
-        <span class="bt-icon">
+        <span class="blk-icon">
             @if(Str::startsWith($item['icon'] ?? '', '/'))
                 <img src="{{ $item['icon'] }}" alt="">
             @else
@@ -107,7 +107,7 @@
         @break
 
     @case('list')
-        <ul class="bt-list">
+        <ul class="blk-list">
             @foreach($item['items'] as $li)
                 <li>{!! $li !!}</li>
             @endforeach
@@ -115,13 +115,13 @@
         @break
 
     @case('divider')
-        <hr class="bt-divider">
+        <hr class="blk-divider">
         @break
 
     @case('group')
-        <div class="bt-group" style="{{ Betheme::boxStyle($item['box'] ?? null) }}">
+        <div class="blk-group" style="{{ PageLayout::boxStyle($item['box'] ?? null) }}">
             @foreach($item['children'] ?? [] as $child)
-                @include('betheme.node', ['node' => $child])
+                @include('blocks.node', ['node' => $child])
             @endforeach
         </div>
         @break
@@ -132,6 +132,6 @@
 
     @default
         @if(!empty($item['html']))
-            <div class="bt-raw">{!! $item['html'] !!}</div>
+            <div class="blk-raw">{!! $item['html'] !!}</div>
         @endif
 @endswitch

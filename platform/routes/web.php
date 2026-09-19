@@ -66,7 +66,7 @@ $structured = [
 ];
 
 foreach ($structured as $path => $name) {
-    Route::get('/'.$path.'/', [PageController::class, 'betheme'])
+    Route::get('/'.$path.'/', [PageController::class, 'page'])
         ->defaults('slug', str_replace('/', '--', $path))
         ->name($name);
 }

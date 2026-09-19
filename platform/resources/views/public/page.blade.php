@@ -1,7 +1,7 @@
 @extends('layouts.public')
 
 @php
-    use App\Support\Betheme;
+    use App\Support\PageLayout;
 
     $reviewsWidget = '267ccdad-1b32-4c62-9394-105914e96f0f';
     $mapWidget = '058d3df7-5422-475a-ab17-f5e14c220034';
@@ -30,7 +30,7 @@
             $widgets = $widgetsIn($section);
             $isHero = $index === 0 && ! empty($section['bgImage']);
             $style = '';
-            if ($bg = Betheme::color($section['bg'] ?? null)) {
+            if ($bg = PageLayout::color($section['bg'] ?? null)) {
                 $style .= "background-color:$bg;";
             }
             if (! empty($section['bgImage'])) {
@@ -39,15 +39,15 @@
             if (! empty($section['padding'])) {
                 $style .= 'padding:'.implode('px ', $section['padding']).'px;';
             }
-            $classes = ['bt-section'];
-            if ($isHero) $classes[] = 'bt-hero';
-            if (in_array('full-width', $section['classes'] ?? [], true) || in_array('full-width-ex-mobile', $section['classes'] ?? [], true)) $classes[] = 'bt-section--full';
-            if (in_array('full-screen', $section['classes'] ?? [], true)) $classes[] = 'bt-section--screen';
-            if (in_array('dark', $section['classes'] ?? [], true)) $classes[] = 'bt-section--dark';
+            $classes = ['blk-section'];
+            if ($isHero) $classes[] = 'blk-hero';
+            if (in_array('full-width', $section['classes'] ?? [], true) || in_array('full-width-ex-mobile', $section['classes'] ?? [], true)) $classes[] = 'blk-section--full';
+            if (in_array('full-screen', $section['classes'] ?? [], true)) $classes[] = 'blk-section--screen';
+            if (in_array('dark', $section['classes'] ?? [], true)) $classes[] = 'blk-section--dark';
             // A leading section with a background but no content exists only to sit
             // behind the fixed header, so it has to carry the header's height.
-            if ($index === 0 && ! empty($section['bg']) && ! Betheme::sectionHasContent($section)) {
-                $classes[] = 'bt-section--spacer';
+            if ($index === 0 && ! empty($section['bg']) && ! PageLayout::sectionHasContent($section)) {
+                $classes[] = 'blk-section--spacer';
             }
             $overlay = $section['overlay']['gradient'] ?? null;
         @endphp
@@ -61,13 +61,13 @@
         @else
             <section class="{{ implode(' ', $classes) }}" style="{{ $style }}">
                 @if($overlay)
-                    <div class="bt-hero-scrim" style="background:{{ $overlay }};opacity:{{ $section['overlay']['opacity'] ?? '1' }}"></div>
+                    <div class="blk-hero-scrim" style="background:{{ $overlay }};opacity:{{ $section['overlay']['opacity'] ?? '1' }}"></div>
                 @elseif($isHero)
-                    <div class="bt-hero-scrim"></div>
+                    <div class="blk-hero-scrim"></div>
                 @endif
-                <div class="bt-wrapper">
+                <div class="blk-wrapper">
                     @foreach($section['wraps'] as $wrap)
-                        @include('betheme.node', ['node' => $wrap])
+                        @include('blocks.node', ['node' => $wrap])
                     @endforeach
                 </div>
             </section>

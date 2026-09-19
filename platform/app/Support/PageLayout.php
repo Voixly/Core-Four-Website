@@ -5,12 +5,12 @@ namespace App\Support;
 use Illuminate\Support\Str;
 
 /**
- * Renders page structures extracted from the previous Betheme site.
+ * Renders page structures extracted from the previous site.
  * Colours are snapped onto the brand tokens so the palette stays in one place.
  */
-class Betheme
+class PageLayout
 {
-    /** Fractional widths for Betheme's column classes. */
+    /** Fractional widths for the source column classes. */
     public const WIDTHS = [
         'one' => 1.0,
         'one-second' => 0.5,
@@ -55,7 +55,7 @@ class Betheme
         return max(1, (int) round($fraction * 12));
     }
 
-    /** Read tablet/laptop/mobile width tokens off Betheme class lists. */
+    /** Read tablet/laptop/mobile width tokens off the source class lists. */
     public static function widthFromClasses(array $classes, string $breakpoint): ?string
     {
         $prefix = $breakpoint.'-';
@@ -72,7 +72,7 @@ class Betheme
     }
 
     /**
-     * Betheme grids (comparison tables) override the declared column class, so the
+     * Source grids (comparison tables) override the declared column class, so the
      * measured span wins. The breakpoint classes then inherit that same override
      * instead of snapping back to full width — except on mobile, which stacks.
      */
@@ -197,7 +197,7 @@ class Betheme
             return '';
         }
 
-        return implode('', array_map(fn ($c) => '<article class="bt-post">'.$c.'</article>', $chunks));
+        return implode('', array_map(fn ($c) => '<article class="blk-post">'.$c.'</article>', $chunks));
     }
 
     /**
@@ -236,7 +236,7 @@ class Betheme
     }
 
     /**
-     * Betheme galleries flow into masonry columns. The column count is the
+     * Galleries flow into masonry columns. The column count is the
      * container width over the narrowest image, which is how the live grid lands
      * on three columns for photo walls and two for the hero badge block.
      */
@@ -253,7 +253,7 @@ class Betheme
     }
 
     /**
-     * Betheme comparison tables declare every cell full-width and rely on a grid
+     * Comparison tables declare every cell full-width and rely on a grid
      * the extractor didn't capture. When the measured boxes show the children
      * actually sit on one row, rebuild that row from their real widths.
      */
@@ -297,7 +297,7 @@ class Betheme
     }
 
     /**
-     * Betheme card images sit flush against the bottom of their card. Full-width
+     * Source card images sit flush against the bottom of their card. Full-width
      * images round only the bottom corners; inset ones round only the top.
      */
     public static function mediaClass(array $node, ?array $parent): string
@@ -318,7 +318,7 @@ class Betheme
             return '';
         }
 
-        return $box['w'] >= $card['w'] - 4 ? ' bt-media-bleed' : ' bt-media-inset';
+        return $box['w'] >= $card['w'] - 4 ? ' blk-media-bleed' : ' blk-media-inset';
     }
 
     /** Build an inline style string from an extracted box. */

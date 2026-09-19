@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="https://use.typekit.net/wci4ksj.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="/css/site.css">
-    <link rel="stylesheet" href="/css/betheme.css">
+    <link rel="stylesheet" href="/css/blocks.css">
     <script src="https://elfsightcdn.com/platform.js" async></script>
     @hasSection('schema')
         @yield('schema')

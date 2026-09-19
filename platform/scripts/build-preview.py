@@ -105,7 +105,7 @@ def ba(before, after, balt="Before", aalt="After"):
 
 
 def gallery_columns(item: dict) -> int:
-    """Betheme galleries flow into masonry columns. The column count is the
+    """Galleries flow into masonry columns. The column count is the
     container width over the narrowest image, which is how the live grid lands
     on three columns for photo walls and two for the hero badge block."""
     width = (item.get("box") or {}).get("w")
@@ -132,7 +132,7 @@ def blog_posts(html: str) -> str:
     chunks = [c for c in chunks if c.strip().startswith("<h3>")]
     if len(chunks) < 3:
         return ""
-    return "".join(f'<article class="bt-post">{c}</article>' for c in chunks)
+    return "".join(f'<article class="blk-post">{c}</article>' for c in chunks)
 
 
 def type_style(item: dict) -> str:
@@ -161,16 +161,16 @@ def render_item(item: dict) -> str:
     if t == "heading":
         lvl = min(6, max(1, item.get("level") or 2))
         light = " light-text" if item.get("light") else ""
-        return f'<h{lvl} class="bt-h bt-h{lvl}{light}"{type_style(item)}>{item.get("html","")}</h{lvl}>'
+        return f'<h{lvl} class="blk-h blk-h{lvl}{light}"{type_style(item)}>{item.get("html","")}</h{lvl}>'
     if t == "text":
         html = restore_icons(item.get("html") or "")
         if "Roofing Partners" in html or "Associate Memberships" in html:
             return "<!-- logos injected at section -->"
         light = " light-text" if item.get("light") else ""
-        return f'<div class="bt-text{light}"{type_style(item)}>{html}</div>'
+        return f'<div class="blk-text{light}"{type_style(item)}>{html}</div>'
     if t == "image" and item.get("img"):
         img = item["img"]
-        return f'<img class="bt-img" src="{img.get("src","")}" alt="{img.get("alt","")}" loading="lazy">'
+        return f'<img class="blk-img" src="{img.get("src","")}" alt="{img.get("alt","")}" loading="lazy">'
     if t == "button":
         return f'<a class="btn" href="{href(item.get("href","#"))}">{item.get("text","")} <i class="fas fa-arrow-right"></i></a>'
     if t == "before_after" and item.get("before") and item.get("after"):
@@ -179,7 +179,7 @@ def render_item(item: dict) -> str:
         return f'<div class="elfsight-app-{item.get("widget","")}" data-elfsight-app-lazy></div>'
     if t == "faq":
         items = item.get("items") or [{"q": q, "a": a} for q, a in FAQ]
-        bits = ['<div class="faq bt-faq">']
+        bits = ['<div class="faq blk-faq">']
         for i, q in enumerate(items):
             open_ = " open" if i == 0 else ""
             bits.append(f'<details{open_}><summary><span class="step-num">{i+1}</span> {q["q"]}</summary><div class="faq-body">{q["a"]}</div></details>')
@@ -203,13 +203,13 @@ def render_item(item: dict) -> str:
             if im.get("w") and im.get("h"):
                 ratio = f' style="aspect-ratio:{im["w"]}/{im["h"]}"'
             bits.append(f'<img src="{im.get("src","")}" alt="{im.get("alt","")}"{ratio} loading="lazy">')
-        return f'<div class="bt-gallery" style="--cols:{gallery_columns(item)}">{"".join(bits)}</div>'
+        return f'<div class="blk-gallery" style="--cols:{gallery_columns(item)}">{"".join(bits)}</div>'
     if t in ("html",) or item.get("html"):
         html = restore_icons(item.get("html") or "")
         posts = blog_posts(html)
         if posts:
-            return f'<div class="bt-blog">{posts}</div>'
-        return f'<div class="bt-raw">{html}</div>'
+            return f'<div class="blk-blog">{posts}</div>'
+        return f'<div class="blk-raw">{html}</div>'
     return ""
 
 
@@ -218,7 +218,7 @@ def span_vars(node: dict) -> str:
     declared = WIDTHS.get(node.get("width") or "one", 12)
     span = node.get("span") or declared
     parts = [f"--span:{span}"]
-    # Betheme grids (comparison tables) override the declared column class, so the
+    # Source grids (comparison tables) override the declared column class, so the
     # measured span wins. The breakpoint classes then inherit that same override
     # instead of snapping back to full width — except on mobile, which stacks.
     overridden = span != declared
@@ -249,11 +249,11 @@ def media_class(node: dict, parent: dict | None) -> str:
         return ""
     if abs((box["y"] + box["h"]) - (card["y"] + card["h"])) > 4:
         return ""
-    return " bt-media-bleed" if box["w"] >= card["w"] - 4 else " bt-media-inset"
+    return " blk-media-bleed" if box["w"] >= card["w"] - 4 else " blk-media-inset"
 
 
 def row_columns(node: dict) -> str:
-    """Betheme comparison tables declare every cell full-width and rely on a grid
+    """Comparison tables declare every cell full-width and rely on a grid
     the extractor didn't capture. When the measured boxes show the children
     actually sit on one row, rebuild that row from their real widths."""
     kids = (node.get("columns") or []) + (node.get("wraps") or [])
@@ -276,17 +276,17 @@ def row_columns(node: dict) -> str:
 
 def render_node(node: dict, parent: dict | None = None) -> str:
     kind = node.get("kind", "column")
-    cls = "bt-wrap" if kind == "wrap" else "bt-col"
+    cls = "blk-wrap" if kind == "wrap" else "blk-col"
     box = node.get("box") or {}
     if box.get("bg") or box.get("bgImage") or box.get("radius"):
-        cls += " bt-surface"
+        cls += " blk-surface"
     if "light-text" in (node.get("classes") or []):
         cls += " light-text"
     cls += media_class(node, parent)
     style = span_vars(node)
     cols = row_columns(node)
     if cols:
-        cls += " bt-row"
+        cls += " blk-row"
         style += f";grid-template-columns:{cols}"
     if box.get("bg"):
         style += f";background-color:{box['bg']}"
@@ -324,20 +324,20 @@ def render_page(data: dict) -> str:
             parts.append(INSTAGRAM)
             continue
         is_hero = i == 0 and section.get("bgImage")
-        classes = ["bt-section"]
+        classes = ["blk-section"]
         if is_hero:
-            classes.append("bt-hero")
+            classes.append("blk-hero")
         section_classes = section.get("classes") or []
         if "full-width" in section_classes or "full-width-ex-mobile" in section_classes:
-            classes.append("bt-section--full")
+            classes.append("blk-section--full")
         if "full-screen" in section_classes:
-            classes.append("bt-section--screen")
+            classes.append("blk-section--screen")
         if "dark" in section_classes:
-            classes.append("bt-section--dark")
+            classes.append("blk-section--dark")
         # A leading section with a background but no content exists only to sit
         # behind the fixed header, so it has to carry the header's height.
         if i == 0 and section.get("bg") and not section_has_content(section):
-            classes.append("bt-section--spacer")
+            classes.append("blk-section--spacer")
         style = []
         if section.get("bg"):
             style.append(f"background-color:{section['bg']}")
@@ -351,13 +351,13 @@ def render_page(data: dict) -> str:
         opacity = (section.get("overlay") or {}).get("opacity") or "1"
         body = []
         if overlay:
-            body.append(f'<div class="bt-hero-scrim" style="background:{overlay};opacity:{opacity}"></div>')
+            body.append(f'<div class="blk-hero-scrim" style="background:{overlay};opacity:{opacity}"></div>')
         elif is_hero:
-            body.append('<div class="bt-hero-scrim"></div>')
-        body.append('<div class="bt-wrapper">')
+            body.append('<div class="blk-hero-scrim"></div>')
+        body.append('<div class="blk-wrapper">')
         dumped = json.dumps(section)
         if "Roofing Partners" in dumped:
-            body.append('<div class="bt-wrap" style="--span:12"><h2 class="logos-heading">Reliable Commercial &amp; Residential Roof Repair, Replacement &amp; Maintenance</h2>' + LOGOS + "</div>")
+            body.append('<div class="blk-wrap" style="--span:12"><h2 class="logos-heading">Reliable Commercial &amp; Residential Roof Repair, Replacement &amp; Maintenance</h2>' + LOGOS + "</div>")
         else:
             for wrap in section.get("wraps") or []:
                 body.append(render_node(wrap))
@@ -377,7 +377,7 @@ CHROME_HEAD = """<!DOCTYPE html>
     <link rel="stylesheet" href="https://use.typekit.net/wci4ksj.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="/css/site.css">
-    <link rel="stylesheet" href="/css/betheme.css">
+    <link rel="stylesheet" href="/css/blocks.css">
     <script src="https://elfsightcdn.com/platform.js" async></script>
 </head>
 <body>
