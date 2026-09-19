@@ -1,0 +1,7 @@
+{
+  "name": "core-four-platform",
+  "private": true,
+  "scripts": {
+    "build": "echo 'CSS and JS already ship in public/'"
+  }
+}

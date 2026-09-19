@@ -1,0 +1,26 @@
+# Dependencies
+platform/vendor/
+platform/node_modules/
+
+# Laravel runtime state
+platform/.env
+platform/storage/framework/cache/
+platform/storage/framework/sessions/
+platform/storage/framework/views/
+platform/storage/framework/testing/
+platform/storage/logs/
+platform/public/build/
+platform/public/hot
+platform/public/storage
+platform/.phpunit.cache
+platform/.phpunit.result.cache
+
+# Generated static preview
+platform/public/preview/
+
+# Audit run output (screenshots, scratch JSON)
+tools/audit/output/
+
+# OS noise
+.DS_Store
+*.swp

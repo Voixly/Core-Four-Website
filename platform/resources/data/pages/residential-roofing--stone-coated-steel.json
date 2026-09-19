@@ -1,0 +1,2657 @@
+{
+ "url": "https://corefourroofing.com/residential-roofing/stone-coated-steel/",
+ "title": "Stone-Coated Steel - Core Four Roofing",
+ "description": "",
+ "h1": "Premium Stone-Coated Steel Roofing in Texas",
+ "sections": [
+  {
+   "overlay": {
+    "gradient": "linear-gradient(230deg, rgba(41, 41, 41, 0) 0%, rgba(13, 13, 13, 0.78) 92%)",
+    "bg": null,
+    "opacity": "1"
+   },
+   "id": "mcb-section-414741aff",
+   "classes": [
+    "section",
+    "mcb-section",
+    "mfn-default-section",
+    "full-width"
+   ],
+   "bg": null,
+   "bgImage": "/images/live/core_four_roofing_decra_stone_coated_steel.webp",
+   "bgSize": "cover",
+   "bgPos": "50% 50%",
+   "padding": [
+    230,
+    86,
+    116,
+    86
+   ],
+   "h": 915,
+   "y": 0,
+   "wrapperWidth": 1267,
+   "wraps": [
+    {
+     "kind": "wrap",
+     "width": "one-second",
+     "box": {
+      "w": 634,
+      "h": 569,
+      "y": 230
+     },
+     "valign": "center",
+     "classes": [
+      "wrap",
+      "tablet-three-fifth",
+      "mobile-one",
+      "vb-item",
+      "clearfix"
+     ],
+     "columns": [
+      {
+       "kind": "column",
+       "width": "one",
+       "box": {
+        "w": 610,
+        "h": 38,
+        "y": 230
+       },
+       "span": 12,
+       "item": {
+        "type": "elfsight",
+        "widget": "267ccdad-1b32-4c62-9394-105914e96f0f",
+        "box": {
+         "w": 610,
+         "h": 38,
+         "y": 230
+        }
+       },
+       "classes": [
+        "column",
+        "one",
+        "laptop-one",
+        "tablet-one",
+        "mobile-one",
+        "column_column",
+        "vb-item"
+       ]
+      },
+      {
+       "kind": "column",
+       "width": "one",
+       "box": {
+        "w": 610,
+        "h": 209,
+        "y": 308
+       },
+       "span": 12,
+       "item": {
+        "type": "heading",
+        "align": "start",
+        "light": false,
+        "box": {
+         "w": 634,
+         "h": 249,
+         "y": 308
+        },
+        "level": 1,
+        "html": "Premium Stone-Coated Steel Roofing in Texas",
+        "text": "Premium Stone-Coated Steel Roofing in Texas",
+        "size": 67,
+        "weight": "700",
+        "color": "oklch(1 0 none)",
+        "lh": "80.807px",
+        "family": "industry",
+        "transform": "none",
+        "spacing": "0.8px"
+       },
+       "classes": [
+        "column",
+        "one",
+        "laptop-one",
+        "tablet-one",
+        "mobile-one",
+        "column_heading",
+        "vb-item"
+       ]
+      },
+      {
+       "kind": "column",
+       "width": "one",
+       "box": {
+        "w": 610,
+        "h": 102,
+        "y": 557
+       },
+       "span": 12,
+       "item": {
+        "type": "text",
+        "align": "start",
+        "light": false,
+        "box": {
+         "w": 634,
+         "h": 142,
+         "y": 557
+        },
+        "html": "Get the classic beauty of traditional tile, wood shake, or heavy shingles with the lifetime durability of steel. Core Four Roofing installs premium stone-coated steel roofs engineered to withstand the harshest Texas weather without cracking, splitting, or fading.",
+        "text": "Get the classic beauty of traditional tile, wood shake, or heavy shingles with the lifetime durability of steel. Core Four Roofing installs premium stone-coated steel roofs engineered to withstand the harshest Texas weather without cracking, splitting, or fading.",
+        "size": 16,
+        "color": "oklch(1 0 none)",
+        "lh": "25.6px",
+        "weight": "500"
+       },
+       "classes": [
+        "column",
+        "one",
+        "laptop-one",
+        "tablet-one",
+        "mobile-one",
+        "column_plain_text",
+        "vb-item"
+       ]
+      },
+      {
+       "kind": "column",
+       "width": "one",
+       "box": {
+        "w": 610,
+        "h": 60,
+        "y": 699
+       },
+       "span": 12,
+       "item": {
+        "type": "button",
+        "align": "start",
+        "light": false,
+        "box": {
+         "w": 634,
+         "h": 100,
+         "y": 699
+        },
+        "text": "Call for a Free Stone-Coated Steel Estimate",
+        "href": "tel:2815410027",
+        "icon": "fas fa-arrow-right",
+        "bg": "oklch(0.7055 0.1785 140.66)",
+        "color": "oklch(0.2496 0.031 155.1)",
+        "size": 16,
+        "weight": "600",
+        "radius": 50,
+        "padding": [
+         20,
+         32,
+         20,
+         32
+        ]
+       },
+       "classes": [
+        "column",
+        "one",
+        "laptop-one",
+        "tablet-one",
+        "mobile-one",
+        "column_button",
+        "vb-item"
+       ]
+      }
+     ],
+     "span": 6
+    },
+    {
+     "kind": "wrap",
+     "width": "one-third",
+     "box": {
+      "bg": "rgba(255, 255, 255, 0.45)",
+      "radius": 32,
+      "padding": [
+       16,
+       16,
+       16,
+       16
+      ],
+      "w": 422,
+      "h": 350,
+      "y": 340
+     },
+     "valign": "flex-start",
+     "classes": [
+      "wrap",
+      "one-third",
+      "tablet-two-fifth",
+      "laptop-one-third",
+      "mobile-one",
+      "vb-item",
+      "clearfix"
+     ],
+     "columns": [
+      {
+       "kind": "column",
+       "width": "one",
+       "box": {
+        "w": 195,
+        "h": 178,
+        "y": 356
+       },
+       "span": 6,
+       "item": {
+        "type": "image",
+        "align": "start",
+        "light": false,
+        "box": {
+         "w": 195,
+         "h": 178,
+         "y": 356
+        },
+        "img": {
+         "src": "/images/live/Core-Four-Associate-Members-RCAT-Member-compressed.webp",
+         "alt": "",
+         "w": 707,
+         "h": 645,
+         "dw": 195,
+         "dh": 178
+        },
+        "radius": 0
+       },
+       "classes": [
+        "column",
+        "one",
+        "laptop-one",
+        "tablet-one",
+        "mobile-one",
+        "column_image",
+        "vb-item"
+       ]
+      },
+      {
+       "kind": "column",
+       "width": "one",
+       "box": {
+        "w": 195,
+        "h": 200,
+        "y": 356
+       },
+       "span": 6,
+       "item": {
+        "type": "image",
+        "align": "start",
+        "light": false,
+        "box": {
+         "w": 195,
+         "h": 200,
+         "y": 356
+        },
+        "img": {
+         "src": "/images/live/Core-Four-Associate-Members-home-advisor-screened-and-approved-compressed.webp",
+         "alt": "",
+         "w": 587,
+         "h": 600,
+         "dw": 195,
+         "dh": 200
+        },
+        "radius": 0
+       },
+       "classes": [
+        "column",
+        "one",
+        "laptop-one",
+        "tablet-one",
+        "mobile-one",
+        "column_image",
+        "vb-item"
+       ]
+      },
+      {
+       "kind": "column",
+       "width": "one",
+       "box": {
+        "w": 195,
+        "h": 83,
+        "y": 555
+       },
+       "span": 6,
+       "item": {
+        "type": "image",
+        "align": "start",
+        "light": false,
+        "box": {
+         "w": 195,
+         "h": 83,
+         "y": 555
+        },
+        "img": {
+         "src": "/images/live/Core-Four-Roofing-Partner-DECRA-compressed.webp",
+         "alt": "",
+         "w": 1408,
+         "h": 600,
+         "dw": 195,
+         "dh": 83
+        },
+        "radius": 0
+       },
+       "classes": [
+        "column",
+        "one",
+        "laptop-one",
+        "tablet-one",
+        "mobile-one",
+        "column_image",
+        "vb-item"
+       ]
+      },
+      {
+       "kind": "column",
+       "width": "one",
+       "box": {
+        "w": 195,
+        "h": 118,
+        "y": 555
+       },
+       "span": 6,
+       "item": {
+        "type": "image",
+        "align": "start",
+        "light": false,
+        "box": {
+         "w": 195,
+         "h": 118,
+         "y": 555
+        },
+        "img": {
+         "src": "/images/live/Core-Four-Associate-Members-IFMA-compressed.webp",
+         "alt": "",
+         "w": 195,
+         "h": 118,
+         "dw": 195,
+         "dh": 118
+        },
+        "radius": 0
+       },
+       "classes": [
+        "column",
+        "one",
+        "laptop-one",
+        "tablet-one",
+        "mobile-one",
+        "column_image",
+        "vb-item"
+       ]
+      }
+     ],
+     "span": 4
+    }
+   ]
+  },
+  {
+   "overlay": null,
+   "id": "mcb-section-6wd3m9oz4",
+   "classes": [
+    "section",
+    "mcb-section",
+    "mfn-default-section"
+   ],
+   "bg": null,
+   "bgImage": null,
+   "bgSize": null,
+   "bgPos": null,
+   "padding": [
+    96,
+    0,
+    96,
+    0
+   ],
+   "h": 985,
+   "y": 915,
+   "wrapperWidth": 1200,
+   "wraps": [
+    {
+     "kind": "wrap",
+     "width": "one",
+     "box": {
+      "w": 1200,
+      "h": 793,
+      "y": 1011
+     },
+     "valign": "flex-start",
+     "classes": [
+      "wrap",
+      "one",
+      "tablet-one",
+      "laptop-one",
+      "mobile-one",
+      "vb-item",
+      "clearfix"
+     ],
+     "columns": [],
+     "span": 12,
+     "wraps": [
+      {
+       "kind": "wrap",
+       "width": "one",
+       "box": {
+        "w": 588,
+        "h": 793,
+        "y": 1011
+       },
+       "valign": "flex-start",
+       "classes": [
+        "wrap",
+        "one",
+        "tablet-one",
+        "laptop-one",
+        "mobile-one",
+        "mfn-nested-wrap",
+        "vb-item",
+        "clearfix"
+       ],
+       "columns": [
+        {
+         "kind": "column",
+         "width": "one",
+         "box": {
+          "bg": "oklch(1 0 none)",
+          "radius": 32,
+          "padding": [
+           36,
+           36,
+           36,
+           36
+          ],
+          "w": 588,
+          "h": 708,
+          "y": 1011
+         },
+         "span": 12,
+         "item": {
+          "type": "text",
+          "align": "start",
+          "light": false,
+          "box": {
+           "w": 516,
+           "h": 636,
+           "y": 1047
+          },
+          "html": "<h2>What is Stone-Coated Steel Roofing?</h2><p>Stone-coated steel roofing is a marvel of modern roofing technology that bridges the gap between industrial strength and residential beauty. It begins with a core of high-tensile, corrosion-resistant steel. This steel is stamped into highly detailed panels designed to mimic the exact contours of traditional luxury roofing materials like Mediterranean clay tile, rustic wood shake, or thick architectural shingles. </p><p> An advanced acrylic base coat is then applied to the steel, followed by a thick layer of natural stone granules, and finished with a clear, UV-resistant overglaze. The result is a roofing system that provides the impenetrable strength, fire resistance, and extreme longevity of metal, but with a beautiful, textured, and traditional aesthetic. For Texas homeowners who want maximum protection against massive hail and severe storms but prefer a classic look over standing seam metal, stone-coated steel is the perfect solution.</p>",
+          "text": "What is Stone-Coated Steel Roofing?\n\nStone-coated steel roofing is a marvel of modern roofing technology that bridges the gap between industrial strength and residential beauty. It begins with a core of high-tensile, corrosion-resistant steel. This steel is stamped into highly detailed panels designed to mimic the exact contours of traditional luxury roofing materials like Mediterranean clay tile, rustic wood shake, or thick architectural shingles.\n\nAn advanced acrylic base coat is then applied to the steel, followed by a thick layer of natural stone granules, and finished with a clear, UV-resistant overglaze. The result is a roofing system that provides the impenetrable strength, fire resistance, and extreme longevity of metal, but with a beautiful, textured, and traditional aesthetic. For Texas homeowners who want maximum protection against massive hail and severe storms but prefer a classic look over standing seam metal, stone-coated steel is the perfect solution."
+         },
+         "classes": [
+          "column",
+          "one",
+          "laptop-one",
+          "tablet-one",
+          "mobile-one",
+          "column_column",
+          "vb-item"
+         ]
+        },
+        {
+         "kind": "column",
+         "width": "one",
+         "box": {
+          "w": 588,
+          "h": 60,
+          "y": 1744
+         },
+         "span": 12,
+         "item": {
+          "type": "button",
+          "align": "start",
+          "light": false,
+          "box": {
+           "w": 588,
+           "h": 60,
+           "y": 1744
+          },
+          "text": "Get a Free Estimate",
+          "href": "https://corefourroofing.com/contact-core-four-roofing/contact",
+          "icon": "fas fa-arrow-right",
+          "bg": "oklch(0.7055 0.1785 140.66)",
+          "color": "oklch(0.2496 0.031 155.1)",
+          "size": 16,
+          "weight": "600",
+          "radius": 50,
+          "padding": [
+           20,
+           32,
+           20,
+           32
+          ]
+         },
+         "classes": [
+          "column",
+          "one",
+          "laptop-one",
+          "tablet-one",
+          "mobile-one",
+          "column_button",
+          "vb-item"
+         ]
+        }
+       ],
+       "span": 6
+      },
+      {
+       "kind": "wrap",
+       "width": "one",
+       "box": {
+        "w": 588,
+        "h": 686,
+        "y": 1011
+       },
+       "valign": "flex-start",
+       "classes": [
+        "wrap",
+        "one",
+        "tablet-one",
+        "laptop-one",
+        "mobile-one",
+        "mfn-nested-wrap",
+        "vb-item",
+        "clearfix"
+       ],
+       "columns": [
+        {
+         "kind": "column",
+         "width": "one",
+         "box": {
+          "radius": 32,
+          "w": 588,
+          "h": 331,
+          "y": 1011
+         },
+         "span": 12,
+         "item": {
+          "type": "image",
+          "align": "start",
+          "light": false,
+          "box": {
+           "w": 588,
+           "h": 331,
+           "y": 1011
+          },
+          "img": {
+           "src": "/images/live/Decra-Villa-14-compressed.webp",
+           "alt": "",
+           "w": 589,
+           "h": 331,
+           "dw": 589,
+           "dh": 331
+          },
+          "radius": 0
+         },
+         "classes": [
+          "column",
+          "one",
+          "laptop-one",
+          "tablet-one",
+          "mobile-one",
+          "column_image",
+          "vb-item"
+         ]
+        },
+        {
+         "kind": "column",
+         "width": "one",
+         "box": {
+          "radius": 32,
+          "w": 588,
+          "h": 331,
+          "y": 1366
+         },
+         "span": 12,
+         "item": {
+          "type": "image",
+          "align": "start",
+          "light": false,
+          "box": {
+           "w": 588,
+           "h": 331,
+           "y": 1366
+          },
+          "img": {
+           "src": "/images/live/core_four_roofing_decra_stone_coated_steel_shingles.webp",
+           "alt": "",
+           "w": 589,
+           "h": 331,
+           "dw": 589,
+           "dh": 331
+          },
+          "radius": 0
+         },
+         "classes": [
+          "column",
+          "one",
+          "laptop-one",
+          "tablet-one",
+          "mobile-one",
+          "column_image",
+          "vb-item"
+         ]
+        }
+       ],
+       "span": 6
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "overlay": null,
+   "id": "mcb-section-1277b3918",
+   "classes": [
+    "section",
+    "mcb-section",
+    "mfn-default-section",
+    "dark"
+   ],
+   "bg": null,
+   "bgImage": null,
+   "bgSize": null,
+   "bgPos": null,
+   "padding": [
+    96,
+    0,
+    96,
+    0
+   ],
+   "h": 1116,
+   "y": 1900,
+   "wrapperWidth": 1200,
+   "wraps": [
+    {
+     "kind": "wrap",
+     "width": "one-second",
+     "box": {
+      "bg": "oklch(0.2496 0.031 155.1)",
+      "radius": 32,
+      "padding": [
+       32,
+       32,
+       32,
+       32
+      ],
+      "w": 576,
+      "h": 515,
+      "y": 1996
+     },
+     "valign": "flex-start",
+     "classes": [
+      "wrap",
+      "mobile-one",
+      "vb-item",
+      "clearfix"
+     ],
+     "columns": [
+      {
+       "kind": "column",
+       "width": "one",
+       "box": {
+        "bg": "oklch(0.6099 0.1588 148.77)",
+        "radius": 50,
+        "padding": [
+         8,
+         20,
+         8,
+         20
+        ],
+        "w": 129,
+        "h": 26,
+        "y": 2028
+       },
+       "span": 3,
+       "item": {
+        "type": "text",
+        "html": "<span>Key Benefits</span>",
+        "text": "Key Benefits",
+        "box": {
+         "bg": "oklch(0.6099 0.1588 148.77)",
+         "radius": 50,
+         "padding": [
+          8,
+          20,
+          8,
+          20
+         ],
+         "w": 129,
+         "h": 26,
+         "y": 2028
+        },
+        "raw": true,
+        "size": 16,
+        "color": "rgb(255, 255, 255)"
+       },
+       "classes": [
+        "column",
+        "one",
+        "laptop-one",
+        "tablet-one",
+        "mobile-one",
+        "column_heading",
+        "trim-both",
+        "vb-item"
+       ]
+      },
+      {
+       "kind": "column",
+       "width": "one",
+       "box": {
+        "w": 488,
+        "h": 157,
+        "y": 2070
+       },
+       "span": 12,
+       "item": {
+        "type": "heading",
+        "align": "start",
+        "light": false,
+        "box": {
+         "w": 512,
+         "h": 189,
+         "y": 2070
+        },
+        "level": 2,
+        "html": "Why Choose Stone-Coated Steel for Your Texas Home?",
+        "text": "Why Choose Stone-Coated Steel for Your Texas Home?",
+        "size": 51,
+        "weight": "700",
+        "color": "rgb(255, 255, 255)",
+        "lh": "60.6202px",
+        "family": "industry",
+        "transform": "none",
+        "spacing": "0.8px"
+       },
+       "classes": [
+        "column",
+        "one",
+        "laptop-one",
+        "tablet-one",
+        "mobile-one",
+        "column_heading",
+        "vb-item"
+       ]
+      },
+      {
+       "kind": "column",
+       "width": "one",
+       "box": {
+        "w": 488,
+        "h": 88,
+        "y": 2258
+       },
+       "span": 12,
+       "item": {
+        "type": "text",
+        "html": "<p>Stone-coated steel offers the ultimate compromise between high-end aesthetics and battle-tested durability. It provides all the structural and longevity benefits of a metal roof while dramatically enhancing your home's traditional curb appeal.</p>",
+        "text": "Stone-coated steel offers the ultimate compromise between high-end aesthetics and battle-tested durability. It provides all the structural and longevity benefits of a metal roof while dramatically enhancing your home's traditional curb appeal.",
+        "box": {
+         "w": 488,
+         "h": 88,
+         "y": 2258
+        },
+        "raw": true,
+        "size": 16,
+        "color": "rgb(255, 255, 255)"
+       },
+       "classes": [
+        "column",
+        "one",
+        "laptop-one",
+        "tablet-one",
+        "mobile-one",
+        "column_heading",
+        "vb-item"
+       ]
+      },
+      {
+       "kind": "column",
+       "width": "one",
+       "box": {
+        "w": 488,
+        "h": 60,
+        "y": 2378
+       },
+       "span": 12,
+       "item": {
+        "type": "button",
+        "align": "start",
+        "light": false,
+        "box": {
+         "w": 512,
+         "h": 100,
+         "y": 2378
+        },
+        "text": "Call us about Stone Coated Steel Shingles",
+        "href": "tel:2815410027",
+        "icon": "fas fa-arrow-right",
+        "bg": "oklch(0.7055 0.1785 140.66)",
+        "color": "oklch(0.2496 0.031 155.1)",
+        "size": 16,
+        "weight": "600",
+        "radius": 50,
+        "padding": [
+         20,
+         32,
+         20,
+         32
+        ]
+       },
+       "classes": [
+        "column",
+        "one",
+        "laptop-one",
+        "tablet-one",
+        "mobile-one",
+        "column_button",
+        "vb-item"
+       ]
+      }
+     ],
+     "span": 6
+    },
+    {
+     "kind": "wrap",
+     "width": "one-second",
+     "box": {
+      "w": 600,
+      "h": 924,
+      "y": 1996
+     },
+     "valign": "flex-start",
+     "classes": [
+      "wrap",
+      "mobile-one",
+      "vb-item",
+      "clearfix"
+     ],
+     "columns": [],
+     "span": 6,
+     "wraps": [
+      {
+       "kind": "wrap",
+       "width": "one",
+       "box": {
+        "bg": "oklch(0.6099 0.1588 148.77)",
+        "radius": 32,
+        "padding": [
+         32,
+         32,
+         32,
+         32
+        ],
+        "w": 600,
+        "h": 213,
+        "y": 1996
+       },
+       "valign": "flex-start",
+       "classes": [
+        "wrap",
+        "one",
+        "tablet-one",
+        "laptop-one",
+        "mobile-one",
+        "mfn-nested-wrap",
+        "vb-item",
+        "clearfix"
+       ],
+       "columns": [
+        {
+         "kind": "column",
+         "width": "one",
+         "box": {
+          "w": 536,
+          "h": 27,
+          "y": 2028
+         },
+         "span": 12,
+         "item": {
+          "type": "heading",
+          "align": "start",
+          "light": false,
+          "box": {
+           "w": 536,
+           "h": 47,
+           "y": 2028
+          },
+          "level": 3,
+          "html": "Unmatched Hail Protection",
+          "text": "Unmatched Hail Protection",
+          "size": 38,
+          "weight": "700",
+          "color": "rgb(255, 255, 255)",
+          "lh": "45.4771px",
+          "family": "industry",
+          "transform": "none",
+          "spacing": "0.8px"
+         },
+         "classes": [
+          "column",
+          "one",
+          "laptop-one",
+          "tablet-one",
+          "mobile-one",
+          "column_heading",
+          "vb-item"
+         ]
+        },
+        {
+         "kind": "column",
+         "width": "one",
+         "box": {
+          "w": 536,
+          "h": 102,
+          "y": 2074
+         },
+         "span": 12,
+         "item": {
+          "type": "text",
+          "align": "start",
+          "light": false,
+          "box": {
+           "w": 536,
+           "h": 102,
+           "y": 2074
+          },
+          "html": "Unlike clay or concrete tiles that can shatter, or wood shake that splits upon impact, stone-coated steel boasts a Class 4 impact rating. It absorbs the energy of massive hail, keeping your home protected during severe Texas storms.",
+          "text": "Unlike clay or concrete tiles that can shatter, or wood shake that splits upon impact, stone-coated steel boasts a Class 4 impact rating. It absorbs the energy of massive hail, keeping your home protected during severe Texas storms.",
+          "size": 16,
+          "color": "oklch(1 0 none)",
+          "lh": "25.6px",
+          "weight": "500"
+         },
+         "classes": [
+          "column",
+          "one",
+          "laptop-one",
+          "tablet-one",
+          "mobile-one",
+          "column_plain_text",
+          "vb-item"
+         ]
+        }
+       ],
+       "span": 12
+      },
+      {
+       "kind": "wrap",
+       "width": "one",
+       "box": {
+        "bg": "oklch(0.6099 0.1588 148.77)",
+        "radius": 32,
+        "padding": [
+         32,
+         32,
+         32,
+         32
+        ],
+        "w": 600,
+        "h": 213,
+        "y": 2233
+       },
+       "valign": "flex-start",
+       "classes": [
+        "wrap",
+        "one",
+        "tablet-one",
+        "laptop-one",
+        "mobile-one",
+        "mfn-nested-wrap",
+        "vb-item",
+        "clearfix"
+       ],
+       "columns": [
+        {
+         "kind": "column",
+         "width": "one",
+         "box": {
+          "w": 536,
+          "h": 27,
+          "y": 2265
+         },
+         "span": 12,
+         "item": {
+          "type": "heading",
+          "align": "start",
+          "light": false,
+          "box": {
+           "w": 536,
+           "h": 47,
+           "y": 2265
+          },
+          "level": 3,
+          "html": "Classic Aesthetic Appeal",
+          "text": "Classic Aesthetic Appeal",
+          "size": 38,
+          "weight": "700",
+          "color": "rgb(255, 255, 255)",
+          "lh": "45.4771px",
+          "family": "industry",
+          "transform": "none",
+          "spacing": "0.8px"
+         },
+         "classes": [
+          "column",
+          "one",
+          "laptop-one",
+          "tablet-one",
+          "mobile-one",
+          "column_heading",
+          "vb-item"
+         ]
+        },
+        {
+         "kind": "column",
+         "width": "one",
+         "box": {
+          "w": 536,
+          "h": 102,
+          "y": 2311
+         },
+         "span": 12,
+         "item": {
+          "type": "text",
+          "align": "start",
+          "light": false,
+          "box": {
+           "w": 536,
+           "h": 102,
+           "y": 2311
+          },
+          "html": "You don't have to sacrifice style for strength. These panels perfectly replicate the rich, dimensional look of traditional clay tile, wood shake, or slate, coming in a variety of natural colors to match your home's architecture.",
+          "text": "You don't have to sacrifice style for strength. These panels perfectly replicate the rich, dimensional look of traditional clay tile, wood shake, or slate, coming in a variety of natural colors to match your home's architecture.",
+          "size": 16,
+          "color": "oklch(1 0 none)",
+          "lh": "25.6px",
+          "weight": "500"
+         },
+         "classes": [
+          "column",
+          "one",
+          "laptop-one",
+          "tablet-one",
+          "mobile-one",
+          "column_plain_text",
+          "vb-item"
+         ]
+        }
+       ],
+       "span": 12
+      },
+      {
+       "kind": "wrap",
+       "width": "one",
+       "box": {
+        "bg": "oklch(0.6099 0.1588 148.77)",
+        "radius": 32,
+        "padding": [
+         32,
+         32,
+         32,
+         32
+        ],
+        "w": 600,
+        "h": 213,
+        "y": 2470
+       },
+       "valign": "flex-start",
+       "classes": [
+        "wrap",
+        "one",
+        "tablet-one",
+        "laptop-one",
+        "mobile-one",
+        "mfn-nested-wrap",
+        "vb-item",
+        "clearfix"
+       ],
+       "columns": [
+        {
+         "kind": "column",
+         "width": "one",
+         "box": {
+          "w": 536,
+          "h": 27,
+          "y": 2502
+         },
+         "span": 12,
+         "item": {
+          "type": "heading",
+          "align": "start",
+          "light": false,
+          "box": {
+           "w": 536,
+           "h": 47,
+           "y": 2502
+          },
+          "level": 3,
+          "html": "Incredibly Lightweight",
+          "text": "Incredibly Lightweight",
+          "size": 38,
+          "weight": "700",
+          "color": "rgb(255, 255, 255)",
+          "lh": "45.4771px",
+          "family": "industry",
+          "transform": "none",
+          "spacing": "0.8px"
+         },
+         "classes": [
+          "column",
+          "one",
+          "laptop-one",
+          "tablet-one",
+          "mobile-one",
+          "column_heading",
+          "vb-item"
+         ]
+        },
+        {
+         "kind": "column",
+         "width": "one",
+         "box": {
+          "w": 536,
+          "h": 102,
+          "y": 2548
+         },
+         "span": 12,
+         "item": {
+          "type": "text",
+          "align": "start",
+          "light": false,
+          "box": {
+           "w": 536,
+           "h": 102,
+           "y": 2548
+          },
+          "html": "Despite its heavy-duty performance, stone-coated steel is one of the lightest roofing materials available (weighing just 1.5 lbs per square foot). It can often be installed without needing expensive structural reinforcements to your roof deck.",
+          "text": "Despite its heavy-duty performance, stone-coated steel is one of the lightest roofing materials available (weighing just 1.5 lbs per square foot). It can often be installed without needing expensive structural reinforcements to your roof deck.",
+          "size": 16,
+          "color": "oklch(1 0 none)",
+          "lh": "25.6px",
+          "weight": "500"
+         },
+         "classes": [
+          "column",
+          "one",
+          "laptop-one",
+          "tablet-one",
+          "mobile-one",
+          "column_plain_text",
+          "vb-item"
+         ]
+        }
+       ],
+       "span": 12
+      },
+      {
+       "kind": "wrap",
+       "width": "one",
+       "box": {
+        "bg": "oklch(0.6099 0.1588 148.77)",
+        "radius": 32,
+        "padding": [
+         32,
+         32,
+         32,
+         32
+        ],
+        "w": 600,
+        "h": 213,
+        "y": 2707
+       },
+       "valign": "flex-start",
+       "classes": [
+        "wrap",
+        "one",
+        "tablet-one",
+        "laptop-one",
+        "mobile-one",
+        "mfn-nested-wrap",
+        "vb-item",
+        "clearfix"
+       ],
+       "columns": [
+        {
+         "kind": "column",
+         "width": "one",
+         "box": {
+          "w": 536,
+          "h": 27,
+          "y": 2739
+         },
+         "span": 12,
+         "item": {
+          "type": "heading",
+          "align": "start",
+          "light": false,
+          "box": {
+           "w": 536,
+           "h": 47,
+           "y": 2739
+          },
+          "level": 3,
+          "html": "Superior Energy Efficiency",
+          "text": "Superior Energy Efficiency",
+          "size": 38,
+          "weight": "700",
+          "color": "rgb(255, 255, 255)",
+          "lh": "45.4771px",
+          "family": "industry",
+          "transform": "none",
+          "spacing": "0.8px"
+         },
+         "classes": [
+          "column",
+          "one",
+          "laptop-one",
+          "tablet-one",
+          "mobile-one",
+          "column_heading",
+          "vb-item"
+         ]
+        },
+        {
+         "kind": "column",
+         "width": "one",
+         "box": {
+          "w": 536,
+          "h": 102,
+          "y": 2785
+         },
+         "span": 12,
+         "item": {
+          "type": "text",
+          "align": "start",
+          "light": false,
+          "box": {
+           "w": 536,
+           "h": 102,
+           "y": 2785
+          },
+          "html": "Because the metal panels are stamped with specific profiles, they create a natural air space above your roof deck. This \"above-sheathing ventilation\" helps dissipate heat in the summer, significantly lowering your cooling costs.",
+          "text": "Because the metal panels are stamped with specific profiles, they create a natural air space above your roof deck. This \"above-sheathing ventilation\" helps dissipate heat in the summer, significantly lowering your cooling costs.",
+          "size": 16,
+          "color": "oklch(1 0 none)",
+          "lh": "25.6px",
+          "weight": "500"
+         },
+         "classes": [
+          "column",
+          "one",
+          "laptop-one",
+          "tablet-one",
+          "mobile-one",
+          "column_plain_text",
+          "vb-item"
+         ]
+        }
+       ],
+       "span": 12
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "overlay": {
+    "gradient": "linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, oklch(0.6099 0.1588 148.77) 31%)",
+    "bg": null,
+    "opacity": "1"
+   },
+   "id": "mcb-section-551f88d50",
+   "classes": [
+    "section",
+    "mcb-section",
+    "mfn-default-section"
+   ],
+   "bg": "oklch(0.6099 0.1588 148.77)",
+   "bgImage": "/images/live/bottom-triangles-dark.svg",
+   "bgSize": "contain",
+   "bgPos": "50% 100%",
+   "padding": [
+    96,
+    0,
+    96,
+    0
+   ],
+   "h": 718,
+   "y": 3015,
+   "wrapperWidth": 1200,
+   "wraps": [
+    {
+     "kind": "wrap",
+     "width": "one",
+     "box": {
+      "w": 1200,
+      "h": 136,
+      "y": 3111
+     },
+     "valign": "flex-start",
+     "classes": [
+      "wrap",
+      "one",
+      "tablet-one",
+      "laptop-one",
+      "mobile-one",
+      "vb-item",
+      "clearfix"
+     ],
+     "columns": [
+      {
+       "kind": "column",
+       "width": "five-sixth",
+       "box": {
+        "w": 976,
+        "h": 96,
+        "y": 3111
+       },
+       "span": 10,
+       "item": {
+        "type": "heading",
+        "align": "start",
+        "light": false,
+        "box": {
+         "w": 1000,
+         "h": 136,
+         "y": 3111
+        },
+        "level": 2,
+        "html": "Frequently Asked Questions About Stone-Coated Steel",
+        "text": "Frequently Asked Questions About Stone-Coated Steel",
+        "size": 51,
+        "weight": "700",
+        "color": "oklch(1 0 none)",
+        "lh": "60.6202px",
+        "family": "industry",
+        "transform": "none",
+        "spacing": "0.8px"
+       },
+       "classes": [
+        "column",
+        "five-sixth",
+        "laptop-five-sixth",
+        "tablet-five-sixth",
+        "mobile-one",
+        "column_heading",
+        "vb-item"
+       ]
+      }
+     ],
+     "span": 12
+    },
+    {
+     "kind": "wrap",
+     "width": "one",
+     "box": {
+      "w": 1200,
+      "h": 390,
+      "y": 3247
+     },
+     "valign": "center",
+     "classes": [
+      "wrap",
+      "one",
+      "tablet-one",
+      "laptop-one",
+      "mobile-one",
+      "vb-item",
+      "clearfix"
+     ],
+     "columns": [],
+     "span": 12,
+     "wraps": [
+      {
+       "kind": "wrap",
+       "width": "one",
+       "box": {
+        "w": 600,
+        "h": 390,
+        "y": 3247
+       },
+       "valign": "flex-start",
+       "classes": [
+        "wrap",
+        "one",
+        "tablet-one",
+        "laptop-one",
+        "mobile-one",
+        "mfn-nested-wrap",
+        "vb-item",
+        "clearfix"
+       ],
+       "columns": [
+        {
+         "kind": "column",
+         "width": "one",
+         "box": {
+          "w": 576,
+          "h": 238,
+          "y": 3259
+         },
+         "span": 12,
+         "item": {
+          "type": "faq",
+          "align": "start",
+          "light": false,
+          "box": {
+           "w": 600,
+           "h": 290,
+           "y": 3247
+          },
+          "items": [
+           {
+            "q": "Will the stone granules wash off or fade over time?",
+            "a": "No. The natural, ceramic-coated stone granules are permanently bonded to the high-tensile steel core using an advanced acrylic polymer layer. They are UV-resistant and designed to retain their vibrant color and texture for decades without washing away in heavy rain."
+           },
+           {
+            "q": "How does the cost compare to traditional shingles or tile?",
+            "a": "While the initial investment is higher than standard asphalt shingles, stone-coated steel is often comparable to or less expensive than installing authentic clay tile or slate. When you factor in its 50+ year lifespan, minimal maintenance, and potential insurance premium discounts, it offers incredible long-term value."
+           },
+           {
+            "q": "Is a stone-coated steel roof loud when it rains?",
+            "a": "Not at all. The textured surface of the stone granules effectively absorbs and diffuses the sound of rain and hail. When installed properly over a solid roof deck and underlayment, it is just as quiet as an asphalt shingle roof."
+           },
+           {
+            "q": "Can I walk on a stone-coated steel roof?",
+            "a": "Yes, you can walk on it, but it requires a bit of care. Because the panels are stamped to have a dimensional profile (like a curve or a ridge), you must step in the designated \"valleys\" or low points where the metal rests flush against the roof deck to avoid denting the raised sections."
+           }
+          ]
+         },
+         "classes": [
+          "column",
+          "one",
+          "laptop-one",
+          "tablet-one",
+          "mobile-one",
+          "column_faq",
+          "vb-item"
+         ]
+        },
+        {
+         "kind": "column",
+         "width": "one",
+         "box": {
+          "w": 576,
+          "h": 60,
+          "y": 3537
+         },
+         "span": 12,
+         "item": {
+          "type": "button",
+          "align": "start",
+          "light": false,
+          "box": {
+           "w": 600,
+           "h": 100,
+           "y": 3537
+          },
+          "text": "Ask us a question",
+          "href": "https://corefourroofing.com/contact-core-four-roofing/contact",
+          "icon": "fas fa-arrow-right",
+          "bg": "rgb(219, 221, 223)",
+          "color": "rgb(98, 98, 98)",
+          "size": 16,
+          "weight": "600",
+          "radius": 50,
+          "padding": [
+           20,
+           32,
+           20,
+           32
+          ]
+         },
+         "classes": [
+          "column",
+          "one",
+          "laptop-one",
+          "tablet-one",
+          "mobile-one",
+          "column_button",
+          "vb-item"
+         ]
+        }
+       ],
+       "span": 6
+      },
+      {
+       "kind": "wrap",
+       "width": "one",
+       "box": {
+        "w": 600,
+        "h": 364,
+        "y": 3260
+       },
+       "valign": "flex-start",
+       "classes": [
+        "wrap",
+        "one",
+        "tablet-one",
+        "laptop-one",
+        "mobile-one",
+        "mfn-nested-wrap",
+        "vb-item",
+        "clearfix"
+       ],
+       "columns": [
+        {
+         "kind": "column",
+         "width": "one",
+         "box": {
+          "radius": 24,
+          "w": 576,
+          "h": 324,
+          "y": 3260
+         },
+         "span": 12,
+         "item": {
+          "type": "before_after",
+          "align": "start",
+          "light": false,
+          "box": {
+           "w": 600,
+           "h": 364,
+           "y": 3260
+          },
+          "before": {
+           "src": "/images/live/cfr-decra-tile-before-compressed.webp",
+           "alt": "",
+           "w": 576,
+           "h": 324,
+           "dw": 576,
+           "dh": 324
+          },
+          "after": {
+           "src": "/images/live/cfr-decra-tile-after-compressed.webp",
+           "alt": "",
+           "w": 576,
+           "h": 324,
+           "dw": 576,
+           "dh": 324
+          }
+         },
+         "classes": [
+          "column",
+          "one",
+          "laptop-one",
+          "tablet-one",
+          "mobile-one",
+          "column_before_after",
+          "vb-item"
+         ]
+        }
+       ],
+       "span": 6
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "overlay": null,
+   "id": "mcb-section-cf5e58988",
+   "classes": [
+    "section",
+    "mcb-section",
+    "mfn-default-section"
+   ],
+   "bg": null,
+   "bgImage": null,
+   "bgSize": null,
+   "bgPos": null,
+   "padding": [
+    96,
+    0,
+    96,
+    0
+   ],
+   "h": 984,
+   "y": 3733,
+   "wrapperWidth": 1200,
+   "wraps": [
+    {
+     "kind": "wrap",
+     "width": "two-third",
+     "box": {
+      "w": 800,
+      "h": 203,
+      "y": 3829
+     },
+     "valign": "flex-start",
+     "classes": [
+      "wrap",
+      "two-third",
+      "tablet-two-third",
+      "laptop-two-third",
+      "mobile-one",
+      "vb-item",
+      "clearfix"
+     ],
+     "columns": [
+      {
+       "kind": "column",
+       "width": "one",
+       "box": {
+        "w": 776,
+        "h": 96,
+        "y": 3829
+       },
+       "span": 12,
+       "item": {
+        "type": "heading",
+        "align": "start",
+        "light": true,
+        "box": {
+         "w": 800,
+         "h": 112,
+         "y": 3829
+        },
+        "level": 2,
+        "html": "Unmatched Protection &amp; Stress-Free Solutions",
+        "text": "Unmatched Protection & Stress-Free Solutions",
+        "size": 51,
+        "weight": "700",
+        "color": "oklch(0.4122 0.0832 141.53)",
+        "lh": "60.6202px",
+        "family": "industry",
+        "transform": "none",
+        "spacing": "0.8px"
+       },
+       "classes": [
+        "column",
+        "one",
+        "laptop-one",
+        "tablet-one",
+        "mobile-one",
+        "column_heading",
+        "light-text",
+        "vb-item"
+       ]
+      },
+      {
+       "kind": "column",
+       "width": "one",
+       "box": {
+        "w": 776,
+        "h": 51,
+        "y": 3941
+       },
+       "span": 12,
+       "item": {
+        "type": "text",
+        "align": "start",
+        "light": false,
+        "box": {
+         "w": 800,
+         "h": 91,
+         "y": 3941
+        },
+        "html": "Your roof is one of the most critical investments you will make. We ensure that investment is protected and accessible.",
+        "text": "Your roof is one of the most critical investments you will make. We ensure that investment is protected and accessible.",
+        "size": 16,
+        "color": "rgb(69, 102, 79)",
+        "lh": "25.6px",
+        "weight": "500"
+       },
+       "classes": [
+        "column",
+        "one",
+        "laptop-one",
+        "tablet-one",
+        "mobile-one",
+        "column_plain_text",
+        "vb-item"
+       ]
+      }
+     ],
+     "span": 8
+    },
+    {
+     "kind": "wrap",
+     "width": "one",
+     "box": {
+      "w": 1200,
+      "h": 589,
+      "y": 4033
+     },
+     "valign": "flex-start",
+     "classes": [
+      "wrap",
+      "one",
+      "tablet-one",
+      "laptop-one",
+      "mobile-one",
+      "vb-item",
+      "clearfix"
+     ],
+     "columns": [],
+     "span": 12,
+     "wraps": [
+      {
+       "kind": "wrap",
+       "width": "three-fifth",
+       "box": {
+        "bg": "rgb(255, 255, 255)",
+        "radius": 32,
+        "padding": [
+         32,
+         32,
+         0,
+         32
+        ],
+        "w": 588,
+        "h": 538,
+        "y": 4033
+       },
+       "valign": "flex-start",
+       "classes": [
+        "wrap",
+        "three-fifth",
+        "tablet-three-fifth",
+        "laptop-three-fifth",
+        "mobile-one",
+        "mfn-nested-wrap",
+        "vb-item",
+        "clearfix"
+       ],
+       "columns": [
+        {
+         "kind": "column",
+         "width": "one",
+         "box": {
+          "w": 500,
+          "h": 27,
+          "y": 4065
+         },
+         "span": 12,
+         "item": {
+          "type": "heading",
+          "align": "start",
+          "light": true,
+          "box": {
+           "w": 524,
+           "h": 43,
+           "y": 4065
+          },
+          "level": 3,
+          "html": "Flexible Financing",
+          "text": "Flexible Financing",
+          "size": 38,
+          "weight": "700",
+          "color": "oklch(0.4122 0.0832 141.53)",
+          "lh": "45.4771px",
+          "family": "industry",
+          "transform": "none",
+          "spacing": "0.8px"
+         },
+         "classes": [
+          "column",
+          "one",
+          "laptop-one",
+          "tablet-one",
+          "mobile-one",
+          "column_heading",
+          "light-text",
+          "vb-item"
+         ]
+        },
+        {
+         "kind": "column",
+         "width": "one",
+         "box": {
+          "w": 500,
+          "h": 102,
+          "y": 4107
+         },
+         "span": 12,
+         "item": {
+          "type": "text",
+          "align": "start",
+          "light": false,
+          "box": {
+           "w": 524,
+           "h": 142,
+           "y": 4107
+          },
+          "html": "Upgrading to a lifetime roof shouldn't be stressful. Core Four Roofing offers flexible, stress-free financing options designed to fit your family's budget. Secure the ultimate protection for your home today and pay over time.",
+          "text": "Upgrading to a lifetime roof shouldn't be stressful. Core Four Roofing offers flexible, stress-free financing options designed to fit your family's budget. Secure the ultimate protection for your home today and pay over time.",
+          "size": 16,
+          "color": "rgb(69, 102, 79)",
+          "lh": "25.6px",
+          "weight": "500"
+         },
+         "classes": [
+          "column",
+          "one",
+          "laptop-one",
+          "tablet-one",
+          "mobile-one",
+          "column_plain_text",
+          "vb-item"
+         ]
+        },
+        {
+         "kind": "column",
+         "width": "one",
+         "box": {
+          "radius": 24,
+          "w": 500,
+          "h": 281,
+          "y": 4249
+         },
+         "span": 12,
+         "item": {
+          "type": "image",
+          "align": "start",
+          "light": false,
+          "box": {
+           "w": 524,
+           "h": 321,
+           "y": 4249
+          },
+          "img": {
+           "src": "/images/live/core_four_roofing_decra_stone_coated_steel.webp",
+           "alt": "",
+           "w": 500,
+           "h": 281,
+           "dw": 500,
+           "dh": 281
+          },
+          "radius": 24
+         },
+         "classes": [
+          "column",
+          "one",
+          "laptop-one",
+          "tablet-one",
+          "mobile-one",
+          "column_image",
+          "vb-item"
+         ]
+        }
+       ],
+       "span": 6
+      },
+      {
+       "kind": "wrap",
+       "width": "three-fifth",
+       "box": {
+        "bg": "rgb(255, 255, 255)",
+        "radius": 32,
+        "padding": [
+         32,
+         32,
+         0,
+         32
+        ],
+        "w": 588,
+        "h": 589,
+        "y": 4033
+       },
+       "valign": "flex-start",
+       "classes": [
+        "wrap",
+        "three-fifth",
+        "tablet-three-fifth",
+        "laptop-three-fifth",
+        "mobile-one",
+        "mfn-nested-wrap",
+        "vb-item",
+        "clearfix"
+       ],
+       "columns": [
+        {
+         "kind": "column",
+         "width": "one",
+         "box": {
+          "radius": 24,
+          "w": 500,
+          "h": 281,
+          "y": 4065
+         },
+         "span": 12,
+         "item": {
+          "type": "image",
+          "align": "start",
+          "light": false,
+          "box": {
+           "w": 524,
+           "h": 321,
+           "y": 4065
+          },
+          "img": {
+           "src": "/images/live/Decra-Villa-13-scaled.jpg",
+           "alt": "",
+           "w": 500,
+           "h": 281,
+           "dw": 500,
+           "dh": 281
+          },
+          "radius": 24
+         },
+         "classes": [
+          "column",
+          "one",
+          "laptop-one",
+          "tablet-one",
+          "mobile-one",
+          "column_image",
+          "vb-item"
+         ]
+        },
+        {
+         "kind": "column",
+         "width": "one",
+         "box": {
+          "w": 500,
+          "h": 27,
+          "y": 4386
+         },
+         "span": 12,
+         "item": {
+          "type": "heading",
+          "align": "start",
+          "light": true,
+          "box": {
+           "w": 524,
+           "h": 43,
+           "y": 4386
+          },
+          "level": 3,
+          "html": "Extended Warranties",
+          "text": "Extended Warranties",
+          "size": 38,
+          "weight": "700",
+          "color": "oklch(0.4122 0.0832 141.53)",
+          "lh": "45.4771px",
+          "family": "industry",
+          "transform": "none",
+          "spacing": "0.8px"
+         },
+         "classes": [
+          "column",
+          "one",
+          "laptop-one",
+          "tablet-one",
+          "mobile-one",
+          "column_heading",
+          "light-text",
+          "vb-item"
+         ]
+        },
+        {
+         "kind": "column",
+         "width": "one",
+         "box": {
+          "w": 500,
+          "h": 154,
+          "y": 4428
+         },
+         "span": 12,
+         "item": {
+          "type": "text",
+          "align": "start",
+          "light": false,
+          "box": {
+           "w": 524,
+           "h": 194,
+           "y": 4428
+          },
+          "html": "A stone-coated steel roof is designed to be a permanent upgrade. We install top-tier materials that come with industry-leading manufacturer warranties—often including guarantees against 120 mph winds and hail penetration. Combined with the Core Four Lifetime Workmanship Warranty, your home is secured for the long haul.",
+          "text": "A stone-coated steel roof is designed to be a permanent upgrade. We install top-tier materials that come with industry-leading manufacturer warranties—often including guarantees against 120 mph winds and hail penetration. Combined with the Core Four Lifetime Workmanship Warranty, your home is secured for the long haul.",
+          "size": 16,
+          "color": "rgb(69, 102, 79)",
+          "lh": "25.6px",
+          "weight": "500"
+         },
+         "classes": [
+          "column",
+          "one",
+          "laptop-one",
+          "tablet-one",
+          "mobile-one",
+          "column_plain_text",
+          "vb-item"
+         ]
+        }
+       ],
+       "span": 6
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "overlay": null,
+   "id": "mcb-section-a393f83d2",
+   "classes": [
+    "section",
+    "mcb-section",
+    "mfn-default-section"
+   ],
+   "bg": null,
+   "bgImage": null,
+   "bgSize": null,
+   "bgPos": null,
+   "padding": [
+    96,
+    0,
+    96,
+    0
+   ],
+   "h": 1883,
+   "y": 4718,
+   "wrapperWidth": 1200,
+   "wraps": [
+    {
+     "kind": "wrap",
+     "width": "one",
+     "box": {
+      "padding": [
+       0,
+       0,
+       24,
+       0
+      ],
+      "w": 1200,
+      "h": 99,
+      "y": 4814
+     },
+     "valign": "flex-start",
+     "classes": [
+      "wrap",
+      "one",
+      "tablet-one",
+      "laptop-one",
+      "mobile-one",
+      "vb-item",
+      "clearfix"
+     ],
+     "columns": [
+      {
+       "kind": "column",
+       "width": "one",
+       "box": {
+        "w": 1176,
+        "h": 35,
+        "y": 4814
+       },
+       "span": 12,
+       "item": {
+        "type": "heading",
+        "align": "start",
+        "light": false,
+        "box": {
+         "w": 1200,
+         "h": 75,
+         "y": 4814
+        },
+        "level": 2,
+        "html": "Ready to Transform Your Home's Exterior?",
+        "text": "Ready to Transform Your Home's Exterior?",
+        "size": 51,
+        "weight": "700",
+        "color": "oklch(0.4122 0.0832 141.53)",
+        "lh": "60.6202px",
+        "family": "industry",
+        "transform": "none",
+        "spacing": "0.8px"
+       },
+       "classes": [
+        "column",
+        "one",
+        "laptop-one",
+        "tablet-one",
+        "mobile-one",
+        "column_heading",
+        "vb-item"
+       ]
+      }
+     ],
+     "span": 12
+    },
+    {
+     "kind": "wrap",
+     "width": "one",
+     "box": {
+      "w": 1200,
+      "h": 1592,
+      "y": 4913
+     },
+     "valign": "flex-start",
+     "classes": [
+      "wrap",
+      "one",
+      "tablet-one",
+      "laptop-one",
+      "mobile-one",
+      "vb-item",
+      "clearfix"
+     ],
+     "columns": [],
+     "span": 12,
+     "wraps": [
+      {
+       "kind": "wrap",
+       "width": "one",
+       "box": {
+        "bg": "oklch(0.6099 0.1588 148.77)",
+        "radius": 32,
+        "padding": [
+         32,
+         32,
+         32,
+         32
+        ],
+        "w": 588,
+        "h": 1095,
+        "y": 4913
+       },
+       "valign": "flex-start",
+       "classes": [
+        "wrap",
+        "one",
+        "tablet-one",
+        "laptop-one",
+        "mobile-one",
+        "mfn-nested-wrap",
+        "vb-item",
+        "clearfix"
+       ],
+       "columns": [
+        {
+         "kind": "column",
+         "width": "one",
+         "box": {
+          "w": 500,
+          "h": 27,
+          "y": 4945
+         },
+         "span": 12,
+         "item": {
+          "type": "heading",
+          "align": "start",
+          "light": true,
+          "box": {
+           "w": 524,
+           "h": 43,
+           "y": 4945
+          },
+          "level": 3,
+          "html": "Request Your Inspection",
+          "text": "Request Your Inspection",
+          "size": 38,
+          "weight": "700",
+          "color": "oklch(1 0 none)",
+          "lh": "45.4771px",
+          "family": "industry",
+          "transform": "none",
+          "spacing": "0.8px"
+         },
+         "classes": [
+          "column",
+          "one",
+          "laptop-one",
+          "tablet-one",
+          "mobile-one",
+          "column_heading",
+          "light-text",
+          "vb-item"
+         ]
+        },
+        {
+         "kind": "column",
+         "width": "one",
+         "box": {
+          "w": 500,
+          "h": 62,
+          "y": 4988
+         },
+         "span": 12,
+         "item": {
+          "type": "text",
+          "html": "<p>Fill out the form below to schedule a free, no-obligation consultation with a Core Four roofing expert to explore stone-coated steel styles and colors for your property.</p>",
+          "text": "Fill out the form below to schedule a free, no-obligation consultation with a Core Four roofing expert to explore stone-coated steel styles and colors for your property.",
+          "box": {
+           "w": 500,
+           "h": 62,
+           "y": 4988
+          },
+          "raw": true,
+          "size": 16,
+          "color": "rgba(255, 255, 255, 0.85)"
+         },
+         "classes": [
+          "column",
+          "one",
+          "laptop-one",
+          "tablet-one",
+          "mobile-one",
+          "column_heading",
+          "light-text",
+          "vb-item"
+         ]
+        },
+        {
+         "kind": "column",
+         "width": "one",
+         "box": {
+          "w": 500,
+          "h": 871,
+          "y": 5066
+         },
+         "span": 12,
+         "item": {
+          "type": "form",
+          "fields": [
+           {
+            "label": "Facebook",
+            "required": false,
+            "type": "text",
+            "options": [],
+            "sub": []
+           },
+           {
+            "label": "Name",
+            "required": true,
+            "type": "text",
+            "options": [],
+            "sub": [
+             {
+              "name": "input_1.3",
+              "type": "text",
+              "placeholder": "",
+              "label": "First"
+             },
+             {
+              "name": "input_1.6",
+              "type": "text",
+              "placeholder": "",
+              "label": "Last"
+             }
+            ]
+           },
+           {
+            "label": "Email",
+            "required": true,
+            "type": "email",
+            "options": [],
+            "sub": []
+           },
+           {
+            "label": "Phone",
+            "required": true,
+            "type": "tel",
+            "options": [],
+            "sub": []
+           },
+           {
+            "label": "Select a Service",
+            "required": true,
+            "type": "select",
+            "options": [
+             "Commercial Roofing",
+             "Residential Roofing",
+             "Premium Roofing",
+             "Exterior Services"
+            ],
+            "sub": []
+           },
+           {
+            "label": "Address",
+            "required": true,
+            "type": "text",
+            "options": [],
+            "sub": [
+             {
+              "name": "input_4.4",
+              "type": "hidden",
+              "placeholder": "",
+              "label": ""
+             },
+             {
+              "name": "input_4.5",
+              "type": "text",
+              "placeholder": "",
+              "label": "ZIP Code"
+             },
+             {
+              "name": "input_4.6",
+              "type": "hidden",
+              "placeholder": "",
+              "label": ""
+             }
+            ]
+           },
+           {
+            "label": "Comments",
+            "required": false,
+            "type": "textarea",
+            "options": [],
+            "sub": []
+           },
+           {
+            "label": "",
+            "required": false,
+            "type": "text",
+            "options": [],
+            "sub": []
+           }
+          ],
+          "submit": "Submit",
+          "box": {
+           "w": 500,
+           "h": 871,
+           "y": 5066
+          }
+         },
+         "classes": [
+          "column",
+          "one",
+          "laptop-one",
+          "tablet-one",
+          "mobile-one",
+          "column_column",
+          "vb-item"
+         ]
+        }
+       ],
+       "span": 6
+      },
+      {
+       "kind": "wrap",
+       "width": "one",
+       "box": {
+        "radius": 32,
+        "w": 588,
+        "h": 1592,
+        "y": 4913
+       },
+       "valign": "flex-start",
+       "classes": [
+        "wrap",
+        "one",
+        "tablet-one",
+        "laptop-one",
+        "mobile-one",
+        "mfn-nested-wrap",
+        "vb-item",
+        "clearfix"
+       ],
+       "columns": [
+        {
+         "kind": "column",
+         "width": "one",
+         "box": {
+          "w": 564,
+          "h": 1592,
+          "y": 4913
+         },
+         "span": 12,
+         "item": {
+          "type": "gallery",
+          "align": "start",
+          "light": false,
+          "box": {
+           "w": 588,
+           "h": 1592,
+           "y": 4913
+          },
+          "images": [
+           {
+            "src": "/images/live/core_four_community-5.jpg",
+            "alt": "",
+            "w": 464,
+            "h": 464,
+            "dw": 480,
+            "dh": 480
+           },
+           {
+            "src": "/images/live/core_four_community-2.jpg",
+            "alt": "",
+            "w": 464,
+            "h": 348,
+            "dw": 476,
+            "dh": 364
+           },
+           {
+            "src": "/images/live/core_four_community-1.jpg",
+            "alt": "",
+            "w": 464,
+            "h": 480,
+            "dw": 481,
+            "dh": 496
+           }
+          ]
+         },
+         "classes": [
+          "column",
+          "one",
+          "laptop-one",
+          "tablet-one",
+          "mobile-one",
+          "column_image_gallery",
+          "vb-item"
+         ]
+        }
+       ],
+       "span": 6
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "overlay": null,
+   "id": "mcb-section-31l5wowlf",
+   "classes": [
+    "section",
+    "mcb-section",
+    "mfn-global-section",
+    "mfn-default-section"
+   ],
+   "bg": null,
+   "bgImage": null,
+   "bgSize": null,
+   "bgPos": null,
+   "padding": [
+    96,
+    0,
+    86,
+    0
+   ],
+   "h": 606,
+   "y": 6601,
+   "wrapperWidth": 1200,
+   "wraps": [
+    {
+     "kind": "wrap",
+     "width": "one",
+     "box": {
+      "w": 1200,
+      "h": 78,
+      "y": 6697
+     },
+     "valign": "flex-start",
+     "classes": [
+      "wrap",
+      "one",
+      "tablet-one",
+      "laptop-one",
+      "mobile-one",
+      "vb-item",
+      "clearfix"
+     ],
+     "columns": [
+      {
+       "kind": "column",
+       "width": "one-third",
+       "box": {
+        "w": 201,
+        "h": 38,
+        "y": 6697
+       },
+       "span": 2,
+       "item": {
+        "type": "elfsight",
+        "widget": "267ccdad-1b32-4c62-9394-105914e96f0f",
+        "box": {
+         "w": 201,
+         "h": 38,
+         "y": 6697
+        }
+       },
+       "classes": [
+        "column",
+        "one-third",
+        "laptop-one-third",
+        "tablet-one-third",
+        "mobile-one",
+        "column_column",
+        "vb-item"
+       ]
+      }
+     ],
+     "span": 12
+    },
+    {
+     "kind": "wrap",
+     "width": "one",
+     "box": {
+      "w": 1200,
+      "h": 346,
+      "y": 6775
+     },
+     "valign": "flex-start",
+     "classes": [
+      "wrap",
+      "one",
+      "tablet-one",
+      "laptop-one",
+      "mobile-one",
+      "mfn-looped-items",
+      "vb-item",
+      "clearfix"
+     ],
+     "columns": [],
+     "span": 12,
+     "item": {
+      "type": "html",
+      "html": "<h3>Kevin Andrews</h3><p>★★★★★ 5 Stars</p><span><p>Cody was quick to meet the adjuster was helpful through the process. Not a flyby night company, very professional and knowledgeable.</p></span><h3>Rene Portillo</h3><p>★★★★★ 5 Stars</p><span><p>I was very happy with service that was offered before during and after the installation. I will definitely recommend their services to others who need a roof.</p></span><h3>Lisa Marburger</h3><p>★★★★★ 5 Stars</p><span><p>I reached out to Montgomery with Core Four Roofing on Friday, July 14th, requesting a quote. I received the quote the same day. The quote was thorough, easy to read, and by far the best price. I asked how soon they could complete the job and Montgomery got back with me immediately stating they could do it the following Friday or Saturday. I requested they come Friday. Workers arrived and completed the job that Friday. The roof looks amazing and the job site was left with no evidence, short of the gorgeous new roof, that they had been there. Several of my neighbors have spoken with me stating how great the roof looks. Core Four Roofing and Montgomery get a 5 star A+++ from me. I would highly recommend them for any of your roofing needs.</p></span><h3>Justin Chambers</h3><p>★★★★★ 5 Stars</p><span><p>They were quick to schedule and complete my roof using great materials at a good price. They don’t try to over charge you. I would definitely recommend them.</p></span><span></span><span></span><span></span><span></span><span></span><i></i><i></i>"
+     }
+    }
+   ]
+  },
+  {
+   "overlay": null,
+   "id": "mcb-section-esdlrm2p",
+   "classes": [
+    "section",
+    "mcb-section",
+    "mfn-default-section",
+    "full-width"
+   ],
+   "bg": null,
+   "bgImage": null,
+   "bgSize": null,
+   "bgPos": null,
+   "padding": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "h": 704,
+   "y": 7207,
+   "wrapperWidth": 1440,
+   "wraps": [
+    {
+     "kind": "wrap",
+     "width": "one",
+     "box": {
+      "w": 1440,
+      "h": 700,
+      "y": 7209
+     },
+     "valign": "flex-start",
+     "classes": [
+      "wrap",
+      "one",
+      "tablet-one",
+      "laptop-one",
+      "mobile-one",
+      "vb-item",
+      "clearfix"
+     ],
+     "columns": [
+      {
+       "kind": "column",
+       "width": "one",
+       "box": {
+        "bg": "oklch(1 0 none)",
+        "radius": 24,
+        "padding": [
+         32,
+         32,
+         32,
+         32
+        ],
+        "w": 365,
+        "h": 390,
+        "y": 7229
+       },
+       "span": 3,
+       "item": {
+        "type": "text",
+        "align": "start",
+        "light": false,
+        "box": {
+         "w": 297,
+         "h": 322,
+         "y": 7263
+        },
+        "html": "<h4>Protecting Texas,<br>One Roof at a Time</h4><p>Core Four Roofing Service Coverage</p><ul><li><i></i><h6>Service Hubs</h6><p>Austin, Dallas, Houston</p></li><li><i></i><h6>Storm Response</h6><p>24/7 Emergency Tarping &amp; Repair</p></li><li><i></i><h6>Local Office</h6><p>(281) 541-0027</p></li></ul>",
+        "text": "Protecting Texas,\nOne Roof at a Time\n\nCore Four Roofing Service Coverage\n\nService Hubs\n\nAustin, Dallas, Houston\n\nStorm Response\n\n24/7 Emergency Tarping & Repair\n\nLocal Office\n\n(281) 541-0027"
+       },
+       "classes": [
+        "column",
+        "one",
+        "laptop-one",
+        "tablet-one",
+        "mobile-one",
+        "column_column",
+        "animate",
+        "vb-item",
+        "fadeInLeft"
+       ]
+      },
+      {
+       "kind": "column",
+       "width": "one",
+       "box": {
+        "w": 1440,
+        "h": 700,
+        "y": 7209
+       },
+       "span": 12,
+       "item": {
+        "type": "elfsight",
+        "widget": "058d3df7-5422-475a-ab17-f5e14c220034",
+        "box": {
+         "w": 1440,
+         "h": 700,
+         "y": 7209
+        }
+       },
+       "classes": [
+        "column",
+        "one",
+        "laptop-one",
+        "tablet-one",
+        "mobile-one",
+        "column_column",
+        "vb-item"
+       ]
+      }
+     ],
+     "span": 12
+    }
+   ]
+  }
+ ]
+}

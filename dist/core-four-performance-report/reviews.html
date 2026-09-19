@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet" />
+  <meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet" />
+  <title>Core Four Roofing — Review Shield</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Reddit+Sans:ital,wght@0,400;0,500;0,600;0,700;1,500;1,600;1,700&display=swap" rel="stylesheet" />
+  <link rel="icon" href="assets/core-four-roofing-favicon.svg" type="image/svg+xml" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <style>
+    :root {
+      --ink: #101015;
+      --ink-soft: #13162f;
+      --muted: #45664f;
+      --line: #dbd7cf;
+      --paper: #f3f0e9;
+      --panel: #f7f6f2;
+      --white: #ffffff;
+      --brand: #144b24;
+      --brand-mid: #269a47;
+      --brand-deep: #0f3519;
+      --lime: #bfe866;
+      --lime-soft: #d4f29a;
+      --gain: #144b24;
+      --gain-bg: #e8f5d8;
+      --warn: #8a5a12;
+      --warn-bg: #efe8d4;
+      --max: 1120px;
+      --ease: cubic-bezier(0.22, 1, 0.36, 1);
+      --radius: 16px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: "Reddit Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--ink);
+      background: var(--paper);
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+    }
+    img { max-width: 100%; display: block; }
+    button { font: inherit; cursor: pointer; border: 0; background: none; }
+    a { color: inherit; }
+
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      min-height: 100dvh;
+      color: var(--white);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      isolation: isolate;
+    }
+    .hero-media {
+      position: absolute;
+      inset: 0;
+      z-index: -2;
+      background:
+        linear-gradient(230deg, rgba(20, 75, 36, 0.15) 0%, rgba(13, 13, 13, 0.55) 45%, rgba(13, 13, 13, 0.88) 100%),
+        url("assets/hero-site.webp") center/cover no-repeat;
+      transform: scale(1.04);
+      animation: heroZoom 18s var(--ease) forwards;
+    }
+    @keyframes heroZoom { from { transform: scale(1.08); } to { transform: scale(1); } }
+    .hero-grain {
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      opacity: 0.18;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+      pointer-events: none;
+    }
+    .hero-inner {
+      width: min(100% - 2.5rem, var(--max));
+      margin: 0 auto;
+      padding: 2.5rem 0 3.5rem;
+    }
+    .hero-logo {
+      width: min(340px, 72vw);
+      height: auto;
+      margin-bottom: 1.25rem;
+      opacity: 0;
+      transform: translateY(24px);
+      animation: rise 0.9s var(--ease) 0.1s forwards;
+    }
+    .hero-brand {
+      font-weight: 700;
+      font-size: clamp(2.6rem, 7vw, 4.75rem);
+      letter-spacing: -0.03em;
+      line-height: 0.95;
+      max-width: 16ch;
+      opacity: 0;
+      transform: translateY(24px);
+      animation: rise 0.9s var(--ease) 0.2s forwards;
+    }
+    .hero-brand span { color: var(--lime); }
+    .hero-line {
+      margin-top: 1.25rem;
+      max-width: 38rem;
+      font-size: 1.05rem;
+      color: rgba(255, 255, 255, 0.84);
+      opacity: 0;
+      transform: translateY(18px);
+      animation: rise 0.9s var(--ease) 0.35s forwards;
+    }
+    .hero-actions {
+      margin-top: 1.75rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      opacity: 0;
+      transform: translateY(18px);
+      animation: rise 0.9s var(--ease) 0.5s forwards;
+    }
+    @keyframes rise { to { opacity: 1; transform: translateY(0); } }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.85rem 1.35rem;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 0.92rem;
+      text-decoration: none;
+      transition: transform 0.25s var(--ease), background 0.25s ease;
+    }
+    .btn:hover { transform: translateY(-1px); }
+    .btn-primary { background: var(--lime); color: var(--brand); }
+    .btn-primary:hover { background: var(--lime-soft); }
+    .btn-ghost {
+      background: rgba(255, 255, 255, 0.1);
+      color: var(--white);
+      outline: 1px solid rgba(255, 255, 255, 0.28);
+    }
+    .hero-meta {
+      margin-top: 2.25rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem 2.5rem;
+      padding-top: 1.25rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.18);
+      font-size: 0.82rem;
+      color: rgba(255, 255, 255, 0.7);
+      opacity: 0;
+      animation: rise 0.9s var(--ease) 0.65s forwards;
+    }
+    .hero-meta strong { display: block; color: var(--white); font-size: 0.95rem; margin-bottom: 0.15rem; }
+
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      backdrop-filter: blur(12px);
+      background: rgba(243, 240, 233, 0.92);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav-inner {
+      width: min(100% - 2.5rem, var(--max));
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 0.7rem 0;
+      min-width: 0;
+    }
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      flex: 0 0 auto;
+      font-weight: 700;
+      font-size: 0.92rem;
+      color: var(--brand);
+      text-decoration: none;
+    }
+    .nav-brand img { height: 28px; width: auto; }
+    .nav-links {
+      display: flex;
+      flex: 1 1 auto;
+      min-width: 0;
+      gap: 0.15rem;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+    .nav-links::-webkit-scrollbar { display: none; }
+    .nav-links a {
+      text-decoration: none;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--muted);
+      padding: 0.45rem 0.55rem;
+      border-radius: 2px;
+      white-space: nowrap;
+    }
+    .nav-links a:hover, .nav-links a.active { color: var(--ink); background: rgba(16, 20, 24, 0.05); }
+    .nav-print {
+      flex: 0 0 auto;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--white);
+      padding: 0.45rem 0.75rem;
+      border-radius: 999px;
+      background: var(--brand);
+    }
+    @media (max-width: 1100px) { .nav-brand span { display: none; } }
+    @media (max-width: 780px) { .nav-print { display: none; } }
+
+    main { width: min(100% - 2.5rem, var(--max)); margin: 0 auto; padding: 2.5rem 0 4rem; }
+    section { margin-bottom: 3.5rem; scroll-margin-top: 4.5rem; }
+    .section-kicker {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--brand);
+      margin-bottom: 0.55rem;
+    }
+    .section-title {
+      font-weight: 700;
+      font-size: clamp(1.85rem, 3.6vw, 2.55rem);
+      letter-spacing: -0.025em;
+      line-height: 1.1;
+      margin-bottom: 0.65rem;
+      color: var(--ink-soft);
+    }
+    .section-lead { max-width: 42rem; color: var(--muted); margin-bottom: 1.75rem; }
+
+    .gains {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1px;
+      background: var(--line);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+    .gain { background: var(--white); padding: 1.35rem 1.2rem 1.25rem; position: relative; }
+    .gain::after {
+      content: "";
+      position: absolute;
+      left: 0; top: 0; bottom: 0;
+      width: 3px;
+      background: var(--lime);
+    }
+    .gain-label { font-size: 0.78rem; font-weight: 600; color: var(--muted); margin-bottom: 0.55rem; }
+    .gain-value { font-weight: 700; font-size: 2.05rem; letter-spacing: -0.03em; line-height: 1; color: var(--brand); }
+    .gain-note { margin-top: 0.45rem; font-size: 0.75rem; color: var(--muted); }
+
+    .callout {
+      margin-top: 1.25rem;
+      padding: 1.1rem 1.25rem;
+      background: var(--brand);
+      color: rgba(255, 255, 255, 0.9);
+      border-left: 4px solid var(--lime);
+      border-radius: 0 var(--radius) var(--radius) 0;
+    }
+    .callout strong { color: var(--white); }
+
+    .split { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 1.5rem; align-items: start; }
+    .panel {
+      background: var(--white);
+      border: 1px solid var(--line);
+      padding: 1.25rem;
+      border-radius: var(--radius);
+    }
+    .panel h3 { font-size: 1.2rem; font-weight: 700; letter-spacing: -0.02em; color: var(--brand); margin-bottom: 0.35rem; }
+    .panel-sub { font-size: 0.82rem; color: var(--muted); margin-bottom: 1rem; }
+    .chart-wrap { position: relative; height: 280px; }
+
+    .story-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+    .story {
+      padding: 1.25rem 1.15rem;
+      background: var(--white);
+      border-top: 3px solid var(--brand);
+      border-radius: 0 0 var(--radius) var(--radius);
+    }
+    .story:nth-child(2) { border-top-color: var(--brand-mid); }
+    .story:nth-child(3) { border-top-color: var(--lime); }
+    .story h3 { font-size: 1.15rem; font-weight: 700; color: var(--brand); margin-bottom: 0.45rem; }
+    .story p { font-size: 0.9rem; color: var(--muted); }
+
+    .compare-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--line);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      overflow: hidden;
+      margin-top: 1rem;
+    }
+    .compare-cell { background: var(--white); padding: 1.1rem 1rem; }
+    .compare-cell .k { font-size: 0.75rem; font-weight: 600; color: var(--muted); margin-bottom: 0.35rem; }
+    .compare-cell .v { font-size: 2rem; font-weight: 700; letter-spacing: -0.03em; line-height: 1; color: var(--brand); }
+    .compare-cell .d { margin-top: 0.4rem; font-size: 0.78rem; font-weight: 700; color: var(--gain); }
+
+    .flow {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 0.65rem;
+    }
+    .flow-step {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 1rem 0.9rem;
+      position: relative;
+    }
+    .flow-step b {
+      display: block;
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--brand-mid);
+      margin-bottom: 0.4rem;
+    }
+    .flow-step h3 { font-size: 1rem; font-weight: 700; color: var(--brand); margin-bottom: 0.3rem; }
+    .flow-step p { font-size: 0.8rem; color: var(--muted); }
+
+    .phones {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 1.25rem;
+      align-items: start;
+    }
+    .phone-wrap h3 { font-size: 1rem; font-weight: 700; color: var(--brand); margin: 0.85rem 0 0.25rem; text-align: center; }
+    .phone-wrap p { font-size: 0.8rem; color: var(--muted); text-align: center; }
+    .phone {
+      width: 100%;
+      max-width: 280px;
+      margin: 0 auto;
+      background: #121612;
+      border-radius: 28px;
+      padding: 12px 10px 16px;
+      box-shadow: 0 18px 40px rgba(15, 53, 25, 0.18);
+    }
+    .phone-bar { width: 90px; height: 5px; background: #2a322a; border-radius: 999px; margin: 4px auto 12px; }
+    .phone-screen {
+      background: var(--paper);
+      border-radius: 18px;
+      padding: 1rem 0.9rem 1.1rem;
+      min-height: 340px;
+    }
+    .sms-meta { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.75rem; }
+    .sms-bubble {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 14px 14px 14px 4px;
+      padding: 0.85rem 0.9rem;
+      font-size: 0.84rem;
+      color: var(--ink-soft);
+    }
+    .sms-bubble strong { color: var(--brand); }
+    .sms-link { display: inline-block; margin-top: 0.55rem; font-weight: 700; color: var(--brand); font-size: 0.8rem; }
+    .rate-logo { width: 120px; margin: 0 auto 0.75rem; }
+    .rate-copy { text-align: center; font-size: 0.88rem; color: var(--ink-soft); margin-bottom: 0.85rem; }
+    .stars {
+      display: flex;
+      justify-content: center;
+      gap: 0.25rem;
+      font-size: 1.55rem;
+      color: var(--brand-mid);
+      letter-spacing: 0.05em;
+      margin-bottom: 0.85rem;
+    }
+    .stars.dim span:nth-child(n+3) { color: #c9c4ba; }
+    .dest-btn {
+      display: block;
+      width: 100%;
+      text-align: center;
+      padding: 0.65rem 0.75rem;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 0.82rem;
+      margin-bottom: 0.45rem;
+      text-decoration: none;
+    }
+    .dest-btn.google { background: var(--brand); color: var(--white); }
+    .dest-btn.yelp { background: var(--lime); color: var(--brand-deep); }
+    .hold-box {
+      background: var(--warn-bg);
+      border-radius: 12px;
+      padding: 0.75rem 0.8rem;
+      font-size: 0.8rem;
+      color: var(--warn);
+    }
+    .hold-box strong { display: block; margin-bottom: 0.25rem; color: var(--brand-deep); }
+
+    .status {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      padding: 0.2rem 0.45rem;
+      border-radius: 999px;
+    }
+    .status.go { background: var(--gain-bg); color: var(--brand); }
+    .status.hold { background: var(--warn-bg); color: var(--warn); }
+    .status.wait { background: var(--panel); color: var(--muted); }
+
+    table.data { width: 100%; border-collapse: collapse; font-size: 0.88rem; }
+    table.data th {
+      text-align: left;
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      font-weight: 700;
+      padding: 0.55rem 0.4rem;
+      border-bottom: 1px solid var(--line);
+    }
+    table.data td { padding: 0.7rem 0.4rem; border-bottom: 1px solid rgba(213, 219, 225, 0.7); vertical-align: top; }
+    table.data tr:last-child td { border-bottom: 0; }
+    table.data .num { text-align: right; font-variant-numeric: tabular-nums; font-weight: 600; }
+
+    .steps { display: grid; gap: 0.75rem; }
+    .step {
+      display: grid;
+      grid-template-columns: 2.6rem 1fr;
+      gap: 0.85rem;
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 1rem 1.1rem;
+    }
+    .step-num {
+      width: 2.6rem; height: 2.6rem;
+      border-radius: 50%;
+      background: var(--brand);
+      color: var(--lime);
+      font-weight: 700;
+      display: grid;
+      place-items: center;
+    }
+    .step h3 { font-size: 1.05rem; font-weight: 700; color: var(--brand); margin-bottom: 0.2rem; }
+    .step p { font-size: 0.88rem; color: var(--muted); }
+
+    .footer {
+      width: min(100% - 2.5rem, var(--max));
+      margin: 0 auto 2.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--line);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 1rem;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    @media (max-width: 960px) {
+      .gains, .split, .story-grid, .phones, .flow, .compare-grid { grid-template-columns: 1fr 1fr; }
+      .split { grid-template-columns: 1fr; }
+      .flow { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 640px) {
+      .gains, .story-grid, .phones, .flow, .compare-grid { grid-template-columns: 1fr; }
+      .hero-inner, main, .nav-inner, .footer { width: min(100% - 1.5rem, var(--max)); }
+    }
+    @media print {
+      .hero { min-height: auto; padding-top: 3rem; }
+      .nav, .hero-actions, .nav-print { display: none !important; }
+      .gate { display: none !important; }
+    }
+
+    body.is-locked > *:not(.gate) { display: none !important; }
+    .gate {
+      display: none;
+      min-height: 100vh;
+      min-height: 100dvh;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1.25rem;
+      background:
+        linear-gradient(230deg, rgba(20, 75, 36, 0.88) 0%, rgba(13, 13, 13, 0.92) 100%),
+        url("assets/hero-site.webp") center/cover no-repeat;
+    }
+    body.is-locked .gate { display: flex; }
+    .gate-card {
+      width: min(100%, 400px);
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 2rem 1.5rem 1.5rem;
+      text-align: center;
+    }
+    .gate-card img { width: 180px; height: auto; margin: 0 auto 1.25rem; }
+    .gate-card h1 { font-size: 1.35rem; font-weight: 700; color: var(--brand); margin-bottom: 0.35rem; }
+    .gate-card p { font-size: 0.9rem; color: var(--muted); margin-bottom: 1.25rem; }
+    .gate-card form { display: grid; gap: 0.75rem; }
+    .gate-card input[type="password"] {
+      width: 100%;
+      padding: 0.85rem 1rem;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: var(--white);
+      font: inherit;
+      outline: none;
+    }
+    .gate-card button {
+      width: 100%;
+      padding: 0.85rem 1.25rem;
+      border-radius: 999px;
+      background: var(--brand);
+      color: var(--white);
+      font: inherit;
+      font-weight: 700;
+    }
+    .gate-error { display: none; font-size: 0.82rem; font-weight: 600; color: #962317; }
+    .gate-error.show { display: block; }
+  </style>
+  <script>
+    (function () {
+      var KEY = "cfr_report_auth_v1";
+      var HASH = "450e1216ce69b33721d029d095020eb17147a0cc106077b71d880adf99093610";
+      async function sha256(text) {
+        var data = new TextEncoder().encode(text);
+        var buf = await crypto.subtle.digest("SHA-256", data);
+        return Array.from(new Uint8Array(buf)).map(function (b) {
+          return b.toString(16).padStart(2, "0");
+        }).join("");
+      }
+      window.__cfrUnlock = async function (password) {
+        var h = await sha256(password);
+        if (h !== HASH) return false;
+        try { sessionStorage.setItem(KEY, HASH); } catch (e) {}
+        document.body.classList.remove("is-locked");
+        return true;
+      };
+      window.__cfrIsAuthed = function () {
+        try { return sessionStorage.getItem(KEY) === HASH; } catch (e) { return false; }
+      };
+      document.documentElement.classList.add("js-gate");
+    })();
+  </script>
+</head>
+<body class="is-locked">
+  <div class="gate" role="dialog" aria-modal="true" aria-labelledby="gate-title">
+    <div class="gate-card">
+      <img src="assets/core-four-roofing-logo-green.svg" alt="Core Four Roofing" width="180" height="62" />
+      <h1 id="gate-title">Review Shield</h1>
+      <p>Enter the password to view this private client report.</p>
+      <form id="gate-form" autocomplete="off">
+        <input id="gate-password" type="password" name="password" placeholder="Password" required autofocus />
+        <button type="submit">Unlock report</button>
+        <div class="gate-error" id="gate-error">Incorrect password. Try again.</div>
+      </form>
+    </div>
+  </div>
+  <script>
+    (function () {
+      if (window.__cfrIsAuthed && window.__cfrIsAuthed()) document.body.classList.remove("is-locked");
+      var form = document.getElementById("gate-form");
+      var input = document.getElementById("gate-password");
+      var err = document.getElementById("gate-error");
+      if (!form) return;
+      form.addEventListener("submit", async function (e) {
+        e.preventDefault();
+        err.classList.remove("show");
+        var ok = await window.__cfrUnlock(input.value);
+        if (!ok) { err.classList.add("show"); input.value = ""; input.focus(); }
+      });
+    })();
+  </script>
+
+  <header class="hero">
+    <div class="hero-media" aria-hidden="true"></div>
+    <div class="hero-grain" aria-hidden="true"></div>
+    <div class="hero-inner">
+      <img class="hero-logo" src="assets/core-four-roofing-logo.svg" alt="Core Four Roofing" width="340" height="117" />
+      <h1 class="hero-brand">Review Shield <span>from the CMS</span></h1>
+      <p class="hero-line">
+        Every finished job automatically asks the customer how it went — privately first. Happy work goes to Google and Yelp. Anything that needs a fix stays in-house until the office has a chance to make it right.
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#examples">See the customer flow</a>
+        <a class="btn btn-ghost" href="index.html">Back to performance report</a>
+      </div>
+      <div class="hero-meta">
+        <div><strong>Trigger</strong> Job marked complete in the CMS</div>
+        <div><strong>First stop</strong> Private Core Four rating — not Google</div>
+        <div><strong>Protects</strong> The 5.0 listing while growing real reviews</div>
+      </div>
+    </div>
+  </header>
+
+  <nav class="nav" aria-label="Plan sections">
+    <div class="nav-inner">
+      <a class="nav-brand" href="index.html">
+        <img src="assets/core-four-roofing-logo-green.svg" alt="Core Four Roofing" width="120" height="41" />
+        <span>Review Shield</span>
+      </a>
+      <div class="nav-links">
+        <a href="#why">Why</a>
+        <a href="#how">How it works</a>
+        <a href="#examples">Examples</a>
+        <a href="#dashboard">Dashboard</a>
+        <a href="#launch">Rollout</a>
+        <a href="index.html">Report</a>
+        <a href="ads.html">Ads plan</a>
+      </div>
+      <button class="nav-print" type="button" onclick="window.print()">Export PDF</button>
+    </div>
+  </nav>
+
+  <main>
+    <section id="why">
+      <p class="section-kicker">What we are implementing</p>
+      <h2 class="section-title">Reviews on autopilot. Reputation under control.</h2>
+      <p class="section-lead">
+        Right now a 5.0★ listing is a real advantage — and a fragile one. Crews forget to ask. Happy customers never post. One frustrated customer can, because nobody caught it first. Review Shield hooks the Voixly / WordPress CMS so the ask happens every time, and the first rating never hits Google or Yelp until it should.
+      </p>
+
+      <div class="gains">
+        <div class="gain">
+          <div class="gain-label">Ask is automatic</div>
+          <div class="gain-value">CMS</div>
+          <p class="gain-note">Job complete → text + email, no one on the crew has to remember</p>
+        </div>
+        <div class="gain">
+          <div class="gain-label">Private rating first</div>
+          <div class="gain-value">1–5★</div>
+          <p class="gain-note">Feedback lands in your dashboard, not on the public listing</p>
+        </div>
+        <div class="gain">
+          <div class="gain-label">4–5 stars</div>
+          <div class="gain-value">Public</div>
+          <p class="gain-note">One tap to Google Business and Yelp — customer writes it themselves</p>
+        </div>
+        <div class="gain">
+          <div class="gain-label">1–3 stars</div>
+          <div class="gain-value">Held</div>
+          <p class="gain-note">No Google/Yelp buttons. Office alert so you can make it right</p>
+        </div>
+      </div>
+
+      <div class="callout">
+        <strong>How vetting actually works:</strong>
+        Nothing is auto-posted to Google or Yelp. The customer always writes the public review on those sites. What we control is the first screen. Happy jobs get the public-review invite. Unhappy jobs never see those buttons — they go to a manager queue at (281) 541-0027 so the issue is handled in-house first.
+      </div>
+    </section>
+
+    <section id="how">
+      <p class="section-kicker">The system</p>
+      <h2 class="section-title">From job complete to Google — with a checkpoint</h2>
+      <p class="section-lead">
+        Five steps. No extra work for the field. The office only gets pulled in when a rating comes back low.
+      </p>
+
+      <div class="flow">
+        <article class="flow-step">
+          <b>01</b>
+          <h3>CMS trigger</h3>
+          <p>Job marked complete in Voixly / WordPress (or the production system). Customer name, phone, email, city, and job type sync over.</p>
+        </article>
+        <article class="flow-step">
+          <b>02</b>
+          <h3>Auto ask</h3>
+          <p>Same-day SMS + email from Core Four. One link. Ten seconds. No “please leave us a Google review” on the first screen.</p>
+        </article>
+        <article class="flow-step">
+          <b>03</b>
+          <h3>Private score</h3>
+          <p>Customer taps 1–5 stars on a branded Core Four page. That score is yours. It does not publish.</p>
+        </article>
+        <article class="flow-step">
+          <b>04a</b>
+          <h3>Happy path</h3>
+          <p>4 or 5 stars: “Share that on Google / Yelp.” Direct links to the Tomball listing and Yelp page.</p>
+        </article>
+        <article class="flow-step">
+          <b>04b</b>
+          <h3>Recovery path</h3>
+          <p>1–3 stars: “Tell us what happened.” Manager text + email. Google and Yelp stay hidden.</p>
+        </article>
+      </div>
+
+      <div class="split" style="margin-top:1.5rem;">
+        <div class="panel">
+          <h3>Expected funnel (conservative)</h3>
+          <p class="panel-sub">Illustrative monthly run-rate once the trigger is live · not a guarantee</p>
+          <div class="chart-wrap"><canvas id="funnelChart"></canvas></div>
+        </div>
+        <div class="panel">
+          <h3>What the client gets</h3>
+          <p class="panel-sub">Protect the 5.0 while the listing actually grows</p>
+          <div class="compare-grid" style="margin-top:0;">
+            <div class="compare-cell">
+              <div class="k">Requests / 20 jobs</div>
+              <div class="v">20</div>
+              <div class="d">Every close, not a maybe</div>
+            </div>
+            <div class="compare-cell">
+              <div class="k">Ratings back</div>
+              <div class="v">8–12</div>
+              <div class="d">~40–60% tap the link</div>
+            </div>
+            <div class="compare-cell">
+              <div class="k">Public reviews</div>
+              <div class="v">4–7</div>
+              <div class="d">Only the 4–5★ invites</div>
+            </div>
+          </div>
+          <p class="panel-sub" style="margin-top:1rem;margin-bottom:0;">
+            Low scores stay in the dashboard as service-recovery tickets. Those do not become Google or Yelp reviews unless the customer later chooses to post on their own — we simply don’t hand them the link while they’re unhappy.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="examples">
+      <p class="section-kicker">What the customer sees</p>
+      <h2 class="section-title">Three screens. One brand.</h2>
+      <p class="section-lead">
+        Sample flow for a Cypress TPO job. Copy, colors, and logo match corefourroofing.com — cream, forest, lime — so it feels like Core Four, not a third-party form.
+      </p>
+
+      <div class="phones">
+        <div class="phone-wrap">
+          <div class="phone">
+            <div class="phone-bar"></div>
+            <div class="phone-screen">
+              <div class="sms-meta">Messages · Core Four Roofing</div>
+              <div class="sms-bubble">
+                Hi Maria — it’s Core Four Roofing. The Cypress TPO job is wrapped. How did we do? Takes 10 seconds.
+                <span class="sms-link">corefourroofing.com/r/maria</span>
+              </div>
+              <div class="sms-bubble" style="margin-top:0.55rem;font-size:0.78rem;color:var(--muted);">
+                Sent automatically when the job was marked complete. No crew texting required.
+              </div>
+            </div>
+          </div>
+          <h3>1. The ask</h3>
+          <p>SMS + email fire from the CMS. First screen is “how did we do?” — not Google.</p>
+        </div>
+
+        <div class="phone-wrap">
+          <div class="phone">
+            <div class="phone-bar"></div>
+            <div class="phone-screen">
+              <img class="rate-logo" src="assets/core-four-roofing-logo-green.svg" alt="" />
+              <p class="rate-copy">Thanks for trusting Core Four on the Cypress TPO coating. How was the job?</p>
+              <div class="stars" aria-label="5 star rating">★★★★★</div>
+              <a class="dest-btn google" href="#examples">Leave a Google review</a>
+              <a class="dest-btn yelp" href="#examples">Share on Yelp</a>
+              <p style="text-align:center;font-size:0.72rem;color:var(--muted);margin-top:0.35rem;">Shown only after 4 or 5 stars</p>
+            </div>
+          </div>
+          <h3>2. Happy path · 5★</h3>
+          <p>Maria tapped 5. Google and Yelp appear. She writes the review on those sites — we never post for her.</p>
+        </div>
+
+        <div class="phone-wrap">
+          <div class="phone">
+            <div class="phone-bar"></div>
+            <div class="phone-screen">
+              <img class="rate-logo" src="assets/core-four-roofing-logo-green.svg" alt="" />
+              <p class="rate-copy">James rated the Katy leak repair 2 stars. Google and Yelp stay hidden.</p>
+              <div class="stars dim" aria-label="2 star rating"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+              <div class="hold-box">
+                <strong>Held for the office</strong>
+                “Sorry we missed the mark. A manager will call you today — tell us what happened.”
+              </div>
+              <p style="font-size:0.78rem;color:var(--muted);margin-top:0.75rem;">
+                Alert to Tomball HQ · (281) 541-0027 · same-day callback rule.
+              </p>
+            </div>
+          </div>
+          <h3>3. Recovery path · 2★</h3>
+          <p>No public buttons. The issue is vetted in-house before anyone is pointed at Google or Yelp.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="dashboard">
+      <p class="section-kicker">Office view</p>
+      <h2 class="section-title">You see every rating before the public does</h2>
+      <p class="section-lead">
+        Example week after go-live. Green rows were invited to Google and Yelp. The held row never got those links — the office called first.
+      </p>
+
+      <div class="panel" style="overflow-x:auto;">
+        <h3>Review Shield · sample queue</h3>
+        <p class="panel-sub">Illustrative jobs · Greater Houston · not live customer data</p>
+        <table class="data">
+          <thead>
+            <tr>
+              <th>Customer</th>
+              <th>Job</th>
+              <th>Private score</th>
+              <th>Route</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Maria G. · Cypress</td>
+              <td>TPO coating</td>
+              <td>★★★★★</td>
+              <td>Google + Yelp invite</td>
+              <td><span class="status go">Posted · Google</span></td>
+            </tr>
+            <tr>
+              <td>Nguyen Warehouse · Humble</td>
+              <td>Commercial leak / coating</td>
+              <td>★★★★★</td>
+              <td>Google + Yelp invite</td>
+              <td><span class="status go">Posted · both</span></td>
+            </tr>
+            <tr>
+              <td>James R. · Katy</td>
+              <td>Residential leak repair</td>
+              <td>★★☆☆☆</td>
+              <td>Held · manager callback</td>
+              <td><span class="status hold">Vetted in-house</span></td>
+            </tr>
+            <tr>
+              <td>The Woodlands HOA</td>
+              <td>Clubhouse metal</td>
+              <td>★★★★☆</td>
+              <td>Google + Yelp invite</td>
+              <td><span class="status wait">Clicked Google</span></td>
+            </tr>
+            <tr>
+              <td>Luis M. · Tomball</td>
+              <td>Residential replacement</td>
+              <td>★★★★★</td>
+              <td>Google + Yelp invite</td>
+              <td><span class="status wait">Invite sent</span></td>
+            </tr>
+            <tr>
+              <td>Spring retail strip</td>
+              <td>Flat roof survey + repair</td>
+              <td>★★★☆☆</td>
+              <td>Held · follow-up punch list</td>
+              <td><span class="status hold">Vetted in-house</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="story-grid" style="margin-top:1.25rem;">
+        <article class="story">
+          <h3>Happy reviews go public</h3>
+          <p>Maria’s 5★ private score unlocked Google and Yelp. She wrote: “Crew showed up when they said they would and the Cypress building is dry.” That is a real review, on Google, from a real job — just asked at the right moment.</p>
+        </article>
+        <article class="story">
+          <h3>Bad scores get vetted</h3>
+          <p>James hit 2★ because a leak stain wasn’t fully cleaned. No Google button. Office called the same day, sent a crew back, and closed the ticket. That 2★ never became a 2★ on the listing.</p>
+        </article>
+        <article class="story">
+          <h3>Commercial jobs included</h3>
+          <p>The Humble warehouse and Spring strip are in the same pipeline. Property managers get the same private rating. High scores feed the commercial listing story you are already building in search.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="launch">
+      <p class="section-kicker">90-day rollout</p>
+      <h2 class="section-title">How we turn this on</h2>
+      <p class="section-lead">
+        Built on the Voixly CMS you already use, branded like the rest of this report, and wired to the Tomball Google listing and Yelp page.
+      </p>
+
+      <div class="steps">
+        <article class="step">
+          <div class="step-num">1</div>
+          <div>
+            <h3>Days 1–14 — connect the CMS</h3>
+            <p>Job-complete trigger from Voixly / WordPress (name, phone, email, job type, city). Branded rating page. Google review link for the Tomball GBP. Yelp link. Office alert to (281) 541-0027 and the shop email.</p>
+          </div>
+        </article>
+        <article class="step">
+          <div class="step-num">2</div>
+          <div>
+            <h3>Days 15–30 — private rating live</h3>
+            <p>Every completed job sends the SMS + email. 4–5★ get Google/Yelp. 1–3★ go to the recovery queue with a same-day callback rule. No public posting by us — ever.</p>
+          </div>
+        </article>
+        <article class="step">
+          <div class="step-num">3</div>
+          <div>
+            <h3>Days 31–60 — prove the shield</h3>
+            <p>Weekly dashboard: requests sent, ratings in, public reviews posted, issues held. Tune copy. Add a 3-day reminder only for people who never tapped the first link.</p>
+          </div>
+        </article>
+        <article class="step">
+          <div class="step-num">4</div>
+          <div>
+            <h3>Days 61–90 — make it habit</h3>
+            <p>Office owns the held queue like a punch list. New Google/Yelp reviews get a thank-you reply. The 5.0 stays protected because unhappy work is caught before the listing is invited.</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="callout">
+        <strong>What we are implementing, in one line:</strong>
+        When a Core Four job is marked complete in the CMS, the customer is asked for a private rating. Four and five stars are invited to Google and Yelp. One to three stars are held for the office so bad reviews can be vetted — and fixed — before anyone is sent to a public site.
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div>Core Four Roofing · Confidential Review Shield plan · Prepared Aug 17, 2026</div>
+    <div>Private rating first · Google &amp; Yelp by customer invite only · Sample jobs are illustrative</div>
+  </footer>
+
+  <script>
+    Chart.defaults.font.family = '"Reddit Sans", sans-serif';
+    Chart.defaults.color = "#45664f";
+    new Chart(document.getElementById("funnelChart"), {
+      type: "bar",
+      data: {
+        labels: ["Jobs complete", "Requests sent", "Private ratings", "Invited to Google/Yelp", "Public reviews"],
+        datasets: [{
+          data: [20, 20, 10, 8, 5],
+          backgroundColor: ["#144b24", "#269a47", "#bfe866", "#144b24", "#269a47"],
+          borderRadius: 4
+        }]
+      },
+      options: {
+        indexAxis: "y",
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: { legend: { display: false } },
+        scales: {
+          x: {
+            max: 20,
+            grid: { color: "rgba(213,219,225,0.7)" },
+            title: { display: true, text: "Per 20 completed jobs", color: "#45664f", font: { size: 11, weight: "600" } }
+          },
+          y: { grid: { display: false } }
+        }
+      }
+    });
+    const sections = [...document.querySelectorAll("main section")];
+    const links = [...document.querySelectorAll(".nav-links a")];
+    const spy = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        links.forEach((l) => l.classList.toggle("active", l.getAttribute("href") === `#${entry.target.id}`));
+      });
+    }, { rootMargin: "-40% 0px -50% 0px", threshold: 0 });
+    sections.forEach((s) => spy.observe(s));
+  </script>
+</body>
+</html>

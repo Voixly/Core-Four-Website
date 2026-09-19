@@ -1,0 +1,2657 @@
+{
+ "url": "https://corefourroofing.com/commercial-roofing/inspections-condition-reports/",
+ "title": "Inspections & Condition Reports - Core Four Roofing",
+ "description": "",
+ "h1": "Commercial Roof Inspections & Condition Reports in Texas",
+ "sections": [
+  {
+   "overlay": {
+    "gradient": "linear-gradient(230deg, rgba(41, 41, 41, 0) 0%, rgba(13, 13, 13, 0.78) 92%)",
+    "bg": null,
+    "opacity": "1"
+   },
+   "id": "mcb-section-414741aff",
+   "classes": [
+    "section",
+    "mcb-section",
+    "mfn-default-section",
+    "full-width"
+   ],
+   "bg": null,
+   "bgImage": "/images/live/c1738317-8de2-4d63-981d-992db919bc6d.webp",
+   "bgSize": "cover",
+   "bgPos": "50% 50%",
+   "padding": [
+    230,
+    86,
+    116,
+    86
+   ],
+   "h": 996,
+   "y": 0,
+   "wrapperWidth": 1267,
+   "wraps": [
+    {
+     "kind": "wrap",
+     "width": "one-second",
+     "box": {
+      "w": 634,
+      "h": 650,
+      "y": 230
+     },
+     "valign": "center",
+     "classes": [
+      "wrap",
+      "tablet-three-fifth",
+      "mobile-one",
+      "vb-item",
+      "clearfix"
+     ],
+     "columns": [
+      {
+       "kind": "column",
+       "width": "one",
+       "box": {
+        "w": 610,
+        "h": 38,
+        "y": 230
+       },
+       "span": 12,
+       "item": {
+        "type": "elfsight",
+        "widget": "267ccdad-1b32-4c62-9394-105914e96f0f",
+        "box": {
+         "w": 610,
+         "h": 38,
+         "y": 230
+        }
+       },
+       "classes": [
+        "column",
+        "one",
+        "laptop-one",
+        "tablet-one",
+        "mobile-one",
+        "column_column",
+        "vb-item"
+       ]
+      },
+      {
+       "kind": "column",
+       "width": "one",
+       "box": {
+        "w": 610,
+        "h": 290,
+        "y": 308
+       },
+       "span": 12,
+       "item": {
+        "type": "heading",
+        "align": "start",
+        "light": false,
+        "box": {
+         "w": 634,
+         "h": 330,
+         "y": 308
+        },
+        "level": 1,
+        "html": "Commercial Roof Inspections &amp; Condition Reports in Texas",
+        "text": "Commercial Roof Inspections & Condition Reports in Texas",
+        "size": 67,
+        "weight": "700",
+        "color": "oklch(1 0 none)",
+        "lh": "80.807px",
+        "family": "industry",
+        "transform": "none",
+        "spacing": "0.8px"
+       },
+       "classes": [
+        "column",
+        "one",
+        "laptop-one",
+        "tablet-one",
+        "mobile-one",
+        "column_heading",
+        "vb-item"
+       ]
+      },
+      {
+       "kind": "column",
+       "width": "one",
+       "box": {
+        "w": 610,
+        "h": 102,
+        "y": 638
+       },
+       "span": 12,
+       "item": {
+        "type": "text",
+        "align": "start",
+        "light": false,
+        "box": {
+         "w": 634,
+         "h": 142,
+         "y": 638
+        },
+        "html": "Empower your real estate decisions with precise, actionable data. Core Four Roofing provides comprehensive, photo-documented roof inspections and condition reports for commercial property managers, investors, and building owners across Houston, Dallas, and Austin.",
+        "text": "Empower your real estate decisions with precise, actionable data. Core Four Roofing provides comprehensive, photo-documented roof inspections and condition reports for commercial property managers, investors, and building owners across Houston, Dallas, and Austin.",
+        "size": 16,
+        "color": "oklch(1 0 none)",
+        "lh": "25.6px",
+        "weight": "500"
+       },
+       "classes": [
+        "column",
+        "one",
+        "laptop-one",
+        "tablet-one",
+        "mobile-one",
+        "column_plain_text",
+        "vb-item"
+       ]
+      },
+      {
+       "kind": "column",
+       "width": "one",
+       "box": {
+        "w": 610,
+        "h": 60,
+        "y": 780
+       },
+       "span": 12,
+       "item": {
+        "type": "button",
+        "align": "start",
+        "light": false,
+        "box": {
+         "w": 634,
+         "h": 100,
+         "y": 780
+        },
+        "text": "Request a Commercial Roof Inspection",
+        "href": "https://corefourroofing.com/contact-core-four-roofing/contact",
+        "icon": "fas fa-arrow-right",
+        "bg": "oklch(0.7055 0.1785 140.66)",
+        "color": "oklch(0.2496 0.031 155.1)",
+        "size": 16,
+        "weight": "600",
+        "radius": 50,
+        "padding": [
+         20,
+         32,
+         20,
+         32
+        ]
+       },
+       "classes": [
+        "column",
+        "one",
+        "laptop-one",
+        "tablet-one",
+        "mobile-one",
+        "column_button",
+        "vb-item"
+       ]
+      }
+     ],
+     "span": 6
+    },
+    {
+     "kind": "wrap",
+     "width": "one-third",
+     "box": {
+      "bg": "rgba(255, 255, 255, 0.45)",
+      "radius": 32,
+      "padding": [
+       16,
+       16,
+       16,
+       16
+      ],
+      "w": 422,
+      "h": 297,
+      "y": 407
+     },
+     "valign": "flex-start",
+     "classes": [
+      "wrap",
+      "one-third",
+      "tablet-two-fifth",
+      "laptop-one-third",
+      "mobile-one",
+      "vb-item",
+      "clearfix"
+     ],
+     "columns": [
+      {
+       "kind": "column",
+       "width": "one",
+       "box": {
+        "w": 195,
+        "h": 124,
+        "y": 423
+       },
+       "span": 6,
+       "item": {
+        "type": "image",
+        "align": "start",
+        "light": false,
+        "box": {
+         "w": 195,
+         "h": 124,
+         "y": 423
+        },
+        "img": {
+         "src": "/images/live/Core-Four-Associate-Members-Texas-Apartment-Association-compressed.webp",
+         "alt": "",
+         "w": 948,
+         "h": 600,
+         "dw": 195,
+         "dh": 124
+        },
+        "radius": 0
+       },
+       "classes": [
+        "column",
+        "one",
+        "laptop-one",
+        "tablet-one",
+        "mobile-one",
+        "column_image",
+        "vb-item"
+       ]
+      },
+      {
+       "kind": "column",
+       "width": "one",
+       "box": {
+        "w": 195,
+        "h": 94,
+        "y": 423
+       },
+       "span": 6,
+       "item": {
+        "type": "image",
+        "align": "start",
+        "light": false,
+        "box": {
+         "w": 195,
+         "h": 94,
+         "y": 423
+        },
+        "img": {
+         "src": "/images/live/Core-Four-Associate-Members-texas-hotel-lodging-compressed.webp",
+         "alt": "",
+         "w": 1247,
+         "h": 600,
+         "dw": 195,
+         "dh": 94
+        },
+        "radius": 0
+       },
+       "classes": [
+        "column",
+        "one",
+        "laptop-one",
+        "tablet-one",
+        "mobile-one",
+        "column_image",
+        "vb-item"
+       ]
+      },
+      {
+       "kind": "column",
+       "width": "one",
+       "box": {
+        "w": 195,
+        "h": 141,
+        "y": 546
+       },
+       "span": 6,
+       "item": {
+        "type": "image",
+        "align": "start",
+        "light": false,
+        "box": {
+         "w": 195,
+         "h": 141,
+         "y": 546
+        },
+        "img": {
+         "src": "/images/live/Core-Four-Associate-Members-Houston-Apartment-Association-compressed.webp",
+         "alt": "",
+         "w": 832,
+         "h": 600,
+         "dw": 195,
+         "dh": 141
+        },
+        "radius": 0
+       },
+       "classes": [
+        "column",
+        "one",
+        "laptop-one",
+        "tablet-one",
+        "mobile-one",
+        "column_image",
+        "vb-item"
+       ]
+      },
+      {
+       "kind": "column",
+       "width": "one",
+       "box": {
+        "w": 195,
+        "h": 104,
+        "y": 546
+       },
+       "span": 6,
+       "item": {
+        "type": "image",
+        "align": "start",
+        "light": false,
+        "box": {
+         "w": 195,
+         "h": 104,
+         "y": 546
+        },
+        "img": {
+         "src": "/images/live/Core-Four-Associate-Members-Community-Associations-Institute-compressed.webp",
+         "alt": "",
+         "w": 195,
+         "h": 103,
+         "dw": 195,
+         "dh": 104
+        },
+        "radius": 0
+       },
+       "classes": [
+        "column",
+        "one",
+        "laptop-one",
+        "tablet-one",
+        "mobile-one",
+        "column_image",
+        "vb-item"
+       ]
+      }
+     ],
+     "span": 4
+    }
+   ]
+  },
+  {
+   "overlay": null,
+   "id": "mcb-section-6wd3m9oz4",
+   "classes": [
+    "section",
+    "mcb-section",
+    "mfn-default-section"
+   ],
+   "bg": null,
+   "bgImage": null,
+   "bgSize": null,
+   "bgPos": null,
+   "padding": [
+    96,
+    0,
+    96,
+    0
+   ],
+   "h": 988,
+   "y": 996,
+   "wrapperWidth": 1200,
+   "wraps": [
+    {
+     "kind": "wrap",
+     "width": "one",
+     "box": {
+      "w": 1200,
+      "h": 796,
+      "y": 1092
+     },
+     "valign": "flex-start",
+     "classes": [
+      "wrap",
+      "one",
+      "tablet-one",
+      "laptop-one",
+      "mobile-one",
+      "vb-item",
+      "clearfix"
+     ],
+     "columns": [],
+     "span": 12,
+     "wraps": [
+      {
+       "kind": "wrap",
+       "width": "one",
+       "box": {
+        "w": 588,
+        "h": 793,
+        "y": 1092
+       },
+       "valign": "flex-start",
+       "classes": [
+        "wrap",
+        "one",
+        "tablet-one",
+        "laptop-one",
+        "mobile-one",
+        "mfn-nested-wrap",
+        "vb-item",
+        "clearfix"
+       ],
+       "columns": [
+        {
+         "kind": "column",
+         "width": "one",
+         "box": {
+          "bg": "oklch(1 0 none)",
+          "radius": 32,
+          "padding": [
+           36,
+           36,
+           36,
+           36
+          ],
+          "w": 588,
+          "h": 708,
+          "y": 1092
+         },
+         "span": 12,
+         "item": {
+          "type": "text",
+          "align": "start",
+          "light": false,
+          "box": {
+           "w": 516,
+           "h": 636,
+           "y": 1128
+          },
+          "html": "<h2>Detailed Commercial Roof Condition Reports</h2><p>A commercial roof is one of the largest capital liabilities on any property. Whether you are acquiring a new commercial facility, renewing a triple-net lease, or simply planning your annual maintenance budget, you cannot afford to guess about the condition of your roof. Hidden moisture trapped in the insulation, failing membrane seams, or undocumented storm damage can lead to massive, unexpected expenses. </p><p> At Core Four Roofing, we take the guesswork out of commercial asset management. Our expert technicians perform exhaustive, top-to-bottom roof assessments. We evaluate the structural integrity of the roof deck, test the condition of the insulation, inspect all complex drainage systems, and scrutinize every inch of flashing around HVAC units and parapet walls. The result is a highly detailed Real Estate Roof Condition Report that gives you the exact facts, photos, and financial estimates you need to make confident, informed decisions.</p>",
+          "text": "Detailed Commercial Roof Condition Reports\n\nA commercial roof is one of the largest capital liabilities on any property. Whether you are acquiring a new commercial facility, renewing a triple-net lease, or simply planning your annual maintenance budget, you cannot afford to guess about the condition of your roof. Hidden moisture trapped in the insulation, failing membrane seams, or undocumented storm damage can lead to massive, unexpected expenses.\n\nAt Core Four Roofing, we take the guesswork out of commercial asset management. Our expert technicians perform exhaustive, top-to-bottom roof assessments. We evaluate the structural integrity of the roof deck, test the condition of the insulation, inspect all complex drainage systems, and scrutinize every inch of flashing around HVAC units and parapet walls. The result is a highly detailed Real Estate Roof Condition Report that gives you the exact facts, photos, and financial estimates you need to make confident, informed decisions."
+         },
+         "classes": [
+          "column",
+          "one",
+          "laptop-one",
+          "tablet-one",
+          "mobile-one",
+          "column_column",
+          "vb-item"
+         ]
+        },
+        {
+         "kind": "column",
+         "width": "one",
+         "box": {
+          "w": 588,
+          "h": 60,
+          "y": 1824
+         },
+         "span": 12,
+         "item": {
+          "type": "button",
+          "align": "start",
+          "light": false,
+          "box": {
+           "w": 588,
+           "h": 60,
+           "y": 1824
+          },
+          "text": "Request a Commercial Roof Inspection",
+          "href": "https://corefourroofing.com/contact-core-four-roofing/contact",
+          "icon": "fas fa-arrow-right",
+          "bg": "oklch(0.7055 0.1785 140.66)",
+          "color": "oklch(0.2496 0.031 155.1)",
+          "size": 16,
+          "weight": "600",
+          "radius": 50,
+          "padding": [
+           20,
+           32,
+           20,
+           32
+          ]
+         },
+         "classes": [
+          "column",
+          "one",
+          "laptop-one",
+          "tablet-one",
+          "mobile-one",
+          "column_button",
+          "vb-item"
+         ]
+        }
+       ],
+       "span": 6
+      },
+      {
+       "kind": "wrap",
+       "width": "one",
+       "box": {
+        "w": 588,
+        "h": 796,
+        "y": 1092
+       },
+       "valign": "flex-start",
+       "classes": [
+        "wrap",
+        "one",
+        "tablet-one",
+        "laptop-one",
+        "mobile-one",
+        "mfn-nested-wrap",
+        "vb-item",
+        "clearfix"
+       ],
+       "columns": [
+        {
+         "kind": "column",
+         "width": "one",
+         "box": {
+          "radius": 32,
+          "w": 588,
+          "h": 331,
+          "y": 1092
+         },
+         "span": 12,
+         "item": {
+          "type": "image",
+          "align": "start",
+          "light": false,
+          "box": {
+           "w": 588,
+           "h": 331,
+           "y": 1092
+          },
+          "img": {
+           "src": "/images/live/952943b8-0603-4bf2-8a1b-a79f3982a5fe.webp",
+           "alt": "",
+           "w": 589,
+           "h": 331,
+           "dw": 589,
+           "dh": 331
+          },
+          "radius": 0
+         },
+         "classes": [
+          "column",
+          "one",
+          "laptop-one",
+          "tablet-one",
+          "mobile-one",
+          "column_image",
+          "vb-item"
+         ]
+        },
+        {
+         "kind": "column",
+         "width": "one",
+         "box": {
+          "radius": 32,
+          "w": 588,
+          "h": 441,
+          "y": 1447
+         },
+         "span": 12,
+         "item": {
+          "type": "image",
+          "align": "start",
+          "light": false,
+          "box": {
+           "w": 588,
+           "h": 441,
+           "y": 1447
+          },
+          "img": {
+           "src": "/images/live/core_four_commercal_center_roof_install-compressed.webp",
+           "alt": "",
+           "w": 589,
+           "h": 441,
+           "dw": 589,
+           "dh": 441
+          },
+          "radius": 0
+         },
+         "classes": [
+          "column",
+          "one",
+          "laptop-one",
+          "tablet-one",
+          "mobile-one",
+          "column_image",
+          "vb-item"
+         ]
+        }
+       ],
+       "span": 6
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "overlay": null,
+   "id": "mcb-section-1277b3918",
+   "classes": [
+    "section",
+    "mcb-section",
+    "mfn-default-section",
+    "dark"
+   ],
+   "bg": null,
+   "bgImage": null,
+   "bgSize": null,
+   "bgPos": null,
+   "padding": [
+    96,
+    0,
+    96,
+    0
+   ],
+   "h": 1161,
+   "y": 1985,
+   "wrapperWidth": 1200,
+   "wraps": [
+    {
+     "kind": "wrap",
+     "width": "one-second",
+     "box": {
+      "bg": "oklch(0.2496 0.031 155.1)",
+      "radius": 32,
+      "padding": [
+       32,
+       32,
+       32,
+       32
+      ],
+      "w": 576,
+      "h": 515,
+      "y": 2081
+     },
+     "valign": "flex-start",
+     "classes": [
+      "wrap",
+      "mobile-one",
+      "vb-item",
+      "clearfix"
+     ],
+     "columns": [
+      {
+       "kind": "column",
+       "width": "one",
+       "box": {
+        "bg": "oklch(0.6099 0.1588 148.77)",
+        "radius": 50,
+        "padding": [
+         8,
+         20,
+         8,
+         20
+        ],
+        "w": 129,
+        "h": 26,
+        "y": 2113
+       },
+       "span": 3,
+       "item": {
+        "type": "text",
+        "html": "<span>Key Benefits</span>",
+        "text": "Key Benefits",
+        "box": {
+         "bg": "oklch(0.6099 0.1588 148.77)",
+         "radius": 50,
+         "padding": [
+          8,
+          20,
+          8,
+          20
+         ],
+         "w": 129,
+         "h": 26,
+         "y": 2113
+        },
+        "raw": true,
+        "size": 16,
+        "color": "rgb(255, 255, 255)"
+       },
+       "classes": [
+        "column",
+        "one",
+        "laptop-one",
+        "tablet-one",
+        "mobile-one",
+        "column_heading",
+        "trim-both",
+        "vb-item"
+       ]
+      },
+      {
+       "kind": "column",
+       "width": "one",
+       "box": {
+        "w": 488,
+        "h": 157,
+        "y": 2154
+       },
+       "span": 12,
+       "item": {
+        "type": "heading",
+        "align": "start",
+        "light": false,
+        "box": {
+         "w": 512,
+         "h": 189,
+         "y": 2154
+        },
+        "level": 2,
+        "html": "The Value of a Professional Roof Assessment",
+        "text": "The Value of a Professional Roof Assessment",
+        "size": 51,
+        "weight": "700",
+        "color": "rgb(255, 255, 255)",
+        "lh": "60.6202px",
+        "family": "industry",
+        "transform": "none",
+        "spacing": "0.8px"
+       },
+       "classes": [
+        "column",
+        "one",
+        "laptop-one",
+        "tablet-one",
+        "mobile-one",
+        "column_heading",
+        "vb-item"
+       ]
+      },
+      {
+       "kind": "column",
+       "width": "one",
+       "box": {
+        "w": 488,
+        "h": 88,
+        "y": 2343
+       },
+       "span": 12,
+       "item": {
+        "type": "text",
+        "html": "<p>Whether you are performing due diligence on a multi-million dollar acquisition or forecasting your maintenance budget, our inspection reports provide the clarity and leverage your stakeholders require.</p>",
+        "text": "Whether you are performing due diligence on a multi-million dollar acquisition or forecasting your maintenance budget, our inspection reports provide the clarity and leverage your stakeholders require.",
+        "box": {
+         "w": 488,
+         "h": 88,
+         "y": 2343
+        },
+        "raw": true,
+        "size": 16,
+        "color": "rgb(255, 255, 255)"
+       },
+       "classes": [
+        "column",
+        "one",
+        "laptop-one",
+        "tablet-one",
+        "mobile-one",
+        "column_heading",
+        "vb-item"
+       ]
+      },
+      {
+       "kind": "column",
+       "width": "one",
+       "box": {
+        "w": 488,
+        "h": 60,
+        "y": 2463
+       },
+       "span": 12,
+       "item": {
+        "type": "button",
+        "align": "start",
+        "light": false,
+        "box": {
+         "w": 512,
+         "h": 100,
+         "y": 2463
+        },
+        "text": "Call to book an inspection",
+        "href": "tel:2815410027",
+        "icon": "fas fa-arrow-right",
+        "bg": "oklch(0.7055 0.1785 140.66)",
+        "color": "oklch(0.2496 0.031 155.1)",
+        "size": 16,
+        "weight": "600",
+        "radius": 50,
+        "padding": [
+         20,
+         32,
+         20,
+         32
+        ]
+       },
+       "classes": [
+        "column",
+        "one",
+        "laptop-one",
+        "tablet-one",
+        "mobile-one",
+        "column_button",
+        "vb-item"
+       ]
+      }
+     ],
+     "span": 6
+    },
+    {
+     "kind": "wrap",
+     "width": "one-second",
+     "box": {
+      "w": 600,
+      "h": 969,
+      "y": 2081
+     },
+     "valign": "flex-start",
+     "classes": [
+      "wrap",
+      "mobile-one",
+      "vb-item",
+      "clearfix"
+     ],
+     "columns": [],
+     "span": 6,
+     "wraps": [
+      {
+       "kind": "wrap",
+       "width": "one",
+       "box": {
+        "bg": "oklch(0.6099 0.1588 148.77)",
+        "radius": 32,
+        "padding": [
+         32,
+         32,
+         32,
+         32
+        ],
+        "w": 600,
+        "h": 213,
+        "y": 2081
+       },
+       "valign": "flex-start",
+       "classes": [
+        "wrap",
+        "one",
+        "tablet-one",
+        "laptop-one",
+        "mobile-one",
+        "mfn-nested-wrap",
+        "vb-item",
+        "clearfix"
+       ],
+       "columns": [
+        {
+         "kind": "column",
+         "width": "one",
+         "box": {
+          "w": 536,
+          "h": 27,
+          "y": 2113
+         },
+         "span": 12,
+         "item": {
+          "type": "heading",
+          "align": "start",
+          "light": false,
+          "box": {
+           "w": 536,
+           "h": 47,
+           "y": 2113
+          },
+          "level": 3,
+          "html": "Real Estate Due Diligence",
+          "text": "Real Estate Due Diligence",
+          "size": 38,
+          "weight": "700",
+          "color": "rgb(255, 255, 255)",
+          "lh": "45.4771px",
+          "family": "industry",
+          "transform": "none",
+          "spacing": "0.8px"
+         },
+         "classes": [
+          "column",
+          "one",
+          "laptop-one",
+          "tablet-one",
+          "mobile-one",
+          "column_heading",
+          "vb-item"
+         ]
+        },
+        {
+         "kind": "column",
+         "width": "one",
+         "box": {
+          "w": 536,
+          "h": 102,
+          "y": 2159
+         },
+         "span": 12,
+         "item": {
+          "type": "text",
+          "align": "start",
+          "light": false,
+          "box": {
+           "w": 536,
+           "h": 102,
+           "y": 2159
+          },
+          "html": "Never buy a liability. Our condition reports give investors and buyers critical leverage during real estate negotiations, ensuring you don't inherit a failing roof system without a proper price concession.",
+          "text": "Never buy a liability. Our condition reports give investors and buyers critical leverage during real estate negotiations, ensuring you don't inherit a failing roof system without a proper price concession.",
+          "size": 16,
+          "color": "oklch(1 0 none)",
+          "lh": "25.6px",
+          "weight": "500"
+         },
+         "classes": [
+          "column",
+          "one",
+          "laptop-one",
+          "tablet-one",
+          "mobile-one",
+          "column_plain_text",
+          "vb-item"
+         ]
+        }
+       ],
+       "span": 12
+      },
+      {
+       "kind": "wrap",
+       "width": "one",
+       "box": {
+        "bg": "oklch(0.6099 0.1588 148.77)",
+        "radius": 32,
+        "padding": [
+         32,
+         32,
+         32,
+         32
+        ],
+        "w": 600,
+        "h": 213,
+        "y": 2318
+       },
+       "valign": "flex-start",
+       "classes": [
+        "wrap",
+        "one",
+        "tablet-one",
+        "laptop-one",
+        "mobile-one",
+        "mfn-nested-wrap",
+        "vb-item",
+        "clearfix"
+       ],
+       "columns": [
+        {
+         "kind": "column",
+         "width": "one",
+         "box": {
+          "w": 536,
+          "h": 27,
+          "y": 2350
+         },
+         "span": 12,
+         "item": {
+          "type": "heading",
+          "align": "start",
+          "light": false,
+          "box": {
+           "w": 536,
+           "h": 47,
+           "y": 2350
+          },
+          "level": 3,
+          "html": "Accurate CapEx Forecasting",
+          "text": "Accurate CapEx Forecasting",
+          "size": 38,
+          "weight": "700",
+          "color": "rgb(255, 255, 255)",
+          "lh": "45.4771px",
+          "family": "industry",
+          "transform": "none",
+          "spacing": "0.8px"
+         },
+         "classes": [
+          "column",
+          "one",
+          "laptop-one",
+          "tablet-one",
+          "mobile-one",
+          "column_heading",
+          "vb-item"
+         ]
+        },
+        {
+         "kind": "column",
+         "width": "one",
+         "box": {
+          "w": 536,
+          "h": 102,
+          "y": 2396
+         },
+         "span": 12,
+         "item": {
+          "type": "text",
+          "align": "start",
+          "light": false,
+          "box": {
+           "w": 536,
+           "h": 102,
+           "y": 2396
+          },
+          "html": "Stop reacting to emergencies. We provide detailed estimates for the roof's remaining useful life, allowing HOA boards and facility managers to proactively budget for Capital Expenditures (CapEx) like a future roof replacement.",
+          "text": "Stop reacting to emergencies. We provide detailed estimates for the roof's remaining useful life, allowing HOA boards and facility managers to proactively budget for Capital Expenditures (CapEx) like a future roof replacement.",
+          "size": 16,
+          "color": "oklch(1 0 none)",
+          "lh": "25.6px",
+          "weight": "500"
+         },
+         "classes": [
+          "column",
+          "one",
+          "laptop-one",
+          "tablet-one",
+          "mobile-one",
+          "column_plain_text",
+          "vb-item"
+         ]
+        }
+       ],
+       "span": 12
+      },
+      {
+       "kind": "wrap",
+       "width": "one",
+       "box": {
+        "bg": "oklch(0.6099 0.1588 148.77)",
+        "radius": 32,
+        "padding": [
+         32,
+         32,
+         32,
+         32
+        ],
+        "w": 600,
+        "h": 213,
+        "y": 2554
+       },
+       "valign": "flex-start",
+       "classes": [
+        "wrap",
+        "one",
+        "tablet-one",
+        "laptop-one",
+        "mobile-one",
+        "mfn-nested-wrap",
+        "vb-item",
+        "clearfix"
+       ],
+       "columns": [
+        {
+         "kind": "column",
+         "width": "one",
+         "box": {
+          "w": 536,
+          "h": 27,
+          "y": 2586
+         },
+         "span": 12,
+         "item": {
+          "type": "heading",
+          "align": "start",
+          "light": false,
+          "box": {
+           "w": 536,
+           "h": 47,
+           "y": 2586
+          },
+          "level": 3,
+          "html": "Storm Damage Verification",
+          "text": "Storm Damage Verification",
+          "size": 38,
+          "weight": "700",
+          "color": "rgb(255, 255, 255)",
+          "lh": "45.4771px",
+          "family": "industry",
+          "transform": "none",
+          "spacing": "0.8px"
+         },
+         "classes": [
+          "column",
+          "one",
+          "laptop-one",
+          "tablet-one",
+          "mobile-one",
+          "column_heading",
+          "vb-item"
+         ]
+        },
+        {
+         "kind": "column",
+         "width": "one",
+         "box": {
+          "w": 536,
+          "h": 102,
+          "y": 2633
+         },
+         "span": 12,
+         "item": {
+          "type": "text",
+          "align": "start",
+          "light": false,
+          "box": {
+           "w": 536,
+           "h": 102,
+           "y": 2633
+          },
+          "html": "Following severe Texas weather, we identify hidden hail impacts and wind uplift that your insurance adjuster might miss. Documenting this damage quickly is crucial for a successful commercial insurance claim.",
+          "text": "Following severe Texas weather, we identify hidden hail impacts and wind uplift that your insurance adjuster might miss. Documenting this damage quickly is crucial for a successful commercial insurance claim.",
+          "size": 16,
+          "color": "oklch(1 0 none)",
+          "lh": "25.6px",
+          "weight": "500"
+         },
+         "classes": [
+          "column",
+          "one",
+          "laptop-one",
+          "tablet-one",
+          "mobile-one",
+          "column_plain_text",
+          "vb-item"
+         ]
+        }
+       ],
+       "span": 12
+      },
+      {
+       "kind": "wrap",
+       "width": "one",
+       "box": {
+        "bg": "oklch(0.6099 0.1588 148.77)",
+        "radius": 32,
+        "padding": [
+         32,
+         32,
+         32,
+         32
+        ],
+        "w": 600,
+        "h": 258,
+        "y": 2791
+       },
+       "valign": "flex-start",
+       "classes": [
+        "wrap",
+        "one",
+        "tablet-one",
+        "laptop-one",
+        "mobile-one",
+        "mfn-nested-wrap",
+        "vb-item",
+        "clearfix"
+       ],
+       "columns": [
+        {
+         "kind": "column",
+         "width": "one",
+         "box": {
+          "w": 536,
+          "h": 72,
+          "y": 2823
+         },
+         "span": 12,
+         "item": {
+          "type": "heading",
+          "align": "start",
+          "light": false,
+          "box": {
+           "w": 536,
+           "h": 92,
+           "y": 2823
+          },
+          "level": 3,
+          "html": "Comprehensive Documentation",
+          "text": "Comprehensive Documentation",
+          "size": 38,
+          "weight": "700",
+          "color": "rgb(255, 255, 255)",
+          "lh": "45.4771px",
+          "family": "industry",
+          "transform": "none",
+          "spacing": "0.8px"
+         },
+         "classes": [
+          "column",
+          "one",
+          "laptop-one",
+          "tablet-one",
+          "mobile-one",
+          "column_heading",
+          "vb-item"
+         ]
+        },
+        {
+         "kind": "column",
+         "width": "one",
+         "box": {
+          "w": 536,
+          "h": 102,
+          "y": 2915
+         },
+         "span": 12,
+         "item": {
+          "type": "text",
+          "align": "start",
+          "light": false,
+          "box": {
+           "w": 536,
+           "h": 102,
+           "y": 2915
+          },
+          "html": "You don't just get a verbal summary. We provide a professional, written report complete with high-resolution photo evidence, core sample data (if requested), and clear, line-item estimates for any recommended repairs.",
+          "text": "You don't just get a verbal summary. We provide a professional, written report complete with high-resolution photo evidence, core sample data (if requested), and clear, line-item estimates for any recommended repairs.",
+          "size": 16,
+          "color": "oklch(1 0 none)",
+          "lh": "25.6px",
+          "weight": "500"
+         },
+         "classes": [
+          "column",
+          "one",
+          "laptop-one",
+          "tablet-one",
+          "mobile-one",
+          "column_plain_text",
+          "vb-item"
+         ]
+        }
+       ],
+       "span": 12
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "overlay": {
+    "gradient": "linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, oklch(0.6099 0.1588 148.77) 31%)",
+    "bg": null,
+    "opacity": "1"
+   },
+   "id": "mcb-section-551f88d50",
+   "classes": [
+    "section",
+    "mcb-section",
+    "mfn-default-section"
+   ],
+   "bg": "oklch(0.6099 0.1588 148.77)",
+   "bgImage": "/images/live/bottom-triangles-dark.svg",
+   "bgSize": "contain",
+   "bgPos": "50% 100%",
+   "padding": [
+    96,
+    0,
+    96,
+    0
+   ],
+   "h": 766,
+   "y": 3146,
+   "wrapperWidth": 1200,
+   "wraps": [
+    {
+     "kind": "wrap",
+     "width": "one",
+     "box": {
+      "w": 1200,
+      "h": 136,
+      "y": 3242
+     },
+     "valign": "flex-start",
+     "classes": [
+      "wrap",
+      "one",
+      "tablet-one",
+      "laptop-one",
+      "mobile-one",
+      "vb-item",
+      "clearfix"
+     ],
+     "columns": [
+      {
+       "kind": "column",
+       "width": "one",
+       "box": {
+        "w": 1176,
+        "h": 96,
+        "y": 3242
+       },
+       "span": 12,
+       "item": {
+        "type": "heading",
+        "align": "start",
+        "light": false,
+        "box": {
+         "w": 1200,
+         "h": 136,
+         "y": 3242
+        },
+        "level": 2,
+        "html": "Frequently Asked Questions About Commercial Inspections",
+        "text": "Frequently Asked Questions About Commercial Inspections",
+        "size": 51,
+        "weight": "700",
+        "color": "oklch(1 0 none)",
+        "lh": "60.6202px",
+        "family": "industry",
+        "transform": "none",
+        "spacing": "0.8px"
+       },
+       "classes": [
+        "column",
+        "one",
+        "laptop-one",
+        "tablet-one",
+        "mobile-one",
+        "column_heading",
+        "vb-item"
+       ]
+      }
+     ],
+     "span": 12
+    },
+    {
+     "kind": "wrap",
+     "width": "one",
+     "box": {
+      "w": 1200,
+      "h": 438,
+      "y": 3378
+     },
+     "valign": "center",
+     "classes": [
+      "wrap",
+      "one",
+      "tablet-one",
+      "laptop-one",
+      "mobile-one",
+      "vb-item",
+      "clearfix"
+     ],
+     "columns": [],
+     "span": 12,
+     "wraps": [
+      {
+       "kind": "wrap",
+       "width": "one",
+       "box": {
+        "w": 600,
+        "h": 438,
+        "y": 3378
+       },
+       "valign": "flex-start",
+       "classes": [
+        "wrap",
+        "one",
+        "tablet-one",
+        "laptop-one",
+        "mobile-one",
+        "mfn-nested-wrap",
+        "vb-item",
+        "clearfix"
+       ],
+       "columns": [
+        {
+         "kind": "column",
+         "width": "one",
+         "box": {
+          "w": 576,
+          "h": 286,
+          "y": 3390
+         },
+         "span": 12,
+         "item": {
+          "type": "faq",
+          "align": "start",
+          "light": false,
+          "box": {
+           "w": 600,
+           "h": 338,
+           "y": 3378
+          },
+          "items": [
+           {
+            "q": "What exactly is included in a Real Estate Roof Condition Report?",
+            "a": "Our comprehensive reports include a detailed analysis of the roof's current age, remaining expected lifespan, the condition of the membrane and flashing, core sample results (to check for wet insulation), high-resolution photos of any vulnerabilities, and accurate cost estimates for immediate repairs or future replacement."
+           },
+           {
+            "q": "How often should a commercial property be inspected?",
+            "a": "Industry standards dictate that commercial flat roofs should be formally inspected at least twice a year—ideally in the spring and fall—as well as immediately following any severe weather events, such as high winds, heavy hail, or nearby tornadoes."
+           },
+           {
+            "q": "Do you take core samples during an inspection?",
+            "a": "Yes, with the property owner's authorization. A core sample is a small, easily repairable cut made into the roof to determine the exact composition of the roofing layers and to check if the underlying insulation is saturated with water, which is critical data for determining if a roof can be repaired or must be fully replaced."
+           },
+           {
+            "q": "Can this inspection help with my commercial insurance policy?",
+            "a": "Absolutely. Providing a clean, professional bill of health for your roof can sometimes assist in negotiating insurance premiums or preventing coverage drops. Conversely, if we find storm damage, our report serves as the foundation for filing a successful claim."
+           }
+          ]
+         },
+         "classes": [
+          "column",
+          "one",
+          "laptop-one",
+          "tablet-one",
+          "mobile-one",
+          "column_faq",
+          "vb-item"
+         ]
+        },
+        {
+         "kind": "column",
+         "width": "one",
+         "box": {
+          "w": 576,
+          "h": 60,
+          "y": 3715
+         },
+         "span": 12,
+         "item": {
+          "type": "button",
+          "align": "start",
+          "light": false,
+          "box": {
+           "w": 600,
+           "h": 100,
+           "y": 3715
+          },
+          "text": "Ask us a question",
+          "href": "https://corefourroofing.com/contact-core-four-roofing/contact",
+          "icon": "fas fa-arrow-right",
+          "bg": "rgb(219, 221, 223)",
+          "color": "rgb(98, 98, 98)",
+          "size": 16,
+          "weight": "600",
+          "radius": 50,
+          "padding": [
+           20,
+           32,
+           20,
+           32
+          ]
+         },
+         "classes": [
+          "column",
+          "one",
+          "laptop-one",
+          "tablet-one",
+          "mobile-one",
+          "column_button",
+          "vb-item"
+         ]
+        }
+       ],
+       "span": 6
+      },
+      {
+       "kind": "wrap",
+       "width": "one",
+       "box": {
+        "w": 600,
+        "h": 364,
+        "y": 3415
+       },
+       "valign": "flex-start",
+       "classes": [
+        "wrap",
+        "one",
+        "tablet-one",
+        "laptop-one",
+        "mobile-one",
+        "mfn-nested-wrap",
+        "vb-item",
+        "clearfix"
+       ],
+       "columns": [
+        {
+         "kind": "column",
+         "width": "one",
+         "box": {
+          "radius": 24,
+          "w": 576,
+          "h": 324,
+          "y": 3415
+         },
+         "span": 12,
+         "item": {
+          "type": "before_after",
+          "align": "start",
+          "light": false,
+          "box": {
+           "w": 600,
+           "h": 364,
+           "y": 3415
+          },
+          "before": {
+           "src": "/images/live/ad6b4429-cef8-4e0d-8be5-97760a5f48ca-compressed-scaled.webp",
+           "alt": "",
+           "w": 576,
+           "h": 324,
+           "dw": 576,
+           "dh": 324
+          },
+          "after": {
+           "src": "/images/live/27d812ee-6a31-44e6-a9c3-76435c4aa8b5-compressed-scaled.webp",
+           "alt": "",
+           "w": 576,
+           "h": 324,
+           "dw": 576,
+           "dh": 324
+          }
+         },
+         "classes": [
+          "column",
+          "one",
+          "laptop-one",
+          "tablet-one",
+          "mobile-one",
+          "column_before_after",
+          "vb-item"
+         ]
+        }
+       ],
+       "span": 6
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "overlay": null,
+   "id": "mcb-section-cf5e58988",
+   "classes": [
+    "section",
+    "mcb-section",
+    "mfn-default-section"
+   ],
+   "bg": null,
+   "bgImage": null,
+   "bgSize": null,
+   "bgPos": null,
+   "padding": [
+    96,
+    0,
+    96,
+    0
+   ],
+   "h": 984,
+   "y": 3912,
+   "wrapperWidth": 1200,
+   "wraps": [
+    {
+     "kind": "wrap",
+     "width": "two-third",
+     "box": {
+      "w": 800,
+      "h": 203,
+      "y": 4008
+     },
+     "valign": "flex-start",
+     "classes": [
+      "wrap",
+      "two-third",
+      "tablet-two-third",
+      "laptop-two-third",
+      "mobile-one",
+      "vb-item",
+      "clearfix"
+     ],
+     "columns": [
+      {
+       "kind": "column",
+       "width": "one",
+       "box": {
+        "w": 776,
+        "h": 96,
+        "y": 4008
+       },
+       "span": 12,
+       "item": {
+        "type": "heading",
+        "align": "start",
+        "light": true,
+        "box": {
+         "w": 800,
+         "h": 112,
+         "y": 4008
+        },
+        "level": 2,
+        "html": "Unbiased Data &amp; Smart Financial Planning",
+        "text": "Unbiased Data & Smart Financial Planning",
+        "size": 51,
+        "weight": "700",
+        "color": "oklch(0.4122 0.0832 141.53)",
+        "lh": "60.6202px",
+        "family": "industry",
+        "transform": "none",
+        "spacing": "0.8px"
+       },
+       "classes": [
+        "column",
+        "one",
+        "laptop-one",
+        "tablet-one",
+        "mobile-one",
+        "column_heading",
+        "light-text",
+        "vb-item"
+       ]
+      },
+      {
+       "kind": "column",
+       "width": "one",
+       "box": {
+        "w": 776,
+        "h": 51,
+        "y": 4120
+       },
+       "span": 12,
+       "item": {
+        "type": "text",
+        "align": "start",
+        "light": false,
+        "box": {
+         "w": 800,
+         "h": 91,
+         "y": 4120
+        },
+        "html": "Your roof is one of the most critical investments you will make. We ensure that investment is protected and accessible.",
+        "text": "Your roof is one of the most critical investments you will make. We ensure that investment is protected and accessible.",
+        "size": 16,
+        "color": "rgb(69, 102, 79)",
+        "lh": "25.6px",
+        "weight": "500"
+       },
+       "classes": [
+        "column",
+        "one",
+        "laptop-one",
+        "tablet-one",
+        "mobile-one",
+        "column_plain_text",
+        "vb-item"
+       ]
+      }
+     ],
+     "span": 8
+    },
+    {
+     "kind": "wrap",
+     "width": "one",
+     "box": {
+      "w": 1200,
+      "h": 589,
+      "y": 4211
+     },
+     "valign": "flex-start",
+     "classes": [
+      "wrap",
+      "one",
+      "tablet-one",
+      "laptop-one",
+      "mobile-one",
+      "vb-item",
+      "clearfix"
+     ],
+     "columns": [],
+     "span": 12,
+     "wraps": [
+      {
+       "kind": "wrap",
+       "width": "three-fifth",
+       "box": {
+        "bg": "rgb(255, 255, 255)",
+        "radius": 32,
+        "padding": [
+         32,
+         32,
+         0,
+         32
+        ],
+        "w": 588,
+        "h": 589,
+        "y": 4211
+       },
+       "valign": "flex-start",
+       "classes": [
+        "wrap",
+        "three-fifth",
+        "tablet-three-fifth",
+        "laptop-three-fifth",
+        "mobile-one",
+        "mfn-nested-wrap",
+        "vb-item",
+        "clearfix"
+       ],
+       "columns": [
+        {
+         "kind": "column",
+         "width": "one",
+         "box": {
+          "w": 500,
+          "h": 27,
+          "y": 4243
+         },
+         "span": 12,
+         "item": {
+          "type": "heading",
+          "align": "start",
+          "light": true,
+          "box": {
+           "w": 524,
+           "h": 43,
+           "y": 4243
+          },
+          "level": 3,
+          "html": "Financing",
+          "text": "Financing",
+          "size": 38,
+          "weight": "700",
+          "color": "oklch(0.4122 0.0832 141.53)",
+          "lh": "45.4771px",
+          "family": "industry",
+          "transform": "none",
+          "spacing": "0.8px"
+         },
+         "classes": [
+          "column",
+          "one",
+          "laptop-one",
+          "tablet-one",
+          "mobile-one",
+          "column_heading",
+          "light-text",
+          "vb-item"
+         ]
+        },
+        {
+         "kind": "column",
+         "width": "one",
+         "box": {
+          "w": 500,
+          "h": 154,
+          "y": 4285
+         },
+         "span": 12,
+         "item": {
+          "type": "text",
+          "align": "start",
+          "light": false,
+          "box": {
+           "w": 524,
+           "h": 194,
+           "y": 4285
+          },
+          "html": "The cost of a professional inspection is pennies compared to the financial disaster of a collapsed or leaking commercial roof. Investing in a condition report today empowers you to make smart financial moves. Furthermore, the cost of the inspection can often be applied as a credit toward any major repair or replacement work you hire us to complete.",
+          "text": "The cost of a professional inspection is pennies compared to the financial disaster of a collapsed or leaking commercial roof. Investing in a condition report today empowers you to make smart financial moves. Furthermore, the cost of the inspection can often be applied as a credit toward any major repair or replacement work you hire us to complete.",
+          "size": 16,
+          "color": "rgb(69, 102, 79)",
+          "lh": "25.6px",
+          "weight": "500"
+         },
+         "classes": [
+          "column",
+          "one",
+          "laptop-one",
+          "tablet-one",
+          "mobile-one",
+          "column_plain_text",
+          "vb-item"
+         ]
+        },
+        {
+         "kind": "column",
+         "width": "one",
+         "box": {
+          "radius": 24,
+          "w": 500,
+          "h": 281,
+          "y": 4479
+         },
+         "span": 12,
+         "item": {
+          "type": "image",
+          "align": "start",
+          "light": false,
+          "box": {
+           "w": 524,
+           "h": 321,
+           "y": 4479
+          },
+          "img": {
+           "src": "/images/live/1-Sep-18-2025-18-23-12-yesM-compressed.webp",
+           "alt": "",
+           "w": 500,
+           "h": 281,
+           "dw": 500,
+           "dh": 281
+          },
+          "radius": 24
+         },
+         "classes": [
+          "column",
+          "one",
+          "laptop-one",
+          "tablet-one",
+          "mobile-one",
+          "column_image",
+          "vb-item"
+         ]
+        }
+       ],
+       "span": 6
+      },
+      {
+       "kind": "wrap",
+       "width": "three-fifth",
+       "box": {
+        "bg": "rgb(255, 255, 255)",
+        "radius": 32,
+        "padding": [
+         32,
+         32,
+         0,
+         32
+        ],
+        "w": 588,
+        "h": 589,
+        "y": 4211
+       },
+       "valign": "flex-start",
+       "classes": [
+        "wrap",
+        "three-fifth",
+        "tablet-three-fifth",
+        "laptop-three-fifth",
+        "mobile-one",
+        "mfn-nested-wrap",
+        "vb-item",
+        "clearfix"
+       ],
+       "columns": [
+        {
+         "kind": "column",
+         "width": "one",
+         "box": {
+          "radius": 24,
+          "w": 500,
+          "h": 281,
+          "y": 4243
+         },
+         "span": 12,
+         "item": {
+          "type": "image",
+          "align": "start",
+          "light": false,
+          "box": {
+           "w": 524,
+           "h": 321,
+           "y": 4243
+          },
+          "img": {
+           "src": "/images/live/34-Nov-03-2025-23-46-22-PJJw-compressed.webp",
+           "alt": "",
+           "w": 500,
+           "h": 281,
+           "dw": 500,
+           "dh": 281
+          },
+          "radius": 24
+         },
+         "classes": [
+          "column",
+          "one",
+          "laptop-one",
+          "tablet-one",
+          "mobile-one",
+          "column_image",
+          "vb-item"
+         ]
+        },
+        {
+         "kind": "column",
+         "width": "one",
+         "box": {
+          "w": 500,
+          "h": 27,
+          "y": 4564
+         },
+         "span": 12,
+         "item": {
+          "type": "heading",
+          "align": "start",
+          "light": true,
+          "box": {
+           "w": 524,
+           "h": 43,
+           "y": 4564
+          },
+          "level": 3,
+          "html": "Warranties",
+          "text": "Warranties",
+          "size": 38,
+          "weight": "700",
+          "color": "oklch(0.4122 0.0832 141.53)",
+          "lh": "45.4771px",
+          "family": "industry",
+          "transform": "none",
+          "spacing": "0.8px"
+         },
+         "classes": [
+          "column",
+          "one",
+          "laptop-one",
+          "tablet-one",
+          "mobile-one",
+          "column_heading",
+          "light-text",
+          "vb-item"
+         ]
+        },
+        {
+         "kind": "column",
+         "width": "one",
+         "box": {
+          "w": 500,
+          "h": 154,
+          "y": 4607
+         },
+         "span": 12,
+         "item": {
+          "type": "text",
+          "align": "start",
+          "light": false,
+          "box": {
+           "w": 524,
+           "h": 194,
+           "y": 4607
+          },
+          "html": "Core Four Roofing is built on integrity. We provide honest, unbiased reporting—we do not invent problems just to sell you a new roof. Our goal is to give property managers the factual data they need to maintain compliance with local building codes and keep their existing manufacturer warranties fully intact.",
+          "text": "Core Four Roofing is built on integrity. We provide honest, unbiased reporting—we do not invent problems just to sell you a new roof. Our goal is to give property managers the factual data they need to maintain compliance with local building codes and keep their existing manufacturer warranties fully intact.",
+          "size": 16,
+          "color": "rgb(69, 102, 79)",
+          "lh": "25.6px",
+          "weight": "500"
+         },
+         "classes": [
+          "column",
+          "one",
+          "laptop-one",
+          "tablet-one",
+          "mobile-one",
+          "column_plain_text",
+          "vb-item"
+         ]
+        }
+       ],
+       "span": 6
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "overlay": null,
+   "id": "mcb-section-a393f83d2",
+   "classes": [
+    "section",
+    "mcb-section",
+    "mfn-default-section"
+   ],
+   "bg": null,
+   "bgImage": null,
+   "bgSize": null,
+   "bgPos": null,
+   "padding": [
+    96,
+    0,
+    96,
+    0
+   ],
+   "h": 1593,
+   "y": 4896,
+   "wrapperWidth": 1200,
+   "wraps": [
+    {
+     "kind": "wrap",
+     "width": "one",
+     "box": {
+      "padding": [
+       0,
+       0,
+       24,
+       0
+      ],
+      "w": 1200,
+      "h": 99,
+      "y": 4992
+     },
+     "valign": "flex-start",
+     "classes": [
+      "wrap",
+      "one",
+      "tablet-one",
+      "laptop-one",
+      "mobile-one",
+      "vb-item",
+      "clearfix"
+     ],
+     "columns": [
+      {
+       "kind": "column",
+       "width": "one",
+       "box": {
+        "w": 1176,
+        "h": 35,
+        "y": 4992
+       },
+       "span": 12,
+       "item": {
+        "type": "heading",
+        "align": "start",
+        "light": false,
+        "box": {
+         "w": 1200,
+         "h": 75,
+         "y": 4992
+        },
+        "level": 2,
+        "html": "Schedule Your Commercial Roof Assessment",
+        "text": "Schedule Your Commercial Roof Assessment",
+        "size": 51,
+        "weight": "700",
+        "color": "oklch(0.4122 0.0832 141.53)",
+        "lh": "60.6202px",
+        "family": "industry",
+        "transform": "none",
+        "spacing": "0.8px"
+       },
+       "classes": [
+        "column",
+        "one",
+        "laptop-one",
+        "tablet-one",
+        "mobile-one",
+        "column_heading",
+        "vb-item"
+       ]
+      }
+     ],
+     "span": 12
+    },
+    {
+     "kind": "wrap",
+     "width": "one",
+     "box": {
+      "w": 1200,
+      "h": 1302,
+      "y": 5092
+     },
+     "valign": "flex-start",
+     "classes": [
+      "wrap",
+      "one",
+      "tablet-one",
+      "laptop-one",
+      "mobile-one",
+      "vb-item",
+      "clearfix"
+     ],
+     "columns": [],
+     "span": 12,
+     "wraps": [
+      {
+       "kind": "wrap",
+       "width": "one",
+       "box": {
+        "bg": "oklch(0.6099 0.1588 148.77)",
+        "radius": 32,
+        "padding": [
+         32,
+         32,
+         32,
+         32
+        ],
+        "w": 588,
+        "h": 1070,
+        "y": 5092
+       },
+       "valign": "flex-start",
+       "classes": [
+        "wrap",
+        "one",
+        "tablet-one",
+        "laptop-one",
+        "mobile-one",
+        "mfn-nested-wrap",
+        "vb-item",
+        "clearfix"
+       ],
+       "columns": [
+        {
+         "kind": "column",
+         "width": "one",
+         "box": {
+          "w": 500,
+          "h": 27,
+          "y": 5124
+         },
+         "span": 12,
+         "item": {
+          "type": "heading",
+          "align": "start",
+          "light": true,
+          "box": {
+           "w": 524,
+           "h": 43,
+           "y": 5124
+          },
+          "level": 3,
+          "html": "Request Your Inspection",
+          "text": "Request Your Inspection",
+          "size": 38,
+          "weight": "700",
+          "color": "oklch(1 0 none)",
+          "lh": "45.4771px",
+          "family": "industry",
+          "transform": "none",
+          "spacing": "0.8px"
+         },
+         "classes": [
+          "column",
+          "one",
+          "laptop-one",
+          "tablet-one",
+          "mobile-one",
+          "column_heading",
+          "light-text",
+          "vb-item"
+         ]
+        },
+        {
+         "kind": "column",
+         "width": "one",
+         "box": {
+          "w": 500,
+          "h": 37,
+          "y": 5166
+         },
+         "span": 12,
+         "item": {
+          "type": "text",
+          "html": "<p>Fill out the form below to request a comprehensive inspection and Real Estate Condition Report for your commercial facility.</p>",
+          "text": "Fill out the form below to request a comprehensive inspection and Real Estate Condition Report for your commercial facility.",
+          "box": {
+           "w": 500,
+           "h": 37,
+           "y": 5166
+          },
+          "raw": true,
+          "size": 16,
+          "color": "rgba(255, 255, 255, 0.85)"
+         },
+         "classes": [
+          "column",
+          "one",
+          "laptop-one",
+          "tablet-one",
+          "mobile-one",
+          "column_heading",
+          "light-text",
+          "vb-item"
+         ]
+        },
+        {
+         "kind": "column",
+         "width": "one",
+         "box": {
+          "w": 500,
+          "h": 871,
+          "y": 5219
+         },
+         "span": 12,
+         "item": {
+          "type": "form",
+          "fields": [
+           {
+            "label": "Company",
+            "required": false,
+            "type": "text",
+            "options": [],
+            "sub": []
+           },
+           {
+            "label": "Name",
+            "required": true,
+            "type": "text",
+            "options": [],
+            "sub": [
+             {
+              "name": "input_1.3",
+              "type": "text",
+              "placeholder": "",
+              "label": "First"
+             },
+             {
+              "name": "input_1.6",
+              "type": "text",
+              "placeholder": "",
+              "label": "Last"
+             }
+            ]
+           },
+           {
+            "label": "Email",
+            "required": true,
+            "type": "email",
+            "options": [],
+            "sub": []
+           },
+           {
+            "label": "Phone",
+            "required": true,
+            "type": "tel",
+            "options": [],
+            "sub": []
+           },
+           {
+            "label": "Select a Service",
+            "required": true,
+            "type": "select",
+            "options": [
+             "Commercial Roofing",
+             "Residential Roofing",
+             "Premium Roofing",
+             "Exterior Services"
+            ],
+            "sub": []
+           },
+           {
+            "label": "Address",
+            "required": true,
+            "type": "text",
+            "options": [],
+            "sub": [
+             {
+              "name": "input_4.4",
+              "type": "hidden",
+              "placeholder": "",
+              "label": ""
+             },
+             {
+              "name": "input_4.5",
+              "type": "text",
+              "placeholder": "",
+              "label": "ZIP Code"
+             },
+             {
+              "name": "input_4.6",
+              "type": "hidden",
+              "placeholder": "",
+              "label": ""
+             }
+            ]
+           },
+           {
+            "label": "Comments",
+            "required": false,
+            "type": "textarea",
+            "options": [],
+            "sub": []
+           },
+           {
+            "label": "",
+            "required": false,
+            "type": "text",
+            "options": [],
+            "sub": []
+           }
+          ],
+          "submit": "Submit",
+          "box": {
+           "w": 500,
+           "h": 871,
+           "y": 5219
+          }
+         },
+         "classes": [
+          "column",
+          "one",
+          "laptop-one",
+          "tablet-one",
+          "mobile-one",
+          "column_column",
+          "vb-item"
+         ]
+        }
+       ],
+       "span": 6
+      },
+      {
+       "kind": "wrap",
+       "width": "one",
+       "box": {
+        "radius": 32,
+        "w": 588,
+        "h": 1302,
+        "y": 5092
+       },
+       "valign": "flex-start",
+       "classes": [
+        "wrap",
+        "one",
+        "tablet-one",
+        "laptop-one",
+        "mobile-one",
+        "mfn-nested-wrap",
+        "vb-item",
+        "clearfix"
+       ],
+       "columns": [
+        {
+         "kind": "column",
+         "width": "one",
+         "box": {
+          "w": 564,
+          "h": 1302,
+          "y": 5092
+         },
+         "span": 12,
+         "item": {
+          "type": "gallery",
+          "align": "start",
+          "light": false,
+          "box": {
+           "w": 588,
+           "h": 1302,
+           "y": 5092
+          },
+          "images": [
+           {
+            "src": "/images/live/3b6394f3-0ca6-42d0-af68-1cba641b3cd4-compressed-scaled.webp",
+            "alt": "",
+            "w": 464,
+            "h": 261,
+            "dw": 473,
+            "dh": 277
+           },
+           {
+            "src": "/images/live/27d812ee-6a31-44e6-a9c3-76435c4aa8b5-compressed-scaled.webp",
+            "alt": "",
+            "w": 464,
+            "h": 261,
+            "dw": 473,
+            "dh": 277
+           },
+           {
+            "src": "/images/live/core_four_community-1.jpg",
+            "alt": "",
+            "w": 464,
+            "h": 480,
+            "dw": 481,
+            "dh": 496
+           }
+          ]
+         },
+         "classes": [
+          "column",
+          "one",
+          "laptop-one",
+          "tablet-one",
+          "mobile-one",
+          "column_image_gallery",
+          "vb-item"
+         ]
+        }
+       ],
+       "span": 6
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "overlay": null,
+   "id": "mcb-section-31l5wowlf",
+   "classes": [
+    "section",
+    "mcb-section",
+    "mfn-global-section",
+    "mfn-default-section"
+   ],
+   "bg": null,
+   "bgImage": null,
+   "bgSize": null,
+   "bgPos": null,
+   "padding": [
+    96,
+    0,
+    86,
+    0
+   ],
+   "h": 606,
+   "y": 6489,
+   "wrapperWidth": 1200,
+   "wraps": [
+    {
+     "kind": "wrap",
+     "width": "one",
+     "box": {
+      "w": 1200,
+      "h": 78,
+      "y": 6585
+     },
+     "valign": "flex-start",
+     "classes": [
+      "wrap",
+      "one",
+      "tablet-one",
+      "laptop-one",
+      "mobile-one",
+      "vb-item",
+      "clearfix"
+     ],
+     "columns": [
+      {
+       "kind": "column",
+       "width": "one-third",
+       "box": {
+        "w": 201,
+        "h": 38,
+        "y": 6585
+       },
+       "span": 2,
+       "item": {
+        "type": "elfsight",
+        "widget": "267ccdad-1b32-4c62-9394-105914e96f0f",
+        "box": {
+         "w": 201,
+         "h": 38,
+         "y": 6585
+        }
+       },
+       "classes": [
+        "column",
+        "one-third",
+        "laptop-one-third",
+        "tablet-one-third",
+        "mobile-one",
+        "column_column",
+        "vb-item"
+       ]
+      }
+     ],
+     "span": 12
+    },
+    {
+     "kind": "wrap",
+     "width": "one",
+     "box": {
+      "w": 1200,
+      "h": 346,
+      "y": 6663
+     },
+     "valign": "flex-start",
+     "classes": [
+      "wrap",
+      "one",
+      "tablet-one",
+      "laptop-one",
+      "mobile-one",
+      "mfn-looped-items",
+      "vb-item",
+      "clearfix"
+     ],
+     "columns": [],
+     "span": 12,
+     "item": {
+      "type": "html",
+      "html": "<h3>Kevin Andrews</h3><p>★★★★★ 5 Stars</p><span><p>Cody was quick to meet the adjuster was helpful through the process. Not a flyby night company, very professional and knowledgeable.</p></span><h3>Rene Portillo</h3><p>★★★★★ 5 Stars</p><span><p>I was very happy with service that was offered before during and after the installation. I will definitely recommend their services to others who need a roof.</p></span><h3>Lisa Marburger</h3><p>★★★★★ 5 Stars</p><span><p>I reached out to Montgomery with Core Four Roofing on Friday, July 14th, requesting a quote. I received the quote the same day. The quote was thorough, easy to read, and by far the best price. I asked how soon they could complete the job and Montgomery got back with me immediately stating they could do it the following Friday or Saturday. I requested they come Friday. Workers arrived and completed the job that Friday. The roof looks amazing and the job site was left with no evidence, short of the gorgeous new roof, that they had been there. Several of my neighbors have spoken with me stating how great the roof looks. Core Four Roofing and Montgomery get a 5 star A+++ from me. I would highly recommend them for any of your roofing needs.</p></span><h3>Justin Chambers</h3><p>★★★★★ 5 Stars</p><span><p>They were quick to schedule and complete my roof using great materials at a good price. They don’t try to over charge you. I would definitely recommend them.</p></span><span></span><span></span><span></span><span></span><span></span><i></i><i></i>"
+     }
+    }
+   ]
+  },
+  {
+   "overlay": null,
+   "id": "mcb-section-esdlrm2p",
+   "classes": [
+    "section",
+    "mcb-section",
+    "mfn-default-section",
+    "full-width"
+   ],
+   "bg": null,
+   "bgImage": null,
+   "bgSize": null,
+   "bgPos": null,
+   "padding": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "h": 704,
+   "y": 7095,
+   "wrapperWidth": 1440,
+   "wraps": [
+    {
+     "kind": "wrap",
+     "width": "one",
+     "box": {
+      "w": 1440,
+      "h": 700,
+      "y": 7097
+     },
+     "valign": "flex-start",
+     "classes": [
+      "wrap",
+      "one",
+      "tablet-one",
+      "laptop-one",
+      "mobile-one",
+      "vb-item",
+      "clearfix"
+     ],
+     "columns": [
+      {
+       "kind": "column",
+       "width": "one",
+       "box": {
+        "bg": "oklch(1 0 none)",
+        "radius": 24,
+        "padding": [
+         32,
+         32,
+         32,
+         32
+        ],
+        "w": 365,
+        "h": 390,
+        "y": 7117
+       },
+       "span": 3,
+       "item": {
+        "type": "text",
+        "align": "start",
+        "light": false,
+        "box": {
+         "w": 297,
+         "h": 322,
+         "y": 7151
+        },
+        "html": "<h4>Protecting Texas,<br>One Roof at a Time</h4><p>Core Four Roofing Service Coverage</p><ul><li><i></i><h6>Service Hubs</h6><p>Austin, Dallas, Houston</p></li><li><i></i><h6>Storm Response</h6><p>24/7 Emergency Tarping &amp; Repair</p></li><li><i></i><h6>Local Office</h6><p>(281) 541-0027</p></li></ul>",
+        "text": "Protecting Texas,\nOne Roof at a Time\n\nCore Four Roofing Service Coverage\n\nService Hubs\n\nAustin, Dallas, Houston\n\nStorm Response\n\n24/7 Emergency Tarping & Repair\n\nLocal Office\n\n(281) 541-0027"
+       },
+       "classes": [
+        "column",
+        "one",
+        "laptop-one",
+        "tablet-one",
+        "mobile-one",
+        "column_column",
+        "animate",
+        "vb-item",
+        "fadeInLeft"
+       ]
+      },
+      {
+       "kind": "column",
+       "width": "one",
+       "box": {
+        "w": 1440,
+        "h": 700,
+        "y": 7097
+       },
+       "span": 12,
+       "item": {
+        "type": "elfsight",
+        "widget": "058d3df7-5422-475a-ab17-f5e14c220034",
+        "box": {
+         "w": 1440,
+         "h": 700,
+         "y": 7097
+        }
+       },
+       "classes": [
+        "column",
+        "one",
+        "laptop-one",
+        "tablet-one",
+        "mobile-one",
+        "column_column",
+        "vb-item"
+       ]
+      }
+     ],
+     "span": 12
+    }
+   ]
+  }
+ ]
+}

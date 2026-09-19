@@ -1,0 +1,1509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet" />
+  <meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet" />
+  <title>Core Four Roofing — Residential Ads Plan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Reddit+Sans:ital,wght@0,400;0,500;0,600;0,700;1,500;1,600;1,700&display=swap" rel="stylesheet" />
+  <link rel="icon" href="assets/core-four-roofing-favicon.svg" type="image/svg+xml" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <style>
+    :root {
+      --ink: #101015;
+      --ink-soft: #13162f;
+      --muted: #45664f;
+      --muted-soft: #66594e;
+      --line: #dbd7cf;
+      --paper: #f3f0e9;
+      --panel: #f7f6f2;
+      --white: #ffffff;
+      --brand: #144b24;
+      --brand-mid: #269a47;
+      --brand-deep: #0f3519;
+      --lime: #bfe866;
+      --lime-soft: #d4f29a;
+      --link: #0089f7;
+      --gain: #144b24;
+      --gain-bg: #e8f5d8;
+      --max: 1120px;
+      --ease: cubic-bezier(0.22, 1, 0.36, 1);
+      --radius: 16px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: "Reddit Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--ink);
+      background: var(--paper);
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+    }
+    img { max-width: 100%; display: block; }
+    button { font: inherit; cursor: pointer; border: 0; background: none; }
+    a { color: inherit; }
+
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      min-height: 100dvh;
+      color: var(--white);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      isolation: isolate;
+    }
+    .hero-media {
+      position: absolute;
+      inset: 0;
+      z-index: -2;
+      background:
+        linear-gradient(230deg, rgba(20, 75, 36, 0.15) 0%, rgba(13, 13, 13, 0.55) 45%, rgba(13, 13, 13, 0.88) 100%),
+        url("assets/hero-site.webp") center/cover no-repeat;
+      transform: scale(1.04);
+      animation: heroZoom 18s var(--ease) forwards;
+    }
+    @keyframes heroZoom {
+      from { transform: scale(1.08); }
+      to { transform: scale(1); }
+    }
+    .hero-grain {
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      opacity: 0.18;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+      pointer-events: none;
+    }
+    .hero-inner {
+      width: min(100% - 2.5rem, var(--max));
+      margin: 0 auto;
+      padding: 2.5rem 0 3.5rem;
+    }
+    .hero-logo {
+      width: min(340px, 72vw);
+      height: auto;
+      margin-bottom: 1.25rem;
+      opacity: 0;
+      transform: translateY(24px);
+      animation: rise 0.9s var(--ease) 0.1s forwards;
+    }
+    .hero-brand {
+      font-weight: 700;
+      font-size: clamp(2.6rem, 7vw, 4.75rem);
+      letter-spacing: -0.03em;
+      line-height: 0.95;
+      max-width: 16ch;
+      opacity: 0;
+      transform: translateY(24px);
+      animation: rise 0.9s var(--ease) 0.2s forwards;
+    }
+    .hero-brand span { color: var(--lime); }
+    .hero-line {
+      margin-top: 1.25rem;
+      max-width: 36rem;
+      font-size: 1.05rem;
+      color: rgba(255, 255, 255, 0.84);
+      opacity: 0;
+      transform: translateY(18px);
+      animation: rise 0.9s var(--ease) 0.35s forwards;
+    }
+    .hero-actions {
+      margin-top: 1.75rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      opacity: 0;
+      transform: translateY(18px);
+      animation: rise 0.9s var(--ease) 0.5s forwards;
+    }
+    @keyframes rise {
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.85rem 1.35rem;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 0.92rem;
+      text-decoration: none;
+      transition: transform 0.25s var(--ease), background 0.25s ease, color 0.25s ease;
+    }
+    .btn:hover { transform: translateY(-1px); }
+    .btn-primary { background: var(--lime); color: var(--brand); }
+    .btn-primary:hover { background: var(--lime-soft); }
+    .btn-ghost {
+      background: rgba(255, 255, 255, 0.1);
+      color: var(--white);
+      outline: 1px solid rgba(255, 255, 255, 0.28);
+    }
+    .hero-meta {
+      margin-top: 2.25rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem 2.5rem;
+      padding-top: 1.25rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.18);
+      font-size: 0.82rem;
+      color: rgba(255, 255, 255, 0.7);
+      opacity: 0;
+      animation: rise 0.9s var(--ease) 0.65s forwards;
+    }
+    .hero-meta strong {
+      display: block;
+      color: var(--white);
+      font-size: 0.95rem;
+      margin-bottom: 0.15rem;
+    }
+
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      backdrop-filter: blur(12px);
+      background: rgba(243, 240, 233, 0.92);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav-inner {
+      width: min(100% - 2.5rem, var(--max));
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 0.7rem 0;
+      min-width: 0;
+    }
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      flex: 0 0 auto;
+      min-width: 0;
+      font-weight: 700;
+      font-size: 0.92rem;
+      color: var(--brand);
+      text-decoration: none;
+    }
+    .nav-brand img { height: 28px; width: auto; flex-shrink: 0; }
+    .nav-brand span { white-space: nowrap; }
+    .nav-links {
+      display: flex;
+      flex: 1 1 auto;
+      min-width: 0;
+      gap: 0.15rem;
+      overflow-x: auto;
+      overscroll-behavior-x: contain;
+      scrollbar-width: none;
+      -webkit-overflow-scrolling: touch;
+    }
+    .nav-links::-webkit-scrollbar { display: none; }
+    .nav-links a {
+      text-decoration: none;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--muted);
+      padding: 0.45rem 0.55rem;
+      border-radius: 2px;
+      white-space: nowrap;
+      flex: 0 0 auto;
+      transition: color 0.2s ease, background 0.2s ease;
+    }
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--ink);
+      background: rgba(16, 20, 24, 0.05);
+    }
+    .nav-print {
+      flex: 0 0 auto;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--white);
+      padding: 0.45rem 0.75rem;
+      border: 1px solid var(--brand);
+      border-radius: 999px;
+      background: var(--brand);
+      white-space: nowrap;
+    }
+    .nav-print:hover { background: var(--brand-deep); }
+
+    @media (max-width: 1100px) {
+      .nav-brand span { display: none; }
+    }
+    @media (max-width: 780px) {
+      .nav-print { display: none; }
+    }
+
+    main { width: min(100% - 2.5rem, var(--max)); margin: 0 auto; padding: 2.5rem 0 4rem; }
+    section { margin-bottom: 3.5rem; scroll-margin-top: 4.5rem; }
+    .section-kicker {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--brand);
+      margin-bottom: 0.55rem;
+    }
+    .section-title {
+      font-weight: 700;
+      font-size: clamp(1.85rem, 3.6vw, 2.55rem);
+      letter-spacing: -0.025em;
+      line-height: 1.1;
+      margin-bottom: 0.65rem;
+      color: var(--ink-soft);
+    }
+    .section-lead {
+      max-width: 42rem;
+      color: var(--muted);
+      margin-bottom: 1.75rem;
+    }
+
+    .gains {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1px;
+      background: var(--line);
+      border: 1px solid var(--line);
+      margin-top: 0.5rem;
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+    .gain {
+      background: var(--white);
+      padding: 1.35rem 1.2rem 1.25rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .gain::after {
+      content: "";
+      position: absolute;
+      left: 0; top: 0; bottom: 0;
+      width: 3px;
+      background: var(--lime);
+      transform: scaleY(0);
+      transform-origin: top;
+      animation: barIn 0.7s var(--ease) forwards;
+    }
+    .gain:nth-child(2)::after { animation-delay: 0.08s; }
+    .gain:nth-child(3)::after { animation-delay: 0.16s; }
+    .gain:nth-child(4)::after { animation-delay: 0.24s; }
+    @keyframes barIn { to { transform: scaleY(1); } }
+    .gain-label {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--muted);
+      margin-bottom: 0.55rem;
+    }
+    .gain-value {
+      font-weight: 700;
+      font-size: 2.15rem;
+      letter-spacing: -0.03em;
+      line-height: 1;
+      color: var(--brand);
+    }
+    .gain-note {
+      margin-top: 0.45rem;
+      font-size: 0.75rem;
+      color: var(--muted);
+    }
+
+    .callout {
+      margin-top: 1.25rem;
+      padding: 1.1rem 1.25rem;
+      background: var(--brand);
+      color: rgba(255, 255, 255, 0.9);
+      border-left: 4px solid var(--lime);
+      border-radius: 0 var(--radius) var(--radius) 0;
+    }
+    .callout strong { color: var(--white); }
+    .callout a { color: var(--lime); font-weight: 700; text-decoration: none; }
+
+    .split {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 1.5rem;
+      align-items: start;
+    }
+    .panel {
+      background: var(--white);
+      border: 1px solid var(--line);
+      padding: 1.25rem;
+      border-radius: var(--radius);
+    }
+    .panel h3 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--brand);
+      margin-bottom: 0.35rem;
+    }
+    .panel-sub {
+      font-size: 0.82rem;
+      color: var(--muted);
+      margin-bottom: 1rem;
+    }
+    .chart-wrap { position: relative; height: 280px; }
+    .chart-wrap.tall { height: 320px; }
+
+    .metric-list { display: grid; gap: 0.75rem; }
+    .metric-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 1rem;
+      padding-bottom: 0.7rem;
+      border-bottom: 1px solid var(--line);
+    }
+    .metric-row:last-child { border-bottom: 0; padding-bottom: 0; }
+    .metric-row .label { font-size: 0.9rem; color: var(--ink-soft); }
+    .metric-row .value {
+      font-weight: 700;
+      font-size: 1.15rem;
+      letter-spacing: -0.02em;
+      white-space: nowrap;
+      color: var(--brand);
+    }
+
+    .pill-row { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1rem; }
+    .pill {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      padding: 0.35rem 0.6rem;
+      border: 1px solid var(--line);
+      background: var(--panel);
+      color: var(--ink-soft);
+      border-radius: 2px;
+    }
+    .pill.on {
+      background: var(--brand);
+      border-color: var(--brand);
+      color: var(--white);
+    }
+
+    table.data {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.88rem;
+    }
+    table.data th {
+      text-align: left;
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      font-weight: 700;
+      padding: 0.55rem 0.4rem;
+      border-bottom: 1px solid var(--line);
+    }
+    table.data td {
+      padding: 0.7rem 0.4rem;
+      border-bottom: 1px solid rgba(213, 219, 225, 0.7);
+      vertical-align: top;
+    }
+    table.data tr:last-child td { border-bottom: 0; }
+    table.data .num { text-align: right; font-variant-numeric: tabular-nums; font-weight: 600; }
+    table.data .query { max-width: 18rem; }
+
+    .compare-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--line);
+      border: 1px solid var(--line);
+      margin-top: 1rem;
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+    .compare-cell {
+      background: var(--white);
+      padding: 1.1rem 1rem;
+    }
+    .compare-cell .k {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--muted);
+      margin-bottom: 0.35rem;
+    }
+    .compare-cell .v {
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      line-height: 1;
+      color: var(--brand);
+    }
+    .compare-cell .d {
+      margin-top: 0.4rem;
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--gain);
+    }
+
+    .story-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+    }
+    .story {
+      padding: 1.25rem 1.15rem;
+      background: var(--white);
+      border-top: 3px solid var(--brand);
+      border-radius: 0 0 var(--radius) var(--radius);
+    }
+    .story:nth-child(2) { border-top-color: var(--brand-mid); }
+    .story:nth-child(3) { border-top-color: var(--lime); }
+    .story h3 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--brand);
+      margin-bottom: 0.45rem;
+    }
+    .story p { font-size: 0.9rem; color: var(--muted); }
+
+    .footer {
+      width: min(100% - 2.5rem, var(--max));
+      margin: 0 auto 2.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--line);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 1rem;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    .tabs {
+      display: flex;
+      gap: 0.35rem;
+      margin-bottom: 1rem;
+      flex-wrap: wrap;
+    }
+    .tab {
+      padding: 0.5rem 0.85rem;
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--muted);
+      border: 1px solid var(--line);
+      background: var(--panel);
+      border-radius: 2px;
+    }
+    .tab.active {
+      background: var(--brand);
+      border-color: var(--brand);
+      color: var(--white);
+    }
+
+    .tier-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+    }
+    .tier {
+      position: relative;
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 1.35rem 1.2rem 1.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+    }
+    .tier.featured {
+      border-color: var(--brand);
+      box-shadow: 0 0 0 2px var(--lime);
+    }
+    .tier-badge {
+      position: absolute;
+      top: -0.7rem;
+      left: 1.1rem;
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      background: var(--lime);
+      color: var(--brand-deep);
+      padding: 0.2rem 0.55rem;
+      border-radius: 999px;
+    }
+    .tier-kicker {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .tier h3 {
+      font-size: 2.1rem;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      color: var(--brand);
+      line-height: 1;
+    }
+    .tier h3 span {
+      display: block;
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0;
+      color: var(--muted);
+      margin-top: 0.35rem;
+    }
+    .mix-bar {
+      display: flex;
+      height: 12px;
+      border-radius: 999px;
+      overflow: hidden;
+      background: var(--panel);
+    }
+    .mix-bar span { display: block; height: 100%; }
+    .seg-search { background: var(--brand); }
+    .seg-remark { background: var(--brand-mid); }
+    .seg-social { background: var(--lime); }
+    .seg-ctv { background: #8a9a7a; }
+    .mix-legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.55rem 0.85rem;
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--muted);
+    }
+    .mix-legend i {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      border-radius: 2px;
+      margin-right: 0.3rem;
+    }
+    .tier-stats { display: grid; gap: 0.55rem; }
+    .tier-stat {
+      display: flex;
+      justify-content: space-between;
+      gap: 0.75rem;
+      font-size: 0.86rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--line);
+    }
+    .tier-stat:last-child { border-bottom: 0; padding-bottom: 0; }
+    .tier-stat b { color: var(--brand); font-variant-numeric: tabular-nums; text-align: right; }
+    .tier-foot {
+      margin-top: auto;
+      font-size: 0.78rem;
+      color: var(--muted);
+      background: var(--panel);
+      padding: 0.75rem 0.85rem;
+      border-radius: 10px;
+    }
+
+    .channel-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+    .channel {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 1.35rem 1.25rem;
+    }
+    .channel-tag {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.25rem 0.55rem;
+      border-radius: 999px;
+      margin-bottom: 0.7rem;
+    }
+    .channel-tag.yes { background: var(--gain-bg); color: var(--brand); }
+    .channel-tag.later { background: #efe8d4; color: #6a5420; }
+    .channel h3 {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--brand);
+      letter-spacing: -0.02em;
+      margin-bottom: 0.45rem;
+    }
+    .channel p { font-size: 0.92rem; color: var(--muted); }
+    .channel ul {
+      margin: 0.85rem 0 0 1.1rem;
+      color: var(--ink-soft);
+      font-size: 0.88rem;
+    }
+    .channel li { margin-bottom: 0.35rem; }
+
+    .steps {
+      display: grid;
+      gap: 0.75rem;
+    }
+    .step {
+      display: grid;
+      grid-template-columns: 2.6rem 1fr;
+      gap: 0.85rem;
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 1rem 1.1rem;
+    }
+    .step-num {
+      width: 2.6rem;
+      height: 2.6rem;
+      border-radius: 50%;
+      background: var(--brand);
+      color: var(--lime);
+      font-weight: 700;
+      display: grid;
+      place-items: center;
+    }
+    .step h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--brand);
+      margin-bottom: 0.2rem;
+    }
+    .step p { font-size: 0.88rem; color: var(--muted); }
+
+    .note {
+      font-size: 0.82rem;
+      color: var(--muted);
+      margin-top: 1rem;
+    }
+
+    @media (max-width: 960px) {
+      .gains, .split, .compare-grid, .story-grid, .tier-grid, .channel-grid { grid-template-columns: 1fr 1fr; }
+      .split { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 640px) {
+      .gains, .compare-grid, .story-grid, .tier-grid, .channel-grid { grid-template-columns: 1fr; }
+      .hero-inner, main, .nav-inner, .footer { width: min(100% - 1.5rem, var(--max)); }
+      .nav-print { display: none; }
+      .gain-value { font-size: 1.85rem; }
+    }
+
+    @media print {
+      .hero { min-height: auto; padding-top: 3rem; page-break-after: always; }
+      .hero-media { animation: none; transform: none; }
+      .nav, .hero-actions, .nav-print { display: none !important; }
+      body { background: white; }
+      section { break-inside: avoid; }
+      .panel, .gain, .story, .tier, .channel { break-inside: avoid; }
+      .gate { display: none !important; }
+    }
+
+    body.is-locked > *:not(.gate) { display: none !important; }
+    .gate {
+      display: none;
+      min-height: 100vh;
+      min-height: 100dvh;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1.25rem;
+      background:
+        linear-gradient(230deg, rgba(20, 75, 36, 0.88) 0%, rgba(13, 13, 13, 0.92) 100%),
+        url("assets/hero-site.webp") center/cover no-repeat;
+    }
+    body.is-locked .gate { display: flex; }
+    .gate-card {
+      width: min(100%, 400px);
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 2rem 1.5rem 1.5rem;
+      text-align: center;
+    }
+    .gate-card img { width: 180px; height: auto; margin: 0 auto 1.25rem; }
+    .gate-card h1 {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--brand);
+      letter-spacing: -0.02em;
+      margin-bottom: 0.35rem;
+    }
+    .gate-card p { font-size: 0.9rem; color: var(--muted); margin-bottom: 1.25rem; }
+    .gate-card form { display: grid; gap: 0.75rem; }
+    .gate-card input[type="password"] {
+      width: 100%;
+      padding: 0.85rem 1rem;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: var(--white);
+      font: inherit;
+      font-size: 0.95rem;
+      color: var(--ink);
+      outline: none;
+    }
+    .gate-card input[type="password"]:focus { border-color: var(--brand); }
+    .gate-card button {
+      width: 100%;
+      padding: 0.85rem 1.25rem;
+      border: 0;
+      border-radius: 999px;
+      background: var(--brand);
+      color: var(--white);
+      font: inherit;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .gate-card button:hover { background: var(--brand-deep); }
+    .gate-error {
+      display: none;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: #962317;
+      margin-top: 0.15rem;
+    }
+    .gate-error.show { display: block; }
+  </style>
+  <script>
+    (function () {
+      var KEY = "cfr_report_auth_v1";
+      var HASH = "450e1216ce69b33721d029d095020eb17147a0cc106077b71d880adf99093610";
+      async function sha256(text) {
+        var data = new TextEncoder().encode(text);
+        var buf = await crypto.subtle.digest("SHA-256", data);
+        return Array.from(new Uint8Array(buf)).map(function (b) {
+          return b.toString(16).padStart(2, "0");
+        }).join("");
+      }
+      window.__cfrUnlock = async function (password) {
+        var h = await sha256(password);
+        if (h !== HASH) return false;
+        try { sessionStorage.setItem(KEY, HASH); } catch (e) {}
+        document.body.classList.remove("is-locked");
+        return true;
+      };
+      window.__cfrIsAuthed = function () {
+        try { return sessionStorage.getItem(KEY) === HASH; } catch (e) { return false; }
+      };
+      document.documentElement.classList.add("js-gate");
+    })();
+  </script>
+</head>
+<body class="is-locked">
+  <div class="gate" role="dialog" aria-modal="true" aria-labelledby="gate-title">
+    <div class="gate-card">
+      <img src="assets/core-four-roofing-logo-green.svg" alt="Core Four Roofing" width="180" height="62" />
+      <h1 id="gate-title">Residential Ads Plan</h1>
+      <p>Enter the password to view this private client report.</p>
+      <form id="gate-form" autocomplete="off">
+        <input id="gate-password" type="password" name="password" placeholder="Password" required autofocus />
+        <button type="submit">Unlock report</button>
+        <div class="gate-error" id="gate-error">Incorrect password. Try again.</div>
+      </form>
+    </div>
+  </div>
+  <script>
+    (function () {
+      if (window.__cfrIsAuthed && window.__cfrIsAuthed()) {
+        document.body.classList.remove("is-locked");
+      }
+      var form = document.getElementById("gate-form");
+      var input = document.getElementById("gate-password");
+      var err = document.getElementById("gate-error");
+      if (!form) return;
+      form.addEventListener("submit", async function (e) {
+        e.preventDefault();
+        err.classList.remove("show");
+        var ok = await window.__cfrUnlock(input.value);
+        if (!ok) {
+          err.classList.add("show");
+          input.value = "";
+          input.focus();
+        }
+      });
+    })();
+  </script>
+
+  <header class="hero">
+    <div class="hero-media" aria-hidden="true"></div>
+    <div class="hero-grain" aria-hidden="true"></div>
+    <div class="hero-inner">
+      <img class="hero-logo" src="assets/core-four-roofing-logo.svg" alt="Core Four Roofing" width="340" height="117" />
+      <h1 class="hero-brand">Residential ads <span>game plan</span></h1>
+      <p class="hero-line">
+        A search-first plan to buy residential roof jobs in the Houston suburbs — Tomball, The Woodlands, Cypress, Spring, Katy, Humble, and the rest of the ring around HQ. Not downtown. Not Austin. Not Dallas.
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#outcomes">See $2k / $5k / $10k outcomes</a>
+        <a class="btn btn-ghost" href="index.html">Back to performance report</a>
+      </div>
+      <div class="hero-meta">
+        <div>
+          <strong>Objective</strong>
+          Residential roof leads — Houston suburbs
+        </div>
+        <div>
+          <strong>Primary market</strong>
+          Tomball HQ · suburb ring
+        </div>
+        <div>
+          <strong>Estimates</strong>
+          Conservative modeled · month 3+
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <nav class="nav" aria-label="Plan sections">
+    <div class="nav-inner">
+      <a class="nav-brand" href="index.html">
+        <img src="assets/core-four-roofing-logo-green.svg" alt="Core Four Roofing" width="120" height="41" />
+        <span>Ads Plan</span>
+      </a>
+      <div class="nav-links">
+        <a href="#plan">Plan</a>
+        <a href="#mix">Channels</a>
+        <a href="#outcomes">Outcomes</a>
+        <a href="#geos">Markets</a>
+        <a href="#campaign">Campaign</a>
+        <a href="#launch">90 days</a>
+        <a href="index.html">Report</a>
+        <a href="reviews.html">Reviews</a>
+      </div>
+      <button class="nav-print" type="button" onclick="window.print()">Export PDF</button>
+    </div>
+  </nav>
+
+  <main>
+    <section id="plan">
+      <p class="section-kicker">The recommendation</p>
+      <h2 class="section-title">Buy high-intent suburb search first</h2>
+      <p class="section-lead">
+        Homeowners in The Woodlands, Cypress, Katy, and Spring already type “roof replacement near me” when a leak shows or a storm hits. That search is the closest thing to a warm hand-raise. Social and streaming help later. They do not replace it.
+      </p>
+
+      <div class="gains">
+        <div class="gain">
+          <div class="gain-label">Best starting budget</div>
+          <div class="gain-value">$5k</div>
+          <p class="gain-note">Enough to hold suburb search without starving the campaign</p>
+        </div>
+        <div class="gain">
+          <div class="gain-label">Suburb share of spend</div>
+          <div class="gain-value">100%</div>
+          <p class="gain-note">Houston suburbs only · Austin and Dallas stay off</p>
+        </div>
+        <div class="gain">
+          <div class="gain-label">Search as the core</div>
+          <div class="gain-value">65–90%</div>
+          <p class="gain-note">Higher at $2k · lower at $10k as Meta and CTV layer in</p>
+        </div>
+        <div class="gain">
+          <div class="gain-label">One job pays for</div>
+          <div class="gain-value">1–7 mo</div>
+          <p class="gain-note">At a conservative $14k residential average</p>
+        </div>
+      </div>
+
+      <div class="callout">
+        <strong>Why suburbs, not the whole metro:</strong>
+        Tomball HQ, the Google listing, and the 23 residential city pages already live in this ring — The Woodlands, Cypress, Spring, Katy, Humble, Conroe, Sugar Land, Pearland, League City, and the rest. Paid search should send those homeowners to the matching city page, not a generic Houston ad. Downtown and inside-the-Loop stay out. Austin and Dallas stay out.
+      </div>
+    </section>
+
+    <section id="mix">
+      <p class="section-kicker">Channel mix</p>
+      <h2 class="section-title">Should some budget go to social or streaming?</h2>
+      <p class="section-lead">
+        Yes — but only after Google Search is funded. Homeowners still search first when the roof leaks. Facebook and streaming help because suburban homeowners actually scroll and watch TV at night. They do not replace “roof replacement Cypress TX.”
+      </p>
+
+      <div class="channel-grid">
+        <article class="channel">
+          <span class="channel-tag yes">Yes — starting at $5k/mo</span>
+          <h3>Social: remarketing plus light suburb prospecting</h3>
+          <p>
+            Residential is a better social buy than commercial. Before/after photos, storm damage, and neighborhood geo work on Facebook and Instagram. Still: do not spend the $2k plan on cold social — search has to eat first.
+          </p>
+          <ul>
+            <li><strong>$2k:</strong> $0 paid social. Keep organic Facebook / Instagram as-is.</li>
+            <li><strong>$5k:</strong> ~20% ($1,000) Meta — remarketing of suburb landing-page visitors plus light zip-code prospecting (homeowners 30–64).</li>
+            <li><strong>$10k:</strong> ~15% ($1,500) remarketing plus suburb lookalikes. Skip LinkedIn.</li>
+            <li>Creative: shingle replacement, leak repair, hail, before/after, “neighbors in The Woodlands / Katy / Cypress.”</li>
+            <li>Geo-fence the same suburb list as Search. No Austin, no Dallas, no inside-the-Loop.</li>
+          </ul>
+        </article>
+        <article class="channel">
+          <span class="channel-tag later">Yes — only at $10k/mo</span>
+          <h3>Streaming / connected TV: suburb awareness</h3>
+          <p>
+            CTV (YouTube on TV, Google Video on connected devices) is a brand tool for homeowners who watch in the evening. It will not fill the CRM with last-click leads. Use it when search is already running so they later Google “Core Four Roofing” or “roofer in Cypress.”
+          </p>
+          <ul>
+            <li><strong>$2k and $5k:</strong> $0 CTV. Too little to hit frequency in the suburb zips.</li>
+            <li><strong>$10k:</strong> ~10% ($1,000) Houston suburb zips only. 15-second spots, frequency cap 3–4/week.</li>
+            <li>Do not buy Austin, Dallas, or a full DMA dump. Target the same north / west / south ring.</li>
+            <li>Conservative model: <strong>zero last-click jobs</strong> from CTV. Count a small branded-search lift only.</li>
+            <li>If forced to cut, cut CTV before Search. Search pays for jobs; CTV pays for memory.</li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="split" style="margin-top:1.5rem;">
+        <div class="panel">
+          <h3>Recommended mix by budget</h3>
+          <p class="panel-sub">Share of media spend · Google Search stays the majority at every tier</p>
+          <div class="chart-wrap tall"><canvas id="mixChart"></canvas></div>
+          <div class="mix-legend" style="margin-top:0.85rem;">
+            <span><i class="seg-search"></i>Google Search</span>
+            <span><i class="seg-remark"></i>Remarketing / YouTube</span>
+            <span><i class="seg-social"></i>Meta social</span>
+            <span><i class="seg-ctv"></i>Connected TV</span>
+          </div>
+        </div>
+        <div class="panel">
+          <h3>What we would not do</h3>
+          <p class="panel-sub">These look busy and waste residential budget</p>
+          <div class="metric-list">
+            <div class="metric-row">
+              <span class="label">Austin or Dallas in this account</span>
+              <span class="value">No</span>
+            </div>
+            <div class="metric-row">
+              <span class="label">Downtown / inside-the-Loop targeting</span>
+              <span class="value">No</span>
+            </div>
+            <div class="metric-row">
+              <span class="label">Performance Max before conversion tracking</span>
+              <span class="value">No</span>
+            </div>
+            <div class="metric-row">
+              <span class="label">Commercial / TPO / warehouse keywords</span>
+              <span class="value">No</span>
+            </div>
+            <div class="metric-row">
+              <span class="label">CTV at $2k or $5k</span>
+              <span class="value">No</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="outcomes">
+      <p class="section-kicker">Modeled results</p>
+      <h2 class="section-title">Expected outcome at $2k, $5k, and $10k / month</h2>
+      <p class="section-lead">
+        These are conservative, steady-state numbers after the first 60–90 days — not a best-case pitch. Residential closes faster than commercial, but we still show ranges. One closed job at $14k covers media for 1–7 months depending on the tier.
+      </p>
+
+      <div class="pill-row">
+        <span class="pill on">Conservative</span>
+        <span class="pill">Suburb residential Search CPC ~$24</span>
+        <span class="pill">6.5% click-to-lead</span>
+        <span class="pill">~$370–$450 CPL</span>
+        <span class="pill">70% qualified · 18% close</span>
+        <span class="pill">$14k avg job</span>
+      </div>
+
+      <div class="tier-grid">
+        <article class="tier">
+          <p class="tier-kicker">Test budget</p>
+          <h3>$2,000<span>per month · north suburb ring</span></h3>
+          <div class="mix-bar" aria-hidden="true">
+            <span class="seg-search" style="width:90%"></span>
+            <span class="seg-remark" style="width:10%"></span>
+          </div>
+          <div class="mix-legend">
+            <span><i class="seg-search"></i>Search $1,800</span>
+            <span><i class="seg-remark"></i>Remarketing $200</span>
+          </div>
+          <div class="tier-stats">
+            <div class="tier-stat"><span>Markets</span><b>Tomball · Woodlands · Cypress · Spring</b></div>
+            <div class="tier-stat"><span>Clicks / month</span><b>75–90</b></div>
+            <div class="tier-stat"><span>Leads / month</span><b>5–8</b></div>
+            <div class="tier-stat"><span>Qualified leads</span><b>4–6</b></div>
+            <div class="tier-stat"><span>Jobs / 90 days</span><b>1–2</b></div>
+            <div class="tier-stat"><span>Jobs / year</span><b>7–11</b></div>
+            <div class="tier-stat"><span>Media cost / job</span><b>$2,200–$3,400</b></div>
+            <div class="tier-stat"><span>Booked revenue / year</span><b>$100k–$155k</b></div>
+          </div>
+          <p class="tier-foot">A real drip of residential leads near HQ. Social $0 · CTV $0. Do not add Katy or Pearland until this ring is converting.</p>
+        </article>
+
+        <article class="tier featured">
+          <span class="tier-badge">Recommended start</span>
+          <p class="tier-kicker">Working budget</p>
+          <h3>$5,000<span>per month · north + west suburbs</span></h3>
+          <div class="mix-bar" aria-hidden="true">
+            <span class="seg-search" style="width:70%"></span>
+            <span class="seg-remark" style="width:10%"></span>
+            <span class="seg-social" style="width:20%"></span>
+          </div>
+          <div class="mix-legend">
+            <span><i class="seg-search"></i>Search $3,500</span>
+            <span><i class="seg-remark"></i>Remarketing $500</span>
+            <span><i class="seg-social"></i>Meta $1,000</span>
+          </div>
+          <div class="tier-stats">
+            <div class="tier-stat"><span>Markets</span><b>North ring + Katy · Fulshear · Sugar Land</b></div>
+            <div class="tier-stat"><span>Clicks / month</span><b>155–185</b></div>
+            <div class="tier-stat"><span>Leads / month</span><b>12–18</b></div>
+            <div class="tier-stat"><span>Qualified leads</span><b>8–13</b></div>
+            <div class="tier-stat"><span>Jobs / 90 days</span><b>3–5</b></div>
+            <div class="tier-stat"><span>Jobs / year</span><b>16–24</b></div>
+            <div class="tier-stat"><span>Media cost / job</span><b>$2,500–$3,800</b></div>
+            <div class="tier-stat"><span>Booked revenue / year</span><b>$225k–$335k</b></div>
+          </div>
+          <p class="tier-foot">Best plan for residential jobs. Meta is suburb geo + remarketing, not a statewide blast. CTV $0. Austin and Dallas off.</p>
+        </article>
+
+        <article class="tier">
+          <p class="tier-kicker">Scale budget</p>
+          <h3>$10,000<span>per month · full suburb ring + CTV</span></h3>
+          <div class="mix-bar" aria-hidden="true">
+            <span class="seg-search" style="width:65%"></span>
+            <span class="seg-remark" style="width:10%"></span>
+            <span class="seg-social" style="width:15%"></span>
+            <span class="seg-ctv" style="width:10%"></span>
+          </div>
+          <div class="mix-legend">
+            <span><i class="seg-search"></i>Search $6,500</span>
+            <span><i class="seg-remark"></i>YT $1,000</span>
+            <span><i class="seg-social"></i>Meta $1,500</span>
+            <span><i class="seg-ctv"></i>CTV $1,000</span>
+          </div>
+          <div class="tier-stats">
+            <div class="tier-stat"><span>Markets</span><b>North + west + south / east suburbs</b></div>
+            <div class="tier-stat"><span>Clicks / month</span><b>270–340</b></div>
+            <div class="tier-stat"><span>Leads / month</span><b>22–32</b></div>
+            <div class="tier-stat"><span>Qualified leads</span><b>15–22</b></div>
+            <div class="tier-stat"><span>Jobs / 90 days</span><b>6–10</b></div>
+            <div class="tier-stat"><span>Jobs / year</span><b>28–40</b></div>
+            <div class="tier-stat"><span>Media cost / job</span><b>$3,000–$4,300</b></div>
+            <div class="tier-stat"><span>Booked revenue / year</span><b>$390k–$560k</b></div>
+          </div>
+          <p class="tier-foot">Adds Pearland, League City, Pasadena, Baytown, and suburb CTV. Efficiency dips slightly. CTV is not counted as last-click jobs.</p>
+        </article>
+      </div>
+
+      <div class="split" style="margin-top:1.5rem;">
+        <div class="panel">
+          <h3>Conservative yearly yield</h3>
+          <p class="panel-sub">Leads and closed jobs at month 3+ run-rate · not a first-month promise</p>
+          <div class="chart-wrap tall"><canvas id="outcomeChart"></canvas></div>
+        </div>
+        <div class="panel">
+          <h3>How the math stays conservative</h3>
+          <p class="panel-sub">Houston residential CPL is often quoted $250–$350. We model higher so the plan still works if auction prices bite.</p>
+          <div class="metric-list">
+            <div class="metric-row">
+              <span class="label">Search CPC used</span>
+              <span class="value">$24</span>
+            </div>
+            <div class="metric-row">
+              <span class="label">Click → lead</span>
+              <span class="value">6.5%</span>
+            </div>
+            <div class="metric-row">
+              <span class="label">Lead → qualified</span>
+              <span class="value">70%</span>
+            </div>
+            <div class="metric-row">
+              <span class="label">Qualified → job (90 days)</span>
+              <span class="value">18%</span>
+            </div>
+            <div class="metric-row">
+              <span class="label">All leads → job</span>
+              <span class="value">~12.6%</span>
+            </div>
+            <div class="metric-row">
+              <span class="label">Avg residential ticket</span>
+              <span class="value">$14,000</span>
+            </div>
+            <div class="metric-row">
+              <span class="label">First 30 days CPL</span>
+              <span class="value">+25%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="callout">
+        <strong>Read the ranges as lumpy, not linear.</strong>
+        A $6k leak repair and an $18k replacement both count as “a job.” Storm weeks will spike. Quiet weeks will not. Yearly job counts are what to staff around — not a promise of one signed roof every 30 days.
+      </div>
+
+      <div class="panel" style="margin-top:1.25rem; overflow-x:auto;">
+        <h3>Side-by-side (steady state)</h3>
+        <p class="panel-sub">Media only · does not include management time · conversion tracking must be live or these numbers will miss</p>
+        <table class="data">
+          <thead>
+            <tr>
+              <th>Metric</th>
+              <th class="num">$2,000 / mo</th>
+              <th class="num">$5,000 / mo</th>
+              <th class="num">$10,000 / mo</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="query">Annual media</td>
+              <td class="num">$24,000</td>
+              <td class="num">$60,000</td>
+              <td class="num">$120,000</td>
+            </tr>
+            <tr>
+              <td class="query">Google Search</td>
+              <td class="num">90% · north ring</td>
+              <td class="num">70% · north + west suburbs</td>
+              <td class="num">65% · full suburb ring</td>
+            </tr>
+            <tr>
+              <td class="query">Paid social</td>
+              <td class="num">$0</td>
+              <td class="num">$1,000 · remarketing + zip geo</td>
+              <td class="num">$1,500 · remarketing + lookalikes</td>
+            </tr>
+            <tr>
+              <td class="query">Streaming / CTV</td>
+              <td class="num">$0</td>
+              <td class="num">$0</td>
+              <td class="num">$1,000 · suburb zips</td>
+            </tr>
+            <tr>
+              <td class="query">Leads / month</td>
+              <td class="num">5–8</td>
+              <td class="num">12–18</td>
+              <td class="num">22–32</td>
+            </tr>
+            <tr>
+              <td class="query">Closed jobs / year</td>
+              <td class="num">7–11</td>
+              <td class="num">16–24</td>
+              <td class="num">28–40</td>
+            </tr>
+            <tr>
+              <td class="query">Conservative revenue / year</td>
+              <td class="num">$100k–$155k</td>
+              <td class="num">$225k–$335k</td>
+              <td class="num">$390k–$560k</td>
+            </tr>
+            <tr>
+              <td class="query">Media-to-revenue (conservative)</td>
+              <td class="num">4–6.5×</td>
+              <td class="num">3.8–5.6×</td>
+              <td class="num">3.3–4.7×</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="geos">
+      <p class="section-kicker">Where to spend</p>
+      <h2 class="section-title">Houston suburbs. Not the whole map.</h2>
+      <p class="section-lead">
+        Presence targeting (people in or regularly in), not “interested in Houston.” Each ad group sends traffic to the matching residential city page already live. Expand the ring only after the closer-in zips convert.
+      </p>
+
+      <div class="story-grid">
+        <article class="story">
+          <h3>North ring — start here</h3>
+          <p>
+            Tomball HQ plus The Woodlands, Cypress, Spring, Humble, Atascocita, and Conroe. This is the $2k map. Shortest drive, strongest Google listing, best close rate. 15–20 mile radius from 22955 TX-249.
+          </p>
+        </article>
+        <article class="story">
+          <h3>West — add at $5k</h3>
+          <p>
+            Katy, Fulshear, Richmond, Rosenberg, Sugar Land, Missouri City. Same residential landings, own ad groups, own budgets. Do not mix west keywords into the north campaign.
+          </p>
+        </article>
+        <article class="story">
+          <h3>South / east — add at $10k</h3>
+          <p>
+            Pearland, League City, Friendswood, Pasadena, Baytown, Dickinson. Last ring to turn on. If the $10k budget has to flex, this ring is the first cut — not Tomball search.
+          </p>
+        </article>
+      </div>
+
+      <div class="compare-grid">
+        <div class="compare-cell">
+          <div class="k">$2k geo</div>
+          <div class="v">North</div>
+          <div class="d">Tomball · Woodlands · Cypress · Spring · Humble</div>
+        </div>
+        <div class="compare-cell">
+          <div class="k">$5k geo</div>
+          <div class="v">N + W</div>
+          <div class="d">Adds Katy · Fulshear · Sugar Land · Richmond</div>
+        </div>
+        <div class="compare-cell">
+          <div class="k">$10k geo</div>
+          <div class="v">Full ring</div>
+          <div class="d">Adds Pearland · League City · Pasadena · Baytown</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="campaign">
+      <p class="section-kicker">Account build</p>
+      <h2 class="section-title">The campaign we would actually run</h2>
+      <p class="section-lead">
+        One Google Ads account, residential only. Brand protected. Suburb search funded. Remarketing catching the researchers. The 23 Houston residential landings you already own. No Performance Max until forms and calls are tracking.
+      </p>
+
+      <div class="split">
+        <div class="panel">
+          <h3>Campaign architecture</h3>
+          <p class="panel-sub">Keep suburb rings and intent in separate campaigns so bids cannot leak</p>
+          <table class="data">
+            <thead>
+              <tr>
+                <th>Campaign</th>
+                <th>Role</th>
+                <th class="num">Share</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="query">Search — Brand</td>
+                <td>Core Four Roofing, misspellings. Cheap, defensive.</td>
+                <td class="num">5–8%</td>
+              </tr>
+              <tr>
+                <td class="query">Search — North suburbs</td>
+                <td>Replacement + repair in Tomball, Woodlands, Cypress, Spring, Humble, Conroe.</td>
+                <td class="num">Core</td>
+              </tr>
+              <tr>
+                <td class="query">Search — Storm / hail / leak</td>
+                <td>Emergency and insurance-intent in the same zips. Higher CPC, faster close.</td>
+                <td class="num">Inside core</td>
+              </tr>
+              <tr>
+                <td class="query">Search — West / south rings</td>
+                <td>Same themes, own budgets. Off until the $5k / $10k tier.</td>
+                <td class="num">Staged</td>
+              </tr>
+              <tr>
+                <td class="query">Local Services Ads</td>
+                <td>Strong for residential roofing in TX. Pay per lead, Google Guaranteed badge.</td>
+                <td class="num">Additive</td>
+              </tr>
+              <tr>
+                <td class="query">Remarketing — Display / YouTube</td>
+                <td>30–90 day residential-page visitors. Estimate CTA.</td>
+                <td class="num">10%</td>
+              </tr>
+              <tr>
+                <td class="query">Meta suburb geo</td>
+                <td>$5k+ only. Remarketing plus homeowner zip targeting.</td>
+                <td class="num">15–20%</td>
+              </tr>
+              <tr>
+                <td class="query">CTV / connected devices</td>
+                <td>$10k only. Suburb zips. Brand + phone. No last-click credit in the model.</td>
+                <td class="num">10%</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="panel">
+          <h3>Keyword themes — suburbs</h3>
+          <p class="panel-sub">Phrase and exact. Tight match. No broad until 50+ conversions.</p>
+          <div class="metric-list">
+            <div class="metric-row">
+              <span class="label">roof replacement + city (Katy, Cypress…)</span>
+              <span class="value">High</span>
+            </div>
+            <div class="metric-row">
+              <span class="label">roof repair / leak / emergency + city</span>
+              <span class="value">High</span>
+            </div>
+            <div class="metric-row">
+              <span class="label">roofers near me · roofing contractor Tomball</span>
+              <span class="value">High</span>
+            </div>
+            <div class="metric-row">
+              <span class="label">hail · storm · insurance roof</span>
+              <span class="value">High</span>
+            </div>
+            <div class="metric-row">
+              <span class="label">composition shingle · metal roof residential</span>
+              <span class="value">Med</span>
+            </div>
+            <div class="metric-row">
+              <span class="label">core four roofing</span>
+              <span class="value">Brand</span>
+            </div>
+          </div>
+          <p class="note" style="margin-top:1rem;">
+            Negatives from day one: commercial, TPO, EPDM, warehouse, property manager, DIY, jobs, salary, apprentice, free, cheap, metal building kits, Austin, Dallas, and every city Core Four does not serve.
+          </p>
+        </div>
+      </div>
+
+      <div class="story-grid" style="margin-top:1.25rem;">
+        <article class="story">
+          <h3>Ads and extensions</h3>
+          <p>
+            RSA headlines that name the suburb (Cypress, The Woodlands, Katy), the job (replacement, leak, hail), and Tomball HQ. Call extension (281) 541-0027. Location, sitelinks to residential city pages, callouts for licensed, insured, local crews. Bid +20% evenings and weekends when homeowners actually search.
+          </p>
+        </article>
+        <article class="story">
+          <h3>Landings already built</h3>
+          <p>
+            Do not send paid traffic to the homepage. Each ad group points at the matching residential city URL — the 23 Houston-metro pages already in Google. Form + click-to-call above the fold. “Free estimate” language is fine here. Keep commercial URLs out of this account.
+          </p>
+        </article>
+        <article class="story">
+          <h3>Tracking before spend</h3>
+          <p>
+            GA4 key events are still at zero on the performance report. Wire form submits, call clicks, and call-tracking numbers, then import offline closes when a job is sold. Without that, we cannot steer budget toward the suburbs that actually become roofs.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section id="launch">
+      <p class="section-kicker">First 90 days</p>
+      <h2 class="section-title">How we would turn this on</h2>
+      <p class="section-lead">
+        Start with the north ring even if the long-term budget is $10k. Prove CPL in Tomball / The Woodlands / Cypress / Spring, then add west, then south. Expanding the map before follow-up is tight is how residential budgets disappear.
+      </p>
+
+      <div class="steps">
+        <article class="step">
+          <div class="step-num">1</div>
+          <div>
+            <h3>Days 1–14 — plumbing</h3>
+            <p>Conversion tracking, call tracking, negatives for commercial and out-of-area terms, brand campaign, north-suburb search, RSA copy, residential city-page destinations, lead routing to (281) 541-0027 with a same-day callback rule. Start Local Services Ads if Google approves roofing.</p>
+          </div>
+        </article>
+        <article class="step">
+          <div class="step-num">2</div>
+          <div>
+            <h3>Days 15–45 — north ring search only</h3>
+            <p>Run 85–90% of budget here. Expect CPL ~25% worse than the model. Cut waste search terms weekly. Turn on Google remarketing once 100+ site visitors exist. No Katy, Pearland, social prospecting, or CTV yet.</p>
+          </div>
+        </article>
+        <article class="step">
+          <div class="step-num">3</div>
+          <div>
+            <h3>Days 46–75 — add west + Meta</h3>
+            <p>If north-ring CPL is in range, add Katy / Fulshear / Sugar Land and Meta at the $5k mix. Import sold jobs as offline conversions. Keep Austin and Dallas off.</p>
+          </div>
+        </article>
+        <article class="step">
+          <div class="step-num">4</div>
+          <div>
+            <h3>Days 76–90 — scale or hold</h3>
+            <p>If leads are being worked and CPL is under ~$450, step toward $10k: south/east suburbs + CTV. If follow-up is slow or CPL is above $550, stay at $5k north + west — more budget will not fix a leaky sales process.</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="callout">
+        <strong>Best campaign in one line:</strong>
+        $5,000/month, 70% Google Search in the Houston suburbs (north ring plus Katy / Sugar Land) to the residential city pages, 10% Google remarketing, 20% Meta in those zips, Austin and Dallas off, CTV off until the $10k tier — with conversion tracking live before the first dollar spends.
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div>Core Four Roofing · Confidential residential ads plan · Prepared Aug 24, 2026</div>
+    <div>Modeled outcomes · not historical ROAS · Sources: Houston residential PPC benchmarks · suburb city landings · GA4 / GSC / GBP context</div>
+  </footer>
+
+  <script>
+    const brand = "#144b24";
+    const brandMid = "#269a47";
+    const lime = "#bfe866";
+    const muted = "#8a9a7a";
+
+    Chart.defaults.font.family = '"Reddit Sans", sans-serif';
+    Chart.defaults.color = "#45664f";
+
+    new Chart(document.getElementById("mixChart"), {
+      type: "bar",
+      data: {
+        labels: ["$2k / mo", "$5k / mo", "$10k / mo"],
+        datasets: [
+          { label: "Google Search", data: [90, 70, 65], backgroundColor: brand, borderWidth: 0, stack: "mix" },
+          { label: "Remarketing / YouTube", data: [10, 10, 10], backgroundColor: brandMid, borderWidth: 0, stack: "mix" },
+          { label: "Meta social", data: [0, 20, 15], backgroundColor: lime, borderWidth: 0, stack: "mix" },
+          { label: "Connected TV", data: [0, 0, 10], backgroundColor: muted, borderWidth: 0, stack: "mix" }
+        ]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: { position: "bottom", labels: { boxWidth: 12, usePointStyle: true, padding: 16 } },
+          tooltip: {
+            callbacks: {
+              label: (ctx) => ` ${ctx.dataset.label}: ${ctx.parsed.y}%`
+            }
+          }
+        },
+        scales: {
+          x: { stacked: true, grid: { display: false } },
+          y: {
+            stacked: true,
+            max: 100,
+            ticks: { callback: (v) => v + "%" },
+            title: { display: true, text: "Share of media", color: "#45664f", font: { size: 11, weight: "600" } },
+            grid: { color: "rgba(213,219,225,0.7)" }
+          }
+        }
+      }
+    });
+
+    new Chart(document.getElementById("outcomeChart"), {
+      type: "bar",
+      data: {
+        labels: ["$2k / mo", "$5k / mo", "$10k / mo"],
+        datasets: [
+          {
+            label: "Leads / year (mid)",
+            data: [78, 180, 324],
+            backgroundColor: brandMid,
+            borderRadius: 4
+          },
+          {
+            label: "Closed jobs / year (mid)",
+            data: [9, 20, 34],
+            backgroundColor: brand,
+            borderRadius: 4
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: { position: "bottom", labels: { boxWidth: 12, usePointStyle: true, padding: 16 } }
+        },
+        scales: {
+          x: { grid: { display: false } },
+          y: {
+            title: { display: true, text: "Count / year", color: "#45664f", font: { size: 11, weight: "600" } },
+            grid: { color: "rgba(213,219,225,0.7)" }
+          }
+        }
+      }
+    });
+
+    const sections = [...document.querySelectorAll("main section")];
+    const links = [...document.querySelectorAll(".nav-links a")];
+    const spy = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        links.forEach((l) => l.classList.toggle("active", l.getAttribute("href") === `#${entry.target.id}`));
+      });
+    }, { rootMargin: "-40% 0px -50% 0px", threshold: 0 });
+    sections.forEach((s) => spy.observe(s));
+  </script>
+</body>
+</html>

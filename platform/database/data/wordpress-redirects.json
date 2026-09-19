@@ -1,0 +1,28 @@
+{
+  "same_path": [
+    "/",
+    "/residential-roofing/",
+    "/commercial-roofing/",
+    "/insurance-claims/",
+    "/contact-core-four-roofing/",
+    "/about/",
+    "/service-areas/",
+    "/emergency-roofing/",
+    "/asphalt-shingles/",
+    "/metal-roofing/",
+    "/stone-coated-steel/",
+    "/synthetic-roofing/",
+    "/tpo-roofing/",
+    "/epdm-roofing/",
+    "/modified-bitumen/",
+    "/built-up-roofing/"
+  ],
+  "permanent_redirects": {
+    "/home/": "/",
+    "/about-us/": "/about/",
+    "/about-core-four-roofing/": "/about/",
+    "/areas-we-serve/": "/service-areas/",
+    "/emergency-roof-repair/": "/emergency-roofing/"
+  },
+  "notes": "All 71+ city landings in landing-pages.json keep their WordPress slugs."
+}

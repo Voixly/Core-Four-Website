@@ -1,0 +1,93 @@
+# ----------------------------------------
+# Reports snapshot
+# Account: Dock Line 3.0
+# Property: corefourroofing.com
+# ----------------------------------------
+#  
+# Start date: 20260723
+# End date: 20260816
+Active users,New users,Average engagement time per active user,Sessions
+335,325,17.93134328358209,376
+
+#  
+# Start date: 20260723
+# End date: 20260816
+Session source / medium,Sessions,Key events,Total revenue
+(direct) / (none),263,0,0
+google / organic,71,0,0
+bing / organic,6,0,0
+facebook.com / referral,6,0,0
+search.google.com / referral,4,0,0
+claude.ai / ai-assistant,2,0,0
+considerin.net / referral,2,0,0
+l.facebook.com / referral,2,0,0
+m.facebook.com / referral,2,0,0
+readlife.net / referral,2,0,0
+texaslodging.com / referral,2,0,0
+app.centerpointconnect.com / referral,1,0,0
+connect.dodgepipeline.com / referral,1,0,0
+fresheye.com / referral,1,0,0
+homeservicebase.com / referral,1,0,0
+linkedin.com / referral,1,0,0
+lm.facebook.com / referral,1,0,0
+mamma.com / referral,1,0,0
+naver.com / referral,1,0,0
+qwant.com / organic,1,0,0
+technorati.com / referral,1,0,0
+topsy.com / referral,1,0,0
+
+#  
+# Start date: 20260723
+# End date: 20260816
+First user source / medium,Active users
+(direct) / (none),262
+google / organic,47
+facebook.com / referral,6
+bing / organic,2
+considerin.net / referral,2
+m.facebook.com / referral,2
+readlife.net / referral,2
+claude.ai / ai-assistant,1
+connect.dodgepipeline.com / referral,1
+fresheye.com / referral,1
+homeservicebase.com / referral,1
+l.facebook.com / referral,1
+linkedin.com / referral,1
+mamma.com / referral,1
+naver.com / referral,1
+qwant.com / organic,1
+technorati.com / referral,1
+texaslodging.com / referral,1
+topsy.com / referral,1
+
+#  
+# Start date: 20260723
+# End date: 20260816
+Session source / medium,Sessions
+(direct) / (none),263
+google / organic,71
+bing / organic,6
+facebook.com / referral,6
+search.google.com / referral,4
+claude.ai / ai-assistant,2
+considerin.net / referral,2
+l.facebook.com / referral,2
+m.facebook.com / referral,2
+readlife.net / referral,2
+texaslodging.com / referral,2
+app.centerpointconnect.com / referral,1
+connect.dodgepipeline.com / referral,1
+fresheye.com / referral,1
+homeservicebase.com / referral,1
+linkedin.com / referral,1
+lm.facebook.com / referral,1
+mamma.com / referral,1
+naver.com / referral,1
+qwant.com / organic,1
+technorati.com / referral,1
+topsy.com / referral,1
+
+#  
+# Start date: 20260723
+# End date: 20260816
+Session Google Ads campaign,Sessions

@@ -1,0 +1,2256 @@
+{
+ "url": "https://corefourroofing.com/",
+ "title": "Core Four Roofing - Core Four Roofing",
+ "description": "",
+ "h1": "Protect Your Business, Secure Your Home",
+ "sections": [
+  {
+   "overlay": {
+    "gradient": "linear-gradient(230deg, rgba(41, 41, 41, 0) 0%, rgba(13, 13, 13, 0.78) 92%)",
+    "bg": null,
+    "opacity": "1"
+   },
+   "id": "mcb-section-rrm0gl7oe",
+   "classes": [
+    "section",
+    "mcb-section",
+    "mfn-default-section",
+    "full-width"
+   ],
+   "bg": null,
+   "bgImage": "/images/live/3b6394f3-0ca6-42d0-af68-1cba641b3cd4-compressed-scaled.webp",
+   "bgSize": "cover",
+   "bgPos": "50% 50%",
+   "padding": [
+    230,
+    86,
+    116,
+    86
+   ],
+   "h": 882,
+   "y": 0,
+   "wrapperWidth": 1267,
+   "wraps": [
+    {
+     "kind": "wrap",
+     "width": "one-second",
+     "box": {
+      "w": 634,
+      "h": 536,
+      "y": 230
+     },
+     "valign": "center",
+     "classes": [
+      "wrap",
+      "tablet-three-fifth",
+      "mobile-one",
+      "vb-item",
+      "clearfix"
+     ],
+     "columns": [
+      {
+       "kind": "column",
+       "width": "one",
+       "box": {
+        "w": 610,
+        "h": 38,
+        "y": 230
+       },
+       "span": 12,
+       "item": {
+        "type": "elfsight",
+        "widget": "267ccdad-1b32-4c62-9394-105914e96f0f",
+        "box": {
+         "w": 610,
+         "h": 38,
+         "y": 230
+        }
+       },
+       "classes": [
+        "column",
+        "one",
+        "laptop-one",
+        "tablet-one",
+        "mobile-one",
+        "column_column",
+        "vb-item"
+       ]
+      },
+      {
+       "kind": "column",
+       "width": "one",
+       "box": {
+        "w": 610,
+        "h": 209,
+        "y": 308
+       },
+       "span": 12,
+       "item": {
+        "type": "heading",
+        "align": "start",
+        "light": false,
+        "box": {
+         "w": 634,
+         "h": 249,
+         "y": 308
+        },
+        "level": 1,
+        "html": "Protect Your Business, Secure Your Home",
+        "text": "Protect Your Business, Secure Your Home",
+        "size": 67,
+        "weight": "700",
+        "color": "oklch(1 0 none)",
+        "lh": "80.807px",
+        "family": "industry",
+        "transform": "none",
+        "spacing": "0.8px"
+       },
+       "classes": [
+        "column",
+        "one",
+        "laptop-one",
+        "tablet-one",
+        "mobile-one",
+        "column_heading",
+        "vb-item"
+       ]
+      },
+      {
+       "kind": "column",
+       "width": "three-fourth",
+       "box": {
+        "w": 451,
+        "h": 92,
+        "y": 557
+       },
+       "span": 9,
+       "item": {
+        "type": "text",
+        "align": "start",
+        "light": false,
+        "box": {
+         "w": 451,
+         "h": 92,
+         "y": 557
+        },
+        "html": "<p>Core Four Roofing provides premium commercial and residential roofing across Texas. Providing integrity, efficiency, quality, and affordability.</p>",
+        "text": "Core Four Roofing provides premium commercial and residential roofing across Texas. Providing integrity, efficiency, quality, and affordability."
+       },
+       "classes": [
+        "column",
+        "mobile-one",
+        "column_column",
+        "vb-item"
+       ]
+      },
+      {
+       "kind": "column",
+       "width": "one",
+       "box": {
+        "w": 610,
+        "h": 60,
+        "y": 666
+       },
+       "span": 12,
+       "item": {
+        "type": "button",
+        "align": "start",
+        "light": false,
+        "box": {
+         "w": 634,
+         "h": 100,
+         "y": 666
+        },
+        "text": "Call Us Today",
+        "href": "tel:2815410027",
+        "icon": "fas fa-arrow-right",
+        "bg": "oklch(0.7055 0.1785 140.66)",
+        "color": "oklch(0.2496 0.031 155.1)",
+        "size": 16,
+        "weight": "600",
+        "radius": 50,
+        "padding": [
+         20,
+         32,
+         20,
+         32
+        ]
+       },
+       "classes": [
+        "column",
+        "one",
+        "laptop-one",
+        "tablet-one",
+        "mobile-one",
+        "column_button",
+        "vb-item"
+       ]
+      }
+     ],
+     "span": 6
+    },
+    {
+     "kind": "wrap",
+     "width": "two-fifth",
+     "box": {
+      "bg": "rgba(255, 255, 255, 0.45)",
+      "radius": 32,
+      "padding": [
+       16,
+       16,
+       16,
+       16
+      ],
+      "w": 422,
+      "h": 254,
+      "y": 371
+     },
+     "valign": "flex-start",
+     "classes": [
+      "wrap",
+      "two-fifth",
+      "tablet-two-fifth",
+      "laptop-one-third",
+      "mobile-one",
+      "vb-item",
+      "clearfix"
+     ],
+     "columns": [
+      {
+       "kind": "column",
+       "width": "one",
+       "box": {
+        "bg": "rgb(255, 255, 255)",
+        "radius": 16,
+        "padding": [
+         20,
+         40,
+         10,
+         40
+        ],
+        "w": 261,
+        "h": 115,
+        "y": 320
+       },
+       "span": 8,
+       "item": {
+        "type": "text",
+        "align": "start",
+        "light": false,
+        "box": {
+         "w": 177,
+         "h": 81,
+         "y": 342
+        },
+        "html": "<h5>Warranty</h5><p>Lifetime Workmanship</p>",
+        "text": "Warranty\n\nLifetime Workmanship"
+       },
+       "classes": [
+        "column",
+        "one",
+        "laptop-one",
+        "tablet-one",
+        "mobile-one",
+        "column_column",
+        "vb-item"
+       ]
+      },
+      {
+       "kind": "column",
+       "width": "one",
+       "box": {
+        "radius": 24,
+        "w": 390,
+        "h": 222,
+        "y": 387
+       },
+       "span": 12,
+       "item": {
+        "type": "before_after",
+        "align": "start",
+        "light": false,
+        "box": {
+         "w": 390,
+         "h": 222,
+         "y": 387
+        },
+        "before": {
+         "src": "/images/live/core-four-TPO-roof-before.webp",
+         "alt": "",
+         "w": 1439,
+         "h": 809,
+         "dw": 384,
+         "dh": 216
+        },
+        "after": {
+         "src": "/images/live/core-four-TPO-roof-after.webp",
+         "alt": "",
+         "w": 1439,
+         "h": 809,
+         "dw": 384,
+         "dh": 216
+        }
+       },
+       "classes": [
+        "column",
+        "one",
+        "laptop-one",
+        "tablet-one",
+        "mobile-one",
+        "column_before_after",
+        "vb-item"
+       ]
+      },
+      {
+       "kind": "column",
+       "width": "one",
+       "box": {
+        "bg": "rgb(255, 255, 255)",
+        "radius": 16,
+        "padding": [
+         20,
+         40,
+         10,
+         40
+        ],
+        "w": 199,
+        "h": 115,
+        "y": 561
+       },
+       "span": 6,
+       "item": {
+        "type": "text",
+        "align": "start",
+        "light": false,
+        "box": {
+         "w": 115,
+         "h": 81,
+         "y": 583
+        },
+        "html": "<h5>Accredited</h5><p>BBB A+ Rating</p>",
+        "text": "Accredited\n\nBBB A+ Rating"
+       },
+       "classes": [
+        "column",
+        "one",
+        "laptop-one",
+        "tablet-one",
+        "mobile-one",
+        "column_column",
+        "vb-item"
+       ]
+      }
+     ],
+     "span": 4
+    }
+   ]
+  },
+  {
+   "overlay": null,
+   "id": "mcb-section-x2ydcsi3",
+   "classes": [
+    "section",
+    "mcb-section",
+    "mfn-default-section",
+    "full-width"
+   ],
+   "bg": null,
+   "bgImage": null,
+   "bgSize": null,
+   "bgPos": null,
+   "padding": [
+    64,
+    0,
+    64,
+    0
+   ],
+   "h": 585,
+   "y": 882,
+   "wrapperWidth": 1440,
+   "wraps": [
+    {
+     "kind": "wrap",
+     "width": "one",
+     "box": {
+      "w": 1440,
+      "h": 456,
+      "y": 946
+     },
+     "valign": "center",
+     "classes": [
+      "wrap",
+      "one",
+      "tablet-one",
+      "laptop-one",
+      "mobile-one",
+      "vb-item",
+      "clearfix"
+     ],
+     "columns": [
+      {
+       "kind": "column",
+       "width": "one",
+       "box": {
+        "w": 1416,
+        "h": 60,
+        "y": 946
+       },
+       "span": 12,
+       "item": {
+        "type": "text",
+        "align": "start",
+        "light": false,
+        "box": {
+         "w": 1416,
+         "h": 60,
+         "y": 946
+        },
+        "html": "<h2>Reliable Commercial &amp; Residential Roof Repair, Replacement &amp; Maintenance</h2>",
+        "text": "Reliable Commercial & Residential Roof Repair, Replacement & Maintenance"
+       },
+       "classes": [
+        "column",
+        "one",
+        "laptop-one",
+        "tablet-one",
+        "mobile-one",
+        "column_column",
+        "vb-item"
+       ]
+      },
+      {
+       "kind": "column",
+       "width": "one",
+       "box": {
+        "w": 1440,
+        "h": 355,
+        "y": 1046
+       },
+       "span": 12,
+       "item": {
+        "type": "text",
+        "align": "start",
+        "light": false,
+        "box": {
+         "w": 1440,
+         "h": 355,
+         "y": 1046
+        },
+        "html": "<!-- ══════════════════════════════ SECTION 1 — ROOFING PARTNERS ══════════════════════════════ --><span>Certified</span><span>Roofing Partners</span><!-- Original set --><!-- Duplicate set for seamless loop --><!-- ══════════════════════════════ SECTION 2 — ASSOCIATE MEMBERS ══════════════════════════════ --><span>Members</span><span>Associate Memberships &amp; Awards</span><!-- Original set --><!-- Duplicate set for seamless loop --><!-- END Core Four Logo Scrollers -->",
+        "text": "CERTIFIED\nRoofing Partners\nMEMBERS\nAssociate Memberships & Awards"
+       },
+       "classes": [
+        "column",
+        "one",
+        "laptop-one",
+        "tablet-one",
+        "mobile-one",
+        "column_column",
+        "vb-item"
+       ]
+      }
+     ],
+     "span": 12
+    }
+   ]
+  },
+  {
+   "overlay": null,
+   "id": "mcb-section-6wd3m9oz4",
+   "classes": [
+    "section",
+    "mcb-section",
+    "mfn-global-section",
+    "mfn-default-section"
+   ],
+   "bg": null,
+   "bgImage": null,
+   "bgSize": null,
+   "bgPos": null,
+   "padding": [
+    96,
+    0,
+    96,
+    0
+   ],
+   "h": 1581,
+   "y": 1466,
+   "wrapperWidth": 1200,
+   "wraps": [
+    {
+     "kind": "wrap",
+     "width": "one",
+     "box": {
+      "padding": [
+       0,
+       0,
+       24,
+       0
+      ],
+      "w": 1200,
+      "h": 200,
+      "y": 1562
+     },
+     "valign": "flex-start",
+     "classes": [
+      "wrap",
+      "one",
+      "tablet-one",
+      "laptop-one",
+      "mobile-one",
+      "vb-item",
+      "clearfix"
+     ],
+     "columns": [
+      {
+       "kind": "column",
+       "width": "one",
+       "box": {
+        "w": 1176,
+        "h": 35,
+        "y": 1562
+       },
+       "span": 12,
+       "item": {
+        "type": "heading",
+        "align": "start",
+        "light": false,
+        "box": {
+         "w": 1200,
+         "h": 75,
+         "y": 1562
+        },
+        "level": 2,
+        "html": "Roofing Solutions that work for your bottom line",
+        "text": "Roofing Solutions that work for your bottom line",
+        "size": 51,
+        "weight": "700",
+        "color": "oklch(0.4122 0.0832 141.53)",
+        "lh": "60.6202px",
+        "family": "industry",
+        "transform": "none",
+        "spacing": "0.8px"
+       },
+       "classes": [
+        "column",
+        "one",
+        "laptop-one",
+        "tablet-one",
+        "mobile-one",
+        "column_heading",
+        "vb-item"
+       ]
+      },
+      {
+       "kind": "column",
+       "width": "one",
+       "box": {
+        "w": 1176,
+        "h": 60,
+        "y": 1638
+       },
+       "span": 12,
+       "item": {
+        "type": "button",
+        "align": "start",
+        "light": false,
+        "box": {
+         "w": 1200,
+         "h": 100,
+         "y": 1638
+        },
+        "text": "Explore Our Services",
+        "href": "https://corefourroofing.com/contact-core-four-roofing/",
+        "icon": "fas fa-arrow-right",
+        "bg": "oklch(0.7055 0.1785 140.66)",
+        "color": "oklch(0.2496 0.031 155.1)",
+        "size": 16,
+        "weight": "600",
+        "radius": 50,
+        "padding": [
+         20,
+         32,
+         20,
+         32
+        ]
+       },
+       "classes": [
+        "column",
+        "one",
+        "laptop-one",
+        "tablet-one",
+        "mobile-one",
+        "column_button",
+        "vb-item"
+       ]
+      }
+     ],
+     "span": 12
+    },
+    {
+     "kind": "wrap",
+     "width": "one-second",
+     "box": {
+      "w": 584,
+      "h": 981,
+      "y": 1762
+     },
+     "valign": "flex-start",
+     "classes": [
+      "wrap",
+      "tablet-one",
+      "mobile-one",
+      "vb-item",
+      "clearfix"
+     ],
+     "columns": [
+      {
+       "kind": "column",
+       "width": "one",
+       "box": {
+        "radius": 24,
+        "w": 584,
+        "h": 329,
+        "y": 2375
+       },
+       "span": 12,
+       "item": {
+        "type": "before_after",
+        "align": "start",
+        "light": false,
+        "box": {
+         "w": 584,
+         "h": 409,
+         "y": 2335
+        },
+        "before": {
+         "src": "/images/live/Decra-12-scaled.jpg",
+         "alt": "",
+         "w": 584,
+         "h": 328,
+         "dw": 584,
+         "dh": 329
+        },
+        "after": {
+         "src": "/images/live/Decra-11-scaled.jpg",
+         "alt": "",
+         "w": 584,
+         "h": 328,
+         "dw": 584,
+         "dh": 329
+        }
+       },
+       "classes": [
+        "column",
+        "one",
+        "laptop-one",
+        "tablet-one",
+        "mobile-one",
+        "column_before_after",
+        "animate",
+        "vb-item",
+        "fadeInUp"
+       ]
+      }
+     ],
+     "span": 6,
+     "wraps": [
+      {
+       "kind": "wrap",
+       "width": "one",
+       "box": {
+        "bg": "oklch(0.6099 0.1588 148.77)",
+        "radius": 32,
+        "w": 584,
+        "h": 573,
+        "y": 1762
+       },
+       "valign": "center",
+       "classes": [
+        "wrap",
+        "one",
+        "tablet-one",
+        "laptop-one",
+        "mobile-one",
+        "animate",
+        "mfn-nested-wrap",
+        "vb-item",
+        "clearfix",
+        "fadeInUp"
+       ],
+       "columns": [
+        {
+         "kind": "column",
+         "width": "one",
+         "box": {
+          "bg": "rgb(255, 255, 255)",
+          "radius": 50,
+          "padding": [
+           8,
+           20,
+           8,
+           20
+          ],
+          "w": 130,
+          "h": 26,
+          "y": 1810
+         },
+         "span": 3,
+         "item": {
+          "type": "text",
+          "html": "<span>Commercial</span>",
+          "text": "Commercial",
+          "box": {
+           "bg": "rgb(255, 255, 255)",
+           "radius": 50,
+           "padding": [
+            8,
+            20,
+            8,
+            20
+           ],
+           "w": 130,
+           "h": 26,
+           "y": 1810
+          },
+          "raw": true,
+          "size": 16,
+          "color": "rgb(69, 102, 79)"
+         },
+         "classes": [
+          "column",
+          "one",
+          "laptop-one",
+          "tablet-one",
+          "mobile-one",
+          "column_heading",
+          "trim-both",
+          "vb-item"
+         ]
+        },
+        {
+         "kind": "column",
+         "width": "one",
+         "box": {
+          "padding": [
+           0,
+           30,
+           0,
+           30
+          ],
+          "w": 560,
+          "h": 27,
+          "y": 1852
+         },
+         "span": 12,
+         "item": {
+          "type": "heading",
+          "align": "start",
+          "light": true,
+          "box": {
+           "w": 584,
+           "h": 43,
+           "y": 1852
+          },
+          "level": 3,
+          "html": "Protecting Your Assets",
+          "text": "Protecting Your Assets",
+          "size": 38,
+          "weight": "700",
+          "color": "oklch(1 0 none)",
+          "lh": "45.4771px",
+          "family": "industry",
+          "transform": "none",
+          "spacing": "0.8px"
+         },
+         "classes": [
+          "column",
+          "one",
+          "laptop-one",
+          "tablet-one",
+          "mobile-one",
+          "column_heading",
+          "light-text",
+          "vb-item"
+         ]
+        },
+        {
+         "kind": "column",
+         "width": "one",
+         "box": {
+          "padding": [
+           0,
+           30,
+           0,
+           30
+          ],
+          "w": 560,
+          "h": 92,
+          "y": 1894
+         },
+         "span": 12,
+         "item": {
+          "type": "text",
+          "align": "start",
+          "light": true,
+          "box": {
+           "w": 500,
+           "h": 92,
+           "y": 1894
+          },
+          "html": "<p>From TPO to EPDM and Metal, we provide durable, energy-efficient commercial roofing systems designed to last decades.</p>",
+          "text": "From TPO to EPDM and Metal, we provide durable, energy-efficient commercial roofing systems designed to last decades."
+         },
+         "classes": [
+          "column",
+          "one",
+          "laptop-one",
+          "tablet-one",
+          "mobile-one",
+          "column_column",
+          "light-text",
+          "vb-item"
+         ]
+        },
+        {
+         "kind": "column",
+         "width": "one",
+         "box": {
+          "w": 584,
+          "h": 329,
+          "y": 2006
+         },
+         "span": 12,
+         "item": {
+          "type": "image",
+          "align": "start",
+          "light": false,
+          "box": {
+           "w": 584,
+           "h": 329,
+           "y": 2006
+          },
+          "img": {
+           "src": "/images/live/34-Nov-03-2025-23-46-22-PJJw-compressed.webp",
+           "alt": "",
+           "w": 1439,
+           "h": 809,
+           "dw": 585,
+           "dh": 329
+          },
+          "radius": 0
+         },
+         "classes": [
+          "column",
+          "one",
+          "laptop-one",
+          "tablet-one",
+          "mobile-one",
+          "column_image",
+          "vb-item"
+         ]
+        }
+       ],
+       "span": 12
+      }
+     ]
+    },
+    {
+     "kind": "wrap",
+     "width": "one-second",
+     "box": {
+      "w": 584,
+      "h": 1190,
+      "y": 1762
+     },
+     "valign": "flex-start",
+     "classes": [
+      "wrap",
+      "tablet-one",
+      "mobile-one",
+      "vb-item",
+      "clearfix"
+     ],
+     "columns": [],
+     "span": 6,
+     "wraps": [
+      {
+       "kind": "wrap",
+       "width": "one",
+       "box": {
+        "bg": "rgb(255, 255, 255)",
+        "radius": 32,
+        "padding": [
+         48,
+         30,
+         0,
+         30
+        ],
+        "w": 584,
+        "h": 534,
+        "y": 1762
+       },
+       "valign": "center",
+       "classes": [
+        "wrap",
+        "one",
+        "tablet-one",
+        "laptop-one",
+        "mobile-one",
+        "animate",
+        "mfn-nested-wrap",
+        "vb-item",
+        "clearfix",
+        "fadeInUp"
+       ],
+       "columns": [
+        {
+         "kind": "column",
+         "width": "one",
+         "box": {
+          "bg": "oklch(0.6099 0.1588 148.77)",
+          "radius": 50,
+          "padding": [
+           8,
+           20,
+           8,
+           20
+          ],
+          "w": 121,
+          "h": 26,
+          "y": 1810
+         },
+         "span": 3,
+         "item": {
+          "type": "text",
+          "html": "<span>Residential</span>",
+          "text": "Residential",
+          "box": {
+           "bg": "oklch(0.6099 0.1588 148.77)",
+           "radius": 50,
+           "padding": [
+            8,
+            20,
+            8,
+            20
+           ],
+           "w": 121,
+           "h": 26,
+           "y": 1810
+          },
+          "raw": true,
+          "size": 16,
+          "color": "rgb(69, 102, 79)"
+         },
+         "classes": [
+          "column",
+          "one",
+          "laptop-one",
+          "tablet-one",
+          "mobile-one",
+          "column_heading",
+          "trim-both",
+          "vb-item"
+         ]
+        },
+        {
+         "kind": "column",
+         "width": "one",
+         "box": {
+          "w": 500,
+          "h": 27,
+          "y": 1852
+         },
+         "span": 12,
+         "item": {
+          "type": "heading",
+          "align": "start",
+          "light": false,
+          "box": {
+           "w": 524,
+           "h": 43,
+           "y": 1852
+          },
+          "level": 3,
+          "html": "We Know Texas Roofs",
+          "text": "We Know Texas Roofs",
+          "size": 38,
+          "weight": "700",
+          "color": "oklch(0.4122 0.0832 141.53)",
+          "lh": "45.4771px",
+          "family": "industry",
+          "transform": "none",
+          "spacing": "0.8px"
+         },
+         "classes": [
+          "column",
+          "one",
+          "laptop-one",
+          "tablet-one",
+          "mobile-one",
+          "column_heading",
+          "vb-item"
+         ]
+        },
+        {
+         "kind": "column",
+         "width": "one",
+         "box": {
+          "w": 500,
+          "h": 66,
+          "y": 1894
+         },
+         "span": 12,
+         "item": {
+          "type": "text",
+          "align": "start",
+          "light": false,
+          "box": {
+           "w": 500,
+           "h": 66,
+           "y": 1894
+          },
+          "html": "<p>Premium asphalt shingles and architectural metal roofs to boost curb appeal and weather protection.</p>",
+          "text": "Premium asphalt shingles and architectural metal roofs to boost curb appeal and weather protection."
+         },
+         "classes": [
+          "column",
+          "one",
+          "laptop-one",
+          "tablet-one",
+          "mobile-one",
+          "column_column",
+          "vb-item"
+         ]
+        },
+        {
+         "kind": "column",
+         "width": "one",
+         "box": {
+          "w": 524,
+          "h": 295,
+          "y": 2001
+         },
+         "span": 12,
+         "item": {
+          "type": "image",
+          "align": "start",
+          "light": false,
+          "box": {
+           "w": 524,
+           "h": 295,
+           "y": 2001
+          },
+          "img": {
+           "src": "/images/live/00924821-9fba-4891-9c3a-bf8071e88bf7-compressed-scaled.webp",
+           "alt": "Core Four Roofing",
+           "w": 2560,
+           "h": 1440,
+           "dw": 525,
+           "dh": 295
+          },
+          "radius": 32
+         },
+         "classes": [
+          "column",
+          "one",
+          "laptop-one",
+          "tablet-one",
+          "mobile-one",
+          "column_image",
+          "vb-item"
+         ]
+        }
+       ],
+       "span": 12
+      },
+      {
+       "kind": "wrap",
+       "width": "one",
+       "box": {
+        "bg": "oklch(0.2496 0.031 155.1)",
+        "radius": 32,
+        "padding": [
+         48,
+         30,
+         0,
+         30
+        ],
+        "w": 584,
+        "h": 290,
+        "y": 2320
+       },
+       "valign": "center",
+       "classes": [
+        "wrap",
+        "one",
+        "tablet-one",
+        "laptop-one",
+        "mobile-one",
+        "light-text",
+        "animate",
+        "mfn-nested-wrap",
+        "vb-item",
+        "clearfix",
+        "fadeInUp"
+       ],
+       "columns": [
+        {
+         "kind": "column",
+         "width": "one",
+         "box": {
+          "w": 500,
+          "h": 20,
+          "y": 2368
+         },
+         "span": 12,
+         "item": {
+          "type": "heading",
+          "align": "start",
+          "light": true,
+          "box": {
+           "w": 524,
+           "h": 36,
+           "y": 2368
+          },
+          "level": 4,
+          "html": "24/7 Emergency",
+          "text": "24/7 Emergency",
+          "size": 28,
+          "weight": "800",
+          "color": "oklch(1 0 none)",
+          "lh": "34.1165px",
+          "family": "industry",
+          "transform": "none",
+          "spacing": "0.8px"
+         },
+         "classes": [
+          "column",
+          "one",
+          "laptop-one",
+          "tablet-one",
+          "mobile-one",
+          "column_heading",
+          "light-text",
+          "vb-item"
+         ]
+        },
+        {
+         "kind": "column",
+         "width": "one",
+         "box": {
+          "w": 500,
+          "h": 66,
+          "y": 2403
+         },
+         "span": 12,
+         "item": {
+          "type": "text",
+          "align": "start",
+          "light": false,
+          "box": {
+           "w": 500,
+           "h": 66,
+           "y": 2403
+          },
+          "html": "<p>Storm damage? We offer rapid response roof tarping and full insurance claim advocacy. </p>",
+          "text": "Storm damage? We offer rapid response roof tarping and full insurance claim advocacy."
+         },
+         "classes": [
+          "column",
+          "one",
+          "laptop-one",
+          "tablet-one",
+          "mobile-one",
+          "column_column",
+          "vb-item"
+         ]
+        },
+        {
+         "kind": "column",
+         "width": "one",
+         "box": {
+          "w": 500,
+          "h": 60,
+          "y": 2510
+         },
+         "span": 12,
+         "item": {
+          "type": "button",
+          "align": "start",
+          "light": false,
+          "box": {
+           "w": 524,
+           "h": 100,
+           "y": 2510
+          },
+          "text": "Get Help Now",
+          "href": "https://corefourroofing.com/contact-core-four-roofing/",
+          "icon": "fas fa-arrow-right",
+          "bg": "oklch(0.7055 0.1785 140.66)",
+          "color": "oklch(0.2496 0.031 155.1)",
+          "size": 16,
+          "weight": "600",
+          "radius": 50,
+          "padding": [
+           20,
+           32,
+           20,
+           32
+          ]
+         },
+         "classes": [
+          "column",
+          "one",
+          "laptop-one",
+          "tablet-one",
+          "mobile-one",
+          "column_button",
+          "vb-item"
+         ]
+        }
+       ],
+       "span": 12
+      },
+      {
+       "kind": "wrap",
+       "width": "one",
+       "box": {
+        "bgImage": "/images/live/Core-Four-Best-of-Roofing-Award-HARCA.webp",
+        "radius": 32,
+        "padding": [
+         48,
+         30,
+         0,
+         30
+        ],
+        "w": 584,
+        "h": 318,
+        "y": 2634
+       },
+       "valign": "center",
+       "classes": [
+        "wrap",
+        "one",
+        "tablet-one",
+        "laptop-one",
+        "mobile-one",
+        "light-text",
+        "animate",
+        "mfn-nested-wrap",
+        "vb-item",
+        "clearfix",
+        "fadeInUp"
+       ],
+       "columns": [
+        {
+         "kind": "column",
+         "width": "one",
+         "box": {
+          "padding": [
+           200,
+           0,
+           0,
+           0
+          ],
+          "w": 500,
+          "h": 254,
+          "y": 2682
+         },
+         "span": 12,
+         "item": {
+          "type": "heading",
+          "align": "start",
+          "light": true,
+          "box": {
+           "w": 524,
+           "h": 270,
+           "y": 2682
+          },
+          "level": 4,
+          "html": "Recognized as one of the best in Houston, Texas",
+          "text": "Recognized as one of the best in Houston, Texas",
+          "size": 28,
+          "weight": "800",
+          "color": "oklch(1 0 none)",
+          "lh": "34.1165px",
+          "family": "industry",
+          "transform": "none",
+          "spacing": "0.8px"
+         },
+         "classes": [
+          "column",
+          "one",
+          "laptop-one",
+          "tablet-one",
+          "mobile-one",
+          "column_heading",
+          "light-text",
+          "vb-item"
+         ]
+        }
+       ],
+       "span": 12
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "overlay": null,
+   "id": "mcb-section-esdlrm2p",
+   "classes": [
+    "section",
+    "mcb-section",
+    "mfn-default-section",
+    "full-width"
+   ],
+   "bg": null,
+   "bgImage": null,
+   "bgSize": null,
+   "bgPos": null,
+   "padding": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "h": 704,
+   "y": 3048,
+   "wrapperWidth": 1440,
+   "wraps": [
+    {
+     "kind": "wrap",
+     "width": "one",
+     "box": {
+      "w": 1440,
+      "h": 700,
+      "y": 3050
+     },
+     "valign": "flex-start",
+     "classes": [
+      "wrap",
+      "one",
+      "tablet-one",
+      "laptop-one",
+      "mobile-one",
+      "vb-item",
+      "clearfix"
+     ],
+     "columns": [
+      {
+       "kind": "column",
+       "width": "one",
+       "box": {
+        "bg": "oklch(1 0 none)",
+        "radius": 24,
+        "padding": [
+         32,
+         32,
+         32,
+         32
+        ],
+        "w": 365,
+        "h": 390,
+        "y": 3070
+       },
+       "span": 3,
+       "item": {
+        "type": "text",
+        "align": "start",
+        "light": false,
+        "box": {
+         "w": 297,
+         "h": 322,
+         "y": 3104
+        },
+        "html": "<h4>Protecting Texas,<br>One Roof at a Time</h4><p>Core Four Roofing Service Coverage</p><ul><li><i></i><h6>Service Hubs</h6><p>Austin, Dallas, Houston</p></li><li><i></i><h6>Storm Response</h6><p>24/7 Emergency Tarping &amp; Repair</p></li><li><i></i><h6>Local Office</h6><p>(281) 541-0027</p></li></ul>",
+        "text": "Protecting Texas,\nOne Roof at a Time\n\nCore Four Roofing Service Coverage\n\nService Hubs\n\nAustin, Dallas, Houston\n\nStorm Response\n\n24/7 Emergency Tarping & Repair\n\nLocal Office\n\n(281) 541-0027"
+       },
+       "classes": [
+        "column",
+        "one",
+        "laptop-one",
+        "tablet-one",
+        "mobile-one",
+        "column_column",
+        "animate",
+        "vb-item",
+        "fadeInLeft"
+       ]
+      },
+      {
+       "kind": "column",
+       "width": "one",
+       "box": {
+        "w": 1440,
+        "h": 700,
+        "y": 3050
+       },
+       "span": 12,
+       "item": {
+        "type": "elfsight",
+        "widget": "058d3df7-5422-475a-ab17-f5e14c220034",
+        "box": {
+         "w": 1440,
+         "h": 700,
+         "y": 3050
+        }
+       },
+       "classes": [
+        "column",
+        "one",
+        "laptop-one",
+        "tablet-one",
+        "mobile-one",
+        "column_column",
+        "vb-item"
+       ]
+      }
+     ],
+     "span": 12
+    }
+   ]
+  },
+  {
+   "overlay": {
+    "gradient": "linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, oklch(0.6099 0.1588 148.77) 31%)",
+    "bg": null,
+    "opacity": "1"
+   },
+   "id": "mcb-section-iqnjgde7",
+   "classes": [
+    "section",
+    "mcb-section",
+    "mfn-global-section",
+    "mfn-default-section"
+   ],
+   "bg": "oklch(0.6099 0.1588 148.77)",
+   "bgImage": "/images/live/bottom-triangles-dark.svg",
+   "bgSize": "contain",
+   "bgPos": "50% 100%",
+   "padding": [
+    96,
+    0,
+    56,
+    0
+   ],
+   "h": 607,
+   "y": 3752,
+   "wrapperWidth": 1200,
+   "wraps": [
+    {
+     "kind": "wrap",
+     "width": "one",
+     "box": {
+      "w": 1200,
+      "h": 75,
+      "y": 3848
+     },
+     "valign": "flex-start",
+     "classes": [
+      "wrap",
+      "one",
+      "tablet-one",
+      "laptop-one",
+      "mobile-one",
+      "vb-item",
+      "clearfix"
+     ],
+     "columns": [
+      {
+       "kind": "column",
+       "width": "one",
+       "box": {
+        "w": 1176,
+        "h": 35,
+        "y": 3848
+       },
+       "span": 12,
+       "item": {
+        "type": "heading",
+        "align": "start",
+        "light": false,
+        "box": {
+         "w": 1200,
+         "h": 75,
+         "y": 3848
+        },
+        "level": 2,
+        "html": "A reliable new roof is just a few steps away",
+        "text": "A reliable new roof is just a few steps away",
+        "size": 51,
+        "weight": "700",
+        "color": "oklch(1 0 none)",
+        "lh": "60.6202px",
+        "family": "industry",
+        "transform": "none",
+        "spacing": "0.8px"
+       },
+       "classes": [
+        "column",
+        "one",
+        "laptop-one",
+        "tablet-one",
+        "mobile-one",
+        "column_heading",
+        "vb-item"
+       ]
+      }
+     ],
+     "span": 12
+    },
+    {
+     "kind": "wrap",
+     "width": "one",
+     "box": {
+      "w": 1200,
+      "h": 364,
+      "y": 3923
+     },
+     "valign": "center",
+     "classes": [
+      "wrap",
+      "one",
+      "tablet-one",
+      "laptop-one",
+      "mobile-one",
+      "vb-item",
+      "clearfix"
+     ],
+     "columns": [],
+     "span": 12,
+     "wraps": [
+      {
+       "kind": "wrap",
+       "width": "one",
+       "box": {
+        "w": 600,
+        "h": 328,
+        "y": 3941
+       },
+       "valign": "flex-start",
+       "classes": [
+        "wrap",
+        "one",
+        "tablet-one",
+        "laptop-one",
+        "mobile-one",
+        "mfn-nested-wrap",
+        "vb-item",
+        "clearfix"
+       ],
+       "columns": [
+        {
+         "kind": "column",
+         "width": "one",
+         "box": {
+          "w": 576,
+          "h": 175,
+          "y": 3953
+         },
+         "span": 12,
+         "item": {
+          "type": "faq",
+          "align": "start",
+          "light": false,
+          "box": {
+           "w": 600,
+           "h": 227,
+           "y": 3941
+          },
+          "items": []
+         },
+         "classes": [
+          "column",
+          "one",
+          "laptop-one",
+          "tablet-one",
+          "mobile-one",
+          "column_faq",
+          "vb-item"
+         ]
+        },
+        {
+         "kind": "column",
+         "width": "one",
+         "box": {
+          "w": 576,
+          "h": 60,
+          "y": 4169
+         },
+         "span": 12,
+         "item": {
+          "type": "button",
+          "align": "start",
+          "light": false,
+          "box": {
+           "w": 600,
+           "h": 100,
+           "y": 4169
+          },
+          "text": "Call for a Free Consultation",
+          "href": "tel:2815410027",
+          "icon": "fas fa-arrow-right",
+          "bg": "rgb(219, 221, 223)",
+          "color": "rgb(98, 98, 98)",
+          "size": 16,
+          "weight": "600",
+          "radius": 50,
+          "padding": [
+           20,
+           32,
+           20,
+           32
+          ]
+         },
+         "classes": [
+          "column",
+          "one",
+          "laptop-one",
+          "tablet-one",
+          "mobile-one",
+          "column_button",
+          "vb-item"
+         ]
+        }
+       ],
+       "span": 6
+      },
+      {
+       "kind": "wrap",
+       "width": "one",
+       "box": {
+        "w": 600,
+        "h": 364,
+        "y": 3923
+       },
+       "valign": "flex-start",
+       "classes": [
+        "wrap",
+        "one",
+        "tablet-one",
+        "laptop-one",
+        "mobile-one",
+        "mfn-nested-wrap",
+        "vb-item",
+        "clearfix"
+       ],
+       "columns": [
+        {
+         "kind": "column",
+         "width": "one",
+         "box": {
+          "radius": 24,
+          "w": 576,
+          "h": 324,
+          "y": 3923
+         },
+         "span": 12,
+         "item": {
+          "type": "before_after",
+          "align": "start",
+          "light": false,
+          "box": {
+           "w": 600,
+           "h": 364,
+           "y": 3923
+          },
+          "before": {
+           "src": "/images/live/ad6b4429-cef8-4e0d-8be5-97760a5f48ca-compressed-scaled.webp",
+           "alt": "",
+           "w": 576,
+           "h": 324,
+           "dw": 576,
+           "dh": 324
+          },
+          "after": {
+           "src": "/images/live/27d812ee-6a31-44e6-a9c3-76435c4aa8b5-compressed-scaled.webp",
+           "alt": "",
+           "w": 576,
+           "h": 324,
+           "dw": 576,
+           "dh": 324
+          }
+         },
+         "classes": [
+          "column",
+          "one",
+          "laptop-one",
+          "tablet-one",
+          "mobile-one",
+          "column_before_after",
+          "vb-item"
+         ]
+        }
+       ],
+       "span": 6
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "overlay": null,
+   "id": "mcb-section-31l5wowlf",
+   "classes": [
+    "section",
+    "mcb-section",
+    "mfn-global-section",
+    "mfn-default-section"
+   ],
+   "bg": null,
+   "bgImage": null,
+   "bgSize": null,
+   "bgPos": null,
+   "padding": [
+    96,
+    0,
+    86,
+    0
+   ],
+   "h": 606,
+   "y": 4359,
+   "wrapperWidth": 1200,
+   "wraps": [
+    {
+     "kind": "wrap",
+     "width": "one",
+     "box": {
+      "w": 1200,
+      "h": 78,
+      "y": 4455
+     },
+     "valign": "flex-start",
+     "classes": [
+      "wrap",
+      "one",
+      "tablet-one",
+      "laptop-one",
+      "mobile-one",
+      "vb-item",
+      "clearfix"
+     ],
+     "columns": [
+      {
+       "kind": "column",
+       "width": "one-third",
+       "box": {
+        "w": 201,
+        "h": 38,
+        "y": 4455
+       },
+       "span": 2,
+       "item": {
+        "type": "elfsight",
+        "widget": "267ccdad-1b32-4c62-9394-105914e96f0f",
+        "box": {
+         "w": 201,
+         "h": 38,
+         "y": 4455
+        }
+       },
+       "classes": [
+        "column",
+        "one-third",
+        "laptop-one-third",
+        "tablet-one-third",
+        "mobile-one",
+        "column_column",
+        "vb-item"
+       ]
+      }
+     ],
+     "span": 12
+    },
+    {
+     "kind": "wrap",
+     "width": "one",
+     "box": {
+      "w": 1200,
+      "h": 346,
+      "y": 4533
+     },
+     "valign": "flex-start",
+     "classes": [
+      "wrap",
+      "one",
+      "tablet-one",
+      "laptop-one",
+      "mobile-one",
+      "mfn-looped-items",
+      "vb-item",
+      "clearfix"
+     ],
+     "columns": [],
+     "span": 12,
+     "item": {
+      "type": "html",
+      "html": "<h3>Kevin Andrews</h3><p>★★★★★ 5 Stars</p><span><p>Cody was quick to meet the adjuster was helpful through the process. Not a flyby night company, very professional and knowledgeable.</p></span><h3>Rene Portillo</h3><p>★★★★★ 5 Stars</p><span><p>I was very happy with service that was offered before during and after the installation. I will definitely recommend their services to others who need a roof.</p></span><h3>Lisa Marburger</h3><p>★★★★★ 5 Stars</p><span><p>I reached out to Montgomery with Core Four Roofing on Friday, July 14th, requesting a quote. I received the quote the same day. The quote was thorough, easy to read, and by far the best price. I asked how soon they could complete the job and Montgomery got back with me immediately stating they could do it the following Friday or Saturday. I requested they come Friday. Workers arrived and completed the job that Friday. The roof looks amazing and the job site was left with no evidence, short of the gorgeous new roof, that they had been there. Several of my neighbors have spoken with me stating how great the roof looks. Core Four Roofing and Montgomery get a 5 star A+++ from me. I would highly recommend them for any of your roofing needs.</p></span><h3>Justin Chambers</h3><p>★★★★★ 5 Stars</p><span><p>They were quick to schedule and complete my roof using great materials at a good price. They don’t try to over charge you. I would definitely recommend them.</p></span><span></span><span></span><span></span><span></span><span></span><i></i><i></i>"
+     }
+    }
+   ]
+  },
+  {
+   "overlay": null,
+   "id": "mcb-section-6n37fa23",
+   "classes": [
+    "section",
+    "mcb-section",
+    "mfn-global-section",
+    "mfn-default-section"
+   ],
+   "bg": null,
+   "bgImage": null,
+   "bgSize": null,
+   "bgPos": null,
+   "padding": [
+    96,
+    0,
+    56,
+    0
+   ],
+   "h": 1312,
+   "y": 4965,
+   "wrapperWidth": 1200,
+   "wraps": [
+    {
+     "kind": "wrap",
+     "width": "one-second",
+     "box": {
+      "bg": "oklch(1 0 none)",
+      "radius": 24,
+      "padding": [
+       24,
+       24,
+       24,
+       24
+      ],
+      "w": 576,
+      "h": 579,
+      "y": 5061
+     },
+     "valign": "flex-start",
+     "classes": [
+      "wrap",
+      "mobile-one",
+      "vb-item",
+      "clearfix"
+     ],
+     "columns": [
+      {
+       "kind": "column",
+       "width": "one",
+       "box": {
+        "bg": "oklch(0.6099 0.1588 148.77)",
+        "radius": 50,
+        "padding": [
+         8,
+         20,
+         8,
+         20
+        ],
+        "w": 147,
+        "h": 26,
+        "y": 5085
+       },
+       "span": 4,
+       "item": {
+        "type": "text",
+        "html": "<span>The Guarantee</span>",
+        "text": "The Guarantee",
+        "box": {
+         "bg": "oklch(0.6099 0.1588 148.77)",
+         "radius": 50,
+         "padding": [
+          8,
+          20,
+          8,
+          20
+         ],
+         "w": 147,
+         "h": 26,
+         "y": 5085
+        },
+        "raw": true,
+        "size": 16,
+        "color": "rgb(69, 102, 79)"
+       },
+       "classes": [
+        "column",
+        "one",
+        "laptop-one",
+        "tablet-one",
+        "mobile-one",
+        "column_heading",
+        "trim-both",
+        "vb-item"
+       ]
+      },
+      {
+       "kind": "column",
+       "width": "one",
+       "box": {
+        "w": 504,
+        "h": 117,
+        "y": 5127
+       },
+       "span": 12,
+       "item": {
+        "type": "heading",
+        "align": "start",
+        "light": false,
+        "box": {
+         "w": 528,
+         "h": 149,
+         "y": 5127
+        },
+        "level": 3,
+        "html": "Protect Your Home With the Core Four Roofing Principles",
+        "text": "Protect Your Home With the Core Four Roofing Principles",
+        "size": 38,
+        "weight": "700",
+        "color": "oklch(0.4122 0.0832 141.53)",
+        "lh": "45.4771px",
+        "family": "industry",
+        "transform": "none",
+        "spacing": "0.8px"
+       },
+       "classes": [
+        "column",
+        "one",
+        "laptop-one",
+        "tablet-one",
+        "mobile-one",
+        "column_heading",
+        "vb-item"
+       ]
+      },
+      {
+       "kind": "column",
+       "width": "one",
+       "box": {
+        "w": 504,
+        "h": 62,
+        "y": 5276
+       },
+       "span": 12,
+       "item": {
+        "type": "text",
+        "html": "<p>For property owners who want the job done right the first time. We combine premium materials, expert installation, and transparent communication.</p>",
+        "text": "For property owners who want the job done right the first time. We combine premium materials, expert installation, and transparent communication.",
+        "box": {
+         "w": 504,
+         "h": 62,
+         "y": 5276
+        },
+        "raw": true,
+        "size": 16,
+        "color": "rgb(69, 102, 79)"
+       },
+       "classes": [
+        "column",
+        "one",
+        "laptop-one",
+        "tablet-one",
+        "mobile-one",
+        "column_heading",
+        "vb-item"
+       ]
+      },
+      {
+       "kind": "column",
+       "width": "one",
+       "box": {
+        "bg": "oklch(0.6099 0.1588 148.77)",
+        "radius": 24,
+        "w": 504,
+        "h": 105,
+        "y": 5371
+       },
+       "span": 12,
+       "item": {
+        "type": "counter",
+        "align": "start",
+        "light": false,
+        "box": {
+         "w": 528,
+         "h": 145,
+         "y": 5371
+        },
+        "html": "<span>1000</span><span>+</span><p>Successful Jobs Completed</p>"
+       },
+       "classes": [
+        "column",
+        "one",
+        "laptop-one",
+        "tablet-one",
+        "mobile-one",
+        "column_counter",
+        "vb-item"
+       ]
+      },
+      {
+       "kind": "column",
+       "width": "one",
+       "box": {
+        "w": 504,
+        "h": 60,
+        "y": 5516
+       },
+       "span": 12,
+       "item": {
+        "type": "button",
+        "align": "start",
+        "light": false,
+        "box": {
+         "w": 528,
+         "h": 100,
+         "y": 5516
+        },
+        "text": "Call Us",
+        "href": "tel:2815410027",
+        "icon": "fas fa-arrow-right",
+        "bg": "oklch(0.7055 0.1785 140.66)",
+        "color": "oklch(0.2496 0.031 155.1)",
+        "size": 16,
+        "weight": "600",
+        "radius": 50,
+        "padding": [
+         20,
+         32,
+         20,
+         32
+        ]
+       },
+       "classes": [
+        "column",
+        "one",
+        "laptop-one",
+        "tablet-one",
+        "mobile-one",
+        "column_button",
+        "vb-item"
+       ]
+      }
+     ],
+     "span": 6
+    },
+    {
+     "kind": "wrap",
+     "width": "one-second",
+     "box": {
+      "w": 600,
+      "h": 1160,
+      "y": 5061
+     },
+     "valign": "flex-start",
+     "classes": [
+      "wrap",
+      "mobile-one",
+      "vb-item",
+      "clearfix"
+     ],
+     "columns": [
+      {
+       "kind": "column",
+       "width": "one",
+       "box": {
+        "w": 600,
+        "h": 270,
+        "y": 5061
+       },
+       "span": 12,
+       "item": {
+        "type": "icon_box_2",
+        "align": "start",
+        "light": false,
+        "box": {
+         "w": 600,
+         "h": 270,
+         "y": 5061
+        },
+        "html": "<i></i><h3>Affordability</h3>We offer competitive pricing, transparent estimates, and stress-free financing options so you can protect your property without breaking the bank."
+       },
+       "classes": [
+        "column",
+        "one",
+        "laptop-one",
+        "tablet-one",
+        "mobile-one",
+        "column_icon_box_2",
+        "vb-item"
+       ]
+      },
+      {
+       "kind": "column",
+       "width": "one",
+       "box": {
+        "w": 600,
+        "h": 277,
+        "y": 5355
+       },
+       "span": 12,
+       "item": {
+        "type": "icon_box_2",
+        "align": "start",
+        "light": false,
+        "box": {
+         "w": 600,
+         "h": 277,
+         "y": 5355
+        },
+        "html": "<i></i><h3>Efficiency</h3>Fast turnaround times without sacrificing quality. Most residential replacements are completed in just 1-3 days, minimizing disruption to your life or business."
+       },
+       "classes": [
+        "column",
+        "one",
+        "laptop-one",
+        "tablet-one",
+        "mobile-one",
+        "column_icon_box_2",
+        "vb-item"
+       ]
+      },
+      {
+       "kind": "column",
+       "width": "one",
+       "box": {
+        "w": 600,
+        "h": 270,
+        "y": 5657
+       },
+       "span": 12,
+       "item": {
+        "type": "icon_box_2",
+        "align": "start",
+        "light": false,
+        "box": {
+         "w": 600,
+         "h": 270,
+         "y": 5657
+        },
+        "html": "<i></i><h3>Integrity</h3>Honest communication is our policy. We perform thorough inspections and never sell you what you don't need. We stand by our work and our word."
+       },
+       "classes": [
+        "column",
+        "one",
+        "laptop-one",
+        "tablet-one",
+        "mobile-one",
+        "column_icon_box_2",
+        "vb-item"
+       ]
+      },
+      {
+       "kind": "column",
+       "width": "one",
+       "box": {
+        "w": 600,
+        "h": 270,
+        "y": 5951
+       },
+       "span": 12,
+       "item": {
+        "type": "icon_box_2",
+        "align": "start",
+        "light": false,
+        "box": {
+         "w": 600,
+         "h": 270,
+         "y": 5951
+        },
+        "html": "<i></i><h3>Quality</h3>Master certified installers utilizing top-tier materials from industry-leading manufacturers. Built to withstand the toughest Texas weather."
+       },
+       "classes": [
+        "column",
+        "one",
+        "laptop-one",
+        "tablet-one",
+        "mobile-one",
+        "column_icon_box_2",
+        "vb-item"
+       ]
+      }
+     ],
+     "span": 6
+    }
+   ]
+  },
+  {
+   "overlay": null,
+   "id": "mcb-section-0nfymf6s",
+   "classes": [
+    "section",
+    "mcb-section",
+    "mfn-default-section",
+    "full-width-ex-mobile"
+   ],
+   "bg": null,
+   "bgImage": "/images/live/bottom-triangles-light.svg",
+   "bgSize": "contain",
+   "bgPos": "50% 100%",
+   "padding": [
+    64,
+    0,
+    32,
+    0
+   ],
+   "h": 858,
+   "y": 6277,
+   "wrapperWidth": 1440,
+   "wraps": [
+    {
+     "kind": "wrap",
+     "width": "one",
+     "box": {
+      "w": 1440,
+      "h": 762,
+      "y": 6341
+     },
+     "valign": "flex-start",
+     "classes": [
+      "wrap",
+      "one",
+      "tablet-one",
+      "laptop-one",
+      "mobile-one",
+      "vb-item",
+      "clearfix"
+     ],
+     "columns": [
+      {
+       "kind": "column",
+       "width": "one",
+       "box": {
+        "w": 1416,
+        "h": 722,
+        "y": 6341
+       },
+       "span": 12,
+       "item": {
+        "type": "elfsight",
+        "widget": "71bb658f-56ca-4f80-8bfc-064bde22918c",
+        "box": {
+         "w": 1416,
+         "h": 722,
+         "y": 6341
+        }
+       },
+       "classes": [
+        "column",
+        "one",
+        "laptop-one",
+        "tablet-one",
+        "mobile-one",
+        "column_column",
+        "vb-item"
+       ]
+      }
+     ],
+     "span": 12
+    }
+   ]
+  }
+ ]
+}

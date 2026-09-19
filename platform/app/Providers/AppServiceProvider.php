@@ -1,0 +1,53 @@
+<?php
+
+namespace App\Providers;
+
+use App\Models\Setting;
+use Illuminate\Pagination\Paginator;
+use Illuminate\Support\Facades\Schema;
+use Illuminate\Support\Facades\URL;
+use Illuminate\Support\Facades\View;
+use Illuminate\Support\ServiceProvider;
+
+class AppServiceProvider extends ServiceProvider
+{
+    public function register(): void
+    {
+        //
+    }
+
+    public function boot(): void
+    {
+        if ($this->app->environment('production')) {
+            URL::forceScheme('https');
+        }
+
+        Paginator::defaultView('pagination.simple');
+        Paginator::defaultSimpleView('pagination.simple');
+
+        View::share('officePhone', config('app.office_phone'));
+        View::share('officePhoneTel', config('app.office_phone_tel'));
+        View::share('officeAddress', config('app.office_address'));
+        View::share('officeHours', 'Mon–Sat 7am–7pm · Emergency 24/7');
+
+        try {
+            if (Schema::hasTable('settings')) {
+                View::composer('*', function ($view) {
+                    $settings = Setting::query()->pluck('value', 'key');
+                    $view->with('siteSettings', $settings);
+                    if ($settings->get('office_phone')) {
+                        $view->with('officePhone', $settings->get('office_phone'));
+                    }
+                    if ($settings->get('office_address')) {
+                        $view->with('officeAddress', $settings->get('office_address'));
+                    }
+                    if ($settings->get('hours')) {
+                        $view->with('officeHours', $settings->get('hours'));
+                    }
+                });
+            }
+        } catch (\Throwable) {
+            // Database may not be ready during first install.
+        }
+    }
+}

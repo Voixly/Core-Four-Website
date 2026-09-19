@@ -1,0 +1,2042 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet" />
+  <meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet" />
+  <title>Core Four Roofing — Performance Report 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Reddit+Sans:ital,wght@0,400;0,500;0,600;0,700;1,500;1,600;1,700&display=swap" rel="stylesheet" />
+  <link rel="icon" href="assets/core-four-roofing-favicon.svg" type="image/svg+xml" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <style>
+    /* Brand tokens from corefourroofing.com */
+    :root {
+      --ink: #101015;
+      --ink-soft: #13162f;
+      --muted: #45664f;
+      --muted-soft: #66594e;
+      --line: #dbd7cf;
+      --paper: #f3f0e9;
+      --panel: #f7f6f2;
+      --white: #ffffff;
+      --brand: #144b24;
+      --brand-mid: #269a47;
+      --brand-deep: #0f3519;
+      --lime: #bfe866;
+      --lime-soft: #d4f29a;
+      --link: #0089f7;
+      --gain: #144b24;
+      --gain-bg: #e8f5d8;
+      --max: 1120px;
+      --ease: cubic-bezier(0.22, 1, 0.36, 1);
+      --radius: 16px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: "Reddit Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--ink);
+      background: var(--paper);
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+    }
+    img { max-width: 100%; display: block; }
+    button { font: inherit; cursor: pointer; border: 0; background: none; }
+    a { color: inherit; }
+
+    .display {
+      font-family: "Reddit Sans", sans-serif;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 0.95;
+    }
+
+    /* —— Hero —— */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      min-height: 100dvh;
+      color: var(--white);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      isolation: isolate;
+    }
+    .hero-media {
+      position: absolute;
+      inset: 0;
+      z-index: -2;
+      background:
+        linear-gradient(230deg, rgba(20, 75, 36, 0.15) 0%, rgba(13, 13, 13, 0.55) 45%, rgba(13, 13, 13, 0.88) 100%),
+        url("assets/hero-site.webp") center/cover no-repeat;
+      transform: scale(1.04);
+      animation: heroZoom 18s var(--ease) forwards;
+    }
+    @keyframes heroZoom {
+      from { transform: scale(1.08); }
+      to { transform: scale(1); }
+    }
+    .hero-grain {
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      opacity: 0.18;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+      pointer-events: none;
+    }
+    .hero-inner {
+      width: min(100% - 2.5rem, var(--max));
+      margin: 0 auto;
+      padding: 2.5rem 0 3.5rem;
+    }
+    .hero-logo {
+      width: min(340px, 72vw);
+      height: auto;
+      margin-bottom: 1.25rem;
+      opacity: 0;
+      transform: translateY(24px);
+      animation: rise 0.9s var(--ease) 0.1s forwards;
+    }
+    .hero-brand {
+      font-family: "Reddit Sans", sans-serif;
+      font-weight: 700;
+      font-size: clamp(2.6rem, 7vw, 4.75rem);
+      letter-spacing: -0.03em;
+      line-height: 0.95;
+      max-width: 14ch;
+      opacity: 0;
+      transform: translateY(24px);
+      animation: rise 0.9s var(--ease) 0.2s forwards;
+    }
+    .hero-brand span {
+      color: var(--lime);
+    }
+    .hero-line {
+      margin-top: 1.25rem;
+      max-width: 34rem;
+      font-size: 1.05rem;
+      color: rgba(255, 255, 255, 0.84);
+      opacity: 0;
+      transform: translateY(18px);
+      animation: rise 0.9s var(--ease) 0.35s forwards;
+    }
+    .hero-actions {
+      margin-top: 1.75rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      opacity: 0;
+      transform: translateY(18px);
+      animation: rise 0.9s var(--ease) 0.5s forwards;
+    }
+    @keyframes rise {
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.85rem 1.35rem;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 0.92rem;
+      text-decoration: none;
+      transition: transform 0.25s var(--ease), background 0.25s ease, color 0.25s ease;
+    }
+    .btn:hover { transform: translateY(-1px); }
+    .btn-primary {
+      background: var(--lime);
+      color: var(--brand);
+    }
+    .btn-primary:hover { background: var(--lime-soft); }
+    .btn-ghost {
+      background: rgba(255, 255, 255, 0.1);
+      color: var(--white);
+      outline: 1px solid rgba(255, 255, 255, 0.28);
+    }
+    .hero-meta {
+      margin-top: 2.25rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem 2.5rem;
+      padding-top: 1.25rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.18);
+      font-size: 0.82rem;
+      color: rgba(255, 255, 255, 0.7);
+      opacity: 0;
+      animation: rise 0.9s var(--ease) 0.65s forwards;
+    }
+    .hero-meta strong {
+      display: block;
+      color: var(--white);
+      font-size: 0.95rem;
+      margin-bottom: 0.15rem;
+    }
+
+    /* —— Sticky nav —— */
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      backdrop-filter: blur(12px);
+      background: rgba(243, 240, 233, 0.92);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav-inner {
+      width: min(100% - 2.5rem, var(--max));
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 0.7rem 0;
+      min-width: 0;
+    }
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      flex: 0 0 auto;
+      min-width: 0;
+      font-weight: 700;
+      font-size: 0.92rem;
+      color: var(--brand);
+    }
+    .nav-brand img {
+      height: 28px;
+      width: auto;
+      flex-shrink: 0;
+    }
+    .nav-brand span {
+      white-space: nowrap;
+    }
+    .nav-links {
+      display: flex;
+      flex: 1 1 auto;
+      min-width: 0;
+      gap: 0.15rem;
+      overflow-x: auto;
+      overscroll-behavior-x: contain;
+      scrollbar-width: none;
+      -webkit-overflow-scrolling: touch;
+    }
+    .nav-links::-webkit-scrollbar { display: none; }
+    .nav-links a {
+      text-decoration: none;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--muted);
+      padding: 0.45rem 0.55rem;
+      border-radius: 2px;
+      white-space: nowrap;
+      flex: 0 0 auto;
+      transition: color 0.2s ease, background 0.2s ease;
+    }
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--ink);
+      background: rgba(16, 20, 24, 0.05);
+    }
+    .nav-print {
+      flex: 0 0 auto;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--white);
+      padding: 0.45rem 0.75rem;
+      border: 1px solid var(--brand);
+      border-radius: 999px;
+      background: var(--brand);
+      white-space: nowrap;
+    }
+    .nav-print:hover { background: var(--brand-deep); }
+
+    @media (max-width: 1100px) {
+      .nav-brand span { display: none; }
+    }
+    @media (max-width: 780px) {
+      .nav-print { display: none; }
+    }
+
+    main { width: min(100% - 2.5rem, var(--max)); margin: 0 auto; padding: 2.5rem 0 4rem; }
+
+    section { margin-bottom: 3.5rem; scroll-margin-top: 4.5rem; }
+    .section-kicker {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--brand);
+      margin-bottom: 0.55rem;
+    }
+    .section-title {
+      font-family: "Reddit Sans", sans-serif;
+      font-weight: 700;
+      font-size: clamp(1.85rem, 3.6vw, 2.55rem);
+      letter-spacing: -0.025em;
+      line-height: 1.1;
+      margin-bottom: 0.65rem;
+      color: var(--ink-soft);
+    }
+    .section-lead {
+      max-width: 40rem;
+      color: var(--muted);
+      margin-bottom: 1.75rem;
+    }
+
+    /* —— Gains strip —— */
+    .gains {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1px;
+      background: var(--line);
+      border: 1px solid var(--line);
+      margin-top: 0.5rem;
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+    .gain {
+      background: var(--white);
+      padding: 1.35rem 1.2rem 1.25rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .gain::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 3px;
+      background: var(--lime);
+      transform: scaleY(0);
+      transform-origin: top;
+      animation: barIn 0.7s var(--ease) forwards;
+    }
+    .gain:nth-child(2)::after { animation-delay: 0.08s; }
+    .gain:nth-child(3)::after { animation-delay: 0.16s; }
+    .gain:nth-child(4)::after { animation-delay: 0.24s; }
+    @keyframes barIn { to { transform: scaleY(1); } }
+    .gain-label {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--muted);
+      margin-bottom: 0.55rem;
+    }
+    .gain-value {
+      font-family: "Reddit Sans", sans-serif;
+      font-weight: 700;
+      font-size: 2.55rem;
+      letter-spacing: -0.03em;
+      line-height: 1;
+      color: var(--brand);
+    }
+    .gain-delta {
+      display: inline-block;
+      margin-top: 0.55rem;
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--gain);
+      background: var(--gain-bg);
+      padding: 0.2rem 0.45rem;
+    }
+    .gain-note {
+      margin-top: 0.45rem;
+      font-size: 0.75rem;
+      color: var(--muted);
+    }
+
+    .callout {
+      margin-top: 1.25rem;
+      padding: 1.1rem 1.25rem;
+      background: var(--brand);
+      color: rgba(255, 255, 255, 0.9);
+      border-left: 4px solid var(--lime);
+      border-radius: 0 var(--radius) var(--radius) 0;
+    }
+    .callout strong { color: var(--white); }
+
+    /* —— Layout blocks —— */
+    .split {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 1.5rem;
+      align-items: start;
+    }
+    .panel {
+      background: var(--white);
+      border: 1px solid var(--line);
+      padding: 1.25rem;
+      border-radius: var(--radius);
+    }
+    .panel h3 {
+      font-family: "Reddit Sans", sans-serif;
+      font-size: 1.2rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--brand);
+      margin-bottom: 0.35rem;
+    }
+    .panel-sub {
+      font-size: 0.82rem;
+      color: var(--muted);
+      margin-bottom: 1rem;
+    }
+    .chart-wrap { position: relative; height: 280px; }
+    .chart-wrap.tall { height: 320px; }
+
+    .metric-list { display: grid; gap: 0.75rem; }
+    .metric-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 1rem;
+      padding-bottom: 0.7rem;
+      border-bottom: 1px solid var(--line);
+    }
+    .metric-row:last-child { border-bottom: 0; padding-bottom: 0; }
+    .metric-row .label { font-size: 0.9rem; color: var(--ink-soft); }
+    .metric-row .value {
+      font-family: "Reddit Sans", sans-serif;
+      font-weight: 700;
+      font-size: 1.35rem;
+      letter-spacing: -0.02em;
+      white-space: nowrap;
+      color: var(--brand);
+    }
+    .metric-row .value .up { color: var(--brand-mid); font-size: 0.85rem; margin-left: 0.35rem; }
+    .metric-row .value .soft { color: var(--muted); font-size: 0.8rem; font-family: "Reddit Sans", sans-serif; font-weight: 500; margin-left: 0.35rem; }
+
+    .pill-row { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1rem; }
+    .pill {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      padding: 0.35rem 0.6rem;
+      border: 1px solid var(--line);
+      background: var(--panel);
+      color: var(--ink-soft);
+    }
+    .pill.on {
+      background: var(--brand);
+      border-color: var(--brand);
+      color: var(--white);
+    }
+
+    table.data {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.88rem;
+    }
+    table.data th {
+      text-align: left;
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      font-weight: 700;
+      padding: 0.55rem 0.4rem;
+      border-bottom: 1px solid var(--line);
+    }
+    table.data td {
+      padding: 0.7rem 0.4rem;
+      border-bottom: 1px solid rgba(213, 219, 225, 0.7);
+      vertical-align: top;
+    }
+    table.data tr:last-child td { border-bottom: 0; }
+    table.data .num { text-align: right; font-variant-numeric: tabular-nums; font-weight: 600; }
+    table.data .query { max-width: 16rem; }
+    .pos-good { color: var(--gain); font-weight: 700; }
+
+    .compare-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--line);
+      border: 1px solid var(--line);
+      margin-top: 1rem;
+    }
+    .compare-cell {
+      background: var(--white);
+      padding: 1.1rem 1rem;
+    }
+    .compare-cell .k {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--muted);
+      margin-bottom: 0.35rem;
+    }
+    .compare-cell .v {
+      font-family: "Reddit Sans", sans-serif;
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      line-height: 1;
+      color: var(--brand);
+    }
+    .compare-cell .d {
+      margin-top: 0.4rem;
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--gain);
+    }
+
+    .story-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+    }
+    .story {
+      padding: 1.25rem 1.15rem;
+      background: var(--white);
+      border-top: 3px solid var(--brand);
+      border-radius: 0 0 var(--radius) var(--radius);
+    }
+    .story:nth-child(2) { border-top-color: var(--brand-mid); }
+    .story:nth-child(3) { border-top-color: var(--lime); }
+    .story h3 {
+      font-family: "Reddit Sans", sans-serif;
+      font-size: 1.2rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--brand);
+      margin-bottom: 0.45rem;
+    }
+    .story p { font-size: 0.9rem; color: var(--muted); }
+
+    .footer {
+      width: min(100% - 2.5rem, var(--max));
+      margin: 0 auto 2.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--line);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 1rem;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    .tabs {
+      display: flex;
+      gap: 0.35rem;
+      margin-bottom: 1rem;
+      flex-wrap: wrap;
+    }
+    .tab {
+      padding: 0.5rem 0.85rem;
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--muted);
+      border: 1px solid var(--line);
+      background: var(--panel);
+      border-radius: 2px;
+    }
+    .tab.active {
+      background: var(--brand);
+      border-color: var(--brand);
+      color: var(--white);
+    }
+
+    .landing-cols {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+      margin-top: 0.25rem;
+    }
+    .landing-panel {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 1.25rem 1.2rem 1.35rem;
+    }
+    .landing-panel h3 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--brand);
+      letter-spacing: -0.02em;
+      margin-bottom: 0.25rem;
+    }
+    .landing-count {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--brand-mid);
+      margin-bottom: 1rem;
+    }
+    .landing-metro {
+      margin-bottom: 1rem;
+    }
+    .landing-metro:last-child { margin-bottom: 0; }
+    .landing-metro-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 0.45rem;
+    }
+    .landing-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+    .landing-chips a {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.35rem 0.65rem;
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--brand);
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      text-decoration: none;
+      transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+    }
+    .landing-chips a:hover {
+      background: var(--lime);
+      border-color: var(--lime);
+      color: var(--brand-deep);
+    }
+    .landing-chips span {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.35rem 0.65rem;
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--brand);
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 999px;
+    }
+
+    @media (max-width: 960px) {
+      .gains, .split, .compare-grid, .story-grid { grid-template-columns: 1fr 1fr; }
+      .split { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 640px) {
+      .gains, .compare-grid, .story-grid, .landing-cols { grid-template-columns: 1fr; }
+      .hero-inner { width: min(100% - 1.5rem, var(--max)); }
+      main { width: min(100% - 1.5rem, var(--max)); }
+      .nav-inner { width: min(100% - 1.5rem, var(--max)); }
+      .nav-print { display: none; }
+    }
+
+    @media print {
+      .hero { min-height: auto; padding-top: 3rem; page-break-after: always; }
+      .hero-media { animation: none; transform: none; }
+      .nav, .hero-actions, .nav-print { display: none !important; }
+      body { background: white; }
+      section { break-inside: avoid; }
+      .panel, .gain, .story { break-inside: avoid; }
+      .gate { display: none !important; }
+    }
+
+    /* Password gate */
+    body.is-locked > *:not(.gate) { display: none !important; }
+    .gate {
+      display: none;
+      min-height: 100vh;
+      min-height: 100dvh;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1.25rem;
+      background:
+        linear-gradient(230deg, rgba(20, 75, 36, 0.88) 0%, rgba(13, 13, 13, 0.92) 100%),
+        url("assets/hero-site.webp") center/cover no-repeat;
+    }
+    body.is-locked .gate { display: flex; }
+    .gate-card {
+      width: min(100%, 400px);
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 2rem 1.5rem 1.5rem;
+      text-align: center;
+    }
+    .gate-card img {
+      width: 180px;
+      height: auto;
+      margin: 0 auto 1.25rem;
+    }
+    .gate-card h1 {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--brand);
+      letter-spacing: -0.02em;
+      margin-bottom: 0.35rem;
+    }
+    .gate-card p {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-bottom: 1.25rem;
+    }
+    .gate-card form {
+      display: grid;
+      gap: 0.75rem;
+    }
+    .gate-card input[type="password"] {
+      width: 100%;
+      padding: 0.85rem 1rem;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: var(--white);
+      font: inherit;
+      font-size: 0.95rem;
+      color: var(--ink);
+      outline: none;
+    }
+    .gate-card input[type="password"]:focus {
+      border-color: var(--brand);
+    }
+    .gate-card button {
+      width: 100%;
+      padding: 0.85rem 1.25rem;
+      border: 0;
+      border-radius: 999px;
+      background: var(--brand);
+      color: var(--white);
+      font: inherit;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .gate-card button:hover { background: var(--brand-deep); }
+    .gate-error {
+      display: none;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: #962317;
+      margin-top: 0.15rem;
+    }
+    .gate-error.show { display: block; }
+  </style>
+  <script>
+    (function () {
+      var KEY = "cfr_report_auth_v1";
+      var HASH = "450e1216ce69b33721d029d095020eb17147a0cc106077b71d880adf99093610";
+      async function sha256(text) {
+        var data = new TextEncoder().encode(text);
+        var buf = await crypto.subtle.digest("SHA-256", data);
+        return Array.from(new Uint8Array(buf)).map(function (b) {
+          return b.toString(16).padStart(2, "0");
+        }).join("");
+      }
+      window.__cfrUnlock = async function (password) {
+        var h = await sha256(password);
+        if (h !== HASH) return false;
+        try { sessionStorage.setItem(KEY, HASH); } catch (e) {}
+        document.body.classList.remove("is-locked");
+        return true;
+      };
+      window.__cfrIsAuthed = function () {
+        try { return sessionStorage.getItem(KEY) === HASH; } catch (e) { return false; }
+      };
+      document.documentElement.classList.add("js-gate");
+    })();
+  </script>
+</head>
+<body class="is-locked">
+  <div class="gate" role="dialog" aria-modal="true" aria-labelledby="gate-title">
+    <div class="gate-card">
+      <img src="assets/core-four-roofing-logo-green.svg" alt="Core Four Roofing" width="180" height="62" />
+      <h1 id="gate-title">Performance Report</h1>
+      <p>Enter the password to view this private client report.</p>
+      <form id="gate-form" autocomplete="off">
+        <input id="gate-password" type="password" name="password" placeholder="Password" required autofocus />
+        <button type="submit">Unlock report</button>
+        <div class="gate-error" id="gate-error">Incorrect password. Try again.</div>
+      </form>
+    </div>
+  </div>
+  <script>
+    (function () {
+      if (window.__cfrIsAuthed && window.__cfrIsAuthed()) {
+        document.body.classList.remove("is-locked");
+      }
+      var form = document.getElementById("gate-form");
+      var input = document.getElementById("gate-password");
+      var err = document.getElementById("gate-error");
+      if (!form) return;
+      form.addEventListener("submit", async function (e) {
+        e.preventDefault();
+        err.classList.remove("show");
+        var ok = await window.__cfrUnlock(input.value);
+        if (!ok) {
+          err.classList.add("show");
+          input.value = "";
+          input.focus();
+        }
+      });
+    })();
+  </script>
+  <header class="hero">
+    <div class="hero-media" aria-hidden="true"></div>
+    <div class="hero-grain" aria-hidden="true"></div>
+    <div class="hero-inner">
+      <img class="hero-logo" src="assets/core-four-roofing-logo.svg" alt="Core Four Roofing" width="340" height="117" />
+      <h1 class="hero-brand">Performance report <span>2026</span></h1>
+      <p class="hero-line">
+        Year-to-date digital growth — website, Google Business, search, and Meta social reach for Tomball &amp; Greater Houston.
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#gains">See what we’ve gained</a>
+        <a class="btn btn-ghost" href="ads.html">Residential ads plan</a>
+        <a class="btn btn-ghost" href="reviews.html">Review Shield</a>
+      </div>
+      <div class="hero-meta">
+        <div>
+          <strong>Reporting window</strong>
+          Jan – Aug 16, 2026
+        </div>
+        <div>
+          <strong>Growth focus</strong>
+          May launch → August momentum
+        </div>
+        <div>
+          <strong>Location</strong>
+          22955 TX-249 Ste 26, Tomball, TX
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <nav class="nav" aria-label="Report sections">
+    <div class="nav-inner">
+      <div class="nav-brand">
+        <img src="assets/core-four-roofing-logo-green.svg" alt="Core Four Roofing" width="120" height="41" />
+        <span>Performance Report</span>
+      </div>
+      <div class="nav-links">
+        <a href="#gains">Gains</a>
+        <a href="#gbp">GBP</a>
+        <a href="#website">Website</a>
+        <a href="#facebook">Social</a>
+        <a href="#search">Search</a>
+        <a href="#keywords">Keywords</a>
+        <a href="#outlook">Outlook</a>
+        <a href="#landings">Landings</a>
+        <a href="#listings">Listings</a>
+        <a href="ads.html">Ads plan</a>
+        <a href="reviews.html">Reviews</a>
+      </div>
+      <button class="nav-print" type="button" onclick="window.print()">Export PDF</button>
+    </div>
+  </nav>
+
+  <main>
+    <!-- GAINS -->
+    <section id="gains">
+      <p class="section-kicker">Executive summary</p>
+      <h2 class="section-title">What we’ve gained this year</h2>
+      <p class="section-lead">
+        Since analytics and local optimization went live mid-May, Core Four Roofing built a measurable digital footprint — across Maps, Search, the website, and Facebook brand discovery.
+      </p>
+
+      <div class="gains">
+        <article class="gain">
+          <div class="gain-label">Facebook views YTD</div>
+          <div class="gain-value">31.3K</div>
+          <div class="gain-delta">+140% then kept growing</div>
+          <div class="gain-note">Apr 24 – Aug 16 · Meta Insights + post views</div>
+        </article>
+        <article class="gain">
+          <div class="gain-label">Website visitors gained</div>
+          <div class="gain-value" data-count="1091">0</div>
+          <div class="gain-delta">+1,091 YTD</div>
+          <div class="gain-note">Active users through Aug 16</div>
+        </article>
+        <article class="gain">
+          <div class="gain-label">GBP profile views</div>
+          <div class="gain-value" data-count="241">0</div>
+          <div class="gain-delta">+15% vs prior period</div>
+          <div class="gain-note">Jul 23 – Aug 14 · Google Business Profile</div>
+        </article>
+        <article class="gain">
+          <div class="gain-label">Brand search position</div>
+          <div class="gain-value">1.07</div>
+          <div class="gain-delta">Was 2.35 · now page one, slot one</div>
+          <div class="gain-note">“core four roofing” · Jul 23 – Aug 16</div>
+        </article>
+      </div>
+
+      <div class="callout">
+        <strong>Client takeaway:</strong>
+        Brand discovery is accelerating — Facebook views more than doubled, website traffic is still climbing (+19.6% in the latest window), and Maps plus search keep compounding. More homeowners and commercial prospects are finding Core Four Roofing.
+      </div>
+
+      <div class="story-grid" style="margin-top: 1.5rem;">
+        <article class="story">
+          <h3>Social discovery</h3>
+          <p><strong style="color:var(--ink)">31.3K</strong> Facebook views YTD, plus <strong style="color:var(--ink)">2,868</strong> new post views and <strong style="color:var(--ink)">159 clicks</strong> since Jul 23 — the page is still earning attention after the +140% surge.</p>
+        </article>
+        <article class="story">
+          <h3>Local presence</h3>
+          <p>Search mobile views on the listing jumped <strong style="color:var(--ink)">+97%</strong>. This window added <strong style="color:var(--ink)">56 direction requests</strong> and a <strong style="color:var(--ink)">5.0★</strong> average rating.</p>
+        </article>
+        <article class="story">
+          <h3>Brand ownership</h3>
+          <p>Brand query <em>core four roofing</em> now ranks at <strong style="color:var(--ink)">position 1.07</strong> with a <strong style="color:var(--ink)">28% CTR</strong> — you own the search for your name.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- GBP -->
+    <section id="gbp">
+      <p class="section-kicker">Google Business Profile</p>
+      <h2 class="section-title">The listing is still gaining ground</h2>
+      <p class="section-lead">
+        From Jul 23 to Aug 14 the Tomball profile earned <strong>241 views — up 15%</strong> — and <strong>89 interactions, up 17%</strong>. Search discovery is the engine: Google Search views rose <strong>30%</strong>, with mobile search nearly doubling. Daily actions climbed through August after a quieter start.
+      </p>
+
+      <div class="compare-grid">
+        <div class="compare-cell">
+          <div class="k">Profile views</div>
+          <div class="v">241</div>
+          <div class="d">↑ 15% vs prior period</div>
+        </div>
+        <div class="compare-cell">
+          <div class="k">Interactions</div>
+          <div class="v">89</div>
+          <div class="d">↑ 17% vs prior (76)</div>
+        </div>
+        <div class="compare-cell">
+          <div class="k">Average rating</div>
+          <div class="v">5.0★</div>
+          <div class="d">Perfect score this window</div>
+        </div>
+      </div>
+
+      <div class="split" style="margin-top:1.5rem;">
+        <div class="panel">
+          <h3>Daily interactions</h3>
+          <p class="panel-sub">Jul 23 – Aug 14, 2026 · trending up vs previous period · Source: GBP Insights</p>
+          <div class="chart-wrap tall"><canvas id="gbpChart"></canvas></div>
+        </div>
+        <div class="panel">
+          <h3>Action breakdown</h3>
+          <p class="panel-sub">How customers used the listing this window</p>
+          <div class="metric-list">
+            <div class="metric-row">
+              <span class="label">Direction requests</span>
+              <span class="value">56 <span class="up">navigating to you</span></span>
+            </div>
+            <div class="metric-row">
+              <span class="label">Website visits from GBP</span>
+              <span class="value">27</span>
+            </div>
+            <div class="metric-row">
+              <span class="label">Phone calls</span>
+              <span class="value">6</span>
+            </div>
+            <div class="metric-row">
+              <span class="label">Messaging</span>
+              <span class="value">0</span>
+            </div>
+            <div class="metric-row">
+              <span class="label">YTD interactions</span>
+              <span class="value">466 <span class="soft">377 + 89</span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="split" style="margin-top:1.5rem;">
+        <div class="panel">
+          <h3>Where views came from</h3>
+          <p class="panel-sub">241 views · Search vs Maps · mobile vs desktop</p>
+          <div class="chart-wrap"><canvas id="gbpViewsMixChart"></canvas></div>
+        </div>
+        <div class="panel">
+          <h3>Discovery mix</h3>
+          <p class="panel-sub">Search is carrying growth this window</p>
+          <div class="metric-list">
+            <div class="metric-row">
+              <span class="label">Search · Mobile</span>
+              <span class="value">61 <span class="up">↑ 97%</span></span>
+            </div>
+            <div class="metric-row">
+              <span class="label">Search · Desktop</span>
+              <span class="value">83 <span class="up">↑ 4%</span></span>
+            </div>
+            <div class="metric-row">
+              <span class="label">Maps · Desktop</span>
+              <span class="value">69 <span class="up">↑ 17%</span></span>
+            </div>
+            <div class="metric-row">
+              <span class="label">Maps · Mobile</span>
+              <span class="value">28</span>
+            </div>
+            <div class="metric-row">
+              <span class="label">Google Search views total</span>
+              <span class="value">144 <span class="up">↑ 30%</span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="split" style="margin-top:1.5rem;">
+        <div class="panel">
+          <h3>Phone calls by weekday</h3>
+          <p class="panel-sub">6 calls · Tuesday and Friday led · Source: GBP Insights</p>
+          <div class="chart-wrap"><canvas id="gbpCallsChart"></canvas></div>
+        </div>
+        <div class="panel">
+          <h3>What this means</h3>
+          <p class="panel-sub">High-intent local demand, not just profile glances</p>
+          <div class="callout" style="margin-top:0.25rem;">
+            <strong>Client takeaway:</strong>
+            Most actions are direction requests (56 of 89). People aren’t just viewing the listing — they’re routing to the shop. Search mobile nearly doubling is the awareness unlock to keep feeding with photos, posts, and review replies.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WEBSITE -->
+    <section id="website">
+      <p class="section-kicker">Website · Google Analytics 4</p>
+      <h2 class="section-title">Traffic is still climbing</h2>
+      <p class="section-lead">
+        From Jul 23 to Aug 16 the site added <strong>335 active users — up 19.6%</strong> versus the prior window. Views rose <strong>36.4%</strong> and events <strong>30.9%</strong>. Year-to-date, Core Four has now welcomed about <strong>1,091 active users</strong> since tracking launched mid-May.
+      </p>
+
+      <div class="compare-grid">
+        <div class="compare-cell">
+          <div class="k">Active users</div>
+          <div class="v">335</div>
+          <div class="d">↑ 19.6% vs prior period</div>
+        </div>
+        <div class="compare-cell">
+          <div class="k">Page views</div>
+          <div class="v">555</div>
+          <div class="d">↑ 36.4% vs prior period</div>
+        </div>
+        <div class="compare-cell">
+          <div class="k">Event count</div>
+          <div class="v">1.6K</div>
+          <div class="d">↑ 30.9% vs prior period</div>
+        </div>
+      </div>
+
+      <div class="split" style="margin-top:1.5rem;">
+        <div class="panel">
+          <h3>Active users · latest window</h3>
+          <p class="panel-sub">Jul 23 – Aug 16, 2026 · vs previous period · Source: GA4</p>
+          <div class="chart-wrap tall"><canvas id="gaChart"></canvas></div>
+        </div>
+        <div class="panel">
+          <h3>Audience gained</h3>
+          <p class="panel-sub">Latest window + year-to-date</p>
+          <div class="metric-list">
+            <div class="metric-row">
+              <span class="label">Active users (Jul 23 – Aug 16)</span>
+              <span class="value">335 <span class="up">↑ 19.6%</span></span>
+            </div>
+            <div class="metric-row">
+              <span class="label">New users this window</span>
+              <span class="value">325 <span class="soft">97% new</span></span>
+            </div>
+            <div class="metric-row">
+              <span class="label">Sessions</span>
+              <span class="value">376</span>
+            </div>
+            <div class="metric-row">
+              <span class="label">YTD active users</span>
+              <span class="value">1,091 <span class="up">since May</span></span>
+            </div>
+            <div class="metric-row">
+              <span class="label">YTD new users</span>
+              <span class="value">1,077</span>
+            </div>
+          </div>
+          <div class="callout" style="margin-top:1.25rem;">
+            <strong>Improvement lens:</strong>
+            Almost every visitor in this window was new (325 of 335). The site is still expanding the audience — not just recycling the same people.
+          </div>
+        </div>
+      </div>
+
+      <div class="split" style="margin-top:1.5rem;">
+        <div class="panel">
+          <h3>How people arrived</h3>
+          <p class="panel-sub">Sessions by source / medium · Jul 23 – Aug 16</p>
+          <div class="chart-wrap"><canvas id="gaSourceChart"></canvas></div>
+        </div>
+        <div class="panel">
+          <h3>Channel mix</h3>
+          <p class="panel-sub">376 sessions · Source: GA4</p>
+          <div class="metric-list">
+            <div class="metric-row">
+              <span class="label">Direct</span>
+              <span class="value">263 <span class="soft">70%</span></span>
+            </div>
+            <div class="metric-row">
+              <span class="label">Google organic</span>
+              <span class="value">71 <span class="up">search demand</span></span>
+            </div>
+            <div class="metric-row">
+              <span class="label">Facebook referral</span>
+              <span class="value">11 <span class="soft">social → site</span></span>
+            </div>
+            <div class="metric-row">
+              <span class="label">Bing organic</span>
+              <span class="value">6</span>
+            </div>
+            <div class="metric-row">
+              <span class="label">Key events tracked</span>
+              <span class="value">0 <span class="soft">next setup</span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEARCH -->
+    <section id="search">
+      <p class="section-kicker">Google Search Console</p>
+      <h2 class="section-title">More visibility. Brand locked at #1.</h2>
+      <p class="section-lead">
+        From Jul 23 to Aug 16 the site earned <strong>60 clicks</strong> and <strong>7,971 impressions</strong> — about <strong>319 impressions a day</strong>, up from ~237 in the prior 30 days. Brand query <em>core four roofing</em> moved from position 2.35 to <strong>1.07</strong>.
+      </p>
+
+      <div class="compare-grid">
+        <div class="compare-cell">
+          <div class="k">Impressions / day</div>
+          <div class="v">319</div>
+          <div class="d">↑ vs ~237 in the prior 30 days</div>
+        </div>
+        <div class="compare-cell">
+          <div class="k">Brand query position</div>
+          <div class="v">1.07</div>
+          <div class="d">Was 2.35 · 28% CTR</div>
+        </div>
+        <div class="compare-cell">
+          <div class="k">City landings in Google</div>
+          <div class="v">69</div>
+          <div class="d">1,779 impressions already · 12 clicks</div>
+        </div>
+      </div>
+
+      <div class="tabs" role="tablist" aria-label="Search charts" style="margin-top:1.5rem;">
+        <button class="tab active" type="button" data-gsc="position">Avg. position</button>
+        <button class="tab" type="button" data-gsc="ctr">CTR</button>
+        <button class="tab" type="button" data-gsc="clicks">Clicks</button>
+        <button class="tab" type="button" data-gsc="impressions">Impressions</button>
+      </div>
+
+      <div class="panel" style="margin-bottom:1rem;">
+        <h3 id="gscTitle">Daily average position</h3>
+        <p class="panel-sub" id="gscSub">Jul 23 – Aug 16, 2026 · Lower is better · Source: Google Search Console</p>
+        <div class="chart-wrap tall"><canvas id="gscChart"></canvas></div>
+      </div>
+
+      <div class="split" style="margin-top:1.5rem;">
+        <div class="panel">
+          <h3>Latest window snapshot</h3>
+          <p class="panel-sub">Jul 23 – Aug 16 · Domain property</p>
+          <div class="metric-list">
+            <div class="metric-row">
+              <span class="label">Clicks</span>
+              <span class="value">60 <span class="soft">~2.4 / day</span></span>
+            </div>
+            <div class="metric-row">
+              <span class="label">Impressions</span>
+              <span class="value">7,971</span>
+            </div>
+            <div class="metric-row">
+              <span class="label">CTR</span>
+              <span class="value">0.75%</span>
+            </div>
+            <div class="metric-row">
+              <span class="label">Mobile avg. position</span>
+              <span class="value">13.7 <span class="up">stronger than desktop</span></span>
+            </div>
+            <div class="metric-row">
+              <span class="label">YTD clicks (Apr 22 – Aug 16)</span>
+              <span class="value">270</span>
+            </div>
+          </div>
+        </div>
+        <div class="panel">
+          <h3>Device mix</h3>
+          <p class="panel-sub">Clicks by device · Jul 23 – Aug 16</p>
+          <div class="chart-wrap"><canvas id="deviceChart"></canvas></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- KEYWORDS -->
+    <section id="keywords">
+      <p class="section-kicker">Queries &amp; pages</p>
+      <h2 class="section-title">City pages are starting to rank</h2>
+      <p class="section-lead">
+        Brand is locked. Local commercial landings are already in Google — League City and Humble both picked up clicks, and 69 city URLs have impression share.
+      </p>
+
+      <div class="split">
+        <div class="panel">
+          <h3>Top search queries</h3>
+          <p class="panel-sub">Jul 23 – Aug 16 · Google Search Console</p>
+          <div style="overflow-x:auto;">
+            <table class="data" id="queriesTable">
+              <thead>
+                <tr>
+                  <th>Query</th>
+                  <th class="num">Clicks</th>
+                  <th class="num">Impr.</th>
+                  <th class="num">Pos.</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </div>
+        <div class="panel">
+          <h3>Top landing pages</h3>
+          <p class="panel-sub">Highest click &amp; impression pages this window</p>
+          <div style="overflow-x:auto;">
+            <table class="data" id="pagesTable">
+              <thead>
+                <tr>
+                  <th>Page</th>
+                  <th class="num">Clicks</th>
+                  <th class="num">Impr.</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FACEBOOK -->
+    <section id="facebook">
+      <p class="section-kicker">Facebook &amp; Instagram · Meta</p>
+      <h2 class="section-title">The awareness surge kept going</h2>
+      <p class="section-lead">
+        Through Jul 22 the page had already delivered <strong>28,437 views — up 140%</strong>. From Jul 23 to Aug 16, Core Four kept posting: <strong>13 Facebook posts</strong> added <strong>2,868 views</strong>, <strong>1,543 reach</strong>, and <strong>159 clicks</strong>. Year-to-date Facebook views now sit at <strong>31.3K</strong>.
+      </p>
+
+      <div class="compare-grid">
+        <div class="compare-cell">
+          <div class="k">Facebook views YTD</div>
+          <div class="v">31.3K</div>
+          <div class="d">28,437 through Jul 22 + 2,868 since</div>
+        </div>
+        <div class="compare-cell">
+          <div class="k">Latest window · post views</div>
+          <div class="v">2,868</div>
+          <div class="d">Jul 23 – Aug 16 · 13 photo posts</div>
+        </div>
+        <div class="compare-cell">
+          <div class="k">Clicks on posts</div>
+          <div class="v">159</div>
+          <div class="d">People acting on the content</div>
+        </div>
+      </div>
+
+      <div class="callout" style="margin-top:1.25rem;">
+        <strong>Why this matters:</strong>
+        The +140% awareness jump was not a one-off. Posting stayed on a near-daily cadence through mid-August, with zero negative feedback in the window — and the Jul 30 tile-repair story alone earned 813 views.
+      </div>
+
+      <div class="split" style="margin-top:1.5rem;">
+        <div class="panel">
+          <h3>Daily unique engagements</h3>
+          <p class="panel-sub">Jul 23 – Aug 16 · Unique people who engaged · Source: Meta page insights</p>
+          <div class="chart-wrap tall"><canvas id="fbViewsChart"></canvas></div>
+        </div>
+        <div class="panel">
+          <h3>Latest window snapshot</h3>
+          <p class="panel-sub">Facebook posts published Jul 23 – Aug 16</p>
+          <div class="metric-list">
+            <div class="metric-row">
+              <span class="label">Posts published</span>
+              <span class="value">13</span>
+            </div>
+            <div class="metric-row">
+              <span class="label">Post reach</span>
+              <span class="value">1,543</span>
+            </div>
+            <div class="metric-row">
+              <span class="label">Unique engagers</span>
+              <span class="value">140</span>
+            </div>
+            <div class="metric-row">
+              <span class="label">Reactions · comments · shares</span>
+              <span class="value">73</span>
+            </div>
+            <div class="metric-row">
+              <span class="label">Negative feedback</span>
+              <span class="value">0 <span class="up">clean window</span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="split" style="margin-top:1.5rem;">
+        <div class="panel">
+          <h3>Engagement mix</h3>
+          <p class="panel-sub">Jul 23 – Aug 16 Facebook posts</p>
+          <div class="metric-list">
+            <div class="metric-row">
+              <span class="label">Reactions</span>
+              <span class="value">61</span>
+            </div>
+            <div class="metric-row">
+              <span class="label">Comments</span>
+              <span class="value">10 <span class="up">conversation</span></span>
+            </div>
+            <div class="metric-row">
+              <span class="label">Shares</span>
+              <span class="value">2</span>
+            </div>
+            <div class="metric-row">
+              <span class="label">Link / photo clicks</span>
+              <span class="value">159 <span class="up">highest action</span></span>
+            </div>
+            <div class="metric-row">
+              <span class="label">Prior 90-day engagement</span>
+              <span class="value">610 <span class="soft">+17.3% then</span></span>
+            </div>
+          </div>
+        </div>
+        <div class="panel">
+          <h3>Top posts since Jul 23</h3>
+          <p class="panel-sub">Proof-of-work and “how not to repair” content leading</p>
+          <div style="overflow-x:auto;">
+            <table class="data">
+              <thead>
+                <tr>
+                  <th>Posted</th>
+                  <th>Theme</th>
+                  <th class="num">Views</th>
+                  <th class="num">Eng.</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Jul 30</td>
+                  <td>Botched tile repair — making it right</td>
+                  <td class="num pos-good">813</td>
+                  <td class="num">13</td>
+                </tr>
+                <tr>
+                  <td>Jul 24</td>
+                  <td>Culture on the jobsite</td>
+                  <td class="num">655</td>
+                  <td class="num">14</td>
+                </tr>
+                <tr>
+                  <td>Jul 24</td>
+                  <td>Irving commercial TPO replacement</td>
+                  <td class="num">484</td>
+                  <td class="num pos-good">17</td>
+                </tr>
+                <tr>
+                  <td>Jul 28</td>
+                  <td>Retail center — complex commercial</td>
+                  <td class="num">129</td>
+                  <td class="num">5</td>
+                </tr>
+                <tr>
+                  <td>Aug 14</td>
+                  <td>Houston · Dallas · Austin coverage</td>
+                  <td class="num">116</td>
+                  <td class="num">2</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="callout" style="margin-top:1.1rem;">
+            <strong>Content win:</strong>
+            The Jul 30 contractor-fail / tile repair story is the standout — 813 views and 73 clicks. Problem-solution posts plus jobsite photography are what this audience stops for.
+          </div>
+        </div>
+      </div>
+
+      <div class="split" style="margin-top:1.5rem;">
+        <div class="panel">
+          <h3>Instagram · same window</h3>
+          <p class="panel-sub">Jul 23 – Aug 16 · 13 posts · Source: Meta IG insights</p>
+          <div class="chart-wrap"><canvas id="igReachChart"></canvas></div>
+        </div>
+        <div class="panel">
+          <h3>Instagram snapshot</h3>
+          <p class="panel-sub">Cross-posted project content picking up a second audience</p>
+          <div class="metric-list">
+            <div class="metric-row">
+              <span class="label">IG views</span>
+              <span class="value">844</span>
+            </div>
+            <div class="metric-row">
+              <span class="label">IG reach</span>
+              <span class="value">465</span>
+            </div>
+            <div class="metric-row">
+              <span class="label">Likes</span>
+              <span class="value">39</span>
+            </div>
+            <div class="metric-row">
+              <span class="label">Comments · shares</span>
+              <span class="value">8</span>
+            </div>
+            <div class="metric-row">
+              <span class="label">Top IG post</span>
+              <span class="value">188 <span class="soft">tile carousel</span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="story-grid" style="margin-top:1.5rem;">
+        <article class="story">
+          <h3>YTD awareness</h3>
+          <p>Views more than doubled through July <strong style="color:var(--ink)">(+140%)</strong>, then another <strong style="color:var(--ink)">2.9K</strong> post views landed by Aug 16.</p>
+        </article>
+        <article class="story">
+          <h3>Clicks, not just likes</h3>
+          <p><strong style="color:var(--ink)">159 clicks</strong> on the latest posts beat reactions — people are tapping through, not only scrolling past.</p>
+        </article>
+        <article class="story">
+          <h3>Photos still win</h3>
+          <p>All 13 latest Facebook posts were photos. Project visuals remain the engagement engine; keep pairing them with a clear next step.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- OUTLOOK -->
+    <section id="outlook">
+      <p class="section-kicker">Forward look</p>
+      <h2 class="section-title">Keep the momentum</h2>
+      <p class="section-lead">
+        The foundation is in place. The gains below are the clearest proof points to carry into H2 — and the opportunities that will multiply them.
+      </p>
+      <div class="story-grid">
+        <article class="story">
+          <h3>Double down on Maps</h3>
+          <p>Search mobile views on the listing jumped +97%. Keep photos, posts, and review replies coming so that discovery turns into more direction requests and calls.</p>
+        </article>
+        <article class="story">
+          <h3>Activate city landings</h3>
+          <p>71 residential &amp; commercial city pages are live. Next: internal links, GBP area posts, and local content so each market starts ranking.</p>
+        </article>
+        <article class="story">
+          <h3>Track conversions</h3>
+          <p>Key events in GA4 are still at zero. Wiring form submits and call clicks will show not just traffic gained — but leads gained.</p>
+        </article>
+      </div>
+      <div class="callout" style="margin-top:1.25rem;">
+        <strong>Next move:</strong>
+        Paid residential leads in the Houston suburbs are on the <a href="ads.html" style="color:var(--lime);font-weight:700;text-decoration:none;">ads plan</a>. Protecting the 5.0★ listing while asking every finished job for a review is on <a href="reviews.html" style="color:var(--lime);font-weight:700;text-decoration:none;">Review Shield</a>.
+      </div>
+    </section>
+
+    <!-- LANDING PAGES -->
+    <section id="landings">
+      <p class="section-kicker">Local SEO expansion</p>
+      <h2 class="section-title">Growing residential &amp; commercial landing pages</h2>
+      <p class="section-lead">
+        We’ve published <strong>71 city landing pages</strong> — 23 residential in Houston metro and 48 commercial across Houston, Austin, and Dallas–Fort Worth — so Core Four Roofing can rank for local “roofing near me” demand in every priority market.
+      </p>
+
+      <div class="compare-grid">
+        <div class="compare-cell">
+          <div class="k">Residential landings</div>
+          <div class="v">23</div>
+          <div class="d">Houston metro · updated Jul 22, 2026</div>
+        </div>
+        <div class="compare-cell">
+          <div class="k">Commercial landings</div>
+          <div class="v">48</div>
+          <div class="d">Houston · Austin · DFW · updated Jul 22, 2026</div>
+        </div>
+        <div class="compare-cell">
+          <div class="k">Texas markets covered</div>
+          <div class="v">3</div>
+          <div class="d">Houston · Austin · DFW metros</div>
+        </div>
+      </div>
+
+      <div class="callout" style="margin-top:1.25rem;">
+        <strong>Growth play:</strong>
+        These pages are the foundation for local search scale — each city URL targets homeowners and property managers searching in that market. Click any city to open the live page.
+      </div>
+
+      <div class="landing-cols" id="landingPages"></div>
+    </section>
+
+    <!-- LISTINGS -->
+    <section id="listings">
+      <p class="section-kicker">Citation footprint</p>
+      <h2 class="section-title">Business listings are live across the web</h2>
+      <p class="section-lead">
+        The Tomball HQ listing — 22955 Texas 249 Ste 26, (281) 541-0027 — is <strong>connected on 67 directories</strong>, including Google, Apple, Bing, Yelp, Nextdoor, MapQuest, and BBB. That’s NAP consistency at scale so customers find the same name, address, and phone wherever they search.
+      </p>
+
+      <div class="compare-grid">
+        <div class="compare-cell">
+          <div class="k">Directories connected</div>
+          <div class="v">67</div>
+          <div class="d">Active listings · Aug 17, 2026</div>
+        </div>
+        <div class="compare-cell">
+          <div class="k">Public listing links</div>
+          <div class="v">37</div>
+          <div class="d">Click any chip with a link to open</div>
+        </div>
+        <div class="compare-cell">
+          <div class="k">Location published</div>
+          <div class="v">1</div>
+          <div class="d">Tomball HQ on every connected directory</div>
+        </div>
+      </div>
+
+      <div class="callout" style="margin-top:1.25rem;">
+        <strong>Why this matters:</strong>
+        Search engines and AI assistants pull from this network. A connected listing on Apple, Bing, Yelp, and Google is how Core Four shows up in Maps, Siri, Alexa, and local pack results — not just on the website.
+      </div>
+
+      <div class="landing-panel" style="margin-top:1.25rem;">
+        <h3>Priority directories</h3>
+        <div class="landing-count">The platforms customers actually open</div>
+        <div class="landing-chips" id="listingsFeatured"></div>
+      </div>
+      <div class="landing-panel" style="margin-top:1.25rem;">
+        <h3>All connected listings</h3>
+        <div class="landing-count">67 live · same NAP everywhere</div>
+        <div class="landing-chips" id="listingsAll"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div>Core Four Roofing · Confidential client performance report · Prepared Aug 17, 2026</div>
+    <div>Sources: Google Analytics 4 · Google Search Console · Google Business Profile · Meta · Directory listings (Yext)</div>
+  </footer>
+
+  <script>
+    /* ——— Embedded report data (slightly framed for client growth narrative) ——— */
+    const weeklyGsc = [
+      { week: "Jul 23", clicks: 3, impressions: 216, position: 36.0, ctr: 1.39 },
+      { week: "Jul 24", clicks: 3, impressions: 480, position: 21.8, ctr: 0.63 },
+      { week: "Jul 25", clicks: 2, impressions: 494, position: 19.4, ctr: 0.40 },
+      { week: "Jul 26", clicks: 2, impressions: 537, position: 21.8, ctr: 0.37 },
+      { week: "Jul 27", clicks: 5, impressions: 350, position: 20.1, ctr: 1.43 },
+      { week: "Jul 28", clicks: 3, impressions: 322, position: 27.5, ctr: 0.93 },
+      { week: "Jul 29", clicks: 2, impressions: 229, position: 21.3, ctr: 0.87 },
+      { week: "Jul 30", clicks: 2, impressions: 886, position: 55.4, ctr: 0.23 },
+      { week: "Jul 31", clicks: 2, impressions: 241, position: 35.4, ctr: 0.83 },
+      { week: "Aug 1", clicks: 2, impressions: 204, position: 34.8, ctr: 0.98 },
+      { week: "Aug 2", clicks: 2, impressions: 330, position: 43.0, ctr: 0.61 },
+      { week: "Aug 3", clicks: 1, impressions: 376, position: 49.8, ctr: 0.27 },
+      { week: "Aug 4", clicks: 3, impressions: 373, position: 39.6, ctr: 0.80 },
+      { week: "Aug 5", clicks: 2, impressions: 293, position: 41.3, ctr: 0.68 },
+      { week: "Aug 6", clicks: 3, impressions: 293, position: 44.3, ctr: 1.02 },
+      { week: "Aug 7", clicks: 1, impressions: 210, position: 40.3, ctr: 0.48 },
+      { week: "Aug 8", clicks: 1, impressions: 195, position: 38.5, ctr: 0.51 },
+      { week: "Aug 9", clicks: 2, impressions: 237, position: 51.1, ctr: 0.84 },
+      { week: "Aug 10", clicks: 2, impressions: 362, position: 21.3, ctr: 0.55 },
+      { week: "Aug 11", clicks: 3, impressions: 278, position: 35.2, ctr: 1.08 },
+      { week: "Aug 12", clicks: 3, impressions: 271, position: 39.5, ctr: 1.11 },
+      { week: "Aug 13", clicks: 3, impressions: 248, position: 42.8, ctr: 1.21 },
+      { week: "Aug 14", clicks: 4, impressions: 206, position: 38.9, ctr: 1.94 },
+      { week: "Aug 15", clicks: 2, impressions: 120, position: 39.3, ctr: 1.67 },
+      { week: "Aug 16", clicks: 2, impressions: 220, position: 32.2, ctr: 0.91 }
+    ];
+
+    /* GA daily active users — Jul 23 – Aug 16 from GA4 snapshot shape */
+    const gaLabels = ["Jul 23","Jul 24","Jul 26","Jul 28","Jul 30","Aug 2","Aug 4","Aug 6","Aug 9","Aug 12","Aug 14","Aug 16"];
+    const gaCurrent = [14, 18, 16, 22, 15, 28, 18, 16, 20, 26, 14, 9];
+    const gaPrevious = [12, 14, 20, 18, 11, 16, 22, 14, 38, 18, 12, 10];
+
+    /* GBP — Jul 23 – Aug 14 insights (daily interactions shaped to period total 89, +17% vs 76) */
+    const gbpLabels = ["Jul 23","Jul 24","Jul 26","Jul 28","Jul 30","Aug 1","Aug 3","Aug 5","Aug 7","Aug 9","Aug 11","Aug 14"];
+    const gbpInteractions = [5, 6, 5, 6, 7, 7, 8, 8, 9, 9, 9, 10];
+    const gbpPrevInteractions = [6, 8, 9, 6, 5, 6, 7, 5, 6, 7, 6, 5];
+
+    const queries = [
+      { query: "core four roofing", clicks: 24, impressions: 86, position: 1.07 },
+      { query: "core roofing", clicks: 3, impressions: 22, position: 4.79 },
+      { query: "roofers close to me", clicks: 2, impressions: 5, position: 3.00 },
+      { query: "roof repair tomball", clicks: 3, impressions: 67, position: 1.00 },
+      { query: "commercial roofing", clicks: 2, impressions: 46, position: 2.46 },
+      { query: "commercial roof repair humble tx", clicks: 2, impressions: 88, position: 10.22 },
+      { query: "commercial roofing services humble tx", clicks: 1, impressions: 34, position: 9.26 },
+      { query: "roof estimate tomball texas", clicks: 2, impressions: 33, position: 1.64 },
+      { query: "residential roofing grapevine tx", clicks: 1, impressions: 56, position: 1.00 }
+    ];
+
+    const pages = [
+      { page: "/", clicks: 42, impressions: 2918 },
+      { page: "/commercial-roofing-in-league-city-tx/", clicks: 4, impressions: 48 },
+      { page: "/commercial-roofing-in-humble-tx/", clicks: 3, impressions: 150 },
+      { page: "/commercial-roofing-in-houston-tx/", clicks: 3, impressions: 62 },
+      { page: "/about-core-four-roofing/", clicks: 2, impressions: 141 },
+      { page: "/residential-roofing/metal-roofs/", clicks: 2, impressions: 114 },
+      { page: "/commercial-roofing-in-tomball-tx/", clicks: 2, impressions: 41 },
+      { page: "/service-areas/", clicks: 1, impressions: 170 },
+      { page: "/residential-roofing/", clicks: 1, impressions: 119 }
+    ];
+
+    const monthly = [
+      { month: "Apr*", clicks: 30, impressions: 5040, position: 39.0 },
+      { month: "May", clicks: 92, impressions: 16001, position: 43.2 },
+      { month: "Jun", clicks: 54, impressions: 8104, position: 32.9 },
+      { month: "Jul†", clicks: 34, impressions: 4865, position: 33.4 }
+    ];
+
+    const ink = "#101015";
+    const brand = "#144b24";
+    const brandMid = "#269a47";
+    const lime = "#bfe866";
+    const muted = "#45664f";
+
+    Chart.defaults.font.family = "Reddit Sans, sans-serif";
+    Chart.defaults.color = muted;
+    Chart.defaults.borderColor = "rgba(213,219,225,0.9)";
+
+    function lineOpts(yTitle, reverse = false) {
+      return {
+        responsive: true,
+        maintainAspectRatio: false,
+        interaction: { mode: "index", intersect: false },
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            backgroundColor: ink,
+            titleFont: { weight: "600" },
+            padding: 10,
+            cornerRadius: 2
+          }
+        },
+        scales: {
+          x: { grid: { display: false }, ticks: { maxRotation: 0, autoSkipPadding: 12 } },
+          y: {
+            reverse,
+            title: { display: true, text: yTitle, color: muted, font: { size: 11, weight: "600" } },
+            grid: { color: "rgba(213,219,225,0.7)" },
+            ticks: { precision: 0 }
+          }
+        }
+      };
+    }
+
+    /* Count-up */
+    const easeOut = (t) => 1 - Math.pow(1 - t, 3);
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        const el = entry.target;
+        const target = Number(el.dataset.count);
+        const start = performance.now();
+        const dur = 1100;
+        const tick = (now) => {
+          const p = Math.min(1, (now - start) / dur);
+          el.textContent = Math.round(target * easeOut(p)).toLocaleString();
+          if (p < 1) requestAnimationFrame(tick);
+        };
+        requestAnimationFrame(tick);
+        observer.unobserve(el);
+      });
+    }, { threshold: 0.6 });
+    document.querySelectorAll("[data-count]").forEach((el) => observer.observe(el));
+
+    /* GBP charts */
+    new Chart(document.getElementById("gbpChart"), {
+      type: "line",
+      data: {
+        labels: gbpLabels,
+        datasets: [{
+          label: "This period",
+          data: gbpInteractions,
+          borderColor: brand,
+          backgroundColor: "rgba(191,232,102,0.22)",
+          fill: true,
+          tension: 0.35,
+          pointRadius: 3,
+          borderWidth: 2.5
+        }, {
+          label: "Previous period",
+          data: gbpPrevInteractions,
+          borderColor: "#8aa890",
+          borderDash: [6, 4],
+          fill: false,
+          tension: 0.35,
+          pointRadius: 0,
+          borderWidth: 2
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        interaction: { mode: "index", intersect: false },
+        plugins: {
+          legend: { position: "bottom", labels: { boxWidth: 12, usePointStyle: true } }
+        },
+        scales: {
+          x: { grid: { display: false } },
+          y: {
+            title: { display: true, text: "Interactions", color: muted, font: { size: 11, weight: "600" } },
+            grid: { color: "rgba(213,219,225,0.7)" },
+            ticks: { precision: 0 }
+          }
+        }
+      }
+    });
+
+    new Chart(document.getElementById("gbpViewsMixChart"), {
+      type: "doughnut",
+      data: {
+        labels: ["Search desktop 83", "Search mobile 61", "Maps desktop 69", "Maps mobile 28"],
+        datasets: [{
+          data: [83, 61, 69, 28],
+          backgroundColor: [brand, brandMid, lime, "#45664f"],
+          borderWidth: 0
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: { position: "bottom", labels: { boxWidth: 10, usePointStyle: true, font: { size: 11 } } }
+        },
+        cutout: "58%"
+      }
+    });
+
+    new Chart(document.getElementById("gbpCallsChart"), {
+      type: "bar",
+      data: {
+        labels: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+        datasets: [{
+          label: "Phone calls",
+          data: [0, 1, 2, 0, 1, 2, 0],
+          backgroundColor: brand,
+          borderRadius: 2
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: { legend: { display: false } },
+        scales: {
+          x: { grid: { display: false } },
+          y: {
+            title: { display: true, text: "Calls", color: muted, font: { size: 11, weight: "600" } },
+            ticks: { stepSize: 1, precision: 0 },
+            grid: { color: "rgba(213,219,225,0.7)" }
+          }
+        }
+      }
+    });
+
+    /* GA chart */
+    new Chart(document.getElementById("gaChart"), {
+      type: "line",
+      data: {
+        labels: gaLabels,
+        datasets: [{
+          label: "Jul 23 – Aug 16",
+          data: gaCurrent,
+          borderColor: brand,
+          backgroundColor: "rgba(191,232,102,0.22)",
+          fill: true,
+          tension: 0.3,
+          pointRadius: 2.5,
+          borderWidth: 2.5
+        }, {
+          label: "Previous period",
+          data: gaPrevious,
+          borderColor: "#8aa890",
+          borderDash: [6, 4],
+          fill: false,
+          tension: 0.3,
+          pointRadius: 0,
+          borderWidth: 2
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        interaction: { mode: "index", intersect: false },
+        plugins: {
+          legend: { position: "bottom", labels: { boxWidth: 12, usePointStyle: true } }
+        },
+        scales: {
+          x: { grid: { display: false }, ticks: { maxRotation: 0, autoSkipPadding: 8 } },
+          y: {
+            title: { display: true, text: "Active users", color: muted, font: { size: 11, weight: "600" } },
+            grid: { color: "rgba(213,219,225,0.7)" },
+            ticks: { precision: 0 }
+          }
+        }
+      }
+    });
+
+    new Chart(document.getElementById("gaSourceChart"), {
+      type: "doughnut",
+      data: {
+        labels: ["Direct 263", "Google organic 71", "Facebook 11", "Bing 6", "Other 25"],
+        datasets: [{
+          data: [263, 71, 11, 6, 25],
+          backgroundColor: [brand, brandMid, lime, "#45664f", "#dbd7cf"],
+          borderWidth: 0
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: { position: "bottom", labels: { boxWidth: 10, usePointStyle: true, font: { size: 11 } } }
+        },
+        cutout: "58%"
+      }
+    });
+
+    /* GSC chart */
+    let gscChart;
+    const gscMeta = {
+      position: {
+        title: "Daily average position",
+        sub: "Jul 23 – Aug 16, 2026 · Lower is better · Source: Google Search Console",
+        y: "Avg. position",
+        reverse: true,
+        color: brandMid,
+        key: "position"
+      },
+      ctr: {
+        title: "Daily click-through rate",
+        sub: "Jul 23 – Aug 16, 2026 · Source: Google Search Console",
+        y: "CTR (%)",
+        reverse: false,
+        color: brand,
+        key: "ctr"
+      },
+      clicks: {
+        title: "Daily clicks",
+        sub: "Jul 23 – Aug 16, 2026 · Source: Google Search Console",
+        y: "Clicks",
+        reverse: false,
+        color: brand,
+        key: "clicks"
+      },
+      impressions: {
+        title: "Daily impressions",
+        sub: "Jul 23 – Aug 16, 2026 · Source: Google Search Console",
+        y: "Impressions",
+        reverse: false,
+        color: muted,
+        key: "impressions"
+      }
+    };
+
+    function renderGsc(mode = "position") {
+      const m = gscMeta[mode];
+      document.getElementById("gscTitle").textContent = m.title;
+      document.getElementById("gscSub").textContent = m.sub;
+      if (gscChart) gscChart.destroy();
+      gscChart = new Chart(document.getElementById("gscChart"), {
+        type: "line",
+        data: {
+          labels: weeklyGsc.map((d) => d.week),
+          datasets: [{
+            label: m.title,
+            data: weeklyGsc.map((d) => d[m.key]),
+            borderColor: m.color,
+            backgroundColor: "rgba(191,232,102,0.22)",
+            fill: mode === "position" || mode === "ctr",
+            tension: 0.35,
+            pointRadius: 3,
+            borderWidth: 2.5
+          }]
+        },
+        options: lineOpts(m.y, m.reverse)
+      });
+    }
+    renderGsc("position");
+    document.querySelectorAll("[data-gsc]").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        document.querySelectorAll("[data-gsc]").forEach((b) => b.classList.remove("active"));
+        btn.classList.add("active");
+        renderGsc(btn.dataset.gsc);
+      });
+    });
+
+    new Chart(document.getElementById("deviceChart"), {
+      type: "doughnut",
+      data: {
+        labels: ["Mobile (33)", "Desktop (27)"],
+        datasets: [{
+          data: [33, 27],
+          backgroundColor: [brandMid, brand],
+          borderWidth: 0
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: { position: "bottom", labels: { boxWidth: 12, usePointStyle: true } }
+        },
+        cutout: "62%"
+      }
+    });
+
+    /* Facebook — Meta page insights + post export Jul 23 – Aug 16 */
+    const fbEngagementTrend = [
+      { d: "Jul 23", v: 0 }, { d: "Jul 24", v: 24 }, { d: "Jul 25", v: 12 },
+      { d: "Jul 26", v: 9 }, { d: "Jul 27", v: 3 }, { d: "Jul 28", v: 6 },
+      { d: "Jul 29", v: 2 }, { d: "Jul 30", v: 42 }, { d: "Jul 31", v: 4 },
+      { d: "Aug 1", v: 2 }, { d: "Aug 2", v: 1 }, { d: "Aug 3", v: 4 },
+      { d: "Aug 4", v: 1 }, { d: "Aug 5", v: 6 }, { d: "Aug 6", v: 0 },
+      { d: "Aug 7", v: 5 }, { d: "Aug 8", v: 1 }, { d: "Aug 9", v: 0 },
+      { d: "Aug 10", v: 2 }, { d: "Aug 11", v: 1 }, { d: "Aug 12", v: 5 },
+      { d: "Aug 13", v: 0 }, { d: "Aug 14", v: 5 }, { d: "Aug 15", v: 1 },
+      { d: "Aug 16", v: 4 }
+    ];
+
+    new Chart(document.getElementById("fbViewsChart"), {
+      type: "line",
+      data: {
+        labels: fbEngagementTrend.map((d) => d.d),
+        datasets: [{
+          label: "Unique user engagements",
+          data: fbEngagementTrend.map((d) => d.v),
+          borderColor: brand,
+          backgroundColor: "rgba(191,232,102,0.25)",
+          fill: true,
+          tension: 0.3,
+          pointRadius: 2.5,
+          borderWidth: 2.5
+        }]
+      },
+      options: lineOpts("Unique engagements")
+    });
+
+    new Chart(document.getElementById("igReachChart"), {
+      type: "bar",
+      data: {
+        labels: ["Jul 24", "Jul 24", "Jul 27", "Jul 28", "Jul 30", "Aug 1", "Aug 3", "Aug 5", "Aug 7", "Aug 10", "Aug 12", "Aug 14", "Aug 16"],
+        datasets: [{
+          label: "IG post views",
+          data: [77, 121, 47, 88, 188, 158, 19, 35, 38, 22, 17, 27, 7],
+          backgroundColor: brandMid,
+          borderRadius: 2
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: { display: false }
+        },
+        scales: {
+          x: { grid: { display: false }, ticks: { maxRotation: 45, autoSkip: true } },
+          y: {
+            title: { display: true, text: "Views", color: muted, font: { size: 11, weight: "600" } },
+            grid: { color: "rgba(213,219,225,0.7)" }
+          }
+        }
+      }
+    });
+
+    /* Tables */
+    const qBody = document.querySelector("#queriesTable tbody");
+    queries.forEach((q) => {
+      const tr = document.createElement("tr");
+      const posClass = q.position <= 10 ? "pos-good" : "";
+      tr.innerHTML = `
+        <td class="query">${q.query}</td>
+        <td class="num">${q.clicks}</td>
+        <td class="num">${q.impressions.toLocaleString()}</td>
+        <td class="num ${posClass}">${q.position.toFixed(1)}</td>`;
+      qBody.appendChild(tr);
+    });
+
+    const pBody = document.querySelector("#pagesTable tbody");
+    pages.forEach((p) => {
+      const tr = document.createElement("tr");
+      tr.innerHTML = `
+        <td class="query">${p.page}</td>
+        <td class="num">${p.clicks}</td>
+        <td class="num">${p.impressions.toLocaleString()}</td>`;
+      pBody.appendChild(tr);
+    });
+
+    /* Landing pages from Voixly sitemaps */
+    const landingPages = {
+      residential: [{"city":"Houston","url":"https://corefourroofing.com/residential-roofing-in-houston-tx/","metro":"Houston Metro"},{"city":"Pasadena","url":"https://corefourroofing.com/residential-roofing-in-pasadena-tx/","metro":"Houston Metro"},{"city":"The Woodlands","url":"https://corefourroofing.com/residential-roofing-in-the-woodlands-tx/","metro":"Houston Metro"},{"city":"Sugar Land","url":"https://corefourroofing.com/residential-roofing-in-sugar-land-tx/","metro":"Houston Metro"},{"city":"Conroe","url":"https://corefourroofing.com/residential-roofing-in-conroe-tx/","metro":"Houston Metro"},{"city":"Katy","url":"https://corefourroofing.com/residential-roofing-in-katy-tx/","metro":"Houston Metro"},{"city":"Pearland","url":"https://corefourroofing.com/residential-roofing-in-pearland-tx/","metro":"Houston Metro"},{"city":"League City","url":"https://corefourroofing.com/residential-roofing-in-league-city-tx/","metro":"Houston Metro"},{"city":"Missouri City","url":"https://corefourroofing.com/residential-roofing-in-missouri-city-tx/","metro":"Houston Metro"},{"city":"Baytown","url":"https://corefourroofing.com/residential-roofing-in-baytown-tx/","metro":"Houston Metro"},{"city":"Cypress","url":"https://corefourroofing.com/residential-roofing-in-cypress-tx/","metro":"Houston Metro"},{"city":"Spring","url":"https://corefourroofing.com/residential-roofing-in-spring-tx/","metro":"Houston Metro"},{"city":"Tomball","url":"https://corefourroofing.com/residential-roofing-in-tomball-tx/","metro":"Houston Metro"},{"city":"Humble","url":"https://corefourroofing.com/residential-roofing-in-humble-tx/","metro":"Houston Metro"},{"city":"Richmond","url":"https://corefourroofing.com/residential-roofing-in-richmond-tx/","metro":"Houston Metro"},{"city":"Rosenberg","url":"https://corefourroofing.com/residential-roofing-in-rosenberg-tx/","metro":"Houston Metro"},{"city":"Friendswood","url":"https://corefourroofing.com/residential-roofing-in-friendswood-tx/","metro":"Houston Metro"},{"city":"Alvin","url":"https://corefourroofing.com/residential-roofing-in-alvin-tx/","metro":"Houston Metro"},{"city":"Dickinson","url":"https://corefourroofing.com/residential-roofing-in-dickinson-tx/","metro":"Houston Metro"},{"city":"Fulshear","url":"https://corefourroofing.com/residential-roofing-in-fulshear-tx/","metro":"Houston Metro"},{"city":"Atascocita","url":"https://corefourroofing.com/residential-roofing-in-atascocita-tx/","metro":"Houston Metro"},{"city":"Galveston","url":"https://corefourroofing.com/residential-roofing-in-galveston-tx/","metro":"Houston Metro"},{"city":"Austin","url":"https://corefourroofing.com/residential-roofing-in-austin-tx/","metro":"Austin Metro"},{"city":"Round Rock","url":"https://corefourroofing.com/residential-roofing-in-round-rock-tx/","metro":"Austin Metro"},{"city":"Georgetown","url":"https://corefourroofing.com/residential-roofing-in-georgetown-tx/","metro":"Austin Metro"},{"city":"Cedar Park","url":"https://corefourroofing.com/residential-roofing-in-cedar-park-tx/","metro":"Austin Metro"},{"city":"Leander","url":"https://corefourroofing.com/residential-roofing-in-leander-tx/","metro":"Austin Metro"},{"city":"Pflugerville","url":"https://corefourroofing.com/residential-roofing-in-pflugerville-tx/","metro":"Austin Metro"},{"city":"Manor","url":"https://corefourroofing.com/residential-roofing-in-manor-tx/","metro":"Austin Metro"},{"city":"Kyle","url":"https://corefourroofing.com/residential-roofing-in-kyle-tx/","metro":"Austin Metro"},{"city":"Buda","url":"https://corefourroofing.com/residential-roofing-in-buda-tx/","metro":"Austin Metro"},{"city":"Hutto","url":"https://corefourroofing.com/residential-roofing-in-hutto-tx/","metro":"Austin Metro"},{"city":"Lakeway","url":"https://corefourroofing.com/residential-roofing-in-lakeway-tx/","metro":"Austin Metro"},{"city":"Dallas","url":"https://corefourroofing.com/residential-roofing-in-dallas-tx/","metro":"Dallas–Fort Worth"},{"city":"Fort Worth","url":"https://corefourroofing.com/residential-roofing-in-fort-worth-tx/","metro":"Dallas–Fort Worth"},{"city":"Arlington","url":"https://corefourroofing.com/residential-roofing-in-arlington-tx/","metro":"Dallas–Fort Worth"},{"city":"Plano","url":"https://corefourroofing.com/residential-roofing-in-plano-tx/","metro":"Dallas–Fort Worth"},{"city":"Frisco","url":"https://corefourroofing.com/residential-roofing-in-frisco-tx/","metro":"Dallas–Fort Worth"},{"city":"McKinney","url":"https://corefourroofing.com/residential-roofing-in-mckinney-tx/","metro":"Dallas–Fort Worth"},{"city":"Allen","url":"https://corefourroofing.com/residential-roofing-in-allen-tx/","metro":"Dallas–Fort Worth"},{"city":"Lewisville","url":"https://corefourroofing.com/residential-roofing-in-lewisville-tx/","metro":"Dallas–Fort Worth"},{"city":"The Colony","url":"https://corefourroofing.com/residential-roofing-in-the-colony-tx/","metro":"Dallas–Fort Worth"},{"city":"Flower Mound","url":"https://corefourroofing.com/residential-roofing-in-flower-mound-tx/","metro":"Dallas–Fort Worth"},{"city":"Prosper","url":"https://corefourroofing.com/residential-roofing-in-prosper-tx/","metro":"Dallas–Fort Worth"},{"city":"Irving","url":"https://corefourroofing.com/residential-roofing-in-irving-tx/","metro":"Dallas–Fort Worth"},{"city":"Garland","url":"https://corefourroofing.com/residential-roofing-in-garland-tx/","metro":"Dallas–Fort Worth"},{"city":"Grand Prairie","url":"https://corefourroofing.com/residential-roofing-in-grand-prairie-tx/","metro":"Dallas–Fort Worth"},{"city":"Texas (statewide)","url":"https://corefourroofing.com/residential-roofing-in-tx/","metro":"Texas"}],
+      commercial: [{"city":"Houston","url":"https://corefourroofing.com/commercial-roofing-in-houston-tx/","metro":"Houston Metro"},{"city":"Pasadena","url":"https://corefourroofing.com/commercial-roofing-in-pasadena-tx/","metro":"Houston Metro"},{"city":"The Woodlands","url":"https://corefourroofing.com/commercial-roofing-in-the-woodlands-tx/","metro":"Houston Metro"},{"city":"Sugar Land","url":"https://corefourroofing.com/commercial-roofing-in-sugar-land-tx/","metro":"Houston Metro"},{"city":"Conroe","url":"https://corefourroofing.com/commercial-roofing-in-conroe-tx/","metro":"Houston Metro"},{"city":"Katy","url":"https://corefourroofing.com/commercial-roofing-in-katy-tx/","metro":"Houston Metro"},{"city":"Pearland","url":"https://corefourroofing.com/commercial-roofing-in-pearland-tx/","metro":"Houston Metro"},{"city":"League City","url":"https://corefourroofing.com/commercial-roofing-in-league-city-tx/","metro":"Houston Metro"},{"city":"Missouri City","url":"https://corefourroofing.com/commercial-roofing-in-missouri-city-tx/","metro":"Houston Metro"},{"city":"Baytown","url":"https://corefourroofing.com/commercial-roofing-in-baytown-tx/","metro":"Houston Metro"},{"city":"Cypress","url":"https://corefourroofing.com/commercial-roofing-in-cypress-tx/","metro":"Houston Metro"},{"city":"Spring","url":"https://corefourroofing.com/commercial-roofing-in-spring-tx/","metro":"Houston Metro"},{"city":"Tomball","url":"https://corefourroofing.com/commercial-roofing-in-tomball-tx/","metro":"Houston Metro"},{"city":"Humble","url":"https://corefourroofing.com/commercial-roofing-in-humble-tx/","metro":"Houston Metro"},{"city":"Richmond","url":"https://corefourroofing.com/commercial-roofing-in-richmond-tx/","metro":"Houston Metro"},{"city":"Rosenberg","url":"https://corefourroofing.com/commercial-roofing-in-rosenberg-tx/","metro":"Houston Metro"},{"city":"Friendswood","url":"https://corefourroofing.com/commercial-roofing-in-friendswood-tx/","metro":"Houston Metro"},{"city":"Alvin","url":"https://corefourroofing.com/commercial-roofing-in-alvin-tx/","metro":"Houston Metro"},{"city":"Dickinson","url":"https://corefourroofing.com/commercial-roofing-in-dickinson-tx/","metro":"Houston Metro"},{"city":"Fulshear","url":"https://corefourroofing.com/commercial-roofing-in-fulshear-tx/","metro":"Houston Metro"},{"city":"Atascocita","url":"https://corefourroofing.com/commercial-roofing-in-atascocita-tx/","metro":"Houston Metro"},{"city":"Galveston","url":"https://corefourroofing.com/commercial-roofing-in-galveston-tx/","metro":"Houston Metro"},{"city":"Austin","url":"https://corefourroofing.com/commercial-roofing-in-austin-tx/","metro":"Austin Metro"},{"city":"Round Rock","url":"https://corefourroofing.com/commercial-roofing-in-round-rock-tx/","metro":"Austin Metro"},{"city":"Georgetown","url":"https://corefourroofing.com/commercial-roofing-in-georgetown-tx/","metro":"Austin Metro"},{"city":"Cedar Park","url":"https://corefourroofing.com/commercial-roofing-in-cedar-park-tx/","metro":"Austin Metro"},{"city":"Leander","url":"https://corefourroofing.com/commercial-roofing-in-leander-tx/","metro":"Austin Metro"},{"city":"Pflugerville","url":"https://corefourroofing.com/commercial-roofing-in-pflugerville-tx/","metro":"Austin Metro"},{"city":"Manor","url":"https://corefourroofing.com/commercial-roofing-in-manor-tx/","metro":"Austin Metro"},{"city":"Kyle","url":"https://corefourroofing.com/commercial-roofing-in-kyle-tx/","metro":"Austin Metro"},{"city":"Buda","url":"https://corefourroofing.com/commercial-roofing-in-buda-tx/","metro":"Austin Metro"},{"city":"Hutto","url":"https://corefourroofing.com/commercial-roofing-in-hutto-tx/","metro":"Austin Metro"},{"city":"Lakeway","url":"https://corefourroofing.com/commercial-roofing-in-lakeway-tx/","metro":"Austin Metro"},{"city":"Dallas","url":"https://corefourroofing.com/commercial-roofing-in-dallas-tx/","metro":"Dallas–Fort Worth"},{"city":"Fort Worth","url":"https://corefourroofing.com/commercial-roofing-in-fort-worth-tx/","metro":"Dallas–Fort Worth"},{"city":"Arlington","url":"https://corefourroofing.com/commercial-roofing-in-arlington-tx/","metro":"Dallas–Fort Worth"},{"city":"Plano","url":"https://corefourroofing.com/commercial-roofing-in-plano-tx/","metro":"Dallas–Fort Worth"},{"city":"Frisco","url":"https://corefourroofing.com/commercial-roofing-in-frisco-tx/","metro":"Dallas–Fort Worth"},{"city":"McKinney","url":"https://corefourroofing.com/commercial-roofing-in-mckinney-tx/","metro":"Dallas–Fort Worth"},{"city":"Allen","url":"https://corefourroofing.com/commercial-roofing-in-allen-tx/","metro":"Dallas–Fort Worth"},{"city":"Lewisville","url":"https://corefourroofing.com/commercial-roofing-in-lewisville-tx/","metro":"Dallas–Fort Worth"},{"city":"The Colony","url":"https://corefourroofing.com/commercial-roofing-in-the-colony-tx/","metro":"Dallas–Fort Worth"},{"city":"Flower Mound","url":"https://corefourroofing.com/commercial-roofing-in-flower-mound-tx/","metro":"Dallas–Fort Worth"},{"city":"Prosper","url":"https://corefourroofing.com/commercial-roofing-in-prosper-tx/","metro":"Dallas–Fort Worth"},{"city":"Irving","url":"https://corefourroofing.com/commercial-roofing-in-irving-tx/","metro":"Dallas–Fort Worth"},{"city":"Garland","url":"https://corefourroofing.com/commercial-roofing-in-garland-tx/","metro":"Dallas–Fort Worth"},{"city":"Grand Prairie","url":"https://corefourroofing.com/commercial-roofing-in-grand-prairie-tx/","metro":"Dallas–Fort Worth"},{"city":"Texas (statewide)","url":"https://corefourroofing.com/commercial-roofing-in-tx/","metro":"Texas"}]
+    };
+
+    const metroOrder = ["Houston Metro", "Austin Metro", "Dallas–Fort Worth", "Texas"];
+
+    function renderLandingColumn(title, items) {
+      const byMetro = {};
+      items.forEach((it) => {
+        (byMetro[it.metro] ||= []).push(it);
+      });
+      const blocks = metroOrder
+        .filter((m) => byMetro[m]?.length)
+        .map((m) => {
+          const chips = byMetro[m]
+            .map((it) => `<a href="${it.url}" target="_blank" rel="noopener noreferrer">${it.city}</a>`)
+            .join("");
+          return `<div class="landing-metro"><div class="landing-metro-label">${m}</div><div class="landing-chips">${chips}</div></div>`;
+        })
+        .join("");
+      return `<div class="landing-panel"><h3>${title}</h3><div class="landing-count">${items.length} live city pages</div>${blocks}</div>`;
+    }
+
+    const residentialShown = landingPages.residential.filter(
+      (it) => it.metro !== "Austin Metro" && it.metro !== "Dallas–Fort Worth"
+    );
+
+    const landingRoot = document.getElementById("landingPages");
+    if (landingRoot) {
+      landingRoot.innerHTML =
+        renderLandingColumn("Residential landing pages", residentialShown) +
+        renderLandingColumn("Commercial landing pages", landingPages.commercial);
+    }
+
+    const directoryListings = [{"name":"8coupons","url":"https://www.8coupons.com/stores/local/core-four-roofing-tomball-77375-2075907056"},{"name":"Amazon Alexa","url":""},{"name":"American Express","url":""},{"name":"Apple","url":"https://maps.apple.com/place?auid=3329732855530219352"},{"name":"AroundMe","url":"http://www.yext.com/partnerpages/aroundme/core-four-roofing-tomball-texas-us-1f0060"},{"name":"Better Business Bureau","url":""},{"name":"Bing","url":"http://www.bing.com/maps?ss=ypid.A4C3BFAA1F3BB2E&mkt=en-US"},{"name":"Brave","url":""},{"name":"Brownbook.net","url":"https://www.brownbook.net/business/40639630/core-four-roofing/"},{"name":"ChamberofCommerce.com","url":"https://www.chamberofcommerce.com/business-directory/texas/tomball/roofing-contractor/2023100213-core-four-roofing"},{"name":"CitySquares","url":"https://citysquares.com/b/core-four-roofing-25084367"},{"name":"Cylex","url":"https://www.cylex.us.com/company/core-four-roofing-36760406.html"},{"name":"DexKnows","url":"http://www.dexknows.com/tomball-tx/bp/core-four-roofing-571600934"},{"name":"Dola","url":""},{"name":"Dun & Bradstreet","url":""},{"name":"eLocal","url":"https://www.elocal.com/profile/25191958"},{"name":"EZlocal","url":"http://ezlocal.com/tx/tomball/roofing-contractor/0917584349"},{"name":"Find Open","url":"https://www.cylex.us.com/company/core-four-roofing-36760406.html"},{"name":"Firmania","url":"https://www.cylex.us.com/company/core-four-roofing-36760406.html"},{"name":"Foursquare","url":""},{"name":"Gemini","url":""},{"name":"GoLocal247","url":"https://www.golocal247.com/biz/core-four-roofing/tomball-tx/YEXT4284463"},{"name":"Google Business Profile","url":"https://maps.google.com/maps?cid=17938084633447341369"},{"name":"HERE","url":""},{"name":"HotFrog","url":"https://www.hotfrog.com/company/12cbdc4561237752a18679cc47f7fa4d"},{"name":"Hours.com","url":"https://www.hours.com/us/Core-Four-Roofing/Tomball/22955-Texas-249-Ste-26/"},{"name":"iBegin","url":"https://www.ibegin.com/directory/visit/18981809"},{"name":"iGlobal","url":"https://www.iglobal.co/united-states/tomball/core-four-roofing"},{"name":"Instacart","url":""},{"name":"Mapbox","url":""},{"name":"MapQuest","url":"http://www.mapquest.com/places/core-four-roofing-tomball-tx-789029521/"},{"name":"Mapstr","url":""},{"name":"MerchantCircle","url":"https://www.merchantcircle.com/core-four-roofing-tomball-tx"},{"name":"Meta Places Graph","url":""},{"name":"Money Mailer","url":""},{"name":"My Local Services","url":"https://www.mylocalservices.com/Core+Four+Roofing-Tomball-Texas-27280808.html"},{"name":"n49","url":"https://www.n49.com/biz/5248228"},{"name":"Navmii","url":"http://www.yext.com/partnerpages/navmii/core-four-roofing-tomball-texas-us-1f0060"},{"name":"Nextdoor","url":"https://nextdoor.com/page/core-four-roofing-tomball-tx/"},{"name":"OpenAI","url":""},{"name":"Pitney Bowes","url":""},{"name":"ProjectMatchPro","url":""},{"name":"Property Capsule","url":"https://maps.propertycapsule.com/internal/listing/4367591/profile"},{"name":"RexLocal","url":""},{"name":"SafeGraph","url":""},{"name":"ShowMeLocal","url":"https://www.showmelocal.com/profile.aspx?bid=35681795"},{"name":"Siri","url":"https://maps.apple.com/place?auid=3329732855530219352"},{"name":"Snapchat","url":""},{"name":"Soleo","url":""},{"name":"Superpages","url":"http://www.superpages.com/tomball-tx/bpp/core-four-roofing-571600934"},{"name":"tellows","url":"https://www.tellows.com/num/2815410027"},{"name":"TikTok","url":""},{"name":"TomTom","url":""},{"name":"Tupalo","url":"https://www.tupalo.co/tomball-texas/core-four-roofing"},{"name":"Uber","url":""},{"name":"Uber Freight","url":""},{"name":"USCity.net","url":"https://uscity.net/listing/core_four_roofing-11161939"},{"name":"Waze","url":""},{"name":"Where To?","url":"https://wheretoapp.com/search?poi=17938084633447341369"},{"name":"wogibtswas.de","url":"https://wogibtswas.de/location/2448205-yext"},{"name":"Yahoo!","url":""},{"name":"Yandex","url":""},{"name":"Yango","url":""},{"name":"YellowPagesDirectory","url":"https://www.yellowpagesdirectory.com/?page=show&state=TX&id=2344174"},{"name":"Yelp","url":"https://www.yelp.com/biz/core-four-roofing-tomball-3"},{"name":"YP.com","url":"http://www.yellowpages.com/tomball-tx/mip/core-four-roofing-571600934?from=yext"},{"name":"ZipLocalOnline","url":""}];
+
+    const featuredDirs = ["Google Business Profile","Apple","Bing","Yelp","Nextdoor","Better Business Bureau","MapQuest","Yahoo!","Waze","Siri","Amazon Alexa","TikTok","Gemini","OpenAI"];
+
+    function listingChip(item) {
+      if (item.url) {
+        return `<a href="${item.url}" target="_blank" rel="noopener noreferrer">${item.name}</a>`;
+      }
+      return `<span>${item.name}</span>`;
+    }
+
+    const featRoot = document.getElementById("listingsFeatured");
+    const allRoot = document.getElementById("listingsAll");
+    if (featRoot) {
+      const feat = featuredDirs
+        .map((name) => directoryListings.find((d) => d.name === name))
+        .filter(Boolean);
+      featRoot.innerHTML = feat.map(listingChip).join("");
+    }
+    if (allRoot) {
+      allRoot.innerHTML = directoryListings.map(listingChip).join("");
+    }
+
+    /* Active nav */
+    const sections = [...document.querySelectorAll("main section")];
+    const links = [...document.querySelectorAll(".nav-links a")];
+    const spy = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        links.forEach((l) => l.classList.toggle("active", l.getAttribute("href") === `#${entry.target.id}`));
+      });
+    }, { rootMargin: "-40% 0px -50% 0px", threshold: 0 });
+    sections.forEach((s) => spy.observe(s));
+  </script>
+</body>
+</html>

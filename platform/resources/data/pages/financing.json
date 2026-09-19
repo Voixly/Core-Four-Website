@@ -1,0 +1,1883 @@
+{
+ "url": "https://corefourroofing.com/financing/",
+ "title": "Financing - Core Four Roofing",
+ "description": "",
+ "h1": "Stress-Free Roof Financing in Texas",
+ "sections": [
+  {
+   "overlay": {
+    "gradient": "linear-gradient(200deg, rgba(41, 41, 41, 0) 17%, rgba(13, 13, 13, 0.78) 81%)",
+    "bg": null,
+    "opacity": "1"
+   },
+   "id": "mcb-section-7572bfae1",
+   "classes": [
+    "section",
+    "mcb-section",
+    "mfn-default-section",
+    "full-width"
+   ],
+   "bg": null,
+   "bgImage": "/images/live/core_four_residential_insurance_claim_roof-compressed.webp",
+   "bgSize": "cover",
+   "bgPos": "50% 50%",
+   "padding": [
+    230,
+    86,
+    116,
+    86
+   ],
+   "h": 805,
+   "y": 0,
+   "wrapperWidth": 1267,
+   "wraps": [
+    {
+     "kind": "wrap",
+     "width": "three-fifth",
+     "box": {
+      "w": 760,
+      "h": 459,
+      "y": 230
+     },
+     "valign": "center",
+     "classes": [
+      "wrap",
+      "three-fifth",
+      "tablet-three-fifth",
+      "laptop-three-fifth",
+      "mobile-one",
+      "vb-item",
+      "clearfix"
+     ],
+     "columns": [
+      {
+       "kind": "column",
+       "width": "one",
+       "box": {
+        "w": 736,
+        "h": 38,
+        "y": 230
+       },
+       "span": 12,
+       "item": {
+        "type": "elfsight",
+        "widget": "267ccdad-1b32-4c62-9394-105914e96f0f",
+        "box": {
+         "w": 736,
+         "h": 38,
+         "y": 230
+        }
+       },
+       "classes": [
+        "column",
+        "one",
+        "laptop-one",
+        "tablet-one",
+        "mobile-one",
+        "column_column",
+        "vb-item"
+       ]
+      },
+      {
+       "kind": "column",
+       "width": "one",
+       "box": {
+        "w": 736,
+        "h": 128,
+        "y": 308
+       },
+       "span": 12,
+       "item": {
+        "type": "heading",
+        "align": "start",
+        "light": false,
+        "box": {
+         "w": 760,
+         "h": 160,
+         "y": 308
+        },
+        "level": 1,
+        "html": "Stress-Free Roof Financing in Texas",
+        "text": "Stress-Free Roof Financing in Texas",
+        "size": 67,
+        "weight": "700",
+        "color": "oklch(1 0 none)",
+        "lh": "80.807px",
+        "family": "industry",
+        "transform": "none",
+        "spacing": "0.8px"
+       },
+       "classes": [
+        "column",
+        "one",
+        "laptop-one",
+        "tablet-one",
+        "mobile-one",
+        "column_heading",
+        "vb-item"
+       ]
+      },
+      {
+       "kind": "column",
+       "width": "one",
+       "box": {
+        "w": 736,
+        "h": 77,
+        "y": 468
+       },
+       "span": 12,
+       "item": {
+        "type": "text",
+        "align": "start",
+        "light": false,
+        "box": {
+         "w": 760,
+         "h": 117,
+         "y": 468
+        },
+        "html": "Don't let budget concerns stand in the way of protecting your home or business. Core Four Roofing offers flexible, low-monthly-payment financing options so you can get the premium roof you need today and pay over time.",
+        "text": "Don't let budget concerns stand in the way of protecting your home or business. Core Four Roofing offers flexible, low-monthly-payment financing options so you can get the premium roof you need today and pay over time.",
+        "size": 16,
+        "color": "oklch(1 0 none)",
+        "lh": "25.6px",
+        "weight": "500"
+       },
+       "classes": [
+        "column",
+        "one",
+        "laptop-one",
+        "tablet-one",
+        "mobile-one",
+        "column_plain_text",
+        "vb-item"
+       ]
+      },
+      {
+       "kind": "column",
+       "width": "one",
+       "box": {
+        "w": 736,
+        "h": 64,
+        "y": 585
+       },
+       "span": 12,
+       "item": {
+        "type": "button",
+        "align": "start",
+        "light": false,
+        "box": {
+         "w": 760,
+         "h": 104,
+         "y": 585
+        },
+        "text": "Call for Financing Now",
+        "href": "tel:2815410027",
+        "icon": "fas fa-arrow-right",
+        "bg": "oklch(0.7055 0.1785 140.66)",
+        "color": "rgb(243, 240, 233)",
+        "size": 16,
+        "weight": "600",
+        "radius": 50,
+        "padding": [
+         20,
+         32,
+         20,
+         32
+        ]
+       },
+       "classes": [
+        "column",
+        "one",
+        "laptop-one",
+        "tablet-one",
+        "mobile-one",
+        "column_button",
+        "vb-item"
+       ]
+      }
+     ],
+     "span": 7
+    }
+   ]
+  },
+  {
+   "overlay": {
+    "gradient": "url(\"/images/live/top-triangles-dark.svg\")",
+    "bg": null,
+    "opacity": "1"
+   },
+   "id": "mcb-section-84cfa878d",
+   "classes": [
+    "section",
+    "mcb-section",
+    "mfn-default-section"
+   ],
+   "bg": "oklch(0.2496 0.031 155.1)",
+   "bgImage": null,
+   "bgSize": null,
+   "bgPos": null,
+   "padding": [
+    96,
+    0,
+    96,
+    0
+   ],
+   "h": 1176,
+   "y": 805,
+   "wrapperWidth": 1200,
+   "wraps": [
+    {
+     "kind": "wrap",
+     "width": "one",
+     "box": {
+      "padding": [
+       0,
+       0,
+       24,
+       0
+      ],
+      "w": 1200,
+      "h": 99,
+      "y": 901
+     },
+     "valign": "flex-start",
+     "classes": [
+      "wrap",
+      "one",
+      "tablet-one",
+      "laptop-one",
+      "mobile-one",
+      "vb-item",
+      "clearfix"
+     ],
+     "columns": [
+      {
+       "kind": "column",
+       "width": "one",
+       "box": {
+        "w": 1176,
+        "h": 35,
+        "y": 901
+       },
+       "span": 12,
+       "item": {
+        "type": "heading",
+        "align": "start",
+        "light": false,
+        "box": {
+         "w": 1200,
+         "h": 75,
+         "y": 901
+        },
+        "level": 2,
+        "html": "Smart Solutions for Your Roofing Investment",
+        "text": "Smart Solutions for Your Roofing Investment",
+        "size": 51,
+        "weight": "700",
+        "color": "oklch(1 0 none)",
+        "lh": "60.6202px",
+        "family": "industry",
+        "transform": "none",
+        "spacing": "0.8px"
+       },
+       "classes": [
+        "column",
+        "one",
+        "laptop-one",
+        "tablet-one",
+        "mobile-one",
+        "column_heading",
+        "vb-item"
+       ]
+      }
+     ],
+     "span": 12
+    },
+    {
+     "kind": "wrap",
+     "width": "one-second",
+     "box": {
+      "w": 584,
+      "h": 871,
+      "y": 1000
+     },
+     "valign": "flex-start",
+     "classes": [
+      "wrap",
+      "tablet-one",
+      "mobile-one",
+      "vb-item",
+      "clearfix"
+     ],
+     "columns": [],
+     "span": 6,
+     "wraps": [
+      {
+       "kind": "wrap",
+       "width": "one",
+       "box": {
+        "bg": "oklch(0.6099 0.1588 148.77)",
+        "radius": 32,
+        "padding": [
+         30,
+         0,
+         0,
+         0
+        ],
+        "w": 584,
+        "h": 871,
+        "y": 1000
+       },
+       "valign": "center",
+       "classes": [
+        "wrap",
+        "one",
+        "tablet-one",
+        "laptop-one",
+        "mobile-one",
+        "animate",
+        "mfn-nested-wrap",
+        "vb-item",
+        "clearfix",
+        "fadeInUp"
+       ],
+       "columns": [
+        {
+         "kind": "column",
+         "width": "one",
+         "box": {
+          "padding": [
+           0,
+           30,
+           0,
+           30
+          ],
+          "w": 560,
+          "h": 72,
+          "y": 1030
+         },
+         "span": 12,
+         "item": {
+          "type": "heading",
+          "align": "start",
+          "light": true,
+          "box": {
+           "w": 584,
+           "h": 88,
+           "y": 1030
+          },
+          "level": 3,
+          "html": "Flexible &amp; Affordable Options",
+          "text": "Flexible & Affordable Options",
+          "size": 38,
+          "weight": "700",
+          "color": "oklch(1 0 none)",
+          "lh": "45.4771px",
+          "family": "industry",
+          "transform": "none",
+          "spacing": "0.8px"
+         },
+         "classes": [
+          "column",
+          "one",
+          "laptop-one",
+          "tablet-one",
+          "mobile-one",
+          "column_heading",
+          "light-text",
+          "vb-item"
+         ]
+        },
+        {
+         "kind": "column",
+         "width": "one",
+         "box": {
+          "w": 524,
+          "h": 384,
+          "y": 1118
+         },
+         "span": 12,
+         "item": {
+          "type": "text",
+          "align": "start",
+          "light": false,
+          "box": {
+           "w": 584,
+           "h": 424,
+           "y": 1118
+          },
+          "html": "A new roof is a major investment, and roofing emergencies rarely happen at a convenient time. Whether you are facing sudden storm damage, need a total commercial roof replacement, or simply want to upgrade your home’s curb appeal with premium materials like standing seam metal or F-Wave synthetic shingles, capital shouldn't be a roadblock.<br><br>At Core Four Roofing, we believe that every Texas family and business deserves a safe, reliable roof over their heads. That is why we have partnered with the nation’s top home improvement lenders to provide customized financing plans. Our application process is completely secure, paperless, and incredibly fast, allowing you to secure funding and schedule your roof installation without draining your savings account or business operating capital.",
+          "text": "A new roof is a major investment, and roofing emergencies rarely happen at a convenient time. Whether you are facing sudden storm damage, need a total commercial roof replacement, or simply want to upgrade your home’s curb appeal with premium materials like standing seam metal or F-Wave synthetic shingles, capital shouldn't be a roadblock.\n\nAt Core Four Roofing, we believe that every Texas family and business deserves a safe, reliable roof over their heads. That is why we have partnered with the nation’s top home improvement lenders to provide customized financing plans. Our application process is completely secure, paperless, and incredibly fast, allowing you to secure funding and schedule your roof installation without draining your savings account or business operating capital.",
+          "size": 16,
+          "color": "oklch(1 0 none)",
+          "lh": "25.6px",
+          "weight": "500"
+         },
+         "classes": [
+          "column",
+          "one",
+          "laptop-one",
+          "tablet-one",
+          "mobile-one",
+          "column_plain_text",
+          "vb-item"
+         ]
+        },
+        {
+         "kind": "column",
+         "width": "one",
+         "box": {
+          "w": 584,
+          "h": 329,
+          "y": 1542
+         },
+         "span": 12,
+         "item": {
+          "type": "image",
+          "align": "start",
+          "light": false,
+          "box": {
+           "w": 584,
+           "h": 329,
+           "y": 1542
+          },
+          "img": {
+           "src": "/images/live/Decra-Villa-14-compressed.webp",
+           "alt": "",
+           "w": 1439,
+           "h": 809,
+           "dw": 585,
+           "dh": 329
+          },
+          "radius": 0
+         },
+         "classes": [
+          "column",
+          "one",
+          "laptop-one",
+          "tablet-one",
+          "mobile-one",
+          "column_image",
+          "vb-item"
+         ]
+        }
+       ],
+       "span": 12
+      }
+     ]
+    },
+    {
+     "kind": "wrap",
+     "width": "one-second",
+     "box": {
+      "w": 584,
+      "h": 885,
+      "y": 1000
+     },
+     "valign": "flex-start",
+     "classes": [
+      "wrap",
+      "tablet-one",
+      "mobile-one",
+      "vb-item",
+      "clearfix"
+     ],
+     "columns": [],
+     "span": 6,
+     "wraps": [
+      {
+       "kind": "wrap",
+       "width": "one",
+       "box": {
+        "bg": "rgb(255, 255, 255)",
+        "radius": 32,
+        "padding": [
+         30,
+         30,
+         0,
+         30
+        ],
+        "w": 584,
+        "h": 545,
+        "y": 1000
+       },
+       "valign": "center",
+       "classes": [
+        "wrap",
+        "one",
+        "tablet-one",
+        "laptop-one",
+        "mobile-one",
+        "animate",
+        "mfn-nested-wrap",
+        "vb-item",
+        "clearfix",
+        "fadeInUp"
+       ],
+       "columns": [
+        {
+         "kind": "column",
+         "width": "one",
+         "box": {
+          "w": 500,
+          "h": 72,
+          "y": 1030
+         },
+         "span": 12,
+         "item": {
+          "type": "heading",
+          "align": "start",
+          "light": false,
+          "box": {
+           "w": 524,
+           "h": 88,
+           "y": 1030
+          },
+          "level": 3,
+          "html": "Why Finance Your Roofing Project With Us?",
+          "text": "Why Finance Your Roofing Project With Us?",
+          "size": 38,
+          "weight": "700",
+          "color": "oklch(0.4122 0.0832 141.53)",
+          "lh": "45.4771px",
+          "family": "industry",
+          "transform": "none",
+          "spacing": "0.8px"
+         },
+         "classes": [
+          "column",
+          "one",
+          "laptop-one",
+          "tablet-one",
+          "mobile-one",
+          "column_heading",
+          "vb-item"
+         ]
+        },
+        {
+         "kind": "column",
+         "width": "one",
+         "box": {
+          "w": 500,
+          "h": 92,
+          "y": 1118
+         },
+         "span": 12,
+         "item": {
+          "type": "text",
+          "align": "start",
+          "light": false,
+          "box": {
+           "w": 500,
+           "h": 92,
+           "y": 1118
+          },
+          "html": "<p>We make the financial side of roofing just as seamless as the installation itself. Our lending partners offer a variety of plans designed to fit your specific monthly budget.</p>",
+          "text": "We make the financial side of roofing just as seamless as the installation itself. Our lending partners offer a variety of plans designed to fit your specific monthly budget."
+         },
+         "classes": [
+          "column",
+          "one",
+          "laptop-one",
+          "tablet-one",
+          "mobile-one",
+          "column_column",
+          "vb-item"
+         ]
+        },
+        {
+         "kind": "column",
+         "width": "one",
+         "box": {
+          "w": 524,
+          "h": 295,
+          "y": 1250
+         },
+         "span": 12,
+         "item": {
+          "type": "image",
+          "align": "start",
+          "light": false,
+          "box": {
+           "w": 524,
+           "h": 295,
+           "y": 1250
+          },
+          "img": {
+           "src": "/images/live/core_four_residential-compressed.webp",
+           "alt": "",
+           "w": 1439,
+           "h": 809,
+           "dw": 525,
+           "dh": 295
+          },
+          "radius": 32
+         },
+         "classes": [
+          "column",
+          "one",
+          "laptop-one",
+          "tablet-one",
+          "mobile-one",
+          "column_image",
+          "vb-item"
+         ]
+        }
+       ],
+       "span": 12
+      },
+      {
+       "kind": "wrap",
+       "width": "one",
+       "box": {
+        "bg": "oklch(0.6099 0.1588 148.77)",
+        "radius": 32,
+        "padding": [
+         48,
+         30,
+         0,
+         30
+        ],
+        "w": 584,
+        "h": 316,
+        "y": 1569
+       },
+       "valign": "center",
+       "classes": [
+        "wrap",
+        "one",
+        "tablet-one",
+        "laptop-one",
+        "mobile-one",
+        "light-text",
+        "animate",
+        "mfn-nested-wrap",
+        "vb-item",
+        "clearfix",
+        "fadeInUp"
+       ],
+       "columns": [
+        {
+         "kind": "column",
+         "width": "one",
+         "box": {
+          "w": 500,
+          "h": 20,
+          "y": 1617
+         },
+         "span": 12,
+         "item": {
+          "type": "heading",
+          "align": "start",
+          "light": true,
+          "box": {
+           "w": 524,
+           "h": 36,
+           "y": 1617
+          },
+          "level": 4,
+          "html": "Ready to Fund Your New Roof?",
+          "text": "Ready to Fund Your New Roof?",
+          "size": 28,
+          "weight": "800",
+          "color": "oklch(1 0 none)",
+          "lh": "34.1165px",
+          "family": "industry",
+          "transform": "none",
+          "spacing": "0.8px"
+         },
+         "classes": [
+          "column",
+          "one",
+          "laptop-one",
+          "tablet-one",
+          "mobile-one",
+          "column_heading",
+          "light-text",
+          "vb-item"
+         ]
+        },
+        {
+         "kind": "column",
+         "width": "one",
+         "box": {
+          "w": 500,
+          "h": 92,
+          "y": 1653
+         },
+         "span": 12,
+         "item": {
+          "type": "text",
+          "align": "start",
+          "light": false,
+          "box": {
+           "w": 500,
+           "h": 92,
+           "y": 1653
+          },
+          "html": "<p>Fill out the form below to speak with a Core Four team member about our current financing promotions, or click the link to apply directly through our secure lending portal.</p>",
+          "text": "Fill out the form below to speak with a Core Four team member about our current financing promotions, or click the link to apply directly through our secure lending portal."
+         },
+         "classes": [
+          "column",
+          "one",
+          "laptop-one",
+          "tablet-one",
+          "mobile-one",
+          "column_column",
+          "vb-item"
+         ]
+        },
+        {
+         "kind": "column",
+         "width": "one",
+         "box": {
+          "w": 500,
+          "h": 60,
+          "y": 1785
+         },
+         "span": 12,
+         "item": {
+          "type": "button",
+          "align": "start",
+          "light": false,
+          "box": {
+           "w": 524,
+           "h": 100,
+           "y": 1785
+          },
+          "text": "Get Pre-Approved",
+          "href": "https://corefourroofing.com/contact-core-four-roofing/",
+          "icon": "fas fa-arrow-right",
+          "bg": "rgb(219, 221, 223)",
+          "color": "rgb(98, 98, 98)",
+          "size": 16,
+          "weight": "600",
+          "radius": 50,
+          "padding": [
+           20,
+           32,
+           20,
+           32
+          ]
+         },
+         "classes": [
+          "column",
+          "one",
+          "laptop-one",
+          "tablet-one",
+          "mobile-one",
+          "column_button",
+          "vb-item"
+         ]
+        }
+       ],
+       "span": 12
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "overlay": {
+    "gradient": "linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, oklch(0.6099 0.1588 148.77) 31%)",
+    "bg": null,
+    "opacity": "1"
+   },
+   "id": "mcb-section-9161bb632",
+   "classes": [
+    "section",
+    "mcb-section",
+    "mfn-default-section"
+   ],
+   "bg": "oklch(0.6099 0.1588 148.77)",
+   "bgImage": "/images/live/bottom-triangles-dark.svg",
+   "bgSize": "contain",
+   "bgPos": "50% 100%",
+   "padding": [
+    96,
+    0,
+    56,
+    0
+   ],
+   "h": 908,
+   "y": 1981,
+   "wrapperWidth": 1200,
+   "wraps": [
+    {
+     "kind": "wrap",
+     "width": "one",
+     "box": {
+      "w": 1200,
+      "h": 202,
+      "y": 2077
+     },
+     "valign": "flex-start",
+     "classes": [
+      "wrap",
+      "one",
+      "tablet-one",
+      "laptop-one",
+      "mobile-one",
+      "vb-item",
+      "clearfix"
+     ],
+     "columns": [
+      {
+       "kind": "column",
+       "width": "one",
+       "box": {
+        "w": 1176,
+        "h": 96,
+        "y": 2077
+       },
+       "span": 12,
+       "item": {
+        "type": "heading",
+        "align": "start",
+        "light": false,
+        "box": {
+         "w": 1200,
+         "h": 136,
+         "y": 2077
+        },
+        "level": 2,
+        "html": "Frequently Asked Questions About Roofing Financing",
+        "text": "Frequently Asked Questions About Roofing Financing",
+        "size": 51,
+        "weight": "700",
+        "color": "oklch(1 0 none)",
+        "lh": "60.6202px",
+        "family": "industry",
+        "transform": "none",
+        "spacing": "0.8px"
+       },
+       "classes": [
+        "column",
+        "one",
+        "laptop-one",
+        "tablet-one",
+        "mobile-one",
+        "column_heading",
+        "vb-item"
+       ]
+      },
+      {
+       "kind": "column",
+       "width": "three-fourth",
+       "box": {
+        "w": 876,
+        "h": 26,
+        "y": 2213
+       },
+       "span": 9,
+       "item": {
+        "type": "text",
+        "align": "start",
+        "light": false,
+        "box": {
+         "w": 900,
+         "h": 66,
+         "y": 2213
+        },
+        "html": "Find answers to common questions about our flexible payment plans.",
+        "text": "Find answers to common questions about our flexible payment plans.",
+        "size": 16,
+        "color": "oklch(1 0 none)",
+        "lh": "25.6px",
+        "weight": "500"
+       },
+       "classes": [
+        "column",
+        "mobile-one",
+        "column_plain_text",
+        "vb-item"
+       ]
+      }
+     ],
+     "span": 12
+    },
+    {
+     "kind": "wrap",
+     "width": "one",
+     "box": {
+      "w": 1200,
+      "h": 538,
+      "y": 2279
+     },
+     "valign": "flex-start",
+     "classes": [
+      "wrap",
+      "one",
+      "tablet-one",
+      "laptop-one",
+      "mobile-one",
+      "vb-item",
+      "clearfix"
+     ],
+     "columns": [],
+     "span": 12,
+     "wraps": [
+      {
+       "kind": "wrap",
+       "width": "one",
+       "box": {
+        "w": 600,
+        "h": 538,
+        "y": 2279
+       },
+       "valign": "flex-start",
+       "classes": [
+        "wrap",
+        "one",
+        "tablet-one",
+        "laptop-one",
+        "mobile-one",
+        "mfn-nested-wrap",
+        "vb-item",
+        "clearfix"
+       ],
+       "columns": [
+        {
+         "kind": "column",
+         "width": "one",
+         "box": {
+          "w": 576,
+          "h": 386,
+          "y": 2291
+         },
+         "span": 12,
+         "item": {
+          "type": "faq",
+          "align": "start",
+          "light": false,
+          "box": {
+           "w": 600,
+           "h": 438,
+           "y": 2279
+          },
+          "items": [
+           {
+            "q": "Does applying for financing affect my credit score?",
+            "a": "In most cases, our lending partners can perform a 'soft pull' on your credit to pre-qualify you and show you your available options without impacting your credit score. A hard inquiry is typically only required once you finalize the loan documents."
+           },
+           {
+            "q": "Can I finance an insurance deductible?",
+            "a": "Texas law (HB2102) requires homeowners to pay their insurance deductibles out of pocket. However, you can absolutely use our financing options to cover the cost of your deductible, as well as any premium material upgrades you want to add to your insurance claim."
+           },
+           {
+            "q": "Can I pay off my roofing loan early?",
+            "a": "Yes! The vast majority of the financing plans we offer come with absolutely no prepayment penalties. You can pay off your roof at any time without incurring extra fees."
+           },
+           {
+            "q": "Do you offer financing for commercial roofing projects?",
+            "a": "Yes. We work with property managers, HOA boards, and building owners to provide commercial financing and phased CapEx solutions. Contact our commercial team directly to discuss large-scale funding options."
+           }
+          ]
+         },
+         "classes": [
+          "column",
+          "one",
+          "laptop-one",
+          "tablet-one",
+          "mobile-one",
+          "column_faq",
+          "vb-item"
+         ]
+        },
+        {
+         "kind": "column",
+         "width": "one",
+         "box": {
+          "w": 576,
+          "h": 60,
+          "y": 2716
+         },
+         "span": 12,
+         "item": {
+          "type": "button",
+          "align": "start",
+          "light": false,
+          "box": {
+           "w": 600,
+           "h": 100,
+           "y": 2716
+          },
+          "text": "Call to Apply Now",
+          "href": "tel:2815410027",
+          "icon": "fas fa-arrow-right",
+          "bg": "rgb(219, 221, 223)",
+          "color": "rgb(98, 98, 98)",
+          "size": 16,
+          "weight": "600",
+          "radius": 50,
+          "padding": [
+           20,
+           32,
+           20,
+           32
+          ]
+         },
+         "classes": [
+          "column",
+          "one",
+          "laptop-one",
+          "tablet-one",
+          "mobile-one",
+          "column_button",
+          "vb-item"
+         ]
+        }
+       ],
+       "span": 6
+      },
+      {
+       "kind": "wrap",
+       "width": "one",
+       "box": {
+        "padding": [
+         10,
+         0,
+         0,
+         0
+        ],
+        "w": 600,
+        "h": 365,
+        "y": 2279
+       },
+       "valign": "flex-start",
+       "classes": [
+        "wrap",
+        "one",
+        "tablet-one",
+        "laptop-one",
+        "mobile-one",
+        "mfn-nested-wrap",
+        "vb-item",
+        "clearfix"
+       ],
+       "columns": [
+        {
+         "kind": "column",
+         "width": "one",
+         "box": {
+          "radius": 24,
+          "w": 576,
+          "h": 315,
+          "y": 2289
+         },
+         "span": 12,
+         "item": {
+          "type": "before_after",
+          "align": "start",
+          "light": false,
+          "box": {
+           "w": 600,
+           "h": 355,
+           "y": 2289
+          },
+          "before": {
+           "src": "/images/live/core_four_residential_hero_before.webp",
+           "alt": "",
+           "w": 1439,
+           "h": 788,
+           "dw": 576,
+           "dh": 315
+          },
+          "after": {
+           "src": "/images/live/core_four_residential_hero_after.webp",
+           "alt": "",
+           "w": 576,
+           "h": 315,
+           "dw": 576,
+           "dh": 315
+          }
+         },
+         "classes": [
+          "column",
+          "one",
+          "laptop-one",
+          "tablet-one",
+          "mobile-one",
+          "column_before_after",
+          "vb-item"
+         ]
+        }
+       ],
+       "span": 6
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "overlay": null,
+   "id": "mcb-section-b1b0321cb",
+   "classes": [
+    "section",
+    "mcb-section",
+    "mfn-default-section"
+   ],
+   "bg": null,
+   "bgImage": null,
+   "bgSize": null,
+   "bgPos": null,
+   "padding": [
+    96,
+    0,
+    56,
+    0
+   ],
+   "h": 1330,
+   "y": 2889,
+   "wrapperWidth": 1200,
+   "wraps": [
+    {
+     "kind": "wrap",
+     "width": "one-second",
+     "box": {
+      "bg": "oklch(1 0 none)",
+      "radius": 24,
+      "padding": [
+       24,
+       24,
+       24,
+       24
+      ],
+      "w": 576,
+      "h": 534,
+      "y": 2985
+     },
+     "valign": "flex-start",
+     "classes": [
+      "wrap",
+      "mobile-one",
+      "vb-item",
+      "clearfix"
+     ],
+     "columns": [
+      {
+       "kind": "column",
+       "width": "one",
+       "box": {
+        "bg": "oklch(0.6099 0.1588 148.77)",
+        "radius": 50,
+        "padding": [
+         8,
+         20,
+         8,
+         20
+        ],
+        "w": 147,
+        "h": 26,
+        "y": 3009
+       },
+       "span": 4,
+       "item": {
+        "type": "text",
+        "html": "<span>The Guarantee</span>",
+        "text": "The Guarantee",
+        "box": {
+         "bg": "oklch(0.6099 0.1588 148.77)",
+         "radius": 50,
+         "padding": [
+          8,
+          20,
+          8,
+          20
+         ],
+         "w": 147,
+         "h": 26,
+         "y": 3009
+        },
+        "raw": true,
+        "size": 16,
+        "color": "rgb(69, 102, 79)"
+       },
+       "classes": [
+        "column",
+        "one",
+        "laptop-one",
+        "tablet-one",
+        "mobile-one",
+        "column_heading",
+        "trim-both",
+        "vb-item"
+       ]
+      },
+      {
+       "kind": "column",
+       "width": "one",
+       "box": {
+        "w": 504,
+        "h": 72,
+        "y": 3050
+       },
+       "span": 12,
+       "item": {
+        "type": "heading",
+        "align": "start",
+        "light": false,
+        "box": {
+         "w": 528,
+         "h": 104,
+         "y": 3050
+        },
+        "level": 3,
+        "html": "Why Finance Your Roofing Project With Us?",
+        "text": "Why Finance Your Roofing Project With Us?",
+        "size": 38,
+        "weight": "700",
+        "color": "oklch(0.4122 0.0832 141.53)",
+        "lh": "45.4771px",
+        "family": "industry",
+        "transform": "none",
+        "spacing": "0.8px"
+       },
+       "classes": [
+        "column",
+        "one",
+        "laptop-one",
+        "tablet-one",
+        "mobile-one",
+        "column_heading",
+        "vb-item"
+       ]
+      },
+      {
+       "kind": "column",
+       "width": "one",
+       "box": {
+        "w": 504,
+        "h": 62,
+        "y": 3154
+       },
+       "span": 12,
+       "item": {
+        "type": "text",
+        "html": "<p>We make the financial side of roofing just as seamless as the installation itself. Our lending partners offer a variety of plans designed to fit your specific monthly budget.</p>",
+        "text": "We make the financial side of roofing just as seamless as the installation itself. Our lending partners offer a variety of plans designed to fit your specific monthly budget.",
+        "box": {
+         "w": 504,
+         "h": 62,
+         "y": 3154
+        },
+        "raw": true,
+        "size": 16,
+        "color": "rgb(69, 102, 79)"
+       },
+       "classes": [
+        "column",
+        "one",
+        "laptop-one",
+        "tablet-one",
+        "mobile-one",
+        "column_heading",
+        "vb-item"
+       ]
+      },
+      {
+       "kind": "column",
+       "width": "one",
+       "box": {
+        "bg": "oklch(0.6099 0.1588 148.77)",
+        "radius": 24,
+        "w": 504,
+        "h": 105,
+        "y": 3249
+       },
+       "span": 12,
+       "item": {
+        "type": "counter",
+        "align": "start",
+        "light": false,
+        "box": {
+         "w": 528,
+         "h": 145,
+         "y": 3249
+        },
+        "html": "<span>1000</span><span>+</span><p>Successful Jobs Completed</p>"
+       },
+       "classes": [
+        "column",
+        "one",
+        "laptop-one",
+        "tablet-one",
+        "mobile-one",
+        "column_counter",
+        "vb-item"
+       ]
+      },
+      {
+       "kind": "column",
+       "width": "one",
+       "box": {
+        "w": 504,
+        "h": 60,
+        "y": 3394
+       },
+       "span": 12,
+       "item": {
+        "type": "button",
+        "align": "start",
+        "light": false,
+        "box": {
+         "w": 528,
+         "h": 100,
+         "y": 3394
+        },
+        "text": "Call Us",
+        "href": "tel:2815410027",
+        "icon": "fas fa-arrow-right",
+        "bg": "oklch(0.7055 0.1785 140.66)",
+        "color": "oklch(0.2496 0.031 155.1)",
+        "size": 16,
+        "weight": "600",
+        "radius": 50,
+        "padding": [
+         20,
+         32,
+         20,
+         32
+        ]
+       },
+       "classes": [
+        "column",
+        "one",
+        "laptop-one",
+        "tablet-one",
+        "mobile-one",
+        "column_button",
+        "vb-item"
+       ]
+      }
+     ],
+     "span": 6
+    },
+    {
+     "kind": "wrap",
+     "width": "one-second",
+     "box": {
+      "w": 600,
+      "h": 1178,
+      "y": 2985
+     },
+     "valign": "flex-start",
+     "classes": [
+      "wrap",
+      "mobile-one",
+      "vb-item",
+      "clearfix"
+     ],
+     "columns": [
+      {
+       "kind": "column",
+       "width": "one",
+       "box": {
+        "w": 600,
+        "h": 289,
+        "y": 2985
+       },
+       "span": 12,
+       "item": {
+        "type": "icon_box_2",
+        "align": "start",
+        "light": false,
+        "box": {
+         "w": 600,
+         "h": 289,
+         "y": 2985
+        },
+        "html": "<i></i><h4>Keep Cash on Hand</h4>Avoid depleting your emergency savings or business capital. Financing allows you to spread the cost of a major roof replacement over several years while keeping your cash liquid for other immediate needs."
+       },
+       "classes": [
+        "column",
+        "one",
+        "laptop-one",
+        "tablet-one",
+        "mobile-one",
+        "column_icon_box_2",
+        "vb-item"
+       ]
+      },
+      {
+       "kind": "column",
+       "width": "one",
+       "box": {
+        "w": 600,
+        "h": 264,
+        "y": 3298
+       },
+       "span": 12,
+       "item": {
+        "type": "icon_box_2",
+        "align": "start",
+        "light": false,
+        "box": {
+         "w": 600,
+         "h": 264,
+         "y": 3298
+        },
+        "html": "<i></i><h4>Fast, Paperless Approvals</h4>No lengthy bank meetings or complicated paperwork. Our lending partners offer a streamlined online application process with credit decisions often returned in a matter of minutes."
+       },
+       "classes": [
+        "column",
+        "one",
+        "laptop-one",
+        "tablet-one",
+        "mobile-one",
+        "column_icon_box_2",
+        "vb-item"
+       ]
+      },
+      {
+       "kind": "column",
+       "width": "one",
+       "box": {
+        "w": 600,
+        "h": 264,
+        "y": 3586
+       },
+       "span": 12,
+       "item": {
+        "type": "icon_box_2",
+        "align": "start",
+        "light": false,
+        "box": {
+         "w": 600,
+         "h": 264,
+         "y": 3586
+        },
+        "html": "<i></i><h4>Flexible Payment Terms</h4>We offer a wide range of financing options, including low-interest plans, extended payment terms to lower your monthly footprint, and promotional same-as-cash options (subject to credit approval)."
+       },
+       "classes": [
+        "column",
+        "one",
+        "laptop-one",
+        "tablet-one",
+        "mobile-one",
+        "column_icon_box_2",
+        "vb-item"
+       ]
+      },
+      {
+       "kind": "column",
+       "width": "one",
+       "box": {
+        "w": 600,
+        "h": 289,
+        "y": 3873
+       },
+       "span": 12,
+       "item": {
+        "type": "icon_box_2",
+        "align": "start",
+        "light": false,
+        "box": {
+         "w": 600,
+         "h": 289,
+         "y": 3873
+        },
+        "html": "<i></i><h4>Upgrade Your Materials</h4>Financing gives you the buying power to upgrade from standard shingles to a lifetime metal, stone-coated steel, or synthetic roof. You get ultimate weather defense for just a slightly higher monthly payment."
+       },
+       "classes": [
+        "column",
+        "one",
+        "laptop-one",
+        "tablet-one",
+        "mobile-one",
+        "column_icon_box_2",
+        "vb-item"
+       ]
+      }
+     ],
+     "span": 6
+    }
+   ]
+  },
+  {
+   "overlay": null,
+   "id": "mcb-section-31l5wowlf",
+   "classes": [
+    "section",
+    "mcb-section",
+    "mfn-global-section",
+    "mfn-default-section"
+   ],
+   "bg": null,
+   "bgImage": null,
+   "bgSize": null,
+   "bgPos": null,
+   "padding": [
+    96,
+    0,
+    86,
+    0
+   ],
+   "h": 606,
+   "y": 4218,
+   "wrapperWidth": 1200,
+   "wraps": [
+    {
+     "kind": "wrap",
+     "width": "one",
+     "box": {
+      "w": 1200,
+      "h": 78,
+      "y": 4314
+     },
+     "valign": "flex-start",
+     "classes": [
+      "wrap",
+      "one",
+      "tablet-one",
+      "laptop-one",
+      "mobile-one",
+      "vb-item",
+      "clearfix"
+     ],
+     "columns": [
+      {
+       "kind": "column",
+       "width": "one-third",
+       "box": {
+        "w": 201,
+        "h": 38,
+        "y": 4314
+       },
+       "span": 2,
+       "item": {
+        "type": "elfsight",
+        "widget": "267ccdad-1b32-4c62-9394-105914e96f0f",
+        "box": {
+         "w": 201,
+         "h": 38,
+         "y": 4314
+        }
+       },
+       "classes": [
+        "column",
+        "one-third",
+        "laptop-one-third",
+        "tablet-one-third",
+        "mobile-one",
+        "column_column",
+        "vb-item"
+       ]
+      }
+     ],
+     "span": 12
+    },
+    {
+     "kind": "wrap",
+     "width": "one",
+     "box": {
+      "w": 1200,
+      "h": 346,
+      "y": 4392
+     },
+     "valign": "flex-start",
+     "classes": [
+      "wrap",
+      "one",
+      "tablet-one",
+      "laptop-one",
+      "mobile-one",
+      "mfn-looped-items",
+      "vb-item",
+      "clearfix"
+     ],
+     "columns": [],
+     "span": 12,
+     "item": {
+      "type": "html",
+      "html": "<h3>Kevin Andrews</h3><p>★★★★★ 5 Stars</p><span><p>Cody was quick to meet the adjuster was helpful through the process. Not a flyby night company, very professional and knowledgeable.</p></span><h3>Rene Portillo</h3><p>★★★★★ 5 Stars</p><span><p>I was very happy with service that was offered before during and after the installation. I will definitely recommend their services to others who need a roof.</p></span><h3>Lisa Marburger</h3><p>★★★★★ 5 Stars</p><span><p>I reached out to Montgomery with Core Four Roofing on Friday, July 14th, requesting a quote. I received the quote the same day. The quote was thorough, easy to read, and by far the best price. I asked how soon they could complete the job and Montgomery got back with me immediately stating they could do it the following Friday or Saturday. I requested they come Friday. Workers arrived and completed the job that Friday. The roof looks amazing and the job site was left with no evidence, short of the gorgeous new roof, that they had been there. Several of my neighbors have spoken with me stating how great the roof looks. Core Four Roofing and Montgomery get a 5 star A+++ from me. I would highly recommend them for any of your roofing needs.</p></span><h3>Justin Chambers</h3><p>★★★★★ 5 Stars</p><span><p>They were quick to schedule and complete my roof using great materials at a good price. They don’t try to over charge you. I would definitely recommend them.</p></span><span></span><span></span><span></span><span></span><span></span><i></i><i></i>"
+     }
+    }
+   ]
+  },
+  {
+   "overlay": null,
+   "id": "mcb-section-6fbc2c57d",
+   "classes": [
+    "section",
+    "mcb-section",
+    "mfn-default-section"
+   ],
+   "bg": null,
+   "bgImage": "/images/live/bottom-triangles-light.svg",
+   "bgSize": "contain",
+   "bgPos": "50% 100%",
+   "padding": [
+    64,
+    0,
+    32,
+    0
+   ],
+   "h": 1106,
+   "y": 4824,
+   "wrapperWidth": 1200,
+   "wraps": [
+    {
+     "kind": "wrap",
+     "width": "one",
+     "box": {
+      "w": 1200,
+      "h": 1010,
+      "y": 4888
+     },
+     "valign": "flex-start",
+     "classes": [
+      "wrap",
+      "one",
+      "tablet-one",
+      "laptop-one",
+      "mobile-one",
+      "vb-item",
+      "clearfix"
+     ],
+     "columns": [
+      {
+       "kind": "column",
+       "width": "one",
+       "box": {
+        "w": 1176,
+        "h": 970,
+        "y": 4888
+       },
+       "span": 12,
+       "item": {
+        "type": "gallery",
+        "align": "start",
+        "light": false,
+        "box": {
+         "w": 1200,
+         "h": 1010,
+         "y": 4888
+        },
+        "images": [
+         {
+          "src": "/images/live/Decra-11-scaled.jpg",
+          "alt": "",
+          "w": 380,
+          "h": 213,
+          "dw": 380,
+          "dh": 214
+         },
+         {
+          "src": "/images/live/157-Jun-10-2025-18-21-50-m2gV-scaled.jpg",
+          "alt": "",
+          "w": 380,
+          "h": 506,
+          "dw": 380,
+          "dh": 507
+         },
+         {
+          "src": "/images/live/00924821-9fba-4891-9c3a-bf8071e88bf7-compressed-scaled-e1776361245929.webp",
+          "alt": "",
+          "w": 380,
+          "h": 212,
+          "dw": 380,
+          "dh": 213
+         },
+         {
+          "src": "/images/live/3b6394f3-0ca6-42d0-af68-1cba641b3cd4-compressed-scaled.webp",
+          "alt": "",
+          "w": 380,
+          "h": 213,
+          "dw": 380,
+          "dh": 214
+         },
+         {
+          "src": "/images/live/Decra-Villa-13-scaled.jpg",
+          "alt": "",
+          "w": 380,
+          "h": 213,
+          "dw": 380,
+          "dh": 214
+         },
+         {
+          "src": "/images/live/005-scaled.jpg",
+          "alt": "",
+          "w": 380,
+          "h": 213,
+          "dw": 380,
+          "dh": 214
+         },
+         {
+          "src": "/images/live/core_four_emergency_repair_after-compressed.webp",
+          "alt": "",
+          "w": 380,
+          "h": 213,
+          "dw": 380,
+          "dh": 214
+         },
+         {
+          "src": "/images/live/core_four_texas_roofing.webp",
+          "alt": "",
+          "w": 380,
+          "h": 213,
+          "dw": 380,
+          "dh": 214
+         },
+         {
+          "src": "/images/live/Decra-Villa-14-compressed.webp",
+          "alt": "",
+          "w": 380,
+          "h": 213,
+          "dw": 380,
+          "dh": 214
+         },
+         {
+          "src": "/images/live/core_four_roof_replacement-compressed.webp",
+          "alt": "",
+          "w": 380,
+          "h": 213,
+          "dw": 380,
+          "dh": 214
+         },
+         {
+          "src": "/images/live/core_four_residential-compressed.webp",
+          "alt": "",
+          "w": 380,
+          "h": 213,
+          "dw": 380,
+          "dh": 214
+         }
+        ]
+       },
+       "classes": [
+        "column",
+        "one",
+        "laptop-one",
+        "tablet-one",
+        "mobile-one",
+        "column_image_gallery",
+        "animate",
+        "vb-item",
+        "fadeInUp"
+       ]
+      }
+     ],
+     "span": 12
+    }
+   ]
+  },
+  {
+   "overlay": null,
+   "id": "mcb-section-f1df6b877",
+   "classes": [
+    "section",
+    "mcb-section",
+    "mfn-default-section",
+    "full-width"
+   ],
+   "bg": null,
+   "bgImage": null,
+   "bgSize": null,
+   "bgPos": null,
+   "padding": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "h": 704,
+   "y": 5930,
+   "wrapperWidth": 1440,
+   "wraps": [
+    {
+     "kind": "wrap",
+     "width": "one",
+     "box": {
+      "w": 1440,
+      "h": 700,
+      "y": 5932
+     },
+     "valign": "flex-start",
+     "classes": [
+      "wrap",
+      "one",
+      "tablet-one",
+      "laptop-one",
+      "mobile-one",
+      "vb-item",
+      "clearfix"
+     ],
+     "columns": [
+      {
+       "kind": "column",
+       "width": "one-third",
+       "box": {
+        "bg": "oklch(1 0 none)",
+        "radius": 24,
+        "padding": [
+         32,
+         32,
+         32,
+         32
+        ],
+        "w": 480,
+        "h": 442,
+        "y": 5952
+       },
+       "span": 4,
+       "item": {
+        "type": "text",
+        "align": "start",
+        "light": false,
+        "box": {
+         "w": 412,
+         "h": 374,
+         "y": 5986
+        },
+        "html": "<h4>Rapid Response Across the Lone Star State</h4><p>With offices strategically located across Texas, we deploy emergency crews quickly to the areas hit hardest by severe weather.</p><ul><li><i></i><h6>Service Hubs</h6><p>Austin, Dallas, Houston</p></li><li><i></i><h6>Storm Response</h6><p>24/7 Emergency Tarping &amp; Repair</p></li><li><i></i><h6>Local Office</h6><p>(281) 541-0027</p></li></ul>",
+        "text": "Rapid Response Across the Lone Star State\n\nWith offices strategically located across Texas, we deploy emergency crews quickly to the areas hit hardest by severe weather.\n\nService Hubs\n\nAustin, Dallas, Houston\n\nStorm Response\n\n24/7 Emergency Tarping & Repair\n\nLocal Office\n\n(281) 541-0027"
+       },
+       "classes": [
+        "column",
+        "one-third",
+        "laptop-one-third",
+        "tablet-one-third",
+        "mobile-one",
+        "column_column",
+        "animate",
+        "vb-item",
+        "fadeInLeft"
+       ]
+      },
+      {
+       "kind": "column",
+       "width": "one",
+       "box": {
+        "w": 1440,
+        "h": 700,
+        "y": 5932
+       },
+       "span": 12,
+       "item": {
+        "type": "elfsight",
+        "widget": "058d3df7-5422-475a-ab17-f5e14c220034",
+        "box": {
+         "w": 1440,
+         "h": 700,
+         "y": 5932
+        }
+       },
+       "classes": [
+        "column",
+        "one",
+        "laptop-one",
+        "tablet-one",
+        "mobile-one",
+        "column_column",
+        "vb-item"
+       ]
+      }
+     ],
+     "span": 12
+    }
+   ]
+  }
+ ]
+}

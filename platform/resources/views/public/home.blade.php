@@ -1,0 +1,94 @@
+@extends('layouts.public')
+
+@section('title', 'Core Four Roofing | Commercial & Residential Roofing in Texas')
+@section('description', 'Core Four Roofing provides premium commercial and residential roofing across Texas. Providing integrity, efficiency, quality, and affordability.')
+
+@section('content')
+<section class="hero">
+    <div class="hero-media"></div>
+    <div class="wrap--wide hero-grid">
+        <div class="hero-copy">
+            <div class="hero-reviews">
+                @include('partials.elfsight-reviews')
+            </div>
+            <h1>Protect Your Business, Secure Your Home</h1>
+            <p class="lead">Core Four Roofing provides premium commercial and residential roofing across Texas. Providing integrity, efficiency, quality, and affordability.</p>
+            <div class="hero-actions">
+                <a class="btn" href="tel:+1{{ $officePhoneTel }}">Call Us Today <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+        <div class="hero-stage">
+            <div class="float-card float-top">
+                <h5>Warranty</h5>
+                <p>Lifetime Workmanship</p>
+            </div>
+            @include('partials.before-after', [
+                'before' => '/images/ba/core-four-TPO-roof-before.webp',
+                'after' => '/images/ba/core-four-TPO-roof-after.webp',
+                'beforeAlt' => 'Core Four TPO roof before',
+                'afterAlt' => 'Core Four TPO roof after',
+            ])
+            <div class="float-card float-bot">
+                <h5>Accredited</h5>
+                <p>BBB A+ Rating</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section section--tight">
+    <div class="wrap--full">
+        <h2 class="logos-heading">Reliable Commercial &amp; Residential Roof Repair, Replacement &amp; Maintenance</h2>
+        @include('partials.logo-tracks')
+    </div>
+</section>
+
+<section class="section">
+    <div class="wrap">
+        <div class="solutions-head">
+            <h2 class="title-xl">Roofing Solutions that work for your bottom line</h2>
+            <a class="btn" href="{{ url('/service-areas/') }}">Explore Our Services <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="solutions-grid" style="margin-top:40px">
+            <div class="solutions-col">
+                <div class="solution-card solution-card--green">
+                    <span class="pill pill--white">Commercial</span>
+                    <h3>Protecting Your Assets</h3>
+                    <p>From TPO to EPDM and Metal, we provide durable, energy-efficient commercial roofing systems designed to last decades.</p>
+                    <img src="/images/commercial-card.webp" alt="Commercial roofing project by Core Four Roofing">
+                </div>
+                @include('partials.before-after', [
+                    'before' => '/images/ba/Decra-12-scaled.jpg',
+                    'after' => '/images/ba/Decra-11-scaled.jpg',
+                    'beforeAlt' => 'Apartment roof before Decra replacement',
+                    'afterAlt' => 'Apartment roof after Decra replacement',
+                ])
+            </div>
+            <div class="solutions-col">
+                <div class="solution-card solution-card--white">
+                    <span class="pill pill--green">Residential</span>
+                    <h3>We Know Texas Roofs</h3>
+                    <p>Premium asphalt shingles and architectural metal roofs to boost curb appeal and weather protection.</p>
+                    <div class="solution-media">
+                        <img src="/images/residential-card.webp" alt="Residential roofing project by Core Four Roofing">
+                    </div>
+                </div>
+                <div class="emergency-card">
+                    <h4>24/7 Emergency</h4>
+                    <p>Storm damage? We offer rapid response roof tarping and full insurance claim advocacy.</p>
+                    <a class="btn" href="{{ url('/storm-emergency/') }}">Get Help Now <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="award-card">
+                    <h4>Recognized as one of the best in Houston, Texas</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+@include('partials.coverage')
+@include('partials.steps')
+@include('partials.reviews')
+@include('partials.principles')
+@include('partials.instagram')
+@endsection
