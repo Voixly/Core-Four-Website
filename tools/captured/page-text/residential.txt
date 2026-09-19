@@ -1,0 +1,169 @@
+TITLE: Residential Roofing - Core Four Roofing
+META: 
+
+=== SECTION 0 | h=900 | pad=0px/0px | bg=rgba(0, 0, 0, 0) | bgimg=core_four_residential_hero_before.webp
+  <h1.title> Reliable Residential Roofing in Texas
+  <p> Protect your home, your family, and your biggest investment. From fast storm damage repairs to complete roof replacements, Core Four Roofing delivers top-tier craftsmanship across Houston, Dallas, and Austin.
+  [ICON] fas fa-arrow-right
+  <span.button_label> Call Us Today
+
+=== SECTION 1 | h=1210 | pad=96px/56px | bg=rgba(0, 0, 0, 0)
+  <span.title> The Guarantee
+  <h2.title> Built on the Core Four Principles
+  <p.title> We know that dealing with roof leaks, storm damage, or replacements can be stressful. We take the headache out of home roofing by operating strictly on our core principles:
+  <span.number> 1000
+  <span.label> +
+  <p.title> Successful Jobs Completed
+  [ICON] fas fa-arrow-right
+  <span.button_label> Call Us
+  [IMG] Core-Four-Associate-Members-home-advisor-screened-and-approved-compressed.webp
+  [IMG] Core-Four-Associate-Members-ANGI-Super-service-award-winner-2024-compressed.webp
+  [IMG] Core-Four-Associate-Members-BBB-A-Rating-compressed.webp
+  [IMG] Core-Four-Associate-Members-Core-Four-Roofing-Houston-Area-Roofing-Contractors-Association-Member-compressed.webp
+  [IMG] Core-Four-Associate-Members-RCAT-Member-compressed.webp
+  [ICON] fas fa-wallet primary
+  <h3.title.label> Affordability
+  <div.desc> Competitive pricing and flexible financing options to fit your family's budget.
+  [ICON] icon-arrows-ccw primary
+  <h3.title.label> Efficiency
+  <div.desc> Most residential roof replacements are completed safely and cleanly in just 1 to 3 days.
+  [ICON] fas fa-handshake primary
+  <h3.title.label> Integrity
+  <div.desc> Honest, detailed inspections. We only recommend a full replacement if a simple repair won't cut it.
+  [ICON] fas fa-award primary
+  <h3.title.label> Quality
+  <div.desc> Backed by industry-leading manufacturer warranties and our own Lifetime Workmanship Warranty.
+
+=== SECTION 2 | h=1608 | pad=96px/96px | bg=rgba(0, 0, 0, 0)
+  <h2.title> Complete Roofing Solutions for Your Home
+  <h3.title> Residential Roof Replacement
+  <p> When your roof reaches the end of its lifespan or suffers severe storm damage, we provide a seamless replacement process. We strip away the old materials, inspect and repair the wood decking, and install a beautiful, durable new roofing system.
+  [IMG] core_four_roof_replacement-compressed.webp
+  [ICON] fas fa-arrow-right
+  <span.button_label> Learn About Insurance Claims
+  <h3.title> Storm Damage & Insurance Claims
+  <div.desc> Texas weather is unpredictable. When severe hail or wind damages your roof, we are by your side. We provide emergency tarping and work directly with your insurance adjuster to ensure your storm recovery is completely stress-free.
+  [BEFORE] cfr-decra-tile-before-compressed.webp
+  [AFTER] cfr-decra-tile-after-compressed.webp
+  [ICON] fas fa-arrow-right
+  <span.button_label> Get a Repair Estimate
+  <h3.title> Roof Repair & Maintenance
+  <p> Missing shingles? Water stains on your ceiling? Don't let a small leak turn into major structural damage. Our expert technicians will track down the source of the problem and provide an affordable, lasting repair.
+  [IMG] core_four_roof_reapair_maintenance-compressed.webp
+  <h3.title> 24/7 Emergency
+  <p> We offer rapid response roof tarping and full insurance claim advocacy.
+  [ICON] fas fa-arrow-right
+  <span.button_label> Get Help Now
+
+=== SECTION 3 | h=2452 | pad=96px/56px | bg=rgba(0, 0, 0, 0)
+  <h3.title> Architectural Asphalt Shingles
+  <div.desc> The most popular choice for Texas homeowners. Beautiful, cost-effective, and highly durable against wind and rain.
+  <a> More About Asphalt Shingles >
+  <h3.title> Standing Seam Metal Roofs
+  <div.desc> Sleek, modern, and built to last 50+ years. Metal roofs offer superior wind resistance, maximum energy efficiency, and a striking curb appeal.
+  <a> More About Metal Roofing >
+  <h3.title> Stone-Coated Steel
+  <div.desc> Get the lifetime durability of a metal roof with the traditional aesthetic of tile, shake, or heavy shingles. Lightweight, energy-efficient, and engineered for extreme weather.
+  <a> More About Stone-Coated Steel Roofing >
+  <h3.title> Synthetic Shingles
+  <div.desc> The ultimate defense against Texas hail. F-Wave shingles offer a premium architectural look with no asphalt, no granules to wash away, and an industry-leading Class 4 impact rating.
+  <a> More About Synthetic Shingles >
+  <h3.title> Gutters, Soffits & Solar Fans
+  <div.desc> A roof is only as good as its ventilation and drainage. We install seamless gutters, protective fascia/soffit, and energy-saving solar attic fans.
+  <h2.title> Premium Materials & Exterior Upgrades
+  <p.title> Customize your home's curb appeal with materials engineered to withstand the Texas elements.
+  [IMG] Core-Four-Roofing-Partner-Certainteed-Select-shingle-master-compressed.webp
+  [IMG] Core-Four-Roofing-Partner-GAF-Certified-Plus-Contractors-compressed.webp
+  [IMG] Core-Four-Roofing-Partner-Malarkey-Emerald-Pro-Contractors-compressed.webp
+  [IMG] Core-Four-Roofing-Partner-IKO-Craftsman-Premier-Contractors-compressed.webp
+  [IMG] Core-Four-Roofing-Partner-DECRA-compressed.webp
+
+=== SECTION 4 | h=900 | pad=0px/0px | bg=rgba(0, 0, 0, 0) | bgimg=core_four_truck-Topaz-Gigapixel-2x-scale-compressed.webp
+  <h2.title> Stress-Free Financing Options
+  <div.desc> A new roof is a major investment, but it shouldn't drain your savings. Core Four Roofing offers flexible, stress-free financing plans to help you get the roof you need, right when you need it. Protect your home today and pay over time.
+
+=== SECTION 5 | h=607 | pad=96px/56px | bg=oklch(0.6099 0.1588 148.77) | bgimg=bottom-triangles-dark.svg
+  <h2.title> A reliable new roof is just a few steps away
+  <div.title> Roof Consultation
+  <span.num> 1
+  [ICON] icon-plus acc-icon-plus
+  [ICON] icon-minus acc-icon-minus
+  <div.answer> We provide a comprehensive roof inspection to evaluate damage, assess lifespan, and determine the most cost-effective solution for your commercial or residential property.
+  <div.title> Professional Installation
+  <span.num> 2
+  [ICON] icon-plus acc-icon-plus
+  [ICON] icon-minus acc-icon-minus
+  <div.answer> From TPO and EPDM for commercial buildings to premium asphalt shingles for homes, our licensed crews install your new roof efficiently—often in just 1-3 days.
+  <div.title> Quality Control
+  <span.num> 3
+  [ICON] icon-plus acc-icon-plus
+  [ICON] icon-minus acc-icon-minus
+  <div.answer> After installation, we perform a rigorous quality inspection. We leave your property spotless and ensure you have all warranty documentation for complete peace of mind.
+  [ICON] fas fa-arrow-right
+  <span.button_label> Call for a Free Colsultation
+  [BEFORE] ad6b4429-cef8-4e0d-8be5-97760a5f48ca-compressed-scaled.webp
+  [AFTER] 27d812ee-6a31-44e6-a9c3-76435c4aa8b5-compressed-scaled.webp
+
+=== SECTION 6 | h=606 | pad=96px/86px | bg=rgba(0, 0, 0, 0)
+  <h3.title> Kevin Andrews
+  <p.title> ★★★★★ 5 Stars
+  <p> Cody was quick to meet the adjuster was helpful through the process. Not a flyby night company, very professional and knowledgeable.
+  [IMG] 00924821-9fba-4891-9c3a-bf8071e88bf7-compressed-scaled-e1776361245929.webp
+  <h3.title> Rene Portillo
+  <p.title> ★★★★★ 5 Stars
+  <p> I was very happy with service that was offered before during and after the installation. I will definitely recommend their services to others who need a roof.
+  [IMG] Decra-11-scaled.jpg
+  <h3.title> Lisa Marburger
+  <p.title> ★★★★★ 5 Stars
+  <p> I reached out to Montgomery with Core Four Roofing on Friday, July 14th, requesting a quote. I received the quote the same day. The quote was thorough, easy to read, and by far the best price. I asked how soon they could complete the job and Montgomery got back with me immediately stating they could do it the following Friday or Saturday. I requested they come Friday. Workers arrived and completed the job that Friday. The roof looks amazing and the job site was left with no evidence, short of the gorgeous new roof, that they had been there. Several of my neighbors have spoken with me stating how great the roof looks. Core Four Roofing and Montgomery get a 5 star A+++ from me. I would highly recommend them for any of your roofing needs.
+  [IMG] 3b6394f3-0ca6-42d0-af68-1cba641b3cd4-compressed-scaled.webp
+  <h3.title> Justin Chambers
+  <p.title> ★★★★★ 5 Stars
+  <p> They were quick to schedule and complete my roof using great materials at a good price. They don’t try to over charge you. I would definitely recommend them.
+  [IMG] Decra-Villa-13-scaled.jpg
+
+=== SECTION 7 | h=1883 | pad=96px/96px | bg=rgba(0, 0, 0, 0)
+  <h2.title> Ready to Upgrade Your Home's Roof?
+  <h3.title> Send us a Message
+  <div.desc> Fill out the form below to schedule your free, no-obligation inspection and estimate with a local Core Four roofing expert.
+  <p> " " indicates required fields
+  <span> *
+  <label.gfield_label.gform-field-label> X/Twitter
+  <div.gfield_description> This field is for validation purposes and should be left unchanged.
+  <legend.gfield_label.gform-field-label> Name
+  <span> *
+  <label.gform-field-label.gform-field-label--type-sub> First
+  <label.gform-field-label.gform-field-label--type-sub> Last
+  <label.gfield_label.gform-field-label> Email
+  <span> *
+  <label.gfield_label.gform-field-label> Phone
+  <span> *
+  <label.gfield_label.gform-field-label> Select a Service
+  <span> *
+  <option> Please Select a Service
+  <option> Commercial Roofing
+  <option> Residential Roofing
+  <option> Premium Roofing
+  <option> Exterior Services
+  <legend.gfield_label.gform-field-label> Address
+  <span> *
+  <label.gform-field-label.gform-field-label--type-sub> ZIP Code
+  <label.gfield_label.gform-field-label> Comments
+  <div.gfield_description> 0 of 600 max characters
+  <div.gfield_description> Please let us know what's on your mind. Have a question for us? Ask away.
+  [IMG] core_four_community-5.jpg
+  [IMG] core_four_community-2.jpg
+  [IMG] core_four_community-1.jpg
+
+=== SECTION 8 | h=813 | pad=64px/32px | bg=rgba(0, 0, 0, 0) | bgimg=bottom-triangles-light.svg
+  [IMG] Decra-11-scaled.jpg
+  [IMG] 00924821-9fba-4891-9c3a-bf8071e88bf7-compressed-scaled-e1776361245929.webp
+  [IMG] 3b6394f3-0ca6-42d0-af68-1cba641b3cd4-compressed-scaled.webp
+  [IMG] Decra-Villa-13-scaled.jpg
+  [IMG] 005-scaled.jpg
+  [IMG] core_four_residential-compressed.webp
+  [IMG] core_four_residential_hero_after.webp
+  [IMG] core_four_asphalt_shingles-compressed.webp
+  [IMG] core_four_roof_replacement-compressed.webp
+
+=== SECTION 9 | h=0 | pad=0px/0px | bg=rgba(0, 0, 0, 0)

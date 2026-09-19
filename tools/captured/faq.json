@@ -1,0 +1,312 @@
+{
+ "financing": [
+  {
+   "q": "Does applying for financing affect my credit score?",
+   "a": "In most cases, our lending partners can perform a 'soft pull' on your credit to pre-qualify you and show you your available options without impacting your credit score. A hard inquiry is typically only required once you finalize the loan documents."
+  },
+  {
+   "q": "Can I finance an insurance deductible?",
+   "a": "Texas law (HB2102) requires homeowners to pay their insurance deductibles out of pocket. However, you can absolutely use our financing options to cover the cost of your deductible, as well as any premium material upgrades you want to add to your insurance claim."
+  },
+  {
+   "q": "Can I pay off my roofing loan early?",
+   "a": "Yes! The vast majority of the financing plans we offer come with absolutely no prepayment penalties. You can pay off your roof at any time without incurring extra fees."
+  },
+  {
+   "q": "Do you offer financing for commercial roofing projects?",
+   "a": "Yes. We work with property managers, HOA boards, and building owners to provide commercial financing and phased CapEx solutions. Contact our commercial team directly to discuss large-scale funding options."
+  }
+ ],
+ "insurance-claims": [
+  {
+   "q": "Will my rates go up if I file a roof claim?",
+   "a": "In Texas, insurance companies generally cannot raise your individual premium solely because you filed a claim for an 'Act of God' like a hail or wind storm. However, if a massive storm hits your entire zip code, base rates for the whole area may increase regardless of whether you file a claim or not."
+  },
+  {
+   "q": "Can a roofer waive or 'eat' my deductible?",
+   "a": "No. Under Texas law (HB2102), it is a criminal offense for a roofing contractor to pay, waive, absorb, or rebate a homeowner's insurance deductible. Any roofer offering to do so is committing insurance fraud. However, Core Four Roofing offers flexible financing options to help you cover the cost of your deductible comfortably."
+  },
+  {
+   "q": "How long do I have to file a claim after a storm?",
+   "a": "Most insurance policies require you to file a claim within one year (365 days) of the date of the storm. However, it is critical to get your roof inspected immediately, as waiting can cause secondary water damage to your home's interior, which may not be covered if deemed negligent."
+  },
+  {
+   "q": "My insurance only approved a partial repair. What do I do?",
+   "a": "Call us immediately. Insurance companies often try to minimize payouts by suggesting a repair instead of a replacement. If your roof has sustained widespread damage or if the shingles are too old and brittle to be successfully repaired without causing more damage, we will document this and supplement the claim for a full replacement."
+  }
+ ],
+ "residential-roofing": [
+  {
+   "q": "Roof Consultation",
+   "a": "We provide a comprehensive roof inspection to evaluate damage, assess lifespan, and determine the most cost-effective solution for your commercial or residential property."
+  },
+  {
+   "q": "Professional Installation",
+   "a": "From TPO and EPDM for commercial buildings to premium asphalt shingles for homes, our licensed crews install your new roof efficiently\u2014often in just 1-3 days."
+  },
+  {
+   "q": "Quality Control",
+   "a": "After installation, we perform a rigorous quality inspection. We leave your property spotless and ensure you have all warranty documentation for complete peace of mind."
+  }
+ ],
+ "commercial-roofing": [
+  {
+   "q": "Roof Consultation",
+   "a": "We provide a comprehensive roof inspection to evaluate damage, assess lifespan, and determine the most cost-effective solution for your commercial or residential property."
+  },
+  {
+   "q": "Professional Installation",
+   "a": "From TPO and EPDM for commercial buildings to premium asphalt shingles for homes, our licensed crews install your new roof efficiently\u2014often in just 1-3 days."
+  },
+  {
+   "q": "Quality Control",
+   "a": "After installation, we perform a rigorous quality inspection. We leave your property spotless and ensure you have all warranty documentation for complete peace of mind."
+  }
+ ],
+ "service-areas": [
+  {
+   "q": "Roof Consultation",
+   "a": "We provide a comprehensive roof inspection to evaluate damage, assess lifespan, and determine the most cost-effective solution for your commercial or residential property."
+  },
+  {
+   "q": "Professional Installation",
+   "a": "From TPO and EPDM for commercial buildings to premium asphalt shingles for homes, our licensed crews install your new roof efficiently\u2014often in just 1-3 days."
+  },
+  {
+   "q": "Quality Control",
+   "a": "After installation, we perform a rigorous quality inspection. We leave your property spotless and ensure you have all warranty documentation for complete peace of mind."
+  }
+ ],
+ "contact-core-four-roofing": [
+  {
+   "q": "Roof Consultation",
+   "a": "We provide a comprehensive roof inspection to evaluate damage, assess lifespan, and determine the most cost-effective solution for your commercial or residential property."
+  },
+  {
+   "q": "Professional Installation",
+   "a": "From TPO and EPDM for commercial buildings to premium asphalt shingles for homes, our licensed crews install your new roof efficiently\u2014often in just 1-3 days."
+  },
+  {
+   "q": "Quality Control",
+   "a": "After installation, we perform a rigorous quality inspection. We leave your property spotless and ensure you have all warranty documentation for complete peace of mind."
+  }
+ ],
+ "about-core-four-roofing": [],
+ "residential-roofing--asphalt-shingles": [
+  {
+   "q": "How long does an asphalt shingle roof last in Texas?",
+   "a": "In the demanding Texas climate, a properly installed architectural asphalt shingle roof typically lasts between 20 to 30 years. Regular maintenance, proper attic ventilation, and prompt storm damage repairs can help maximize the lifespan of your shingles."
+  },
+  {
+   "q": "What is the difference between 3-tab and architectural shingles?",
+   "a": "3-tab shingles are a single, flat layer of material, offering basic protection and a lifespan of about 15-20 years. Architectural shingles are multi-layered, providing a thicker, three-dimensional look, significantly higher wind and hail resistance, and longer lifespans. Core Four Roofing highly recommends architectural shingles for Texas homes."
+  },
+  {
+   "q": "Are asphalt shingles impact resistant against hail?",
+   "a": "While standard architectural shingles offer good protection, Core Four Roofing also installs specialized Class 3 and Class 4 impact-resistant asphalt shingles (such as those from Malarkey). These are formulated with polymer-modified asphalt to absorb hail impacts, often qualifying you for a discount on your homeowner's insurance premiums."
+  },
+  {
+   "q": "Will my new shingle roof get those ugly black streaks over time?",
+   "a": "We install premium shingles that feature copper-lined granules specifically designed to prevent the growth of blue-green algae, which is the primary cause of those unsightly black streaks in humid environments like Houston."
+  }
+ ],
+ "residential-roofing--metal-roofs": [
+  {
+   "q": "Are metal roofs noisy when it rains?",
+   "a": "This is a common misconception! When installed over a solid wood roof deck, along with proper underlayment and attic insulation, a standing seam metal roof is no noisier during a rainstorm than a traditional asphalt shingle roof."
+  },
+  {
+   "q": "Will a metal roof attract lightning?",
+   "a": "A metal roof does not increase the likelihood of your home being struck by lightning. In fact, if your home were to be struck, a metal roof is one of the safest materials you can have because it is non-combustible and will safely disperse the electrical charge."
+  },
+  {
+   "q": "Will a metal roof attract lightning?",
+   "a": "A metal roof does not increase the likelihood of your home being struck by lightning. In fact, if your home were to be struck, a metal roof is one of the safest materials you can have because it is non-combustible and will safely disperse the electrical charge."
+  },
+  {
+   "q": "Can you install a metal roof over my existing shingles?",
+   "a": "While it is technically possible in some situations, Core Four Roofing generally recommends a full tear-off. Removing the old shingles allows us to inspect the underlying wood decking for hidden rot or damage, ensuring a flawless, long-lasting installation for your new metal system."
+  }
+ ],
+ "residential-roofing--stone-coated-steel": [
+  {
+   "q": "Will the stone granules wash off or fade over time?",
+   "a": "No. The natural, ceramic-coated stone granules are permanently bonded to the high-tensile steel core using an advanced acrylic polymer layer. They are UV-resistant and designed to retain their vibrant color and texture for decades without washing away in heavy rain."
+  },
+  {
+   "q": "How does the cost compare to traditional shingles or tile?",
+   "a": "While the initial investment is higher than standard asphalt shingles, stone-coated steel is often comparable to or less expensive than installing authentic clay tile or slate. When you factor in its 50+ year lifespan, minimal maintenance, and potential insurance premium discounts, it offers incredible long-term value."
+  },
+  {
+   "q": "Is a stone-coated steel roof loud when it rains?",
+   "a": "Not at all. The textured surface of the stone granules effectively absorbs and diffuses the sound of rain and hail. When installed properly over a solid roof deck and underlayment, it is just as quiet as an asphalt shingle roof."
+  },
+  {
+   "q": "Can I walk on a stone-coated steel roof?",
+   "a": "Yes, you can walk on it, but it requires a bit of care. Because the panels are stamped to have a dimensional profile (like a curve or a ridge), you must step in the designated \"valleys\" or low points where the metal rests flush against the roof deck to avoid denting the raised sections."
+  }
+ ],
+ "residential-roofing--synthetic-roofs": [
+  {
+   "q": "Do synthetic shingles look fake or shiny?",
+   "a": "Not at all. F-Wave\u2122 uses state-of-the-art manufacturing to create highly authentic textures and varied color profiles. Once installed, it is nearly impossible to tell the difference between F-Wave\u2122 and the natural slate, shake, or premium asphalt it is designed to replicate."
+  },
+  {
+   "q": "Will a Class 4 synthetic roof lower my homeowner's insurance?",
+   "a": "In many cases, yes! Because F-Wave\u2122 carries a Class 4 impact rating, many Texas insurance providers offer significant premium discounts to homeowners who install it, as it drastically reduces the likelihood of future hail damage claims."
+  },
+  {
+   "q": "Will the color fade in the harsh Texas sun?",
+   "a": "F-Wave\u2122 shingles are manufactured with premium, built-in UV-resistant polymers. Unlike traditional asphalt that can fade or bleach over time, F-Wave\u2122 is designed to maintain its rich, vibrant color for decades."
+  },
+  {
+   "q": "Does a synthetic roof require special maintenance?",
+   "a": "One of the biggest advantages of F-Wave\u2122 is that it is virtually maintenance-free. Because there are no granules to replace, no wood to treat for rot, and no fragile slate tiles to replace, you can enjoy your beautiful roof without ongoing upkeep."
+  }
+ ],
+ "storm-emergency": [
+  {
+   "q": "Free Damage Assessment",
+   "a": "We perform a comprehensive, photo-documented inspection to find all storm-related damage."
+  },
+  {
+   "q": "File a Claim",
+   "a": "If we find verifiable damage, we guide you through the process of contacting your insurance carrier to file the claim."
+  },
+  {
+   "q": "Adjuster Meeting",
+   "a": "We meet your insurance adjuster on-site to advocate for you, ensuring no damage is overlooked."
+  },
+  {
+   "q": "Total Restoration",
+   "a": "Once approved, our expert crews replace your roof quickly, safely, and to the highest industry standards."
+  }
+ ],
+ "residential-roofing--roof-repair": [
+  {
+   "q": "How do I know if my roof has a leak?",
+   "a": "Look for water stains on your ceiling or walls, peeling paint, damp insulation in your attic, or missing and cracked shingles on the roof's exterior."
+  },
+  {
+   "q": "Can I repair a roof leak myself?",
+   "a": "We highly advise against it. Walking on a damaged roof is dangerous, and improper DIY patching with caulk or tar often traps moisture, making the underlying rot worse."
+  },
+  {
+   "q": "How much does a roof repair cost?",
+   "a": "The cost depends entirely on the extent of the damage, the materials needed, and the steepness of the roof. We provide free, upfront estimates so you know exactly what to expect before we begin."
+  },
+  {
+   "q": "Will a repair fix a sagging roof deck?",
+   "a": "If your roof deck is visibly sagging, it usually indicates severe structural rot. In this case, a simple surface repair won't work, and those sections of decking will need to be replaced."
+  }
+ ],
+ "residential-roofing--roof-installation": [
+  {
+   "q": "How do I know if I need a full replacement?",
+   "a": "Our experts provide honest, photo-documented inspections. If your shingles are curling, losing significant granules, or if your roof is experiencing multiple leaks, a replacement is usually the best solution."
+  },
+  {
+   "q": "Can you install a new roof over my old one?",
+   "a": "While a 'layover' is sometimes possible, we highly recommend a full tear-off. Removing old materials allows us to inspect your wood decking for hidden rot and ensures your new roof is installed perfectly."
+  },
+  {
+   "q": "Will a new roof lower my energy bills?",
+   "a": "Yes! A new roof often includes upgraded ventilation and highly reflective materials, which drastically reduce the heat trapped in your attic and lower your summer cooling costs."
+  },
+  {
+   "q": "Do you help with insurance claims?",
+   "a": "Absolutely. We have extensive experience with storm damage recovery. We provide detailed damage reports and work directly with your insurance adjuster to ensure your replacement is fully funded."
+  }
+ ],
+ "residential-roofing--roof-inspections": [
+  {
+   "q": "How often should I get my roof inspected?",
+   "a": "Industry standards suggest having your roof inspected at least once a year, as well as immediately following any severe weather events involving high winds or hail."
+  },
+  {
+   "q": "What exactly do you look for during an inspection?",
+   "a": "We evaluate the structural integrity of the roof deck, the condition of the shingles, all complex drainage areas (valleys, gutters), and scrutinize every inch of flashing around vents and chimneys."
+  },
+  {
+   "q": "Are your inspections free?",
+   "a": "Yes! We offer free, no-obligation visual inspections for homeowners to help them understand the health of their roofing system."
+  },
+  {
+   "q": "Can this inspection help with my insurance policy?",
+   "a": "Absolutely. Providing a clean bill of health for your roof can assist with your insurance policy. If we find storm damage, our report serves as the foundation for filing a successful claim."
+  }
+ ],
+ "commercial-roofing--coatings-restoration": [
+  {
+   "q": "Can every commercial roof be coated?",
+   "a": "No. A roof must be a good candidate for restoration. If core samples reveal that more than 25% of the underlying insulation is saturated with water, or if the roof deck is structurally compromised, a coating will trap that moisture and fail. We perform rigorous inspections to ensure your roof is eligible before recommending a coating."
+  },
+  {
+   "q": "How long does a commercial roof coating last in Texas?",
+   "a": "Depending on the thickness of the application (the \"mils\") and the type of material used, a high-quality commercial roof coating can extend the life of your roof by 10 to 20 years. Better yet, once that lifespan is up, the roof can simply be cleaned and re-coated, creating a renewable roofing system."
+  },
+  {
+   "q": "What is the difference between Silicone and Acrylic coatings?",
+   "a": "Acrylic coatings are highly reflective and cost-effective, making them great for roofs with excellent positive drainage. Silicone coatings are more premium; they are completely waterproof and will not degrade under ponding water, making them the superior choice for flat roofs with drainage issues."
+  },
+  {
+   "q": "Will the application process disrupt my business?",
+   "a": "Not at all. Roof coatings are applied with virtually zero noise, no heavy tear-off equipment, and very little odor. Your tenants, customers, and daily operations will continue completely uninterrupted."
+  }
+ ],
+ "commercial-roofing--inspections-condition-reports": [
+  {
+   "q": "What exactly is included in a Real Estate Roof Condition Report?",
+   "a": "Our comprehensive reports include a detailed analysis of the roof's current age, remaining expected lifespan, the condition of the membrane and flashing, core sample results (to check for wet insulation), high-resolution photos of any vulnerabilities, and accurate cost estimates for immediate repairs or future replacement."
+  },
+  {
+   "q": "How often should a commercial property be inspected?",
+   "a": "Industry standards dictate that commercial flat roofs should be formally inspected at least twice a year\u2014ideally in the spring and fall\u2014as well as immediately following any severe weather events, such as high winds, heavy hail, or nearby tornadoes."
+  },
+  {
+   "q": "Do you take core samples during an inspection?",
+   "a": "Yes, with the property owner's authorization. A core sample is a small, easily repairable cut made into the roof to determine the exact composition of the roofing layers and to check if the underlying insulation is saturated with water, which is critical data for determining if a roof can be repaired or must be fully replaced."
+  },
+  {
+   "q": "Can this inspection help with my commercial insurance policy?",
+   "a": "Absolutely. Providing a clean, professional bill of health for your roof can sometimes assist in negotiating insurance premiums or preventing coverage drops. Conversely, if we find storm damage, our report serves as the foundation for filing a successful claim."
+  }
+ ],
+ "commercial-roofing--repair-preventative-maintenance": [
+  {
+   "q": "What are the most common causes of commercial roof leaks in Texas?",
+   "a": "The extreme Texas heat causes roofing materials to expand and contract, which eventually stresses the seams and flashing. The most common leak sources are failing membrane seams, degraded flashing around rooftop HVAC units or vents, ponding water, and puncture damage from severe hail or other trades working on the roof."
+  },
+  {
+   "q": "How do I know if I need a repair or a full roof replacement?",
+   "a": "Our team provides an honest, photo-documented inspection. Generally, if the underlying insulation is dry and the membrane is still flexible, a targeted repair is highly effective. However, if core samples show that more than 25-30% of the roof's insulation is saturated with water, a full replacement is usually the most cost-effective long-term solution."
+  },
+  {
+   "q": "Can you repair my commercial roof while it is actively raining?",
+   "a": "While we cannot perform permanent thermal welding or apply liquid sealants to a wet surface, we can absolutely dispatch an emergency crew to install temporary mitigation, such as commercial-grade tarping or water-diverting systems, to protect your interior until the roof dries enough for a permanent repair."
+  },
+  {
+   "q": "Will a repair void my existing commercial roof warranty?",
+   "a": "Not if it is done correctly by a certified professional! Core Four Roofing is certified by major commercial manufacturers (like IKO and Malarkey). We use approved materials and techniques that ensure your existing No Dollar Limit (NDL) or manufacturer warranty remains fully intact."
+  }
+ ],
+ "commercial-roofing--roof-replacement-installation": [
+  {
+   "q": "Can you install a new commercial roof over my existing one?",
+   "a": "In some cases, yes. This is called a \"roof overlay\" or \"recover.\" If your existing roof has only one layer, the underlying insulation is dry, and the deck is structurally sound, building codes may allow us to install a new membrane directly over the old one, saving you significant tear-off costs."
+  },
+  {
+   "q": "How long does a full commercial roof replacement take?",
+   "a": "The timeline depends entirely on the size of the facility, the type of material being installed, and weather conditions. However, because we deploy large, experienced commercial crews and stage our materials efficiently, we can complete massive flat roof replacements much faster than industry averages, keeping you fully informed at every phase."
+  },
+  {
+   "q": "What is the best roofing material for a commercial building in Texas?",
+   "a": "TPO (Thermoplastic Polyolefin) is currently the most popular choice for Texas flat roofs due to its brilliant white, heat-reflective surface and cost-effectiveness. However, we also highly recommend PVC for facilities exposed to chemicals or grease, and metal for sloped commercial buildings."
+  },
+  {
+   "q": "Do you help with commercial roof insurance claims?",
+   "a": "Absolutely. If your commercial roof replacement is necessary due to severe hail, wind, or hurricane damage, our team provides comprehensive, code-compliant damage reports and will work directly with your insurance adjuster to ensure your property is fully restored."
+  }
+ ],
+ "blog": []
+}

@@ -1,0 +1,137 @@
+TITLE: Asphalt Shingles - Core Four Roofing
+META: 
+
+=== SECTION 0 | h=915 | pad=230px/116px | bg=rgba(0, 0, 0, 0) | bgimg=core_four_residential_insurance_claim_roof-compressed.webp
+  <h1.title> Premium Asphalt Shingle Roofing in Texas
+  <div.desc> Protect your home with the most popular, cost-effective, and versatile roofing material on the market. Core Four Roofing installs top-tier architectural asphalt shingles engineered to withstand severe Texas weather, backed by industry-leading manufacturer warranties.
+  [ICON] fas fa-arrow-right
+  <span.button_label> Call for a Free Roof Estimate
+  [IMG] Core-Four-Associate-Members-BBB-A-Rating-compressed.webp
+  [IMG] Core-Four-Roofing-Partner-Malarkey-Emerald-Pro-Contractors-compressed.webp
+  [IMG] Core-Four-Roofing-Partner-Certainteed-Select-shingle-master-compressed.webp
+  [IMG] Core-Four-Roofing-Partner-IKO-Craftsman-Premier-Contractors-compressed.webp
+
+=== SECTION 1 | h=985 | pad=96px/96px | bg=rgba(0, 0, 0, 0)
+  <h2> What Are Architectural Asphalt Shingles?
+  <p> Asphalt shingles have been the leading choice for residential roofing for decades, but modern technology has vastly improved their performance. While traditional "3-tab" shingles lay flat, the architectural asphalt shingles (also known as dimensional shingles) that Core Four Roofing installs are constructed with multiple layers of fiberglass and asphalt. This multi-layered design creates a dimensional, textured appearance that mimics the look of wood shake or slate.
+  <p> More importantly, this added thickness provides superior protection against the harsh Texas climate. Premium architectural shingles feature advanced sealant bands for high wind resistance, algae-resistant granules to prevent black streaking, and enhanced impact resistance to defend against hail. Whether you are replacing an aging roof or recovering from storm damage, asphalt shingles offer the perfect balance of durability, aesthetic appeal, and affordability for your home.
+  [ICON] fas fa-arrow-right
+  <span.button_label> Get a Free Shingle Roof Estimate
+  [IMG] core_four_residential_insurance_claim_roof-compressed.webp
+  [IMG] core_four_residential_pool_house.jpg
+
+=== SECTION 2 | h=853 | pad=96px/96px | bg=rgba(0, 0, 0, 0)
+  <span.title> Key Benefits
+  <h2.title> Why Choose Asphalt Shingles for Your Texas Home?
+  <p.title> Modern architectural shingles offer the perfect balance of rugged weather defense, versatile curb appeal, and overall cost-effectiveness. Engineered to withstand the extreme Texas climate, they remain the smartest and most popular investment for protecting your property.
+  [ICON] fas fa-arrow-right
+  <span.button_label> Call us about Asphalt Shingles
+  <h3.title> Unmatched Affordability
+  <div.desc> Asphalt shingles provide an excellent return on investment. They offer lower upfront material and installation costs compared to metal or tile, making premium roof protection accessible for any family budget.
+  <h3.title> Severe Weather Defense
+  <div.desc> Engineered for Texas weather. We install high-performance shingles featuring advanced tear strength, Class A fire ratings, and warranties against high wind blow-offs (up to 130 mph).
+  <h3.title> Endless Style Options
+  <div.desc> Because they are relatively lightweight and efficient to handle, our expert crews can typically complete a full asphalt shingle roof replacement in just 1 to 2 days, minimizing disruption to your daily life.
+
+=== SECTION 3 | h=766 | pad=96px/96px | bg=oklch(0.6099 0.1588 148.77) | bgimg=bottom-triangles-dark.svg
+  <h2.title> Frequently Asked Questions About Asphalt Shingle Roofs
+  <div.title> How long does an asphalt shingle roof last in Texas?
+  <span.num> 1
+  [ICON] icon-plus acc-icon-plus
+  [ICON] icon-minus acc-icon-minus
+  <div.answer> In the demanding Texas climate, a properly installed architectural asphalt shingle roof typically lasts between 20 to 30 years. Regular maintenance, proper attic ventilation, and prompt storm damage repairs can help maximize the lifespan of your shingles.
+  <div.title> What is the difference between 3-tab and architectural shingles?
+  <span.num> 2
+  [ICON] icon-plus acc-icon-plus
+  [ICON] icon-minus acc-icon-minus
+  <div.answer> 3-tab shingles are a single, flat layer of material, offering basic protection and a lifespan of about 15-20 years. Architectural shingles are multi-layered, providing a thicker, three-dimensional look, significantly higher wind and hail resistance, and longer lifespans. Core Four Roofing highly recommends architectural shingles for Texas homes.
+  <div.title> Are asphalt shingles impact resistant against hail?
+  <span.num> 3
+  [ICON] icon-plus acc-icon-plus
+  [ICON] icon-minus acc-icon-minus
+  <div.answer> While standard architectural shingles offer good protection, Core Four Roofing also installs specialized Class 3 and Class 4 impact-resistant asphalt shingles (such as those from Malarkey). These are formulated with polymer-modified asphalt to absorb hail impacts, often qualifying you for a discount on your homeowner's insurance premiums.
+  <div.title> Will my new shingle roof get those ugly black streaks over time?
+  <span.num> 4
+  [ICON] icon-plus acc-icon-plus
+  [ICON] icon-minus acc-icon-minus
+  <div.answer> We install premium shingles that feature copper-lined granules specifically designed to prevent the growth of blue-green algae, which is the primary cause of those unsightly black streaks in humid environments like Houston.
+  [ICON] fas fa-arrow-right
+  <span.button_label> Ask us a question
+  [BEFORE] core_four_emergency_repair_before-compressed.webp
+  [AFTER] core_four_emergency_repair_after-compressed.webp
+
+=== SECTION 4 | h=1010 | pad=96px/96px | bg=rgba(0, 0, 0, 0)
+  <h2.title> Protected by Industry-Leading Warranties
+  <div.desc> Your roof is one of the most critical investments you will make. We ensure that investment is protected and accessible.
+  <h3.title> Flexible Financing
+  <div.desc> Need a new roof but worried about the upfront cost? We offer flexible, stress-free financing options tailored to your budget. Secure your home today and pay over time.
+  [IMG] core_four_roof_replacement-compressed.webp
+  [IMG] core_four_texas_roofing.webp
+  <h3.title> Extended Warranties
+  <div.desc> We don't compromise on quality. Core Four Roofing installs top-tier shingles from trusted manufacturers like IKO, Malarkey, and CertainTeed. Because we are certified installers, your new roof comes with robust manufacturer material warranties (often up to 50 years or lifetime limited) and our own comprehensive Lifetime Workmanship Warranty. Your investment is fully secured.
+
+=== SECTION 5 | h=1883 | pad=96px/96px | bg=rgba(0, 0, 0, 0)
+  <h2.title> Ready to Upgrade Your Home's Roof?
+  <h3.title> Send us a Message
+  <div.desc> Fill out the form below to schedule your free, no-obligation asphalt shingle inspection and estimate with a local Core Four roofing expert.
+  <p> " " indicates required fields
+  <span> *
+  <label.gfield_label.gform-field-label> LinkedIn
+  <div.gfield_description> This field is for validation purposes and should be left unchanged.
+  <legend.gfield_label.gform-field-label> Name
+  <span> *
+  <label.gform-field-label.gform-field-label--type-sub> First
+  <label.gform-field-label.gform-field-label--type-sub> Last
+  <label.gfield_label.gform-field-label> Email
+  <span> *
+  <label.gfield_label.gform-field-label> Phone
+  <span> *
+  <label.gfield_label.gform-field-label> Select a Service
+  <span> *
+  <option> Please Select a Service
+  <option> Commercial Roofing
+  <option> Residential Roofing
+  <option> Premium Roofing
+  <option> Exterior Services
+  <legend.gfield_label.gform-field-label> Address
+  <span> *
+  <label.gform-field-label.gform-field-label--type-sub> ZIP Code
+  <label.gfield_label.gform-field-label> Comments
+  <div.gfield_description> 0 of 600 max characters
+  <div.gfield_description> Please let us know what's on your mind. Have a question for us? Ask away.
+  [IMG] core_four_community-5.jpg
+  [IMG] core_four_community-2.jpg
+  [IMG] core_four_community-1.jpg
+
+=== SECTION 6 | h=606 | pad=96px/86px | bg=rgba(0, 0, 0, 0)
+  <h3.title> Kevin Andrews
+  <p.title> ★★★★★ 5 Stars
+  <p> Cody was quick to meet the adjuster was helpful through the process. Not a flyby night company, very professional and knowledgeable.
+  [IMG] 00924821-9fba-4891-9c3a-bf8071e88bf7-compressed-scaled-e1776361245929.webp
+  <h3.title> Rene Portillo
+  <p.title> ★★★★★ 5 Stars
+  <p> I was very happy with service that was offered before during and after the installation. I will definitely recommend their services to others who need a roof.
+  [IMG] Decra-11-scaled.jpg
+  <h3.title> Lisa Marburger
+  <p.title> ★★★★★ 5 Stars
+  <p> I reached out to Montgomery with Core Four Roofing on Friday, July 14th, requesting a quote. I received the quote the same day. The quote was thorough, easy to read, and by far the best price. I asked how soon they could complete the job and Montgomery got back with me immediately stating they could do it the following Friday or Saturday. I requested they come Friday. Workers arrived and completed the job that Friday. The roof looks amazing and the job site was left with no evidence, short of the gorgeous new roof, that they had been there. Several of my neighbors have spoken with me stating how great the roof looks. Core Four Roofing and Montgomery get a 5 star A+++ from me. I would highly recommend them for any of your roofing needs.
+  [IMG] 3b6394f3-0ca6-42d0-af68-1cba641b3cd4-compressed-scaled.webp
+  <h3.title> Justin Chambers
+  <p.title> ★★★★★ 5 Stars
+  <p> They were quick to schedule and complete my roof using great materials at a good price. They don’t try to over charge you. I would definitely recommend them.
+  [IMG] Decra-Villa-13-scaled.jpg
+
+=== SECTION 7 | h=704 | pad=0px/0px | bg=rgba(0, 0, 0, 0)
+  <h4> Protecting Texas, One Roof at a Time
+  <p> Core Four Roofing Service Coverage
+  [ICON] fas fa-map-pin
+  <h6> Service Hubs
+  <p> Austin, Dallas, Houston
+  [ICON] fas fa-clock
+  <h6> Storm Response
+  <p> 24/7 Emergency Tarping & Repair
+  [ICON] fas fa-phone
+  <h6> Local Office
+  <p> (281) 541-0027
+
+=== SECTION 8 | h=0 | pad=0px/0px | bg=rgba(0, 0, 0, 0)

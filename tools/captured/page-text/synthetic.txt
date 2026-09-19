@@ -1,0 +1,138 @@
+TITLE: Synthetic Roofs - Core Four Roofing
+META: 
+
+=== SECTION 0 | h=915 | pad=230px/116px | bg=rgba(0, 0, 0, 0) | bgimg=core_four_synthetic_shingles-compressed.webp
+  <h1.title> Premium F-Wave™ Synthetic Roofing in Texas
+  <div.desc> Experience the ultimate defense against Texas hail. Core Four Roofing proudly installs F-Wave™ synthetic shingles—a revolutionary, granule-free roofing system that offers the premium look of slate or wood shake with unmatched, weather-tested durability.
+  [ICON] fas fa-arrow-right
+  <span.button_label> Get a Free Synthetic Roof Estimate
+  [IMG] Core-Four-Associate-Members-BBB-A-Rating-compressed.webp
+  [IMG] Core-Four-Associate-Members-ANGI-Super-service-award-winner-2024-compressed.webp
+  [IMG] Core-Four-Associate-Members-Core-Four-Roofing-National-Roofing-Contractors-Association-Member-Badge-compressed.webp
+  [IMG] Core-Four-Associate-Members-RCAT-Member-compressed.webp
+
+=== SECTION 1 | h=1100 | pad=96px/96px | bg=rgba(0, 0, 0, 0)
+  <h1> What Are F-Wave™ Synthetic Shingles?
+  <p> For decades, roofing materials have had the same fundamental weaknesses: asphalt shingles lose their granules, wood shake rots and splits, and real slate is heavy and fragile. F-Wave™ synthetic roofing eliminates all of these problems through modern engineering. Made from a proprietary, commercial-grade polymer mix, F-Wave™ shingles contain absolutely no asphalt, fiberglass, or crushed stone granules.
+  <p> Instead, they are manufactured as a single-piece, highly durable synthetic material. This means there is nothing to delaminate, nothing to wash away into your gutters, and nothing to crack under the impact of massive hail. Designed to mimic the exact textures and dimensional shadow lines of premium architectural shingles, hand-split wood shake, or natural quarried slate, F-Wave provides Texas homeowners with a luxurious aesthetic that is virtually indestructible.
+  [ICON] fas fa-arrow-right
+  <span.button_label> Get a Free Estimate
+  [IMG] core_four_new_synthetic_roofing-2.webp
+  [IMG] core_four_synthetic_roofing-close.webp
+
+=== SECTION 2 | h=1116 | pad=96px/96px | bg=rgba(0, 0, 0, 0)
+  <span.title> Key Benefits
+  <h2.title> Why Upgrade to F-Wave™ Synthetic Roofing?
+  <p.title> F-Wave™ is rapidly becoming the top choice for Texas homeowners who are tired of replacing their roof after every major hailstorm. It combines high-end curb appeal with zero-maintenance, battle-tested performance.
+  [ICON] fas fa-arrow-right
+  <span.button_label> Call us about Synthetic Roofing
+  <h3.title> Unbeatable Hail Defense
+  <div.desc> With an industry-leading Class 4 Impact Resistance rating, F-Wave™ is engineered to withstand severe hail strikes that would easily destroy standard asphalt shingles, keeping your home fully protected during storm season.
+  <h3.title> Zero Granule Loss
+  <div.desc> Because F-Wave™ shingles are entirely synthetic and contain no asphalt or crushed stone, you will never have to deal with bare spots on your roof or gutters clogged with washed-away roofing granules.
+  <h3.title> Premium Architectural Looks
+  <div.desc> Upgrade your home's curb appeal instantly. F-Wave™ offers profiles that perfectly replicate the rich, dimensional look of heavy designer shingles, natural slate, and authentic wood shake, without the associated maintenance.
+  <h3.title> 130-MPH Wind Resistance
+  <div.desc> Engineered to lay flat and lock tightly together, these synthetic shingles are built to withstand high-velocity, hurricane-force winds up to 130 mph, preventing catastrophic blow-offs during severe Texas weather.
+
+=== SECTION 3 | h=742 | pad=96px/96px | bg=oklch(0.6099 0.1588 148.77) | bgimg=bottom-triangles-dark.svg
+  <h2.title> Frequently Asked Questions About Synthetic Roofs
+  <div.title> Do synthetic shingles look fake or shiny?
+  <span.num> 1
+  [ICON] icon-plus acc-icon-plus
+  [ICON] icon-minus acc-icon-minus
+  <div.answer> Not at all. F-Wave™ uses state-of-the-art manufacturing to create highly authentic textures and varied color profiles. Once installed, it is nearly impossible to tell the difference between F-Wave™ and the natural slate, shake, or premium asphalt it is designed to replicate.
+  <div.title> Will a Class 4 synthetic roof lower my homeowner's insurance?
+  <span.num> 2
+  [ICON] icon-plus acc-icon-plus
+  [ICON] icon-minus acc-icon-minus
+  <div.answer> In many cases, yes! Because F-Wave™ carries a Class 4 impact rating, many Texas insurance providers offer significant premium discounts to homeowners who install it, as it drastically reduces the likelihood of future hail damage claims.
+  <div.title> Will the color fade in the harsh Texas sun?
+  <span.num> 3
+  [ICON] icon-plus acc-icon-plus
+  [ICON] icon-minus acc-icon-minus
+  <div.answer> F-Wave™ shingles are manufactured with premium, built-in UV-resistant polymers. Unlike traditional asphalt that can fade or bleach over time, F-Wave™ is designed to maintain its rich, vibrant color for decades.
+  <div.title> Does a synthetic roof require special maintenance?
+  <span.num> 4
+  [ICON] icon-plus acc-icon-plus
+  [ICON] icon-minus acc-icon-minus
+  <div.answer> One of the biggest advantages of F-Wave™ is that it is virtually maintenance-free. Because there are no granules to replace, no wood to treat for rot, and no fragile slate tiles to replace, you can enjoy your beautiful roof without ongoing upkeep.
+  [ICON] fas fa-arrow-right
+  <span.button_label> Ask us a question
+  [IMG] core_four_new_synthetic_roofing.webp
+
+=== SECTION 4 | h=1010 | pad=96px/96px | bg=rgba(0, 0, 0, 0)
+  <h2.title> The Ultimate WeatherForce™ Guarantee
+  <div.desc> Your roof is one of the most critical investments you will make. We ensure that investment is protected and accessible.
+  <h3.title> Flexible Financing
+  <div.desc> Upgrading to a state-of-the-art synthetic roof is an investment in your home's future. Core Four Roofing offers flexible, stress-free financing options tailored to your budget so you can stop worrying about the next storm and start enjoying your premium roof today.
+  [IMG] core_four_synthetic_roofing.webp
+  [IMG] core_four_new_synthetic_roofing.webp
+  <h3.title> Extended Warranties
+  <div.desc> F-Wave™ puts its money where its mouth is. In addition to a 50-year manufacturer warranty, F-Wave™ products come with an exclusive 5-Year Hail Warranty that covers hail up to 2" in diameter—something almost unheard of in the roofing industry. When paired with the Core Four Lifetime Workmanship Warranty, you are getting the ultimate peace of mind.
+
+=== SECTION 5 | h=1883 | pad=96px/96px | bg=rgba(0, 0, 0, 0)
+  <h2.title> Ready to Stop Worrying About Texas Hail?
+  <h3.title> Request Your Inspection
+  <p.title> Fill out the form below to schedule a free, no-obligation consultation with a Core Four roofing expert to see and feel the F-Wave™ synthetic difference for yourself.
+  <p> " " indicates required fields
+  <span> *
+  <label.gfield_label.gform-field-label> Phone
+  <div.gfield_description> This field is for validation purposes and should be left unchanged.
+  <legend.gfield_label.gform-field-label> Name
+  <span> *
+  <label.gform-field-label.gform-field-label--type-sub> First
+  <label.gform-field-label.gform-field-label--type-sub> Last
+  <label.gfield_label.gform-field-label> Email
+  <span> *
+  <label.gfield_label.gform-field-label> Phone
+  <span> *
+  <label.gfield_label.gform-field-label> Select a Service
+  <span> *
+  <option> Please Select a Service
+  <option> Commercial Roofing
+  <option> Residential Roofing
+  <option> Premium Roofing
+  <option> Exterior Services
+  <legend.gfield_label.gform-field-label> Address
+  <span> *
+  <label.gform-field-label.gform-field-label--type-sub> ZIP Code
+  <label.gfield_label.gform-field-label> Comments
+  <div.gfield_description> 0 of 600 max characters
+  <div.gfield_description> Please let us know what's on your mind. Have a question for us? Ask away.
+  [IMG] core_four_community-5.jpg
+  [IMG] core_four_community-2.jpg
+  [IMG] core_four_community-1.jpg
+
+=== SECTION 6 | h=606 | pad=96px/86px | bg=rgba(0, 0, 0, 0)
+  <h3.title> Kevin Andrews
+  <p.title> ★★★★★ 5 Stars
+  <p> Cody was quick to meet the adjuster was helpful through the process. Not a flyby night company, very professional and knowledgeable.
+  [IMG] 00924821-9fba-4891-9c3a-bf8071e88bf7-compressed-scaled-e1776361245929.webp
+  <h3.title> Rene Portillo
+  <p.title> ★★★★★ 5 Stars
+  <p> I was very happy with service that was offered before during and after the installation. I will definitely recommend their services to others who need a roof.
+  [IMG] Decra-11-scaled.jpg
+  <h3.title> Lisa Marburger
+  <p.title> ★★★★★ 5 Stars
+  <p> I reached out to Montgomery with Core Four Roofing on Friday, July 14th, requesting a quote. I received the quote the same day. The quote was thorough, easy to read, and by far the best price. I asked how soon they could complete the job and Montgomery got back with me immediately stating they could do it the following Friday or Saturday. I requested they come Friday. Workers arrived and completed the job that Friday. The roof looks amazing and the job site was left with no evidence, short of the gorgeous new roof, that they had been there. Several of my neighbors have spoken with me stating how great the roof looks. Core Four Roofing and Montgomery get a 5 star A+++ from me. I would highly recommend them for any of your roofing needs.
+  [IMG] 3b6394f3-0ca6-42d0-af68-1cba641b3cd4-compressed-scaled.webp
+  <h3.title> Justin Chambers
+  <p.title> ★★★★★ 5 Stars
+  <p> They were quick to schedule and complete my roof using great materials at a good price. They don’t try to over charge you. I would definitely recommend them.
+  [IMG] Decra-Villa-13-scaled.jpg
+
+=== SECTION 7 | h=704 | pad=0px/0px | bg=rgba(0, 0, 0, 0)
+  <h4> Protecting Texas, One Roof at a Time
+  <p> Core Four Roofing Service Coverage
+  [ICON] fas fa-map-pin
+  <h6> Service Hubs
+  <p> Austin, Dallas, Houston
+  [ICON] fas fa-clock
+  <h6> Storm Response
+  <p> 24/7 Emergency Tarping & Repair
+  [ICON] fas fa-phone
+  <h6> Local Office
+  <p> (281) 541-0027
+
+=== SECTION 8 | h=0 | pad=0px/0px | bg=rgba(0, 0, 0, 0)

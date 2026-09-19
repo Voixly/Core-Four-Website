@@ -1,0 +1,120 @@
+TITLE: Insurance - Core Four Roofing
+META: 
+
+=== SECTION 0 | h=886 | pad=230px/116px | bg=rgba(0, 0, 0, 0) | bgimg=home-roof-damage-and-needed-repair-2026-03-17-05-40-48-utc-compressed.webp
+  <h1.title> Expert Roof Insurance Claim Assistance in Texas
+  <div.desc> Don't fight the insurance company alone. When severe storms strike Houston, Dallas, or Austin, Core Four Roofing acts as your expert advocate. We provide exact damage documentation and work directly with your adjuster to ensure your property is fully restored.
+  [ICON] fas fa-arrow-right
+  <span.button_label> Schedule a Storm Damage Inspection
+  [IMG] Core-Four-Associate-Members-BBB-A-Rating-compressed.webp
+  [IMG] Core-Four-Associate-Members-Core-Four-Roofing-National-Roofing-Contractors-Association-Member-Badge-compressed.webp
+  [IMG] Core-Four-Associate-Members-RCAT-Member-compressed.webp
+  [IMG] Core-Four-Associate-Members-Core-Four-Roofing-Houston-Area-Roofing-Contractors-Association-Member-compressed.webp
+
+=== SECTION 1 | h=1647 | pad=96px/96px | bg=oklch(0.2496 0.031 155.1)
+  <h2.title> Navigating the Roof Insurance Claim Process
+  <h3.title> A Local Advocate On Your Side
+  <div.desc> Texas weather is notoriously unpredictable. When massive hail, straight-line winds, or hurricane-force rains tear through your neighborhood, dealing with the aftermath can be overwhelming. Filing an insurance claim is often a confusing and frustrating process. It is important to remember that the insurance adjuster works for the insurance company—their job is to manage the company's financial exposure. You need a roofing expert working for you. Core Four Roofing specializes in comprehensive storm damage recovery. From the moment you call us, we take the burden off your shoulders. We start by providing emergency tarping to stop immediate leaks. Then, we perform an exhaustive, photo-documented inspection to identify every compromised shingle, dented vent, and hidden impact zone. We meet your insurance adjuster on-site, ensuring no damage is overlooked and that your final payout reflects the true cost of a complete, code-compliant roof replacement.
+  [IMG] cfr-decra-tile-before-compressed.webp
+  [BEFORE] core_four_emergency_repair_before-compressed.webp
+  [AFTER] core_four_emergency_repair_after-compressed.webp
+  <h3.title> How We Maximize Your Storm Recovery
+  <p> Our team speaks the language of insurance companies. We use the same estimating software as the major carriers to ensure our bids are accurate, transparent, and rapidly approved.
+  [IMG] core_four_roof_reapair_maintenance-compressed.webp
+  <h4.title> Suspect Storm Damage? Act Fast.
+  <p> Request an urgent, no-obligation storm damage inspection. Our experts will document the damage and help you start the recovery process today.
+  [ICON] fas fa-arrow-right
+  <span.button_label> Call Now
+
+=== SECTION 2 | h=959 | pad=96px/56px | bg=oklch(0.6099 0.1588 148.77) | bgimg=bottom-triangles-dark.svg
+  <h2.title> Frequently Asked Questions About Roofing Claims
+  <div.desc> Find answers to the most common questions homeowners and property managers have about the insurance claim process.
+  <div.title> Will my rates go up if I file a roof claim?
+  <span.num> 1
+  [ICON] icon-plus acc-icon-plus
+  [ICON] icon-minus acc-icon-minus
+  <div.answer> In Texas, insurance companies generally cannot raise your individual premium solely because you filed a claim for an 'Act of God' like a hail or wind storm. However, if a massive storm hits your entire zip code, base rates for the whole area may increase regardless of whether you file a claim or not.
+  <div.title> Can a roofer waive or 'eat' my deductible?
+  <span.num> 2
+  [ICON] icon-plus acc-icon-plus
+  [ICON] icon-minus acc-icon-minus
+  <div.answer> No. Under Texas law (HB2102), it is a criminal offense for a roofing contractor to pay, waive, absorb, or rebate a homeowner's insurance deductible. Any roofer offering to do so is committing insurance fraud. However, Core Four Roofing offers flexible financing options to help you cover the cost of your deductible comfortably.
+  <div.title> How long do I have to file a claim after a storm?
+  <span.num> 3
+  [ICON] icon-plus acc-icon-plus
+  [ICON] icon-minus acc-icon-minus
+  <div.answer> Most insurance policies require you to file a claim within one year (365 days) of the date of the storm. However, it is critical to get your roof inspected immediately, as waiting can cause secondary water damage to your home's interior, which may not be covered if deemed negligent.
+  <div.title> My insurance only approved a partial repair. What do I do?
+  <span.num> 4
+  [ICON] icon-plus acc-icon-plus
+  [ICON] icon-minus acc-icon-minus
+  <div.answer> Call us immediately. Insurance companies often try to minimize payouts by suggesting a repair instead of a replacement. If your roof has sustained widespread damage or if the shingles are too old and brittle to be successfully repaired without causing more damage, we will document this and supplement the claim for a full replacement.
+  [ICON] fas fa-arrow-right
+  <span.button_label> Schedule Your Inspection
+  [BEFORE] core_four_residential_hero_before.webp
+  [AFTER] core_four_residential_hero_after.webp
+
+=== SECTION 3 | h=1068 | pad=96px/56px | bg=rgba(0, 0, 0, 0)
+  <span.title> The Guarantee
+  <h3.title> How We Maximize Your Storm Recovery
+  <p.title> Our team speaks the language of insurance companies. We use the same estimating software as the major carriers to ensure our bids are accurate, transparent, and rapidly approved.
+  <span.number> 1000
+  <span.label> +
+  <p.title> Successful Jobs Completed
+  [ICON] fas fa-arrow-right
+  <span.button_label> Call Us
+  [ICON] fas fa-camera primary
+  <h4.title.label> Detailed Damage Documentation
+  <div.desc> We don't just look at your shingles. We inspect your gutters, siding, flashing, vents, and AC fins. We compile a comprehensive photo report that proves the exact extent of the storm damage to your carrier.
+  [ICON] fas fa-handshake primary
+  <h4.title.label> On-Site Adjuster Meetings
+  <div.desc> We highly recommend letting us be present when your insurance adjuster inspects the property. We physically walk the roof with them to point out hidden damage, ensuring you get a fair and accurate assessment.
+  [ICON] fas fa-hard-hat primary
+  <h4.title.label> Strict Code Compliance
+  <div.desc> If your roof requires structural upgrades to meet current Texas codes, we fight to have those covered. Once approved, our expert crews tear off the damaged materials and install a beautiful new roof.
+
+=== SECTION 4 | h=606 | pad=96px/86px | bg=rgba(0, 0, 0, 0)
+  <h3.title> Kevin Andrews
+  <p.title> ★★★★★ 5 Stars
+  <p> Cody was quick to meet the adjuster was helpful through the process. Not a flyby night company, very professional and knowledgeable.
+  [IMG] 00924821-9fba-4891-9c3a-bf8071e88bf7-compressed-scaled-e1776361245929.webp
+  <h3.title> Rene Portillo
+  <p.title> ★★★★★ 5 Stars
+  <p> I was very happy with service that was offered before during and after the installation. I will definitely recommend their services to others who need a roof.
+  [IMG] Decra-11-scaled.jpg
+  <h3.title> Lisa Marburger
+  <p.title> ★★★★★ 5 Stars
+  <p> I reached out to Montgomery with Core Four Roofing on Friday, July 14th, requesting a quote. I received the quote the same day. The quote was thorough, easy to read, and by far the best price. I asked how soon they could complete the job and Montgomery got back with me immediately stating they could do it the following Friday or Saturday. I requested they come Friday. Workers arrived and completed the job that Friday. The roof looks amazing and the job site was left with no evidence, short of the gorgeous new roof, that they had been there. Several of my neighbors have spoken with me stating how great the roof looks. Core Four Roofing and Montgomery get a 5 star A+++ from me. I would highly recommend them for any of your roofing needs.
+  [IMG] 3b6394f3-0ca6-42d0-af68-1cba641b3cd4-compressed-scaled.webp
+  <h3.title> Justin Chambers
+  <p.title> ★★★★★ 5 Stars
+  <p> They were quick to schedule and complete my roof using great materials at a good price. They don’t try to over charge you. I would definitely recommend them.
+  [IMG] Decra-Villa-13-scaled.jpg
+
+=== SECTION 5 | h=1106 | pad=64px/32px | bg=rgba(0, 0, 0, 0) | bgimg=bottom-triangles-light.svg
+  [IMG] Decra-11-scaled.jpg
+  [IMG] 157-Jun-10-2025-18-21-50-m2gV-scaled.jpg
+  [IMG] 00924821-9fba-4891-9c3a-bf8071e88bf7-compressed-scaled-e1776361245929.webp
+  [IMG] 3b6394f3-0ca6-42d0-af68-1cba641b3cd4-compressed-scaled.webp
+  [IMG] Decra-Villa-13-scaled.jpg
+  [IMG] 005-scaled.jpg
+  [IMG] core_four_emergency_repair_after-compressed.webp
+  [IMG] core_four_texas_roofing.webp
+  [IMG] Decra-Villa-14-compressed.webp
+  [IMG] core_four_roof_replacement-compressed.webp
+  [IMG] core_four_residential-compressed.webp
+
+=== SECTION 6 | h=704 | pad=0px/0px | bg=rgba(0, 0, 0, 0)
+  <h4> Rapid Response Across the Lone Star State
+  <p> With offices strategically located across Texas, we deploy emergency crews quickly to the areas hit hardest by severe weather.
+  [ICON] fas fa-map-pin
+  <h6> Service Hubs
+  <p> Austin, Dallas, Houston
+  [ICON] fas fa-clock
+  <h6> Storm Response
+  <p> 24/7 Emergency Tarping & Repair
+  [ICON] fas fa-phone
+  <h6> Local Office
+  <p> (281) 541-0027
+
+=== SECTION 7 | h=0 | pad=0px/0px | bg=rgba(0, 0, 0, 0)

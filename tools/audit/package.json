@@ -1,0 +1,15 @@
+{
+  "name": "core-four-audit",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Compares the rebuilt site against the live site at each breakpoint.",
+  "type": "commonjs",
+  "scripts": {
+    "audit": "node audit.js",
+    "probe": "node probe.js",
+    "shot": "node shot.js"
+  },
+  "dependencies": {
+    "puppeteer-core": "^23.11.1"
+  }
+}

@@ -1,0 +1,102 @@
+TITLE: About Core Four Roofing - Core Four Roofing
+META: 
+
+=== SECTION 0 | h=804 | pad=230px/116px | bg=rgba(0, 0, 0, 0) | bgimg=3b6394f3-0ca6-42d0-af68-1cba641b3cd4-compressed-scaled.webp
+  <h1.title> Built on Integrity. Driven by Excellence.
+  <div.desc> At Core Four Roofing, we don't just build roofs; we build lasting relationships. As a locally owned and operated Texas company, we are dedicated to protecting the homes and businesses in the communities we serve.
+  [ICON] fas fa-arrow-right
+  <span.button_label> Call Us Today
+  <h3.title> Roofing Done The Right Way
+  <div.desc> We aren't out-of-state storm chasers; we live and work in the communities we serve. Core Four Roofing is deeply committed to supporting our neighbors, especially in the wake of natural disasters.
+
+=== SECTION 1 | h=2104 | pad=96px/0px | bg=rgba(0, 0, 0, 0)
+  <h2.title> Standing Strong With Texas
+  [IMG] core_four_community-4.jpg
+  [IMG] core_four_community-3.jpg
+  [IMG] core_four_community-6-1.jpg
+  <h3> When disaster strikes, we step up.
+  <p> Recently, when devastating tornadoes tore through Texas, our team immediately deployed to provide emergency tarping services to affected homeowners. We believe that true community partnership means being there when you need us most.
+  [IMG] core_four_community-5.jpg
+  [IMG] core_four_community-2.jpg
+  [IMG] core_four_community-1.jpg
+
+=== SECTION 2 | h=1312 | pad=96px/56px | bg=rgba(0, 0, 0, 0)
+  <span.title> The Guarantee
+  <h3.title> Protect Your Home With the Core Four Roofing Principles
+  <p.title> For property owners who want the job done right the first time. We combine premium materials, expert installation, and transparent communication.
+  <span.number> 1000
+  <span.label> +
+  <p.title> Successful Jobs Completed
+  [ICON] fas fa-arrow-right
+  <span.button_label> Call Us
+  [ICON] fas fa-wallet primary
+  <h3.title.label> Affordability
+  <div.desc> We offer competitive pricing, transparent estimates, and stress-free financing options so you can protect your property without breaking the bank.
+  [ICON] icon-arrows-ccw primary
+  <h3.title.label> Efficiency
+  <div.desc> Fast turnaround times without sacrificing quality. Most residential replacements are completed in just 1-3 days, minimizing disruption to your life or business.
+  [ICON] fas fa-handshake primary
+  <h3.title.label> Integrity
+  <div.desc> Honest communication is our policy. We perform thorough inspections and never sell you what you don't need. We stand by our work and our word.
+  [ICON] fas fa-award primary
+  <h3.title.label> Quality
+  <div.desc> Master certified installers utilizing top-tier materials from industry-leading manufacturers. Built to withstand the toughest Texas weather.
+
+=== SECTION 3 | h=704 | pad=0px/0px | bg=rgba(0, 0, 0, 0)
+  <h4> Protecting Texas, One Roof at a Time
+  <p> Core Four Roofing Service Coverage
+  [ICON] fas fa-map-pin
+  <h6> Service Hubs
+  <p> Austin, Dallas, Houston
+  [ICON] fas fa-clock
+  <h6> Storm Response
+  <p> 24/7 Emergency Tarping & Repair
+  [ICON] fas fa-phone
+  <h6> Local Office
+  <p> (281) 541-0027
+
+=== SECTION 4 | h=1010 | pad=96px/96px | bg=oklch(0.6099 0.1588 148.77)
+  <h2.title> Unmatched Protection & Stress-Free Solutions
+  <div.desc> Your roof is one of the most critical investments you will make. We ensure that investment is protected and accessible.
+  <h3.title> Flexible Financing
+  <div.desc> Whether you are a homeowner facing unexpected storm damage or a property manager upgrading a facility, capital shouldn't be a roadblock to safety. We offer stress-free, flexible financing options designed to fit your budget, allowing you to secure your property now and pay over time.
+  [IMG] core_four_roof_replacement-compressed.webp
+  [IMG] Decra-Villa-13-scaled.jpg
+  <h3.title> Extended Warranties
+  <div.desc> We install the best, so we guarantee the best. Core Four Roofing proudly partners with industry-leading manufacturers like IKO, Malarkey, and CertainTeed. Because of our elite installation standards, we are able to offer unbeatable extended manufacturer warranties on our products, paired with our own comprehensive Lifetime Workmanship Warranty. When we put our name on a roof, it’s covered.
+
+=== SECTION 5 | h=606 | pad=96px/86px | bg=rgba(0, 0, 0, 0)
+  <h3.title> Kevin Andrews
+  <p.title> ★★★★★ 5 Stars
+  <p> Cody was quick to meet the adjuster was helpful through the process. Not a flyby night company, very professional and knowledgeable.
+  [IMG] 00924821-9fba-4891-9c3a-bf8071e88bf7-compressed-scaled-e1776361245929.webp
+  <h3.title> Rene Portillo
+  <p.title> ★★★★★ 5 Stars
+  <p> I was very happy with service that was offered before during and after the installation. I will definitely recommend their services to others who need a roof.
+  [IMG] Decra-11-scaled.jpg
+  <h3.title> Lisa Marburger
+  <p.title> ★★★★★ 5 Stars
+  <p> I reached out to Montgomery with Core Four Roofing on Friday, July 14th, requesting a quote. I received the quote the same day. The quote was thorough, easy to read, and by far the best price. I asked how soon they could complete the job and Montgomery got back with me immediately stating they could do it the following Friday or Saturday. I requested they come Friday. Workers arrived and completed the job that Friday. The roof looks amazing and the job site was left with no evidence, short of the gorgeous new roof, that they had been there. Several of my neighbors have spoken with me stating how great the roof looks. Core Four Roofing and Montgomery get a 5 star A+++ from me. I would highly recommend them for any of your roofing needs.
+  [IMG] 3b6394f3-0ca6-42d0-af68-1cba641b3cd4-compressed-scaled.webp
+  <h3.title> Justin Chambers
+  <p.title> ★★★★★ 5 Stars
+  <p> They were quick to schedule and complete my roof using great materials at a good price. They don’t try to over charge you. I would definitely recommend them.
+  [IMG] Decra-Villa-13-scaled.jpg
+
+=== SECTION 6 | h=484 | pad=64px/64px | bg=rgba(0, 0, 0, 0)
+  <h2.title> Ready to Experience the Core Four Difference?
+  <div.desc> Whether you manage a sprawling commercial complex or are looking to protect your family's home, our team is ready to deliver.
+  [ICON] fas fa-arrow-right
+  <span.button_label> Request a Commercial Bid
+  [ICON] fas fa-arrow-right
+  <span.button_label> Schedule a Residential Inspection
+
+=== SECTION 7 | h=587 | pad=64px/32px | bg=rgba(0, 0, 0, 0) | bgimg=bottom-triangles-light.svg
+  [IMG] Decra-11-scaled.jpg
+  [IMG] 00924821-9fba-4891-9c3a-bf8071e88bf7-compressed-scaled-e1776361245929.webp
+  [IMG] 3b6394f3-0ca6-42d0-af68-1cba641b3cd4-compressed-scaled.webp
+  [IMG] Decra-Villa-13-scaled.jpg
+  [IMG] 005-scaled.jpg
+  [IMG] 1-Sep-18-2025-18-23-12-yesM-compressed.webp
+
+=== SECTION 8 | h=0 | pad=0px/0px | bg=rgba(0, 0, 0, 0)

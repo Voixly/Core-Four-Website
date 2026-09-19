@@ -1,0 +1,139 @@
+TITLE: Stone-Coated Steel - Core Four Roofing
+META: 
+
+=== SECTION 0 | h=915 | pad=230px/116px | bg=rgba(0, 0, 0, 0) | bgimg=core_four_roofing_decra_stone_coated_steel.webp
+  <h1.title> Premium Stone-Coated Steel Roofing in Texas
+  <div.desc> Get the classic beauty of traditional tile, wood shake, or heavy shingles with the lifetime durability of steel. Core Four Roofing installs premium stone-coated steel roofs engineered to withstand the harshest Texas weather without cracking, splitting, or fading.
+  [ICON] fas fa-arrow-right
+  <span.button_label> Call for a Free Stone-Coated Steel Estimate
+  [IMG] Core-Four-Associate-Members-RCAT-Member-compressed.webp
+  [IMG] Core-Four-Associate-Members-home-advisor-screened-and-approved-compressed.webp
+  [IMG] Core-Four-Roofing-Partner-DECRA-compressed.webp
+  [IMG] Core-Four-Associate-Members-IFMA-compressed.webp
+
+=== SECTION 1 | h=985 | pad=96px/96px | bg=rgba(0, 0, 0, 0)
+  <h2> What is Stone-Coated Steel Roofing?
+  <p> Stone-coated steel roofing is a marvel of modern roofing technology that bridges the gap between industrial strength and residential beauty. It begins with a core of high-tensile, corrosion-resistant steel. This steel is stamped into highly detailed panels designed to mimic the exact contours of traditional luxury roofing materials like Mediterranean clay tile, rustic wood shake, or thick architectural shingles.
+  <p> An advanced acrylic base coat is then applied to the steel, followed by a thick layer of natural stone granules, and finished with a clear, UV-resistant overglaze. The result is a roofing system that provides the impenetrable strength, fire resistance, and extreme longevity of metal, but with a beautiful, textured, and traditional aesthetic. For Texas homeowners who want maximum protection against massive hail and severe storms but prefer a classic look over standing seam metal, stone-coated steel is the perfect solution.
+  [ICON] fas fa-arrow-right
+  <span.button_label> Get a Free Estimate
+  [IMG] Decra-Villa-14-compressed.webp
+  [IMG] core_four_roofing_decra_stone_coated_steel_shingles.webp
+
+=== SECTION 2 | h=1116 | pad=96px/96px | bg=rgba(0, 0, 0, 0)
+  <span.title> Key Benefits
+  <h2.title> Why Choose Stone-Coated Steel for Your Texas Home?
+  <p.title> Stone-coated steel offers the ultimate compromise between high-end aesthetics and battle-tested durability. It provides all the structural and longevity benefits of a metal roof while dramatically enhancing your home's traditional curb appeal.
+  [ICON] fas fa-arrow-right
+  <span.button_label> Call us about Stone Coated Steel Shingles
+  <h3.title> Unmatched Hail Protection
+  <div.desc> Unlike clay or concrete tiles that can shatter, or wood shake that splits upon impact, stone-coated steel boasts a Class 4 impact rating. It absorbs the energy of massive hail, keeping your home protected during severe Texas storms.
+  <h3.title> Classic Aesthetic Appeal
+  <div.desc> You don't have to sacrifice style for strength. These panels perfectly replicate the rich, dimensional look of traditional clay tile, wood shake, or slate, coming in a variety of natural colors to match your home's architecture.
+  <h3.title> Incredibly Lightweight
+  <div.desc> Despite its heavy-duty performance, stone-coated steel is one of the lightest roofing materials available (weighing just 1.5 lbs per square foot). It can often be installed without needing expensive structural reinforcements to your roof deck.
+  <h3.title> Superior Energy Efficiency
+  <div.desc> Because the metal panels are stamped with specific profiles, they create a natural air space above your roof deck. This "above-sheathing ventilation" helps dissipate heat in the summer, significantly lowering your cooling costs.
+
+=== SECTION 3 | h=718 | pad=96px/96px | bg=oklch(0.6099 0.1588 148.77) | bgimg=bottom-triangles-dark.svg
+  <h2.title> Frequently Asked Questions About Stone-Coated Steel
+  <div.title> Will the stone granules wash off or fade over time?
+  <span.num> 1
+  [ICON] icon-plus acc-icon-plus
+  [ICON] icon-minus acc-icon-minus
+  <div.answer> No. The natural, ceramic-coated stone granules are permanently bonded to the high-tensile steel core using an advanced acrylic polymer layer. They are UV-resistant and designed to retain their vibrant color and texture for decades without washing away in heavy rain.
+  <div.title> How does the cost compare to traditional shingles or tile?
+  <span.num> 2
+  [ICON] icon-plus acc-icon-plus
+  [ICON] icon-minus acc-icon-minus
+  <div.answer> While the initial investment is higher than standard asphalt shingles, stone-coated steel is often comparable to or less expensive than installing authentic clay tile or slate. When you factor in its 50+ year lifespan, minimal maintenance, and potential insurance premium discounts, it offers incredible long-term value.
+  <div.title> Is a stone-coated steel roof loud when it rains?
+  <span.num> 3
+  [ICON] icon-plus acc-icon-plus
+  [ICON] icon-minus acc-icon-minus
+  <div.answer> Not at all. The textured surface of the stone granules effectively absorbs and diffuses the sound of rain and hail. When installed properly over a solid roof deck and underlayment, it is just as quiet as an asphalt shingle roof.
+  <div.title> Can I walk on a stone-coated steel roof?
+  <span.num> 4
+  [ICON] icon-plus acc-icon-plus
+  [ICON] icon-minus acc-icon-minus
+  <div.answer> Yes, you can walk on it, but it requires a bit of care. Because the panels are stamped to have a dimensional profile (like a curve or a ridge), you must step in the designated "valleys" or low points where the metal rests flush against the roof deck to avoid denting the raised sections.
+  [ICON] fas fa-arrow-right
+  <span.button_label> Ask us a question
+  [BEFORE] cfr-decra-tile-before-compressed.webp
+  [AFTER] cfr-decra-tile-after-compressed.webp
+
+=== SECTION 4 | h=984 | pad=96px/96px | bg=rgba(0, 0, 0, 0)
+  <h2.title> Unmatched Protection & Stress-Free Solutions
+  <div.desc> Your roof is one of the most critical investments you will make. We ensure that investment is protected and accessible.
+  <h3.title> Flexible Financing
+  <div.desc> Upgrading to a lifetime roof shouldn't be stressful. Core Four Roofing offers flexible, stress-free financing options designed to fit your family's budget. Secure the ultimate protection for your home today and pay over time.
+  [IMG] core_four_roofing_decra_stone_coated_steel.webp
+  [IMG] Decra-Villa-13-scaled.jpg
+  <h3.title> Extended Warranties
+  <div.desc> A stone-coated steel roof is designed to be a permanent upgrade. We install top-tier materials that come with industry-leading manufacturer warranties—often including guarantees against 120 mph winds and hail penetration. Combined with the Core Four Lifetime Workmanship Warranty, your home is secured for the long haul.
+
+=== SECTION 5 | h=1883 | pad=96px/96px | bg=rgba(0, 0, 0, 0)
+  <h2.title> Ready to Transform Your Home's Exterior?
+  <h3.title> Request Your Inspection
+  <p.title> Fill out the form below to schedule a free, no-obligation consultation with a Core Four roofing expert to explore stone-coated steel styles and colors for your property.
+  <p> " " indicates required fields
+  <span> *
+  <label.gfield_label.gform-field-label> Phone
+  <div.gfield_description> This field is for validation purposes and should be left unchanged.
+  <legend.gfield_label.gform-field-label> Name
+  <span> *
+  <label.gform-field-label.gform-field-label--type-sub> First
+  <label.gform-field-label.gform-field-label--type-sub> Last
+  <label.gfield_label.gform-field-label> Email
+  <span> *
+  <label.gfield_label.gform-field-label> Phone
+  <span> *
+  <label.gfield_label.gform-field-label> Select a Service
+  <span> *
+  <option> Please Select a Service
+  <option> Commercial Roofing
+  <option> Residential Roofing
+  <option> Premium Roofing
+  <option> Exterior Services
+  <legend.gfield_label.gform-field-label> Address
+  <span> *
+  <label.gform-field-label.gform-field-label--type-sub> ZIP Code
+  <label.gfield_label.gform-field-label> Comments
+  <div.gfield_description> 0 of 600 max characters
+  <div.gfield_description> Please let us know what's on your mind. Have a question for us? Ask away.
+  [IMG] core_four_community-5.jpg
+  [IMG] core_four_community-2.jpg
+  [IMG] core_four_community-1.jpg
+
+=== SECTION 6 | h=606 | pad=96px/86px | bg=rgba(0, 0, 0, 0)
+  <h3.title> Kevin Andrews
+  <p.title> ★★★★★ 5 Stars
+  <p> Cody was quick to meet the adjuster was helpful through the process. Not a flyby night company, very professional and knowledgeable.
+  [IMG] 00924821-9fba-4891-9c3a-bf8071e88bf7-compressed-scaled-e1776361245929.webp
+  <h3.title> Rene Portillo
+  <p.title> ★★★★★ 5 Stars
+  <p> I was very happy with service that was offered before during and after the installation. I will definitely recommend their services to others who need a roof.
+  [IMG] Decra-11-scaled.jpg
+  <h3.title> Lisa Marburger
+  <p.title> ★★★★★ 5 Stars
+  <p> I reached out to Montgomery with Core Four Roofing on Friday, July 14th, requesting a quote. I received the quote the same day. The quote was thorough, easy to read, and by far the best price. I asked how soon they could complete the job and Montgomery got back with me immediately stating they could do it the following Friday or Saturday. I requested they come Friday. Workers arrived and completed the job that Friday. The roof looks amazing and the job site was left with no evidence, short of the gorgeous new roof, that they had been there. Several of my neighbors have spoken with me stating how great the roof looks. Core Four Roofing and Montgomery get a 5 star A+++ from me. I would highly recommend them for any of your roofing needs.
+  [IMG] 3b6394f3-0ca6-42d0-af68-1cba641b3cd4-compressed-scaled.webp
+  <h3.title> Justin Chambers
+  <p.title> ★★★★★ 5 Stars
+  <p> They were quick to schedule and complete my roof using great materials at a good price. They don’t try to over charge you. I would definitely recommend them.
+  [IMG] Decra-Villa-13-scaled.jpg
+
+=== SECTION 7 | h=704 | pad=0px/0px | bg=rgba(0, 0, 0, 0)
+  <h4> Protecting Texas, One Roof at a Time
+  <p> Core Four Roofing Service Coverage
+  [ICON] fas fa-map-pin
+  <h6> Service Hubs
+  <p> Austin, Dallas, Houston
+  [ICON] fas fa-clock
+  <h6> Storm Response
+  <p> 24/7 Emergency Tarping & Repair
+  [ICON] fas fa-phone
+  <h6> Local Office
+  <p> (281) 541-0027
+
+=== SECTION 8 | h=0 | pad=0px/0px | bg=rgba(0, 0, 0, 0)

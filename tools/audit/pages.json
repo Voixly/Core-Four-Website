@@ -1,0 +1,86 @@
+{
+ "about-core-four-roofing": {
+  "live": "https://corefourroofing.com/about-core-four-roofing/",
+  "prev": "http://127.0.0.1:8792/preview/about-core-four-roofing.html"
+ },
+ "blog": {
+  "live": "https://corefourroofing.com/blog/",
+  "prev": "http://127.0.0.1:8792/preview/blog.html"
+ },
+ "commercial-roofing--coatings-restoration": {
+  "live": "https://corefourroofing.com/commercial-roofing/coatings-restoration/",
+  "prev": "http://127.0.0.1:8792/preview/commercial-roofing--coatings-restoration.html"
+ },
+ "commercial-roofing--inspections-condition-reports": {
+  "live": "https://corefourroofing.com/commercial-roofing/inspections-condition-reports/",
+  "prev": "http://127.0.0.1:8792/preview/commercial-roofing--inspections-condition-reports.html"
+ },
+ "commercial-roofing--repair-preventative-maintenance": {
+  "live": "https://corefourroofing.com/commercial-roofing/repair-preventative-maintenance/",
+  "prev": "http://127.0.0.1:8792/preview/commercial-roofing--repair-preventative-maintenance.html"
+ },
+ "commercial-roofing--roof-replacement-installation": {
+  "live": "https://corefourroofing.com/commercial-roofing/roof-replacement-installation/",
+  "prev": "http://127.0.0.1:8792/preview/commercial-roofing--roof-replacement-installation.html"
+ },
+ "commercial-roofing": {
+  "live": "https://corefourroofing.com/commercial-roofing/",
+  "prev": "http://127.0.0.1:8792/preview/commercial-roofing.html"
+ },
+ "contact-core-four-roofing": {
+  "live": "https://corefourroofing.com/contact-core-four-roofing/",
+  "prev": "http://127.0.0.1:8792/preview/contact-core-four-roofing.html"
+ },
+ "financing": {
+  "live": "https://corefourroofing.com/financing/",
+  "prev": "http://127.0.0.1:8792/preview/financing.html"
+ },
+ "index": {
+  "live": "https://corefourroofing.com/",
+  "prev": "http://127.0.0.1:8792/preview/index.html"
+ },
+ "insurance-claims": {
+  "live": "https://corefourroofing.com/insurance-claims/",
+  "prev": "http://127.0.0.1:8792/preview/insurance-claims.html"
+ },
+ "residential-roofing--asphalt-shingles": {
+  "live": "https://corefourroofing.com/residential-roofing/asphalt-shingles/",
+  "prev": "http://127.0.0.1:8792/preview/residential-roofing--asphalt-shingles.html"
+ },
+ "residential-roofing--metal-roofs": {
+  "live": "https://corefourroofing.com/residential-roofing/metal-roofs/",
+  "prev": "http://127.0.0.1:8792/preview/residential-roofing--metal-roofs.html"
+ },
+ "residential-roofing--roof-inspections": {
+  "live": "https://corefourroofing.com/residential-roofing/roof-inspections/",
+  "prev": "http://127.0.0.1:8792/preview/residential-roofing--roof-inspections.html"
+ },
+ "residential-roofing--roof-installation": {
+  "live": "https://corefourroofing.com/residential-roofing/roof-installation/",
+  "prev": "http://127.0.0.1:8792/preview/residential-roofing--roof-installation.html"
+ },
+ "residential-roofing--roof-repair": {
+  "live": "https://corefourroofing.com/residential-roofing/roof-repair/",
+  "prev": "http://127.0.0.1:8792/preview/residential-roofing--roof-repair.html"
+ },
+ "residential-roofing--stone-coated-steel": {
+  "live": "https://corefourroofing.com/residential-roofing/stone-coated-steel/",
+  "prev": "http://127.0.0.1:8792/preview/residential-roofing--stone-coated-steel.html"
+ },
+ "residential-roofing--synthetic-roofs": {
+  "live": "https://corefourroofing.com/residential-roofing/synthetic-roofs/",
+  "prev": "http://127.0.0.1:8792/preview/residential-roofing--synthetic-roofs.html"
+ },
+ "residential-roofing": {
+  "live": "https://corefourroofing.com/residential-roofing/",
+  "prev": "http://127.0.0.1:8792/preview/residential-roofing.html"
+ },
+ "service-areas": {
+  "live": "https://corefourroofing.com/service-areas/",
+  "prev": "http://127.0.0.1:8792/preview/service-areas.html"
+ },
+ "storm-emergency": {
+  "live": "https://corefourroofing.com/storm-emergency/",
+  "prev": "http://127.0.0.1:8792/preview/storm-emergency.html"
+ }
+}

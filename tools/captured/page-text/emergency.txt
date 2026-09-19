@@ -1,0 +1,116 @@
+TITLE: Storm & Emergency - Core Four Roofing
+META: 
+
+=== SECTION 0 | h=886 | pad=230px/116px | bg=rgba(0, 0, 0, 0) | bgimg=home-roof-damage-and-needed-repair-2026-03-17-05-40-48-utc-compressed.webp
+  <h1.title> 24/7 Emergency Roof Repair & Storm Damage Restoration
+  <div.desc> When severe weather strikes Texas, Core Four Roofing is ready. We provide rapid-response emergency tarping, comprehensive damage inspections, and full insurance claim assistance for commercial and residential properties in Houston, Dallas, and Austin.
+  [ICON] fas fa-arrow-right
+  <span.button_label> Call Our Emergency Line
+
+=== SECTION 1 | h=1320 | pad=96px/96px | bg=oklch(0.2496 0.031 155.1)
+  <h2.title> Stop the Damage Now: Emergency Roof Tarping
+  <h3.title> Protecting Your Assets
+  <div.desc> Water intrusion can destroy a building’s interior, inventory, or living space in a matter of hours. Our first priority is stopping the bleeding. Core Four Roofing dispatch crews quickly to safely secure your roof with heavy-duty, waterproof tarping. This immediate mitigation prevents further interior damage and fulfills your insurance policy’s requirement to protect the property from secondary damage.
+  [IMG] core_four_emegency_tarp-compressed.webp
+  [BEFORE] core_four_emergency_repair_before-compressed.webp
+  [AFTER] core_four_emergency_repair_after-compressed.webp
+  <h3.title> We Know Texas Roofs
+  <p> Premium asphalt shingles and architectural metal roofs to boost weather protection.
+  [IMG] core_four_texas_roofing.webp
+  <h4.title> 24/7 Emergency
+  <p> Storm damage? We offer rapid response roof tarping and full insurance claim advocacy.
+  [ICON] fas fa-arrow-right
+  <span.button_label> Get Help Now
+
+=== SECTION 2 | h=821 | pad=96px/56px | bg=oklch(0.6099 0.1588 148.77) | bgimg=bottom-triangles-dark.svg
+  <h2.title> We Make Insurance Claims Stress-Free
+  <div.desc> Navigating a commercial or residential insurance claim can be confusing and frustrating. You don't have to do it alone. We work directly with your insurance provider to ensure you get the funds necessary for a proper, code-compliant restoration.
+  <div.title> Free Damage Assessment
+  <span.num> 1
+  [ICON] icon-plus acc-icon-plus
+  [ICON] icon-minus acc-icon-minus
+  <div.answer> We perform a comprehensive, photo-documented inspection to find all storm-related damage.
+  <div.title> File a Claim
+  <span.num> 2
+  [ICON] icon-plus acc-icon-plus
+  [ICON] icon-minus acc-icon-minus
+  <div.answer> If we find verifiable damage, we guide you through the process of contacting your insurance carrier to file the claim.
+  <div.title> Adjuster Meeting
+  <span.num> 3
+  [ICON] icon-plus acc-icon-plus
+  [ICON] icon-minus acc-icon-minus
+  <div.answer> We meet your insurance adjuster on-site to advocate for you, ensuring no damage is overlooked.
+  <div.title> Total Restoration
+  <span.num> 4
+  [ICON] icon-plus acc-icon-plus
+  [ICON] icon-minus acc-icon-minus
+  <div.answer> Once approved, our expert crews replace your roof quickly, safely, and to the highest industry standards.
+  [ICON] fas fa-arrow-right
+  <span.button_label> Call for a Free Colsultation
+  [BEFORE] core_four_residential_hero_before.webp
+  [AFTER] core_four_residential_hero_after.webp
+
+=== SECTION 3 | h=998 | pad=96px/56px | bg=rgba(0, 0, 0, 0)
+  <span.title> The Guarantee
+  <h3.title> Expert Recovery for Any Weather Event
+  <p.title> For property owners who want the job done right the first time. We combine premium materials, expert installation, and transparent communication.
+  <span.number> 1000
+  <span.label> +
+  <p.title> Successful Jobs Completed
+  [ICON] fas fa-arrow-right
+  <span.button_label> Call Us
+  [ICON] icon-alert primary
+  <h4.title.label> Texas Hail Storm Damage
+  <div.desc> Hail can fracture shingles, puncture commercial membranes, and destroy roof vents. We identify hidden impact damage that adjusters often miss to ensure your roof is fully restored.
+  [ICON] fas fa-wind primary
+  <h4.title.label> High Winds & Tornadoes
+  <div.desc> Severe straight-line winds can tear off shingles, rip up single-ply commercial roofing, and expose your decking. We repair wind-lifted seams and replace missing materials fast.
+  [ICON] fas fa-cloud-rain primary
+  <h4.title.label> Hurricane & Torrential Rain
+  <div.desc> When the Gulf Coast brings heavy rains, any weakness in your roof will be exposed. We specialize in watertight repairs and moisture barrier restoration.
+
+=== SECTION 4 | h=606 | pad=96px/86px | bg=rgba(0, 0, 0, 0)
+  <h3.title> Kevin Andrews
+  <p.title> ★★★★★ 5 Stars
+  <p> Cody was quick to meet the adjuster was helpful through the process. Not a flyby night company, very professional and knowledgeable.
+  [IMG] 00924821-9fba-4891-9c3a-bf8071e88bf7-compressed-scaled-e1776361245929.webp
+  <h3.title> Rene Portillo
+  <p.title> ★★★★★ 5 Stars
+  <p> I was very happy with service that was offered before during and after the installation. I will definitely recommend their services to others who need a roof.
+  [IMG] Decra-11-scaled.jpg
+  <h3.title> Lisa Marburger
+  <p.title> ★★★★★ 5 Stars
+  <p> I reached out to Montgomery with Core Four Roofing on Friday, July 14th, requesting a quote. I received the quote the same day. The quote was thorough, easy to read, and by far the best price. I asked how soon they could complete the job and Montgomery got back with me immediately stating they could do it the following Friday or Saturday. I requested they come Friday. Workers arrived and completed the job that Friday. The roof looks amazing and the job site was left with no evidence, short of the gorgeous new roof, that they had been there. Several of my neighbors have spoken with me stating how great the roof looks. Core Four Roofing and Montgomery get a 5 star A+++ from me. I would highly recommend them for any of your roofing needs.
+  [IMG] 3b6394f3-0ca6-42d0-af68-1cba641b3cd4-compressed-scaled.webp
+  <h3.title> Justin Chambers
+  <p.title> ★★★★★ 5 Stars
+  <p> They were quick to schedule and complete my roof using great materials at a good price. They don’t try to over charge you. I would definitely recommend them.
+  [IMG] Decra-Villa-13-scaled.jpg
+
+=== SECTION 5 | h=1106 | pad=64px/32px | bg=rgba(0, 0, 0, 0) | bgimg=bottom-triangles-light.svg
+  [IMG] Decra-11-scaled.jpg
+  [IMG] 157-Jun-10-2025-18-21-50-m2gV-scaled.jpg
+  [IMG] 00924821-9fba-4891-9c3a-bf8071e88bf7-compressed-scaled-e1776361245929.webp
+  [IMG] 3b6394f3-0ca6-42d0-af68-1cba641b3cd4-compressed-scaled.webp
+  [IMG] Decra-Villa-13-scaled.jpg
+  [IMG] 005-scaled.jpg
+  [IMG] core_four_emergency_repair_after-compressed.webp
+  [IMG] core_four_texas_roofing.webp
+  [IMG] Decra-Villa-14-compressed.webp
+  [IMG] core_four_roof_replacement-compressed.webp
+  [IMG] core_four_residential-compressed.webp
+
+=== SECTION 6 | h=704 | pad=0px/0px | bg=rgba(0, 0, 0, 0)
+  <h4> Rapid Response Across the Lone Star State
+  <p> With offices strategically located across Texas, we deploy emergency crews quickly to the areas hit hardest by severe weather.
+  [ICON] fas fa-map-pin
+  <h6> Service Hubs
+  <p> Austin, Dallas, Houston
+  [ICON] fas fa-clock
+  <h6> Storm Response
+  <p> 24/7 Emergency Tarping & Repair
+  [ICON] fas fa-phone
+  <h6> Local Office
+  <p> (281) 541-0027
+
+=== SECTION 7 | h=0 | pad=0px/0px | bg=rgba(0, 0, 0, 0)

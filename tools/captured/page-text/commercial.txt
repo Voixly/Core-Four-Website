@@ -1,0 +1,208 @@
+TITLE: Commercial Roofing - Core Four Roofing
+META: 
+
+=== SECTION 0 | h=900 | pad=0px/0px | bg=rgba(0, 0, 0, 0) | bgimg=core_four_apartment_roof_before-compressed.webp
+  <h1.title> Texas’ Trusted Commercial Roofing Experts
+  <div.desc> Protecting your business, tenants, and bottom line. We deliver high-performance commercial roofing systems across Houston, Dallas, and Austin with minimal disruption to your daily operations.
+  [ICON] fas fa-arrow-right
+  <span.button_label> Request a Commercial Bid
+
+=== SECTION 1 | h=1203 | pad=96px/56px | bg=rgba(0, 0, 0, 0)
+  <span.title> The Guarantee
+  <h2.title> Engineered for Business Continuity
+  <p.title> At Core Four Roofing, we understand that a commercial roof is a major capital investment. Property managers, HOA boards, and business owners across Texas trust us because we prioritize safety, efficiency, and transparent communication. We work directly with your team to ensure your facility remains operational while we secure your asset overhead.
+  <span.number> 1000
+  <span.label> +
+  <p.title> Successful Jobs Completed
+  [ICON] fas fa-arrow-right
+  <span.button_label> Call Us
+  [IMG] Core-Four-Associate-Members-home-advisor-screened-and-approved-compressed.webp
+  [IMG] Core-Four-Associate-Members-ANGI-Super-service-award-winner-2024-compressed.webp
+  [IMG] Core-Four-Associate-Members-BBB-A-Rating-compressed.webp
+  [IMG] Core-Four-Associate-Members-Core-Four-Roofing-Houston-Area-Roofing-Contractors-Association-Member-compressed.webp
+  [IMG] Core-Four-Associate-Members-RCAT-Member-compressed.webp
+  [ICON] fas fa-hard-hat primary
+  <h3.title.label> Safety First
+  <div.desc> Fully licensed, insured, and strict adherence to OSHA safety protocols.
+  [ICON] fas fa-infinity primary
+  <h3.title.label> Zero Disruption
+  <div.desc> Strategic project management to keep your business running smoothly during installation.
+  [ICON] far fa-money-bill-alt primary
+  <h3.title.label> Financial Flexibility
+  <div.desc> Competitive bidding, transparent estimates, and commercial financing options available
+  [ICON] fas fa-award primary
+  <h3.title.label> Unmatched Quality
+  <div.desc> Backed by industry-leading manufacturer warranties and our own Lifetime Workmanship Warranty.
+
+=== SECTION 2 | h=1690 | pad=96px/96px | bg=rgba(0, 0, 0, 0)
+  <h2.title> Comprehensive Commercial Roofing Services
+  [ICON] fas fa-arrow-right
+  <span.button_label> Contact Us about Installation
+  <h3.title> Commercial Roof Replacement & Installation
+  <div.desc> From proactive maintenance to total system replacements, we handle every aspect of your building's envelope.
+  [IMG] core-four-TPO-roof-after.webp
+  [ICON] fas fa-arrow-right
+  <span.button_label> Contact Us about a Repair
+  <h3.title> Repair & Preventative Maintenance
+  <div.desc> Stop leaks before they damage your inventory or disrupt tenants. We offer rapid-response repairs and preventative maintenance plans to maximize the lifespan of your existing roof.
+  [BEFORE] ad6b4429-cef8-4e0d-8be5-97760a5f48ca-compressed-scaled.webp
+  [AFTER] 27d812ee-6a31-44e6-a9c3-76435c4aa8b5-compressed-scaled.webp
+  [ICON] fas fa-arrow-right
+  <span.button_label> Contact Us about Inspection
+  <h3.title> Commercial Inspections & Condition Reports
+  <div.desc> Buying, selling, or managing a commercial property? Our detailed, photo-documented roof condition reports give investors and property managers the exact data needed to make informed financial decisions.
+  [IMG] 1-Sep-18-2025-18-23-12-yesM-compressed.webp
+  <h3.title> Coatings & Restoration
+  <div.desc> Extend the life of your commercial roof by up to a decade without the cost of a full tear-off. Our silicone and elastomeric roof coatings provide a seamless, waterproof, and energy-reflective barrier.
+  [ICON] fas fa-arrow-right
+  <span.button_label> Contact us About Restoration
+
+=== SECTION 3 | h=1804 | pad=96px/56px | bg=rgba(0, 0, 0, 0)
+  <h2.title> Premium Commercial Materials Built for Texas Weather
+  <div.desc> We specialize in installing and servicing top-tier single-ply membranes, modified bitumen, and metal roofing systems. Select a material below to learn more about its benefits and applications.
+  <h5.title> Roofing System
+  <h5.title> Best Suited For
+  <h5.title> Key Benefits
+  <h5.title> Learn More
+  [IMG] tpo.png
+  <h6.title> TPO (Thermoplastic Polyolefin)
+  <span> Roofing System:
+  <div.desc> Warehouses, Retail Centers, Office Buildings
+  <span> Best Suited For:
+  <div.desc> Highly energy-efficient (reflective white surface), cost-effective, puncture resistant.
+  <span> Key Benefits:
+  <span> Learn More:
+  <a> TPO Systems
+  [IMG] epdm.png
+  <h6.title> EPDM (Rubber Roofing)
+  <span> Roofing System:
+  <div.desc> Low-slope roofs, Industrial Facilities, Cold Climates
+  <span> Best Suited For:
+  <div.desc> Extreme durability, UV resistant, proven track record spanning decades.
+  <span> Key Benefits:
+  <span> Learn More:
+  <a> EPDM Systems
+  [IMG] pvc.png
+  <h6.title> PVC (Polyvinyl Chloride)
+  <span> Roofing System:
+  <div.desc> Restaurants, Chemical Facilities, Manufacturing
+  <span> Best Suited For:
+  <div.desc> Resistant to chemicals, oils, and grease; highly durable and fire-resistant.
+  <span> Key Benefits:
+  <span> Learn More:
+  <a> PVC Systems
+  [IMG] modified-bitumen.png
+  <h6.title> Modified Bitumen
+  <span> Roofing System:
+  <div.desc> High-traffic flat roofs, Urban Buildings
+  <span> Best Suited For:
+  <div.desc> Multi-ply redundancy, exceptional tensile strength, proven traditional performance.
+  <span> Key Benefits:
+  <span> Learn More:
+  <a> Mod-Bit Systems
+  [IMG] metal.webp
+  <h6.title> Commercial Metal
+  <span> Roofing System:
+  <div.desc> Architectural roofs, Agricultural, Sloped Commercial
+  <span> Best Suited For:
+  <div.desc> 50+ year lifespan, high wind resistance, premium aesthetic appeal.
+  <span> Key Benefits:
+  <span> Learn More:
+  <a> Metal Systems
+
+=== SECTION 4 | h=732 | pad=64px/64px | bg=rgba(0, 0, 0, 0)
+  <h4> Proudly Serving Texas Commercial Properties
+  <p> Commercial roofs in Texas face a unique set of challenges, from the blistering summer heat and high humidity of Houston to the severe hail storms in Dallas and Austin. You need a local contractor who understands how to engineer a roof for this exact climate. Core Four Roofing operates dedicated branches across the state to provide rapid response and localized expertise.
+  [ICON] fas fa-map-pin
+  <h6> Service Hubs
+  <p> Austin, Dallas, Houston
+  [ICON] fas fa-clock
+  <h6> Storm Response
+  <p> 24/7 Emergency Tarping & Repair
+  [ICON] fas fa-phone
+  <h6> Local Office
+  <p> (281) 541-0027
+
+=== SECTION 5 | h=607 | pad=96px/56px | bg=oklch(0.6099 0.1588 148.77) | bgimg=bottom-triangles-dark.svg
+  <h2.title> A reliable new roof is just a few steps away
+  <div.title> Roof Consultation
+  <span.num> 1
+  [ICON] icon-plus acc-icon-plus
+  [ICON] icon-minus acc-icon-minus
+  <div.answer> We provide a comprehensive roof inspection to evaluate damage, assess lifespan, and determine the most cost-effective solution for your commercial or residential property.
+  <div.title> Professional Installation
+  <span.num> 2
+  [ICON] icon-plus acc-icon-plus
+  [ICON] icon-minus acc-icon-minus
+  <div.answer> From TPO and EPDM for commercial buildings to premium asphalt shingles for homes, our licensed crews install your new roof efficiently—often in just 1-3 days.
+  <div.title> Quality Control
+  <span.num> 3
+  [ICON] icon-plus acc-icon-plus
+  [ICON] icon-minus acc-icon-minus
+  <div.answer> After installation, we perform a rigorous quality inspection. We leave your property spotless and ensure you have all warranty documentation for complete peace of mind.
+  [ICON] fas fa-arrow-right
+  <span.button_label> Call for a Free Colsultation
+  [BEFORE] ad6b4429-cef8-4e0d-8be5-97760a5f48ca-compressed-scaled.webp
+  [AFTER] 27d812ee-6a31-44e6-a9c3-76435c4aa8b5-compressed-scaled.webp
+
+=== SECTION 6 | h=606 | pad=96px/86px | bg=rgba(0, 0, 0, 0)
+  <h3.title> Kevin Andrews
+  <p.title> ★★★★★ 5 Stars
+  <p> Cody was quick to meet the adjuster was helpful through the process. Not a flyby night company, very professional and knowledgeable.
+  [IMG] 00924821-9fba-4891-9c3a-bf8071e88bf7-compressed-scaled-e1776361245929.webp
+  <h3.title> Rene Portillo
+  <p.title> ★★★★★ 5 Stars
+  <p> I was very happy with service that was offered before during and after the installation. I will definitely recommend their services to others who need a roof.
+  [IMG] Decra-11-scaled.jpg
+  <h3.title> Lisa Marburger
+  <p.title> ★★★★★ 5 Stars
+  <p> I reached out to Montgomery with Core Four Roofing on Friday, July 14th, requesting a quote. I received the quote the same day. The quote was thorough, easy to read, and by far the best price. I asked how soon they could complete the job and Montgomery got back with me immediately stating they could do it the following Friday or Saturday. I requested they come Friday. Workers arrived and completed the job that Friday. The roof looks amazing and the job site was left with no evidence, short of the gorgeous new roof, that they had been there. Several of my neighbors have spoken with me stating how great the roof looks. Core Four Roofing and Montgomery get a 5 star A+++ from me. I would highly recommend them for any of your roofing needs.
+  [IMG] 3b6394f3-0ca6-42d0-af68-1cba641b3cd4-compressed-scaled.webp
+  <h3.title> Justin Chambers
+  <p.title> ★★★★★ 5 Stars
+  <p> They were quick to schedule and complete my roof using great materials at a good price. They don’t try to over charge you. I would definitely recommend them.
+  [IMG] Decra-Villa-13-scaled.jpg
+
+=== SECTION 7 | h=1767 | pad=96px/96px | bg=rgba(0, 0, 0, 0)
+  <h2.title> Ready to Upgrade Your Home's Roof?
+  <h3.title> Send us a Message
+  <div.desc> Fill out the form below to schedule request an inspection and estimate with a local Core Four roofing expert.
+  <p> " " indicates required fields
+  <span> *
+  <label.gfield_label.gform-field-label> LinkedIn
+  <div.gfield_description> This field is for validation purposes and should be left unchanged.
+  <legend.gfield_label.gform-field-label> Name
+  <span> *
+  <label.gform-field-label.gform-field-label--type-sub> First
+  <label.gform-field-label.gform-field-label--type-sub> Last
+  <label.gfield_label.gform-field-label> Email
+  <span> *
+  <label.gfield_label.gform-field-label> Phone
+  <span> *
+  <label.gfield_label.gform-field-label> Select a Service
+  <span> *
+  <option> Please Select a Service
+  <option> Commercial Roofing
+  <option> Residential Roofing
+  <option> Premium Roofing
+  <option> Exterior Services
+  <legend.gfield_label.gform-field-label> Address
+  <span> *
+  <label.gform-field-label.gform-field-label--type-sub> ZIP Code
+  <label.gfield_label.gform-field-label> Comments
+  <div.gfield_description> 0 of 600 max characters
+  <div.gfield_description> Please let us know what's on your mind. Have a question for us? Ask away.
+  [IMG] core_four_community-1.jpg
+  [IMG] c1738317-8de2-4d63-981d-992db919bc6d.webp
+  [IMG] core_four_commercal_center_roof_install-compressed.webp
+
+=== SECTION 8 | h=880 | pad=64px/32px | bg=rgba(0, 0, 0, 0) | bgimg=bottom-triangles-light.svg
+  [IMG] core_four_apartment_roof_after-compressed.webp
+  [IMG] core-four-TPO-roof-after.webp
+  [IMG] 3-Sep-26-2025-19-49-22-ZTvA.jpg
+  [IMG] 157-Jun-10-2025-18-21-50-m2gV-scaled.jpg
+  [IMG] 3b6394f3-0ca6-42d0-af68-1cba641b3cd4-compressed-scaled.webp
+  [IMG] 27d812ee-6a31-44e6-a9c3-76435c4aa8b5-compressed-scaled.webp
+  [IMG] 1-Sep-18-2025-18-23-12-yesM-compressed.webp
+
+=== SECTION 9 | h=0 | pad=0px/0px | bg=rgba(0, 0, 0, 0)

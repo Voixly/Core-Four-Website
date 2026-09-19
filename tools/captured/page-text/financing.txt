@@ -1,0 +1,117 @@
+TITLE: Financing - Core Four Roofing
+META: 
+
+=== SECTION 0 | h=805 | pad=230px/116px | bg=rgba(0, 0, 0, 0) | bgimg=core_four_residential_insurance_claim_roof-compressed.webp
+  <h1.title> Stress-Free Roof Financing in Texas
+  <div.desc> Don't let budget concerns stand in the way of protecting your home or business. Core Four Roofing offers flexible, low-monthly-payment financing options so you can get the premium roof you need today and pay over time.
+  [ICON] fas fa-arrow-right
+  <span.button_label> Call for Financing Now
+
+=== SECTION 1 | h=1176 | pad=96px/96px | bg=oklch(0.2496 0.031 155.1)
+  <h2.title> Smart Solutions for Your Roofing Investment
+  <h3.title> Flexible & Affordable Options
+  <div.desc> A new roof is a major investment, and roofing emergencies rarely happen at a convenient time. Whether you are facing sudden storm damage, need a total commercial roof replacement, or simply want to upgrade your home’s curb appeal with premium materials like standing seam metal or F-Wave synthetic shingles, capital shouldn't be a roadblock. At Core Four Roofing, we believe that every Texas family and business deserves a safe, reliable roof over their heads. That is why we have partnered with the nation’s top home improvement lenders to provide customized financing plans. Our application process is completely secure, paperless, and incredibly fast, allowing you to secure funding and schedule your roof installation without draining your savings account or business operating capital.
+  [IMG] Decra-Villa-14-compressed.webp
+  <h3.title> Why Finance Your Roofing Project With Us?
+  <p> We make the financial side of roofing just as seamless as the installation itself. Our lending partners offer a variety of plans designed to fit your specific monthly budget.
+  [IMG] core_four_residential-compressed.webp
+  <h4.title> Ready to Fund Your New Roof?
+  <p> Fill out the form below to speak with a Core Four team member about our current financing promotions, or click the link to apply directly through our secure lending portal.
+  [ICON] fas fa-arrow-right
+  <span.button_label> Get Pre-Approved
+
+=== SECTION 2 | h=908 | pad=96px/56px | bg=oklch(0.6099 0.1588 148.77) | bgimg=bottom-triangles-dark.svg
+  <h2.title> Frequently Asked Questions About Roofing Financing
+  <div.desc> Find answers to common questions about our flexible payment plans.
+  <div.title> Does applying for financing affect my credit score?
+  <span.num> 1
+  [ICON] icon-plus acc-icon-plus
+  [ICON] icon-minus acc-icon-minus
+  <div.answer> In most cases, our lending partners can perform a 'soft pull' on your credit to pre-qualify you and show you your available options without impacting your credit score. A hard inquiry is typically only required once you finalize the loan documents.
+  <div.title> Can I finance an insurance deductible?
+  <span.num> 2
+  [ICON] icon-plus acc-icon-plus
+  [ICON] icon-minus acc-icon-minus
+  <div.answer> Texas law (HB2102) requires homeowners to pay their insurance deductibles out of pocket. However, you can absolutely use our financing options to cover the cost of your deductible, as well as any premium material upgrades you want to add to your insurance claim.
+  <div.title> Can I pay off my roofing loan early?
+  <span.num> 3
+  [ICON] icon-plus acc-icon-plus
+  [ICON] icon-minus acc-icon-minus
+  <div.answer> Yes! The vast majority of the financing plans we offer come with absolutely no prepayment penalties. You can pay off your roof at any time without incurring extra fees.
+  <div.title> Do you offer financing for commercial roofing projects?
+  <span.num> 4
+  [ICON] icon-plus acc-icon-plus
+  [ICON] icon-minus acc-icon-minus
+  <div.answer> Yes. We work with property managers, HOA boards, and building owners to provide commercial financing and phased CapEx solutions. Contact our commercial team directly to discuss large-scale funding options.
+  [ICON] fas fa-arrow-right
+  <span.button_label> Call to Apply Now
+  [BEFORE] core_four_residential_hero_before.webp
+  [AFTER] core_four_residential_hero_after.webp
+
+=== SECTION 3 | h=1330 | pad=96px/56px | bg=rgba(0, 0, 0, 0)
+  <span.title> The Guarantee
+  <h3.title> Why Finance Your Roofing Project With Us?
+  <p.title> We make the financial side of roofing just as seamless as the installation itself. Our lending partners offer a variety of plans designed to fit your specific monthly budget.
+  <span.number> 1000
+  <span.label> +
+  <p.title> Successful Jobs Completed
+  [ICON] fas fa-arrow-right
+  <span.button_label> Call Us
+  [ICON] fas fa-money-bill-wave primary
+  <h4.title.label> Keep Cash on Hand
+  <div.desc> Avoid depleting your emergency savings or business capital. Financing allows you to spread the cost of a major roof replacement over several years while keeping your cash liquid for other immediate needs.
+  [ICON] fas fa-bolt primary
+  <h4.title.label> Fast, Paperless Approvals
+  <div.desc> No lengthy bank meetings or complicated paperwork. Our lending partners offer a streamlined online application process with credit decisions often returned in a matter of minutes.
+  [ICON] fas fa-calendar-check primary
+  <h4.title.label> Flexible Payment Terms
+  <div.desc> We offer a wide range of financing options, including low-interest plans, extended payment terms to lower your monthly footprint, and promotional same-as-cash options (subject to credit approval).
+  [ICON] fas fa-level-up-alt primary
+  <h4.title.label> Upgrade Your Materials
+  <div.desc> Financing gives you the buying power to upgrade from standard shingles to a lifetime metal, stone-coated steel, or synthetic roof. You get ultimate weather defense for just a slightly higher monthly payment.
+
+=== SECTION 4 | h=606 | pad=96px/86px | bg=rgba(0, 0, 0, 0)
+  <h3.title> Kevin Andrews
+  <p.title> ★★★★★ 5 Stars
+  <p> Cody was quick to meet the adjuster was helpful through the process. Not a flyby night company, very professional and knowledgeable.
+  [IMG] 00924821-9fba-4891-9c3a-bf8071e88bf7-compressed-scaled-e1776361245929.webp
+  <h3.title> Rene Portillo
+  <p.title> ★★★★★ 5 Stars
+  <p> I was very happy with service that was offered before during and after the installation. I will definitely recommend their services to others who need a roof.
+  [IMG] Decra-11-scaled.jpg
+  <h3.title> Lisa Marburger
+  <p.title> ★★★★★ 5 Stars
+  <p> I reached out to Montgomery with Core Four Roofing on Friday, July 14th, requesting a quote. I received the quote the same day. The quote was thorough, easy to read, and by far the best price. I asked how soon they could complete the job and Montgomery got back with me immediately stating they could do it the following Friday or Saturday. I requested they come Friday. Workers arrived and completed the job that Friday. The roof looks amazing and the job site was left with no evidence, short of the gorgeous new roof, that they had been there. Several of my neighbors have spoken with me stating how great the roof looks. Core Four Roofing and Montgomery get a 5 star A+++ from me. I would highly recommend them for any of your roofing needs.
+  [IMG] 3b6394f3-0ca6-42d0-af68-1cba641b3cd4-compressed-scaled.webp
+  <h3.title> Justin Chambers
+  <p.title> ★★★★★ 5 Stars
+  <p> They were quick to schedule and complete my roof using great materials at a good price. They don’t try to over charge you. I would definitely recommend them.
+  [IMG] Decra-Villa-13-scaled.jpg
+
+=== SECTION 5 | h=1106 | pad=64px/32px | bg=rgba(0, 0, 0, 0) | bgimg=bottom-triangles-light.svg
+  [IMG] Decra-11-scaled.jpg
+  [IMG] 157-Jun-10-2025-18-21-50-m2gV-scaled.jpg
+  [IMG] 00924821-9fba-4891-9c3a-bf8071e88bf7-compressed-scaled-e1776361245929.webp
+  [IMG] 3b6394f3-0ca6-42d0-af68-1cba641b3cd4-compressed-scaled.webp
+  [IMG] Decra-Villa-13-scaled.jpg
+  [IMG] 005-scaled.jpg
+  [IMG] core_four_emergency_repair_after-compressed.webp
+  [IMG] core_four_texas_roofing.webp
+  [IMG] Decra-Villa-14-compressed.webp
+  [IMG] core_four_roof_replacement-compressed.webp
+  [IMG] core_four_residential-compressed.webp
+
+=== SECTION 6 | h=704 | pad=0px/0px | bg=rgba(0, 0, 0, 0)
+  <h4> Rapid Response Across the Lone Star State
+  <p> With offices strategically located across Texas, we deploy emergency crews quickly to the areas hit hardest by severe weather.
+  [ICON] fas fa-map-pin
+  <h6> Service Hubs
+  <p> Austin, Dallas, Houston
+  [ICON] fas fa-clock
+  <h6> Storm Response
+  <p> 24/7 Emergency Tarping & Repair
+  [ICON] fas fa-phone
+  <h6> Local Office
+  <p> (281) 541-0027
+
+=== SECTION 7 | h=0 | pad=0px/0px | bg=rgba(0, 0, 0, 0)

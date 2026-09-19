@@ -1,0 +1,165 @@
+TITLE: Services Areas - Core Four Roofing
+META: 
+
+=== SECTION 0 | h=874 | pad=230px/116px | bg=rgba(0, 0, 0, 0) | bgimg=3b6394f3-0ca6-42d0-af68-1cba641b3cd4-compressed-scaled.webp
+  <h1.title> Protect Your Business Secure Your Home
+  <p> Core Four Roofing provides premium commercial and residential roofing across Texas. Providing integrity, efficiency, quality, and affordability.
+  [ICON] fas fa-arrow-right
+  <span.button_label> Call Us Today
+  <h5> Warranty
+  <p> Lifetime Workmanship
+  [BEFORE] core-four-TPO-roof-before.webp
+  [AFTER] core-four-TPO-roof-after.webp
+  <h5> Accredited
+  <p> BBB A+ Rating
+
+=== SECTION 1 | h=585 | pad=64px/64px | bg=rgba(0, 0, 0, 0)
+  <h2> Reliable Commercial & Residential Roof Repair, Replacement & Maintenance
+  <span.pill> Certified
+  <span.title> Roofing Partners
+  [IMG] Core-Four-Roofing-Partner-GAF-Certified-Plus-Contractors-compressed.webp | alt=GAF Certified Plus Contractor
+  [IMG] Core-Four-Roofing-Partner-GAF-certified-commercial-compressed.webp | alt=GAF Certified Commercial Contractor
+  [IMG] Core-Four-Roofing-Partner-Certainteed-Select-shingle-master-compressed.webp | alt=CertainTeed Select ShingleMaster
+  [IMG] Core-Four-Roofing-Partner-IKO-Craftsman-Premier-Contractors-compressed.webp | alt=IKO Craftsman Premier
+  [IMG] Core-Four-Roofing-Partner-Malarkey-Emerald-Pro-Contractors-compressed.webp | alt=Malarkey Emerald Pro Contractor
+  [IMG] Core-Four-Roofing-Partner-DECRA-compressed.webp | alt=DECRA Roofing Systems
+  [IMG] Core-Four-Roofing-Partner-Elevate_logo_red-compressed.webp | alt=Elevate
+  [IMG] Core-Four-Roofing-Partner-GAF-Certified-Plus-Contractors-compressed.webp | alt=GAF Certified Plus Contractor
+  [IMG] Core-Four-Roofing-Partner-GAF-certified-commercial-compressed.webp | alt=GAF Certified Commercial Contractor
+  [IMG] Core-Four-Roofing-Partner-Certainteed-Select-shingle-master-compressed.webp | alt=CertainTeed Select ShingleMaster
+  [IMG] Core-Four-Roofing-Partner-IKO-Craftsman-Premier-Contractors-compressed.webp | alt=IKO Craftsman Premier
+  [IMG] Core-Four-Roofing-Partner-Malarkey-Emerald-Pro-Contractors-compressed.webp | alt=Malarkey Emerald Pro Contractor
+  [IMG] Core-Four-Roofing-Partner-DECRA-compressed.webp | alt=DECRA Roofing Systems
+  [IMG] Core-Four-Roofing-Partner-Elevate_logo_red-compressed.webp | alt=Elevate
+  <span.pill> Members
+  <span.title> Associate Memberships & Awards
+  [IMG] Core-Four-Associate-Members-BBB-A-Rating-compressed.webp | alt=BBB A+ Rated
+  [IMG] Core-Four-Associate-Members-ANGI-Super-service-award-winner-2024-compressed.webp | alt=Angi Super Service Award 2024
+  [IMG] Core-Four-Associate-Members-home-advisor-screened-and-approved-compressed.webp | alt=HomeAdvisor Screened & Approved
+  [IMG] Core-Four-Associate-Members-Core-Four-Roofing-National-Roofing-Contractors-Association-Member-Badge-compressed.webp | alt=National Roofing Contractors Association
+  [IMG] Core-Four-Associate-Members-Core-Four-Roofing-Houston-Area-Roofing-Contractors-Association-Member-compressed.webp | alt=HARCA Member
+  [IMG] Core-Four-Associate-Members-RCAT-Member-compressed.webp | alt=RCAT Member
+  [IMG] Core-Four-Associate-Members-Houston-Apartment-Association-compressed.webp | alt=Houston Apartment Association
+  [IMG] Core-Four-Associate-Members-Texas-Apartment-Association-compressed.webp | alt=Texas Apartment Association
+  [IMG] Core-Four-Associate-Members-texas-hotel-lodging-compressed.webp | alt=Texas Hotel & Lodging Association
+  [IMG] Core-Four-Associate-Members-Community-Associations-Institute-compressed.webp | alt=Community Associations Institute
+  [IMG] Core-Four-Associate-Members-IFMA-compressed.webp | alt=IFMA
+  [IMG] Core-Four-Associate-Members-BBB-A-Rating-compressed.webp | alt=BBB A+ Rated
+  [IMG] Core-Four-Associate-Members-ANGI-Super-service-award-winner-2024-compressed.webp | alt=Angi Super Service Award 2024
+  [IMG] Core-Four-Associate-Members-home-advisor-screened-and-approved-compressed.webp | alt=HomeAdvisor Screened & Approved
+  [IMG] Core-Four-Associate-Members-Core-Four-Roofing-National-Roofing-Contractors-Association-Member-Badge-compressed.webp | alt=National Roofing Contractors Association
+  [IMG] Core-Four-Associate-Members-Core-Four-Roofing-Houston-Area-Roofing-Contractors-Association-Member-compressed.webp | alt=HARCA Member
+  [IMG] Core-Four-Associate-Members-RCAT-Member-compressed.webp | alt=RCAT Member
+  [IMG] Core-Four-Associate-Members-Houston-Apartment-Association-compressed.webp | alt=Houston Apartment Association
+  [IMG] Core-Four-Associate-Members-Texas-Apartment-Association-compressed.webp | alt=Texas Apartment Association
+  [IMG] Core-Four-Associate-Members-texas-hotel-lodging-compressed.webp | alt=Texas Hotel & Lodging Association
+  [IMG] Core-Four-Associate-Members-Community-Associations-Institute-compressed.webp | alt=Community Associations Institute
+  [IMG] Core-Four-Associate-Members-IFMA-compressed.webp | alt=IFMA
+
+=== SECTION 2 | h=1581 | pad=96px/96px | bg=rgba(0, 0, 0, 0)
+  <h2.title> Roofing Solutions that work for your bottom line
+  [ICON] fas fa-arrow-right
+  <span.button_label> Explore Our Services
+  <span.title> Commercial
+  <h3.title> Protecting Your Assets
+  <p> From TPO to EPDM and Metal, we provide durable, energy-efficient commercial roofing systems designed to last decades.
+  [IMG] 34-Nov-03-2025-23-46-22-PJJw-compressed.webp
+  [BEFORE] Decra-12-scaled.jpg
+  [AFTER] Decra-11-scaled.jpg
+  <span.title> Residential
+  <h3.title> We Know Texas Roofs
+  <p> Premium asphalt shingles and architectural metal roofs to boost curb appeal and weather protection.
+  [IMG] 00924821-9fba-4891-9c3a-bf8071e88bf7-compressed-scaled.webp | alt=Services Areas
+  <h4.title> 24/7 Emergency
+  <p> Storm damage? We offer rapid response roof tarping and full insurance claim advocacy.
+  [ICON] fas fa-arrow-right
+  <span.button_label> Get Help Now
+  <h4.title> Recognized as one of the best in Houston, Texas
+
+=== SECTION 3 | h=704 | pad=0px/0px | bg=rgba(0, 0, 0, 0)
+  <h4> Protecting Texas, One Roof at a Time
+  <p> Core Four Roofing Service Coverage
+  [ICON] fas fa-map-pin
+  <h6> Service Hubs
+  <p> Austin, Dallas, Houston
+  [ICON] fas fa-clock
+  <h6> Storm Response
+  <p> 24/7 Emergency Tarping & Repair
+  [ICON] fas fa-phone
+  <h6> Local Office
+  <p> (281) 541-0027
+
+=== SECTION 4 | h=607 | pad=96px/56px | bg=oklch(0.6099 0.1588 148.77) | bgimg=bottom-triangles-dark.svg
+  <h2.title> A reliable new roof is just a few steps away
+  <div.title> Roof Consultation
+  <span.num> 1
+  [ICON] icon-plus acc-icon-plus
+  [ICON] icon-minus acc-icon-minus
+  <div.answer> We provide a comprehensive roof inspection to evaluate damage, assess lifespan, and determine the most cost-effective solution for your commercial or residential property.
+  <div.title> Professional Installation
+  <span.num> 2
+  [ICON] icon-plus acc-icon-plus
+  [ICON] icon-minus acc-icon-minus
+  <div.answer> From TPO and EPDM for commercial buildings to premium asphalt shingles for homes, our licensed crews install your new roof efficiently—often in just 1-3 days.
+  <div.title> Quality Control
+  <span.num> 3
+  [ICON] icon-plus acc-icon-plus
+  [ICON] icon-minus acc-icon-minus
+  <div.answer> After installation, we perform a rigorous quality inspection. We leave your property spotless and ensure you have all warranty documentation for complete peace of mind.
+  [ICON] fas fa-arrow-right
+  <span.button_label> Call for a Free Colsultation
+  [BEFORE] ad6b4429-cef8-4e0d-8be5-97760a5f48ca-compressed-scaled.webp
+  [AFTER] 27d812ee-6a31-44e6-a9c3-76435c4aa8b5-compressed-scaled.webp
+
+=== SECTION 5 | h=606 | pad=96px/86px | bg=rgba(0, 0, 0, 0)
+  <h3.title> Kevin Andrews
+  <p.title> ★★★★★ 5 Stars
+  <p> Cody was quick to meet the adjuster was helpful through the process. Not a flyby night company, very professional and knowledgeable.
+  [IMG] 00924821-9fba-4891-9c3a-bf8071e88bf7-compressed-scaled-e1776361245929.webp
+  <h3.title> Rene Portillo
+  <p.title> ★★★★★ 5 Stars
+  <p> I was very happy with service that was offered before during and after the installation. I will definitely recommend their services to others who need a roof.
+  [IMG] Decra-11-scaled.jpg
+  <h3.title> Lisa Marburger
+  <p.title> ★★★★★ 5 Stars
+  <p> I reached out to Montgomery with Core Four Roofing on Friday, July 14th, requesting a quote. I received the quote the same day. The quote was thorough, easy to read, and by far the best price. I asked how soon they could complete the job and Montgomery got back with me immediately stating they could do it the following Friday or Saturday. I requested they come Friday. Workers arrived and completed the job that Friday. The roof looks amazing and the job site was left with no evidence, short of the gorgeous new roof, that they had been there. Several of my neighbors have spoken with me stating how great the roof looks. Core Four Roofing and Montgomery get a 5 star A+++ from me. I would highly recommend them for any of your roofing needs.
+  [IMG] 3b6394f3-0ca6-42d0-af68-1cba641b3cd4-compressed-scaled.webp
+  <h3.title> Justin Chambers
+  <p.title> ★★★★★ 5 Stars
+  <p> They were quick to schedule and complete my roof using great materials at a good price. They don’t try to over charge you. I would definitely recommend them.
+  [IMG] Decra-Villa-13-scaled.jpg
+
+=== SECTION 6 | h=1312 | pad=96px/56px | bg=rgba(0, 0, 0, 0)
+  <span.title> The Guarantee
+  <h3.title> Protect Your Home With the Core Four Roofing Principles
+  <p.title> For property owners who want the job done right the first time. We combine premium materials, expert installation, and transparent communication.
+  <span.number> 1000
+  <span.label> +
+  <p.title> Successful Jobs Completed
+  [ICON] fas fa-arrow-right
+  <span.button_label> Call Us
+  [ICON] fas fa-wallet primary
+  <h3.title.label> Affordability
+  <div.desc> We offer competitive pricing, transparent estimates, and stress-free financing options so you can protect your property without breaking the bank.
+  [ICON] icon-arrows-ccw primary
+  <h3.title.label> Efficiency
+  <div.desc> Fast turnaround times without sacrificing quality. Most residential replacements are completed in just 1-3 days, minimizing disruption to your life or business.
+  [ICON] fas fa-handshake primary
+  <h3.title.label> Integrity
+  <div.desc> Honest communication is our policy. We perform thorough inspections and never sell you what you don't need. We stand by our work and our word.
+  [ICON] fas fa-award primary
+  <h3.title.label> Quality
+  <div.desc> Master certified installers utilizing top-tier materials from industry-leading manufacturers. Built to withstand the toughest Texas weather.
+
+=== SECTION 7 | h=1106 | pad=64px/32px | bg=rgba(0, 0, 0, 0) | bgimg=bottom-triangles-light.svg
+  [IMG] Decra-11-scaled.jpg
+  [IMG] 157-Jun-10-2025-18-21-50-m2gV-scaled.jpg
+  [IMG] 00924821-9fba-4891-9c3a-bf8071e88bf7-compressed-scaled-e1776361245929.webp
+  [IMG] 3-Sep-26-2025-19-49-22-ZTvA.jpg
+  [IMG] 7-Sep-26-2025-19-49-59-FQWC.jpg
+  [IMG] 3b6394f3-0ca6-42d0-af68-1cba641b3cd4-compressed-scaled.webp
+  [IMG] Decra-Villa-13-scaled.jpg
+  [IMG] 005-scaled.jpg
+  [IMG] 1-Sep-18-2025-18-23-12-yesM-compressed.webp
+
+=== SECTION 8 | h=0 | pad=0px/0px | bg=rgba(0, 0, 0, 0)

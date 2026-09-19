@@ -1,0 +1,198 @@
+{
+ "url": "https://corefourroofing.com/",
+ "width": 1440,
+ "sections": [
+  {
+   "i": 0,
+   "h": 882,
+   "w": 1440,
+   "bg": "rgba(0, 0, 0, 0)",
+   "bgImg": "yes",
+   "pad": "230px/116px",
+   "heads": [
+    "H1:Protect Your Business, Secure Your Home",
+    "H5:Warranty",
+    "H5:Accredited"
+   ],
+   "imgs": [
+    "core-four-TPO-roof-before-1536x864.webp 384x216",
+    "core-four-TPO-roof-after-1536x864.webp 384x216"
+   ],
+   "widgets": [
+    "267ccdad"
+   ],
+   "btns": [
+    "Call Us Today"
+   ]
+  },
+  {
+   "i": 1,
+   "h": 585,
+   "w": 1440,
+   "bg": "rgba(0, 0, 0, 0)",
+   "bgImg": "",
+   "pad": "64px/64px",
+   "heads": [
+    "H2:Reliable Commercial & Residential Roof Repair, Replacement & Maintenan"
+   ],
+   "imgs": [
+    "Core-Four-Roofing-Partner-GAF-Certified-Pl 66x64",
+    "Core-Four-Roofing-Partner-GAF-certified-co 92x64",
+    "Core-Four-Roofing-Partner-Certainteed-Sele 70x64",
+    "Core-Four-Roofing-Partner-IKO-Craftsman-Pr 70x64",
+    "Core-Four-Roofing-Partner-Malarkey-Emerald 66x64",
+    "Core-Four-Roofing-Partner-DECRA-compressed 150x64"
+   ],
+   "widgets": [],
+   "btns": []
+  },
+  {
+   "i": 2,
+   "h": 1581,
+   "w": 1440,
+   "bg": "rgba(0, 0, 0, 0)",
+   "bgImg": "",
+   "pad": "96px/96px",
+   "heads": [
+    "H2:Roofing Solutions that work for your bottom line",
+    "H3:Protecting Your Assets",
+    "H3:We Know Texas Roofs",
+    "H4:24/7 Emergency",
+    "H4:Recognized as one of the best in Houston, Texas"
+   ],
+   "imgs": [
+    "34-Nov-03-2025-23-46-22-PJJw-compressed-15 585x329",
+    "Decra-12-scaled-768x432.jpg 584x329",
+    "Decra-11-scaled-768x432.jpg 584x329",
+    "00924821-9fba-4891-9c3a-bf8071e88bf7-compr 525x295"
+   ],
+   "widgets": [],
+   "btns": [
+    "Explore Our Services",
+    "Get Help Now"
+   ]
+  },
+  {
+   "i": 3,
+   "h": 704,
+   "w": 1440,
+   "bg": "rgba(0, 0, 0, 0)",
+   "bgImg": "",
+   "pad": "0px/0px",
+   "heads": [
+    "H4:Protecting Texas,One Roof at a Time",
+    "H6:Service Hubs",
+    "H6:Storm Response",
+    "H6:Local Office"
+   ],
+   "imgs": [
+    "core-four-pin.svg 48x48",
+    "core-four-pin.svg 48x48",
+    "core-four-pin.svg 48x48",
+    "core-four-pin.svg 48x48",
+    "vt?pb=!1m5!1m4!1i7!2i27!3i52!4i256!2m3!1e0 256x256",
+    "vt?pb=!1m5!1m4!1i7!2i28!3i52!4i256!2m3!1e0 256x256"
+   ],
+   "widgets": [
+    "058d3df7"
+   ],
+   "btns": []
+  },
+  {
+   "i": 4,
+   "h": 607,
+   "w": 1440,
+   "bg": "oklch(0.6099 0.1588 148.77)",
+   "bgImg": "yes",
+   "pad": "96px/56px",
+   "heads": [
+    "H2:A reliable new roof is just a few steps away"
+   ],
+   "imgs": [
+    "ad6b4429-cef8-4e0d-8be5-97760a5f48ca-compr 576x324",
+    "27d812ee-6a31-44e6-a9c3-76435c4aa8b5-compr 576x324"
+   ],
+   "widgets": [],
+   "btns": [
+    "Call for a Free Colsultation"
+   ]
+  },
+  {
+   "i": 5,
+   "h": 606,
+   "w": 1440,
+   "bg": "rgba(0, 0, 0, 0)",
+   "bgImg": "",
+   "pad": "96px/86px",
+   "heads": [
+    "H3:Kevin Andrews",
+    "H3:Rene Portillo",
+    "H3:Lisa Marburger",
+    "H3:Justin Chambers"
+   ],
+   "imgs": [
+    "00924821-9fba-4891-9c3a-bf8071e88bf7-compr 615x344",
+    "Decra-11-scaled-768x432.jpg 615x346",
+    "3b6394f3-0ca6-42d0-af68-1cba641b3cd4-compr 615x346",
+    "Decra-Villa-13-scaled-768x432.jpg 615x346"
+   ],
+   "widgets": [
+    "267ccdad"
+   ],
+   "btns": []
+  },
+  {
+   "i": 6,
+   "h": 1312,
+   "w": 1440,
+   "bg": "rgba(0, 0, 0, 0)",
+   "bgImg": "",
+   "pad": "96px/56px",
+   "heads": [
+    "H3:Protect Your Home With the Core Four Roofing Principles",
+    "H3:Affordability",
+    "H3:Efficiency",
+    "H3:Integrity",
+    "H3:Quality"
+   ],
+   "imgs": [],
+   "widgets": [],
+   "btns": [
+    "Call Us"
+   ]
+  },
+  {
+   "i": 7,
+   "h": 858,
+   "w": 1440,
+   "bg": "rgba(0, 0, 0, 0)",
+   "bgImg": "yes",
+   "pad": "64px/32px",
+   "heads": [],
+   "imgs": [
+    "?url=https%3A%2F%2Fscontent-bru2-1.cdninst 285x283",
+    "?url=https%3A%2F%2Finstagram.frix7-1.fna.f 378x283",
+    "?url=https%3A%2F%2Fscontent-arn2-1.cdninst 285x283",
+    "?url=https%3A%2F%2Fscontent-bru2-1.cdninst 285x283",
+    "?url=https%3A%2F%2Fscontent-arn2-1.cdninst 285x356",
+    "?url=https%3A%2F%2Fscontent-cph2-1.cdninst 285x283"
+   ],
+   "widgets": [
+    "71bb658f"
+   ],
+   "btns": []
+  },
+  {
+   "i": 8,
+   "h": 0,
+   "w": 1440,
+   "bg": "rgba(0, 0, 0, 0)",
+   "bgImg": "",
+   "pad": "0px/0px",
+   "heads": [],
+   "imgs": [],
+   "widgets": [],
+   "btns": []
+  }
+ ]
+}

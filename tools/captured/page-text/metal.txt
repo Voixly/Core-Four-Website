@@ -1,0 +1,138 @@
+TITLE: Metal Roofs - Core Four Roofing
+META: 
+
+=== SECTION 0 | h=877 | pad=230px/116px | bg=rgba(0, 0, 0, 0) | bgimg=core_four_residential_new_metal_roof2-compressed.webp
+  <h1.title> Premium Residential Metal Roofing in Texas
+  <div.desc> Protect your facility with energy-efficient TPO roofing. Engineered for the Texas heat, our seamless single-ply systems offer unmatched durability
+  [ICON] fas fa-arrow-right
+  <span.button_label> Call for a Free Metal Roof Estimate
+  [IMG] Core-Four-Associate-Members-BBB-A-Rating-compressed.webp
+  [IMG] Core-Four-Associate-Members-Core-Four-Roofing-Houston-Area-Roofing-Contractors-Association-Member-compressed.webp
+  [IMG] Core-Four-Associate-Members-Core-Four-Roofing-National-Roofing-Contractors-Association-Member-Badge-compressed.webp
+  [IMG] Core-Four-Associate-Members-RCAT-Member-compressed.webp
+
+=== SECTION 1 | h=950 | pad=96px/96px | bg=rgba(0, 0, 0, 0)
+  <h2> What is Standing Seam Metal Roofing?
+  <p> When homeowners want a roof that they will likely never have to replace again, they turn to standing seam metal roofing. Unlike the exposed-fastener corrugated metal panels often seen on barns or sheds, a standing seam system is a premium architectural product. It consists of continuous metal panels (typically steel or aluminum) that run vertically from the ridge of the roof down to the eaves. The defining feature of a standing seam roof is the raised, interlocking seams that connect each panel.
+  <p> These seams are elevated above the level of the roof deck, and all the fasteners are completely hidden underneath them.This concealed fastener design is crucial—it completely eliminates the risk of water penetrating through screw holes, which is the most common cause of leaks in cheaper metal roofs. The result is a sleek, modern aesthetic combined with a virtually impenetrable, weatherproof barrier that is tailor-made to handle the extreme weather volatility of Texas.
+  [ICON] fas fa-arrow-right
+  <span.button_label> Get a Free [Material/Service] Estimate
+  [IMG] core_four_residential_new_metal_roof-compressed.webp
+  [IMG] core_four_residential_lake_metal_roof2-compressed.webp
+
+=== SECTION 2 | h=1090 | pad=96px/96px | bg=rgba(0, 0, 0, 0)
+  <span.title> Key Benefits
+  <h2.title> Why Upgrade to a Metal Roof?
+  <p.title> A standing seam metal roof is a premium investment that pays dividends in longevity, energy savings, and ultimate peace of mind. It is simply one of the strongest defenses you can put over your home.
+  [ICON] fas fa-arrow-right
+  <span.button_label> Call us about Metal Roofing
+  <h3.title> 50+ Year Lifespan
+  <div.desc> While standard shingles may need replacing every 20 years, a properly installed metal roof can easily last 50 to 70 years, often making it the last roof your home will ever need.
+  <h3.title> Extreme Weather Defense
+  <div.desc> Metal roofs are the ultimate armor for Texas weather. They offer Class 4 impact resistance against massive hail, will not ignite from airborne embers, and can withstand hurricane-force winds up to 140 mph.
+  <h3.title> Massive Energy Savings
+  <div.desc> Metal roofs are highly reflective, bouncing radiant solar heat away from your home rather than absorbing it. This can reduce your summer cooling costs by up to 25%, easing the burden on your HVAC system.
+  <h3.title> Increased Home Value
+  <div.desc> Increased Home Value Because of their striking modern aesthetic, extreme longevity, and low maintenance requirements, installing a metal roof significantly boosts your property value and curb appeal.
+
+=== SECTION 3 | h=657 | pad=96px/96px | bg=oklch(0.6099 0.1588 148.77) | bgimg=bottom-triangles-dark.svg
+  <h2.title> Frequently Asked Questions About Metal Roofs
+  <div.title> Are metal roofs noisy when it rains?
+  <span.num> 1
+  [ICON] icon-plus acc-icon-plus
+  [ICON] icon-minus acc-icon-minus
+  <div.answer> This is a common misconception! When installed over a solid wood roof deck, along with proper underlayment and attic insulation, a standing seam metal roof is no noisier during a rainstorm than a traditional asphalt shingle roof.
+  <div.title> Will a metal roof attract lightning?
+  <span.num> 2
+  [ICON] icon-plus acc-icon-plus
+  [ICON] icon-minus acc-icon-minus
+  <div.answer> A metal roof does not increase the likelihood of your home being struck by lightning. In fact, if your home were to be struck, a metal roof is one of the safest materials you can have because it is non-combustible and will safely disperse the electrical charge.
+  <div.title> Will a metal roof attract lightning?
+  <span.num> 3
+  [ICON] icon-plus acc-icon-plus
+  [ICON] icon-minus acc-icon-minus
+  <div.answer> A metal roof does not increase the likelihood of your home being struck by lightning. In fact, if your home were to be struck, a metal roof is one of the safest materials you can have because it is non-combustible and will safely disperse the electrical charge.
+  <div.title> Can you install a metal roof over my existing shingles?
+  <span.num> 4
+  [ICON] icon-plus acc-icon-plus
+  [ICON] icon-minus acc-icon-minus
+  <div.answer> While it is technically possible in some situations, Core Four Roofing generally recommends a full tear-off. Removing the old shingles allows us to inspect the underlying wood decking for hidden rot or damage, ensuring a flawless, long-lasting installation for your new metal system.
+  [ICON] fas fa-arrow-right
+  <span.button_label> Ask us a question
+  [IMG] core_four_residential_lake_metal_roof-compressed.webp
+
+=== SECTION 4 | h=984 | pad=96px/96px | bg=rgba(0, 0, 0, 0)
+  <h2.title> A Premium Investment, Fully Protected
+  <div.desc> Your roof is one of the most critical investments you will make. We ensure that investment is protected and accessible.
+  <h3.title> Flexible Financing
+  <div.desc> Upgrading to a lifetime metal roof is easier than you think. Core Four Roofing offers flexible, stress-free financing options tailored to your budget. Secure your home’s ultimate defense today and pay over time.
+  [IMG] core_four_residential_lake_metal_roof-compressed.webp
+  [IMG] core_four_residential_new_metal_roof2-compressed.webp
+  <h3.title> Extended Warranties
+  <div.desc> A metal roof is a significant upgrade, and we ensure that investment is protected. We source top-tier metal panels treated with premium paint finishes (like Kynar 500®) that carry robust guarantees against fading, chalking, and peeling. Combined with our Lifetime Workmanship Warranty, you can trust that your roof will perform beautifully for decades.
+
+=== SECTION 5 | h=1608 | pad=96px/96px | bg=rgba(0, 0, 0, 0)
+  <h2.title> Ready for the Last Roof Your Home Will Ever Need?
+  <h3.title> Request Your Inspection
+  <div.desc> Fill out the form below to schedule a free, no-obligation consultation with a Core Four roofing expert to discuss custom metal options for your home.
+  <p> " " indicates required fields
+  <span> *
+  <label.gfield_label.gform-field-label> Company
+  <div.gfield_description> This field is for validation purposes and should be left unchanged.
+  <legend.gfield_label.gform-field-label> Name
+  <span> *
+  <label.gform-field-label.gform-field-label--type-sub> First
+  <label.gform-field-label.gform-field-label--type-sub> Last
+  <label.gfield_label.gform-field-label> Email
+  <span> *
+  <label.gfield_label.gform-field-label> Phone
+  <span> *
+  <label.gfield_label.gform-field-label> Select a Service
+  <span> *
+  <option> Please Select a Service
+  <option> Commercial Roofing
+  <option> Residential Roofing
+  <option> Premium Roofing
+  <option> Exterior Services
+  <legend.gfield_label.gform-field-label> Address
+  <span> *
+  <label.gform-field-label.gform-field-label--type-sub> ZIP Code
+  <label.gfield_label.gform-field-label> Comments
+  <div.gfield_description> 0 of 600 max characters
+  <div.gfield_description> Please let us know what's on your mind. Have a question for us? Ask away.
+  [IMG] core_four_community-2.jpg
+  [IMG] core_four_community-4.jpg
+  [IMG] core_four_residential_metal_roof-compressed.webp
+
+=== SECTION 6 | h=606 | pad=96px/86px | bg=rgba(0, 0, 0, 0)
+  <h3.title> Kevin Andrews
+  <p.title> ★★★★★ 5 Stars
+  <p> Cody was quick to meet the adjuster was helpful through the process. Not a flyby night company, very professional and knowledgeable.
+  [IMG] 00924821-9fba-4891-9c3a-bf8071e88bf7-compressed-scaled-e1776361245929.webp
+  <h3.title> Rene Portillo
+  <p.title> ★★★★★ 5 Stars
+  <p> I was very happy with service that was offered before during and after the installation. I will definitely recommend their services to others who need a roof.
+  [IMG] Decra-11-scaled.jpg
+  <h3.title> Lisa Marburger
+  <p.title> ★★★★★ 5 Stars
+  <p> I reached out to Montgomery with Core Four Roofing on Friday, July 14th, requesting a quote. I received the quote the same day. The quote was thorough, easy to read, and by far the best price. I asked how soon they could complete the job and Montgomery got back with me immediately stating they could do it the following Friday or Saturday. I requested they come Friday. Workers arrived and completed the job that Friday. The roof looks amazing and the job site was left with no evidence, short of the gorgeous new roof, that they had been there. Several of my neighbors have spoken with me stating how great the roof looks. Core Four Roofing and Montgomery get a 5 star A+++ from me. I would highly recommend them for any of your roofing needs.
+  [IMG] 3b6394f3-0ca6-42d0-af68-1cba641b3cd4-compressed-scaled.webp
+  <h3.title> Justin Chambers
+  <p.title> ★★★★★ 5 Stars
+  <p> They were quick to schedule and complete my roof using great materials at a good price. They don’t try to over charge you. I would definitely recommend them.
+  [IMG] Decra-Villa-13-scaled.jpg
+
+=== SECTION 7 | h=704 | pad=0px/0px | bg=rgba(0, 0, 0, 0)
+  <h4> Protecting Texas, One Roof at a Time
+  <p> Core Four Roofing Service Coverage
+  [ICON] fas fa-map-pin
+  <h6> Service Hubs
+  <p> Austin, Dallas, Houston
+  [ICON] fas fa-clock
+  <h6> Storm Response
+  <p> 24/7 Emergency Tarping & Repair
+  [ICON] fas fa-phone
+  <h6> Local Office
+  <p> (281) 541-0027
+
+=== SECTION 8 | h=0 | pad=0px/0px | bg=rgba(0, 0, 0, 0)
