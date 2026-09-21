@@ -119,6 +119,50 @@ class PageLayout
         };
     }
 
+    /**
+     * Turn leftover theme icon names (icon-linkedin, etc.) into Font Awesome
+     * classes so the green circles never render empty.
+     */
+    public static function iconClass(?string $icon): string
+    {
+        $icon = trim((string) $icon);
+
+        if ($icon === '' || str_starts_with($icon, '/') || str_contains($icon, ' fa-')) {
+            return $icon;
+        }
+
+        $name = preg_replace('/^icon-/', '', $icon) ?? $icon;
+
+        return match ($name) {
+            'linkedin' => 'fab fa-linkedin-in',
+            'facebook' => 'fab fa-facebook-f',
+            'instagram' => 'fab fa-instagram',
+            default => $icon,
+        };
+    }
+
+    /** Profile URL + label for a social icon, matching the footer. */
+    public static function socialForIcon(?string $icon): ?array
+    {
+        $key = strtolower((string) $icon);
+
+        return match (true) {
+            str_contains($key, 'facebook') => [
+                'href' => 'https://www.facebook.com/corefourroofing/',
+                'label' => 'Facebook',
+            ],
+            str_contains($key, 'instagram') => [
+                'href' => 'https://www.instagram.com/corefourroofing/',
+                'label' => 'Instagram',
+            ],
+            str_contains($key, 'linkedin') => [
+                'href' => 'https://www.linkedin.com/company/core-four-roofing/',
+                'label' => 'LinkedIn',
+            ],
+            default => null,
+        };
+    }
+
     /** Put the live Font Awesome icons back into stripped extractor HTML. */
     public static function restoreIcons(string $html): string
     {
@@ -131,6 +175,43 @@ class PageLayout
 
             return '<i class="'.$icon.'" aria-hidden="true"></i>';
         }, $html) ?? $html;
+    }
+
+    /**
+     * Heading and lede for the map card. Home uses the short coverage line;
+     * storm / financing pages carry a longer rapid-response intro.
+     */
+    public static function coverageCopy(array $section): array
+    {
+        $html = self::firstMatchingHtml($section, static fn (string $h) => str_contains($h, 'Service Hubs'));
+        $title = 'Protecting Texas,<br>One Roof at a Time';
+        $lede = 'Core Four Roofing Service Coverage';
+
+        if ($html && preg_match('/<h[1-6][^>]*>(.*?)<\/h[1-6]>/si', $html, $heading)) {
+            $title = trim($heading[1]);
+        }
+
+        if ($html && preg_match('/<\/h[1-6]>\s*<p>(.*?)<\/p>/si', $html, $intro)) {
+            $lede = trim($intro[1]);
+        }
+
+        return ['title' => $title, 'lede' => $lede];
+    }
+
+    /** First HTML blob in a section tree that matches the predicate. */
+    protected static function firstMatchingHtml(array $node, callable $match): ?string
+    {
+        if (isset($node['html']) && is_string($node['html']) && $match($node['html'])) {
+            return $node['html'];
+        }
+
+        foreach ($node as $value) {
+            if (is_array($value) && ($found = self::firstMatchingHtml($value, $match))) {
+                return $found;
+            }
+        }
+
+        return null;
     }
 
     public static function defaultFaq(): array
@@ -154,6 +235,24 @@ class PageLayout
     public static function fraction(string $width): float
     {
         return self::WIDTHS[$width] ?? 1.0;
+    }
+
+    /**
+     * Commercial/residential heroes store the before shot on the section and
+     * the after shot on the first wrap. Those two photos must share one
+     * full-bleed frame; painting the after on the content box crops it
+     * differently and the before shows around the edges.
+     */
+    public static function heroPair(array $section): ?array
+    {
+        $before = $section['bgImage'] ?? null;
+        $after = $section['wraps'][0]['box']['bgImage'] ?? null;
+
+        if (! $before || ! $after || $before === $after) {
+            return null;
+        }
+
+        return ['before' => $before, 'after' => $after];
     }
 
     /** Whether a section renders anything, as opposed to being a bare spacer. */
@@ -232,6 +331,10 @@ class PageLayout
             $parts[] = 'text-transform:'.$item['transform'];
         }
 
+        if (strtolower((string) ($item['family'] ?? '')) === 'industry') {
+            $parts[] = 'font-family:var(--header-font)';
+        }
+
         return implode(';', $parts);
     }
 
@@ -240,6 +343,105 @@ class PageLayout
      * container width over the narrowest image, which is how the live grid lands
      * on three columns for photo walls and two for the hero badge block.
      */
+    /** Small associate-member seals, not full-bleed photos. */
+    public static function isLogoImage(array $item): bool
+    {
+        if (($item['type'] ?? '') !== 'image') {
+            return false;
+        }
+
+        $src = (string) ($item['img']['src'] ?? '');
+
+        if (str_contains($src, 'Associate-Members') || str_contains($src, 'home-advisor')) {
+            return true;
+        }
+
+        $display = (int) ($item['img']['dw'] ?? $item['box']['w'] ?? 0);
+        $intrinsic = (int) ($item['img']['w'] ?? 0);
+
+        if ($display > 0 && $display <= 120) {
+            return true;
+        }
+
+        return $display > 0 && $intrinsic >= $display * 2.5;
+    }
+
+    /** Dark or brand-green fills need light copy; white cards do not. */
+    public static function needsLightText(array $box): bool
+    {
+        $bg = self::color($box['bg'] ?? null);
+        if (! $bg) {
+            return false;
+        }
+
+        $pale = [
+            'var(--white)',
+            'var(--white-ghost)',
+            'var(--paper)',
+            'rgb(255, 255, 255)',
+            '#fff',
+            '#ffffff',
+        ];
+
+        return ! in_array(strtolower($bg), $pale, true);
+    }
+
+    /** Coloured chip ("The Guarantee") — not a full-width bar. */
+    public static function isPill(array $node): bool
+    {
+        if (($node['kind'] ?? 'column') === 'wrap') {
+            return false;
+        }
+
+        $box = $node['box'] ?? [];
+        $radius = (int) ($box['radius'] ?? 0);
+        $height = (int) ($box['h'] ?? 0);
+
+        return ! empty($box['bg']) && $radius >= 40 && $height > 0 && $height <= 48;
+    }
+
+    /** A wrap that is just a row of those seals. */
+    public static function isLogoRow(array $node): bool
+    {
+        $cols = $node['columns'] ?? [];
+
+        if (count($cols) < 2) {
+            return false;
+        }
+
+        $logos = 0;
+        foreach ($cols as $col) {
+            if (self::isLogoImage($col['item'] ?? [])) {
+                $logos++;
+            }
+        }
+
+        return $logos >= 2 && $logos === count($cols);
+    }
+
+    /** Small seals in a single row (residential / commercial), not a 2x2 card. */
+    public static function isLogoStrip(array $node): bool
+    {
+        if (! self::isLogoRow($node)) {
+            return false;
+        }
+
+        $cols = $node['columns'] ?? [];
+        if (count($cols) >= 5) {
+            return true;
+        }
+
+        foreach ($cols as $col) {
+            $span = (int) ($col['span'] ?? 12);
+            $width = (int) ($col['item']['img']['dw'] ?? $col['item']['box']['w'] ?? $col['box']['w'] ?? 0);
+            if ($span > 3 && $width > 120) {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
     public static function galleryColumns(array $item): int
     {
         $width = $item['box']['w'] ?? null;
@@ -334,6 +536,8 @@ class PageLayout
             $rules[] = "background-color:$bg";
         }
 
+        $photo = ! empty($box['bgImage']) && ! str_contains((string) $box['bgImage'], '.svg');
+
         if (! empty($box['bgImage'])) {
             $rules[] = "background-image:url('".e($box['bgImage'])."')";
             $rules[] = 'background-size:cover';
@@ -345,7 +549,21 @@ class PageLayout
         }
 
         if ($withPadding && ! empty($box['padding']) && array_sum($box['padding']) > 0) {
-            $rules[] = 'padding:'.implode('px ', $box['padding']).'px';
+            $pad = $box['padding'];
+            // Extracted cards often pad 48/30/0/30, so the last line or button
+            // sits in the rounded corner and overflow:hidden clips it. Photo
+            // cards and cards whose last child is an image keep a 0 floor —
+            // CSS pulls those pictures flush to the bottom edge.
+            $filled = $photo || ! empty($box['bg']);
+            $pill = ($box['radius'] ?? 0) >= 40 && ($box['h'] ?? 0) > 0 && ($box['h'] ?? 0) <= 48;
+            if ($filled && ! $photo && ! $pill && ($box['radius'] ?? 0) && ($pad[2] ?? 0) < 48) {
+                $pad[2] = 48;
+            }
+            $rules[] = 'padding:'.implode('px ', $pad).'px';
+        }
+
+        if ($photo && ! empty($box['h']) && (int) $box['h'] >= 280) {
+            $rules[] = 'min-height:'.(int) $box['h'].'px';
         }
 
         return implode(';', $rules);
@@ -362,7 +580,11 @@ class PageLayout
             return $url;
         }
 
-        $url = preg_replace('#^https?://(www\.)?corefourroofing\.com#', '', $url);
+        $url = preg_replace('#^https?://(www\.)?corefourroofing\.com#', '', $url) ?: '/';
+
+        if (preg_match('#^/contact-core-four-roofing/contact/?$#', $url)) {
+            return '/contact-core-four-roofing/';
+        }
 
         return $url === '' ? '/' : $url;
     }
@@ -388,6 +610,24 @@ class PageLayout
         };
     }
 
+    /** Keep captured WordPress links on this site when the old domain comes down. */
+    protected static function localizeUrls(mixed $value): mixed
+    {
+        if (is_string($value)) {
+            return str_replace(
+                ['https://www.corefourroofing.com/', 'http://www.corefourroofing.com/', 'https://corefourroofing.com/', 'http://corefourroofing.com/'],
+                '/',
+                $value
+            );
+        }
+
+        if (is_array($value)) {
+            return array_map([self::class, 'localizeUrls'], $value);
+        }
+
+        return $value;
+    }
+
     /** Load an extracted page definition. */
     public static function page(string $slug): ?array
     {
@@ -397,6 +637,17 @@ class PageLayout
             return null;
         }
 
-        return json_decode(file_get_contents($path), true);
+        $page = json_decode(file_get_contents($path), true);
+        if (! is_array($page)) {
+            return null;
+        }
+
+        $page = self::localizeUrls($page);
+
+        $seo = SiteSeo::forPage($slug);
+        $page['title'] = $seo['title'];
+        $page['description'] = $seo['description'];
+
+        return $page;
     }
 }

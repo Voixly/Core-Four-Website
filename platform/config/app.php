@@ -7,6 +7,7 @@ return [
     'env' => env('APP_ENV', 'production'),
     'debug' => (bool) env('APP_DEBUG', false),
     'url' => env('APP_URL', 'https://corefourroofing.com'),
+    'public_url' => env('PUBLIC_URL', 'https://corefourroofing.com'),
     'timezone' => env('APP_TIMEZONE', 'America/Chicago'),
     'locale' => env('APP_LOCALE', 'en'),
     'fallback_locale' => env('APP_FALLBACK_LOCALE', 'en'),

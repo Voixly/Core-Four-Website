@@ -31,6 +31,10 @@ class LoginController extends Controller
             Auth::logout();
             return back()->withErrors(['email' => 'This account is disabled.']);
         }
+        if ($user->isCustomer()) {
+            Auth::logout();
+            return redirect()->route('account.login')->withErrors(['email' => 'Use the customer job portal to sign in.']);
+        }
 
         $request->session()->regenerate();
 

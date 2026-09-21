@@ -63,6 +63,94 @@
     overflow: hidden;
 }
 
+/* White feature cards (financing / warranties) stack heading, copy, and a
+   photo. The 24px grid gap plus a forced bottom pad left a hole under the
+   picture; live packs those items tightly and lets the photo sit on the
+   card's bottom edge. */
+.blk-wrap.blk-surface {
+    row-gap: 12px;
+    align-self: start;
+}
+
+.blk-wrap.blk-surface:has(> :last-child .blk-img) {
+    padding-bottom: 0 !important;
+}
+
+.blk-wrap.blk-surface > :last-child:has(.blk-img) {
+    align-self: stretch;
+}
+
+.blk-wrap.blk-surface > :last-child .blk-img {
+    border-radius: 32px 32px 0 0;
+}
+
+.blk-wrap.blk-surface > .blk-media-bleed:last-child .blk-img,
+.blk-wrap.blk-surface > :last-child.blk-media-bleed .blk-img {
+    border-radius: 0;
+}
+
+.blk-wrap.blk-surface > .blk-col > .blk-h,
+.blk-wrap.blk-surface > .blk-col > .blk-text {
+    margin-bottom: 0;
+}
+
+/* Cards that only pad the top still need a side inset on the copy. */
+.blk-surface--flush > .blk-col:has(.blk-h):not([style*="padding:"]),
+.blk-surface--flush > .blk-col:has(.blk-text):not([style*="padding:"]) {
+    padding-inline: 30px;
+}
+
+/* Inset class is for when the card itself is full-bleed. If the card
+   already has side padding, a second 30px makes the photo look stranded. */
+.blk-surface > .blk-media-inset {
+    padding-inline: 0;
+}
+
+/* Photo cards from the live site sit light type on a picture. Without the
+   overlay the words disappear into the sky/roof, and without a floor the
+   last line is clipped by the rounded corner. */
+.blk-photo {
+    position: relative;
+    isolation: isolate;
+    align-content: space-between;
+}
+
+.blk-photo::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    border-radius: inherit;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.78) 0%, rgba(0, 0, 0, 0.32) 52%, rgba(0, 0, 0, 0.18) 100%);
+}
+
+.blk-photo > * { position: relative; z-index: 1; }
+
+.blk-photo .blk-h,
+.blk-photo .blk-text,
+.blk-photo .blk-text p {
+    color: var(--white);
+}
+
+.blk-photo .blk-text a,
+.light-text .blk-text a {
+    color: var(--white);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.blk-surface .btn {
+    max-width: 100%;
+    box-sizing: border-box;
+    white-space: nowrap;
+}
+
+.blk-surface .blk-h {
+    max-width: 100%;
+    overflow-wrap: break-word;
+}
+
 .blk-group {
     width: 100%;
     display: grid;
@@ -88,6 +176,36 @@
     display: flex;
     align-items: center;
     color: var(--white);
+    overflow: hidden;
+}
+
+/* Full-bleed before/after sits behind the copy so both hero photos share
+   one crop instead of stacking at two different sizes. */
+.blk-hero > .ba--hero {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    aspect-ratio: auto;
+}
+
+.blk-hero-scrim,
+.blk-hero .blk-wrapper { pointer-events: none; }
+
+.blk-hero .blk-wrapper a,
+.blk-hero .blk-wrapper button,
+.blk-hero .blk-wrapper [class*="elfsight"] {
+    pointer-events: auto;
+}
+
+.blk-col [class*="elfsight-app-058d3df7"],
+.blk-col [class*="elfsight-app-2e309ca1"] {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 420px;
 }
 
 .blk-section--screen {
@@ -130,14 +248,21 @@
     max-width: 640px;
 }
 
+@media (min-width: 960px) {
+    .blk-hero > .blk-wrapper > .blk-wrap {
+        transform: translateY(-40px);
+    }
+}
+
 /* --- Typography inside rendered sections -------------------------------- */
 
 .blk-h {
-    font-family: var(--font-head);
+    font-family: var(--header-font);
     font-weight: 700;
     color: var(--forest-green);
     margin: 0 0 16px;
     line-height: 1.1;
+    letter-spacing: 0.8px;
 }
 
 /* Fluid type scale, fitted to the live sizes measured from 390px to
@@ -193,19 +318,40 @@
 
 .blk-col > * + * { margin-top: 16px; }
 
-/* Columns that only carry a coloured pill of text. */
-.blk-col.blk-surface > .blk-text {
-    margin: 0;
-    font-size: 13px;
+/* Same chip as the homepage .pill — one line, 26px tall. */
+.blk-col.blk-pill {
+    display: inline-flex;
+    align-items: center;
+    grid-column: auto;
+    width: max-content;
+    max-width: 100%;
+    justify-self: start;
+    align-self: start;
+    flex: 0 0 auto;
+    white-space: nowrap;
+    padding: 8px 20px !important;
+    border-radius: 50px;
+    box-sizing: border-box;
+    font-family: var(--body-font);
+    font-size: 14px;
     font-weight: 600;
-    letter-spacing: .3px;
-    color: inherit;
+    line-height: 10px;
 }
 
-.blk-col.blk-surface > .blk-text,
-.blk-col.blk-surface > .blk-text p {
-    color: var(--white);
+.blk-col.blk-pill .blk-text,
+.blk-col.blk-pill .blk-text span {
+    margin: 0;
+    font-family: var(--body-font);
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 10px;
+    letter-spacing: 0;
+    color: var(--white) !important;
+    white-space: nowrap;
 }
+
+/* Chip styling lives on .blk-pill. White article cards are also surfaces,
+   so a blanket white-text rule here made body copy disappear. */
 
 /* --- Media --------------------------------------------------------------- */
 
@@ -215,6 +361,53 @@
     height: auto;
     border-radius: 24px;
     object-fit: cover;
+}
+
+/* Associate-member seals stay badge-sized. On mobile the column class is
+   full-width, so without this they blow up to the screen edge. */
+.blk-img--logo {
+    width: auto;
+    max-width: min(var(--logo-w, 88px), 100%);
+    height: auto;
+    border-radius: 0;
+    object-fit: contain;
+}
+
+.blk-logos {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 16px 20px;
+}
+
+.blk-logos > .blk-col {
+    grid-column: auto;
+    width: auto;
+    flex: 0 1 auto;
+    max-width: calc(50% - 10px);
+}
+
+/* Live site keeps the associate / partner seals on one line. */
+.blk-logos--strip {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    gap: 12px 16px;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+}
+
+.blk-logos--strip > .blk-col {
+    flex: 1 1 0;
+    min-width: 0;
+    max-width: 88px;
+    align-items: center;
+}
+
+.blk-logos--strip .blk-img--logo {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
 }
 
 .blk-surface > .blk-img {
@@ -244,16 +437,33 @@
 .blk-gallery {
     width: 100%;
     column-count: var(--cols, 1);
-    column-gap: 12px;
+    column-gap: 24px;
 }
 
 .blk-gallery img {
     width: 100%;
     height: auto;
     display: block;
-    margin-bottom: 12px;
+    margin-bottom: 24px;
     break-inside: avoid;
     object-fit: cover;
+    border-radius: 32px;
+}
+
+/* A one-column gallery is separate rounded photos, not one clipped stack.
+   CSS columns also skip the parent radius, which left square corners. */
+.blk-gallery[style*="--cols:1"] {
+    display: grid;
+    column-count: unset;
+    gap: 24px;
+}
+
+.blk-gallery[style*="--cols:1"] img {
+    margin-bottom: 0;
+}
+
+.blk-surface:has(.blk-gallery) {
+    overflow: visible;
 }
 
 /* Blog listing: three-up white cards, matching the live archive. */
@@ -320,7 +530,10 @@
     background: var(--lime-green);
     color: var(--forest-green);
     font-size: 22px;
+    text-decoration: none;
 }
+
+a.blk-icon:hover { background: var(--bright-green); }
 
 .blk-icon img { width: 32px; height: 32px; object-fit: contain; }
 
@@ -333,7 +546,57 @@
 
 /* --- Buttons ------------------------------------------------------------- */
 
-.blk-col > .btn { flex: 0 0 auto; }
+.blk-col > .btn {
+    flex: 0 0 auto;
+    width: max-content;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.blk-col--end { align-items: flex-end; }
+
+/* Counter + Call Us sit on one row. The 12-col grid made the button
+   column ~187px, then nowrap + overflow:hidden clipped it. */
+.blk-wrap:has(> .blk-col .counter-card):has(> .blk-col > .btn) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 16px 20px;
+}
+
+.blk-wrap:has(> .blk-col .counter-card):has(> .blk-col > .btn) > .blk-col {
+    grid-column: auto;
+    flex: 1 1 100%;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+}
+
+.blk-wrap:has(> .blk-col .counter-card):has(> .blk-col > .btn) > .blk-col.blk-pill {
+    flex: 0 0 auto;
+    width: max-content;
+    max-width: 100%;
+}
+
+.blk-wrap:has(> .blk-col .counter-card):has(> .blk-col > .btn) > .blk-col:has(.counter-card) {
+    flex: 1 1 200px;
+    width: auto;
+}
+
+.blk-wrap:has(> .blk-col .counter-card):has(> .blk-col > .btn) > .blk-col:has(> .btn) {
+    flex: 0 1 auto;
+    width: auto;
+    margin-left: auto;
+    align-items: flex-end;
+}
+
+.blk-wrap:has(> .blk-col .counter-card):has(> .blk-col > .btn) > .blk-col > .btn {
+    padding: 20px 32px;
+}
+
+.blk-wrap:has(> .blk-col .counter-card):has(> .blk-col > .btn) > .blk-logos {
+    flex: 1 1 100%;
+}
 
 .btn--white {
     background: var(--white);
@@ -355,7 +618,11 @@
 
 /* --- Forms on coloured cards --------------------------------------------- */
 
+/* `legend` has to be named alongside `label`: the group headings "Name" and
+   "Address" are legends, and without this they keep the dark default and
+   disappear into the green card. */
 .blk-surface .lead-form label,
+.blk-surface .lead-form legend,
 .blk-surface .lead-form .form-note {
     color: var(--white);
 }
@@ -386,9 +653,11 @@
     gap: 6px;
 }
 
+/* A legend defaults to 16px/500, which sits a step above the labels beside it. */
 .lead-form .field-group legend {
     padding: 0;
-    font-size: inherit;
+    font-size: 14px;
+    font-weight: 700;
 }
 
 .lead-form label.sub {
@@ -397,7 +666,8 @@
 }
 
 .lead-form .sub-label {
-    font-size: 12px;
+    font-size: 13px;
+    font-weight: 400;
     opacity: .75;
     color: inherit;
 }
@@ -419,6 +689,19 @@
     .blk-wrapper { width: 684px; }
     .blk-blog { grid-template-columns: repeat(2, 1fr); gap: 28px; }
     .blk-gallery { column-count: min(var(--cols, 1), 2); }
+
+    .blk-hero {
+        align-items: flex-start;
+        padding: 0 !important;
+    }
+
+    .blk-hero.blk-section--full {
+        padding-inline: 0 !important;
+    }
+
+    .blk-hero > .blk-wrapper > .blk-wrap {
+        padding: 168px 32px 56px !important;
+    }
 }
 
 @media (max-width: 767px) {
@@ -434,9 +717,45 @@
 
     .blk-section--full { padding-inline: 20px !important; }
 
+    /* Desktop hero wraps keep 200–300px top / 86px sides. On a phone that
+       parks the headline under the slider and indents it past the logo. */
     .blk-hero {
-        padding-top: 140px !important;
-        padding-bottom: 56px !important;
+        align-items: flex-start;
+        padding: 0 !important;
+    }
+
+    .blk-hero.blk-section--full {
+        padding-inline: 0 !important;
+    }
+
+    .blk-hero > .blk-wrapper,
+    .blk-hero > .blk-wrapper > .blk-wrap,
+    .blk-hero > .blk-wrapper > .blk-wrap > .blk-wrap,
+    .blk-hero .blk-col {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0;
+    }
+
+    .blk-hero > .blk-wrapper > .blk-wrap {
+        padding: 156px 16px 40px !important;
+    }
+
+    .blk-hero .blk-h1 {
+        font-size: 32px;
+        line-height: 1.08;
+        letter-spacing: 0;
+        margin-bottom: 12px;
+        max-width: 18ch;
+    }
+
+    .blk-hero .blk-text {
+        max-width: 36ch;
+    }
+
+    .blk-hero [class*="elfsight"],
+    .blk-hero [class*="elfsight-app-"] {
+        max-width: 100% !important;
     }
 
     .blk-wrapper, .blk-wrap, .blk-group { gap: 16px; }
@@ -445,6 +764,13 @@
     .blk-gallery { column-count: 1; }
 
     .blk-surface { border-radius: 24px; }
+    .blk-photo { min-height: 0 !important; }
+    .blk-logos { gap: 12px 14px; }
+    .blk-logos--strip { flex-wrap: nowrap; gap: 8px 10px; }
+    .blk-logos--strip > .blk-col {
+        grid-column: auto !important;
+        max-width: 88px;
+    }
     .blk-row { grid-template-columns: 1fr !important; }
 
     .lead-form .field-row { grid-template-columns: 1fr; }

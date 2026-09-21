@@ -42,5 +42,8 @@
             <button class="review-nav next" type="button" aria-label="Next review"><i class="fas fa-chevron-right"></i></button>
             <div class="review-dots" aria-hidden="true"></div>
         </div>
+        <p class="reviews-cta">
+            <a class="btn" href="/reviews/">Leave a private rating <i class="fas fa-arrow-right"></i></a>
+        </p>
     </div>
 </section>

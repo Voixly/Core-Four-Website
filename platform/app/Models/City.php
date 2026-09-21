@@ -18,4 +18,9 @@ class City extends Model
             ? "/{$prefix}-roofing-in-tx/"
             : "/{$prefix}-roofing-in-{$this->slug}-tx/";
     }
+
+    public function url(): string
+    {
+        return url($this->path());
+    }
 }

@@ -25,7 +25,7 @@
             <td>{{ $lead->city }}</td>
             <td>{{ $lead->type }}</td>
             <td>{{ $lead->source }}</td>
-            <td>{{ $lead->status }}</td>
+            <td><span class="tag tag-{{ $lead->status }}">{{ $lead->status }}</span></td>
             <td>{{ $lead->assignee?->name }}</td>
         </tr>
     @endforeach

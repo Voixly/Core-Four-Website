@@ -1,7 +1,8 @@
 @php
     $value = $value ?? 50;
+    $hero = !empty($hero);
 @endphp
-<div class="ba" data-ba>
+<div class="ba{{ $hero ? ' ba--hero' : '' }}" data-ba>
     <img class="ba-after" src="{{ $after }}" alt="{{ $afterAlt ?? 'After' }}">
     <div class="ba-before-wrap">
         <img class="ba-before" src="{{ $before }}" alt="{{ $beforeAlt ?? 'Before' }}">

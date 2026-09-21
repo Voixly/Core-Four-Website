@@ -1,7 +1,7 @@
 @extends('layouts.public')
 
-@section('title', 'Core Four Roofing | Commercial & Residential Roofing in Texas')
-@section('description', 'Core Four Roofing provides premium commercial and residential roofing across Texas. Providing integrity, efficiency, quality, and affordability.')
+@section('title', \App\Support\SiteSeo::DEFAULT_TITLE)
+@section('description', \App\Support\SiteSeo::DEFAULT_DESCRIPTION)
 
 @section('content')
 <section class="hero">
@@ -12,7 +12,7 @@
                 @include('partials.elfsight-reviews')
             </div>
             <h1>Protect Your Business, Secure Your Home</h1>
-            <p class="lead">Core Four Roofing provides premium commercial and residential roofing across Texas. Providing integrity, efficiency, quality, and affordability.</p>
+            <p class="lead">Core Four Roofing provides premium commercial and residential roofing across Texas — integrity, efficiency, quality, and affordability on every job.</p>
             <div class="hero-actions">
                 <a class="btn" href="tel:+1{{ $officePhoneTel }}">Call Us Today <i class="fas fa-arrow-right"></i></a>
             </div>
@@ -77,6 +77,7 @@
                     <h4>24/7 Emergency</h4>
                     <p>Storm damage? We offer rapid response roof tarping and full insurance claim advocacy.</p>
                     <a class="btn" href="{{ url('/storm-emergency/') }}">Get Help Now <i class="fas fa-arrow-right"></i></a>
+                    <p class="emergency-guide"><a href="/guides/houston-homeowner-storm-checklist/">Or grab the storm checklist</a></p>
                 </div>
                 <div class="award-card">
                     <h4>Recognized as one of the best in Houston, Texas</h4>
@@ -86,8 +87,34 @@
     </div>
 </section>
 
+@if(isset($resCities) && $resCities->isNotEmpty())
+<section class="section">
+    <div class="wrap">
+        <p class="kicker">Houston metro</p>
+        <h2>Roofing in your city</h2>
+        <p class="lead">Pick your city. We will talk about the neighborhoods, ZIP codes, and roof types on your street — not a generic Houston bid.</p>
+        <div class="city-chips city-chips--links">
+            @foreach($resCities as $city)
+                <a href="{{ url($city->path()) }}">{{ $city->name }}</a>
+            @endforeach
+            <a href="{{ url('/residential-roofing-in-tx/') }}">All Texas cities</a>
+        </div>
+        @if(isset($commCities) && $commCities->isNotEmpty())
+            <h3 class="city-dir-sub">Commercial roofing</h3>
+            <div class="city-chips city-chips--links">
+                @foreach($commCities as $city)
+                    <a href="{{ url($city->path()) }}">{{ $city->name }}</a>
+                @endforeach
+                <a href="{{ url('/commercial-roofing-in-tx/') }}">All commercial cities</a>
+            </div>
+        @endif
+    </div>
+</section>
+@endif
+
 @include('partials.coverage')
 @include('partials.steps')
+@include('partials.guide-cta', ['context' => 'home'])
 @include('partials.reviews')
 @include('partials.principles')
 @include('partials.instagram')

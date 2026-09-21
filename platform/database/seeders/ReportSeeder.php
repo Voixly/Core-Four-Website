@@ -14,7 +14,7 @@ class ReportSeeder extends Seeder
                 'title' => 'Performance report',
                 'slug' => 'performance',
                 'file' => 'index.html',
-                'description' => 'Search, GBP, and site traction for Core Four Roofing.',
+                'description' => 'Gains, GBP, website, social, search, keywords, outlook, landings, and listings — plus a PDF download.',
             ],
             [
                 'title' => 'Residential ads plan',

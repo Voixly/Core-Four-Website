@@ -31,7 +31,9 @@ class NurtureMail extends Mailable
             view: 'emails.nurture',
             with: [
                 'lead' => $this->lead,
-                'bodyHtml' => nl2br(e($this->personalize($this->step->body))),
+                'title' => $this->personalize($this->step->subject),
+                'preheader' => 'A note from Core Four Roofing in Tomball, TX',
+                'bodyHtml' => $this->bodyHtml(),
             ],
         );
     }
@@ -45,5 +47,14 @@ class NurtureMail extends Mailable
             '{{name}}' => $this->lead->name,
             '{{city}}' => $this->lead->city ?: 'your area',
         ]);
+    }
+
+    protected function bodyHtml(): string
+    {
+        $blocks = preg_split('/\n\s*\n/', trim($this->personalize($this->step->body))) ?: [];
+
+        return collect($blocks)
+            ->map(fn (string $block) => '<p style="margin:0 0 16px">'.nl2br(e($block)).'</p>')
+            ->implode('');
     }
 }

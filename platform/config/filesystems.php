@@ -20,6 +20,11 @@ return [
             'root' => storage_path('app/guides'),
             'throw' => false,
         ],
+        'documents' => [
+            'driver' => 'local',
+            'root' => storage_path('app/documents'),
+            'throw' => false,
+        ],
     ],
     'links' => [
         public_path('storage') => storage_path('app/public'),

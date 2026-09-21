@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Models\City;
 use App\Models\Setting;
 use Illuminate\Pagination\Paginator;
 use Illuminate\Support\Facades\Schema;
@@ -29,6 +30,21 @@ class AppServiceProvider extends ServiceProvider
         View::share('officePhoneTel', config('app.office_phone_tel'));
         View::share('officeAddress', config('app.office_address'));
         View::share('officeHours', 'Mon–Sat 7am–7pm · Emergency 24/7');
+
+        View::composer('layouts.public', function ($view) {
+            try {
+                if (Schema::hasTable('cities')) {
+                    $view->with('footerCities', City::query()
+                        ->where('type', 'residential')
+                        ->where('metro', 'Houston')
+                        ->where('slug', '!=', 'tx')
+                        ->orderBy('name')
+                        ->get());
+                }
+            } catch (\Throwable) {
+                $view->with('footerCities', collect());
+            }
+        });
 
         try {
             if (Schema::hasTable('settings')) {

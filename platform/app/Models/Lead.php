@@ -8,11 +8,11 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Lead extends Model
 {
-    public const STATUSES = ['new', 'contacted', 'inspected', 'bid', 'won', 'lost'];
+    public const STATUSES = ['new', 'contacted', 'inspected', 'bid', 'won', 'lost', 'active'];
 
     protected $fillable = [
         'name', 'email', 'phone', 'zip', 'city', 'type', 'need',
-        'status', 'source', 'page_url', 'assigned_to', 'notes',
+        'status', 'source', 'page_url', 'assigned_to', 'notes', 'job_id',
     ];
 
     public function assignee(): BelongsTo
@@ -23,6 +23,16 @@ class Lead extends Model
     public function events(): HasMany
     {
         return $this->hasMany(LeadEvent::class)->latest();
+    }
+
+    public function reviews(): HasMany
+    {
+        return $this->hasMany(Review::class);
+    }
+
+    public function job(): BelongsTo
+    {
+        return $this->belongsTo(Job::class);
     }
 
     public function log(?User $user, string $event, ?string $body = null): LeadEvent

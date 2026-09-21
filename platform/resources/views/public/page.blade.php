@@ -29,11 +29,12 @@
         @php
             $widgets = $widgetsIn($section);
             $isHero = $index === 0 && ! empty($section['bgImage']);
+            $heroPair = $isHero ? PageLayout::heroPair($section) : null;
             $style = '';
             if ($bg = PageLayout::color($section['bg'] ?? null)) {
                 $style .= "background-color:$bg;";
             }
-            if (! empty($section['bgImage'])) {
+            if (! empty($section['bgImage']) && ! $heroPair) {
                 $style .= "background-image:url('".e($section['bgImage'])."');background-size:".e($section['bgSize'] ?? 'cover').";background-position:".e($section['bgPos'] ?? 'center').";";
             }
             if (! empty($section['padding'])) {
@@ -54,12 +55,21 @@
 
         @if(! $isHero && in_array($reviewsWidget, $widgets, true) && in_array('mfn-global-section', $section['classes'] ?? [], true))
             @include('partials.reviews')
-        @elseif(in_array($mapWidget, $widgets, true) && str_contains(json_encode($section), 'Protecting Texas'))
-            @include('partials.coverage')
+        @elseif(in_array($mapWidget, $widgets, true))
+            @include('partials.coverage', ['coverage' => PageLayout::coverageCopy($section)])
         @elseif(in_array($instagramWidget, $widgets, true))
             @include('partials.instagram')
         @else
             <section class="{{ implode(' ', $classes) }}" style="{{ $style }}">
+                @if($heroPair)
+                    @include('partials.before-after', [
+                        'before' => $heroPair['before'],
+                        'after' => $heroPair['after'],
+                        'beforeAlt' => 'Before',
+                        'afterAlt' => 'After',
+                        'hero' => true,
+                    ])
+                @endif
                 @if($overlay)
                     <div class="blk-hero-scrim" style="background:{{ $overlay }};opacity:{{ $section['overlay']['opacity'] ?? '1' }}"></div>
                 @elseif($isHero)
@@ -67,10 +77,11 @@
                 @endif
                 <div class="blk-wrapper">
                     @foreach($section['wraps'] as $wrap)
-                        @include('blocks.node', ['node' => $wrap])
+                        @include('blocks.node', ['node' => $wrap, 'heroPair' => $heroPair])
                     @endforeach
                 </div>
             </section>
         @endif
     @endforeach
+    @include('partials.guide-cta', ['context' => $slug])
 @endsection

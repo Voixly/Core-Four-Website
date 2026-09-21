@@ -120,8 +120,8 @@ class BuildPreview extends Command
             // Quoting both ends keeps these exact matches, so no page path can
             // be rewritten as a prefix of a longer one.
             foreach (array_unique([$base.$path, $base.$bare, $path, $bare]) as $form) {
-                if ($form === '' || $form === $base) {
-                    $form = $base.'/';
+                if ($form === '') {
+                    continue;
                 }
                 $rewrites['"'.$form.'"'] = '"'.$file.'"';
             }

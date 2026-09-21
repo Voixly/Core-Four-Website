@@ -1,5 +1,6 @@
 @extends('layouts.public')
-@section('title', $title)
+@section('title', $title.' | Core Four Roofing')
+@section('description', 'How Core Four Roofing handles your information, inspection requests, and follow-up from our Tomball office.')
 @section('content')
 <section class="section">
     <div class="wrap" style="max-width:720px">

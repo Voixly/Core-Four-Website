@@ -26,6 +26,14 @@ class LeadNotification extends Mailable
 
     public function content(): Content
     {
-        return new Content(view: 'emails.lead-notification');
+        return new Content(
+            view: 'emails.lead-notification',
+            with: [
+                'title' => 'New Core Four lead',
+                'preheader' => ($this->lead->name ?: 'A new lead').' · '.($this->lead->type ?: 'roofing'),
+                'ctaUrl' => url('/admin/leads/'.$this->lead->id),
+                'ctaLabel' => 'Open this lead',
+            ],
+        );
     }
 }

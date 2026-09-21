@@ -19,8 +19,14 @@
         @break
 
     @case('image')
-        <img class="blk-img" src="{{ $item['img']['src'] }}" alt="{{ $item['img']['alt'] }}"
-             @if(!empty($item['img']['w'])) width="{{ $item['img']['w'] }}" height="{{ $item['img']['h'] }}" @endif
+        @php
+            $img = $item['img'] ?? [];
+            $isLogo = PageLayout::isLogoImage($item);
+            $imgW = $img['dw'] ?? $img['w'] ?? null;
+            $imgH = $img['dh'] ?? $img['h'] ?? null;
+        @endphp
+        <img class="blk-img{{ $isLogo ? ' blk-img--logo' : '' }}" src="{{ $img['src'] ?? '' }}" alt="{{ $img['alt'] ?? '' }}"
+             @if($imgW) width="{{ $imgW }}" height="{{ $imgH }}" style="--logo-w:{{ (int) $imgW }}px" @endif
              loading="lazy" decoding="async">
         @break
 
@@ -28,7 +34,7 @@
         @php $href = PageLayout::href($item['href'] ?? '#'); @endphp
         <a class="{{ PageLayout::buttonClass($item) }}" href="{{ $href }}">
             {{ $item['text'] }}
-            @if(!empty($item['icon']))<i class="{{ $item['icon'] }}" aria-hidden="true"></i>@endif
+            @if(!empty($item['icon']))<i class="{{ PageLayout::iconClass($item['icon']) }}" aria-hidden="true"></i>@endif
         </a>
         @break
 
@@ -97,13 +103,23 @@
         @break
 
     @case('icon')
-        <span class="blk-icon">
-            @if(Str::startsWith($item['icon'] ?? '', '/'))
-                <img src="{{ $item['icon'] }}" alt="">
-            @else
-                <i class="{{ $item['icon'] }}" aria-hidden="true"></i>
-            @endif
-        </span>
+        @php
+            $iconClass = PageLayout::iconClass($item['icon'] ?? '');
+            $social = PageLayout::socialForIcon($iconClass ?: ($item['icon'] ?? ''));
+        @endphp
+        @if($social)
+            <a class="blk-icon" href="{{ $social['href'] }}" target="_blank" rel="noopener" aria-label="{{ $social['label'] }}">
+                <i class="{{ $iconClass }}" aria-hidden="true"></i>
+            </a>
+        @else
+            <span class="blk-icon">
+                @if(Str::startsWith($iconClass, '/'))
+                    <img src="{{ $iconClass }}" alt="">
+                @else
+                    <i class="{{ $iconClass }}" aria-hidden="true"></i>
+                @endif
+            </span>
+        @endif
         @break
 
     @case('list')
@@ -127,7 +143,10 @@
         @break
 
     @case('form')
-        @include('partials.lead-form', ['source' => $slug ?? 'website'])
+        @include('partials.lead-form', [
+            'source' => $slug ?? 'website',
+            'type' => str_starts_with($slug ?? '', 'commercial') ? 'commercial' : 'residential',
+        ])
         @break
 
     @default

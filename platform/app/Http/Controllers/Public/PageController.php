@@ -5,8 +5,12 @@ namespace App\Http\Controllers\Public;
 use App\Http\Controllers\Controller;
 use App\Models\City;
 use App\Models\Guide;
+use App\Support\BlogPost;
+use App\Support\CityPage;
 use App\Support\PageLayout;
+use App\Support\SiteSeo;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 use Illuminate\View\View;
 
 class PageController extends Controller
@@ -34,8 +38,9 @@ class PageController extends Controller
     {
         $type = str_contains($request->path(), 'commercial') ? 'commercial' : 'residential';
         $city = City::query()->where('slug', $slug)->where('type', $type)->firstOrFail();
+        $seo = CityPage::make($city);
 
-        return view('public.city', compact('city'));
+        return view('public.city', compact('city', 'seo'));
     }
 
     public function thanks(): View
@@ -73,20 +78,131 @@ class PageController extends Controller
         return view('public.guide', compact('guide'));
     }
 
+    public function post(string $slug): View
+    {
+        $post = BlogPost::find($slug);
+        abort_unless($post, 404);
+
+        return view('public.post', compact('post'));
+    }
+
     public function sitemap()
     {
         $cities = City::query()->orderBy('type')->orderBy('name')->get();
         $guides = Guide::query()->where('is_active', true)->get();
+        $posts = BlogPost::slugs();
+        $pages = [
+            '/',
+            '/residential-roofing/',
+            '/commercial-roofing/',
+            '/residential-roofing/asphalt-shingles/',
+            '/residential-roofing/metal-roofs/',
+            '/residential-roofing/stone-coated-steel/',
+            '/residential-roofing/synthetic-roofs/',
+            '/residential-roofing/roof-repair/',
+            '/residential-roofing/roof-installation/',
+            '/residential-roofing/roof-inspections/',
+            '/commercial-roofing/roof-replacement-installation/',
+            '/commercial-roofing/repair-preventative-maintenance/',
+            '/commercial-roofing/coatings-restoration/',
+            '/commercial-roofing/inspections-condition-reports/',
+            '/insurance-claims/',
+            '/storm-emergency/',
+            '/financing/',
+            '/about-core-four-roofing/',
+            '/service-areas/',
+            '/contact-core-four-roofing/',
+            '/blog/',
+            '/guides/',
+            '/reviews/',
+        ];
 
         return response()
-            ->view('public.sitemap', compact('cities', 'guides'))
+            ->view('public.sitemap', compact('cities', 'guides', 'pages', 'posts'))
             ->header('Content-Type', 'application/xml');
     }
 
-    public function robots()
+    public function robots(): Response
     {
-        $body = "User-agent: *\nAllow: /\nDisallow: /admin\nDisallow: /login\nDisallow: /preview\nSitemap: ".url('/sitemap.xml')."\n";
+        $sitemap = SiteSeo::url('/sitemap.xml');
+        $body = <<<TXT
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /login
+Disallow: /account
+Disallow: /preview
 
-        return response($body, 200)->header('Content-Type', 'text/plain');
+User-agent: Googlebot
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+Sitemap: {$sitemap}
+
+TXT;
+
+        return response($body, 200)->header('Content-Type', 'text/plain; charset=UTF-8');
+    }
+
+    public function llms(): Response
+    {
+        $lines = [
+            '# Core Four Roofing',
+            '> Tomball, Texas roofing contractor. Residential tile, metal, stone-coated steel, and slate. Commercial TPO, metal, coatings, and maintenance.',
+            '',
+            '- Office: 22955 State Highway 249 Suite 26, Tomball, TX 77375',
+            '- Phone: '.config('app.office_phone'),
+            '- Site: '.SiteSeo::url('/'),
+            '',
+            '## Main pages',
+            '- [Home]('.SiteSeo::url('/').')',
+            '- [Residential roofing]('.SiteSeo::url('/residential-roofing/').')',
+            '- [Commercial roofing]('.SiteSeo::url('/commercial-roofing/').')',
+            '- [Service areas]('.SiteSeo::url('/service-areas/').')',
+            '- [Contact]('.SiteSeo::url('/contact-core-four-roofing/').')',
+            '- [Blog]('.SiteSeo::url('/blog/').')',
+            '',
+            '## Blog',
+        ];
+
+        foreach (BlogPost::all() as $post) {
+            $lines[] = '- ['.$post['title'].']('.SiteSeo::url('/'.$post['slug'].'/').')';
+        }
+
+        $lines = array_merge($lines, [
+            '',
+            '## City pages',
+        ]);
+
+        $cities = City::query()->orderBy('type')->orderBy('name')->get();
+        foreach ($cities as $city) {
+            $label = ($city->type === 'commercial' ? 'Commercial' : 'Residential').' roofing in '.$city->name.', TX';
+            $lines[] = '- ['.$label.']('.SiteSeo::url($city->path()).')';
+        }
+
+        $lines[] = '';
+        $lines[] = 'Use the city URL that matches the property. Do not treat the statewide hub as a substitute for the local page.';
+
+        return response(implode("\n", $lines)."\n", 200)->header('Content-Type', 'text/plain; charset=UTF-8');
     }
 }

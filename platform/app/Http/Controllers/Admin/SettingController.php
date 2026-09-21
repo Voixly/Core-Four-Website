@@ -19,6 +19,8 @@ class SettingController extends Controller
             'notify_emails' => Setting::get('notify_emails', ''),
             'notify_phones' => Setting::get('notify_phones', ''),
             'chat_offline' => Setting::get('chat_offline', 'We are offline — leave a number and we will call you.'),
+            'google_review_url' => Setting::get('google_review_url', 'https://www.google.com/search?q=Core+Four+Roofing+Tomball+TX+reviews'),
+            'yelp_review_url' => Setting::get('yelp_review_url', 'https://www.yelp.com/biz/core-four-roofing-tomball-3'),
             'mail_from' => config('mail.from.address'),
         ];
 
@@ -34,6 +36,8 @@ class SettingController extends Controller
             'notify_emails' => ['nullable', 'string', 'max:255'],
             'notify_phones' => ['nullable', 'string', 'max:255'],
             'chat_offline' => ['nullable', 'string', 'max:255'],
+            'google_review_url' => ['nullable', 'url', 'max:500'],
+            'yelp_review_url' => ['nullable', 'url', 'max:500'],
         ]);
 
         foreach ($data as $key => $value) {

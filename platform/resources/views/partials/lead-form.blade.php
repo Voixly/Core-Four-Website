@@ -38,10 +38,19 @@
         <label>Select a Service <span>*</span>
             <select name="need">
                 <option value="">Please Select a Service</option>
-                <option value="commercial">Commercial Roofing</option>
-                <option value="residential">Residential Roofing</option>
-                <option value="premium">Premium Roofing</option>
-                <option value="exterior">Exterior Services</option>
+                @if(($type ?? 'residential') === 'commercial')
+                    <option value="survey" @selected(old('need')==='survey')>Roof survey / condition report</option>
+                    <option value="leak" @selected(old('need')==='leak')>Commercial leak</option>
+                    <option value="maintenance" @selected(old('need')==='maintenance')>Maintenance program</option>
+                    <option value="replacement" @selected(old('need')==='replacement')>Roof replacement</option>
+                    <option value="coating" @selected(old('need')==='coating')>Coating / restoration</option>
+                @else
+                    <option value="inspection" @selected(old('need')==='inspection')>Free inspection</option>
+                    <option value="leak" @selected(old('need')==='leak')>Leak repair</option>
+                    <option value="storm_damage" @selected(old('need')==='storm_damage')>Storm / hail damage</option>
+                    <option value="replacement" @selected(old('need')==='replacement')>Roof replacement</option>
+                    <option value="financing" @selected(old('need')==='financing')>Financing options</option>
+                @endif
             </select>
         </label>
         <fieldset class="field-group">

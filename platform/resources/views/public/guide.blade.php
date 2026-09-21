@@ -1,25 +1,20 @@
 @extends('layouts.public')
 @section('title', $guide->title.' | Core Four Roofing')
 @section('audience', $guide->audience === 'commercial' ? 'commercial' : 'residential')
+@section('description', $guide->excerpt)
 @section('content')
-<section class="section">
-    <div class="wrap grid-2">
-        <div>
-            <p class="kicker">{{ $guide->audience }} guide</p>
-            <h1>{{ $guide->title }}</h1>
-            <p>{{ $guide->excerpt }}</p>
-        </div>
+<section class="review-hero">
+    <div class="wrap review-wrap">
+        <p class="kicker">{{ $guide->audience }} guide</p>
+        <h1>{{ $guide->title }}</h1>
+        <p class="review-lede">{{ $guide->excerpt }}</p>
+    </div>
+</section>
+<section class="section section--tight">
+    <div class="wrap review-wrap">
         <div class="form-card">
-            <h3>Send me the guide</h3>
-            <form method="post" action="{{ route('guides.download', $guide->slug) }}">
-                @csrf
-                <label>Name <input name="name" required></label>
-                <label>Email <input name="email" type="email" required></label>
-                <label>Phone <input name="phone" required></label>
-                <label>ZIP <input name="zip"></label>
-                <input type="hidden" name="type" value="{{ $guide->audience === 'commercial' ? 'commercial' : 'residential' }}">
-                <button class="btn btn-wide" type="submit">Email me the PDF</button>
-            </form>
+            <h3>Email me the PDF</h3>
+            @include('partials.guide-form', ['guide' => $guide])
         </div>
     </div>
 </section>

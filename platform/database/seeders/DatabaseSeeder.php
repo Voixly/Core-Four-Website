@@ -16,6 +16,10 @@ class DatabaseSeeder extends Seeder
             GuideSeeder::class,
             SettingSeeder::class,
             LeadSeeder::class,
+            ReviewSeeder::class,
+            PipelineSeeder::class,
+            JobSeeder::class,
+            JobOpsSeeder::class,
         ]);
     }
 }

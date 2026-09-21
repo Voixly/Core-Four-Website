@@ -29,6 +29,34 @@ class User extends Authenticatable
         return $this->hasMany(Lead::class, 'assigned_to');
     }
 
+    public function assignedJobs(): HasMany
+    {
+        return $this->hasMany(Job::class, 'assigned_to');
+    }
+
+    public function jobContacts(): HasMany
+    {
+        return $this->hasMany(JobContact::class);
+    }
+
+    public function isStaffUser(): bool
+    {
+        return in_array($this->role, ['agency', 'owner', 'staff'], true);
+    }
+
+    public function isCustomer(): bool
+    {
+        return $this->role === 'customer';
+    }
+
+    public static function staff()
+    {
+        return static::query()
+            ->where('is_active', true)
+            ->whereIn('role', ['agency', 'owner', 'staff'])
+            ->orderBy('name');
+    }
+
     public function isAgency(): bool
     {
         return $this->role === 'agency';

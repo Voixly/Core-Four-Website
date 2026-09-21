@@ -1,5 +1,7 @@
 @extends('layouts.public')
 @section('title', 'Page not found | Core Four Roofing')
+@section('description', 'That page is gone. Try residential, commercial, or call Core Four Roofing at (281) 541-0027.')
+@section('robots', 'noindex, nofollow')
 @section('content')
 <section class="section">
     <div class="wrap">

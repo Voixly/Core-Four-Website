@@ -4,7 +4,9 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Lead;
+use App\Models\Pipeline;
 use App\Models\User;
+use App\Services\JobService;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
@@ -32,12 +34,14 @@ class LeadController extends Controller
         return view('admin.leads.index', compact('leads'));
     }
 
-    public function show(Lead $lead): View
+    public function show(Lead $lead, JobService $jobs): View
     {
-        $lead->load(['events.user', 'assignee']);
-        $staff = User::query()->where('is_active', true)->orderBy('name')->get();
+        $lead->load(['events.user', 'assignee', 'job']);
+        $staff = User::staff()->get();
+        $pipelines = Pipeline::query()->where('is_active', true)->orderBy('sort')->get();
+        $suggested = $jobs->suggestPipeline($lead);
 
-        return view('admin.leads.show', compact('lead', 'staff'));
+        return view('admin.leads.show', compact('lead', 'staff', 'pipelines', 'suggested'));
     }
 
     public function update(Request $request, Lead $lead): RedirectResponse

@@ -4,6 +4,8 @@ platform/vendor/
 
 # Laravel runtime state
 platform/.env
+platform/database/*.sqlite
+platform/database/*.sqlite-journal
 platform/storage/framework/cache/
 platform/storage/framework/sessions/
 platform/storage/framework/views/

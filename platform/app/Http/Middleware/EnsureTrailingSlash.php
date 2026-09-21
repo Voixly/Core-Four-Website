@@ -24,8 +24,9 @@ class EnsureTrailingSlash
             && ! str_contains($path, '.')
         ) {
             $qs = $request->getQueryString();
+            $target = $path.'/'.($qs ? '?'.$qs : '');
 
-            return redirect()->to($path.'/'.($qs ? '?'.$qs : ''), 301);
+            return redirect()->away($target, 301);
         }
 
         return $next($request);

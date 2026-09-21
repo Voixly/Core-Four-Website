@@ -16,6 +16,8 @@ class SettingSeeder extends Seeder
             'notify_emails' => 'owner@corefourroofing.com',
             'notify_phones' => '2815410027',
             'chat_offline' => 'We are offline — leave a number and we will call you from the Tomball office.',
+            'google_review_url' => 'https://www.google.com/search?q=Core+Four+Roofing+Tomball+TX+reviews',
+            'yelp_review_url' => 'https://www.yelp.com/biz/core-four-roofing-tomball-3',
         ];
 
         foreach ($defaults as $key => $value) {
