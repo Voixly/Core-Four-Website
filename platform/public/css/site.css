@@ -251,9 +251,10 @@ p:last-child { margin-bottom: 0; }
   border-radius: 50px;
   padding: 8px 20px;
   font-family: var(--body-font);
-  font-size: var(--chip);
+  font-size: 14px;
   font-weight: 600;
-  line-height: 1;
+  /* Live sets the chip to 26px tall: 16px of padding over a 10px text box. */
+  line-height: 10px;
   letter-spacing: 0;
 }
 .pill--white { background: var(--white); color: #144b24; }
@@ -347,6 +348,7 @@ p:last-child { margin-bottom: 0; }
   color: var(--white);
   font-size: 11px;
   font-weight: 700;
+  line-height: 1.6;
   letter-spacing: 1.32px;
   text-transform: uppercase;
 }
@@ -410,12 +412,15 @@ p:last-child { margin-bottom: 0; }
 .solution-card {
   border-radius: 32px;
   overflow: hidden;
-  padding: 32px 0 0;
+  padding: 48px 0 0;
 }
-.solution-card > * { padding-left: 42px; padding-right: 42px; }
-.solution-card > img,
-.solution-card > .solution-media { padding: 0; }
-.solution-card .pill { margin-bottom: 20px; }
+/* Inset only the text. The image stays full bleed, and the pill keeps its own
+   padding, so it is indented with a margin instead. Live indents the pill 30px
+   on the green card but 42px on the white one; line it up with the heading on
+   both rather than carrying that inconsistency over. */
+.solution-card > h3,
+.solution-card > p { padding-left: 42px; padding-right: 42px; }
+.solution-card .pill { margin: 0 42px 12px; }
 .solution-card h3 { margin-bottom: 16px; }
 .solution-card p { margin-bottom: 28px; }
 .solution-card--green { background: var(--bright-green); }
@@ -430,7 +435,8 @@ p:last-child { margin-bottom: 0; }
 }
 .solution-card--white > .solution-media { padding: 0 30px; }
 .solution-card--white .solution-media img {
-  border-radius: 32px 32px 0 0;
+  /* Square: the photo runs to the foot of the card, which does the rounding. */
+  border-radius: 0;
   width: 100%;
   aspect-ratio: 16 / 9;
   object-fit: cover;
@@ -611,7 +617,9 @@ p:last-child { margin-bottom: 0; }
   margin: 0 auto 32px;
   min-height: 38px;
 }
-.review-slider { position: relative; width: min(1064px, 89%); margin: 0 auto; }
+/* The arrows sit in a reserved lane down each side rather than hanging off the
+   edge, so they cannot end up on top of the quote as the container narrows. */
+.review-slider { position: relative; width: 100%; margin: 0 auto; padding-inline: 68px; }
 .featured-review {
   display: none;
   grid-template-columns: 40% 60%;
@@ -634,8 +642,10 @@ p:last-child { margin-bottom: 0; }
   top: 50%;
   transform: translateY(-50%);
   z-index: 3;
-  width: 44px;
-  height: 44px;
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
   border: 0;
   border-radius: 50%;
   background: var(--bright-green);
@@ -644,8 +654,8 @@ p:last-child { margin-bottom: 0; }
   cursor: pointer;
 }
 .review-nav:hover { background: var(--forest-green); }
-.review-nav.prev { left: -62px; }
-.review-nav.next { right: -62px; }
+.review-nav.prev { left: 0; }
+.review-nav.next { right: 0; }
 .review-dots { display: flex; justify-content: center; gap: 8px; margin-top: 26px; }
 .review-dots button {
   width: 9px;
@@ -842,8 +852,6 @@ textarea { min-height: 120px; }
 
 /* ---------- responsive ---------- */
 @media (max-width: 1280px) {
-  .review-nav.prev { left: -20px; }
-  .review-nav.next { right: -20px; }
   .float-top { right: -16px; }
   .float-bot { left: -16px; }
 }
@@ -905,7 +913,6 @@ textarea { min-height: 120px; }
 }
 
 @media (max-width: 959px) {
-  .review-slider { width: 81%; }
   .guarantee-card { position: static; margin-right: 0; }
   .counter-card .number, .counter-card > span { font-size: 45px; }}
 
@@ -944,12 +951,18 @@ textarea { min-height: 120px; }
   .ba { border-radius: 16px; }
   .btn { padding: 16px 22px; }}
 
+/* Live drops the chips and the card insets to their small size here. */
+@media (max-width: 767px) {
+  .pill { padding: 6px 18px; font-size: 12px; line-height: 8px; }
+  .solution-card { padding-top: 80px; }
+  .solution-card > h3,
+  .solution-card > p { padding-left: 30px; padding-right: 30px; }
+  .solution-card .pill { margin-left: 30px; margin-right: 30px; }
+}
+
 @media (max-width: 680px) {
   .wrap { width: calc(100% - 66px); }
-  .solution-card > * { padding-left: 30px; padding-right: 30px; }
-  .solution-card--white > .solution-media { padding: 0 30px; }
   .emergency-card, .award-card, .footer-cta, .guarantee-card, .form-card { padding: 26px; }
-  .review-slider { width: 58%; }
   .featured-review { grid-template-columns: 1fr; gap: 14px; }
   .featured-review > * { padding-inline: 0; }
   .float-card { padding: 16px 24px; max-width: 176px; }
@@ -957,7 +970,5 @@ textarea { min-height: 120px; }
   .float-bot { bottom: -28px; left: -42px; }
   .instagram-section .wrap--wide { width: calc(100% - 66px); }
   .footer-bottom { grid-template-columns: 1fr; gap: 8px; }
-  .review-nav.prev { left: -10px; }
-  .review-nav.next { right: -10px; }
   .icon-box { padding: 26px 22px; }
   .faq details p { padding-left: 20px; }}

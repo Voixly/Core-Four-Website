@@ -40,6 +40,7 @@ if the port changes.
 | `node audit.js blog financing` | Same, limited to the named slugs. |
 | `node probe.js <slug> <selector> [width...]` | Diffs the computed styles and box of one selector, live vs. preview. Use when a specific component looks off. |
 | `node shot.js <slug> [--width N] [--full] [--selector sel]` | Screenshots both sides into `output/`. |
+| `node overlap.js [slug ...]` | Checks the preview alone, at 11 widths, for slider arrows sitting on top of the review text and for chip labels escaping or stretching to fill their card. Exits non-zero on a hit. |
 
 `output/` is scratch space and is not tracked in git.
 
