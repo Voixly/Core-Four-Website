@@ -140,7 +140,6 @@ p:last-child { margin-bottom: 0; }
 }
 .logo { display: block; flex-shrink: 0; width: 245px; }
 .logo img { width: 245px; height: auto; }
-.logo-dark { display: none; }
 
 .nav {
   display: flex;
@@ -166,8 +165,14 @@ p:last-child { margin-bottom: 0; }
   border-radius: 20px;
   white-space: nowrap;
 }
+.nav > a,
+.nav .has-sub > a { transition: background 0.18s ease, color 0.18s ease; }
 .nav > a:hover,
-.nav .has-sub:hover > a { color: var(--lime-green); }
+.nav .has-sub:hover > a,
+.nav .has-sub:focus-within > a {
+  background: rgba(243, 240, 233, 0.8);
+  color: var(--forest-green);
+}
 .has-sub { position: relative; }
 .has-sub > a::after {
   content: "\f105";
@@ -175,29 +180,54 @@ p:last-child { margin-bottom: 0; }
   font-weight: 900;
   font-size: 12px;
   opacity: 0.8;
+  transition: transform 0.18s ease;
 }
+/* The caret turns back on itself while the panel is down, as it does on live. */
+.has-sub:hover > a::after,
+.has-sub:focus-within > a::after { transform: rotate(180deg); }
+/* The panel hangs straight off the bottom of the link, as it does on live.
+   With no gap between the two there is nothing for the pointer to cross, so
+   the menu cannot close on the way down to a child link. */
 .has-sub .sub {
-  display: none;
   position: absolute;
-  top: calc(100% + 14px);
+  top: 100%;
   left: 0;
-  min-width: 268px;
-  background: var(--white);
-  border-radius: 16px;
-  padding: 8px;
-  box-shadow: 0 18px 40px rgba(21, 38, 27, 0.18);
+  width: 220px;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 24px;
+  box-shadow: 0 10px 20px rgba(1, 7, 39, 0.05);
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(-6px);
+  /* Hold it open briefly after the pointer leaves, so a slip on the way to a
+     child link is forgiven rather than dismissing the menu. */
+  transition: opacity 0.18s ease 0.12s, transform 0.18s ease 0.12s,
+    visibility 0s linear 0.3s;
 }
-.has-sub:hover .sub { display: block; }
+.has-sub:hover .sub,
+.has-sub:focus-within .sub {
+  visibility: visible;
+  opacity: 1;
+  transform: none;
+  transition: opacity 0.18s ease, transform 0.18s ease, visibility 0s;
+}
 .has-sub .sub a {
   display: block;
-  padding: 10px 14px;
-  border-radius: 10px;
-  color: var(--muted-green);
+  /* Live runs these as inline anchors, so a row is 34px tall and a wrapped one
+     57px. Matching that with block anchors takes the padding off the line box. */
+  padding: 5.5px 20px;
+  color: var(--paper);
   text-decoration: none;
   font-size: 15px;
   font-weight: 500;
+  line-height: 23px;
 }
-.has-sub .sub a:hover { background: var(--paper); color: var(--forest-green); }
+.has-sub .sub a:hover { color: var(--lime-green); }
+
+/* Drawer furniture. It only has a job once the menu collapses. */
+.nav-head,
+.sub-toggle,
+.nav-scrim { display: none; }
 
 .menu-toggle {
   display: none;
@@ -882,34 +912,178 @@ textarea { min-height: 120px; }
   }
   .map-embed { min-height: 420px; }}
 
-/* Live collapses the main menu at 1100px, not at the 959px tablet breakpoint. */
+/* Live collapses the main menu at 1100px, not at the 959px tablet breakpoint.
+   Below it the nav becomes a drawer that slides in from the right. */
 @media (max-width: 1100px) {
-  .nav { display: none; }
   .menu-toggle { display: grid; place-items: center; }
-  .nav.open {
-    display: flex;
+
+  .nav-scrim {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: rgba(11, 26, 16, 0.55);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.3s ease, visibility 0s linear 0.3s;
+  }
+  .nav-scrim.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transition: opacity 0.3s ease, visibility 0s;
+  }
+
+  .nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
     flex-direction: column;
     align-items: stretch;
-    position: absolute;
-    top: calc(100% + 10px);
-    left: 5%;
-    right: 5%;
-    padding: 18px;
-    border-radius: 24px;
-    background: rgba(0, 0, 0, 0.88);
+    gap: 2px;
+    width: min(360px, 88vw);
+    padding: 0 16px 32px;
+    border-radius: 0;
+    background: var(--forest-green);
+    backdrop-filter: none;
+    box-shadow: -24px 0 60px rgba(9, 22, 13, 0.4);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    visibility: hidden;
+    transform: translateX(100%);
+    transition: transform 0.32s cubic-bezier(0.4, 0, 0.2, 1),
+      visibility 0s linear 0.32s;
   }
-  .nav.open .has-sub .sub {
+  .nav.is-open {
+    visibility: visible;
+    transform: none;
+    transition: transform 0.32s cubic-bezier(0.4, 0, 0.2, 1), visibility 0s;
+  }
+
+  .nav-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 8px 16px;
+    margin-bottom: 8px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+  }
+  .nav-head-title {
+    font-family: var(--body-font);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.32px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.6);
+  }
+  .nav-close {
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    border: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--white);
+    font-size: 20px;
+    cursor: pointer;
+  }
+  .nav-close:hover { background: rgba(255, 255, 255, 0.18); }
+
+  /* Each row is the link plus, where there are children, a caret button. The
+     link still goes to the section page; only the caret opens the children. */
+  .has-sub {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    column-gap: 4px;
+  }
+  .nav > a,
+  .nav .has-sub > a {
+    padding: 14px 8px;
+    border-radius: 12px;
+    font-size: 17px;
+    line-height: 1.6;
+  }
+  .nav .has-sub > a::after { content: none; }
+  /* A tap leaves :hover stuck on a touch screen, so drop the desktop
+     highlight: the row must not light up because the pointer came to rest
+     somewhere in it, and never in the pale colours meant for a dark pill. */
+  .nav .has-sub:hover > a,
+  .nav .has-sub:focus-within > a { background: transparent; color: var(--white); }
+  .nav > a:hover,
+  .nav > a:active,
+  .nav .has-sub > a:hover,
+  .nav .has-sub > a:active { background: rgba(255, 255, 255, 0.08); color: var(--white); }
+
+  .sub-toggle {
+    display: grid;
+    place-items: center;
+    width: 40px;
+    height: 40px;
+    border: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.08);
+    color: var(--white);
+    font-size: 13px;
+    cursor: pointer;
+    transition: transform 0.25s ease, background 0.2s ease;
+  }
+  .sub-toggle:hover { background: rgba(255, 255, 255, 0.16); }
+  .has-sub.is-expanded > .sub-toggle { transform: rotate(180deg); }
+
+  /* Animating 0fr to 1fr grows the panel to whatever its content needs, so no
+     height has to be measured or hard coded. */
+  .has-sub .sub {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-rows: 0fr;
     position: static;
-    display: block;
+    width: auto;
+    padding: 0;
     background: transparent;
+    border-radius: 0;
     box-shadow: none;
-    padding: 4px 0 8px 14px;
+    visibility: visible;
+    opacity: 1;
+    transform: none;
+    transition: grid-template-rows 0.28s ease;
   }
-  .nav.open .has-sub .sub a { color: rgba(255, 255, 255, 0.85); }
-  .site-header.is-scrolled .nav.open,
-  .site-header.solid .nav.open { background: var(--white); box-shadow: 0 18px 40px rgba(21, 38, 27, 0.12); }
-  .site-header.is-scrolled .nav.open .has-sub .sub a,
-  .site-header.solid .nav.open .has-sub .sub a { color: var(--muted-green); }
+  .has-sub.is-expanded > .sub { grid-template-rows: 1fr; }
+  .sub-inner { overflow: hidden; }
+  .has-sub .sub a {
+    color: rgba(255, 255, 255, 0.78);
+    font-size: 15px;
+    padding: 11px 8px 11px 24px;
+    border-radius: 10px;
+  }
+  .has-sub .sub a:hover,
+  .has-sub .sub a:active { background: rgba(255, 255, 255, 0.08); color: var(--white); }
+
+  .nav-cta {
+    justify-content: center;
+    margin-top: 20px;
+    padding: 17px 20px;
+    border-radius: 50px;
+    background: var(--bright-green);
+    font-size: 16px;
+    font-weight: 600;
+  }
+  .nav-cta:hover,
+  .nav-cta:active { background: var(--lime-green); color: var(--forest-green); }
+
+  /* Hold the page still behind the drawer, and lift the header over the chat
+     launcher so the panel is not covered by it. */
+  html.nav-open { overflow: hidden; }
+  html.nav-open .site-header { z-index: 90; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nav,
+  .nav-scrim,
+  .has-sub .sub,
+  .sub-toggle { transition-duration: 0.01ms; }
 }
 
 @media (max-width: 959px) {

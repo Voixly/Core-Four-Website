@@ -44,28 +44,42 @@
 <header class="site-header">
     <div class="header-inner">
         <a class="logo" href="{{ url('/') }}">
-            <img class="logo-light" src="/images/logo-live.svg" alt="Core Four Roofing">
-            <img class="logo-dark" src="/images/logo-color.svg" alt="Core Four Roofing">
+            <img src="/images/logo-live.svg" alt="Core Four Roofing">
         </a>
-        <button class="menu-toggle" type="button" onclick="document.querySelector('.nav').classList.toggle('open')" aria-label="Menu"><i class="fas fa-bars"></i></button>
-        <nav class="nav">
+        <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">
+            <i class="fas fa-bars" aria-hidden="true"></i>
+        </button>
+        <div class="nav-scrim" data-nav-close></div>
+        <nav class="nav" id="site-nav" aria-label="Main">
+            <div class="nav-head">
+                <span class="nav-head-title">Menu</span>
+                <button class="nav-close" type="button" aria-label="Close menu" data-nav-close>
+                    <i class="fas fa-xmark" aria-hidden="true"></i>
+                </button>
+            </div>
             <div class="has-sub">
                 <a href="{{ url('/commercial-roofing/') }}">Commercial</a>
-                <div class="sub">
+                <button class="sub-toggle" type="button" aria-expanded="false" aria-label="Show Commercial pages">
+                    <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                </button>
+                <div class="sub"><div class="sub-inner">
                     <a href="{{ url('/commercial-roofing/roof-replacement-installation/') }}">Roof Replacement &amp; Installation</a>
                     <a href="{{ url('/commercial-roofing/repair-preventative-maintenance/') }}">Repair &amp; Preventative Maintenance</a>
                     <a href="{{ url('/commercial-roofing/coatings-restoration/') }}">Coatings &amp; Restoration</a>
                     <a href="{{ url('/commercial-roofing/inspections-condition-reports/') }}">Inspections &amp; Condition Reports</a>
-                </div>
+                </div></div>
             </div>
             <div class="has-sub">
                 <a href="{{ url('/residential-roofing/') }}">Residential</a>
-                <div class="sub">
+                <button class="sub-toggle" type="button" aria-expanded="false" aria-label="Show Residential pages">
+                    <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                </button>
+                <div class="sub"><div class="sub-inner">
                     <a href="{{ url('/residential-roofing/asphalt-shingles/') }}">Asphalt Shingles</a>
                     <a href="{{ url('/residential-roofing/metal-roofs/') }}">Metal Roofs</a>
                     <a href="{{ url('/residential-roofing/synthetic-roofs/') }}">Synthetic Roofs</a>
                     <a href="{{ url('/residential-roofing/stone-coated-steel/') }}">Stone-Coated Steel</a>
-                </div>
+                </div></div>
             </div>
             <a href="{{ url('/storm-emergency/') }}">Storm &amp; Emergency</a>
             <a href="{{ url('/about-core-four-roofing/') }}">About</a>

@@ -41,6 +41,7 @@ if the port changes.
 | `node probe.js <slug> <selector> [width...]` | Diffs the computed styles and box of one selector, live vs. preview. Use when a specific component looks off. |
 | `node shot.js <slug> [--width N] [--full] [--selector sel]` | Screenshots both sides into `output/`. |
 | `node overlap.js [slug ...]` | Checks the preview alone, at 11 widths, for slider arrows sitting on top of the review text and for chip labels escaping or stretching to fill their card. Exits non-zero on a hit. |
+| `node nav.js [slug]` | Drives the header menu: walks the pointer from a parent item down into its panel and clicks a child, then opens the phone and tablet drawer and checks the slide-in, scroll lock, focus trap, submenu accordions and every way of closing it. Exits non-zero on a failure. |
 
 `output/` is scratch space and is not tracked in git.
 
