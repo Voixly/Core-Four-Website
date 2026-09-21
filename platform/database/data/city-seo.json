@@ -75,7 +75,7 @@
     "housing": "Newer master-planned and custom homes — tile, standing seam, and stone-coated steel on larger footprints than a typical Houston tract house.",
     "focus": ["tile", "metal", "scs", "repair"],
     "storm": "Open prairie west of Katy means higher wind. Ridge and hip tiles walk first. Custom metal needs seam and flashing checks after a derecho.",
-    "note": "Fulshear jobs are larger and more architectural. We price tile repair, full tile replace, and stone-coated steel as three honest options — not a one-size shingle bid."
+    "note": "Fulshear jobs are larger and more architectural. We price tile repair, full tile replace, and stone-coated steel as three honest options."
   },
   "sugar-land": {
     "county": "Fort Bend County",
@@ -127,7 +127,7 @@
     "housing": "2000s master-planned homes — architectural shingle with some tile and metal on larger Eagle Springs and Walden lots.",
     "focus": ["repair", "storm", "insurance", "tile"],
     "storm": "East Harris storms stack up against the lake breeze. We see repeat leak calls at chimneys and skylights after a wet week in 77346.",
-    "note": "Atascocita is not a Humble add-on. Homeowners in Eagle Springs want a crew that already knows the HOA and the typical 20-year shingle failure — not a one-size Houston bid."
+    "note": "Atascocita is not a Humble add-on. Homeowners in Eagle Springs want a crew that already knows the HOA and the typical 20-year shingle failure."
   },
   "houston": {
     "county": "Harris County",
@@ -192,7 +192,7 @@
     "housing": "Sienna and Quail Valley carry a lot of tile and HOA-controlled shingle. Lots are larger; scaffolding and dumpster plans matter.",
     "focus": ["tile", "scs", "repair", "insurance"],
     "storm": "Fort Bend storms stall over Sienna the same way they do over Sugar Land. Tile underlayment and valley metal are the usual failure points.",
-    "note": "Missouri City is a Fort Bend tile-and-HOA market. We work Sienna specs and do not show up with a generic three-tab pitch."
+    "note": "Missouri City is a Fort Bend tile-and-HOA market. We work Sienna specs."
   },
   "baytown": {
     "county": "Harris County",
@@ -296,7 +296,7 @@
     "housing": "Hill Country stone, tile, and standing seam on northwest Austin and lake homes. Cedar and hail both show up on the same roof.",
     "focus": ["tile", "metal", "repair", "scs"],
     "storm": "Austin hail is real, and the sun cooks underlayment faster than Houston humidity does. Lake-side metal needs different flashing than a tract house in Round Rock.",
-    "note": "The office is in Tomball. Austin-area jobs are scheduled Texas coverage — we still write a local spec for Steiner Ranch tile or Four Points metal, not a copied Houston bid."
+    "note": "The office is in Tomball. Austin-area jobs are scheduled Texas coverage. We still write the spec for Steiner Ranch tile or Four Points metal."
   },
   "round-rock": {
     "county": "Williamson County",
@@ -621,6 +621,6 @@
     "housing": "Houston-suburb homes are the daily work. Austin and Dallas–Fort Worth jobs are scheduled as Texas coverage, with a spec that matches that metro’s weather and materials.",
     "focus": ["repair", "metal", "tile", "storm"],
     "storm": "Texas hail, Gulf wind, and Hill Country sun are different problems. A Galveston metal roof and a Frisco tile roof do not get the same detail.",
-    "note": "Core Four Roofing is a Tomball company that takes Texas work. Tell us the city and we will send the crew that already runs that route."
+    "note": "Core Four Roofing is a Tomball company that takes Texas work. Houston-suburb crews run daily. Austin and Dallas–Fort Worth jobs are scheduled."
   }
 }

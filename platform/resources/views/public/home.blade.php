@@ -92,7 +92,7 @@
     <div class="wrap">
         <p class="kicker">Houston metro</p>
         <h2>Roofing in your city</h2>
-        <p class="lead">Pick your city. We will talk about the neighborhoods, ZIP codes, and roof types on your street — not a generic Houston bid.</p>
+        <p class="lead">Houston-area cities we work every week, plus scheduled jobs in Austin and Dallas–Fort Worth.</p>
         <div class="city-chips city-chips--links">
             @foreach($resCities as $city)
                 <a href="{{ url($city->path()) }}">{{ $city->name }}</a>

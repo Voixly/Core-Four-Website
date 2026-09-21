@@ -133,7 +133,7 @@
 <section class="section">
     <div class="wrap">
         <h2>{{ $seo['is_hub'] ? 'Cities we serve' : 'Nearby cities we serve' }}</h2>
-        <p>Crews already run these routes. Pick the city the roof is in.</p>
+        <p>Other cities on the same route from Tomball.</p>
         <div class="city-chips city-chips--links">
             @foreach($seo['nearby'] as $near)
                 <a href="{{ url($near->path()) }}">{{ $near->name }}</a>

@@ -89,7 +89,7 @@ class CityPage
             'housing' => 'Local homes and buildings with the roof systems common to this Texas market.',
             'focus' => ['repair', 'storm'],
             'storm' => 'Texas hail, wind, and heat. We inspect for the weather this city actually sees.',
-            'note' => 'Core Four Roofing serves this market from Tomball with a local spec — not a copied statewide bid.',
+            'note' => 'Core Four Roofing serves this market from Tomball.',
         ];
     }
 
@@ -137,7 +137,7 @@ class CityPage
 
         if ($isHub) {
             return $isRes
-                ? 'Core Four Roofing repairs and replaces homes across Houston, Austin, and DFW from Tomball. Tell us the city. Call '.$phone.'.'
+                ? 'Core Four Roofing repairs and replaces homes across Houston, Austin, and DFW from Tomball. Call '.$phone.'.'
                 : 'Commercial roof surveys, TPO, metal, and maintenance across Texas. Tomball-based crews. Call '.$phone.'.';
         }
 
@@ -155,8 +155,8 @@ class CityPage
     {
         if ($isHub) {
             return $isRes
-                ? 'We cover Houston suburbs every week, plus scheduled work in Austin and Dallas–Fort Worth. Tell us the city and we will send a spec that matches that weather and those materials.'
-                : 'Commercial roofs in Houston, Austin, and DFW are scheduled from Tomball. The spec follows the building — not a one-size Texas bid.';
+                ? 'We cover Houston suburbs every week, plus scheduled work in Austin and Dallas–Fort Worth.'
+                : 'Commercial roofs in Houston, Austin, and DFW are scheduled from Tomball.';
         }
 
         if ($isRes) {
@@ -179,7 +179,7 @@ class CityPage
         if ($isHub) {
             return [
                 'Core Four Roofing is based at 22955 State Highway 249 Suite 26, Tomball, TX 77375. Houston-suburb work is the daily route. Austin and Dallas–Fort Worth jobs are scheduled Texas coverage with a local spec for that metro.',
-                'Katy tile, Galveston metal, and Plano slate are different jobs. Pick the city the building is in and we will write the spec for that roof.',
+                'Katy tile, Galveston metal, and Plano slate are different jobs. We write the spec for the roof that is actually on the building.',
             ];
         }
 
@@ -205,7 +205,7 @@ class CityPage
     {
         $who = $isRes ? 'homes' : 'buildings';
 
-        return ($profile['storm'] ?? 'Texas weather is hard on '.$who.' in '.$city->name.'.').' We inspect for the failure this market actually sees — not a copied report from another city.';
+        return ($profile['storm'] ?? 'Texas weather is hard on '.$who.' in '.$city->name.'.').' We inspect for the failure this market actually sees.';
     }
 
     /**
@@ -266,7 +266,7 @@ class CityPage
             return [
                 [
                     'q' => 'Do you repair roofs in '.$hood.' and the rest of '.$name.'?',
-                    'a' => 'Yes. We inspect in '.(static::list($profile['neighborhoods'] ?? []) ?: $name).'. If your street is in '.$profile['county'].', start with a photo inspection and we will tell you if it is a repair or a replace.',
+                    'a' => 'Yes. We inspect in '.(static::list($profile['neighborhoods'] ?? []) ?: $name).'. If the house is in '.$profile['county'].', start with a photo inspection and we will tell you if it is a repair or a replace.',
                 ],
                 [
                     'q' => 'How far is '.$name.' from your Tomball shop?',
@@ -274,7 +274,7 @@ class CityPage
                 ],
                 [
                     'q' => 'What roof types do you work on in '.$name.'?',
-                    'a' => $profile['housing'].' Specialty work is tile, stone-coated steel, metal, and slate — not a cheap 3-tab default.',
+                    'a' => $profile['housing'].' Specialty work is tile, stone-coated steel, metal, and slate.',
                 ],
                 [
                     'q' => 'Can you help with a hail or insurance claim in '.$name.'?',
