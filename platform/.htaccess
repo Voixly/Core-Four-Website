@@ -1,7 +1,19 @@
+DirectoryIndex index.php
+
+<FilesMatch "^\.env">
+    Require all denied
+</FilesMatch>
+
 <IfModule mod_rewrite.c>
     RewriteEngine On
 
-    # Hostinger serves this folder. The Laravel app is in public/.
+    RewriteRule ^\.env - [F,L]
+    RewriteRule ^(?:app|bootstrap|config|database|resources|routes|storage|vendor|tests)(?:/|$) - [F,L]
+
     RewriteCond %{REQUEST_URI} !^/public/
-    RewriteRule ^(.*)$ public/$1 [L]
+    RewriteCond %{DOCUMENT_ROOT}/public%{REQUEST_URI} -f
+    RewriteRule ^ public%{REQUEST_URI} [L]
+
+    RewriteCond %{REQUEST_URI} !^/public/
+    RewriteRule ^ public/index.php [L]
 </IfModule>
