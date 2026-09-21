@@ -347,8 +347,9 @@
 
 /* --- FAQ ----------------------------------------------------------------- */
 
+/* Type and padding come from .faq in site.css, so both spellings of the
+   answer stay in step. */
 .blk-faq { width: 100%; margin-bottom: 0; }
-.blk-faq .faq-body { color: var(--body-ink); font-size: 15px; line-height: 1.6; }
 .blk-faq .faq-body p { margin: 0 0 10px; }
 .blk-faq .faq-body p:last-child { margin-bottom: 0; }
 

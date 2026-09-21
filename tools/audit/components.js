@@ -1,9 +1,11 @@
 /**
- * Checks that the slider arrows and the chip labels never sit on top of the
- * content beside them, on every page and at every breakpoint.
+ * Renders every page at every breakpoint and checks the shared components
+ * still hold together: slider arrows clear of the review text, chip labels
+ * hugging their own text, and accordion answers indented under their title in
+ * the same type as it, in a colour you can read off the card.
  *
- *   node overlap.js            # all pages
- *   node overlap.js index      # one page
+ *   node components.js            # all pages
+ *   node components.js index      # one page
  */
 const puppeteer = require('puppeteer-core');
 const { PAGES, LAUNCH } = require('./config');
@@ -53,6 +55,60 @@ const probe = () => {
       hits.push({ kind: 'pill stretched', text: pill.textContent.trim(), by: Math.round(pb.w) });
     }
   }
+
+  // Accordion answers. Open each one so the closed state cannot hide a fault.
+  const luminance = (rgb) => {
+    const [r, g, b] = rgb.match(/[\d.]+/g).slice(0, 3).map((n) => {
+      const c = n / 255;
+      return c <= 0.03928 ? c / 12.92 : ((c + 0.055) / 1.055) ** 2.4;
+    });
+    return 0.2126 * r + 0.7152 * g + 0.0722 * b;
+  };
+  const contrast = (a, b) => {
+    const [x, y] = [luminance(a), luminance(b)].sort((m, n) => n - m);
+    return (x + 0.05) / (y + 0.05);
+  };
+
+  for (const item of document.querySelectorAll('.faq details')) {
+    const wasOpen = item.open;
+    item.open = true;
+    const summary = item.querySelector('summary');
+    const answer = item.querySelector(':scope > p, :scope > .faq-body');
+    const label = (summary?.textContent || '').replace(/\s+/g, ' ').trim().slice(0, 34);
+    if (!answer) {
+      hits.push({ kind: 'accordion has no answer', text: label, by: 0 });
+      item.open = wasOpen;
+      continue;
+    }
+    const acs = getComputedStyle(answer);
+    const scs = getComputedStyle(summary);
+    const ib = boxes(item);
+    const ab = boxes(answer);
+
+    // The answer lines up under the title, not against the edge of the card.
+    const indent = parseFloat(acs.paddingLeft);
+    if (indent < 1) hits.push({ kind: 'answer not indented', text: label, by: Math.round(indent) });
+    if (parseFloat(acs.paddingBottom) < 1) {
+      hits.push({ kind: 'answer has no room below it', text: label, by: 0 });
+    }
+    // An answer set larger than its own title reads as a mistake.
+    const dfs = parseFloat(acs.fontSize) - parseFloat(scs.fontSize);
+    if (Math.abs(dfs) > 0.5) {
+      hits.push({ kind: 'answer type differs from title', text: label, by: Math.round(dfs * 10) / 10 });
+    }
+    if (ab.b > ib.b + 0.5 || ab.r > ib.r + 0.5) {
+      hits.push({ kind: 'answer spills out of its card', text: label, by: Math.round(ab.b - ib.b) });
+    }
+    const ratio = contrast(acs.color, getComputedStyle(item).backgroundColor);
+    if (ratio < 4.5) {
+      hits.push({ kind: 'answer unreadable on its card', text: label, by: Math.round(ratio * 10) / 10 });
+    }
+    const titleRatio = contrast(scs.color, getComputedStyle(item).backgroundColor);
+    if (titleRatio < 4.5) {
+      hits.push({ kind: 'title unreadable on its card', text: label, by: Math.round(titleRatio * 10) / 10 });
+    }
+    item.open = wasOpen;
+  }
   return hits;
 };
 
@@ -80,6 +136,6 @@ const probe = () => {
     }
   }
   await browser.close();
-  console.log(bad ? `\n${bad} page(s) with overlaps` : `\nNo overlaps on ${pages.length} pages x ${WIDTHS.length} widths`);
+  console.log(bad ? `\n${bad} page(s) with faults` : `\nClean on ${pages.length} pages x ${WIDTHS.length} widths`);
   process.exit(bad ? 1 : 0);
 })();

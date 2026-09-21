@@ -633,10 +633,15 @@ p:last-child { margin-bottom: 0; }
 }
 .faq details[open] summary::after { content: "\f068"; }
 .faq .step-num { font-weight: 600; color: var(--bright-green); min-width: 10px; }
-.faq details p {
+/* The answer is a <p> on the hand-built sections and a .faq-body div on the
+   pages rendered from the captured layout. Both sit under the title, clear of
+   the step number, so style them as one thing. */
+.faq details > p,
+.faq details > .faq-body {
   margin: 0;
   padding: 0 20px 18px 42px;
   font-size: var(--small);
+  line-height: 1.6;
   color: var(--body-ink);
 }
 
@@ -1145,4 +1150,5 @@ textarea { min-height: 120px; }
   .instagram-section .wrap--wide { width: calc(100% - 66px); }
   .footer-bottom { grid-template-columns: 1fr; gap: 8px; }
   .icon-box { padding: 26px 22px; }
-  .faq details p { padding-left: 20px; }}
+  .faq details > p,
+  .faq details > .faq-body { padding-left: 20px; }}
