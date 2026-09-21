@@ -13,22 +13,38 @@ class LeadFormController extends Controller
 {
     public function store(Request $request, LeadService $leads): RedirectResponse
     {
+        if ($request->filled('website')) {
+            return redirect()->route('thanks');
+        }
+
         $data = $request->validate([
-            'name' => ['required', 'string', 'max:120'],
-            'email' => ['nullable', 'email', 'max:190'],
+            'name' => ['required', 'string', 'max:80'],
+            'last_name' => ['nullable', 'string', 'max:80'],
+            'email' => ['required', 'email', 'max:190'],
             'phone' => ['required', 'string', 'max:40'],
             'zip' => ['nullable', 'string', 'max:16'],
             'city' => ['nullable', 'string', 'max:80'],
             'type' => ['nullable', 'in:residential,commercial'],
-            'need' => ['nullable', 'string', 'max:80'],
+            'need' => ['required', 'string', 'max:80'],
             'source' => ['nullable', 'string', 'max:80'],
+            'message' => ['nullable', 'string', 'max:600'],
             'notes' => ['nullable', 'string', 'max:2000'],
         ]);
 
-        $data['page_url'] = $request->headers->get('referer');
-        $data['source'] = $data['source'] ?? 'website';
+        $notes = trim((string) ($data['message'] ?? $data['notes'] ?? ''));
 
-        $leads->capture($data);
+        $leads->capture([
+            'name' => trim($data['name'].' '.($data['last_name'] ?? '')),
+            'email' => $data['email'],
+            'phone' => $data['phone'],
+            'zip' => $data['zip'] ?? null,
+            'city' => $data['city'] ?? null,
+            'type' => $data['type'] ?? 'residential',
+            'need' => $data['need'],
+            'source' => $data['source'] ?? 'website',
+            'page_url' => $request->headers->get('referer'),
+            'notes' => $notes !== '' ? $notes : null,
+        ]);
 
         return redirect()->route('thanks');
     }
@@ -63,6 +79,8 @@ class LeadFormController extends Controller
             Storage::disk('guides')->put($path, $guide->title."\n\nCore Four Roofing guide. Call (281) 541-0027.\n");
         }
 
-        return Storage::disk('guides')->download($path, $guide->slug.'.pdf');
+        $ext = pathinfo($path, PATHINFO_EXTENSION) ?: 'txt';
+
+        return Storage::disk('guides')->download($path, $guide->slug.'.'.$ext);
     }
 }

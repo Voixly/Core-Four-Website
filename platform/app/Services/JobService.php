@@ -231,19 +231,23 @@ class JobService
     {
         $path = $file->store((string) $job->id, 'documents');
         $visibility = $data['visibility'] ?? ($actor->isCustomer() ? 'customer' : 'staff');
+        $requestId = $data['request_id'] ?? null;
+        if ($requestId && ! $job->documentRequests()->whereKey($requestId)->exists()) {
+            $requestId = null;
+        }
 
         $document = $job->documents()->create([
             'user_id' => $actor->id,
-            'request_id' => $data['request_id'] ?? null,
+            'request_id' => $requestId,
             'category' => $data['category'] ?? 'other',
             'path' => $path,
             'original_name' => $file->getClientOriginalName(),
             'visibility' => $visibility,
         ]);
 
-        if (! empty($data['request_id'])) {
+        if ($requestId) {
             JobDocumentRequest::query()
-                ->where('id', $data['request_id'])
+                ->where('id', $requestId)
                 ->where('job_id', $job->id)
                 ->update(['fulfilled_by' => $document->id]);
         }

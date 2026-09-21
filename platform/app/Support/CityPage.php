@@ -222,7 +222,7 @@ class CityPage
                 ['title' => 'Roof replacement & installation', 'body' => 'TPO, metal, and built-up systems on '.$name.' commercial buildings. We schedule around tenants and dock hours.', 'href' => '/commercial-roofing/roof-replacement-installation/'],
                 ['title' => 'Repair & preventative maintenance', 'body' => 'Leak response and a maintenance plan so the same flashing does not fail twice.', 'href' => '/commercial-roofing/repair-preventative-maintenance/'],
                 ['title' => 'Coatings & restoration', 'body' => 'When the deck is sound, a coating can buy years without a full tear-off.', 'href' => '/commercial-roofing/coatings-restoration/'],
-                ['title' => 'Inspections & condition reports', 'body' => 'A written report property managers can send to ownership — photos, not a shrug.', 'href' => '/commercial-roofing/inspections-condition-reports/'],
+                ['title' => 'Inspections & condition reports', 'body' => 'A written report property managers can send to ownership, with photos and a budget range.', 'href' => '/commercial-roofing/inspections-condition-reports/'],
             ];
         }
 
@@ -230,7 +230,7 @@ class CityPage
             ['title' => 'Roof repair', 'body' => 'Leaks, flashing, and storm damage on '.$name.' homes — including tile, metal, and shingle.', 'href' => '/residential-roofing/roof-repair/'],
             ['title' => 'Metal roofs', 'body' => 'Standing-seam and residential metal repair and replacement. Hidden fasteners, not barn panels.', 'href' => '/residential-roofing/metal-roofs/'],
             ['title' => 'Stone-coated steel', 'body' => 'The upgrade when tile is too heavy or the underlayment is gone — tile look, metal strength.', 'href' => '/residential-roofing/stone-coated-steel/'],
-            ['title' => 'Insurance claims', 'body' => 'We document '.$name.' storm damage so the claim matches the roof, not a drive-by estimate.', 'href' => '/insurance-claims/'],
+            ['title' => 'Insurance claims', 'body' => 'We document '.$name.' storm damage so the claim matches the roof.', 'href' => '/insurance-claims/'],
         ];
 
         if (in_array('tile', $focus, true) || in_array('slate', $focus, true)) {
@@ -298,7 +298,7 @@ class CityPage
             ],
             [
                 'q' => 'What systems do you install on '.$name.' commercial roofs?',
-                'a' => 'TPO, metal, coatings, and repair of existing built-up or modified systems. The survey decides — not a catalog default.',
+                'a' => 'TPO, metal, coatings, and repair of existing built-up or modified systems. The survey decides the system.',
             ],
             [
                 'q' => 'Can property managers get a written condition report?',

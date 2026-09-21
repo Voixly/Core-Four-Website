@@ -103,14 +103,6 @@ Route::get('/commercial-roofing-in-tx/', [PageController::class, 'city'])->defau
 Route::get('/residential-roofing-in-{slug}-tx/', [PageController::class, 'city'])->name('city.residential');
 Route::get('/commercial-roofing-in-{slug}-tx/', [PageController::class, 'city'])->name('city.commercial');
 
-Route::get('/blog/{slug}/', function (string $slug) {
-    return redirect('/'.$slug.'/', 301);
-})->where('slug', '[a-z0-9-]+');
-
-Route::get('/{slug}/', [PageController::class, 'post'])
-    ->where('slug', '[a-z0-9-]+')
-    ->name('blog.show');
-
 Route::post('/leads', [LeadFormController::class, 'store'])->middleware('throttle:8,1')->name('leads.store');
 Route::post('/guides/{slug}/download', [LeadFormController::class, 'download'])->middleware('throttle:6,1')->name('guides.download');
 
@@ -219,3 +211,11 @@ Route::prefix('admin')->name('admin.')->middleware(['auth', 'role:agency,owner,s
         Route::post('/settings', [SettingController::class, 'update'])->name('settings.update');
     });
 });
+
+Route::get('/blog/{slug}/', function (string $slug) {
+    return redirect('/'.$slug.'/', 301);
+})->where('slug', '[a-z0-9-]+');
+
+Route::get('/{slug}/', [PageController::class, 'post'])
+    ->where('slug', '[a-z0-9-]+')
+    ->name('blog.show');
