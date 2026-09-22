@@ -37,8 +37,7 @@ require $autoload;
 if (! is_file($base.'/.env') && getenv('APP_KEY') === false && empty($_SERVER['APP_KEY'] ?? null)) {
     http_response_code(500);
     header('Content-Type: text/plain; charset=UTF-8');
-    echo "This site is PHP. The Node.js environment settings are not visible to it.\n";
-    echo "Create platform/.env on the server with APP_KEY and the MySQL settings.\n";
+    echo "APP_KEY is missing. Add it in the Hostinger Node.js environment variables.\n";
     exit;
 }
 

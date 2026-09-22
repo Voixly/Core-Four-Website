@@ -1,6 +1,7 @@
 {
-  "name": "core-four-platform",
+  "name": "core-four-website",
   "private": true,
+  "main": "server.js",
   "scripts": {
     "start": "node server.js",
     "build": "node -e \"process.exit(0)\""

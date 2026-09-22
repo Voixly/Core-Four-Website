@@ -3,7 +3,7 @@
 use Illuminate\Support\Str;
 
 return [
-    'default' => env('DB_CONNECTION', 'mysql'),
+    'default' => strtok((string) env('DB_CONNECTION', 'mysql'), " \t") ?: 'mysql',
     'connections' => [
         'sqlite' => [
             'driver' => 'sqlite',
@@ -27,6 +27,9 @@ return [
             'prefix_indexes' => true,
             'strict' => true,
             'engine' => null,
+            'options' => defined('Pdo\\Mysql::ATTR_CONNECT_TIMEOUT')
+                ? [\Pdo\Mysql::ATTR_CONNECT_TIMEOUT => 5]
+                : (defined('PDO::MYSQL_ATTR_CONNECT_TIMEOUT') ? [\PDO::MYSQL_ATTR_CONNECT_TIMEOUT => 5] : []),
         ],
     ],
     'migrations' => [
