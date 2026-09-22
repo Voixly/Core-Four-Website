@@ -6,7 +6,6 @@ use App\Mail\LeadNotification;
 use App\Models\EmailSequence;
 use App\Models\EmailSend;
 use App\Models\Lead;
-use App\Models\Setting;
 use App\Models\User;
 use Illuminate\Support\Facades\Mail;
 
@@ -65,7 +64,7 @@ class LeadService
     {
         $raw = $lead->source === 'hiring'
             ? config('mail.hr_address')
-            : Setting::get('notify_emails', config('mail.from.address'));
+            : config('mail.leads_address');
         $emails = array_values(array_filter(array_map('trim', explode(',', (string) $raw))));
 
         foreach ($emails as $email) {

@@ -25,4 +25,5 @@ return [
         'name' => env('MAIL_FROM_NAME', 'Core Four Roofing'),
     ],
     'hr_address' => env('HR_EMAIL', 'HR@corefourroofing.com'),
+    'leads_address' => env('LEADS_EMAIL', 'bmedina@corefourroofing.com'),
 ];
