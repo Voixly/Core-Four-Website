@@ -26,7 +26,13 @@ return Application::configure(basePath: dirname(__DIR__))
     })
     ->withExceptions(function (Exceptions $exceptions) {
         $exceptions->render(function (\Throwable $e, $request) {
-            if (config('app.debug')) {
+            if (config('app.debug')
+                || $e instanceof \Illuminate\Auth\AuthenticationException
+                || $e instanceof \Illuminate\Auth\Access\AuthorizationException
+                || $e instanceof \Illuminate\Validation\ValidationException
+                || $e instanceof \Illuminate\Session\TokenMismatchException
+                || $e instanceof \Illuminate\Database\Eloquent\ModelNotFoundException
+                || $e instanceof \Symfony\Component\HttpKernel\Exception\HttpExceptionInterface) {
                 return null;
             }
 
