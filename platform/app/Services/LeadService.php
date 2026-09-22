@@ -63,7 +63,9 @@ class LeadService
 
     protected function notifyOffice(Lead $lead): void
     {
-        $raw = Setting::get('notify_emails', config('mail.from.address'));
+        $raw = $lead->source === 'hiring'
+            ? config('mail.hr_address')
+            : Setting::get('notify_emails', config('mail.from.address'));
         $emails = array_values(array_filter(array_map('trim', explode(',', (string) $raw))));
 
         foreach ($emails as $email) {

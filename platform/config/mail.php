@@ -1,8 +1,11 @@
 <?php
 
 return [
-    'default' => env('MAIL_MAILER', 'smtp'),
+    'default' => env('MAIL_MAILER', 'resend'),
     'mailers' => [
+        'resend' => [
+            'transport' => 'resend',
+        ],
         'smtp' => [
             'transport' => 'smtp',
             'url' => env('MAIL_URL'),
@@ -21,4 +24,5 @@ return [
         'address' => env('MAIL_FROM_ADDRESS', 'hello@corefourroofing.com'),
         'name' => env('MAIL_FROM_NAME', 'Core Four Roofing'),
     ],
+    'hr_address' => env('HR_EMAIL', 'HR@corefourroofing.com'),
 ];
