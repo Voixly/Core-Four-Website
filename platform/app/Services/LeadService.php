@@ -37,7 +37,7 @@ class LeadService
 
     public function enroll(Lead $lead): void
     {
-        if (! $lead->email) {
+        if (! $lead->email || $lead->source === 'hiring') {
             return;
         }
 

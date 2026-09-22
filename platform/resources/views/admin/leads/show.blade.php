@@ -3,7 +3,11 @@
 @section('content')
 <div class="grid" style="display:grid;grid-template-columns:1fr 1fr;gap:1rem">
     <div class="panel">
-        <p>{{ $lead->type }} · {{ $lead->source }} · {{ $lead->city }} {{ $lead->zip }}</p>
+        @if($lead->source === 'hiring')
+            <p>Hiring application · {{ $lead->need }} · {{ $lead->city }} {{ $lead->zip }}</p>
+        @else
+            <p>{{ $lead->type }} · {{ $lead->source }} · {{ $lead->city }} {{ $lead->zip }}</p>
+        @endif
         <p>@if($lead->phone)<a class="btn" href="tel:{{ $lead->phone }}">Call {{ $lead->phone }}</a>@endif</p>
         <p>{{ $lead->email }}</p>
         <p>{{ $lead->need }}</p>
@@ -27,6 +31,7 @@
             </label>
             <button class="btn" type="submit">Save</button>
         </form>
+        @unless($lead->source === 'hiring')
         <form method="post" action="{{ route('admin.reviews.store') }}" style="margin-top:1rem">
             @csrf
             <input type="hidden" name="lead_id" value="{{ $lead->id }}">
@@ -67,6 +72,7 @@
                 <p><button class="btn" type="submit">Open job on this pipeline</button></p>
             </form>
         @endif
+        @endunless
     </div>
     <div class="panel">
         <h3>Activity</h3>

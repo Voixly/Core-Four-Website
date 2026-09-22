@@ -19,6 +19,7 @@ class LeadController extends Controller
             ->with('assignee')
             ->when($request->status, fn ($q, $status) => $q->where('status', $status))
             ->when($request->type, fn ($q, $type) => $q->where('type', $type))
+            ->when($request->source, fn ($q, $source) => $q->where('source', $source))
             ->when($request->q, function ($q, $term) {
                 $q->where(function ($inner) use ($term) {
                     $inner->where('name', 'like', "%{$term}%")

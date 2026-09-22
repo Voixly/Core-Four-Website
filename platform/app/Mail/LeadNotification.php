@@ -19,8 +19,12 @@ class LeadNotification extends Mailable
 
     public function envelope(): Envelope
     {
+        $subject = $this->lead->source === 'hiring'
+            ? 'Job application — '.$this->lead->name
+            : 'New '.$this->lead->type.' lead — '.$this->lead->name;
+
         return new Envelope(
-            subject: 'New '.$this->lead->type.' lead — '.$this->lead->name,
+            subject: $subject,
         );
     }
 
@@ -30,7 +34,9 @@ class LeadNotification extends Mailable
             view: 'emails.lead-notification',
             with: [
                 'title' => 'New Core Four lead',
-                'preheader' => ($this->lead->name ?: 'A new lead').' · '.($this->lead->type ?: 'roofing'),
+                'preheader' => $this->lead->source === 'hiring'
+                    ? ($this->lead->name ?: 'Applicant').' · '.($this->lead->need ?: 'application')
+                    : ($this->lead->name ?: 'A new lead').' · '.($this->lead->type ?: 'roofing'),
                 'ctaUrl' => url('/admin/leads/'.$this->lead->id),
                 'ctaLabel' => 'Open this lead',
             ],

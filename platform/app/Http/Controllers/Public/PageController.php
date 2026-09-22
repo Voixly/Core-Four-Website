@@ -48,6 +48,18 @@ class PageController extends Controller
         return view('public.thanks');
     }
 
+    public function careers(): View
+    {
+        return view('public.careers', [
+            'roles' => LeadFormController::ROLES,
+        ]);
+    }
+
+    public function careersThanks(): View
+    {
+        return view('public.careers-thanks');
+    }
+
     public function privacy(): View
     {
         return view('public.legal', [
@@ -112,6 +124,7 @@ class PageController extends Controller
             '/about-core-four-roofing/',
             '/service-areas/',
             '/contact-core-four-roofing/',
+            '/careers/',
             '/blog/',
             '/guides/',
             '/reviews/',
@@ -180,6 +193,7 @@ TXT;
             '- [Commercial roofing]('.SiteSeo::url('/commercial-roofing/').')',
             '- [Service areas]('.SiteSeo::url('/service-areas/').')',
             '- [Contact]('.SiteSeo::url('/contact-core-four-roofing/').')',
+            '- [Careers]('.SiteSeo::url('/careers/').')',
             '- [Blog]('.SiteSeo::url('/blog/').')',
             '',
             '## Blog',

@@ -102,6 +102,7 @@
             <a href="{{ url('/storm-emergency/') }}">Storm &amp; Emergency</a>
             <a href="/guides/">Guides</a>
             <a href="{{ url('/about-core-four-roofing/') }}">About</a>
+            <a href="{{ url('/careers/') }}">Careers</a>
             <a class="nav-cta" href="{{ url('/contact-core-four-roofing/') }}">Get a Free Inspection</a>
         </nav>
     </div>
@@ -137,6 +138,7 @@
                     <li><a href="{{ url('/service-areas/') }}">Service Areas</a></li>
                     <li><a href="{{ url('/contact-core-four-roofing/') }}">Contact Core Four Roofing</a></li>
                     <li><a href="{{ url('/about-core-four-roofing/') }}">About Core Four Roofing</a></li>
+                    <li><a href="{{ url('/careers/') }}">Careers</a></li>
                     <li><a href="{{ url('/financing/') }}">Financing</a></li>
                     <li><a href="{{ url('/insurance-claims/') }}">Insurance</a></li>
                     <li><a href="/guides/">Free Guides</a></li>

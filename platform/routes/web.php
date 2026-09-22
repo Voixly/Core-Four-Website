@@ -92,6 +92,12 @@ Route::get('/reviews/{token}/yelp/', [ReviewController::class, 'yelp'])->name('r
 Route::permanentRedirect('/leave-a-review/', '/reviews/');
 Route::permanentRedirect('/leave-a-review', '/reviews/');
 
+Route::get('/careers/', [PageController::class, 'careers'])->name('careers');
+Route::post('/careers/', [LeadFormController::class, 'hiring'])->middleware('throttle:8,1')->name('careers.store');
+Route::get('/careers/thank-you/', [PageController::class, 'careersThanks'])->name('careers.thanks');
+Route::permanentRedirect('/hiring/', '/careers/');
+Route::permanentRedirect('/hiring', '/careers/');
+
 Route::get('/thank-you/', [PageController::class, 'thanks'])->name('thanks');
 Route::get('/privacy-policy/', [PageController::class, 'privacy'])->name('privacy');
 Route::get('/terms/', [PageController::class, 'terms'])->name('terms');

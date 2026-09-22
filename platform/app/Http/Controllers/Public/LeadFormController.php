@@ -11,6 +11,13 @@ use Illuminate\Support\Facades\Storage;
 
 class LeadFormController extends Controller
 {
+    public const ROLES = [
+        'Roofing installer',
+        'Service technician',
+        'Estimator',
+        'Office',
+    ];
+
     public function store(Request $request, LeadService $leads): RedirectResponse
     {
         if ($request->filled('website')) {
@@ -47,6 +54,39 @@ class LeadFormController extends Controller
         ]);
 
         return redirect()->route('thanks');
+    }
+
+    public function hiring(Request $request, LeadService $leads): RedirectResponse
+    {
+        if ($request->filled('website')) {
+            return redirect()->route('careers.thanks');
+        }
+
+        $data = $request->validate([
+            'name' => ['required', 'string', 'max:80'],
+            'last_name' => ['nullable', 'string', 'max:80'],
+            'email' => ['required', 'email', 'max:190'],
+            'phone' => ['required', 'string', 'max:40'],
+            'city' => ['nullable', 'string', 'max:80'],
+            'role' => ['required', 'in:'.implode(',', self::ROLES)],
+            'message' => ['nullable', 'string', 'max:2000'],
+        ]);
+
+        $notes = trim((string) ($data['message'] ?? ''));
+
+        $leads->capture([
+            'name' => trim($data['name'].' '.($data['last_name'] ?? '')),
+            'email' => $data['email'],
+            'phone' => $data['phone'],
+            'city' => $data['city'] ?? null,
+            'type' => 'residential',
+            'need' => $data['role'],
+            'source' => 'hiring',
+            'page_url' => url('/careers/'),
+            'notes' => $notes !== '' ? $notes : null,
+        ]);
+
+        return redirect()->route('careers.thanks');
     }
 
     public function download(Request $request, string $slug, LeadService $leads)

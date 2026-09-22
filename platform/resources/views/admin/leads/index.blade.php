@@ -14,6 +14,10 @@
         <option value="residential" @selected(request('type')==='residential')>Residential</option>
         <option value="commercial" @selected(request('type')==='commercial')>Commercial</option>
     </select>
+    <select name="source">
+        <option value="">All sources</option>
+        <option value="hiring" @selected(request('source')==='hiring')>Hiring</option>
+    </select>
     <button class="btn" type="submit">Filter</button>
 </form>
 <table>
@@ -23,7 +27,7 @@
             <td><a href="{{ route('admin.leads.show', $lead) }}">{{ $lead->name }}</a></td>
             <td>@if($lead->phone)<a href="tel:{{ $lead->phone }}">{{ $lead->phone }}</a>@endif</td>
             <td>{{ $lead->city }}</td>
-            <td>{{ $lead->type }}</td>
+            <td>{{ $lead->source === 'hiring' ? 'Hiring' : $lead->type }}</td>
             <td>{{ $lead->source }}</td>
             <td><span class="tag tag-{{ $lead->status }}">{{ $lead->status }}</span></td>
             <td>{{ $lead->assignee?->name }}</td>
