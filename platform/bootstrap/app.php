@@ -32,7 +32,17 @@ return Application::configure(basePath: dirname(__DIR__))
             if ($e instanceof \Illuminate\Encryption\MissingAppKeyException || str_contains($message, 'encryption key')) {
                 $text = "PHP is running, but APP_KEY is missing. Node.js environment settings are not passed to PHP. Add them in platform/.env.";
             } elseif ($e instanceof \Illuminate\Database\QueryException || $e instanceof \PDOException) {
-                $text = "PHP is running, but MySQL rejected the connection. Put DB_DATABASE, DB_USERNAME, and DB_PASSWORD in platform/.env, then run migrations.";
+                preg_match('/SQLSTATE\[[^\]]+\](?:\s*\[[^\]]+\])?/', $message, $state);
+                preg_match('/using password: (YES|NO)/i', $message, $password);
+                $mysql = config('database.connections.mysql');
+                $detail = trim(implode(' ', array_filter([
+                    $state[0] ?? null,
+                    isset($password[1]) ? 'Password '.$password[1].'.' : null,
+                    'Host '.($mysql['host'] ?? '').', database '.($mysql['database'] ?? '').'.',
+                ])));
+                $text = str_contains($message, '42S02') || str_contains($message, 'Base table')
+                    ? 'MySQL connected, but the tables are not there yet. '.$detail
+                    : 'MySQL refused the login. '.$detail;
             } else {
                 $text = "PHP is running, but the page failed: ".$e::class;
                 if (! preg_match('/password|SQLSTATE|\/Users\/|\/home\//i', $message)) {

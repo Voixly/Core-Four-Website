@@ -30,8 +30,65 @@ function findPhp() {
   return null;
 }
 
+function parseEnvFile(file) {
+  const values = {};
+  let text = '';
+  try {
+    text = fs.readFileSync(file, 'utf8');
+  } catch {
+    return values;
+  }
+  for (const line of text.split(/\r?\n/)) {
+    const trimmed = line.trim();
+    if (!trimmed || trimmed.startsWith('#')) continue;
+    const eq = trimmed.indexOf('=');
+    if (eq < 1) continue;
+    let value = trimmed.slice(eq + 1).trim();
+    if ((value.startsWith('"') && value.endsWith('"')) || (value.startsWith("'") && value.endsWith("'"))) {
+      value = value.slice(1, -1);
+    }
+    values[trimmed.slice(0, eq).trim()] = value;
+  }
+  return values;
+}
+
+function findEnvFiles() {
+  const files = [];
+  for (const start of [process.cwd(), appRoot]) {
+    const chain = [];
+    let dir = start;
+    for (let i = 0; i < 8; i += 1) {
+      chain.push(dir);
+      const parent = path.dirname(dir);
+      if (parent === dir) break;
+      dir = parent;
+    }
+    for (const folder of chain.reverse()) {
+      for (const rel of ['.env', 'platform/.env', 'public_html/.env', 'public_html/platform/.env']) {
+        const file = path.join(folder, rel);
+        if (fs.existsSync(file)) files.push(file);
+      }
+    }
+  }
+  return [...new Set(files)];
+}
+
 function envForPhp() {
   const env = { ...process.env };
+  for (const file of findEnvFiles()) {
+    for (const [key, value] of Object.entries(parseEnvFile(file))) {
+      if (!env[key] && value !== '') env[key] = value;
+    }
+  }
+  const aliases = {
+    MYSQL_DATABASE: 'DB_DATABASE',
+    MYSQL_USER: 'DB_USERNAME',
+    MYSQL_PASSWORD: 'DB_PASSWORD',
+    MYSQL_HOST: 'DB_HOST',
+  };
+  for (const [from, to] of Object.entries(aliases)) {
+    if (!env[to] && env[from]) env[to] = env[from];
+  }
   const smashed = env.DB_CONNECTION || '';
   if (/\s/.test(smashed)) {
     const parts = smashed.split(/\s+/);
@@ -43,6 +100,9 @@ function envForPhp() {
       }
     }
   }
+  if (!env.DB_CONNECTION) env.DB_CONNECTION = 'mysql';
+  if (!env.DB_HOST || env.DB_HOST === '127.0.0.1') env.DB_HOST = 'localhost';
+  if (!env.DB_PORT) env.DB_PORT = '3306';
   env.PHP_CLI_SERVER_WORKERS = env.PHP_CLI_SERVER_WORKERS || '4';
   return env;
 }
