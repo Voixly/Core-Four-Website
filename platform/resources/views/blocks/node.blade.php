@@ -25,6 +25,7 @@
     $end = ! $isWrap && ($node['item']['type'] ?? '') === 'button' && ($node['item']['align'] ?? '') === 'right';
     $system = false;
     $systemHead = false;
+    $heroCard = false;
     if ($isWrap) {
         $labels = [];
         foreach ($node['columns'] ?? [] as $col) {
@@ -35,11 +36,19 @@
             $labels[] = trim(strip_tags((string) $html));
         }
         $systemHead = $labels === ['', 'Roofing System', 'Best Suited For', 'Key Benefits', 'Learn More'];
+        foreach ($node['wraps'] ?? [] as $child) {
+            foreach ($child['columns'] ?? [] as $col) {
+                $html = $col['item']['html'] ?? '';
+                if (is_string($html) && str_contains($html, 'Roofing Done The Right Way')) {
+                    $heroCard = true;
+                }
+            }
+        }
     }
     $vars = PageLayout::spanVars($node);
 @endphp
 
-<div class="{{ $isWrap ? 'blk-wrap' : 'blk-col' }}{{ $hasSurface ? ' blk-surface' : '' }}{{ $flush ? ' blk-surface--flush' : '' }}{{ $isPhoto ? ' blk-photo' : '' }}{{ $pill ? ' blk-pill' : '' }}{{ $logos ? ' blk-logos' : '' }}{{ $logoStrip ? ' blk-logos--strip' : '' }}{{ $end ? ' blk-col--end' : '' }}{{ $system ? ' blk-system' : '' }}{{ $systemHead ? ' blk-system-head' : '' }}{{ $light }}{{ $media }}{{ $row ? ' blk-row' : '' }}"
+<div class="{{ $isWrap ? 'blk-wrap' : 'blk-col' }}{{ $hasSurface ? ' blk-surface' : '' }}{{ $flush ? ' blk-surface--flush' : '' }}{{ $isPhoto ? ' blk-photo' : '' }}{{ $pill ? ' blk-pill' : '' }}{{ $logos ? ' blk-logos' : '' }}{{ $logoStrip ? ' blk-logos--strip' : '' }}{{ $end ? ' blk-col--end' : '' }}{{ $system ? ' blk-system' : '' }}{{ $systemHead ? ' blk-system-head' : '' }}{{ $heroCard ? ' blk-hero-card' : '' }}{{ $light }}{{ $media }}{{ $row ? ' blk-row' : '' }}"
      style="{{ $vars }}{{ $style ? ';'.$style : '' }}{{ $row ? ';grid-template-columns:'.$row : '' }}">
     {{-- A node can carry children and an item at once, as the blog listing does. --}}
     @foreach($node['columns'] ?? [] as $child)

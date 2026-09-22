@@ -556,7 +556,10 @@ class PageLayout
             // CSS pulls those pictures flush to the bottom edge.
             $filled = $photo || ! empty($box['bg']);
             $pill = ($box['radius'] ?? 0) >= 40 && ($box['h'] ?? 0) > 0 && ($box['h'] ?? 0) <= 48;
-            if ($filled && ! $photo && ! $pill && ($box['radius'] ?? 0) && ($pad[2] ?? 0) < 48) {
+            // Only cards extracted with a 0 floor (48/30/0/30) need a bottom
+            // inset so the last line clears the radius. Even padding, such as
+            // the frosted hero cards at 16px, should stay as measured.
+            if ($filled && ! $photo && ! $pill && ($box['radius'] ?? 0) && (int) ($pad[2] ?? 0) === 0) {
                 $pad[2] = 48;
             }
             $rules[] = 'padding:'.implode('px ', $pad).'px';

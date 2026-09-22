@@ -252,6 +252,10 @@
     .blk-hero > .blk-wrapper > .blk-wrap {
         transform: translateY(-40px);
     }
+
+    .blk-hero > .blk-wrapper > .blk-wrap.blk-hero-card {
+        transform: translate(64px, -40px);
+    }
 }
 
 /* --- Typography inside rendered sections -------------------------------- */
