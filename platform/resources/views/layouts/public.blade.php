@@ -100,7 +100,6 @@
                 </div></div>
             </div>
             <a href="{{ url('/storm-emergency/') }}">Storm &amp; Emergency</a>
-            <a href="/guides/">Guides</a>
             <a href="{{ url('/about-core-four-roofing/') }}">About</a>
             <a href="{{ url('/careers/') }}">Careers</a>
             <a class="nav-cta" href="{{ url('/contact-core-four-roofing/') }}">Get a Free Inspection</a>
