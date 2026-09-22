@@ -1,8 +1,10 @@
 <?php
 
+use App\Support\SchemaInstaller;
 use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Configuration\Exceptions;
 use Illuminate\Foundation\Configuration\Middleware;
+use Illuminate\Support\Facades\Schema;
 
 return Application::configure(basePath: dirname(__DIR__))
     ->withRouting(
@@ -40,9 +42,26 @@ return Application::configure(basePath: dirname(__DIR__))
                     isset($password[1]) ? 'Password '.$password[1].'.' : null,
                     'Host '.($mysql['host'] ?? '').', database '.($mysql['database'] ?? '').'.',
                 ])));
-                $text = str_contains($message, '42S02') || str_contains($message, 'Base table')
-                    ? 'MySQL connected, but the tables are not there yet. '.$detail
-                    : 'MySQL refused the login. '.$detail;
+                $missingTable = str_contains($message, '42S02') || str_contains($message, 'Base table');
+                if ($missingTable) {
+                    try {
+                        $output = SchemaInstaller::ensure();
+                    } catch (\Throwable $installError) {
+                        return response('Could not create the tables.'."\n".$installError->getMessage(), 500, [
+                            'Content-Type' => 'text/plain; charset=UTF-8',
+                        ]);
+                    }
+
+                    if (Schema::hasTable('cities')) {
+                        return redirect($request->getRequestUri());
+                    }
+
+                    return response("Migrate ran, but the tables are still missing.\n".$output, 500, [
+                        'Content-Type' => 'text/plain; charset=UTF-8',
+                    ]);
+                }
+
+                $text = 'MySQL refused the login. '.$detail;
             } else {
                 $text = "PHP is running, but the page failed: ".$e::class;
                 if (! preg_match('/password|SQLSTATE|\/Users\/|\/home\//i', $message)) {
