@@ -23,5 +23,23 @@ return Application::configure(basePath: dirname(__DIR__))
         $schedule->command('email:send-due')->everyFiveMinutes();
     })
     ->withExceptions(function (Exceptions $exceptions) {
-        //
+        $exceptions->render(function (\Throwable $e, $request) {
+            if (config('app.debug')) {
+                return null;
+            }
+
+            $message = $e->getMessage();
+            if ($e instanceof \Illuminate\Encryption\MissingAppKeyException || str_contains($message, 'encryption key')) {
+                $text = "PHP is running, but APP_KEY is missing. Node.js environment settings are not passed to PHP. Add them in platform/.env.";
+            } elseif ($e instanceof \Illuminate\Database\QueryException || $e instanceof \PDOException) {
+                $text = "PHP is running, but MySQL rejected the connection. Put DB_DATABASE, DB_USERNAME, and DB_PASSWORD in platform/.env, then run migrations.";
+            } else {
+                $text = "PHP is running, but the page failed: ".$e::class;
+                if (! preg_match('/password|SQLSTATE|\/Users\/|\/home\//i', $message)) {
+                    $text .= "\n".$message;
+                }
+            }
+
+            return response($text, 500, ['Content-Type' => 'text/plain; charset=UTF-8']);
+        });
     })->create();

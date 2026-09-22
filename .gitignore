@@ -5,11 +5,6 @@ node_modules/
 platform/.env
 platform/database/*.sqlite
 platform/database/*.sqlite-journal
-platform/storage/framework/cache/
-platform/storage/framework/sessions/
-platform/storage/framework/views/
-platform/storage/framework/testing/
-platform/storage/logs/
 platform/public/build/
 platform/public/hot
 platform/public/storage
