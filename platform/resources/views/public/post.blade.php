@@ -1,9 +1,10 @@
 @php
     $postUrl = \App\Support\SiteSeo::url('/'.$post['slug'].'/');
     $postImage = ! empty($post['image']) ? \App\Support\SiteSeo::url($post['image']) : '';
+    $postHtml = preg_replace('/\balt=(["\'])\s*\1/i', 'alt="'.e($post['title']).'"', $post['html']) ?? $post['html'];
 @endphp
 @extends('layouts.public')
-@section('title', $post['title'].' | Core Four Roofing')
+@section('title', \App\Support\SiteSeo::articleDocumentTitle($post['slug'], $post['title']))
 @section('description', $post['description'])
 @section('canonical', $postUrl)
 @section('og_type', 'article')
@@ -29,7 +30,7 @@
         </div>
     @endif
     <div class="wrap blog-wrap blog-body">
-        {!! $post['html'] !!}
+        {!! $postHtml !!}
         <p class="blog-back"><a href="{{ url('/blog/') }}">All posts</a> · <a href="{{ url('/contact-core-four-roofing/') }}">Get a free inspection</a></p>
     </div>
 </article>

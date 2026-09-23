@@ -145,7 +145,7 @@ class CityPage
             return 'Roofing company in '.$city->name.', TX — tile, metal, stone-coated steel, and storm repair in '.$hood.' and '.$profile['county'].'. Call '.$phone.'.';
         }
 
-        return 'Commercial roofing in '.$city->name.', TX. Surveys, TPO and metal, night and weekend work around tenants. '.$profile['drive'].'. Call '.$phone.'.';
+        return 'Commercial roofing in '.$city->name.', TX. TPO, metal, and tenant-friendly surveys. '.$profile['drive'].'. Call '.$phone.'.';
     }
 
     /**

@@ -65,6 +65,7 @@ class PageController extends Controller
         return view('public.legal', [
             'title' => 'Privacy Policy',
             'heading' => 'Privacy Policy',
+            'description' => 'How Core Four Roofing collects and uses inspection requests, chat, and guide signups from our Tomball office.',
         ]);
     }
 
@@ -73,6 +74,7 @@ class PageController extends Controller
         return view('public.legal', [
             'title' => 'Terms of Use',
             'heading' => 'Terms of Use',
+            'description' => 'Terms for using the Core Four Roofing website, requesting an inspection, and getting follow-up from our Tomball office.',
         ]);
     }
 
@@ -102,7 +104,7 @@ class PageController extends Controller
     {
         $cities = City::query()->orderBy('type')->orderBy('name')->get();
         $guides = Guide::query()->where('is_active', true)->get();
-        $posts = BlogPost::slugs();
+        $posts = BlogPost::all();
         $pages = [
             '/',
             '/residential-roofing/',

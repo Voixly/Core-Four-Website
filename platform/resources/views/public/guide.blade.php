@@ -1,7 +1,7 @@
 @extends('layouts.public')
 @section('title', $guide->title.' | Core Four Roofing')
 @section('audience', $guide->audience === 'commercial' ? 'commercial' : 'residential')
-@section('description', $guide->excerpt)
+@section('description', rtrim($guide->excerpt, '.').'. Free PDF from Core Four Roofing in Tomball.')
 @section('content')
 <section class="review-hero">
     <div class="wrap review-wrap">

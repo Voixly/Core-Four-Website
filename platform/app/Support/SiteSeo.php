@@ -66,6 +66,24 @@ class SiteSeo
         return static::url($path);
     }
 
+    /**
+     * Search titles stay near 60 characters. The article h1 keeps the full headline.
+     */
+    public static function articleDocumentTitle(string $slug, string $title): string
+    {
+        return match ($slug) {
+            'navigating-code-for-commercial-roof-drainage-systems' => 'Commercial Roof Drainage Code in Texas | Core Four',
+            'beat-the-ercot-heat-bifacial-solar-prep-vs-commercial-roof-energy-efficiency' => 'Commercial Roof Energy Efficiency in Texas | Core Four',
+            'thermal-drone-mapping-texas-commercial-roof-hail-damage' => 'Thermal Drone Mapping for Texas Roof Hail | Core Four',
+            'beyond-the-manufacturers-brochure-why-elite-roofing-certifications-matter-in-property-management' => 'Why Roofing Certifications Matter | Core Four Roofing',
+            'stop-tearing-it-down-how-restoration-extends-your-asset-value-by-ten-plus-years' => 'Commercial Roof Coatings That Add Ten Years | Core Four',
+            'preserving-hospitality-assets-how-structural-roof-maintenance-protects-the-guest-experience' => 'Commercial Roof Maintenance for Hotels | Core Four',
+            'the-flat-roof-lifespan-battle-choosing-the-right-system-for-your-texas-facility' => 'Choosing a Flat Roof System in Texas | Core Four',
+            'decoding-commercial-roof-inspections-protecting-your-texas-facility-and-investment' => 'Commercial Roof Inspections in Texas | Core Four',
+            default => $title.' | Core Four Roofing',
+        };
+    }
+
     public static function shareImage(): string
     {
         return static::url(static::SHARE_PATH);

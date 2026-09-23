@@ -25,17 +25,19 @@
     <meta property="og:url" content="{{ $seoCanonical }}">
     <meta property="og:image" content="{{ $seoImage }}">
     <meta property="og:image:secure_url" content="{{ $seoImage }}">
+    @if($seoImage === \App\Support\SiteSeo::shareImage())
     <meta property="og:image:type" content="{{ \App\Support\SiteSeo::SHARE_TYPE }}">
     <meta property="og:image:width" content="{{ \App\Support\SiteSeo::SHARE_WIDTH }}">
     <meta property="og:image:height" content="{{ \App\Support\SiteSeo::SHARE_HEIGHT }}">
     <meta property="og:image:alt" content="{{ \App\Support\SiteSeo::SHARE_ALT }}">
+    @endif
     <meta property="og:locale" content="en_US">
     <meta property="article:publisher" content="{{ \App\Support\SiteSeo::FACEBOOK }}">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="{{ $seoOgTitle }}">
     <meta name="twitter:description" content="{{ $seoDescription }}">
     <meta name="twitter:image" content="{{ $seoImage }}">
-    <meta name="twitter:image:alt" content="{{ \App\Support\SiteSeo::SHARE_ALT }}">
+    <meta name="twitter:image:alt" content="{{ $seoImage === \App\Support\SiteSeo::shareImage() ? \App\Support\SiteSeo::SHARE_ALT : $seoTitle }}">
     <link rel="preconnect" href="https://use.typekit.net" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

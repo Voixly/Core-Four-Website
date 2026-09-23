@@ -21,9 +21,12 @@
         <priority>0.6</priority>
     </url>
     @endforeach
-    @foreach($posts as $slug)
+    @foreach($posts as $post)
     <url>
-        <loc>{{ \App\Support\SiteSeo::url('/'.$slug.'/') }}</loc>
+        <loc>{{ \App\Support\SiteSeo::url('/'.$post['slug'].'/') }}</loc>
+        @if(! empty($post['date']))
+        <lastmod>{{ \Illuminate\Support\Carbon::parse($post['date'])->toDateString() }}</lastmod>
+        @endif
         <changefreq>monthly</changefreq>
         <priority>0.65</priority>
     </url>

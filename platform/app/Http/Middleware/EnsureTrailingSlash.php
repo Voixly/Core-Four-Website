@@ -17,6 +17,13 @@ class EnsureTrailingSlash
         $host = strtolower($request->getHost());
         $path = $request->getPathInfo();
         $apex = $host === 'www.corefourroofing.com' || str_ends_with($host, '.hostingersite.com');
+
+        if (preg_match('#^/(sitemap\.xml|robots\.txt|llms\.txt)/$#', $path)) {
+            $qs = $request->getQueryString();
+            $origin = $apex ? 'https://corefourroofing.com' : $request->getSchemeAndHttpHost();
+
+            return redirect()->away($origin.rtrim($path, '/').($qs ? '?'.$qs : ''), 301);
+        }
         $slash = $path !== '/'
             && ! str_ends_with($path, '/')
             && ! $request->is('admin*')
