@@ -68,10 +68,26 @@
     @case('html')
         @php
             $rawHtml = PageLayout::restoreIcons($item['html'] ?? '');
-            $posts = PageLayout::blogPosts($rawHtml);
+            $isArchive = PageLayout::blogPosts($rawHtml) !== '';
+            $archive = $isArchive
+                ? collect(\App\Support\BlogPost::all())->sortByDesc('date')->values()
+                : collect();
         @endphp
-        @if($posts)
-            <div class="blk-blog">{!! $posts !!}</div>
+        @if($isArchive)
+            <div class="blk-blog">
+                @foreach($archive as $post)
+                    <article class="blk-post">
+                        <h3><a href="{{ url('/'.$post['slug'].'/') }}">{{ $post['title'] }}</a></h3>
+                        @if(! empty($post['image']))
+                            <a href="{{ url('/'.$post['slug'].'/') }}">
+                                <img src="{{ $post['image'] }}" alt="{{ $post['title'] }}" loading="lazy">
+                            </a>
+                        @endif
+                        <p>{{ $post['description'] }}</p>
+                        <a href="{{ url('/'.$post['slug'].'/') }}">Read More</a>
+                    </article>
+                @endforeach
+            </div>
         @else
             <div class="blk-raw">{!! $rawHtml !!}</div>
         @endif
