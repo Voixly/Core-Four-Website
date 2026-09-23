@@ -539,6 +539,81 @@
 
 a.blk-icon:hover { background: var(--bright-green); }
 
+/* Contact hero: the three profiles sit in one short bar, name beside each icon. */
+.blk-socials {
+    align-self: start;
+    display: flex !important;
+    flex-flow: row nowrap;
+    align-items: center;
+    gap: 8px 20px !important;
+    width: max-content;
+    max-width: none;
+    height: auto !important;
+    padding: 16px 18px !important;
+}
+
+.blk-socials > .blk-col {
+    grid-column: auto !important;
+    width: auto;
+    height: auto !important;
+}
+
+.blk-socials .blk-icon {
+    width: auto;
+    height: auto;
+    padding: 0;
+    gap: 12px;
+    border-radius: 0;
+    background: transparent;
+    color: var(--forest-green);
+    font-family: var(--header-font);
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: 1;
+}
+
+.blk-socials .blk-icon i {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: var(--lime-green);
+    font-size: 22px;
+}
+
+.blk-socials .blk-icon:hover {
+    background: transparent;
+    color: var(--forest-green);
+}
+
+.blk-socials .blk-icon:hover i {
+    background: var(--bright-green);
+}
+
+@media (min-width: 960px) {
+    .blk-hero > .blk-wrapper > .blk-socials {
+        grid-column: 7 / -1 !important;
+        justify-self: end;
+        margin-right: 8px;
+    }
+}
+
+@media (max-width: 767px) {
+    .blk-socials {
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 14px !important;
+    }
+
+    .blk-socials .blk-icon {
+        font-size: 22px;
+    }
+}
+
 .blk-icon img { width: 32px; height: 32px; object-fit: contain; }
 
 .blk-divider {

@@ -108,8 +108,9 @@
             $social = PageLayout::socialForIcon($iconClass ?: ($item['icon'] ?? ''));
         @endphp
         @if($social)
-            <a class="blk-icon" href="{{ $social['href'] }}" target="_blank" rel="noopener" aria-label="{{ $social['label'] }}">
+            <a class="blk-icon" href="{{ $social['href'] }}" target="_blank" rel="noopener">
                 <i class="{{ $iconClass }}" aria-hidden="true"></i>
+                <span>{{ $social['label'] }}</span>
             </a>
         @else
             <span class="blk-icon">

@@ -26,6 +26,7 @@
     $system = false;
     $systemHead = false;
     $heroCard = false;
+    $socialRow = false;
     if ($isWrap) {
         $labels = [];
         foreach ($node['columns'] ?? [] as $col) {
@@ -44,11 +45,20 @@
                 }
             }
         }
+        $icons = [];
+        foreach ($node['columns'] ?? [] as $col) {
+            $icon = strtolower((string) ($col['item']['icon'] ?? ''));
+            if ($icon !== '') {
+                $icons[] = $icon;
+            }
+        }
+        $socialRow = count($icons) >= 2 && count($icons) === count($node['columns'] ?? [])
+            && collect($icons)->every(fn ($icon) => str_contains($icon, 'facebook') || str_contains($icon, 'instagram') || str_contains($icon, 'linkedin'));
     }
     $vars = PageLayout::spanVars($node);
 @endphp
 
-<div class="{{ $isWrap ? 'blk-wrap' : 'blk-col' }}{{ $hasSurface ? ' blk-surface' : '' }}{{ $flush ? ' blk-surface--flush' : '' }}{{ $isPhoto ? ' blk-photo' : '' }}{{ $pill ? ' blk-pill' : '' }}{{ $logos ? ' blk-logos' : '' }}{{ $logoStrip ? ' blk-logos--strip' : '' }}{{ $end ? ' blk-col--end' : '' }}{{ $system ? ' blk-system' : '' }}{{ $systemHead ? ' blk-system-head' : '' }}{{ $heroCard ? ' blk-hero-card' : '' }}{{ $light }}{{ $media }}{{ $row ? ' blk-row' : '' }}"
+<div class="{{ $isWrap ? 'blk-wrap' : 'blk-col' }}{{ $hasSurface ? ' blk-surface' : '' }}{{ $flush ? ' blk-surface--flush' : '' }}{{ $isPhoto ? ' blk-photo' : '' }}{{ $pill ? ' blk-pill' : '' }}{{ $logos ? ' blk-logos' : '' }}{{ $logoStrip ? ' blk-logos--strip' : '' }}{{ $end ? ' blk-col--end' : '' }}{{ $system ? ' blk-system' : '' }}{{ $systemHead ? ' blk-system-head' : '' }}{{ $heroCard ? ' blk-hero-card' : '' }}{{ $socialRow ? ' blk-socials' : '' }}{{ $light }}{{ $media }}{{ $row ? ' blk-row' : '' }}"
      style="{{ $vars }}{{ $style ? ';'.$style : '' }}{{ $row ? ';grid-template-columns:'.$row : '' }}">
     {{-- A node can carry children and an item at once, as the blog listing does. --}}
     @foreach($node['columns'] ?? [] as $child)
