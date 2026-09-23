@@ -1,10 +1,13 @@
 @extends('layouts.admin')
 @section('title', 'Jobs')
-@section('meta', 'Drag a card to another column · '.$pipeline->name)
+@section('meta', $pipeline ? 'Drag a card to another column · '.$pipeline->name : 'Job board')
 @section('actions')
     <a class="btn" href="{{ route('admin.jobs.create') }}">New job</a>
 @endsection
 @section('content')
+@if(! $pipeline)
+    <div class="panel"><p>No job pipelines are set up yet.</p></div>
+@else
 <form class="filters" method="get">
     <select name="pipeline" onchange="this.form.submit()">
         @foreach($pipelines as $option)
@@ -56,6 +59,7 @@
         </section>
     @endforeach
 </div>
+@endif
 @endsection
 @push('scripts')
 <script src="@assetv('/js/admin-kanban.js')"></script>

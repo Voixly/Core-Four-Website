@@ -17,7 +17,7 @@ class SchemaInstaller
             return $output;
         }
 
-        foreach (['CitySeeder', 'SettingSeeder', 'GuideSeeder'] as $seeder) {
+        foreach (['CitySeeder', 'SettingSeeder', 'GuideSeeder', 'PipelineSeeder'] as $seeder) {
             Artisan::call('db:seed', ['--class' => $seeder, '--force' => true]);
             $output .= "\n".trim(Artisan::output());
         }

@@ -10,6 +10,7 @@ use App\Models\Pipeline;
 use App\Models\PipelineStage;
 use App\Models\User;
 use App\Services\JobService;
+use Database\Seeders\PipelineSeeder;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
@@ -20,12 +21,18 @@ class JobController extends Controller
 {
     public function index(Request $request)
     {
-        $pipelines = Pipeline::query()->where('is_active', true)->with('stages')->orderBy('sort')->get();
+        $pipelines = $this->pipelines();
         $pipeline = $request->pipeline
             ? $pipelines->firstWhere('slug', $request->pipeline)
             : $pipelines->first();
 
-        abort_unless($pipeline, 404);
+        if (! $pipeline) {
+            return view('admin.jobs.index', [
+                'pipelines' => $pipelines,
+                'pipeline' => null,
+                'jobsByStage' => collect(),
+            ]);
+        }
 
         $jobs = Job::query()
             ->with(['lead', 'assignee', 'stage', 'documentRequests'])
@@ -53,10 +60,27 @@ class JobController extends Controller
     public function create()
     {
         return view('admin.jobs.create', [
-            'pipelines' => Pipeline::query()->where('is_active', true)->orderBy('sort')->get(),
+            'pipelines' => $this->pipelines(),
             'staff' => User::staff()->get(),
             'leads' => Lead::query()->whereNull('job_id')->latest()->limit(80)->get(),
         ]);
+    }
+
+    private function pipelines()
+    {
+        $pipelines = Pipeline::query()->where('is_active', true)->with('stages')->orderBy('sort')->get();
+
+        if ($pipelines->isNotEmpty()) {
+            return $pipelines;
+        }
+
+        try {
+            (new PipelineSeeder)->run();
+        } catch (\Throwable) {
+            return $pipelines;
+        }
+
+        return Pipeline::query()->where('is_active', true)->with('stages')->orderBy('sort')->get();
     }
 
     public function storeStandalone(Request $request, JobService $jobs): RedirectResponse

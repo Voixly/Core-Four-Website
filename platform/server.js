@@ -244,7 +244,7 @@ async function main() {
   }
 
   await artisan(php, ['migrate', '--force'], env);
-  for (const seeder of ['CitySeeder', 'SettingSeeder', 'GuideSeeder']) {
+  for (const seeder of ['CitySeeder', 'SettingSeeder', 'GuideSeeder', 'PipelineSeeder']) {
     await artisan(php, ['db:seed', `--class=${seeder}`, '--force'], env);
   }
   if (userCount(php, env) === 0) {
