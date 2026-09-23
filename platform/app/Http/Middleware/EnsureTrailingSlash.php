@@ -10,23 +10,30 @@ class EnsureTrailingSlash
 {
     public function handle(Request $request, Closure $next): Response
     {
-        $path = $request->getPathInfo();
+        if (! $request->isMethod('GET') && ! $request->isMethod('HEAD')) {
+            return $next($request);
+        }
 
-        if (
-            $request->isMethod('GET')
-            && $path !== '/'
+        $host = strtolower($request->getHost());
+        $path = $request->getPathInfo();
+        $apex = $host === 'www.corefourroofing.com' || str_ends_with($host, '.hostingersite.com');
+        $slash = $path !== '/'
             && ! str_ends_with($path, '/')
             && ! $request->is('admin*')
             && ! $request->is('login')
             && ! $request->is('chat*')
             && ! $request->is('leads')
             && ! $request->is('up')
-            && ! str_contains($path, '.')
-        ) {
-            $qs = $request->getQueryString();
-            $target = $path.'/'.($qs ? '?'.$qs : '');
+            && ! str_contains($path, '.');
 
-            return redirect()->away($target, 301);
+        if ($apex || $slash) {
+            if ($slash) {
+                $path .= '/';
+            }
+            $qs = $request->getQueryString();
+            $origin = $apex ? 'https://corefourroofing.com' : $request->getSchemeAndHttpHost();
+
+            return redirect()->away($origin.$path.($qs ? '?'.$qs : ''), 301);
         }
 
         return $next($request);

@@ -106,8 +106,8 @@ Route::get('/guides/{slug}/', [PageController::class, 'guide'])->name('guides.sh
 
 Route::get('/residential-roofing-in-tx/', [PageController::class, 'city'])->defaults('slug', 'tx');
 Route::get('/commercial-roofing-in-tx/', [PageController::class, 'city'])->defaults('slug', 'tx');
-Route::get('/residential-roofing-in-{slug}-tx/', [PageController::class, 'city'])->name('city.residential');
-Route::get('/commercial-roofing-in-{slug}-tx/', [PageController::class, 'city'])->name('city.commercial');
+Route::get('/residential-roofing-in-{slug}-tx/', [PageController::class, 'city'])->where('slug', '[a-z0-9-]+')->name('city.residential');
+Route::get('/commercial-roofing-in-{slug}-tx/', [PageController::class, 'city'])->where('slug', '[a-z0-9-]+')->name('city.commercial');
 
 Route::post('/leads', [LeadFormController::class, 'store'])->middleware('throttle:8,1')->name('leads.store');
 Route::post('/guides/{slug}/download', [LeadFormController::class, 'download'])->middleware('throttle:6,1')->name('guides.download');

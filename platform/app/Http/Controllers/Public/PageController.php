@@ -127,7 +127,8 @@ class PageController extends Controller
             '/careers/',
             '/blog/',
             '/guides/',
-            '/reviews/',
+            '/privacy-policy/',
+            '/terms/',
         ];
 
         return response()
@@ -145,6 +146,7 @@ Disallow: /admin
 Disallow: /login
 Disallow: /account
 Disallow: /preview
+Disallow: /reviews
 
 User-agent: Googlebot
 Allow: /

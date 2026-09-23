@@ -1,5 +1,6 @@
-<link rel="icon" href="/favicon.ico" sizes="48x48">
 <link rel="icon" href="/images/favicon-live.svg" type="image/svg+xml">
+<link rel="icon" href="/images/favicon-48x48.png" type="image/png" sizes="48x48">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
 <link rel="icon" href="/images/favicon-32x32.png" type="image/png" sizes="32x32">
 <link rel="icon" href="/images/favicon-16x16.png" type="image/png" sizes="16x16">
 <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" sizes="180x180">

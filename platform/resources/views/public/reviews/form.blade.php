@@ -1,6 +1,7 @@
 @extends('layouts.public')
 @section('title', 'How did we do? | Core Four Roofing')
 @section('description', 'Tell Core Four how the job went. Ten seconds, private first. If something went wrong, a manager calls before anything is public.')
+@section('robots', 'noindex, nofollow')
 @section('content')
 <section class="review-hero">
     <div class="wrap review-wrap">
