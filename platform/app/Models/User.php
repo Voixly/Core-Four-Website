@@ -79,6 +79,6 @@ class User extends Authenticatable
 
     public function canManageUsers(): bool
     {
-        return $this->isAgency();
+        return $this->isOwner();
     }
 }

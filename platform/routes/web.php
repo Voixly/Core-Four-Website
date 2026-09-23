@@ -17,6 +17,7 @@ use App\Http\Controllers\Admin\ReviewController as AdminReviewController;
 use App\Http\Controllers\Admin\SettingController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\Auth\PasswordResetController;
 use App\Http\Controllers\Public\ChatWidgetController;
 use App\Http\Controllers\Public\LeadFormController;
 use App\Http\Controllers\Public\PageController;
@@ -99,6 +100,10 @@ Route::prefix('chat')->middleware('throttle:40,1')->group(function () {
 Route::middleware('guest')->group(function () {
     Route::get('/login', [LoginController::class, 'show'])->name('login');
     Route::post('/login', [LoginController::class, 'store'])->middleware('throttle:8,1');
+    Route::get('/forgot-password', [PasswordResetController::class, 'create'])->name('password.request');
+    Route::post('/forgot-password', [PasswordResetController::class, 'store'])->middleware('throttle:6,1')->name('password.email');
+    Route::get('/reset-password/{token}', [PasswordResetController::class, 'edit'])->name('password.reset');
+    Route::post('/reset-password', [PasswordResetController::class, 'update'])->middleware('throttle:6,1')->name('password.store');
 
     Route::get('/account/login/', [AccountLoginController::class, 'show'])->name('account.login');
     Route::post('/account/login/', [AccountLoginController::class, 'store'])->middleware('throttle:8,1');
@@ -155,6 +160,9 @@ Route::prefix('admin')->name('admin.')->middleware(['auth', 'role:agency,owner,s
     Route::post('/jobs/{job}/warranties', [JobOpsController::class, 'storeWarranty'])->name('jobs.warranties.store');
     Route::post('/jobs/{job}/costs', [JobOpsController::class, 'storeCost'])->name('jobs.costs.store');
 
+    Route::get('/password', [UserController::class, 'editOwn'])->name('password.edit');
+    Route::put('/password', [UserController::class, 'updateOwn'])->name('password.update');
+
     Route::get('/reviews', [AdminReviewController::class, 'index'])->name('reviews.index');
     Route::post('/reviews', [AdminReviewController::class, 'store'])->name('reviews.store');
     Route::get('/reviews/{review}', [AdminReviewController::class, 'show'])->name('reviews.show');
@@ -184,13 +192,15 @@ Route::prefix('admin')->name('admin.')->middleware(['auth', 'role:agency,owner,s
         Route::get('/guides', [GuideController::class, 'index'])->name('guides.index');
         Route::post('/guides', [GuideController::class, 'store'])->name('guides.store');
         Route::post('/guides/{guide}/toggle', [GuideController::class, 'toggle'])->name('guides.toggle');
+
+        Route::get('/users', [UserController::class, 'index'])->name('users.index');
+        Route::post('/users', [UserController::class, 'store'])->name('users.store');
+        Route::patch('/users/{user}', [UserController::class, 'update'])->name('users.update');
+        Route::post('/users/{user}/password', [UserController::class, 'password'])->name('users.password');
+        Route::post('/users/{user}/toggle', [UserController::class, 'toggle'])->name('users.toggle');
     });
 
     Route::middleware('role:agency')->group(function () {
-        Route::get('/users', [UserController::class, 'index'])->name('users.index');
-        Route::post('/users', [UserController::class, 'store'])->name('users.store');
-        Route::post('/users/{user}/toggle', [UserController::class, 'toggle'])->name('users.toggle');
-
         Route::get('/settings', [SettingController::class, 'edit'])->name('settings.edit');
         Route::post('/settings', [SettingController::class, 'update'])->name('settings.update');
     });

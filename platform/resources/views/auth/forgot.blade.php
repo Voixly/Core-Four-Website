@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="noindex">
-    <title>Staff login · Core Four Roofing</title>
+    <title>Reset password · Core Four Roofing</title>
     @include('partials.favicons')
     <link rel="preconnect" href="https://use.typekit.net" crossorigin>
     <link rel="stylesheet" href="https://use.typekit.net/wci4ksj.css">
@@ -14,22 +14,20 @@
 <body class="login-page">
     <div class="login-card">
         <img src="/images/logo-color.svg" alt="Core Four Roofing">
-        <h1>Staff portal</h1>
-        <p class="lede">Agency, owner, and office logins for Core Four Roofing.</p>
+        <h1>Reset password</h1>
+        <p class="lede">Enter the email on your staff login. We’ll send a link.</p>
         @if(session('status'))
             <div class="flash">{{ session('status') }}</div>
         @endif
         @if($errors->any())
             <div class="flash is-error">{{ $errors->first() }}</div>
         @endif
-        <form method="post" action="{{ route('login') }}">
+        <form method="post" action="{{ route('password.email') }}">
             @csrf
             <label>Email <input type="email" name="email" value="{{ old('email') }}" required autocomplete="username"></label>
-            <label>Password <input type="password" name="password" required autocomplete="current-password"></label>
-            <label class="remember"><input type="checkbox" name="remember" value="1"> Remember me</label>
-            <button class="btn" type="submit">Log in</button>
+            <button class="btn" type="submit">Email me a link</button>
         </form>
-        <a class="alt-link" href="{{ route('password.request') }}">Forgot password?</a>
+        <a class="alt-link" href="{{ route('login') }}">Back to login</a>
     </div>
 </body>
 </html>
