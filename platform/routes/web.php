@@ -197,7 +197,9 @@ Route::prefix('admin')->name('admin.')->middleware(['auth', 'role:admin,agency,o
         Route::post('/users', [UserController::class, 'store'])->name('users.store');
         Route::patch('/users/{user}', [UserController::class, 'update'])->name('users.update');
         Route::post('/users/{user}/password', [UserController::class, 'password'])->name('users.password');
+        Route::post('/users/{user}/invite', [UserController::class, 'invite'])->name('users.invite');
         Route::post('/users/{user}/toggle', [UserController::class, 'toggle'])->name('users.toggle');
+        Route::delete('/users/{user}', [UserController::class, 'destroy'])->name('users.destroy');
     });
 
     Route::middleware('role:admin,agency')->group(function () {

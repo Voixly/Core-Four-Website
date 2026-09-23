@@ -3,9 +3,13 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Mail\StaffInviteMail;
 use App\Models\User;
+use App\Support\SiteSeo;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Password;
 use Illuminate\Support\Str;
 use Illuminate\Validation\Rule;
 use Illuminate\View\View;
@@ -22,7 +26,11 @@ class UserController extends Controller
             ->orderBy('name')
             ->get();
 
-        return view('admin.users.index', compact('users', 'roles'));
+        $customers = $actor->isAdmin()
+            ? User::query()->where('role', 'customer')->orderBy('name')->get()
+            : collect();
+
+        return view('admin.users.index', compact('users', 'roles', 'customers'));
     }
 
     public function store(Request $request): RedirectResponse
@@ -33,19 +41,56 @@ class UserController extends Controller
             'email' => ['required', 'email', 'max:190', 'unique:users,email'],
             'phone' => ['nullable', 'string', 'max:40'],
             'role' => ['required', Rule::in($roles)],
-            'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
 
-        User::query()->create([
+        $user = User::query()->create([
             'name' => $data['name'],
             'email' => $data['email'],
             'phone' => $data['phone'] ?? null,
             'role' => $data['role'],
-            'password' => $data['password'],
+            'password' => Str::password(40),
             'is_active' => true,
         ]);
 
-        return back()->with('success', $data['name'].' can log in with the password you set.');
+        $sent = $this->sendInvite($user);
+
+        return back()->with('success', $sent
+            ? 'Invite sent to '.$user->email.'. They choose their own password from that email.'
+            : $user->name.' was added, but the invite email did not send. Use Resend invite.');
+    }
+
+    public function invite(Request $request, User $user): RedirectResponse
+    {
+        $this->authorizeManage($request, $user);
+
+        if (! $this->sendInvite($user)) {
+            return back()->withErrors(['user' => 'The invite email did not send. Check the mail settings and try again.']);
+        }
+
+        return back()->with('success', 'Invite sent to '.$user->email.'.');
+    }
+
+    public function destroy(Request $request, User $user): RedirectResponse
+    {
+        abort_unless($request->user()->isAdmin(), 403);
+
+        if ($user->id === $request->user()->id) {
+            return back()->withErrors(['user' => 'You cannot delete your own account.']);
+        }
+
+        if (! $user->isCustomer()) {
+            $this->authorizeManage($request, $user);
+        }
+
+        $name = $user->name;
+
+        try {
+            $user->delete();
+        } catch (\Throwable) {
+            return back()->withErrors(['user' => $name.' could not be deleted.']);
+        }
+
+        return back()->with('success', $name.' was deleted.');
     }
 
     public function update(Request $request, User $user): RedirectResponse
@@ -124,9 +169,24 @@ class UserController extends Controller
         return back()->with('success', 'Your password is updated.');
     }
 
-    /**
-     * @return list<string>
-     */
+    private function sendInvite(User $user): bool
+    {
+        try {
+            $token = Password::broker()->createToken($user);
+            $path = route('password.reset', [
+                'token' => $token,
+                'email' => $user->email,
+            ], false);
+            $url = SiteSeo::origin().$path;
+
+            Mail::to($user->email)->send(new StaffInviteMail($user, $url));
+        } catch (\Throwable) {
+            return false;
+        }
+
+        return true;
+    }
+
     /**
      * @return list<string>
      */
