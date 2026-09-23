@@ -38,7 +38,7 @@ class SiteSeo
         $app = rtrim((string) config('app.url'), '/');
         $host = parse_url($app, PHP_URL_HOST) ?: '';
 
-        if ($host === '' || in_array($host, ['127.0.0.1', 'localhost', '0.0.0.0'], true) || str_ends_with($host, '.local')) {
+        if ($host === '' || in_array($host, ['127.0.0.1', 'localhost', '0.0.0.0'], true) || str_ends_with($host, '.local') || str_ends_with($host, '.hostingersite.com')) {
             return $configured !== '' ? $configured : 'https://corefourroofing.com';
         }
 
