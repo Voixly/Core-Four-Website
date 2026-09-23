@@ -22,6 +22,7 @@ class Job extends Model
         'assigned_to', 'scheduled_at', 'customer_summary', 'status',
         'roof_type', 'squares', 'stories', 'pitch', 'material_system',
         'insurance_carrier', 'claim_number', 'hoa_name', 'access_notes', 'crew_name',
+        'jobnimbus_contact_id',
     ];
 
     protected function casts(): array

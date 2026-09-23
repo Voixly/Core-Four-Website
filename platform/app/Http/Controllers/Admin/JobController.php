@@ -9,6 +9,7 @@ use App\Models\Lead;
 use App\Models\Pipeline;
 use App\Models\PipelineStage;
 use App\Models\User;
+use App\Services\JobNimbusService;
 use App\Services\JobService;
 use Database\Seeders\PipelineSeeder;
 use Illuminate\Http\JsonResponse;
@@ -66,6 +67,19 @@ class JobController extends Controller
         ]);
     }
 
+    private function jobOpened(Job $job): RedirectResponse
+    {
+        $sent = app(JobNimbusService::class)->pushContact($job);
+        $message = 'Job '.$job->number.' is open.';
+        if ($sent === true) {
+            $message .= ' The contact is in JobNimbus.';
+        } elseif ($sent === false) {
+            $message .= ' JobNimbus did not take the contact.';
+        }
+
+        return redirect()->route('admin.jobs.show', $job)->with('success', $message);
+    }
+
     private function pipelines()
     {
         $pipelines = Pipeline::query()->where('is_active', true)->with('stages')->orderBy('sort')->get();
@@ -105,7 +119,7 @@ class JobController extends Controller
 
         $job = $jobs->createStandalone($data, $request->user());
 
-        return redirect()->route('admin.jobs.show', $job)->with('success', 'Job '.$job->number.' is open.');
+        return $this->jobOpened($job);
     }
 
     public function show(Job $job)
@@ -140,7 +154,7 @@ class JobController extends Controller
 
         $job = $jobs->createFromLead($lead, $data, $request->user());
 
-        return redirect()->route('admin.jobs.show', $job)->with('success', 'Job '.$job->number.' is open.');
+        return $this->jobOpened($job);
     }
 
     public function update(Request $request, Job $job): RedirectResponse

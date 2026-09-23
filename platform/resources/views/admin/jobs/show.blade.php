@@ -30,6 +30,7 @@
     @if($job->roof_type) · {{ str_replace('_', ' ', $job->roof_type) }}@endif
     @if($job->squares) · {{ $job->squares }} sq @endif
     @if($job->crew_name) · Crew: {{ $job->crew_name }}@endif
+    @if($job->jobnimbus_contact_id) · In JobNimbus @endif
 </p>
 <div class="job-money">
     <div><span>Approved</span><b>{{ $money($job->approvedTotal()) }}</b></div>
