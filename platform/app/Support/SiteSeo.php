@@ -45,6 +45,68 @@ class SiteSeo
         return $app;
     }
 
+    /**
+     * Indexable URLs that are real routes, not records.
+     * Cities, guides, and posts are added beside this list.
+     * Thank-you, review, login, and admin URLs stay out.
+     *
+     * @return list<string>
+     */
+    public static function indexablePages(): array
+    {
+        $excluded = [
+            'sitemap.xml',
+            'robots.txt',
+            'llms.txt',
+            'up',
+            'reviews',
+            'thank-you',
+            'login',
+            'careers/thank-you',
+        ];
+        $excludedPrefixes = ['admin', 'account', 'api', 'chat', 'livewire', 'sanctum', '_ignition', 'telescope'];
+
+        $paths = [];
+        foreach (\Illuminate\Support\Facades\Route::getRoutes() as $route) {
+            if (! in_array('GET', $route->methods(), true)) {
+                continue;
+            }
+
+            $uses = $route->getAction('uses');
+            if (is_string($uses) && str_contains($uses, 'RedirectController')) {
+                continue;
+            }
+
+            $uri = trim($route->uri(), '/');
+            if ($uri === '') {
+                $paths['/'] = '/';
+
+                continue;
+            }
+
+            if (str_contains($uri, '{') || in_array($uri, $excluded, true)) {
+                continue;
+            }
+
+            $prefix = strstr($uri, '/', true) ?: $uri;
+            if (in_array($prefix, $excludedPrefixes, true)) {
+                continue;
+            }
+
+            $paths['/'.$uri.'/'] = '/'.$uri.'/';
+        }
+
+        $list = array_values($paths);
+        sort($list);
+        $home = array_search('/', $list, true);
+        if ($home !== false) {
+            unset($list[$home]);
+            array_unshift($list, '/');
+        }
+
+        return array_values($list);
+    }
+
     public static function url(?string $path = null): string
     {
         $origin = rtrim(static::origin(), '/');

@@ -25,14 +25,28 @@ class BlogPost
      */
     public static function slugs(): array
     {
+        $indexed = [];
         $path = resource_path('data/posts/index.json');
-        if (! is_file($path)) {
-            return [];
+        if (is_file($path)) {
+            $decoded = json_decode((string) file_get_contents($path), true);
+            if (is_array($decoded)) {
+                $indexed = array_values(array_filter($decoded, 'is_string'));
+            }
         }
 
-        $slugs = json_decode((string) file_get_contents($path), true);
+        $onDisk = [];
+        foreach (glob(resource_path('data/posts/*.json')) ?: [] as $file) {
+            $slug = basename($file, '.json');
+            if ($slug === 'index' || ! preg_match('/^[a-z0-9-]+$/', $slug)) {
+                continue;
+            }
+            $onDisk[] = $slug;
+        }
 
-        return is_array($slugs) ? array_values(array_filter($slugs, 'is_string')) : [];
+        $extra = array_values(array_diff($onDisk, $indexed));
+        sort($extra);
+
+        return array_values(array_unique([...$indexed, ...$extra]));
     }
 
     /**

@@ -631,6 +631,29 @@ class PageLayout
         return $value;
     }
 
+    /**
+     * Layout files that are public pages. A new JSON file in data/pages publishes its URL.
+     * home.json is the old capture; the live homepage is the Blade view.
+     *
+     * @return list<string>
+     */
+    public static function publishedPaths(): array
+    {
+        $paths = [];
+        foreach (glob(resource_path('data/pages/*.json')) ?: [] as $file) {
+            $slug = basename($file, '.json');
+            if ($slug === 'home' || ! preg_match('/^[a-z0-9-]+$/', $slug)) {
+                continue;
+            }
+
+            $paths[] = '/'.str_replace('--', '/', $slug).'/';
+        }
+
+        sort($paths);
+
+        return $paths;
+    }
+
     /** Load an extracted page definition. */
     public static function page(string $slug): ?array
     {

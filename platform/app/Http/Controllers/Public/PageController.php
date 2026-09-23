@@ -102,36 +102,16 @@ class PageController extends Controller
 
     public function sitemap()
     {
-        $cities = City::query()->orderBy('type')->orderBy('name')->get();
-        $guides = Guide::query()->where('is_active', true)->get();
-        $posts = BlogPost::all();
-        $pages = [
-            '/',
-            '/residential-roofing/',
-            '/commercial-roofing/',
-            '/residential-roofing/asphalt-shingles/',
-            '/residential-roofing/metal-roofs/',
-            '/residential-roofing/stone-coated-steel/',
-            '/residential-roofing/synthetic-roofs/',
-            '/residential-roofing/roof-repair/',
-            '/residential-roofing/roof-installation/',
-            '/residential-roofing/roof-inspections/',
-            '/commercial-roofing/roof-replacement-installation/',
-            '/commercial-roofing/repair-preventative-maintenance/',
-            '/commercial-roofing/coatings-restoration/',
-            '/commercial-roofing/inspections-condition-reports/',
-            '/insurance-claims/',
-            '/storm-emergency/',
-            '/financing/',
-            '/about-core-four-roofing/',
-            '/service-areas/',
-            '/contact-core-four-roofing/',
-            '/careers/',
-            '/blog/',
-            '/guides/',
-            '/privacy-policy/',
-            '/terms/',
-        ];
+        $pages = SiteSeo::indexablePages();
+        $listed = array_flip($pages);
+        $cities = City::query()->orderBy('type')->orderBy('name')->get()
+            ->reject(fn (City $city) => isset($listed[$city->path()]));
+        $guides = Guide::query()->where('is_active', true)->orderBy('slug')->get()
+            ->reject(fn (Guide $guide) => isset($listed['/guides/'.$guide->slug.'/']));
+        $posts = array_values(array_filter(
+            BlogPost::all(),
+            fn (array $post) => ! isset($listed['/'.$post['slug'].'/'])
+        ));
 
         return response()
             ->view('public.sitemap', compact('cities', 'guides', 'pages', 'posts'))

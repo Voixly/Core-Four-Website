@@ -54,34 +54,12 @@ Route::permanentRedirect('/sub-page-template/', '/');
 
 Route::get('/', [PageController::class, 'home'])->name('home');
 
-// Pages rebuilt from the live site's own structure.
-$structured = [
-    'residential-roofing' => 'residential',
-    'commercial-roofing' => 'commercial',
-    'insurance-claims' => 'insurance',
-    'financing' => 'financing',
-    'storm-emergency' => 'emergency',
-    'about-core-four-roofing' => 'about',
-    'service-areas' => 'service-areas',
-    'contact-core-four-roofing' => 'contact',
-    'blog' => 'blog',
-    'residential-roofing/asphalt-shingles' => 'asphalt-shingles',
-    'residential-roofing/metal-roofs' => 'metal-roofs',
-    'residential-roofing/stone-coated-steel' => 'stone-coated-steel',
-    'residential-roofing/synthetic-roofs' => 'synthetic-roofs',
-    'residential-roofing/roof-installation' => 'roof-installation',
-    'residential-roofing/roof-inspections' => 'roof-inspections',
-    'residential-roofing/roof-repair' => 'roof-repair',
-    'commercial-roofing/coatings-restoration' => 'coatings-restoration',
-    'commercial-roofing/inspections-condition-reports' => 'inspections-condition-reports',
-    'commercial-roofing/repair-preventative-maintenance' => 'repair-preventative-maintenance',
-    'commercial-roofing/roof-replacement-installation' => 'roof-replacement-installation',
-];
-
-foreach ($structured as $path => $name) {
-    Route::get('/'.$path.'/', [PageController::class, 'page'])
-        ->defaults('slug', str_replace('/', '--', $path))
-        ->name($name);
+// A layout file in resources/data/pages is a public page and a sitemap URL.
+foreach (\App\Support\PageLayout::publishedPaths() as $path) {
+    $slug = str_replace('/', '--', trim($path, '/'));
+    Route::get($path, [PageController::class, 'page'])
+        ->defaults('slug', $slug)
+        ->name('page.'.$slug);
 }
 Route::get('/reviews/', [ReviewController::class, 'show'])->name('reviews.landing');
 Route::post('/reviews/', [ReviewController::class, 'store'])->middleware('throttle:8,1')->name('reviews.store');
