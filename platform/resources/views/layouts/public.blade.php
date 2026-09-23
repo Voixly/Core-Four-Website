@@ -44,9 +44,9 @@
     <link href="https://fonts.googleapis.com/css?family=Reddit+Sans:500,500italic,600,600italic,700,700italic&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.typekit.net/wci4ksj.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
-    <link rel="stylesheet" href="/css/site.css">
-    <link rel="stylesheet" href="/css/blocks.css">
-    <script src="/js/map-pins.js"></script>
+    <link rel="stylesheet" href="@assetv('/css/site.css')">
+    <link rel="stylesheet" href="@assetv('/css/blocks.css')">
+    <script src="@assetv('/js/map-pins.js')"></script>
     <script src="https://elfsightcdn.com/platform.js" async></script>
     @hasSection('schema')
         @yield('schema')
@@ -187,7 +187,7 @@
     </div>
     <button class="chat-launcher" type="button">Chat</button>
 </div>
-<script src="/js/site.js"></script>
-<script src="/js/chat.js"></script>
+<script src="@assetv('/js/site.js')"></script>
+<script src="@assetv('/js/chat.js')"></script>
 </body>
 </html>

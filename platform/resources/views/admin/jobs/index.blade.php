@@ -58,5 +58,5 @@
 </div>
 @endsection
 @push('scripts')
-<script src="/js/admin-kanban.js"></script>
+<script src="@assetv('/js/admin-kanban.js')"></script>
 @endpush

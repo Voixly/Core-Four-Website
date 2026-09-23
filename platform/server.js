@@ -206,7 +206,7 @@ async function main() {
 
   const env = envForPhp();
   const phpPort = await freePort();
-  const child = spawn(php, ['-S', `127.0.0.1:${phpPort}`, router], {
+  const child = spawn(php, ['-d', 'opcache.validate_timestamps=1', '-d', 'opcache.revalidate_freq=0', '-S', `127.0.0.1:${phpPort}`, router], {
     cwd: publicDir,
     env,
     stdio: 'inherit',
@@ -251,6 +251,8 @@ async function main() {
     await artisan(php, ['db:seed', '--class=UserSeeder', '--force'], env);
   }
   await artisan(php, ['db:seed', '--class=EnsureAdminSeeder', '--force'], env);
+  await artisan(php, ['view:clear'], env);
+  await artisan(php, ['cache:clear'], env);
   ready = true;
   console.log('Laravel is ready');
 }

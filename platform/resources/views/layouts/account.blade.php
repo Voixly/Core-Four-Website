@@ -11,8 +11,8 @@
     <link rel="stylesheet" href="https://use.typekit.net/wci4ksj.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
-    <link rel="stylesheet" href="/css/site.css">
-    <link rel="stylesheet" href="/css/account.css">
+    <link rel="stylesheet" href="@assetv('/css/site.css')">
+    <link rel="stylesheet" href="@assetv('/css/account.css')">
 </head>
 <body class="account-body">
 <header class="account-top">
