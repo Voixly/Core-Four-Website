@@ -15,7 +15,7 @@
     <div class="login-card">
         <img src="/images/logo-color.svg" alt="Core Four Roofing">
         <h1>Staff portal</h1>
-        <p class="lede">Agency, owner, and office logins for Core Four Roofing.</p>
+        <p class="lede">Admin, agency, owner, and office logins for Core Four Roofing.</p>
         @if(session('status'))
             <div class="flash">{{ session('status') }}</div>
         @endif

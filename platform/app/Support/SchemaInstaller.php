@@ -27,6 +27,11 @@ class SchemaInstaller
             $output .= "\n".trim(Artisan::output());
         }
 
+        if (Schema::hasTable('users')) {
+            Artisan::call('db:seed', ['--class' => 'EnsureAdminSeeder', '--force' => true]);
+            $output .= "\n".trim(Artisan::output());
+        }
+
         return trim($output);
     }
 }

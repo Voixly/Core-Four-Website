@@ -122,7 +122,7 @@ Route::prefix('account')->name('account.')->middleware(['auth', 'role:customer']
     Route::post('/jobs/{job}/quotes/{quote}/accept/', [AccountJobController::class, 'acceptQuote'])->name('jobs.quotes.accept');
 });
 
-Route::prefix('admin')->name('admin.')->middleware(['auth', 'role:agency,owner,staff'])->group(function () {
+Route::prefix('admin')->name('admin.')->middleware(['auth', 'role:admin,agency,owner,staff'])->group(function () {
     Route::get('/', DashboardController::class)->name('dashboard');
 
     Route::get('/leads', [LeadController::class, 'index'])->name('leads.index');
@@ -175,7 +175,7 @@ Route::prefix('admin')->name('admin.')->middleware(['auth', 'role:agency,owner,s
     Route::post('/chat/{conversation}/close', [ChatController::class, 'close'])->name('chat.close');
     Route::post('/chat/{conversation}/convert', [ChatController::class, 'convert'])->name('chat.convert');
 
-    Route::middleware('role:agency,owner')->group(function () {
+    Route::middleware('role:admin,agency,owner')->group(function () {
         Route::get('/ads', [AdsController::class, 'index'])->name('ads');
         Route::get('/ads/pdf', [AdsController::class, 'pdf'])->name('ads.pdf');
 
@@ -200,7 +200,7 @@ Route::prefix('admin')->name('admin.')->middleware(['auth', 'role:agency,owner,s
         Route::post('/users/{user}/toggle', [UserController::class, 'toggle'])->name('users.toggle');
     });
 
-    Route::middleware('role:agency')->group(function () {
+    Route::middleware('role:admin,agency')->group(function () {
         Route::get('/settings', [SettingController::class, 'edit'])->name('settings.edit');
         Route::post('/settings', [SettingController::class, 'update'])->name('settings.update');
     });

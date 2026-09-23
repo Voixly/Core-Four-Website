@@ -17,7 +17,8 @@ class UserController extends Controller
         $actor = $request->user();
         $roles = $this->assignableRoles($actor);
         $users = User::query()
-            ->whereIn('role', $actor->isAgency() ? ['agency', 'owner', 'staff'] : ['owner', 'staff'])
+            ->whereIn('role', $this->manageableRoles($actor))
+            ->orderByRaw("case role when 'admin' then 0 when 'agency' then 1 when 'owner' then 2 else 3 end")
             ->orderBy('name')
             ->get();
 
@@ -126,20 +127,31 @@ class UserController extends Controller
     /**
      * @return list<string>
      */
+    /**
+     * @return list<string>
+     */
     private function assignableRoles(User $actor): array
     {
+        if ($actor->isAdmin()) {
+            return ['admin', 'agency', 'owner', 'staff'];
+        }
+
         return $actor->isAgency()
-            ? ['staff', 'owner', 'agency']
-            : ['staff', 'owner'];
+            ? ['agency', 'owner', 'staff']
+            : ['owner', 'staff'];
+    }
+
+    /**
+     * @return list<string>
+     */
+    private function manageableRoles(User $actor): array
+    {
+        return $this->assignableRoles($actor);
     }
 
     private function authorizeManage(Request $request, User $user): void
     {
         abort_unless($request->user()->canManageUsers(), 403);
-        abort_unless($user->isStaffUser(), 404);
-
-        if (! $request->user()->isAgency() && $user->role === 'agency') {
-            abort(403);
-        }
+        abort_unless(in_array($user->role, $this->manageableRoles($request->user()), true), 404);
     }
 }

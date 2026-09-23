@@ -110,7 +110,7 @@ class ChatWidgetController extends Controller
 
     protected function payload(Conversation $conversation): array
     {
-        $staffOnline = User::query()->where('is_active', true)->whereIn('role', ['agency', 'owner', 'staff'])->exists();
+        $staffOnline = User::query()->where('is_active', true)->whereIn('role', ['admin', 'agency', 'owner', 'staff'])->exists();
 
         return [
             'conversation_id' => $conversation->id,

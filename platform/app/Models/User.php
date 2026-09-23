@@ -41,7 +41,7 @@ class User extends Authenticatable
 
     public function isStaffUser(): bool
     {
-        return in_array($this->role, ['agency', 'owner', 'staff'], true);
+        return in_array($this->role, ['admin', 'agency', 'owner', 'staff'], true);
     }
 
     public function isCustomer(): bool
@@ -53,8 +53,13 @@ class User extends Authenticatable
     {
         return static::query()
             ->where('is_active', true)
-            ->whereIn('role', ['agency', 'owner', 'staff'])
+            ->whereIn('role', ['admin', 'agency', 'owner', 'staff'])
             ->orderBy('name');
+    }
+
+    public function isAdmin(): bool
+    {
+        return $this->role === 'admin';
     }
 
     public function isAgency(): bool
@@ -64,7 +69,7 @@ class User extends Authenticatable
 
     public function isOwner(): bool
     {
-        return in_array($this->role, ['agency', 'owner'], true);
+        return in_array($this->role, ['admin', 'agency', 'owner'], true);
     }
 
     public function canManageReports(): bool
@@ -80,5 +85,10 @@ class User extends Authenticatable
     public function canManageUsers(): bool
     {
         return $this->isOwner();
+    }
+
+    public function canManageSettings(): bool
+    {
+        return $this->isAdmin() || $this->isAgency();
     }
 }

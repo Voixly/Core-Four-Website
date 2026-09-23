@@ -250,6 +250,7 @@ async function main() {
   if (userCount(php, env) === 0) {
     await artisan(php, ['db:seed', '--class=UserSeeder', '--force'], env);
   }
+  await artisan(php, ['db:seed', '--class=EnsureAdminSeeder', '--force'], env);
   ready = true;
   console.log('Laravel is ready');
 }

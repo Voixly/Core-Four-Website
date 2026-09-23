@@ -33,12 +33,12 @@
             <a class="nav-link {{ request()->routeIs('admin.email.*') ? 'active' : '' }}" href="{{ route('admin.email.index') }}"><i class="fas fa-envelope"></i> Email</a>
             <a class="nav-link {{ request()->routeIs('admin.guides.*') ? 'active' : '' }}" href="{{ route('admin.guides.index') }}"><i class="fas fa-book"></i> Guides</a>
         @endif
-        @if(auth()->user()->canManageUsers() || auth()->user()->isAgency())
+        @if(auth()->user()->canManageUsers() || auth()->user()->canManageSettings())
             <div class="side-label">Admin</div>
             @if(auth()->user()->canManageUsers())
                 <a class="nav-link {{ request()->routeIs('admin.users.*') ? 'active' : '' }}" href="{{ route('admin.users.index') }}"><i class="fas fa-user-gear"></i> Users</a>
             @endif
-            @if(auth()->user()->isAgency())
+            @if(auth()->user()->canManageSettings())
                 <a class="nav-link {{ request()->routeIs('admin.settings.*') ? 'active' : '' }}" href="{{ route('admin.settings.edit') }}"><i class="fas fa-sliders"></i> Settings</a>
             @endif
         @endif

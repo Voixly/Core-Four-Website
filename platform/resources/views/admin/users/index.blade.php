@@ -1,6 +1,6 @@
 @extends('layouts.admin')
 @section('title', 'Users')
-@section('meta', 'Staff, owner, and agency logins')
+@section('meta', 'Admin, agency, owner, and staff logins')
 @section('content')
 <div class="panel">
     <h3>Add a login</h3>
