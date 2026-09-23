@@ -178,7 +178,7 @@
             </nav>
         @endif
         <div class="footer-bottom">
-            <div>© Copyright {{ date('Y') }} Core Four Roofing &amp; Construction | Website by <a href="https://voixly.com/" target="_blank" rel="noopener">Voixly</a></div>
+            <div>© Copyright {{ date('Y') }} Core Four Roofing &amp; Construction | Website by <a href="https://voixly.com/" target="_blank" rel="noopener">Voixly</a> · <a href="{{ route('login') }}">Login</a></div>
             <div>22955 State Highway 249 Suite 26<br>Tomball, TX 77375</div>
         </div>
     </div>
