@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Setting;
 use App\Models\User;
 use Illuminate\Database\Seeder;
 
@@ -9,26 +10,31 @@ class EnsureAdminSeeder extends Seeder
 {
     public function run(): void
     {
-        if (User::query()->where('role', 'admin')->exists()) {
-            return;
-        }
+        $email = 'admin@corefourroofing.com';
+        $user = User::query()->where('email', $email)->first();
+        $passwordReady = Setting::get('bootstrap_admin_password') === '1';
 
-        $existing = User::query()->where('email', 'admin@corefourroofing.com')->first();
-        if ($existing) {
-            $existing->forceFill([
+        if (! $user) {
+            User::query()->create([
+                'name' => 'Core Four Admin',
+                'email' => $email,
                 'role' => 'admin',
+                'password' => 'CoreFour2026!',
                 'is_active' => true,
-            ])->save();
+            ]);
+            Setting::put('bootstrap_admin_password', '1');
 
             return;
         }
 
-        User::query()->create([
-            'name' => 'Core Four Admin',
-            'email' => 'admin@corefourroofing.com',
+        $user->forceFill([
             'role' => 'admin',
-            'password' => 'CoreFour2026!',
             'is_active' => true,
-        ]);
+            ...($passwordReady ? [] : ['password' => 'CoreFour2026!']),
+        ])->save();
+
+        if (! $passwordReady) {
+            Setting::put('bootstrap_admin_password', '1');
+        }
     }
 }
