@@ -462,6 +462,8 @@ p:last-child { margin-bottom: 0; }
 .solution-card--green { background: var(--bright-green); }
 .solution-card--green h3 { color: var(--white); }
 .solution-card--green p { color: rgba(255, 255, 255, 0.85); }
+.solution-card a { font-weight: 700; }
+.solution-card--green a { color: #fff; text-decoration: underline; }
 .solution-card--white { background: var(--white); }
 .solution-card--green > img,
 .solution-card--white .solution-media,

@@ -1,5 +1,5 @@
 @extends('layouts.public')
-@section('title', 'Careers | Core Four Roofing')
+@section('title', 'Roofing Careers in Tomball | Core Four Roofing')
 @section('description', 'Crew, service, estimator, and office jobs at Core Four Roofing in Tomball. Apply from the careers page.')
 @section('content')
 <section class="review-hero">

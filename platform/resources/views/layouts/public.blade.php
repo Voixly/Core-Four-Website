@@ -52,7 +52,7 @@
         @yield('schema')
     @else
         <script type="application/ld+json">
-            {!! json_encode(\App\Support\SiteSeo::organizationSchema(), JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) !!}
+            {!! json_encode(\App\Support\SiteSeo::pageGraph($seoTitle, $seoDescription), JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) !!}
         </script>
     @endif
 </head>
@@ -154,7 +154,7 @@
             </div>
             <div class="footer-cta">
                 <h4>Protect your property. Don't wait.</h4>
-                <p>Get a free, no-obligation inspection from the #1 local roofing experts in Texas.</p>
+                <p>Get a free, no-obligation inspection from our Tomball crew.</p>
                 <a class="btn" href="tel:+1{{ $officePhoneTel }}">Call Today <i class="fas fa-arrow-right"></i></a>
             </div>
         </div>

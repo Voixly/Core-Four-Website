@@ -65,8 +65,8 @@
                     @include('partials.before-after', [
                         'before' => $heroPair['before'],
                         'after' => $heroPair['after'],
-                        'beforeAlt' => 'Before',
-                        'afterAlt' => 'After',
+                        'beforeAlt' => \App\Support\SiteSeo::imageAlt($heroPair['before'], '', 'Roof before Core Four Roofing work'),
+                        'afterAlt' => \App\Support\SiteSeo::imageAlt($heroPair['after'], '', 'Roof after Core Four Roofing work'),
                         'hero' => true,
                     ])
                 @endif

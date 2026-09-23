@@ -25,7 +25,7 @@
             $imgW = $img['dw'] ?? $img['w'] ?? null;
             $imgH = $img['dh'] ?? $img['h'] ?? null;
         @endphp
-        <img class="blk-img{{ $isLogo ? ' blk-img--logo' : '' }}" src="{{ $img['src'] ?? '' }}" alt="{{ $img['alt'] ?? '' }}"
+        <img class="blk-img{{ $isLogo ? ' blk-img--logo' : '' }}" src="{{ $img['src'] ?? '' }}" alt="{{ \App\Support\SiteSeo::imageAlt($img['src'] ?? '', $img['alt'] ?? '') }}"
              @if($imgW) width="{{ $imgW }}" height="{{ $imgH }}" style="--logo-w:{{ (int) $imgW }}px" @endif
              loading="lazy" decoding="async">
         @break
@@ -67,7 +67,7 @@
 
     @case('html')
         @php
-            $rawHtml = PageLayout::restoreIcons($item['html'] ?? '');
+            $rawHtml = \App\Support\SiteSeo::fillEmptyAlts(PageLayout::restoreIcons($item['html'] ?? ''));
             $isArchive = PageLayout::blogPosts($rawHtml) !== '';
             $archive = $isArchive
                 ? collect(\App\Support\BlogPost::all())->sortByDesc('date')->values()
@@ -98,8 +98,8 @@
             @include('partials.before-after', [
                 'before' => $item['before']['src'],
                 'after' => $item['after']['src'],
-                'beforeAlt' => $item['before']['alt'] ?: 'Before',
-                'afterAlt' => $item['after']['alt'] ?: 'After',
+                'beforeAlt' => \App\Support\SiteSeo::imageAlt($item['before']['src'], $item['before']['alt'] ?? '', 'Roof before Core Four Roofing work'),
+                'afterAlt' => \App\Support\SiteSeo::imageAlt($item['after']['src'], $item['after']['alt'] ?? '', 'Roof after Core Four Roofing work'),
             ])
         @endif
         @break
@@ -107,7 +107,7 @@
     @case('gallery')
         <div class="blk-gallery" style="--cols:{{ PageLayout::galleryColumns($item) }}">
             @foreach($item['images'] as $img)
-                <img src="{{ $img['src'] }}" alt="{{ $img['alt'] }}"
+                <img src="{{ $img['src'] }}" alt="{{ \App\Support\SiteSeo::imageAlt($img['src'] ?? '', $img['alt'] ?? '') }}"
                      @if(!empty($img['w']) && !empty($img['h'])) style="aspect-ratio:{{ $img['w'] }}/{{ $img['h'] }}" @endif
                      loading="lazy" decoding="async">
             @endforeach

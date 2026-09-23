@@ -185,7 +185,7 @@ TXT;
     {
         $lines = [
             '# Core Four Roofing',
-            '> Tomball, Texas roofing contractor. Residential tile, metal, stone-coated steel, and slate. Commercial TPO, metal, coatings, and maintenance.',
+            '> Tomball, Texas roofing contractor. Residential asphalt, metal, stone-coated steel, synthetic, tile, and slate. Commercial TPO, metal, coatings, repair, and inspections. Storm tarping and insurance documentation.',
             '',
             '- Office: 22955 State Highway 249 Suite 26, Tomball, TX 77375',
             '- Phone: '.config('app.office_phone'),
@@ -195,13 +195,26 @@ TXT;
             '- [Home]('.SiteSeo::url('/').')',
             '- [Residential roofing]('.SiteSeo::url('/residential-roofing/').')',
             '- [Commercial roofing]('.SiteSeo::url('/commercial-roofing/').')',
+            '- [Storm and emergency]('.SiteSeo::url('/storm-emergency/').')',
+            '- [Insurance claims]('.SiteSeo::url('/insurance-claims/').')',
+            '- [Financing]('.SiteSeo::url('/financing/').')',
             '- [Service areas]('.SiteSeo::url('/service-areas/').')',
             '- [Contact]('.SiteSeo::url('/contact-core-four-roofing/').')',
             '- [Careers]('.SiteSeo::url('/careers/').')',
             '- [Blog]('.SiteSeo::url('/blog/').')',
+            '- [Guides]('.SiteSeo::url('/guides/').')',
+            '',
+            '## Guides',
+        ];
+
+        foreach (Guide::query()->where('is_active', true)->orderBy('title')->get() as $guide) {
+            $lines[] = '- ['.$guide->title.']('.SiteSeo::url($guide->path()).')';
+        }
+
+        $lines = array_merge($lines, [
             '',
             '## Blog',
-        ];
+        ]);
 
         foreach (BlogPost::all() as $post) {
             $lines[] = '- ['.$post['title'].']('.SiteSeo::url('/'.$post['slug'].'/').')';

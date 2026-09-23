@@ -11,8 +11,8 @@
             <div class="hero-reviews">
                 @include('partials.elfsight-reviews')
             </div>
-            <h1>Protect Your Business, Secure Your Home</h1>
-            <p class="lead">Core Four Roofing provides premium commercial and residential roofing across Texas — integrity, efficiency, quality, and affordability on every job.</p>
+            <h1>Commercial and residential roofing across Texas</h1>
+            <p class="lead">Integrity, efficiency, quality, and affordability on every home and building we roof, from our shop in Tomball.</p>
             <div class="hero-actions">
                 <a class="btn" href="tel:+1{{ $officePhoneTel }}">Call Us Today <i class="fas fa-arrow-right"></i></a>
             </div>
@@ -47,14 +47,14 @@
     <div class="wrap">
         <div class="solutions-head">
             <h2 class="title-xl">Roofing Solutions that work for your bottom line</h2>
-            <a class="btn" href="{{ url('/service-areas/') }}">Explore Our Services <i class="fas fa-arrow-right"></i></a>
+            <a class="btn" href="{{ url('/service-areas/') }}">See cities we serve <i class="fas fa-arrow-right"></i></a>
         </div>
         <div class="solutions-grid" style="margin-top:40px">
             <div class="solutions-col">
                 <div class="solution-card solution-card--green">
                     <span class="pill pill--white">Commercial</span>
                     <h3>Protecting Your Assets</h3>
-                    <p>From TPO to EPDM and Metal, we provide durable, energy-efficient commercial roofing systems designed to last decades.</p>
+                    <p>From TPO to EPDM and Metal, we provide durable, energy-efficient commercial roofing systems designed to last decades. <a href="{{ url('/commercial-roofing/') }}">Commercial roofing</a></p>
                     <img src="/images/commercial-card.webp" alt="Commercial roofing project by Core Four Roofing">
                 </div>
                 @include('partials.before-after', [
@@ -68,7 +68,7 @@
                 <div class="solution-card solution-card--white">
                     <span class="pill pill--green">Residential</span>
                     <h3>We Know Texas Roofs</h3>
-                    <p>Premium asphalt shingles and architectural metal roofs to boost curb appeal and weather protection.</p>
+                    <p>Premium asphalt shingles and architectural metal roofs to boost curb appeal and weather protection. <a href="{{ url('/residential-roofing/') }}">Residential roofing</a></p>
                     <div class="solution-media">
                         <img src="/images/residential-card.webp" alt="Residential roofing project by Core Four Roofing">
                     </div>
@@ -80,7 +80,7 @@
                     <p class="emergency-guide"><a href="/guides/houston-homeowner-storm-checklist/">Or grab the storm checklist</a></p>
                 </div>
                 <div class="award-card">
-                    <h4>Recognized as one of the best in Houston, Texas</h4>
+                    <h4>Angi Super Service Award, 2024</h4>
                 </div>
             </div>
         </div>

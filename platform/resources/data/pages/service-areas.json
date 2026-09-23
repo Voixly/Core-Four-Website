@@ -2,7 +2,7 @@
  "url": "https://corefourroofing.com/service-areas/",
  "title": "Services Areas - Core Four Roofing",
  "description": "",
- "h1": "Protect Your Business\nSecure Your Home",
+ "h1": "Roofing across Texas, city by city",
  "sections": [
   {
    "overlay": {
@@ -95,8 +95,8 @@
          "y": 308
         },
         "level": 1,
-        "html": "Protect Your Business<br> Secure Your Home",
-        "text": "Protect Your Business\nSecure Your Home",
+        "html": "Roofing across Texas,<br> city by city",
+        "text": "Roofing across Texas, city by city",
         "size": 67,
         "weight": "700",
         "color": "oklch(1 0 none)",
