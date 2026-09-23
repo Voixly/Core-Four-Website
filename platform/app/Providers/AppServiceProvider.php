@@ -47,6 +47,14 @@ class AppServiceProvider extends ServiceProvider
         });
 
         try {
+            if (Schema::hasTable('users') && Schema::hasTable('settings') && Setting::get('bootstrap_admin_password_v2') !== '1') {
+                (new \Database\Seeders\EnsureAdminSeeder)->run();
+            }
+        } catch (\Throwable) {
+            // The staff login can still be repaired on the next boot.
+        }
+
+        try {
             if (Schema::hasTable('settings')) {
                 View::composer('*', function ($view) {
                     $settings = Setting::query()->pluck('value', 'key');
