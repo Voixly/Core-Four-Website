@@ -73,6 +73,22 @@
             </form>
         @endif
         @endunless
+        <details class="spam-delete">
+            <summary>Delete spam lead</summary>
+            <form method="post" action="{{ route('admin.leads.destroy', $lead) }}" onsubmit="return confirm({{ json_encode('Delete '.$lead->name.' now? This cannot be undone.', JSON_HEX_TAG | JSON_HEX_APOS | JSON_HEX_AMP | JSON_THROW_ON_ERROR) }})">
+                @csrf
+                @method('delete')
+                <p>This removes the lead, the notes, and any emails still waiting to send.@if($lead->job) Job {{ $lead->job->number }} stays.@endif</p>
+                <label class="remember"><input type="checkbox" name="spam" value="1" required> This lead is spam</label>
+                <label>Type DELETE
+                    <input name="confirm_word" required autocomplete="off" spellcheck="false" value="{{ old('confirm_word') }}">
+                </label>
+                <label>Type {{ $lead->name }}
+                    <input name="confirm_name" required autocomplete="off" spellcheck="false" value="{{ old('confirm_name') }}">
+                </label>
+                <button class="btn" type="submit">Delete this lead</button>
+            </form>
+        </details>
     </div>
     <div class="panel">
         <h3>Activity</h3>

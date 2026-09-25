@@ -129,6 +129,7 @@ Route::prefix('admin')->name('admin.')->middleware(['auth', 'role:admin,agency,o
     Route::get('/leads/{lead}', [LeadController::class, 'show'])->name('leads.show');
     Route::patch('/leads/{lead}', [LeadController::class, 'update'])->name('leads.update');
     Route::post('/leads/{lead}/notes', [LeadController::class, 'note'])->name('leads.note');
+    Route::delete('/leads/{lead}', [LeadController::class, 'destroy'])->name('leads.destroy');
     Route::post('/leads/{lead}/jobs', [AdminJobController::class, 'store'])->name('leads.jobs.store');
 
     Route::get('/schedule', CalendarController::class)->name('schedule');

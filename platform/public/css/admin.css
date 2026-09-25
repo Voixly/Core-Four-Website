@@ -493,6 +493,22 @@ input:focus, select:focus, textarea:focus {
 
 .user-edit summary::-webkit-details-marker { display: none; }
 
+.spam-delete {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--divider);
+}
+
+.spam-delete summary {
+  width: fit-content;
+  cursor: pointer;
+  color: #8a2e24;
+  font-weight: 700;
+}
+
+.spam-delete form { margin-top: 0.8rem; }
+.spam-delete .remember { display: flex; gap: 0.5rem; align-items: center; }
+
 .user-edit-grid {
   display: grid;
   gap: 0.85rem;
