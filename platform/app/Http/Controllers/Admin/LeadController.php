@@ -79,17 +79,10 @@ class LeadController extends Controller
 
     public function destroy(Request $request, Lead $lead): RedirectResponse
     {
-        $data = $request->validate([
+        $request->validate([
             'spam' => ['accepted'],
             'confirm_word' => ['required', 'in:DELETE'],
-            'confirm_name' => ['required', 'string', 'max:120'],
         ]);
-
-        if (strcasecmp(trim($data['confirm_name']), trim($lead->name)) !== 0) {
-            return back()->withErrors([
-                'confirm_name' => 'Type the lead name exactly before it can be deleted.',
-            ])->withInput();
-        }
 
         $name = $lead->name;
         $lead->delete();

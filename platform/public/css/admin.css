@@ -362,6 +362,7 @@ input:focus, select:focus, textarea:focus {
 .tag-pending { background: #e8efe3; }
 .tag-closed, .tag-lost { background: #dbd7cf; color: #626262; }
 .remember { display: flex; align-items: center; gap: 0.45rem; font-weight: 600; }
+.remember input { width: auto; flex: none; }
 
 .bottom-nav {
   display: none;

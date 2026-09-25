@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 @section('title', $lead->name)
 @section('content')
-<div class="grid" style="display:grid;grid-template-columns:1fr 1fr;gap:1rem">
+<div class="grid" style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:1rem">
     <div class="panel">
         @if($lead->source === 'hiring')
             <p>Hiring application · {{ $lead->need }} · {{ $lead->city }} {{ $lead->zip }}</p>
@@ -82,9 +82,6 @@
                 <label class="remember"><input type="checkbox" name="spam" value="1" required> This lead is spam</label>
                 <label>Type DELETE
                     <input name="confirm_word" required autocomplete="off" spellcheck="false" value="{{ old('confirm_word') }}">
-                </label>
-                <label>Type {{ $lead->name }}
-                    <input name="confirm_name" required autocomplete="off" spellcheck="false" value="{{ old('confirm_name') }}">
                 </label>
                 <button class="btn" type="submit">Delete this lead</button>
             </form>
