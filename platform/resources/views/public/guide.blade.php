@@ -1,4 +1,5 @@
 @extends('layouts.public')
+@section('robots', 'noindex, follow')
 @section('title', $guide->title.' | Core Four Roofing')
 @section('audience', $guide->audience === 'commercial' ? 'commercial' : 'residential')
 @section('description', rtrim($guide->excerpt, '.').'. Free PDF from Core Four Roofing in Tomball.')

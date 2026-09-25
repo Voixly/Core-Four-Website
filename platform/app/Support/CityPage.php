@@ -141,6 +141,18 @@ class CityPage
                 : 'Commercial roof surveys, TPO, metal, and maintenance across Texas. Tomball-based crews. Call '.$phone.'.';
         }
 
+        if ($city->slug === 'tomball' && $isRes) {
+            return 'Roof repair and replacement in Tomball, TX. Shingles, metal, and storm damage in Lakewood and Wildwood, from our Highway 249 shop. Call '.$phone.'.';
+        }
+
+        if ($city->slug === 'tomball') {
+            return 'Commercial roofing in Tomball, TX, from our Highway 249 shop. TPO, metal, and leak surveys for buildings along 249. Call '.$phone.'.';
+        }
+
+        if ($city->slug === 'humble' && ! $isRes) {
+            return 'Commercial roof repair in Humble, TX. TPO and metal surveys along US-59 and FM 1960, about 35 minutes from Tomball. Call '.$phone.'.';
+        }
+
         if ($isRes) {
             return 'Roofing company in '.$city->name.', TX — tile, metal, stone-coated steel, and storm repair in '.$hood.' and '.$profile['county'].'. Call '.$phone.'.';
         }

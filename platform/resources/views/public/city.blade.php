@@ -98,6 +98,10 @@
                 </a>
             @endforeach
         </div>
+        @if($city->type === 'commercial' && in_array($city->slug, ['humble', 'tomball'], true))
+            <h3>For property managers</h3>
+            <p><a href="{{ url('/commercial-roofing/repair-preventative-maintenance/') }}">Commercial roof repair</a> covers the leak call. <a href="{{ url('/navigating-code-for-commercial-roof-drainage-systems/') }}">Drainage code</a> and <a href="{{ url('/stop-tearing-it-down-how-restoration-extends-your-asset-value-by-ten-plus-years/') }}">coatings versus tear-off</a> are the two write-ups we send with a Humble or Tomball survey.</p>
+        @endif
         @if($seo['sibling'])
             <p class="city-switch">
                 @if($city->type === 'residential')

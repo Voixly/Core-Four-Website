@@ -106,8 +106,7 @@ class PageController extends Controller
         $listed = array_flip($pages);
         $cities = City::query()->orderBy('type')->orderBy('name')->get()
             ->reject(fn (City $city) => isset($listed[$city->path()]));
-        $guides = Guide::query()->where('is_active', true)->orderBy('slug')->get()
-            ->reject(fn (Guide $guide) => isset($listed['/guides/'.$guide->slug.'/']));
+        $guides = collect();
         $posts = array_values(array_filter(
             BlogPost::all(),
             fn (array $post) => ! isset($listed['/'.$post['slug'].'/'])
