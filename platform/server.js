@@ -244,7 +244,7 @@ async function main() {
   }
 
   await artisan(php, ['migrate', '--force'], env);
-  for (const seeder of ['CitySeeder', 'SettingSeeder', 'GuideSeeder', 'PipelineSeeder']) {
+  for (const seeder of ['CitySeeder', 'SettingSeeder', 'GuideSeeder', 'PipelineSeeder', 'ReportSeeder', 'EmailSequenceSeeder']) {
     await artisan(php, ['db:seed', `--class=${seeder}`, '--force'], env);
   }
   if (userCount(php, env) === 0) {
@@ -255,6 +255,17 @@ async function main() {
   await artisan(php, ['cache:clear'], env);
   ready = true;
   console.log('Laravel is ready');
+
+  let sendingMail = false;
+  const sendDueMail = () => {
+    if (sendingMail) return;
+    sendingMail = true;
+    artisan(php, ['email:send-due'], env).finally(() => {
+      sendingMail = false;
+    });
+  };
+  setTimeout(sendDueMail, 20000);
+  setInterval(sendDueMail, 5 * 60 * 1000);
 }
 
 main().catch((error) => {

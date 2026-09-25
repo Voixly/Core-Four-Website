@@ -15,7 +15,7 @@ class EmailSequenceSeeder extends Seeder
 
     protected function seedResidential(): void
     {
-        $sequence = EmailSequence::query()->updateOrCreate(
+        $sequence = EmailSequence::query()->firstOrCreate(
             ['name' => 'Residential 12-month nurture'],
             [
                 'audience' => 'residential',
@@ -44,7 +44,7 @@ class EmailSequenceSeeder extends Seeder
 
     protected function seedCommercial(): void
     {
-        $sequence = EmailSequence::query()->updateOrCreate(
+        $sequence = EmailSequence::query()->firstOrCreate(
             ['name' => 'Commercial 12-month nurture'],
             [
                 'audience' => 'commercial',
@@ -74,7 +74,7 @@ class EmailSequenceSeeder extends Seeder
     protected function writeSteps(EmailSequence $sequence, array $steps): void
     {
         foreach ($steps as $index => [$delay, $subject, $body]) {
-            $sequence->steps()->updateOrCreate(
+            $sequence->steps()->firstOrCreate(
                 ['position' => $index + 1],
                 [
                     'delay_days' => $delay,

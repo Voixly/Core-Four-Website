@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Report;
 use App\Support\PerformanceReport;
+use Database\Seeders\ReportSeeder;
 use Barryvdh\DomPDF\Facade\Pdf;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Response;
@@ -15,6 +16,7 @@ class ReportController extends Controller
 {
     public function index(): View
     {
+        $this->ensureReports();
         $reports = Report::query()
             ->whereNotIn('slug', ['residential-ads', 'review-shield'])
             ->orderBy('title')
@@ -33,6 +35,7 @@ class ReportController extends Controller
             return redirect()->route('admin.reviews.index');
         }
 
+        $this->ensureReports();
         $report = Report::query()->where('slug', $slug)->firstOrFail();
         $view = 'admin.reports.'.$report->slug;
         if (! view()->exists($view)) {
@@ -48,6 +51,7 @@ class ReportController extends Controller
     {
         abort_unless($slug === 'performance', 404);
 
+        $this->ensureReports();
         $report = Report::query()->where('slug', $slug)->firstOrFail();
         $perf = PerformanceReport::make();
 
@@ -59,5 +63,18 @@ class ReportController extends Controller
                 'isHtml5ParserEnabled' => true,
             ])
             ->download($perf['meta']['filename']);
+    }
+
+    private function ensureReports(): void
+    {
+        if (Report::query()->where('slug', 'performance')->exists()) {
+            return;
+        }
+
+        try {
+            (new ReportSeeder)->run();
+        } catch (\Throwable) {
+            // The page still renders when the report rows cannot be created.
+        }
     }
 }

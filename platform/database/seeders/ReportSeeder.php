@@ -31,7 +31,7 @@ class ReportSeeder extends Seeder
         ];
 
         foreach ($reports as $report) {
-            Report::query()->updateOrCreate(['slug' => $report['slug']], $report);
+            Report::query()->firstOrCreate(['slug' => $report['slug']], $report);
         }
     }
 }

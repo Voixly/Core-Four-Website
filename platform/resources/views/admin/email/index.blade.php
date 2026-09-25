@@ -1,6 +1,9 @@
 @extends('layouts.admin')
 @section('title', 'Email flows')
 @section('content')
+@if($sequences->isEmpty())
+    <div class="panel"><p>No email flows are set up yet.</p></div>
+@endif
 @foreach($sequences as $sequence)
     <div class="panel">
         <h3>{{ $sequence->name }}</h3>

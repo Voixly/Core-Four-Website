@@ -7,6 +7,7 @@ use App\Mail\NurtureMail;
 use App\Models\EmailSequence;
 use App\Models\EmailStep;
 use App\Models\Lead;
+use Database\Seeders\EmailSequenceSeeder;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
@@ -16,6 +17,14 @@ class EmailController extends Controller
 {
     public function index(): View
     {
+        if (EmailSequence::query()->doesntExist()) {
+            try {
+                (new EmailSequenceSeeder)->run();
+            } catch (\Throwable) {
+                // Show the empty state instead of a blank failure.
+            }
+        }
+
         $sequences = EmailSequence::query()->with('steps')->orderBy('audience')->get();
 
         return view('admin.email.index', compact('sequences'));
@@ -65,7 +74,13 @@ class EmailController extends Controller
             'type' => $step->sequence->audience ?? 'residential',
         ]);
 
-        Mail::to($data['email'])->send(new NurtureMail($step, $lead));
+        try {
+            Mail::to($data['email'])->send(new NurtureMail($step, $lead));
+        } catch (\Throwable) {
+            return back()->withErrors([
+                'email' => 'The test could not be sent. Confirm Resend is set up for corefourroofing.com.',
+            ]);
+        }
 
         return back()->with('success', 'Test sent to '.$data['email']);
     }
