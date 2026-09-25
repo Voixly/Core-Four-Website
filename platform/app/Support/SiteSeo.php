@@ -4,9 +4,9 @@ namespace App\Support;
 
 class SiteSeo
 {
-    public const DEFAULT_TITLE = 'Tomball Roof Repair & Houston Roofing | Core Four';
+    public const DEFAULT_TITLE = 'Houston Roof Repair & Commercial Roofing | Core Four';
 
-    public const DEFAULT_DESCRIPTION = 'Roof repair in Tomball and commercial roofing in Houston, from our Highway 249 shop. Metal, tile, TPO, and storm tarping. Austin and Dallas are scheduled.';
+    public const DEFAULT_DESCRIPTION = 'Roof repair and commercial roofing across Greater Houston, from our Tomball shop. Metal, tile, TPO, and storm tarping. Austin and Dallas are scheduled.';
 
     public const SHARE_PATH = '/images/social-share.webp';
 

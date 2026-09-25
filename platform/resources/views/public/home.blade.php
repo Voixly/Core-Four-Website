@@ -11,8 +11,8 @@
             <div class="hero-reviews">
                 @include('partials.elfsight-reviews')
             </div>
-            <h1>Roof repair in Tomball and commercial roofing in Houston</h1>
-            <p class="lead">The shop is on Highway 249 in Tomball. Houston buildings and northwest-side homes are the daily route. Austin and Dallas jobs are scheduled from here.</p>
+            <h1>Roof repair and commercial roofing across Greater Houston</h1>
+            <p class="lead">Homes and buildings across Greater Houston are the daily route. The shop is on Highway 249 in Tomball. Austin and Dallas jobs are scheduled from there.</p>
             <div class="hero-actions">
                 <a class="btn" href="tel:+1{{ $officePhoneTel }}">Call Us Today <i class="fas fa-arrow-right"></i></a>
             </div>
