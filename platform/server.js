@@ -139,9 +139,50 @@ function waitForPhp(port) {
   });
 }
 
+function formatEnvLine(key, value) {
+  if (/[\s#"']/.test(value) || value.includes('\\')) {
+    return `${key}="${value.replace(/\\/g, '\\\\').replace(/"/g, '\\"')}"`;
+  }
+  return `${key}=${value}`;
+}
+
+function writeMissingEnv(env) {
+  const file = path.join(appRoot, '.env');
+  const wanted = Object.keys(parseEnvFile(path.join(appRoot, '.env.example')));
+  const current = parseEnvFile(file);
+  let text = '';
+  try {
+    text = fs.readFileSync(file, 'utf8');
+  } catch {
+    text = '';
+  }
+  let changed = false;
+  for (const key of wanted) {
+    const value = env[key];
+    if (value === undefined || value === null || String(value).trim() === '') continue;
+    if (current[key]) continue;
+    const line = formatEnvLine(key, String(value).replace(/[\r\n]/g, ''));
+    const pattern = new RegExp(`^${key}=.*$`, 'm');
+    if (pattern.test(text)) {
+      text = text.replace(pattern, line);
+    } else {
+      if (text && !text.endsWith('\n')) text += '\n';
+      text += `${line}\n`;
+    }
+    changed = true;
+  }
+  if (!changed) return;
+  try {
+    fs.writeFileSync(file, text);
+    console.log('Copied Hostinger environment values into platform/.env');
+  } catch (error) {
+    console.error(`Could not update platform/.env: ${error.message}`);
+  }
+}
+
 function artisan(php, args, env) {
   return new Promise((resolve) => {
-    const child = spawn(php, ['artisan', ...args], { cwd: appRoot, env, stdio: 'inherit' });
+    const child = spawn(php, ['-d', 'variables_order=EGPCS', 'artisan', ...args], { cwd: appRoot, env, stdio: 'inherit' });
     const timer = setTimeout(() => {
       child.kill('SIGTERM');
       resolve(1);
@@ -154,7 +195,7 @@ function artisan(php, args, env) {
 }
 
 function userCount(php, env) {
-  const result = spawnSync(php, ['-r', `
+  const result = spawnSync(php, ['-d', 'variables_order=EGPCS', '-r', `
     require 'vendor/autoload.php';
     $app = require 'bootstrap/app.php';
     $app->make(Illuminate\\Contracts\\Console\\Kernel::class)->bootstrap();
@@ -205,9 +246,10 @@ async function main() {
   }
 
   const env = envForPhp();
+  writeMissingEnv(env);
   console.log(env.PROSPECT_INTAKE_KEY ? 'Prospect intake key is set' : 'Prospect intake key is missing');
   const phpPort = await freePort();
-  const child = spawn(php, ['-d', 'opcache.validate_timestamps=1', '-d', 'opcache.revalidate_freq=0', '-S', `127.0.0.1:${phpPort}`, router], {
+  const child = spawn(php, ['-d', 'variables_order=EGPCS', '-d', 'opcache.validate_timestamps=1', '-d', 'opcache.revalidate_freq=0', '-S', `127.0.0.1:${phpPort}`, router], {
     cwd: publicDir,
     env,
     stdio: 'inherit',
@@ -254,6 +296,7 @@ async function main() {
   await artisan(php, ['db:seed', '--class=EnsureAdminSeeder', '--force'], env);
   await artisan(php, ['view:clear'], env);
   await artisan(php, ['cache:clear'], env);
+  await artisan(php, ['config:clear'], env);
   ready = true;
   console.log('Laravel is ready');
 

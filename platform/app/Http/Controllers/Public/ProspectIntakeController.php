@@ -62,7 +62,20 @@ class ProspectIntakeController extends Controller
 
     public static function intakeKey(): string
     {
-        $key = trim((string) (config('services.prospect.key') ?: getenv('PROSPECT_INTAKE_KEY') ?: ''));
+        $candidates = [
+            config('services.prospect.key'),
+            $_SERVER['PROSPECT_INTAKE_KEY'] ?? null,
+            $_ENV['PROSPECT_INTAKE_KEY'] ?? null,
+            getenv('PROSPECT_INTAKE_KEY') ?: null,
+        ];
+        $key = '';
+        foreach ($candidates as $candidate) {
+            $candidate = trim((string) $candidate);
+            if ($candidate !== '') {
+                $key = $candidate;
+                break;
+            }
+        }
         if (strlen($key) >= 2 && ($key[0] === '"' || $key[0] === "'") && $key[0] === $key[strlen($key) - 1]) {
             $key = trim(substr($key, 1, -1));
         }
