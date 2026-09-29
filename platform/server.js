@@ -247,7 +247,6 @@ async function main() {
 
   const env = envForPhp();
   writeMissingEnv(env);
-  console.log(env.PROSPECT_INTAKE_KEY ? 'Prospect intake key is set' : 'Prospect intake key is missing');
   const phpPort = await freePort();
   const child = spawn(php, ['-d', 'variables_order=EGPCS', '-d', 'opcache.validate_timestamps=1', '-d', 'opcache.revalidate_freq=0', '-S', `127.0.0.1:${phpPort}`, router], {
     cwd: publicDir,

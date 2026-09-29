@@ -21,9 +21,6 @@
             @endif
             <form class="lead-form" method="post" action="{{ route('prospects.store') }}">
                 @csrf
-                <label>Key
-                    <input name="key" required autocomplete="off" value="{{ old('key') }}">
-                </label>
                 <label>Name
                     <input name="name" required autocomplete="name" value="{{ old('name') }}">
                 </label>

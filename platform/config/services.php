@@ -8,9 +8,6 @@ return [
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
     'resend' => ['key' => env('RESEND_API_KEY', env('RESEND_KEY'))],
-    'prospect' => [
-        'key' => env('PROSPECT_INTAKE_KEY'),
-    ],
     'jobnimbus' => [
         'key' => env('JOBNIMBUS_API_KEY'),
         'actor' => env('JOBNIMBUS_ACTOR', 'bmedina@corefourroofing.com'),
