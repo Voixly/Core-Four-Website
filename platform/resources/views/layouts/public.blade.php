@@ -187,6 +187,13 @@
 <div id="cfr-chat" data-audience="@yield('audience', 'residential')">
     <div class="chat-panel">
         <div class="chat-head">Core Four chat</div>
+        <form class="chat-gate">
+            <p>Your name and email start the chat.</p>
+            <label>Name<input name="name" required maxlength="120" autocomplete="name"></label>
+            <label>Email<input name="email" type="email" required maxlength="190" autocomplete="email"></label>
+            <p class="chat-gate-error" hidden>Enter your name and a valid email.</p>
+            <button class="btn" type="submit">Start chat</button>
+        </form>
         <div class="chat-log"></div>
         <form class="chat-compose">
             <input name="body" maxlength="2000" placeholder="Ask about a leak or replacement…" autocomplete="off">

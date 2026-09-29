@@ -16,34 +16,55 @@ class ChatWidgetController extends Controller
         $data = $request->validate([
             'page_url' => ['nullable', 'string', 'max:255'],
             'audience' => ['nullable', 'in:residential,commercial'],
+            'name' => ['nullable', 'string', 'max:120'],
+            'email' => ['nullable', 'email', 'max:190'],
         ]);
 
-        $token = $request->cookie('cfr_chat') ?: bin2hex(random_bytes(16));
+        $name = trim((string) ($data['name'] ?? ''));
+        $email = strtolower(trim((string) ($data['email'] ?? '')));
+        $token = $request->cookie('cfr_chat');
+        $conversation = $token
+            ? Conversation::query()->where('visitor_token', $token)->first()
+            : null;
 
-        $conversation = Conversation::query()->firstOrCreate(
-            ['visitor_token' => $token],
-            [
+        if (! $conversation) {
+            if ($name === '' || $email === '') {
+                return response()->json(['ready' => false]);
+            }
+
+            $token = bin2hex(random_bytes(16));
+            $conversation = Conversation::query()->create([
+                'visitor_token' => $token,
+                'name' => $name,
+                'email' => $email,
                 'page_url' => $data['page_url'] ?? $request->headers->get('referer'),
                 'audience' => $data['audience'] ?? 'residential',
                 'status' => 'open',
                 'last_message_at' => now(),
-            ]
-        );
+            ]);
+            $this->greet($conversation);
+
+            return response()
+                ->json($this->payload($conversation))
+                ->cookie('cfr_chat', $token, 60 * 24 * 30);
+        }
+
+        if ($name !== '' && $email !== '') {
+            $conversation->fill([
+                'name' => $name,
+                'email' => $email,
+            ])->save();
+        }
+
+        if (! $this->hasContact($conversation)) {
+            return response()->json(['ready' => false]);
+        }
 
         if ($conversation->status === 'closed') {
             $conversation->update(['status' => 'open', 'last_message_at' => now()]);
         }
 
-        if ($conversation->messages()->count() === 0) {
-            $greeting = $conversation->audience === 'commercial'
-                ? 'Welcome — Core Four handles commercial roofs across Houston. Is this a leak, a survey, or a replacement bid?'
-                : 'Hey — Core Four here. Are you looking at a home leak, storm damage, or a full replacement?';
-
-            $conversation->messages()->create([
-                'sender' => 'bot',
-                'body' => $greeting,
-            ]);
-        }
+        $this->greet($conversation);
 
         return response()
             ->json($this->payload($conversation))
@@ -77,13 +98,10 @@ class ChatWidgetController extends Controller
         ]);
 
         $conversation = $this->conversation($request);
+        if (! $this->hasContact($conversation)) {
+            return response()->json(['message' => 'Name and email are required.'], 422);
+        }
 
-        if ($data['name'] ?? null) {
-            $conversation->name = $data['name'];
-        }
-        if ($data['email'] ?? null) {
-            $conversation->email = $data['email'];
-        }
         if ($data['phone'] ?? null) {
             $conversation->phone = $data['phone'];
         }
@@ -113,11 +131,36 @@ class ChatWidgetController extends Controller
         $staffOnline = User::query()->where('is_active', true)->whereIn('role', ['admin', 'agency', 'owner', 'staff'])->exists();
 
         return [
+            'ready' => true,
             'conversation_id' => $conversation->id,
             'status' => $conversation->status,
+            'name' => $conversation->name,
+            'email' => $conversation->email,
             'staff_online' => $staffOnline,
             'messages' => $conversation->messages()->orderBy('id')->get(),
         ];
+    }
+
+    protected function hasContact(Conversation $conversation): bool
+    {
+        return trim((string) $conversation->name) !== ''
+            && filter_var($conversation->email, FILTER_VALIDATE_EMAIL);
+    }
+
+    protected function greet(Conversation $conversation): void
+    {
+        if ($conversation->messages()->exists()) {
+            return;
+        }
+
+        $greeting = $conversation->audience === 'commercial'
+            ? 'Welcome — Core Four handles commercial roofs across Houston. Is this a leak, a survey, or a replacement bid?'
+            : 'Hey — Core Four here. Are you looking at a home leak, storm damage, or a full replacement?';
+
+        $conversation->messages()->create([
+            'sender' => 'bot',
+            'body' => $greeting,
+        ]);
     }
 
     protected function maybeBotReply(Conversation $conversation, string $body): void

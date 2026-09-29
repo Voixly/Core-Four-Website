@@ -1074,8 +1074,17 @@ textarea { min-height: 120px; }
   box-shadow: 0 20px 50px rgba(21, 38, 27, 0.25);
 }
 .chat-panel.open { display: flex; }
+.chat-panel:not(.is-ready) { height: auto; }
+.chat-panel, .chat-panel * { box-sizing: border-box; }
 .chat-head { background: var(--forest-green); color: var(--white); padding: 14px 18px; font-weight: 600; }
-.chat-log { flex: 1; overflow: auto; padding: 16px; display: grid; gap: 10px; }
+.chat-gate { display: grid; gap: 10px; padding: 16px; }
+.chat-gate p { margin: 0; font-size: 15px; }
+.chat-gate label { display: grid; gap: 6px; }
+.chat-gate-error { color: #7a2e12; font-weight: 600; }
+.chat-panel.is-ready .chat-gate,
+.chat-panel:not(.is-ready) .chat-log,
+.chat-panel:not(.is-ready) .chat-compose { display: none; }
+.chat-log { flex: 1; overflow: auto; padding: 16px; display: grid; gap: 10px; align-content: start; }
 .bubble { max-width: 85%; padding: 10px 14px; border-radius: 14px; font-size: 15px; }
 .bubble.bot, .bubble.staff, .bubble.system { background: var(--paper); }
 .bubble.visitor { background: var(--lime-green); color: var(--forest-green); margin-left: auto; }

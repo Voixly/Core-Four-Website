@@ -2,6 +2,7 @@
 @section('title', 'Chat '.$conversation->id)
 @section('content')
 <div class="panel chat-admin">
+    <p>{{ $conversation->name ?: 'No name' }}@if($conversation->email) · {{ $conversation->email }}@endif</p>
     <div class="messages" id="chat-log">
         @foreach($conversation->messages as $message)
             <div class="bubble {{ $message->sender }}">

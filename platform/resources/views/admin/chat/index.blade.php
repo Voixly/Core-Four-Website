@@ -5,7 +5,7 @@
     <tr><th>Visitor</th><th>Audience</th><th>Status</th><th>Messages</th><th>Last</th></tr>
     @foreach($conversations as $conversation)
         <tr>
-            <td><a href="{{ route('admin.chat.show', $conversation) }}">{{ $conversation->name ?: 'Visitor '.$conversation->id }}</a></td>
+            <td><a href="{{ route('admin.chat.show', $conversation) }}">{{ $conversation->name ?: 'Visitor '.$conversation->id }}</a>@if($conversation->email)<br><small>{{ $conversation->email }}</small>@endif</td>
             <td>{{ $conversation->audience }}</td>
             <td>{{ $conversation->status }}</td>
             <td>{{ $conversation->messages_count }}</td>
