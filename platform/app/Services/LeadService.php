@@ -77,6 +77,7 @@ class LeadService
             $fields['notes'] = $data['notes'];
         }
 
+        $switched = false;
         if ($lead) {
             if ($lead->source !== 'prospect') {
                 $lead->log(null, 'note', 'Prospect intake matched an existing '.$lead->source.' lead. Left on the current email flow.');
@@ -84,7 +85,8 @@ class LeadService
                 return $lead;
             }
 
-            if ($lead->type !== $data['type']) {
+            $switched = $lead->type !== $data['type'];
+            if ($switched) {
                 EmailSend::query()
                     ->where('lead_id', $lead->id)
                     ->where('status', 'scheduled')
@@ -104,6 +106,9 @@ class LeadService
         }
 
         $this->enroll($lead);
+        if ($switched) {
+            $this->reactivateCurrentSequence($lead);
+        }
 
         return $lead;
     }
@@ -147,6 +152,31 @@ class LeadService
             (new EmailSequenceSeeder)->run();
         } catch (\Throwable) {
             // The prospect is still saved if the email steps cannot be created.
+        }
+    }
+
+    private function reactivateCurrentSequence(Lead $lead): void
+    {
+        $name = $this->sequenceName($lead);
+        if ($name === null) {
+            return;
+        }
+
+        $sequence = EmailSequence::query()->where('name', $name)->where('is_active', true)->first();
+        if (! $sequence) {
+            return;
+        }
+
+        foreach ($sequence->steps()->where('is_active', true)->get() as $step) {
+            EmailSend::query()
+                ->where('email_step_id', $step->id)
+                ->where('lead_id', $lead->id)
+                ->whereNull('sent_at')
+                ->where('status', 'skipped')
+                ->update([
+                    'status' => 'scheduled',
+                    'scheduled_at' => now()->addDays($step->delay_days),
+                ]);
         }
     }
 
