@@ -63,7 +63,7 @@ class JobController extends Controller
         return view('admin.jobs.create', [
             'pipelines' => $this->pipelines(),
             'staff' => User::staff()->get(),
-            'leads' => Lead::query()->whereNull('job_id')->latest()->limit(80)->get(),
+            'leads' => Lead::query()->exceptProspects()->whereNull('job_id')->latest()->limit(80)->get(),
         ]);
     }
 
@@ -141,6 +141,8 @@ class JobController extends Controller
 
     public function store(Request $request, Lead $lead, JobService $jobs): RedirectResponse
     {
+        abort_unless($lead->source !== 'prospect', 404);
+
         $data = $request->validate([
             'pipeline_id' => ['required', 'exists:pipelines,id'],
             'address' => ['nullable', 'string', 'max:190'],

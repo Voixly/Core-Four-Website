@@ -15,6 +15,11 @@ class Lead extends Model
         'status', 'source', 'page_url', 'assigned_to', 'notes', 'job_id',
     ];
 
+    public function scopeExceptProspects($query)
+    {
+        return $query->where('source', '!=', 'prospect');
+    }
+
     public function assignee(): BelongsTo
     {
         return $this->belongsTo(User::class, 'assigned_to');

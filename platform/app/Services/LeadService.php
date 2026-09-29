@@ -13,6 +13,29 @@ class LeadService
 {
     public function capture(array $data, ?User $actor = null): Lead
     {
+        $email = strtolower(trim((string) ($data['email'] ?? '')));
+        if ($email !== '' && ($data['source'] ?? 'website') !== 'hiring') {
+            $prospect = Lead::query()
+                ->where('source', 'prospect')
+                ->whereRaw('lower(email) = ?', [$email])
+                ->first();
+            if ($prospect) {
+                $prospect->fill([
+                    'name' => $data['name'] ?? $prospect->name,
+                    'phone' => $data['phone'] ?? $prospect->phone,
+                    'zip' => $data['zip'] ?? $prospect->zip,
+                    'city' => $data['city'] ?? $prospect->city,
+                    'type' => $data['type'] ?? $prospect->type,
+                    'need' => $data['need'] ?? $prospect->need,
+                    'page_url' => $data['page_url'] ?? $prospect->page_url,
+                    'notes' => $data['notes'] ?? $prospect->notes,
+                ]);
+                $prospect->save();
+
+                return $this->promote($prospect, $actor, 'They used the website form.');
+            }
+        }
+
         $lead = Lead::query()->create([
             'name' => $data['name'],
             'email' => $data['email'] ?? null,
@@ -111,7 +134,31 @@ class LeadService
             return $commercial ? 'Commercial prospect outreach' : 'Residential prospect outreach';
         }
 
+        if ($lead->source === 'responded') {
+            return null;
+        }
+
         return $commercial ? 'Commercial 12-month nurture' : 'Residential 12-month nurture';
+    }
+
+    public function promote(Lead $lead, ?User $actor = null, string $reason = 'Marked as responded.'): Lead
+    {
+        if ($lead->source !== 'prospect') {
+            return $lead;
+        }
+
+        $lead->update([
+            'source' => 'responded',
+            'status' => 'contacted',
+        ]);
+        EmailSend::query()
+            ->where('lead_id', $lead->id)
+            ->where('status', 'scheduled')
+            ->update(['status' => 'skipped']);
+        $lead->log($actor, 'updated', $reason.' Moved into Leads. Remaining prospect emails were stopped.');
+        $this->notifyOffice($lead);
+
+        return $lead;
     }
 
     protected function notifyOffice(Lead $lead): void

@@ -7,6 +7,7 @@ use App\Models\Lead;
 use App\Models\Pipeline;
 use App\Models\User;
 use App\Services\JobService;
+use App\Services\LeadService;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
@@ -16,6 +17,7 @@ class LeadController extends Controller
     public function index(Request $request): View
     {
         $leads = Lead::query()
+            ->exceptProspects()
             ->with('assignee')
             ->when($request->status, fn ($q, $status) => $q->where('status', $status))
             ->when($request->type, fn ($q, $type) => $q->where('type', $type))
@@ -33,6 +35,37 @@ class LeadController extends Controller
             ->withQueryString();
 
         return view('admin.leads.index', compact('leads'));
+    }
+
+    public function prospects(Request $request): View
+    {
+        $prospects = Lead::query()
+            ->with('assignee')
+            ->where('source', 'prospect')
+            ->when($request->type, fn ($q, $type) => $q->where('type', $type))
+            ->when($request->q, function ($q, $term) {
+                $q->where(function ($inner) use ($term) {
+                    $inner->where('name', 'like', "%{$term}%")
+                        ->orWhere('email', 'like', "%{$term}%")
+                        ->orWhere('phone', 'like', "%{$term}%")
+                        ->orWhere('city', 'like', "%{$term}%");
+                });
+            })
+            ->latest()
+            ->paginate(25)
+            ->withQueryString();
+
+        return view('admin.prospects.index', compact('prospects'));
+    }
+
+    public function respond(Request $request, Lead $lead, LeadService $leads): RedirectResponse
+    {
+        abort_unless($lead->source === 'prospect', 404);
+        $leads->promote($lead, $request->user());
+
+        return redirect()
+            ->route('admin.leads.show', $lead)
+            ->with('success', $lead->name.' is now a lead. The prospect emails are stopped.');
     }
 
     public function show(Lead $lead, JobService $jobs): View

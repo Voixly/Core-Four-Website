@@ -19,7 +19,7 @@ class DashboardController extends Controller
     public function __invoke(): View
     {
         return view('admin.dashboard', [
-            'newLeads' => Lead::query()->where('status', 'new')->count(),
+            'newLeads' => Lead::query()->exceptProspects()->where('status', 'new')->count(),
             'openChats' => Conversation::query()->where('status', 'open')->count(),
             'inspections' => Lead::query()->where('status', 'inspected')->whereDate('updated_at', today())->count(),
             'mailHealth' => [
@@ -27,7 +27,7 @@ class DashboardController extends Controller
                 'sent' => EmailSend::query()->where('status', 'sent')->whereDate('sent_at', today())->count(),
                 'failed' => EmailSend::query()->where('status', 'failed')->count(),
             ],
-            'recentLeads' => Lead::query()->latest()->limit(8)->get(),
+            'recentLeads' => Lead::query()->exceptProspects()->latest()->limit(8)->get(),
             'heldReviews' => Review::query()->where('status', 'held')->count(),
             'openJobs' => Job::query()->where('status', 'open')->count(),
             'waitingDocs' => JobDocumentRequest::query()

@@ -31,7 +31,14 @@
             </label>
             <button class="btn" type="submit">Save</button>
         </form>
-        @unless($lead->source === 'hiring')
+        @if($lead->source === 'prospect')
+            <form method="post" action="{{ route('admin.prospects.respond', $lead) }}" style="margin-top:1rem">
+                @csrf
+                <p>Still on the prospect drip. When they call, email, or ask for a visit, move them into Leads. That stops the remaining emails.</p>
+                <button class="btn" type="submit">They responded — make a lead</button>
+            </form>
+        @endif
+        @unless($lead->source === 'hiring' || $lead->source === 'prospect')
         <form method="post" action="{{ route('admin.reviews.store') }}" style="margin-top:1rem">
             @csrf
             <input type="hidden" name="lead_id" value="{{ $lead->id }}">

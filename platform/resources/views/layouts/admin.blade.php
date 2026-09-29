@@ -22,6 +22,7 @@
         <div class="side-label">Workspace</div>
         <a class="nav-link {{ request()->routeIs('admin.dashboard') ? 'active' : '' }}" href="{{ route('admin.dashboard') }}"><i class="fas fa-chart-line"></i> Dashboard</a>
         <a class="nav-link {{ request()->routeIs('admin.leads.*') ? 'active' : '' }}" href="{{ route('admin.leads.index') }}"><i class="fas fa-users"></i> Leads</a>
+        <a class="nav-link {{ request()->routeIs('admin.prospects.*') ? 'active' : '' }}" href="{{ route('admin.prospects.index') }}"><i class="fas fa-user-plus"></i> Prospects</a>
         <a class="nav-link {{ request()->routeIs('admin.jobs.*') ? 'active' : '' }}" href="{{ route('admin.jobs.index') }}"><i class="fas fa-diagram-project"></i> Jobs</a>
         <a class="nav-link {{ request()->routeIs('admin.schedule') ? 'active' : '' }}" href="{{ route('admin.schedule') }}"><i class="fas fa-calendar-days"></i> Schedule</a>
         <a class="nav-link {{ request()->routeIs('admin.chat.*') ? 'active' : '' }}" href="{{ route('admin.chat.index') }}"><i class="fas fa-comments"></i> Chat</a>
