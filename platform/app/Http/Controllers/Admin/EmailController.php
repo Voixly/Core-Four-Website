@@ -33,13 +33,20 @@ class EmailController extends Controller
             }
         }
 
-        $sequences = EmailSequence::query()->with('steps')->get()->sortBy(function (EmailSequence $sequence) use ($required) {
+        $sequences = EmailSequence::query()->withCount('steps')->get()->sortBy(function (EmailSequence $sequence) use ($required) {
             $place = array_search($sequence->name, $required, true);
 
             return $place === false ? 100 : $place;
         })->values();
 
         return view('admin.email.index', compact('sequences'));
+    }
+
+    public function show(EmailSequence $sequence): View
+    {
+        $sequence->load('steps');
+
+        return view('admin.email.show', compact('sequence'));
     }
 
     public function edit(EmailStep $step): View
@@ -60,7 +67,7 @@ class EmailController extends Controller
         $data['is_active'] = $request->boolean('is_active');
         $step->update($data);
 
-        return redirect()->to(route('admin.email.index').'#flow-'.$step->email_sequence_id)->with('success', 'Step saved.');
+        return redirect()->to(route('admin.email.show', $step->email_sequence_id).'#step-'.$step->id)->with('success', 'Step saved.');
     }
 
     public function preview(EmailStep $step)

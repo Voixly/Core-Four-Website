@@ -1,6 +1,8 @@
 @extends('layouts.admin')
 @section('title', 'Email flows')
 @section('content')
+<div class="email-flows">
+<p>Open a flow to read each email and edit it.</p>
 @if($sequences->isEmpty())
     <div class="panel"><p>No email flows are set up yet.</p></div>
 @endif
@@ -10,23 +12,20 @@
 ] as $heading => $group)
     @if($group->isNotEmpty())
         <h2>{{ $heading }}</h2>
-        @foreach($group as $sequence)
-            <div class="panel" id="flow-{{ $sequence->id }}">
-                <h3>{{ $sequence->name }}</h3>
-                <p>{{ $sequence->description }} · {{ $sequence->audience }} · {{ $sequence->is_active ? 'active' : 'paused' }}</p>
-                @foreach($sequence->steps as $step)
-                    <article class="email-step">
-                        <p class="email-step-meta">Day {{ $step->delay_days }} · {{ $step->is_active ? 'active' : 'paused' }}</p>
-                        <h4>{{ $step->subject }}</h4>
-                        <div class="email-step-body">{{ $step->body }}</div>
-                        <p>
-                            <a class="btn" href="{{ route('admin.email.edit', $step) }}">Edit</a>
-                            <a href="{{ route('admin.email.preview', $step) }}" target="_blank">Preview</a>
-                        </p>
-                    </article>
-                @endforeach
-            </div>
-        @endforeach
+        <table>
+            <tr><th>Flow</th><th>Emails</th><th></th></tr>
+            @foreach($group as $sequence)
+                <tr>
+                    <td>
+                        <a href="{{ route('admin.email.show', $sequence) }}"><strong>{{ $sequence->name }}</strong></a>
+                        @if($sequence->description)<br><small>{{ $sequence->description }}</small>@endif
+                    </td>
+                    <td>{{ $sequence->steps_count }}</td>
+                    <td><a class="btn" href="{{ route('admin.email.show', $sequence) }}">Open</a></td>
+                </tr>
+            @endforeach
+        </table>
     @endif
 @endforeach
+</div>
 @endsection

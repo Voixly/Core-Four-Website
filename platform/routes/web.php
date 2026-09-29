@@ -192,6 +192,7 @@ Route::prefix('admin')->name('admin.')->middleware(['auth', 'role:admin,agency,o
         Route::get('/reports/{slug}', [ReportController::class, 'show'])->name('reports.show');
 
         Route::get('/email', [EmailController::class, 'index'])->name('email.index');
+        Route::get('/email/sequences/{sequence}', [EmailController::class, 'show'])->name('email.show');
         Route::get('/email/steps/{step}', [EmailController::class, 'edit'])->name('email.edit');
         Route::patch('/email/steps/{step}', [EmailController::class, 'update'])->name('email.update');
         Route::get('/email/steps/{step}/preview', [EmailController::class, 'preview'])->name('email.preview');

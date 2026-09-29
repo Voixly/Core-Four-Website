@@ -325,6 +325,13 @@ body.is-kanban-drag .kanban-grip {
   font-size: 1.15rem;
 }
 
+.email-flows h2 {
+  margin: 1.4rem 0 0.6rem;
+  font-size: 1.2rem;
+}
+
+.email-flows table { margin-bottom: 0.4rem; }
+
 .email-step {
   border-top: 1px solid var(--divider);
   margin-top: 1rem;
