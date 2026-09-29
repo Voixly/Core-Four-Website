@@ -17,15 +17,27 @@ class EmailController extends Controller
 {
     public function index(): View
     {
-        if (EmailSequence::query()->doesntExist()) {
+        $required = [
+            'Residential 12-month nurture',
+            'Commercial 12-month nurture',
+            'Residential prospect outreach',
+            'Commercial prospect outreach',
+            'Commercial coatings prospect outreach',
+        ];
+        $present = EmailSequence::query()->whereIn('name', $required)->pluck('name');
+        if ($present->count() < count($required)) {
             try {
                 (new EmailSequenceSeeder)->run();
             } catch (\Throwable) {
-                // Show the empty state instead of a blank failure.
+                // Show whatever sequences already exist.
             }
         }
 
-        $sequences = EmailSequence::query()->with('steps')->orderBy('audience')->get();
+        $sequences = EmailSequence::query()->with('steps')->get()->sortBy(function (EmailSequence $sequence) use ($required) {
+            $place = array_search($sequence->name, $required, true);
+
+            return $place === false ? 100 : $place;
+        })->values();
 
         return view('admin.email.index', compact('sequences'));
     }
@@ -48,7 +60,7 @@ class EmailController extends Controller
         $data['is_active'] = $request->boolean('is_active');
         $step->update($data);
 
-        return redirect()->route('admin.email.index')->with('success', 'Step saved.');
+        return redirect()->to(route('admin.email.index').'#flow-'.$step->email_sequence_id)->with('success', 'Step saved.');
     }
 
     public function preview(EmailStep $step)
