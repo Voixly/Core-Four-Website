@@ -71,7 +71,12 @@ return Application::configure(basePath: dirname(__DIR__))
                     ]);
                 }
 
-                $text = 'MySQL refused the login. '.$detail;
+                $login = str_contains($message, '1045')
+                    || str_contains($message, 'Access denied')
+                    || isset($password[1]);
+                $text = $login
+                    ? 'MySQL refused the login. '.$detail
+                    : 'The database rejected the save. '.($state[0] ?? 'SQL error');
             } else {
                 $text = "PHP is running, but the page failed: ".$e::class;
                 if (! preg_match('/password|SQLSTATE|\/Users\/|\/home\//i', $message)) {

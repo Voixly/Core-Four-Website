@@ -7,6 +7,7 @@ use App\Models\EmailSequence;
 use App\Models\EmailSend;
 use App\Models\Lead;
 use App\Models\User;
+use App\Support\LeadTypeColumn;
 use Database\Seeders\EmailSequenceSeeder;
 use Illuminate\Support\Facades\Mail;
 
@@ -60,6 +61,9 @@ class LeadService
 
     public function captureProspect(array $data): Lead
     {
+        if (($data['type'] ?? '') === 'coatings') {
+            LeadTypeColumn::ensure();
+        }
         $this->ensureProspectSequences();
         $email = strtolower(trim((string) $data['email']));
         $lead = Lead::query()->whereRaw('lower(email) = ?', [$email])->first();

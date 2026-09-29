@@ -12,6 +12,6 @@ return new class extends Migration
 
     public function down(): void
     {
-        // Existing coatings rows would not fit back into the old list.
+        // Coatings rows would not fit back into the original residential/commercial list.
     }
 };
