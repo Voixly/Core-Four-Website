@@ -1,53 +1,100 @@
 @extends('layouts.admin')
 @section('title', $conversation->channelLabel().' · '.($conversation->name ?: 'Visitor'))
 @section('content')
-<div class="panel chat-admin">
-    <div class="chat-kind">
-        <span class="kind-pill {{ $conversation->isEmail() ? 'is-email' : '' }}">{{ $conversation->channelLabel() }}</span>
-        @if($conversation->awaiting_staff)<span class="chat-waiting">Needs a reply</span>@endif
+@php
+    $visitorLabel = $conversation->isEmail() ? 'Email' : ($conversation->name ?: 'Visitor');
+    $bubbleLabel = function (string $sender) use ($visitorLabel): string {
+        return match ($sender) {
+            'staff' => 'Office',
+            'bot' => 'Core Four',
+            default => $visitorLabel,
+        };
+    };
+@endphp
+<div class="chat-thread">
+    <div class="panel chat-head">
+        <div>
+            <div class="chat-kind">
+                <span class="kind-pill {{ $conversation->isEmail() ? 'is-email' : '' }}">{{ $conversation->channelLabel() }}</span>
+                <span class="tag tag-{{ $conversation->status }}">{{ $conversation->status }}</span>
+                @if($conversation->awaiting_staff)<span class="chat-waiting">Needs a reply</span>@endif
+            </div>
+            <h2>{{ $conversation->name ?: 'No name' }}</h2>
+            <p class="chat-note">
+                @if($conversation->email){{ $conversation->email }}@endif
+                @if($conversation->phone) · {{ $conversation->phone }}@endif
+                @if($conversation->audience && $conversation->audience !== 'unknown') · {{ ucfirst($conversation->audience) }}@endif
+            </p>
+            @if($conversation->isEmail())
+                <p class="chat-note">Subject: {{ $conversation->subject ?: 'Core Four Roofing' }}. Sending from here emails {{ $conversation->email }}.</p>
+            @else
+                <p class="chat-note">Website chat. A reply stays on the site.@if($conversation->page_url) They were on <a href="{{ $conversation->page_url }}">{{ $conversation->page_url }}</a>.@endif</p>
+            @endif
+        </div>
+        <div class="chat-actions">
+            @if($conversation->lead)
+                <a class="btn btn-ghost" href="{{ route('admin.leads.show', $conversation->lead) }}">Open lead</a>
+            @else
+                <form method="post" action="{{ route('admin.chat.convert', $conversation) }}">@csrf<button class="btn" type="submit">Convert to lead</button></form>
+            @endif
+            <form method="post" action="{{ route('admin.chat.close', $conversation) }}">@csrf<button class="btn btn-ghost" type="submit">Close</button></form>
+        </div>
     </div>
-    <p>{{ $conversation->name ?: 'No name' }}@if($conversation->email) · {{ $conversation->email }}@endif</p>
-    @if($conversation->isEmail())
-        <p class="chat-note">Subject: {{ $conversation->subject ?: 'Core Four Roofing' }}. A reply here is emailed to {{ $conversation->email }}. It does not show up in the website chat.</p>
-    @else
-        <p class="chat-note">This is the website chat. A reply stays on the site and is not emailed.</p>
-    @endif
-    @if($conversation->lead)
-        <p><a class="btn" href="{{ route('admin.leads.show', $conversation->lead) }}">Open lead</a></p>
-    @endif
-    <div class="messages" id="chat-log">
+
+    <div class="chat-log" id="chat-log">
         @foreach($conversation->messages as $message)
             <div class="bubble {{ $message->sender }}">
-                <small>{{ $message->sender === 'staff' ? 'Office' : ($conversation->isEmail() && $message->sender === 'visitor' ? 'Email' : $message->sender) }}</small><br>{{ $message->body }}
+                <div class="bubble-meta">
+                    <span>{{ $bubbleLabel($message->sender) }}</span>
+                    <time>{{ $message->created_at?->timezone(config('app.timezone'))->format('M j, g:i a') }}</time>
+                </div>
+                <div class="bubble-body">{{ $message->body }}</div>
             </div>
         @endforeach
     </div>
-    <div class="filters" style="margin-top:1rem">
-        @foreach($canned as $reply)
-            <button class="btn" type="button" onclick="document.querySelector('[name=body]').value = this.textContent">{{ $reply }}</button>
-        @endforeach
-    </div>
-    <form method="post" action="{{ route('admin.chat.reply', $conversation) }}" class="chat-compose">
+
+    <form method="post" action="{{ route('admin.chat.reply', $conversation) }}" class="panel chat-compose">
         @csrf
-        <textarea name="body" required rows="5" placeholder="{{ $conversation->isEmail() ? 'Write the email' : 'Reply in the website chat' }}">{{ old('body') }}</textarea>
-        <button class="btn" type="submit">{{ $conversation->isEmail() ? 'Send email' : 'Send' }}</button>
+        <div class="chat-canned">
+            @foreach($canned as [$label, $reply])
+                <button class="chip" type="button" data-reply="{{ $reply }}">{{ $label }}</button>
+            @endforeach
+        </div>
+        <div class="chat-send">
+            <textarea name="body" required rows="3" placeholder="{{ $conversation->isEmail() ? 'Write the email' : 'Reply in the website chat' }}">{{ old('body') }}</textarea>
+            <button class="btn" type="submit">{{ $conversation->isEmail() ? 'Send email' : 'Send' }}</button>
+        </div>
     </form>
-    <p style="margin-top:1rem">
-        @unless($conversation->lead_id)
-            <form method="post" action="{{ route('admin.chat.convert', $conversation) }}" style="display:inline">@csrf<button class="btn" type="submit">Convert to lead</button></form>
-        @endunless
-        <form method="post" action="{{ route('admin.chat.close', $conversation) }}" style="display:inline">@csrf<button class="btn" type="submit">Close</button></form>
-    </p>
 </div>
 <script>
-setInterval(async () => {
-  const res = await fetch(@json(route('admin.chat.poll', $conversation)));
-  const data = await res.json();
+(() => {
   const log = document.getElementById('chat-log');
   const emailThread = @json($conversation->isEmail());
-  const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-  const label = (sender) => sender === 'staff' ? 'Office' : (emailThread && sender === 'visitor' ? 'Email' : sender);
-  log.innerHTML = data.messages.map(m => `<div class="bubble ${esc(m.sender)}"><small>${esc(label(m.sender))}</small><br>${esc(m.body)}</div>`).join('');
-}, 4000);
+  const visitorLabel = @json($visitorLabel);
+  const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  const label = (sender) => sender === 'staff' ? 'Office' : (sender === 'bot' ? 'Core Four' : visitorLabel);
+  const when = (iso) => {
+    if (!iso) return '';
+    return new Date(iso).toLocaleString('en-US', { timeZone: 'America/Chicago', month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' });
+  };
+  const paint = (messages) => {
+    const nearBottom = log.scrollHeight - log.scrollTop - log.clientHeight < 90;
+    log.innerHTML = messages.map((m) => `<div class="bubble ${esc(m.sender)}"><div class="bubble-meta"><span>${esc(label(m.sender))}</span><time>${esc(when(m.created_at))}</time></div><div class="bubble-body">${esc(m.body)}</div></div>`).join('');
+    if (nearBottom) log.scrollTop = log.scrollHeight;
+  };
+  document.querySelectorAll('.chat-canned .chip').forEach((button) => {
+    button.addEventListener('click', () => {
+      const field = document.querySelector('[name=body]');
+      field.value = button.dataset.reply;
+      field.focus();
+    });
+  });
+  log.scrollTop = log.scrollHeight;
+  setInterval(async () => {
+    const res = await fetch(@json(route('admin.chat.poll', $conversation)));
+    const data = await res.json();
+    paint(data.messages);
+  }, 4000);
+})();
 </script>
 @endsection

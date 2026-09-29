@@ -28,6 +28,7 @@ class ChatController extends Controller
         ];
 
         $conversations = Conversation::query()
+            ->with('latestMessage')
             ->withCount('messages')
             ->when($channel, fn ($query) => $query->where('channel', $channel))
             ->orderByDesc('awaiting_staff')
@@ -43,10 +44,10 @@ class ChatController extends Controller
         $conversation->load(['messages' => fn ($query) => $query->orderBy('id'), 'lead']);
 
         $canned = [
-            'Thanks for reaching out — I can have an estimator call you. What ZIP are we looking at?',
-            'If it is leaking now, call (281) 541-0027 for a same-day tarp.',
-            'We can do a free home inspection this week. What is the best number to reach you?',
-            'For commercial we start with a roof survey — nights and weekends are available so tenants stay.',
+            ['Ask for the ZIP', 'Thanks for reaching out — I can have an estimator call you. What ZIP are we looking at?'],
+            ['Same-day tarp', 'If it is leaking now, call (281) 541-0027 for a same-day tarp.'],
+            ['Offer an inspection', 'We can do a free home inspection this week. What is the best number to reach you?'],
+            ['Commercial survey', 'For commercial we start with a roof survey — nights and weekends are available so tenants stay.'],
         ];
 
         return view('admin.chat.show', compact('conversation', 'canned'));
