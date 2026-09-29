@@ -5,9 +5,10 @@
 <form class="filters" method="get">
     <input name="q" value="{{ request('q') }}" placeholder="Search name, phone, city">
     <select name="type">
-        <option value="">Res + comm</option>
+        <option value="">All</option>
         <option value="residential" @selected(request('type')==='residential')>Residential</option>
         <option value="commercial" @selected(request('type')==='commercial')>Commercial</option>
+        <option value="coatings" @selected(request('type')==='coatings')>Commercial coatings</option>
     </select>
     <button class="btn" type="submit">Filter</button>
 </form>
@@ -21,7 +22,7 @@
             <td><a href="{{ route('admin.leads.show', $prospect) }}">{{ $prospect->name }}</a></td>
             <td>{{ $prospect->email }}</td>
             <td>{{ $prospect->city }}</td>
-            <td>{{ $prospect->type }}</td>
+            <td>{{ $prospect->typeLabel() }}</td>
             <td>
                 <form method="post" action="{{ route('admin.prospects.respond', $prospect) }}">
                     @csrf

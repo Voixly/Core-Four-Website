@@ -22,7 +22,7 @@ class ProspectIntakeController extends Controller
             'email' => ['required', 'email', 'max:190'],
             'phone' => ['nullable', 'string', 'max:40'],
             'city' => ['nullable', 'string', 'max:80'],
-            'type' => ['required', 'in:residential,commercial'],
+            'type' => ['required', 'in:residential,commercial,coatings'],
             'notes' => ['nullable', 'string', 'max:2000'],
         ]);
 
@@ -36,7 +36,11 @@ class ProspectIntakeController extends Controller
         ]);
 
         $flow = $lead->source === 'prospect'
-            ? ($lead->type === 'commercial' ? 'commercial prospect drip' : 'residential prospect drip')
+            ? match ($lead->type) {
+                'commercial' => 'commercial prospect drip',
+                'coatings' => 'commercial coatings prospect drip',
+                default => 'residential prospect drip',
+            }
             : 'existing lead, left on its current emails';
 
         return view('public.prospects', [

@@ -15,6 +15,15 @@ class Lead extends Model
         'status', 'source', 'page_url', 'assigned_to', 'notes', 'job_id',
     ];
 
+    public function typeLabel(): string
+    {
+        return match ($this->type) {
+            'coatings' => 'Commercial coatings',
+            'commercial' => 'Commercial',
+            default => 'Residential',
+        };
+    }
+
     public function scopeExceptProspects($query)
     {
         return $query->where('source', '!=', 'prospect');

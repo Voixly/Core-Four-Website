@@ -26,9 +26,9 @@ class JobService
         $source = strtolower((string) $lead->source.' '.$lead->page_url);
         $slug = null;
 
-        if ($lead->type === 'commercial') {
+        if (in_array($lead->type, ['commercial', 'coatings'], true)) {
             $slug = match (true) {
-                str_contains($need, 'coat') => 'commercial-replacement-coating',
+                $lead->type === 'coatings' || str_contains($need, 'coat') => 'commercial-replacement-coating',
                 str_contains($need, 'maint') || str_contains($need, 'leak') => 'commercial-repair-maintenance',
                 str_contains($need, 'replace') => 'commercial-replacement-coating',
                 default => 'commercial-survey-bid',
@@ -42,8 +42,10 @@ class JobService
             };
         }
 
+        $audience = $lead->type === 'residential' ? 'residential' : 'commercial';
+
         return Pipeline::query()->where('slug', $slug)->where('is_active', true)->first()
-            ?? Pipeline::query()->where('audience', $lead->type)->where('is_active', true)->orderBy('sort')->first();
+            ?? Pipeline::query()->where('audience', $audience)->where('is_active', true)->orderBy('sort')->first();
     }
 
     public function createFromLead(Lead $lead, array $data, ?User $actor = null): Job
@@ -63,7 +65,7 @@ class JobService
             'lead_id' => $lead->id,
             'pipeline_id' => $pipeline->id,
             'stage_id' => $stage->id,
-            'type' => $data['type'] ?? $lead->type,
+            'type' => ($data['type'] ?? $lead->type) === 'residential' ? 'residential' : 'commercial',
             'address' => $data['address'] ?? null,
             'city' => $data['city'] ?? $lead->city,
             'zip' => $data['zip'] ?? $lead->zip,

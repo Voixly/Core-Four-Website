@@ -13,6 +13,7 @@ class EmailSequenceSeeder extends Seeder
         $this->seedCommercial();
         $this->seedResidentialProspects();
         $this->seedCommercialProspects();
+        $this->seedCoatingsProspects();
     }
 
     protected function seedResidential(): void
@@ -114,6 +115,29 @@ class EmailSequenceSeeder extends Seeder
             [21, 'Coating or replacement', "{{first_name}}, a coating can buy years when the core is dry. A wet core needs replacement, not another patch. The survey is how we tell those apart for a {{city}} building.\n\nCall (281) 541-0027.\n\n— Core Four"],
             [35, 'Work the building can stay open for', "Hello {{first_name}},\n\nNight and weekend windows are available so a Greater Houston property does not shut down for a roof. One superintendent, one number.\n\nIf you want that on the calendar, call (281) 541-0027.\n\n— Core Four Roofing"],
             [45, 'Last note unless you want the survey', "{{first_name}}, this is the last note in this series. If the {{city}} building still needs a survey, call (281) 541-0027. If it does not, no further emails from this sequence.\n\n— Core Four Roofing"],
+        ];
+
+        $this->writeSteps($sequence, $steps);
+    }
+
+    protected function seedCoatingsProspects(): void
+    {
+        $sequence = EmailSequence::query()->firstOrCreate(
+            ['name' => 'Commercial coatings prospect outreach'],
+            [
+                'audience' => 'commercial',
+                'is_active' => true,
+                'description' => 'Cold outreach for Greater Houston commercial roof coatings. Separate from the commercial survey drip.',
+            ]
+        );
+
+        $steps = [
+            [0, 'A coating look for the building in {{city}}', "Hello {{first_name}},\n\nCore Four Roofing coats commercial roofs across Greater Houston from our Tomball shop. Silicone and acrylic restoration coatings are for a dry membrane that can stay, not for a roof that needs to come off.\n\nWe have not been on this building. If you want that look in {{city}}, call (281) 541-0027 or use corefourroofing.com/contact-core-four-roofing/.\n\n— Core Four Roofing"],
+            [3, 'A coating will not fix a wet core', "{{first_name}}, we have not inspected this roof. A coating over wet insulation fails. A coating on a dry field can add years and cut the tear-off.\n\nThe first visit is a moisture check, seams, and drains. Call (281) 541-0027 if {{city}} should be on that list.\n\n— Core Four"],
+            [10, 'What the coating visit includes', "Hello {{first_name}},\n\nWe photograph the field, check for trapped moisture, and look at drains and edge metal. Then we say silicone, acrylic, or replacement. We will not sell a coating the deck cannot hold.\n\n— Core Four Roofing"],
+            [21, 'Why owners choose a coating in this heat', "{{first_name}}, Houston sun is the reason a reflective coating shows up in the HVAC bill, not just on the roof. It also means less downtime than a full tear-off when the building can stay open.\n\nNight and weekend windows are available. Call (281) 541-0027.\n\n— Core Four"],
+            [35, 'A number ownership can read', "Hello {{first_name}},\n\nIf the {{city}} building is a coating candidate, you get a scope with remaining life and a price. If it is not, we say replacement and stop there.\n\nCall (281) 541-0027.\n\n— Core Four Roofing"],
+            [45, 'Last note unless you want the coating check', "{{first_name}}, this is the last note in this series. If you want the moisture check and a coating number for {{city}}, call (281) 541-0027. If you do not, no further emails from this sequence.\n\n— Core Four Roofing"],
         ];
 
         $this->writeSteps($sequence, $steps);

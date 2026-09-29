@@ -6,7 +6,7 @@
         @if($lead->source === 'hiring')
             <p>Hiring application · {{ $lead->need }} · {{ $lead->city }} {{ $lead->zip }}</p>
         @else
-            <p>{{ $lead->type }} · {{ $lead->source }} · {{ $lead->city }} {{ $lead->zip }}</p>
+            <p>{{ $lead->typeLabel() }} · {{ $lead->source }} · {{ $lead->city }} {{ $lead->zip }}</p>
         @endif
         <p>@if($lead->phone)<a class="btn" href="tel:{{ $lead->phone }}">Call {{ $lead->phone }}</a>@endif</p>
         <p>{{ $lead->email }}</p>

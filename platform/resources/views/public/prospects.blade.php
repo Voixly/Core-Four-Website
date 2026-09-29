@@ -7,7 +7,7 @@
     <div class="wrap review-wrap">
         <p class="kicker">Internal</p>
         <h1>Add a roofing prospect</h1>
-        <p class="review-lede">Residential prospects join the homeowner outreach. Commercial prospects join the building outreach. These are separate from the guide and inspection emails.</p>
+        <p class="review-lede">Residential prospects join the homeowner outreach. Commercial prospects join the building outreach. Commercial coatings prospects join a coatings-only outreach. These are separate from the guide and inspection emails.</p>
     </div>
 </section>
 <section class="section section--tight">
@@ -35,8 +35,9 @@
                 </label>
                 <label>Type
                     <select name="type" required>
-                        <option value="residential" @selected(old('type') !== 'commercial')>Residential</option>
+                        <option value="residential" @selected(old('type', 'residential') === 'residential')>Residential</option>
                         <option value="commercial" @selected(old('type') === 'commercial')>Commercial</option>
+                        <option value="coatings" @selected(old('type') === 'coatings')>Commercial coatings</option>
                     </select>
                 </label>
                 <label>Note

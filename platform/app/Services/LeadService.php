@@ -67,7 +67,7 @@ class LeadService
             'name' => $data['name'],
             'city' => ($data['city'] ?? '') !== '' ? $data['city'] : 'Greater Houston',
             'type' => $data['type'],
-            'need' => 'Prospect outreach',
+            'need' => $data['type'] === 'coatings' ? 'Commercial coatings' : 'Prospect outreach',
             'page_url' => $data['page_url'] ?? null,
         ];
         if (($data['phone'] ?? '') !== '') {
@@ -142,8 +142,12 @@ class LeadService
 
     private function ensureProspectSequences(): void
     {
-        $ready = EmailSequence::query()->where('name', 'Residential prospect outreach')->exists()
-            && EmailSequence::query()->where('name', 'Commercial prospect outreach')->exists();
+        $names = [
+            'Residential prospect outreach',
+            'Commercial prospect outreach',
+            'Commercial coatings prospect outreach',
+        ];
+        $ready = EmailSequence::query()->whereIn('name', $names)->count() === count($names);
         if ($ready) {
             return;
         }
@@ -186,11 +190,15 @@ class LeadService
             return null;
         }
 
-        $commercial = $lead->type === 'commercial';
-
         if ($lead->source === 'prospect') {
-            return $commercial ? 'Commercial prospect outreach' : 'Residential prospect outreach';
+            return match ($lead->type) {
+                'commercial' => 'Commercial prospect outreach',
+                'coatings' => 'Commercial coatings prospect outreach',
+                default => 'Residential prospect outreach',
+            };
         }
+
+        $commercial = in_array($lead->type, ['commercial', 'coatings'], true);
 
         if ($lead->source === 'responded') {
             return null;
