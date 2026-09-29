@@ -4,6 +4,7 @@ namespace App\Mail;
 
 use App\Models\EmailStep;
 use App\Models\Lead;
+use App\Support\SiteSeo;
 use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Mail\Mailables\Content;
@@ -27,6 +28,9 @@ class NurtureMail extends Mailable
 
     public function content(): Content
     {
+        $this->step->loadMissing('sequence');
+        [$ctaLabel, $ctaUrl] = $this->cta();
+
         return new Content(
             view: 'emails.nurture',
             with: [
@@ -34,8 +38,26 @@ class NurtureMail extends Mailable
                 'title' => $this->personalize($this->step->subject),
                 'preheader' => $this->preheader(),
                 'bodyHtml' => $this->bodyHtml(),
+                'ctaLabel' => $ctaLabel,
+                'ctaUrl' => $ctaUrl,
             ],
         );
+    }
+
+    protected function cta(): array
+    {
+        $name = (string) ($this->step->sequence?->name ?? '');
+        $contact = SiteSeo::url('/contact-core-four-roofing/');
+
+        if (str_contains($name, 'coatings')) {
+            return ['Get a coating quote', $contact];
+        }
+
+        if (str_contains($name, 'Commercial')) {
+            return ['Request a roof survey', $contact];
+        }
+
+        return ['Get a free inspection', $contact];
     }
 
     protected function personalize(string $text): string
