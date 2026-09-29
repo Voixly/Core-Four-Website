@@ -20,6 +20,7 @@ return Application::configure(basePath: dirname(__DIR__))
         $middleware->validateCsrfTokens(except: [
             'prospects',
             'prospects/',
+            'resend/inbound',
         ]);
         $middleware->web(append: [
             \App\Http\Middleware\EnsureTrailingSlash::class,

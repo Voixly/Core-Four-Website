@@ -14,6 +14,11 @@
     <link rel="stylesheet" href="@assetv('/css/admin.css')">
 </head>
 <body>
+@php
+    $emailWaiting = \Illuminate\Support\Facades\Schema::hasColumn('conversations', 'awaiting_staff')
+        ? \App\Models\Conversation::query()->where('channel', 'email')->where('awaiting_staff', true)->count()
+        : 0;
+@endphp
 <div class="admin">
     <aside class="side">
         <a class="side-brand" href="{{ route('admin.dashboard') }}">
@@ -25,7 +30,9 @@
         <a class="nav-link {{ request()->routeIs('admin.prospects.*') ? 'active' : '' }}" href="{{ route('admin.prospects.index') }}"><i class="fas fa-user-plus"></i> Prospects</a>
         <a class="nav-link {{ request()->routeIs('admin.jobs.*') ? 'active' : '' }}" href="{{ route('admin.jobs.index') }}"><i class="fas fa-diagram-project"></i> Jobs</a>
         <a class="nav-link {{ request()->routeIs('admin.schedule') ? 'active' : '' }}" href="{{ route('admin.schedule') }}"><i class="fas fa-calendar-days"></i> Schedule</a>
-        <a class="nav-link {{ request()->routeIs('admin.chat.*') ? 'active' : '' }}" href="{{ route('admin.chat.index') }}"><i class="fas fa-comments"></i> Chat</a>
+        <a class="nav-link {{ request()->routeIs('admin.chat.*') ? 'active' : '' }}" href="{{ route('admin.chat.index') }}"><i class="fas fa-comments"></i> Chat
+            @if($emailWaiting > 0)<span class="nav-count">{{ $emailWaiting }}</span>@endif
+        </a>
         <a class="nav-link {{ request()->routeIs('admin.reviews.*') ? 'active' : '' }}" href="{{ route('admin.reviews.index') }}"><i class="fas fa-shield-heart"></i> Review Shield</a>
         @if(auth()->user()->canManageReports())
             <div class="side-label">Growth</div>
@@ -66,6 +73,9 @@
         @if(session('success'))
             <div class="flash">{{ session('success') }}</div>
         @endif
+        @if(session('error'))
+            <div class="flash is-error">{{ session('error') }}</div>
+        @endif
         @if($errors->any())
             <div class="flash is-error">{{ $errors->first() }}</div>
         @endif
@@ -77,7 +87,9 @@
     <a href="{{ route('admin.leads.index') }}"><i class="fas fa-users"></i> Leads</a>
     <a href="{{ route('admin.jobs.index') }}"><i class="fas fa-diagram-project"></i> Jobs</a>
     <a href="{{ route('admin.schedule') }}"><i class="fas fa-calendar-days"></i> Days</a>
-    <a href="{{ route('admin.chat.index') }}"><i class="fas fa-comments"></i> Chat</a>
+    <a href="{{ route('admin.chat.index') }}"><i class="fas fa-comments"></i> Chat
+        @if($emailWaiting > 0) ({{ $emailWaiting }})@endif
+    </a>
     <a href="{{ route('admin.reviews.index') }}"><i class="fas fa-shield-heart"></i> Shield</a>
     @if(auth()->user()->canManageReports())
         <a href="{{ route('admin.reports.index') }}"><i class="fas fa-file-lines"></i> Reports</a>

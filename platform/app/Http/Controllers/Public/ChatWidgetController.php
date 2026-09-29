@@ -24,7 +24,7 @@ class ChatWidgetController extends Controller
         $email = strtolower(trim((string) ($data['email'] ?? '')));
         $token = $request->cookie('cfr_chat');
         $conversation = $token
-            ? Conversation::query()->where('visitor_token', $token)->first()
+            ? Conversation::query()->where('visitor_token', $token)->where('channel', 'chat')->first()
             : null;
 
         if (! $conversation) {
@@ -35,6 +35,7 @@ class ChatWidgetController extends Controller
             $token = bin2hex(random_bytes(16));
             $conversation = Conversation::query()->create([
                 'visitor_token' => $token,
+                'channel' => 'chat',
                 'name' => $name,
                 'email' => $email,
                 'page_url' => $data['page_url'] ?? $request->headers->get('referer'),
@@ -123,7 +124,7 @@ class ChatWidgetController extends Controller
         $token = $request->cookie('cfr_chat');
         abort_unless($token, 404);
 
-        return Conversation::query()->where('visitor_token', $token)->firstOrFail();
+        return Conversation::query()->where('visitor_token', $token)->where('channel', 'chat')->firstOrFail();
     }
 
     protected function payload(Conversation $conversation): array

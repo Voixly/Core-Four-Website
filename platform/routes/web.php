@@ -23,6 +23,7 @@ use App\Http\Controllers\Public\LeadFormController;
 use App\Http\Controllers\Public\PageController;
 use App\Http\Controllers\Public\ProspectIntakeController;
 use App\Http\Controllers\Public\ReviewController;
+use App\Http\Controllers\ResendInboundController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/sitemap.xml', [PageController::class, 'sitemap']);
@@ -89,6 +90,7 @@ Route::get('/commercial-roofing-in-tx/', [PageController::class, 'city'])->defau
 Route::get('/residential-roofing-in-{slug}-tx/', [PageController::class, 'city'])->where('slug', '[a-z0-9-]+')->name('city.residential');
 Route::get('/commercial-roofing-in-{slug}-tx/', [PageController::class, 'city'])->where('slug', '[a-z0-9-]+')->name('city.commercial');
 
+Route::post('/resend/inbound', ResendInboundController::class)->name('resend.inbound');
 Route::post('/leads', [LeadFormController::class, 'store'])->middleware('throttle:8,1')->name('leads.store');
 Route::get('/prospects/', [ProspectIntakeController::class, 'create'])->name('prospects.create');
 Route::post('/prospects', [ProspectIntakeController::class, 'store'])->middleware('throttle:30,1');

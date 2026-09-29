@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Conversation;
+use App\Services\EmailThreadService;
 use App\Services\LeadService;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\RedirectResponse;
@@ -12,19 +13,34 @@ use Illuminate\View\View;
 
 class ChatController extends Controller
 {
-    public function index(): View
+    public function index(Request $request): View
     {
+        $channel = $request->query('channel');
+        if (! in_array($channel, ['email', 'chat'], true)) {
+            $channel = null;
+        }
+
+        $counts = [
+            'all' => Conversation::query()->count(),
+            'email' => Conversation::query()->where('channel', 'email')->count(),
+            'chat' => Conversation::query()->where('channel', 'chat')->count(),
+            'waiting' => Conversation::query()->where('channel', 'email')->where('awaiting_staff', true)->count(),
+        ];
+
         $conversations = Conversation::query()
             ->withCount('messages')
-            ->latest('last_message_at')
-            ->paginate(30);
+            ->when($channel, fn ($query) => $query->where('channel', $channel))
+            ->orderByDesc('awaiting_staff')
+            ->orderByDesc('last_message_at')
+            ->paginate(30)
+            ->withQueryString();
 
-        return view('admin.chat.index', compact('conversations'));
+        return view('admin.chat.index', compact('conversations', 'channel', 'counts'));
     }
 
     public function show(Conversation $conversation): View
     {
-        $conversation->load('messages');
+        $conversation->load(['messages' => fn ($query) => $query->orderBy('id'), 'lead']);
 
         $canned = [
             'Thanks for reaching out — I can have an estimator call you. What ZIP are we looking at?',
@@ -36,9 +52,19 @@ class ChatController extends Controller
         return view('admin.chat.show', compact('conversation', 'canned'));
     }
 
-    public function reply(Request $request, Conversation $conversation): RedirectResponse
+    public function reply(Request $request, Conversation $conversation, EmailThreadService $threads): RedirectResponse
     {
-        $data = $request->validate(['body' => ['required', 'string', 'max:2000']]);
+        $data = $request->validate(['body' => ['required', 'string', 'max:4000']]);
+
+        if ($conversation->isEmail()) {
+            try {
+                $threads->sendStaffReply($conversation, $request->user(), $data['body']);
+            } catch (\Throwable) {
+                return back()->withInput()->with('error', 'That reply was not emailed. Confirm Resend can send from hello@corefourroofing.com, then try again.');
+            }
+
+            return back();
+        }
 
         $conversation->update([
             'assigned_to' => $request->user()->id,
@@ -57,7 +83,7 @@ class ChatController extends Controller
 
     public function close(Conversation $conversation): RedirectResponse
     {
-        $conversation->update(['status' => 'closed']);
+        $conversation->update(['status' => 'closed', 'awaiting_staff' => false]);
 
         return back()->with('success', 'Chat closed.');
     }

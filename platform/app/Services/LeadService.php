@@ -190,7 +190,7 @@ class LeadService
 
     private function sequenceName(Lead $lead): ?string
     {
-        if ($lead->source === 'hiring' || ! $lead->email) {
+        if ($lead->source === 'hiring' || $lead->source === 'email' || ! $lead->email) {
             return null;
         }
 
@@ -231,7 +231,7 @@ class LeadService
         return $lead;
     }
 
-    protected function notifyOffice(Lead $lead): void
+    public function notifyOffice(Lead $lead): void
     {
         $raw = $lead->source === 'hiring'
             ? config('mail.hr_address')

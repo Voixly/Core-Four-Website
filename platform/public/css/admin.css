@@ -421,11 +421,19 @@ input:focus, select:focus, textarea:focus {
 
 .bottom-nav a i { font-size: 0.95rem; }
 
-.chat-admin { display: grid; grid-template-rows: 1fr auto; min-height: 60vh; }
-.messages { display: grid; gap: 0.5rem; }
-.bubble { padding: 0.65rem 0.85rem; border-radius: 14px; background: #fff; max-width: 80%; }
+.chat-admin { display: grid; grid-template-rows: auto auto auto 1fr auto auto; min-height: 60vh; }
+.messages { display: grid; gap: 0.5rem; align-content: start; }
+.bubble { padding: 0.65rem 0.85rem; border-radius: 14px; background: #fff; max-width: 80%; white-space: pre-wrap; }
 .bubble.visitor { background: var(--lime-green); color: var(--forest-green); }
 .bubble.staff { background: #e8efe3; margin-left: auto; }
+.kind-pill { display: inline-block; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; text-decoration: none; padding: 0.2rem 0.55rem; border-radius: 999px; background: #e8efe3; color: var(--forest-green); }
+.kind-pill.is-email { background: var(--forest-green); color: var(--lime-green); }
+.kind-pill.is-on { outline: 2px solid var(--bright-green); }
+.chat-waiting { color: #7a2e12; font-weight: 700; font-size: 0.85rem; }
+.chat-note { color: var(--muted-green); }
+.chat-compose { display: grid; gap: 0.5rem; margin-top: 1rem; }
+.chat-compose textarea { width: 100%; min-height: 7rem; }
+.nav-count { display: inline-grid; place-items: center; min-width: 1.15rem; height: 1.15rem; margin-left: 0.35rem; padding: 0 0.28rem; border-radius: 999px; background: var(--lime-green); color: var(--forest-green); font-size: 0.68rem; font-style: normal; }
 
 .login-page {
   min-height: 100vh;

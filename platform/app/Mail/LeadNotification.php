@@ -20,9 +20,11 @@ class LeadNotification extends Mailable
 
     public function envelope(): Envelope
     {
-        $subject = $this->lead->source === 'hiring'
-            ? 'Job application — '.$this->lead->name
-            : 'New '.$this->lead->type.' lead — '.$this->lead->name;
+        $subject = match ($this->lead->source) {
+            'hiring' => 'Job application — '.$this->lead->name,
+            'email' => 'Email reply — '.$this->lead->name,
+            default => 'New '.$this->lead->type.' lead — '.$this->lead->name,
+        };
 
         return new Envelope(
             subject: $subject,

@@ -7,7 +7,10 @@ return [
         'secret' => env('AWS_SECRET_ACCESS_KEY'),
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
-    'resend' => ['key' => env('RESEND_API_KEY', env('RESEND_KEY'))],
+    'resend' => [
+        'key' => env('RESEND_API_KEY', env('RESEND_KEY')),
+        'webhook_secret' => env('RESEND_WEBHOOK_SECRET'),
+    ],
     'jobnimbus' => [
         'key' => env('JOBNIMBUS_API_KEY'),
         'actor' => env('JOBNIMBUS_ACTOR', 'bmedina@corefourroofing.com'),

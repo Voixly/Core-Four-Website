@@ -10,6 +10,9 @@
         @endif
         <p>@if($lead->phone)<a class="btn" href="tel:{{ $lead->phone }}">Call {{ $lead->phone }}</a>@endif</p>
         <p>{{ $lead->email }}</p>
+        @if($emailThread = $lead->emailConversation())
+            <p><a class="btn" href="{{ route('admin.chat.show', $emailThread) }}">Open email thread</a></p>
+        @endif
         <p>{{ $lead->need }}</p>
         <p>{{ $lead->notes }}</p>
         <form method="post" action="{{ route('admin.leads.update', $lead) }}">
