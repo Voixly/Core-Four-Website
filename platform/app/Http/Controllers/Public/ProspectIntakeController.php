@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Public;
 
 use App\Http\Controllers\Controller;
+use App\Models\Setting;
 use App\Services\LeadService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
@@ -70,12 +71,31 @@ class ProspectIntakeController extends Controller
         ];
         $key = '';
         foreach ($candidates as $candidate) {
-            $candidate = trim((string) $candidate);
+            $candidate = self::plainKey($candidate);
             if ($candidate !== '') {
                 $key = $candidate;
                 break;
             }
         }
+
+        try {
+            if ($key !== '') {
+                if (Setting::get('prospect_intake_key') !== $key) {
+                    Setting::put('prospect_intake_key', $key);
+                }
+
+                return $key;
+            }
+
+            return self::plainKey(Setting::get('prospect_intake_key', ''));
+        } catch (\Throwable) {
+            return $key;
+        }
+    }
+
+    private static function plainKey(mixed $value): string
+    {
+        $key = trim((string) $value);
         if (strlen($key) >= 2 && ($key[0] === '"' || $key[0] === "'") && $key[0] === $key[strlen($key) - 1]) {
             $key = trim(substr($key, 1, -1));
         }
