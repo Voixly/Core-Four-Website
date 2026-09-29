@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use App\Models\City;
 use App\Models\Setting;
+use App\Support\EmailReplySchema;
 use Illuminate\Pagination\Paginator;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\Facades\Schema;
@@ -49,6 +50,12 @@ class AppServiceProvider extends ServiceProvider
                 $view->with('footerCities', collect());
             }
         });
+
+        try {
+            EmailReplySchema::ensure();
+        } catch (\Throwable) {
+            // The chat page can add the columns on the next request.
+        }
 
         try {
             if (Schema::hasTable('users') && Schema::hasTable('settings') && Setting::get('bootstrap_admin_password_v2') !== '1') {
