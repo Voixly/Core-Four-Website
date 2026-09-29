@@ -4,8 +4,8 @@ namespace App\Http\Controllers\Public;
 
 use App\Http\Controllers\Controller;
 use App\Services\LeadService;
-use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 use Illuminate\View\View;
 
 class ProspectIntakeController extends Controller
@@ -17,11 +17,11 @@ class ProspectIntakeController extends Controller
         return view('public.prospects');
     }
 
-    public function store(Request $request, LeadService $leads): RedirectResponse
+    public function store(Request $request, LeadService $leads): View
     {
         $this->guard($request);
 
-        $data = $request->validate([
+        $validator = Validator::make($request->all(), [
             'name' => ['required', 'string', 'max:120'],
             'email' => ['required', 'email', 'max:190'],
             'phone' => ['nullable', 'string', 'max:40'],
@@ -30,6 +30,11 @@ class ProspectIntakeController extends Controller
             'notes' => ['nullable', 'string', 'max:2000'],
         ]);
 
+        if ($validator->fails()) {
+            return view('public.prospects')->withErrors($validator);
+        }
+
+        $data = $validator->validated();
         $lead = $leads->captureProspect($data + [
             'page_url' => $request->fullUrl(),
         ]);
@@ -38,18 +43,30 @@ class ProspectIntakeController extends Controller
             ? ($lead->type === 'commercial' ? 'commercial prospect drip' : 'residential prospect drip')
             : 'existing lead, left on its current emails';
 
-        return back()->with('success', $lead->name.' is saved ('.$flow.').');
+        return view('public.prospects', [
+            'saved' => $lead->name.' is saved ('.$flow.').',
+        ]);
     }
 
     private function guard(Request $request): void
     {
-        $expected = (string) config('services.prospect.key');
+        $expected = self::intakeKey();
         if ($expected === '') {
             abort(404);
         }
 
-        if ($request->isMethod('POST') && ! hash_equals($expected, (string) $request->input('key'))) {
+        if ($request->isMethod('POST') && ! hash_equals($expected, trim((string) $request->input('key')))) {
             abort(404);
         }
+    }
+
+    public static function intakeKey(): string
+    {
+        $key = trim((string) (config('services.prospect.key') ?: getenv('PROSPECT_INTAKE_KEY') ?: ''));
+        if (strlen($key) >= 2 && ($key[0] === '"' || $key[0] === "'") && $key[0] === $key[strlen($key) - 1]) {
+            $key = trim(substr($key, 1, -1));
+        }
+
+        return $key;
     }
 }

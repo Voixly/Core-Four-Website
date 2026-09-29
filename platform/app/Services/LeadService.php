@@ -7,6 +7,7 @@ use App\Models\EmailSequence;
 use App\Models\EmailSend;
 use App\Models\Lead;
 use App\Models\User;
+use Database\Seeders\EmailSequenceSeeder;
 use Illuminate\Support\Facades\Mail;
 
 class LeadService
@@ -59,23 +60,35 @@ class LeadService
 
     public function captureProspect(array $data): Lead
     {
+        $this->ensureProspectSequences();
         $email = strtolower(trim((string) $data['email']));
         $lead = Lead::query()->whereRaw('lower(email) = ?', [$email])->first();
         $fields = [
             'name' => $data['name'],
-            'phone' => $data['phone'] ?? null,
-            'city' => $data['city'] ?: 'Greater Houston',
+            'city' => ($data['city'] ?? '') !== '' ? $data['city'] : 'Greater Houston',
             'type' => $data['type'],
             'need' => 'Prospect outreach',
-            'notes' => $data['notes'] ?? null,
             'page_url' => $data['page_url'] ?? null,
         ];
+        if (($data['phone'] ?? '') !== '') {
+            $fields['phone'] = $data['phone'];
+        }
+        if (array_key_exists('notes', $data) && $data['notes'] !== null && $data['notes'] !== '') {
+            $fields['notes'] = $data['notes'];
+        }
 
         if ($lead) {
             if ($lead->source !== 'prospect') {
                 $lead->log(null, 'note', 'Prospect intake matched an existing '.$lead->source.' lead. Left on the current email flow.');
 
                 return $lead;
+            }
+
+            if ($lead->type !== $data['type']) {
+                EmailSend::query()
+                    ->where('lead_id', $lead->id)
+                    ->where('status', 'scheduled')
+                    ->update(['status' => 'skipped']);
             }
 
             $lead->fill($fields);
@@ -119,6 +132,21 @@ class LeadService
                     'status' => 'scheduled',
                 ]
             );
+        }
+    }
+
+    private function ensureProspectSequences(): void
+    {
+        $ready = EmailSequence::query()->where('name', 'Residential prospect outreach')->exists()
+            && EmailSequence::query()->where('name', 'Commercial prospect outreach')->exists();
+        if ($ready) {
+            return;
+        }
+
+        try {
+            (new EmailSequenceSeeder)->run();
+        } catch (\Throwable) {
+            // The prospect is still saved if the email steps cannot be created.
         }
     }
 

@@ -17,6 +17,10 @@ return Application::configure(basePath: dirname(__DIR__))
             'role' => \App\Http\Middleware\EnsureRole::class,
         ]);
         $middleware->trustProxies(at: '*');
+        $middleware->validateCsrfTokens(except: [
+            'prospects',
+            'prospects/',
+        ]);
         $middleware->web(append: [
             \App\Http\Middleware\EnsureTrailingSlash::class,
         ]);

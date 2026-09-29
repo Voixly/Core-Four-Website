@@ -13,8 +13,8 @@
 <section class="section section--tight">
     <div class="wrap review-wrap">
         <div class="form-card">
-            @if(session('success'))
-                <p class="flash">{{ session('success') }}</p>
+            @if(!empty($saved))
+                <p class="flash">{{ $saved }}</p>
             @endif
             @if($errors->any())
                 <p class="flash is-error">{{ $errors->first() }}</p>

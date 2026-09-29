@@ -91,6 +91,7 @@ Route::get('/commercial-roofing-in-{slug}-tx/', [PageController::class, 'city'])
 
 Route::post('/leads', [LeadFormController::class, 'store'])->middleware('throttle:8,1')->name('leads.store');
 Route::get('/prospects/', [ProspectIntakeController::class, 'create'])->name('prospects.create');
+Route::post('/prospects', [ProspectIntakeController::class, 'store'])->middleware('throttle:30,1');
 Route::post('/prospects/', [ProspectIntakeController::class, 'store'])->middleware('throttle:30,1')->name('prospects.store');
 Route::post('/guides/{slug}/download', [LeadFormController::class, 'download'])->middleware('throttle:6,1')->name('guides.download');
 
