@@ -63,6 +63,7 @@ class SiteSeo
             'thank-you',
             'login',
             'forgot-password',
+            'prospects',
             'careers/thank-you',
         ];
         $excludedPrefixes = ['admin', 'account', 'api', 'chat', 'livewire', 'sanctum', '_ignition', 'telescope'];

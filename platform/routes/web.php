@@ -21,6 +21,7 @@ use App\Http\Controllers\Auth\PasswordResetController;
 use App\Http\Controllers\Public\ChatWidgetController;
 use App\Http\Controllers\Public\LeadFormController;
 use App\Http\Controllers\Public\PageController;
+use App\Http\Controllers\Public\ProspectIntakeController;
 use App\Http\Controllers\Public\ReviewController;
 use Illuminate\Support\Facades\Route;
 
@@ -89,6 +90,8 @@ Route::get('/residential-roofing-in-{slug}-tx/', [PageController::class, 'city']
 Route::get('/commercial-roofing-in-{slug}-tx/', [PageController::class, 'city'])->where('slug', '[a-z0-9-]+')->name('city.commercial');
 
 Route::post('/leads', [LeadFormController::class, 'store'])->middleware('throttle:8,1')->name('leads.store');
+Route::get('/prospects/', [ProspectIntakeController::class, 'create'])->name('prospects.create');
+Route::post('/prospects/', [ProspectIntakeController::class, 'store'])->middleware('throttle:30,1')->name('prospects.store');
 Route::post('/guides/{slug}/download', [LeadFormController::class, 'download'])->middleware('throttle:6,1')->name('guides.download');
 
 Route::prefix('chat')->middleware('throttle:40,1')->group(function () {

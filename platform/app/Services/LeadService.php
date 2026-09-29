@@ -34,14 +34,53 @@ class LeadService
         return $lead;
     }
 
+    public function captureProspect(array $data): Lead
+    {
+        $email = strtolower(trim((string) $data['email']));
+        $lead = Lead::query()->whereRaw('lower(email) = ?', [$email])->first();
+        $fields = [
+            'name' => $data['name'],
+            'phone' => $data['phone'] ?? null,
+            'city' => $data['city'] ?: 'Greater Houston',
+            'type' => $data['type'],
+            'need' => 'Prospect outreach',
+            'notes' => $data['notes'] ?? null,
+            'page_url' => $data['page_url'] ?? null,
+        ];
+
+        if ($lead) {
+            if ($lead->source !== 'prospect') {
+                $lead->log(null, 'note', 'Prospect intake matched an existing '.$lead->source.' lead. Left on the current email flow.');
+
+                return $lead;
+            }
+
+            $lead->fill($fields);
+            $lead->save();
+            $lead->log(null, 'updated', 'Prospect updated from intake');
+        } else {
+            $lead = Lead::query()->create($fields + [
+                'email' => $email,
+                'status' => 'new',
+                'source' => 'prospect',
+            ]);
+            $lead->log(null, 'created', 'Lead captured from prospect');
+        }
+
+        $this->enroll($lead);
+
+        return $lead;
+    }
+
     public function enroll(Lead $lead): void
     {
-        if (! $lead->email || $lead->source === 'hiring') {
+        $name = $this->sequenceName($lead);
+        if (! $lead->email || $name === null) {
             return;
         }
 
         $sequence = EmailSequence::query()
-            ->where('audience', $lead->type)
+            ->where('name', $name)
             ->where('is_active', true)
             ->first();
 
@@ -58,6 +97,21 @@ class LeadService
                 ]
             );
         }
+    }
+
+    private function sequenceName(Lead $lead): ?string
+    {
+        if ($lead->source === 'hiring' || ! $lead->email) {
+            return null;
+        }
+
+        $commercial = $lead->type === 'commercial';
+
+        if ($lead->source === 'prospect') {
+            return $commercial ? 'Commercial prospect outreach' : 'Residential prospect outreach';
+        }
+
+        return $commercial ? 'Commercial 12-month nurture' : 'Residential 12-month nurture';
     }
 
     protected function notifyOffice(Lead $lead): void
