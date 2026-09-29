@@ -32,7 +32,7 @@ class NurtureMail extends Mailable
             with: [
                 'lead' => $this->lead,
                 'title' => $this->personalize($this->step->subject),
-                'preheader' => 'A note from Core Four Roofing in Tomball, TX',
+                'preheader' => $this->preheader(),
                 'bodyHtml' => $this->bodyHtml(),
             ],
         );
@@ -49,12 +49,34 @@ class NurtureMail extends Mailable
         ]);
     }
 
+    protected function preheader(): string
+    {
+        $text = trim(preg_replace('/\s+/', ' ', $this->personalize($this->step->body)) ?? '');
+        $text = preg_replace('/^(Hi|Hello)\s+[^,]+,\s*/i', '', $text) ?? $text;
+
+        return mb_substr(trim($text), 0, 110);
+    }
+
     protected function bodyHtml(): string
     {
         $blocks = preg_split('/\n\s*\n/', trim($this->personalize($this->step->body))) ?: [];
 
         return collect($blocks)
-            ->map(fn (string $block) => '<p style="margin:0 0 16px">'.nl2br(e($block)).'</p>')
+            ->map(function (string $block) {
+                $html = nl2br(e($block));
+                $html = preg_replace(
+                    '#(https://[^\s<]+)#',
+                    '<a href="$1" style="color:#0f2418">$1</a>',
+                    $html
+                ) ?? $html;
+                $html = str_replace(
+                    '(281) 541-0027',
+                    '<a href="tel:2815410027" style="color:#0f2418">(281) 541-0027</a>',
+                    $html
+                );
+
+                return '<p style="margin:0 0 16px">'.$html.'</p>';
+            })
             ->implode('');
     }
 }

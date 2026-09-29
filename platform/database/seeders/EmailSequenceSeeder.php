@@ -3,10 +3,13 @@
 namespace Database\Seeders;
 
 use App\Models\EmailSequence;
+use App\Models\Setting;
 use Illuminate\Database\Seeder;
 
 class EmailSequenceSeeder extends Seeder
 {
+    protected bool $replaceProspectSteps = false;
+
     public function run(): void
     {
         $this->seedResidential();
@@ -14,6 +17,7 @@ class EmailSequenceSeeder extends Seeder
         $this->seedResidentialProspects();
         $this->seedCommercialProspects();
         $this->seedCoatingsProspects();
+        $this->refreshProspectCopyOnce();
     }
 
     protected function seedResidential(): void
@@ -81,20 +85,23 @@ class EmailSequenceSeeder extends Seeder
             [
                 'audience' => 'residential',
                 'is_active' => true,
-                'description' => 'Cold homeowner outreach for Greater Houston. Separate from the guide and inspection nurture.',
+                'description' => 'Cold homeowner outreach. Asks for an inspection, then handles leak, hard-sell, insurance, and price objections.',
             ]
         );
 
         $steps = [
-            [0, 'A roof look for your {{city}} home', "Hi {{first_name}},\n\nCore Four Roofing works homes across Greater Houston from our Tomball shop. If the roof on your place in {{city}} is due for a look — hail, a leak, or just age — we will come out and say whether it needs a repair or a replacement.\n\nCall (281) 541-0027 or ask for an inspection at corefourroofing.com/contact-core-four-roofing/.\n\n— Core Four Roofing"],
-            [3, 'Greater Houston storms do not send a calendar invite', "{{first_name}}, spring cells bruise shingles and lift flashing before a homeowner sees a stain on the ceiling.\n\nWe have not inspected your roof. If you want that visit in {{city}}, call (281) 541-0027. If water is coming in now, say so and we will tarp it the same day.\n\n— Core Four"],
-            [10, 'Repair or replace — we will say which', "Hi {{first_name}},\n\nNot every Greater Houston roof needs to come off. A sound deck and a local leak can be a repair. Missing granules and a tired deck are a replacement.\n\nThe inspection is how we tell those apart. Call (281) 541-0027.\n\n— Core Four Roofing"],
-            [21, 'What the home inspection includes', "{{first_name}}, the visit covers the field, flashing, and attic moisture when we can get in. You get a straight answer, not a script.\n\nIf {{city}} is still on your list, call (281) 541-0027.\n\n— Core Four"],
-            [35, 'A roof you can pay for without buying the thin one', "Hi {{first_name}},\n\nAffordability here means a monthly number that works and a roof that still lasts. We can walk material and financing when you are ready. We will not push the cheapest shingle on the lot.\n\n(281) 541-0027.\n\n— Core Four Roofing"],
-            [45, 'Last note unless you want us out', "{{first_name}}, this is the last note in this series. If the {{city}} house needs us, call (281) 541-0027 or use the contact page. If it does not, no further emails from this sequence.\n\n— Core Four Roofing"],
+            [0, 'Roof inspection in {{city}}', "Hi {{first_name}},\n\nIf the roof on your {{city}} home has hail marks, a leak, or is just old, we will come look and tell you repair or replacement. We have not been on it yet.\n\nCall (281) 541-0027 or book the inspection: https://corefourroofing.com/contact-core-four-roofing/\n\nCore Four Roofing. Greater Houston, from our Tomball shop.\n\n— Core Four Roofing"],
+            [3, 'The ceiling stain means the leak is old', "{{first_name}}, in this heat a small leak sits in the attic and becomes soft decking before you see a stain. The stain is late, not early.\n\nIf water is coming in now, call (281) 541-0027 and say tarp. If it is quiet, the inspection still documents the roof before the next storm.\n\n— Core Four"],
+            [10, 'The visit is an answer, not a pitch', "Hi {{first_name}},\n\nHere is the {{city}} inspection: we walk the field and flashing, check the attic when we can get in, and say repair or replace. If a repair will hold, that is what we recommend.\n\nCall (281) 541-0027.\n\n— Core Four Roofing"],
+            [21, 'You do not have to file a claim first', "{{first_name}}, a lot of homeowners wait on the insurance company and get a repair check for a roof that needs to come off.\n\nWe can look first. If a claim makes sense, we can meet the adjuster. You stay in charge of the decision.\n\nCall (281) 541-0027.\n\n— Core Four"],
+            [35, 'If price is why this is sitting', "Hi {{first_name}},\n\nWe can walk materials and financing so the monthly number works and the roof still lasts. We will not sell you the thinnest shingle on the lot.\n\nCall (281) 541-0027 or use https://corefourroofing.com/contact-core-four-roofing/\n\n— Core Four Roofing"],
+            [45, 'Should I close your file?', "{{first_name}}, this is the last note.\n\nReply inspection, or reply stop. If the {{city}} house needs us, call (281) 541-0027.\n\n— Core Four Roofing"],
         ];
 
-        $this->writeSteps($sequence, $steps);
+        if ($this->replaceProspectSteps) {
+            $sequence->update(['description' => 'Cold homeowner outreach. Asks for an inspection, then handles leak, hard-sell, insurance, and price objections.']);
+        }
+        $this->writeSteps($sequence, $steps, $this->replaceProspectSteps);
     }
 
     protected function seedCommercialProspects(): void
@@ -104,20 +111,23 @@ class EmailSequenceSeeder extends Seeder
             [
                 'audience' => 'commercial',
                 'is_active' => true,
-                'description' => 'Cold outreach for Greater Houston property owners and managers. Separate from the guide nurture.',
+                'description' => 'Cold outreach for owners and managers. Asks for a roof survey, then handles leaks, scope, budget timing, and downtime.',
             ]
         );
 
         $steps = [
-            [0, 'A roof survey for the building in {{city}}', "Hello {{first_name}},\n\nCore Four Roofing surveys commercial roofs across Greater Houston from our Tomball shop. If the building in {{city}} needs a condition look, we photograph the field, flashings, and drainage and tell you what is left.\n\nCall (281) 541-0027 or request a survey at corefourroofing.com/contact-core-four-roofing/.\n\n— Core Four Roofing"],
-            [3, 'A leak costs more in a tenant suite', "{{first_name}}, we have not been on this roof. If water is already over a suite in {{city}}, the downtime is the expensive part. We schedule tear-off and repair around tenants when the building can stay open.\n\nCall (281) 541-0027.\n\n— Core Four"],
-            [10, 'What the survey actually includes', "Hello {{first_name}},\n\nA survey is photos, remaining life, and a number ownership can read. TPO, metal, coating, or a repair — we say which one the deck supports. We do not invent a case study.\n\n— Core Four Roofing"],
-            [21, 'Coating or replacement', "{{first_name}}, a coating can buy years when the core is dry. A wet core needs replacement, not another patch. The survey is how we tell those apart for a {{city}} building.\n\nCall (281) 541-0027.\n\n— Core Four"],
-            [35, 'Work the building can stay open for', "Hello {{first_name}},\n\nNight and weekend windows are available so a Greater Houston property does not shut down for a roof. One superintendent, one number.\n\nIf you want that on the calendar, call (281) 541-0027.\n\n— Core Four Roofing"],
-            [45, 'Last note unless you want the survey', "{{first_name}}, this is the last note in this series. If the {{city}} building still needs a survey, call (281) 541-0027. If it does not, no further emails from this sequence.\n\n— Core Four Roofing"],
+            [0, 'Roof survey for the {{city}} building', "Hello {{first_name}},\n\nIf you own or manage a building in {{city}}, we will survey the roof and send photos, years left, and a number ownership can read. We have not been on it.\n\nCall (281) 541-0027 or request the survey: https://corefourroofing.com/contact-core-four-roofing/\n\nCore Four Roofing. Greater Houston, from Tomball.\n\n— Core Four Roofing"],
+            [3, 'A leak costs more than the membrane', "{{first_name}}, water over a tenant suite costs more in downtime than the repair. We have not inspected this roof.\n\nIf it is already leaking in {{city}}, call (281) 541-0027. We schedule the work around the tenants when the building can stay open.\n\n— Core Four"],
+            [10, 'What you actually get back', "Hello {{first_name}},\n\nPhotos of the field, edges, and drains. A remaining-life note. A price. We name the system the deck can hold, whether that is TPO, metal, or a repair. You do not get a slide deck and a shrug.\n\nCall (281) 541-0027.\n\n— Core Four Roofing"],
+            [21, 'Pick the year before a storm does', "{{first_name}}, patched roofs get replaced in the expensive year, which is the storm year. A survey lets ownership choose a calmer one.\n\nIf {{city}} should be on that calendar, call (281) 541-0027.\n\n— Core Four"],
+            [35, 'The building does not have to close', "Hello {{first_name}},\n\nNight and weekend work is available so a Greater Houston property stays open. One superintendent. One number.\n\nCall (281) 541-0027.\n\n— Core Four Roofing"],
+            [45, 'Survey, or should I stop?', "{{first_name}}, this is the last note.\n\nReply survey, or reply stop. If the {{city}} building still needs the photos and the number, call (281) 541-0027.\n\n— Core Four Roofing"],
         ];
 
-        $this->writeSteps($sequence, $steps);
+        if ($this->replaceProspectSteps) {
+            $sequence->update(['description' => 'Cold outreach for owners and managers. Asks for a roof survey, then handles leaks, scope, budget timing, and downtime.']);
+        }
+        $this->writeSteps($sequence, $steps, $this->replaceProspectSteps);
     }
 
     protected function seedCoatingsProspects(): void
@@ -127,34 +137,62 @@ class EmailSequenceSeeder extends Seeder
             [
                 'audience' => 'commercial',
                 'is_active' => true,
-                'description' => 'Cold outreach for Greater Houston commercial roof coatings. Separate from the commercial survey drip.',
+                'description' => 'Cold coatings outreach. Asks for a moisture check, and only sells a coating when the roof is dry.',
             ]
         );
 
         $steps = [
-            [0, 'A coating look for the building in {{city}}', "Hello {{first_name}},\n\nCore Four Roofing coats commercial roofs across Greater Houston from our Tomball shop. Silicone and acrylic restoration coatings are for a dry membrane that can stay, not for a roof that needs to come off.\n\nWe have not been on this building. If you want that look in {{city}}, call (281) 541-0027 or use corefourroofing.com/contact-core-four-roofing/.\n\n— Core Four Roofing"],
-            [3, 'A coating will not fix a wet core', "{{first_name}}, we have not inspected this roof. A coating over wet insulation fails. A coating on a dry field can add years and cut the tear-off.\n\nThe first visit is a moisture check, seams, and drains. Call (281) 541-0027 if {{city}} should be on that list.\n\n— Core Four"],
-            [10, 'What the coating visit includes', "Hello {{first_name}},\n\nWe photograph the field, check for trapped moisture, and look at drains and edge metal. Then we say silicone, acrylic, or replacement. We will not sell a coating the deck cannot hold.\n\n— Core Four Roofing"],
-            [21, 'Why owners choose a coating in this heat', "{{first_name}}, Houston sun is the reason a reflective coating shows up in the HVAC bill, not just on the roof. It also means less downtime than a full tear-off when the building can stay open.\n\nNight and weekend windows are available. Call (281) 541-0027.\n\n— Core Four"],
-            [35, 'A number ownership can read', "Hello {{first_name}},\n\nIf the {{city}} building is a coating candidate, you get a scope with remaining life and a price. If it is not, we say replacement and stop there.\n\nCall (281) 541-0027.\n\n— Core Four Roofing"],
-            [45, 'Last note unless you want the coating check', "{{first_name}}, this is the last note in this series. If you want the moisture check and a coating number for {{city}}, call (281) 541-0027. If you do not, no further emails from this sequence.\n\n— Core Four Roofing"],
+            [0, 'A coating for {{city}}, if the roof is dry', "Hello {{first_name}},\n\nA silicone or acrylic coating can keep a commercial roof in {{city}} and skip a tear-off. Only if the insulation is dry. We have not been on this building, so the first step is a moisture check, not a contract.\n\nCall (281) 541-0027 or ask for the coating check: https://corefourroofing.com/contact-core-four-roofing/\n\nCore Four Roofing. Greater Houston, from Tomball.\n\n— Core Four Roofing"],
+            [3, 'Do not coat a wet roof', "{{first_name}}, a coating over wet insulation fails, and then you pay for a replacement anyway. A dry field can gain years. A wet one cannot.\n\nWe have not inspected this roof. The visit is how we tell them apart. Call (281) 541-0027.\n\n— Core Four"],
+            [10, 'What the moisture check includes', "Hello {{first_name}},\n\nWe look for trapped water, then seams, drains, and edge metal. After that we say silicone, acrylic, or replace. If the deck cannot hold a coating, we will not sell you one.\n\nCall (281) 541-0027.\n\n— Core Four Roofing"],
+            [21, 'Less downtime, when the roof qualifies', "{{first_name}}, owners choose a coating so the building stays open and the surface reflects Houston heat. Neither matters on a wet roof.\n\nThe check tells you which building you have. Night and weekend visits are available. Call (281) 541-0027.\n\n— Core Four"],
+            [35, 'A number an owner can approve', "Hello {{first_name}},\n\nIf the {{city}} roof qualifies, you get a scope and a price. If it does not, you get a replacement recommendation and we stop talking about coating.\n\nCall (281) 541-0027 or use https://corefourroofing.com/contact-core-four-roofing/\n\n— Core Four Roofing"],
+            [45, 'Coating check, or stop?', "{{first_name}}, this is the last note.\n\nReply check, or reply stop. If you want the moisture reading and a coating price for {{city}}, call (281) 541-0027.\n\n— Core Four Roofing"],
         ];
 
-        $this->writeSteps($sequence, $steps);
+        if ($this->replaceProspectSteps) {
+            $sequence->update(['description' => 'Cold coatings outreach. Asks for a moisture check, and only sells a coating when the roof is dry.']);
+        }
+        $this->writeSteps($sequence, $steps, $this->replaceProspectSteps);
     }
 
-    protected function writeSteps(EmailSequence $sequence, array $steps): void
+    protected function refreshProspectCopyOnce(): void
+    {
+        try {
+            if (Setting::get('prospect_email_copy_v2')) {
+                return;
+            }
+        } catch (\Throwable) {
+            return;
+        }
+
+        $this->replaceProspectSteps = true;
+        $this->seedResidentialProspects();
+        $this->seedCommercialProspects();
+        $this->seedCoatingsProspects();
+        $this->replaceProspectSteps = false;
+
+        try {
+            Setting::put('prospect_email_copy_v2', '1');
+        } catch (\Throwable) {
+            // The copy is still updated for this boot.
+        }
+    }
+
+    protected function writeSteps(EmailSequence $sequence, array $steps, bool $replace = false): void
     {
         foreach ($steps as $index => [$delay, $subject, $body]) {
-            $sequence->steps()->firstOrCreate(
-                ['position' => $index + 1],
-                [
-                    'delay_days' => $delay,
-                    'subject' => $subject,
-                    'body' => $body,
-                    'is_active' => true,
-                ]
-            );
+            $values = [
+                'delay_days' => $delay,
+                'subject' => $subject,
+                'body' => $body,
+                'is_active' => true,
+            ];
+            if ($replace) {
+                $sequence->steps()->updateOrCreate(['position' => $index + 1], $values);
+            } else {
+                $sequence->steps()->firstOrCreate(['position' => $index + 1], $values);
+            }
         }
     }
 }
