@@ -90,7 +90,7 @@ class EmailSequenceSeeder extends Seeder
         );
 
         $steps = [
-            [0, 'Free roof inspection in {{city}}', "Hi {{first_name}},\n\nCore Four Roofing inspects homes across Greater Houston from our Tomball shop. If your roof in {{city}} took hail, has a leak, or is worn out, we will come look at it for free and tell you repair or replacement.\n\nCall (281) 541-0027 and ask for the free inspection. If water is coming in tonight, we are on call 24/7.\n\n— Core Four Roofing"],
+            [0, 'Free roof inspection in {{city}}', "Hi {{first_name}},\n\nCore Four Roofing inspects homes across Greater Houston. If your roof in {{city}} took hail, has a leak, or is worn out, we will come look at it for free and tell you repair or replacement.\n\nCall (281) 541-0027 and ask for the free inspection. If water is coming in tonight, we are on call 24/7.\n\n— Core Four Roofing"],
             [3, 'Hail damage you cannot see from the yard', "{{first_name}}, a Houston hail hit often looks fine from the driveway. The bruise is in the shingle, the flashing, and the soft metal. The ceiling stain shows up later, after the deck has been wet.\n\nWe will get on the roof in {{city}}, mark what the storm did, and put it in writing. The inspection is free. Call (281) 541-0027.\n\n— Core Four Roofing"],
             [10, 'We will meet the adjuster with you', "Hi {{first_name}},\n\nIf this is a storm claim, you do not have to walk it alone. We inspect first. If a claim makes sense, we can meet the adjuster on the roof so the scope matches the damage. A lot of Texas claims get written as a patch when the roof needs to come off.\n\nCall (281) 541-0027.\n\n— Core Four Roofing"],
             [21, 'Most replacements take 1 to 3 days', "{{first_name}}, people put the roof off because they picture a month of mess. On a normal house we tear off, dry in, and install in one to three days. You sleep in the house, and the yard is cleaned before we leave.\n\nThe first step in {{city}} is still the free inspection. Call (281) 541-0027.\n\n— Core Four Roofing"],
@@ -116,7 +116,7 @@ class EmailSequenceSeeder extends Seeder
         );
 
         $steps = [
-            [0, 'Free roof survey for your {{city}} building', "Hello {{first_name}},\n\nIf you own or manage a building in {{city}}, Core Four will survey the roof at no charge. You get photos, years left, and a price ownership can approve. We cover Greater Houston from Tomball, and we can work nights and weekends so tenants stay put.\n\nCall (281) 541-0027 and ask for a commercial survey.\n\n— Core Four Roofing"],
+            [0, 'Free roof survey for your {{city}} building', "Hello {{first_name}},\n\nIf you own or manage a building in {{city}}, Core Four will survey the roof at no charge. You get photos, years left, and a price ownership can approve. We cover Greater Houston, and we can work nights and weekends so tenants stay put.\n\nCall (281) 541-0027 and ask for a commercial survey.\n\n— Core Four Roofing"],
             [3, 'A tenant leak costs more than the roof', "{{first_name}}, one leak over an occupied suite costs more in lost rent and complaints than the repair. We find where the water gets in, document it, and schedule the fix around your hours.\n\nIf {{city}} is leaking now, call (281) 541-0027. We answer 24/7.\n\n— Core Four Roofing"],
             [10, 'A survey an owner can forward', "Hello {{first_name}},\n\nYou get photos of the field, edges, and drains, a remaining-life note, and a written number. TPO, metal, modified bitumen, or a repair. We name the one the building needs, so an out-of-town owner can read it without a translation.\n\nCall (281) 541-0027 to put {{city}} on the survey list.\n\n— Core Four Roofing"],
             [21, 'The same patch every storm is the tell', "{{first_name}}, a roof that gets patched after every cell is already in its replacement window. The survey tells you whether you have two years or two months, so the capital request happens on your calendar instead of during the next named storm.\n\nCall (281) 541-0027.\n\n— Core Four Roofing"],
@@ -159,7 +159,7 @@ class EmailSequenceSeeder extends Seeder
     protected function refreshProspectCopyOnce(): void
     {
         try {
-            if (Setting::get('prospect_email_copy_v3')) {
+            if (Setting::get('prospect_email_copy_v4')) {
                 return;
             }
         } catch (\Throwable) {
@@ -173,7 +173,7 @@ class EmailSequenceSeeder extends Seeder
         $this->replaceProspectSteps = false;
 
         try {
-            Setting::put('prospect_email_copy_v3', '1');
+            Setting::put('prospect_email_copy_v4', '1');
         } catch (\Throwable) {
             // The copy is still updated for this boot.
         }
