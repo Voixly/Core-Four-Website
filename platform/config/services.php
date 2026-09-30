@@ -18,5 +18,6 @@ return [
         'location' => env('JOBNIMBUS_LOCATION', 'Core Four Roofing'),
         'record_type' => env('JOBNIMBUS_RECORD_TYPE', 'Customer'),
         'status' => env('JOBNIMBUS_STATUS', 'New'),
+        'completed_status' => env('JOBNIMBUS_COMPLETED_STATUS', 'Completed'),
     ],
 ];

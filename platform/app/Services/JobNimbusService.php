@@ -3,6 +3,9 @@
 namespace App\Services;
 
 use App\Models\Job;
+use App\Models\Lead;
+use App\Models\Review;
+use App\Support\JobNimbusSchema;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Log;
@@ -68,6 +71,301 @@ class JobNimbusService
 
             return false;
         }
+    }
+
+    /**
+     * Send one lead to JobNimbus. Nothing is sent until someone presses Sync.
+     * True when accepted, false when the call failed, null when JobNimbus is not connected.
+     */
+    public function pushLead(Lead $lead): ?bool
+    {
+        $key = (string) config('services.jobnimbus.key');
+        if ($key === '') {
+            return null;
+        }
+
+        $name = trim((string) $lead->name);
+        if ($name === '' && ! $lead->email && ! $lead->phone) {
+            return null;
+        }
+
+        try {
+            JobNimbusSchema::ensure();
+            $directory = $this->directory($key);
+            $payload = $this->leadPayload($lead, $directory);
+            $existing = $lead->jobnimbus_contact_id
+                ?: $this->findExisting($key, (string) ($payload['email'] ?? ''), (string) $payload['external_id']);
+
+            $response = $existing
+                ? $this->request($key)->put($this->url('contacts/'.$existing), $payload)
+                : $this->request($key)->post($this->url('contacts'), $payload);
+
+            if ($response->failed()) {
+                unset($payload['source_name'], $payload['sales_rep'], $payload['sales_rep_name'], $payload['owners'], $payload['location']);
+                $response = $existing
+                    ? $this->request($key, false)->put($this->url('contacts/'.$existing), $payload)
+                    : $this->request($key, false)->post($this->url('contacts'), $payload);
+            }
+
+            if ($response->failed()) {
+                Log::warning('JobNimbus lead was not saved', [
+                    'lead' => $lead->id,
+                    'status' => $response->status(),
+                    'body' => mb_substr($response->body(), 0, 500),
+                ]);
+
+                return false;
+            }
+
+            $jnid = (string) ($response->json('jnid') ?: $existing);
+            if ($jnid !== '') {
+                $lead->forceFill(['jobnimbus_contact_id' => $jnid])->save();
+                $lead->job?->forceFill(['jobnimbus_contact_id' => $jnid])->save();
+            }
+            $lead->log(null, 'jobnimbus', 'Contact sent to JobNimbus'.($jnid !== '' ? ' ('.$jnid.')' : ''));
+
+            return true;
+        } catch (\Throwable $e) {
+            Log::warning('JobNimbus lead failed', [
+                'lead' => $lead->id,
+                'error' => $e->getMessage(),
+            ]);
+
+            return false;
+        }
+    }
+
+    /**
+     * Pull recently completed JobNimbus jobs into Review Shield.
+     * Does not email the customer.
+     *
+     * @return array{ok: bool, created: int, skipped: int, message: string}
+     */
+    public function pullCompletedReviews(): array
+    {
+        $key = (string) config('services.jobnimbus.key');
+        if ($key === '') {
+            return ['ok' => false, 'created' => 0, 'skipped' => 0, 'message' => 'JobNimbus is not connected. Add the API key in Hostinger.'];
+        }
+
+        try {
+            JobNimbusSchema::ensure();
+            $jobs = $this->completedJobs($key);
+        } catch (\Throwable $e) {
+            Log::warning('JobNimbus completed jobs failed', ['error' => $e->getMessage()]);
+
+            return ['ok' => false, 'created' => 0, 'skipped' => 0, 'message' => 'JobNimbus did not return completed jobs.'];
+        }
+
+        $created = 0;
+        $skipped = 0;
+        foreach ($jobs as $job) {
+            $jnid = (string) ($job['jnid'] ?? '');
+            if ($jnid === '' || ! $this->isCompleted((string) ($job['status_name'] ?? ''))) {
+                continue;
+            }
+            if (Review::query()->where('jobnimbus_job_id', $jnid)->exists()) {
+                $skipped++;
+
+                continue;
+            }
+
+            $contact = $this->contactForJob($key, $job);
+            $name = trim((string) ($contact['name'] ?: ($job['name'] ?? '')));
+            if ($name === '' && empty($contact['email'])) {
+                $skipped++;
+
+                continue;
+            }
+
+            $recordType = strtolower((string) ($job['record_type_name'] ?? ''));
+            $place = trim(implode(', ', array_filter([
+                $job['address_line1'] ?? null,
+                $job['city'] ?? $contact['city'] ?? null,
+            ])));
+
+            Review::query()->create([
+                'name' => mb_substr($name !== '' ? $name : 'Homeowner', 0, 120),
+                'email' => $contact['email'] ?? null,
+                'phone' => $contact['phone'] ?? null,
+                'city' => $contact['city'] ?? ($job['city'] ?? null),
+                'type' => str_contains($recordType, 'commercial') ? 'commercial' : 'residential',
+                'job' => mb_substr($place !== '' ? $place : (string) ($job['name'] ?? 'Completed job'), 0, 120),
+                'status' => 'pending',
+                'source' => 'jobnimbus',
+                'jobnimbus_job_id' => $jnid,
+            ]);
+            $created++;
+        }
+
+        if ($created === 0 && $skipped === 0) {
+            return ['ok' => true, 'created' => 0, 'skipped' => 0, 'message' => 'No completed JobNimbus jobs were waiting.'];
+        }
+
+        $message = $created === 1
+            ? '1 completed job is ready for a review.'
+            : $created.' completed jobs are ready for a review.';
+        if ($skipped > 0) {
+            $message .= ' '.$skipped.' were already here.';
+        }
+
+        return ['ok' => true, 'created' => $created, 'skipped' => $skipped, 'message' => $message];
+    }
+
+    /**
+     * @param  array<string, mixed>  $directory
+     * @return array<string, mixed>
+     */
+    private function leadPayload(Lead $lead, array $directory): array
+    {
+        $full = trim((string) ($lead->name ?: 'Homeowner'));
+        $parts = preg_split('/\s+/', $full, 2) ?: [];
+        $first = $parts[0] ?: 'Homeowner';
+        $last = $parts[1] ?? '';
+        $phone = preg_replace('/\D+/', '', (string) ($lead->phone ?? '')) ?: null;
+        $description = trim(implode("\n", array_filter([
+            $lead->typeLabel(),
+            $lead->need,
+            $lead->notes,
+            $lead->page_url ? 'Page: '.$lead->page_url : null,
+        ])));
+
+        $payload = array_filter([
+            'first_name' => $first,
+            'last_name' => $last,
+            'display_name' => trim($first.' '.$last),
+            'email' => $lead->email,
+            'home_phone' => $phone,
+            'city' => $lead->city,
+            'state_text' => 'TX',
+            'zip' => $lead->zip,
+            'country_name' => 'United States',
+            'description' => $description !== '' ? $description : null,
+            'record_type_name' => config('services.jobnimbus.record_type'),
+            'status_name' => config('services.jobnimbus.status'),
+            'external_id' => 'corefour-lead-'.$lead->id,
+        ], fn ($value) => $value !== null && $value !== '');
+
+        $source = $this->matchName($directory['sources'] ?? [], (string) ($lead->source ?: 'website'), ['website', 'web', 'google', 'internet']);
+        if ($source) {
+            $payload['source_name'] = $source;
+        }
+
+        $rep = $this->matchRecord($directory['users'] ?? [], (string) config('services.jobnimbus.sales_rep'));
+        if ($rep) {
+            $payload['sales_rep'] = $rep['id'];
+            $payload['sales_rep_name'] = $rep['name'];
+            $payload['owners'] = [['id' => $rep['id']]];
+        } else {
+            $payload['sales_rep_name'] = (string) config('services.jobnimbus.sales_rep');
+        }
+
+        $location = $this->matchRecord($directory['locations'] ?? [], (string) config('services.jobnimbus.location'));
+        if ($location) {
+            $payload['location'] = ['id' => $location['id']];
+        }
+
+        return $payload;
+    }
+
+    /**
+     * @return list<array<string, mixed>>
+     */
+    private function completedJobs(string $key): array
+    {
+        $names = array_values(array_unique(array_filter([
+            (string) config('services.jobnimbus.completed_status'),
+            'Completed',
+            'Paid & Closed',
+            'Job Completed',
+        ])));
+
+        $response = $this->request($key)->get($this->url('jobs'), [
+            'size' => 40,
+            'sort_field' => 'date_updated',
+            'sort_direction' => 'desc',
+            'filter' => json_encode(['must' => [['terms' => ['status_name' => $names]]]]),
+        ]);
+
+        if ($response->failed()) {
+            $response = $this->request($key)->get($this->url('jobs'), [
+                'size' => 40,
+                'sort_field' => 'date_updated',
+                'sort_direction' => 'desc',
+            ]);
+        }
+
+        if ($response->failed()) {
+            throw new \RuntimeException('JobNimbus jobs request failed.');
+        }
+
+        $rows = $response->json('results') ?: $response->json('jobs') ?: [];
+
+        return is_array($rows) ? array_values(array_filter($rows, 'is_array')) : [];
+    }
+
+    /**
+     * @param  array<string, mixed>  $job
+     * @return array{name: string, email: ?string, phone: ?string, city: ?string}
+     */
+    private function contactForJob(string $key, array $job): array
+    {
+        $empty = ['name' => '', 'email' => null, 'phone' => null, 'city' => null];
+        $id = $job['primary']['id'] ?? null;
+        if (! is_string($id) || $id === '') {
+            foreach ($job['related'] ?? [] as $related) {
+                if (is_array($related) && is_string($related['id'] ?? null) && $related['id'] !== '') {
+                    $id = $related['id'];
+                    break;
+                }
+            }
+        }
+        if (! is_string($id) || $id === '') {
+            return $empty;
+        }
+
+        try {
+            $response = $this->request($key)->get($this->url('contacts/'.$id));
+        } catch (\Throwable) {
+            return $empty;
+        }
+        if ($response->failed()) {
+            return $empty;
+        }
+
+        $contact = $response->json();
+        if (! is_array($contact)) {
+            return $empty;
+        }
+
+        $name = trim((string) ($contact['display_name'] ?? ''));
+        if ($name === '') {
+            $name = trim(((string) ($contact['first_name'] ?? '')).' '.((string) ($contact['last_name'] ?? '')));
+        }
+        $phone = $contact['mobile_phone'] ?? $contact['home_phone'] ?? $contact['work_phone'] ?? null;
+
+        return [
+            'name' => $name,
+            'email' => is_string($contact['email'] ?? null) && $contact['email'] !== '' ? $contact['email'] : null,
+            'phone' => is_string($phone) && $phone !== '' ? $phone : null,
+            'city' => is_string($contact['city'] ?? null) && $contact['city'] !== '' ? $contact['city'] : null,
+        ];
+    }
+
+    private function isCompleted(string $status): bool
+    {
+        $status = strtolower(trim($status));
+        if ($status === '' || str_contains($status, 'lost')) {
+            return false;
+        }
+
+        $wanted = strtolower(trim((string) config('services.jobnimbus.completed_status', 'Completed')));
+        if ($wanted !== '' && $status === $wanted) {
+            return true;
+        }
+
+        return str_contains($status, 'complete')
+            || (str_contains($status, 'paid') && str_contains($status, 'closed'));
     }
 
     /**

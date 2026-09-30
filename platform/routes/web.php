@@ -138,6 +138,7 @@ Route::prefix('admin')->name('admin.')->middleware(['auth', 'role:admin,agency,o
     Route::get('/leads/{lead}', [LeadController::class, 'show'])->name('leads.show');
     Route::patch('/leads/{lead}', [LeadController::class, 'update'])->name('leads.update');
     Route::post('/leads/{lead}/notes', [LeadController::class, 'note'])->name('leads.note');
+    Route::post('/leads/{lead}/jobnimbus', [LeadController::class, 'syncJobNimbus'])->name('leads.jobnimbus');
     Route::delete('/leads/{lead}', [LeadController::class, 'destroy'])->name('leads.destroy');
     Route::post('/leads/{lead}/jobs', [AdminJobController::class, 'store'])->name('leads.jobs.store');
 
@@ -174,6 +175,7 @@ Route::prefix('admin')->name('admin.')->middleware(['auth', 'role:admin,agency,o
     Route::put('/password', [UserController::class, 'updateOwn'])->name('password.update');
 
     Route::get('/reviews', [AdminReviewController::class, 'index'])->name('reviews.index');
+    Route::post('/reviews/jobnimbus', [AdminReviewController::class, 'syncJobNimbus'])->name('reviews.jobnimbus');
     Route::post('/reviews', [AdminReviewController::class, 'store'])->name('reviews.store');
     Route::get('/reviews/{review}', [AdminReviewController::class, 'show'])->name('reviews.show');
     Route::patch('/reviews/{review}', [AdminReviewController::class, 'update'])->name('reviews.update');

@@ -9,7 +9,6 @@ use App\Models\Lead;
 use App\Models\Pipeline;
 use App\Models\PipelineStage;
 use App\Models\User;
-use App\Services\JobNimbusService;
 use App\Services\JobService;
 use Database\Seeders\PipelineSeeder;
 use Illuminate\Http\JsonResponse;
@@ -69,15 +68,7 @@ class JobController extends Controller
 
     private function jobOpened(Job $job): RedirectResponse
     {
-        $sent = app(JobNimbusService::class)->pushContact($job);
-        $message = 'Job '.$job->number.' is open.';
-        if ($sent === true) {
-            $message .= ' The contact is in JobNimbus.';
-        } elseif ($sent === false) {
-            $message .= ' JobNimbus did not take the contact.';
-        }
-
-        return redirect()->route('admin.jobs.show', $job)->with('success', $message);
+        return redirect()->route('admin.jobs.show', $job)->with('success', 'Job '.$job->number.' is open.');
     }
 
     private function pipelines()

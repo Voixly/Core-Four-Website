@@ -13,6 +13,17 @@
         @if($emailThread = $lead->emailConversation())
             <p><a class="btn" href="{{ route('admin.chat.show', $emailThread) }}">Open email thread</a></p>
         @endif
+        @unless($lead->source === 'hiring')
+            <form method="post" action="{{ route('admin.leads.jobnimbus', $lead) }}" style="margin-top:0.75rem">
+                @csrf
+                @if($lead->jobnimbus_contact_id)
+                    <p>Already in JobNimbus. Sync again if the name or phone changed.</p>
+                @else
+                    <p>This lead stays here until you send it.</p>
+                @endif
+                <button class="btn" type="submit">Sync to JobNimbus</button>
+            </form>
+        @endunless
         <p>{{ $lead->need }}</p>
         <p>{{ $lead->notes }}</p>
         <form method="post" action="{{ route('admin.leads.update', $lead) }}">

@@ -12,7 +12,7 @@ class Review extends Model
 
     protected $fillable = [
         'token', 'name', 'email', 'phone', 'city', 'type', 'job',
-        'stars', 'comment', 'status', 'source', 'lead_id', 'job_id', 'assigned_to',
+        'stars', 'comment', 'status', 'source', 'lead_id', 'job_id', 'jobnimbus_job_id', 'assigned_to',
         'rated_at', 'google_clicked_at', 'yelp_clicked_at', 'recovery_notes',
     ];
 

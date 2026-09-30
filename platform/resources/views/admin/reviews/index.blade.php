@@ -12,6 +12,14 @@
     <p><a href="{{ url('/reviews/') }}" target="_blank">Open public review page</a></p>
 </div>
 <div class="panel">
+    <h3>Completed JobNimbus jobs</h3>
+    <p>Pull finished jobs into this list. Nothing is emailed until you send the review link.</p>
+    <form method="post" action="{{ route('admin.reviews.jobnimbus') }}">
+        @csrf
+        <button class="btn" type="submit">Sync completed jobs</button>
+    </form>
+</div>
+<div class="panel">
     <h3>Create an invite</h3>
     <form class="filters" method="post" action="{{ route('admin.reviews.store') }}">
         @csrf

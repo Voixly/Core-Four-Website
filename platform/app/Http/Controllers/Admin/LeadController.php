@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Lead;
 use App\Models\Pipeline;
 use App\Models\User;
+use App\Services\JobNimbusService;
 use App\Services\JobService;
 use App\Services\LeadService;
 use Illuminate\Http\RedirectResponse;
@@ -100,6 +101,19 @@ class LeadController extends Controller
         }
 
         return back()->with('success', 'Lead updated.');
+    }
+
+    public function syncJobNimbus(Lead $lead, JobNimbusService $jobNimbus): RedirectResponse
+    {
+        $sent = $jobNimbus->pushLead($lead);
+        if ($sent === true) {
+            return back()->with('success', $lead->name.' is in JobNimbus.');
+        }
+        if ($sent === null) {
+            return back()->with('error', 'JobNimbus is not connected. Add the API key in Hostinger.');
+        }
+
+        return back()->with('error', 'JobNimbus did not take this lead.');
     }
 
     public function note(Request $request, Lead $lead): RedirectResponse

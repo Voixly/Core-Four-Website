@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Lead;
 use App\Models\Review;
 use App\Models\User;
+use App\Services\JobNimbusService;
 use App\Services\ReviewService;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
@@ -45,6 +46,13 @@ class ReviewController extends Controller
         $staff = User::query()->where('is_active', true)->orderBy('name')->get();
 
         return view('admin.reviews.show', compact('review', 'staff'));
+    }
+
+    public function syncJobNimbus(JobNimbusService $jobNimbus): RedirectResponse
+    {
+        $result = $jobNimbus->pullCompletedReviews();
+
+        return back()->with($result['ok'] ? 'success' : 'error', $result['message']);
     }
 
     public function store(Request $request, ReviewService $reviews): RedirectResponse
