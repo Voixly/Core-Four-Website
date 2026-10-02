@@ -7,8 +7,9 @@
     <div class="panel"><p>No email flows are set up yet.</p></div>
 @endif
 @foreach([
-    '12-month nurtures' => $sequences->filter(fn ($sequence) => ! str_contains(strtolower($sequence->name), 'prospect')),
+    '12-month nurtures' => $sequences->filter(fn ($sequence) => ! str_contains(strtolower($sequence->name), 'prospect') && ! str_contains(strtolower($sequence->name), 'review')),
     'Prospect outreach' => $sequences->filter(fn ($sequence) => str_contains(strtolower($sequence->name), 'prospect')),
+    'Review Shield' => $sequences->filter(fn ($sequence) => str_contains(strtolower($sequence->name), 'review')),
 ] as $heading => $group)
     @if($group->isNotEmpty())
         <h2>{{ $heading }}</h2>

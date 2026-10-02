@@ -12,6 +12,31 @@
     <p><a href="{{ url('/reviews/') }}" target="_blank">Open public review page</a></p>
 </div>
 <div class="panel">
+    <h3>Rating emails</h3>
+    <p>{{ $mailsSent }} {{ $mailsSent === 1 ? 'email has' : 'emails have' }} been sent to ask for a review.@if($mailsFailed) {{ $mailsFailed }} did not send.@endif <a href="{{ route('admin.email.index') }}">Open the review flow</a></p>
+    @if($mailLog->isEmpty())
+        <p>No rating emails yet. Check “Email them the link” when you create an invite.</p>
+    @else
+        <table>
+            <tr><th>When</th><th>To</th><th>Subject</th><th>Result</th></tr>
+            @foreach($mailLog as $entry)
+                <tr>
+                    <td>{{ optional($entry->sent_at)->timezone(config('app.timezone'))->format('M j, Y g:i A') }}</td>
+                    <td>
+                        @if($entry->review)
+                            <a href="{{ route('admin.reviews.show', $entry->review) }}">{{ $entry->review->name ?: $entry->email }}</a>
+                        @else
+                            {{ $entry->email }}
+                        @endif
+                    </td>
+                    <td>{{ $entry->subject }}</td>
+                    <td>{{ $entry->status === 'sent' ? 'Sent' : 'Did not send' }}</td>
+                </tr>
+            @endforeach
+        </table>
+    @endif
+</div>
+<div class="panel">
     <h3>Completed JobNimbus jobs</h3>
     <p>Pull finished jobs into this list. Nothing is emailed until you send the review link.</p>
     <form method="post" action="{{ route('admin.reviews.jobnimbus') }}">

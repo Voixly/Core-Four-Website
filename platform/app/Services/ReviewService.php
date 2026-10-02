@@ -4,10 +4,15 @@ namespace App\Services;
 
 use App\Mail\ReviewInviteMail;
 use App\Mail\ReviewRecoveryMail;
+use App\Models\EmailSequence;
+use App\Models\EmailStep;
 use App\Models\Lead;
 use App\Models\Review;
+use App\Models\ReviewMailLog;
 use App\Models\Setting;
 use App\Models\User;
+use App\Support\ReviewMailSchema;
+use Database\Seeders\EmailSequenceSeeder;
 use Illuminate\Support\Facades\Mail;
 
 class ReviewService
@@ -27,12 +32,8 @@ class ReviewService
             'job_id' => $data['job_id'] ?? null,
         ]);
 
-        if ($emailCustomer && $review->email) {
-            try {
-                Mail::to($review->email)->send(new ReviewInviteMail($review));
-            } catch (\Throwable) {
-                // Mail may not be configured locally.
-            }
+        if ($emailCustomer) {
+            $this->emailCustomer($review);
         }
 
         return $review;
@@ -42,6 +43,10 @@ class ReviewService
     {
         $existing = Review::query()->where('lead_id', $lead->id)->whereNull('stars')->latest()->first();
         if ($existing) {
+            if ($emailCustomer) {
+                $this->emailCustomer($existing);
+            }
+
             return $existing;
         }
 
@@ -79,6 +84,64 @@ class ReviewService
         }
 
         return $review->fresh();
+    }
+
+    /**
+     * Send the Review Shield rating email and write it to the log.
+     * sent, failed, or skipped when there is no address.
+     */
+    public function emailCustomer(Review $review): string
+    {
+        if (! $review->email) {
+            $review->emailResult = 'skipped';
+
+            return 'skipped';
+        }
+
+        ReviewMailSchema::ensure();
+        $step = $this->reviewStep();
+        $mail = new ReviewInviteMail($review, $step);
+
+        try {
+            Mail::to($review->email)->send($mail);
+            ReviewMailLog::query()->create([
+                'review_id' => $review->id,
+                'email' => $review->email,
+                'subject' => $mail->subjectLine(),
+                'status' => 'sent',
+                'sent_at' => now(),
+            ]);
+            $review->emailResult = 'sent';
+
+            return 'sent';
+        } catch (\Throwable $e) {
+            ReviewMailLog::query()->create([
+                'review_id' => $review->id,
+                'email' => $review->email,
+                'subject' => $mail->subjectLine(),
+                'status' => 'failed',
+                'error' => mb_substr($e->getMessage(), 0, 500),
+                'sent_at' => now(),
+            ]);
+            $review->emailResult = 'failed';
+
+            return 'failed';
+        }
+    }
+
+    private function reviewStep(): ?EmailStep
+    {
+        $sequence = EmailSequence::query()->where('name', 'Review Shield')->first();
+        if (! $sequence) {
+            try {
+                (new EmailSequenceSeeder)->run();
+            } catch (\Throwable) {
+                return null;
+            }
+            $sequence = EmailSequence::query()->where('name', 'Review Shield')->first();
+        }
+
+        return $sequence?->steps()->where('is_active', true)->orderBy('position')->first();
     }
 
     public function googleUrl(): string

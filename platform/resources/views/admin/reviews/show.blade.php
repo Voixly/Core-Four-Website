@@ -21,6 +21,12 @@
             <input readonly value="{{ $review->publicUrl() }}" onclick="this.select()">
         </label>
         <p class="page-meta">Share this after a job is complete. First screen is stars — not Google.</p>
+        @if($review->mailLogs->isNotEmpty())
+            <h3>Rating emails</h3>
+            @foreach($review->mailLogs as $entry)
+                <p>{{ optional($entry->sent_at)->timezone(config('app.timezone'))->format('M j, Y g:i A') }} · {{ $entry->email }} · {{ $entry->status === 'sent' ? 'Sent' : 'Did not send' }}</p>
+            @endforeach
+        @endif
         @if($review->google_clicked_at)<p>Clicked Google {{ $review->google_clicked_at->timezone(config('app.timezone')) }}</p>@endif
         @if($review->yelp_clicked_at)<p>Clicked Yelp {{ $review->yelp_clicked_at->timezone(config('app.timezone')) }}</p>@endif
     </div>

@@ -7,6 +7,8 @@ use App\Mail\NurtureMail;
 use App\Models\EmailSequence;
 use App\Models\EmailStep;
 use App\Models\Lead;
+use App\Models\ReviewMailLog;
+use App\Support\ReviewMailSchema;
 use Database\Seeders\EmailSequenceSeeder;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
@@ -23,6 +25,7 @@ class EmailController extends Controller
             'Residential prospect outreach',
             'Commercial prospect outreach',
             'Commercial coatings prospect outreach',
+            'Review Shield',
         ];
         $present = EmailSequence::query()->whereIn('name', $required)->pluck('name');
         if ($present->count() < count($required)) {
@@ -45,8 +48,13 @@ class EmailController extends Controller
     public function show(EmailSequence $sequence): View
     {
         $sequence->load('steps');
+        $reviewMailsSent = 0;
+        if (str_contains(strtolower($sequence->name), 'review')) {
+            ReviewMailSchema::ensure();
+            $reviewMailsSent = ReviewMailLog::query()->where('status', 'sent')->count();
+        }
 
-        return view('admin.email.show', compact('sequence'));
+        return view('admin.email.show', compact('sequence', 'reviewMailsSent'));
     }
 
     public function edit(EmailStep $step): View

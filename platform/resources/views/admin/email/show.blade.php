@@ -5,6 +5,9 @@
 <div class="panel">
     <h3>{{ $sequence->name }}</h3>
     <p>{{ $sequence->description }} · {{ $sequence->audience }} · {{ $sequence->is_active ? 'active' : 'paused' }}</p>
+    @if(str_contains(strtolower($sequence->name), 'review'))
+        <p>{{ $reviewMailsSent ?? 0 }} rating {{ ($reviewMailsSent ?? 0) === 1 ? 'email has' : 'emails have' }} been sent from Review Shield.</p>
+    @endif
     @forelse($sequence->steps as $step)
         <article class="email-step" id="step-{{ $step->id }}">
             <p class="email-step-meta">Day {{ $step->delay_days }} · {{ $step->is_active ? 'active' : 'paused' }}</p>

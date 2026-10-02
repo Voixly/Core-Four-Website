@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Support\Str;
 
 class Review extends Model
@@ -37,6 +38,11 @@ class Review extends Model
     public function lead(): BelongsTo
     {
         return $this->belongsTo(Lead::class);
+    }
+
+    public function mailLogs(): HasMany
+    {
+        return $this->hasMany(ReviewMailLog::class)->latest();
     }
 
     public function roofingJob(): BelongsTo

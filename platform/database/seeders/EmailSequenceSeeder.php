@@ -17,6 +17,7 @@ class EmailSequenceSeeder extends Seeder
         $this->seedResidentialProspects();
         $this->seedCommercialProspects();
         $this->seedCoatingsProspects();
+        $this->seedReviewShield();
         $this->refreshProspectCopyOnce();
     }
 
@@ -154,6 +155,22 @@ class EmailSequenceSeeder extends Seeder
             $sequence->update(['description' => 'Sales outreach for commercial coatings. Quote a restoration instead of a tear-off when the roof qualifies.']);
         }
         $this->writeSteps($sequence, $steps, $this->replaceProspectSteps);
+    }
+
+    protected function seedReviewShield(): void
+    {
+        $sequence = EmailSequence::query()->firstOrCreate(
+            ['name' => 'Review Shield'],
+            [
+                'audience' => 'residential',
+                'is_active' => true,
+                'description' => 'The private rating email. It goes out only when someone checks Email them the link in Review Shield.',
+            ]
+        );
+
+        $this->writeSteps($sequence, [
+            [0, 'How did Core Four do on your roof?', "Hi {{first_name}},\n\nThis stays between you and Core Four first. It is not a Google or Yelp review. It is a 10-second check so we know if the job landed right.\n\nJob: {{job}} in {{city}}.\n\nTap the button, pick 1–5 stars, and we will take it from there.\n\n— Core Four Roofing"],
+        ]);
     }
 
     protected function refreshProspectCopyOnce(): void

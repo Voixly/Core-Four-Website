@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Lead;
 use App\Models\Review;
+use App\Models\ReviewMailLog;
+use App\Support\ReviewMailSchema;
 use App\Models\User;
 use App\Services\JobNimbusService;
 use App\Services\ReviewService;
@@ -31,18 +33,23 @@ class ReviewController extends Controller
             ->paginate(25)
             ->withQueryString();
 
+        ReviewMailSchema::ensure();
+
         return view('admin.reviews.index', [
             'reviews' => $reviews,
             'held' => Review::query()->where('status', 'held')->count(),
             'invited' => Review::query()->where('status', 'invited')->count(),
             'pending' => Review::query()->where('status', 'pending')->count(),
             'googleClicks' => Review::query()->whereNotNull('google_clicked_at')->count(),
+            'mailsSent' => ReviewMailLog::query()->where('status', 'sent')->count(),
+            'mailsFailed' => ReviewMailLog::query()->where('status', 'failed')->count(),
+            'mailLog' => ReviewMailLog::query()->with('review')->latest('sent_at')->limit(15)->get(),
         ]);
     }
 
     public function show(Review $review): View
     {
-        $review->load(['lead', 'assignee']);
+        $review->load(['lead', 'assignee', 'mailLogs']);
         $staff = User::query()->where('is_active', true)->orderBy('name')->get();
 
         return view('admin.reviews.show', compact('review', 'staff'));
@@ -81,9 +88,16 @@ class ReviewController extends Controller
             $review = $reviews->invite($data, $request->user(), $request->boolean('send_email'));
         }
 
+        $message = match ($review->emailResult ?? null) {
+            'sent' => 'Review Shield link ready. The rating email was sent.',
+            'failed' => 'Review Shield link ready. The rating email did not send.',
+            'skipped' => 'Review Shield link ready. Add an email address to send the rating note.',
+            default => 'Review Shield link ready.',
+        };
+
         return redirect()
             ->route('admin.reviews.show', $review)
-            ->with('success', 'Review Shield link ready.');
+            ->with(($review->emailResult ?? null) === 'failed' ? 'error' : 'success', $message);
     }
 
     public function update(Request $request, Review $review): RedirectResponse

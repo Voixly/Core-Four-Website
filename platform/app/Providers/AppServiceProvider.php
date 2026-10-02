@@ -6,6 +6,7 @@ use App\Models\City;
 use App\Models\Setting;
 use App\Support\EmailReplySchema;
 use App\Support\JobNimbusSchema;
+use App\Support\ReviewMailSchema;
 use Illuminate\Pagination\Paginator;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\Facades\Schema;
@@ -55,6 +56,7 @@ class AppServiceProvider extends ServiceProvider
         try {
             EmailReplySchema::ensure();
             JobNimbusSchema::ensure();
+            ReviewMailSchema::ensure();
         } catch (\Throwable) {
             // The chat page can add the columns on the next request.
         }
