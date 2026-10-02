@@ -98,9 +98,12 @@
                 </a>
             @endforeach
         </div>
-        @if($city->type === 'commercial' && in_array($city->slug, ['humble', 'tomball'], true))
+        @if($city->type === 'commercial' && $city->slug === 'humble')
+            <h3>Humble buildings along 59</h3>
+            <p>The commercial searches that already reach this page are repair calls, not a request for a new city. A Humble survey starts at the drains, the TPO seams, and the parapet cap. <a href="{{ url('/ponding-water-on-a-low-slope-roof/') }}">Ponding water</a>, <a href="{{ url('/tpo-seams-in-texas-heat/') }}">TPO seams in the heat</a>, and <a href="{{ url('/parapet-coping-that-leaks/') }}">parapet coping</a> are the three failures we write up before anyone talks about a tear-off. <a href="{{ url('/commercial-roofing/repair-preventative-maintenance/') }}">Commercial roof repair</a> is the crew that comes out.</p>
+        @elseif($city->type === 'commercial' && $city->slug === 'tomball')
             <h3>For property managers</h3>
-            <p><a href="{{ url('/commercial-roofing/repair-preventative-maintenance/') }}">Commercial roof repair</a> covers the leak call. <a href="{{ url('/navigating-code-for-commercial-roof-drainage-systems/') }}">Drainage code</a> and <a href="{{ url('/stop-tearing-it-down-how-restoration-extends-your-asset-value-by-ten-plus-years/') }}">coatings versus tear-off</a> are the two write-ups we send with a Humble or Tomball survey.</p>
+            <p><a href="{{ url('/commercial-roofing/repair-preventative-maintenance/') }}">Commercial roof repair</a> covers the leak call. <a href="{{ url('/navigating-code-for-commercial-roof-drainage-systems/') }}">Drainage code</a> and <a href="{{ url('/stop-tearing-it-down-how-restoration-extends-your-asset-value-by-ten-plus-years/') }}">coatings versus tear-off</a> are the two write-ups we send with a Tomball survey.</p>
         @endif
         @if($seo['sibling'])
             <p class="city-switch">

@@ -57,6 +57,9 @@ Route::permanentRedirect('/sub-page-template/', '/');
 
 Route::get('/', [PageController::class, 'home'])->name('home');
 
+Route::get('/residential-roofing/tile-roofs/', [PageController::class, 'material'])->defaults('material', 'tile')->name('residential.tile');
+Route::get('/residential-roofing/slate-roofs/', [PageController::class, 'material'])->defaults('material', 'slate')->name('residential.slate');
+
 // A layout file in resources/data/pages is a public page and a sitemap URL.
 foreach (\App\Support\PageLayout::publishedPaths() as $path) {
     $slug = str_replace('/', '--', trim($path, '/'));

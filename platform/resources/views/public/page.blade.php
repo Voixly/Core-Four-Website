@@ -83,5 +83,6 @@
             </section>
         @endif
     @endforeach
+    @include('partials.service-reading', ['reads' => \App\Support\ServiceReading::forSlug($slug)])
     @include('partials.guide-cta', ['context' => $slug])
 @endsection

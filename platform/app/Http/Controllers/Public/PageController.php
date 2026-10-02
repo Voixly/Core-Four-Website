@@ -7,6 +7,7 @@ use App\Models\City;
 use App\Models\Guide;
 use App\Support\BlogPost;
 use App\Support\CityPage;
+use App\Support\MaterialPage;
 use App\Support\PageLayout;
 use App\Support\SiteSeo;
 use Illuminate\Http\Request;
@@ -32,6 +33,14 @@ class PageController extends Controller
         abort_unless($page, 404);
 
         return view('public.page', compact('page', 'slug'));
+    }
+
+    public function material(string $material): View
+    {
+        $page = MaterialPage::find($material);
+        abort_unless($page, 404);
+
+        return view('public.material', compact('page'));
     }
 
     public function city(Request $request, string $slug): View
@@ -173,6 +182,9 @@ TXT;
             '## Main pages',
             '- [Home]('.SiteSeo::url('/').')',
             '- [Residential roofing]('.SiteSeo::url('/residential-roofing/').')',
+            '- [Tile roofs]('.SiteSeo::url('/residential-roofing/tile-roofs/').')',
+            '- [Slate roofs]('.SiteSeo::url('/residential-roofing/slate-roofs/').')',
+            '- [Metal roofs]('.SiteSeo::url('/residential-roofing/metal-roofs/').')',
             '- [Commercial roofing]('.SiteSeo::url('/commercial-roofing/').')',
             '- [Storm and emergency]('.SiteSeo::url('/storm-emergency/').')',
             '- [Insurance claims]('.SiteSeo::url('/insurance-claims/').')',

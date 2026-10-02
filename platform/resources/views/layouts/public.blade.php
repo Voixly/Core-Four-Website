@@ -105,6 +105,8 @@
                     <a href="{{ url('/residential-roofing/metal-roofs/') }}">Metal Roofs</a>
                     <a href="{{ url('/residential-roofing/synthetic-roofs/') }}">Synthetic Roofs</a>
                     <a href="{{ url('/residential-roofing/stone-coated-steel/') }}">Stone-Coated Steel</a>
+                    <a href="{{ url('/residential-roofing/tile-roofs/') }}">Tile Roofs</a>
+                    <a href="{{ url('/residential-roofing/slate-roofs/') }}">Slate Roofs</a>
                     <a href="/guides/suburb-replacement-timeline/">Free replacement timeline</a>
                     <a href="{{ url('/residential-roofing-in-tx/') }}">Cities we serve</a>
                 </div></div>
@@ -126,6 +128,8 @@
                 <h6>Residential Services</h6>
                 <ul class="footer-links">
                     <li><a href="{{ url('/residential-roofing/stone-coated-steel/') }}">Stone-Coated Steel</a></li>
+                    <li><a href="{{ url('/residential-roofing/tile-roofs/') }}">Tile Roofs</a></li>
+                    <li><a href="{{ url('/residential-roofing/slate-roofs/') }}">Slate Roofs</a></li>
                     <li><a href="{{ url('/residential-roofing/synthetic-roofs/') }}">Synthetic Roofs</a></li>
                     <li><a href="{{ url('/residential-roofing/metal-roofs/') }}">Metal Roofs</a></li>
                     <li><a href="{{ url('/residential-roofing/asphalt-shingles/') }}">Asphalt Shingles</a></li>

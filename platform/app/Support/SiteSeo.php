@@ -307,6 +307,8 @@ class SiteSeo
             'asphalt-shingles' => 'Asphalt shingles',
             'metal-roofs' => 'Metal roofs',
             'stone-coated-steel' => 'Stone-coated steel',
+            'tile-roofs' => 'Tile roofs',
+            'slate-roofs' => 'Slate roofs',
             'synthetic-roofs' => 'Synthetic roofs',
             'roof-repair' => 'Roof repair',
             'roof-installation' => 'Roof replacement',
@@ -413,8 +415,8 @@ class SiteSeo
                 'description' => 'Architectural asphalt shingles built for Texas hail and heat, installed by Core Four with manufacturer warranties.',
             ],
             'residential-roofing--metal-roofs' => [
-                'title' => 'Metal Roofing in Texas | Core Four Roofing',
-                'description' => 'Standing seam metal roofs for Texas homes — 50-plus year life, Class 4 hail rating, and a cooler attic than asphalt.',
+                'title' => 'Metal Roof Replacement in Houston | Core Four',
+                'description' => 'Standing-seam metal roofs for Houston houses. Hidden fasteners, a solid deck, and porch screw-down kept off the main roof.',
             ],
             'residential-roofing--synthetic-roofs' => [
                 'title' => 'F-Wave Synthetic Roofing in Texas | Core Four',

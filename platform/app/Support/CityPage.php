@@ -238,19 +238,30 @@ class CityPage
             ];
         }
 
-        $items = [
-            ['title' => 'Roof repair', 'body' => 'Leaks, flashing, and storm damage on '.$name.' homes — including tile, metal, and shingle.', 'href' => '/residential-roofing/roof-repair/'],
-            ['title' => 'Metal roofs', 'body' => 'Standing-seam and residential metal repair and replacement. Hidden fasteners, not barn panels.', 'href' => '/residential-roofing/metal-roofs/'],
-            ['title' => 'Stone-coated steel', 'body' => 'The upgrade when tile is too heavy or the underlayment is gone — tile look, metal strength.', 'href' => '/residential-roofing/stone-coated-steel/'],
-            ['title' => 'Insurance claims', 'body' => 'We document '.$name.' storm damage so the claim matches the roof.', 'href' => '/insurance-claims/'],
-        ];
+        $items = [];
 
-        if (in_array('tile', $focus, true) || in_array('slate', $focus, true)) {
-            array_unshift($items, [
-                'title' => 'Tile & slate repair',
-                'body' => $name.' has real tile'.(in_array('slate', $focus, true) ? ' and slate' : '').'. We repair broken pieces and failed underlayment — we do not walk a tile roof like a shingle roof.',
-                'href' => '/residential-roofing/roof-repair/',
-            ]);
+        if (in_array('tile', $focus, true)) {
+            $items[] = [
+                'title' => 'Tile roofs',
+                'body' => $name.' has concrete and clay tile. We repair broken pieces and failed underlayment without walking the field like a shingle roof.',
+                'href' => '/residential-roofing/tile-roofs/',
+            ];
+        }
+
+        if (in_array('slate', $focus, true)) {
+            $items[] = [
+                'title' => 'Slate roofs',
+                'body' => 'Hook repairs and copper details. We do not nail through the face of a slate.',
+                'href' => '/residential-roofing/slate-roofs/',
+            ];
+        }
+
+        $items[] = ['title' => 'Metal roofs', 'body' => 'Standing-seam and residential metal repair and replacement. Hidden fasteners, not barn panels.', 'href' => '/residential-roofing/metal-roofs/'];
+        $items[] = ['title' => 'Stone-coated steel', 'body' => 'The upgrade when tile is too heavy or the underlayment is gone — tile look, metal strength.', 'href' => '/residential-roofing/stone-coated-steel/'];
+        $items[] = ['title' => 'Roof repair', 'body' => 'Leaks, flashing, and storm damage on '.$name.' homes — including tile, metal, and shingle.', 'href' => '/residential-roofing/roof-repair/'];
+
+        if (count($items) < 4) {
+            $items[] = ['title' => 'Insurance claims', 'body' => 'We document '.$name.' storm damage so the claim matches the roof.', 'href' => '/insurance-claims/'];
         }
 
         return array_slice($items, 0, 4);
