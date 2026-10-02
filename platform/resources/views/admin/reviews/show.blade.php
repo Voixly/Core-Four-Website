@@ -24,7 +24,7 @@
         @if($review->mailLogs->isNotEmpty())
             <h3>Rating emails</h3>
             @foreach($review->mailLogs as $entry)
-                <p>{{ optional($entry->sent_at)->timezone(config('app.timezone'))->format('M j, Y g:i A') }} · {{ $entry->email }} · {{ $entry->status === 'sent' ? 'Sent' : 'Did not send' }}</p>
+                <p>{{ optional($entry->sent_at ?? $entry->scheduled_at)->timezone(config('app.timezone'))->format('M j, Y g:i A') }} · {{ $entry->subject }} · {{ $entry->resultLabel() }}</p>
             @endforeach
         @endif
         @if($review->google_clicked_at)<p>Clicked Google {{ $review->google_clicked_at->timezone(config('app.timezone')) }}</p>@endif

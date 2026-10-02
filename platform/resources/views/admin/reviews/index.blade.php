@@ -13,7 +13,7 @@
 </div>
 <div class="panel">
     <h3>Rating emails</h3>
-    <p>{{ $mailsSent }} {{ $mailsSent === 1 ? 'email has' : 'emails have' }} been sent to ask for a review.@if($mailsFailed) {{ $mailsFailed }} did not send.@endif <a href="{{ route('admin.email.index') }}">Open the review flow</a></p>
+    <p>{{ $mailsSent }} {{ $mailsSent === 1 ? 'email has' : 'emails have' }} been sent to ask for a review.@if($mailsFailed) {{ $mailsFailed }} did not send.@endif The first note goes when you check the box. Three more follow, and they stop if the customer rates. <a href="{{ route('admin.email.index') }}">Open the review flow</a></p>
     @if($mailLog->isEmpty())
         <p>No rating emails yet. Check “Email them the link” when you create an invite.</p>
     @else
@@ -21,7 +21,7 @@
             <tr><th>When</th><th>To</th><th>Subject</th><th>Result</th></tr>
             @foreach($mailLog as $entry)
                 <tr>
-                    <td>{{ optional($entry->sent_at)->timezone(config('app.timezone'))->format('M j, Y g:i A') }}</td>
+                    <td>{{ optional($entry->sent_at ?? $entry->scheduled_at)->timezone(config('app.timezone'))->format('M j, Y g:i A') }}</td>
                     <td>
                         @if($entry->review)
                             <a href="{{ route('admin.reviews.show', $entry->review) }}">{{ $entry->review->name ?: $entry->email }}</a>
@@ -30,7 +30,7 @@
                         @endif
                     </td>
                     <td>{{ $entry->subject }}</td>
-                    <td>{{ $entry->status === 'sent' ? 'Sent' : 'Did not send' }}</td>
+                    <td>{{ $entry->resultLabel() }}</td>
                 </tr>
             @endforeach
         </table>

@@ -4,9 +4,11 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Mail\NurtureMail;
+use App\Mail\ReviewInviteMail;
 use App\Models\EmailSequence;
 use App\Models\EmailStep;
 use App\Models\Lead;
+use App\Models\Review;
 use App\Models\ReviewMailLog;
 use App\Support\ReviewMailSchema;
 use Database\Seeders\EmailSequenceSeeder;
@@ -88,6 +90,10 @@ class EmailController extends Controller
             'type' => $step->sequence->audience ?? 'residential',
         ]);
 
+        if ($this->isReviewStep($step)) {
+            return (new ReviewInviteMail($this->sampleReview(), $step))->render();
+        }
+
         return (new NurtureMail($step, $lead))->render();
     }
 
@@ -102,7 +108,10 @@ class EmailController extends Controller
         ]);
 
         try {
-            Mail::to($data['email'])->send(new NurtureMail($step, $lead));
+            $message = $this->isReviewStep($step)
+                ? new ReviewInviteMail($this->sampleReview($request->user()->name, $data['email']), $step)
+                : new NurtureMail($step, $lead);
+            Mail::to($data['email'])->send($message);
         } catch (\Throwable) {
             return back()->withErrors([
                 'email' => 'The test could not be sent. Confirm Resend is set up for corefourroofing.com.',
@@ -110,5 +119,24 @@ class EmailController extends Controller
         }
 
         return back()->with('success', 'Test sent to '.$data['email']);
+    }
+
+    private function isReviewStep(EmailStep $step): bool
+    {
+        return str_contains(strtolower((string) $step->sequence?->name), 'review');
+    }
+
+    private function sampleReview(?string $name = null, ?string $email = null): Review
+    {
+        $review = new Review([
+            'name' => $name ?: 'Alex Rivera',
+            'email' => $email ?: 'alex@example.com',
+            'city' => 'Cypress',
+            'job' => 'shingle replacement',
+            'type' => 'residential',
+        ]);
+        $review->token = 'preview';
+
+        return $review;
     }
 }

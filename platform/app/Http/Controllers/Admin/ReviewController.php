@@ -43,7 +43,7 @@ class ReviewController extends Controller
             'googleClicks' => Review::query()->whereNotNull('google_clicked_at')->count(),
             'mailsSent' => ReviewMailLog::query()->where('status', 'sent')->count(),
             'mailsFailed' => ReviewMailLog::query()->where('status', 'failed')->count(),
-            'mailLog' => ReviewMailLog::query()->with('review')->latest('sent_at')->limit(15)->get(),
+            'mailLog' => ReviewMailLog::query()->with('review')->orderByRaw('coalesce(sent_at, scheduled_at, created_at) desc')->limit(15)->get(),
         ]);
     }
 
@@ -89,7 +89,8 @@ class ReviewController extends Controller
         }
 
         $message = match ($review->emailResult ?? null) {
-            'sent' => 'Review Shield link ready. The rating email was sent.',
+            'sent' => 'Review Shield link ready. The first note was sent. Three more follow unless they rate.',
+            'rated' => 'They already rated this job, so no more emails went out.',
             'failed' => 'Review Shield link ready. The rating email did not send.',
             'skipped' => 'Review Shield link ready. Add an email address to send the rating note.',
             default => 'Review Shield link ready.',

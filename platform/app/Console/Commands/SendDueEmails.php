@@ -4,6 +4,7 @@ namespace App\Console\Commands;
 
 use App\Mail\NurtureMail;
 use App\Models\EmailSend;
+use App\Services\ReviewService;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Mail;
 
@@ -11,7 +12,7 @@ class SendDueEmails extends Command
 {
     protected $signature = 'email:send-due';
 
-    protected $description = 'Send scheduled nurture emails that are due';
+    protected $description = 'Send scheduled nurture and review emails that are due';
 
     public function handle(): int
     {
@@ -36,7 +37,14 @@ class SendDueEmails extends Command
             }
         }
 
-        $this->info('Processed '.$sends->count().' sends.');
+        $reviews = 0;
+        try {
+            $reviews = app(ReviewService::class)->sendDue();
+        } catch (\Throwable $e) {
+            $this->error($e->getMessage());
+        }
+
+        $this->info('Processed '.$sends->count().' nurture sends and '.$reviews.' review notes.');
 
         return self::SUCCESS;
     }

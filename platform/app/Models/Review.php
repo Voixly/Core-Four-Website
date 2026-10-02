@@ -11,6 +11,8 @@ class Review extends Model
 {
     public const STATUSES = ['pending', 'invited', 'held', 'recovered', 'closed'];
 
+    public ?string $emailResult = null;
+
     protected $fillable = [
         'token', 'name', 'email', 'phone', 'city', 'type', 'job',
         'stars', 'comment', 'status', 'source', 'lead_id', 'job_id', 'jobnimbus_job_id', 'assigned_to',
@@ -42,7 +44,7 @@ class Review extends Model
 
     public function mailLogs(): HasMany
     {
-        return $this->hasMany(ReviewMailLog::class)->latest();
+        return $this->hasMany(ReviewMailLog::class)->orderBy('id');
     }
 
     public function roofingJob(): BelongsTo

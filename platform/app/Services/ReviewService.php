@@ -79,6 +79,12 @@ class ReviewService
             'rated_at' => now(),
         ])->save();
 
+        ReviewMailSchema::ensure();
+        ReviewMailLog::query()
+            ->where('review_id', $review->id)
+            ->where('status', 'scheduled')
+            ->update(['status' => 'skipped']);
+
         if ($stars <= 3) {
             $this->notifyOffice($review);
         }
@@ -87,11 +93,17 @@ class ReviewService
     }
 
     /**
-     * Send the Review Shield rating email and write it to the log.
-     * sent, failed, or skipped when there is no address.
+     * Send the first Review Shield note now and line up the rest.
+     * sent, failed, skipped when there is no address, or rated when they already answered.
      */
     public function emailCustomer(Review $review): string
     {
+        if ($review->stars) {
+            $review->emailResult = 'rated';
+
+            return 'rated';
+        }
+
         if (! $review->email) {
             $review->emailResult = 'skipped';
 
@@ -99,24 +111,28 @@ class ReviewService
         }
 
         ReviewMailSchema::ensure();
-        $step = $this->reviewStep();
-        $mail = new ReviewInviteMail($review, $step);
+        $steps = $this->reviewSteps();
+        $first = $steps->first();
+        $mail = new ReviewInviteMail($review, $first);
 
         try {
             Mail::to($review->email)->send($mail);
             ReviewMailLog::query()->create([
                 'review_id' => $review->id,
+                'email_step_id' => $first?->id,
                 'email' => $review->email,
                 'subject' => $mail->subjectLine(),
                 'status' => 'sent',
                 'sent_at' => now(),
             ]);
+            $this->scheduleFollowUps($review, $steps->slice(1));
             $review->emailResult = 'sent';
 
             return 'sent';
         } catch (\Throwable $e) {
             ReviewMailLog::query()->create([
                 'review_id' => $review->id,
+                'email_step_id' => $first?->id,
                 'email' => $review->email,
                 'subject' => $mail->subjectLine(),
                 'status' => 'failed',
@@ -129,19 +145,91 @@ class ReviewService
         }
     }
 
-    private function reviewStep(): ?EmailStep
+    /**
+     * Send follow-up notes that are due. Stops if they already rated.
+     */
+    public function sendDue(): int
+    {
+        ReviewMailSchema::ensure();
+        $due = ReviewMailLog::query()
+            ->with('review')
+            ->where('status', 'scheduled')
+            ->where('scheduled_at', '<=', now())
+            ->limit(100)
+            ->get();
+
+        foreach ($due as $log) {
+            $review = $log->review;
+            $step = $log->email_step_id ? EmailStep::query()->find($log->email_step_id) : null;
+
+            if (! $review || $review->stars || ! $review->email || ($step && ! $step->is_active)) {
+                $log->update(['status' => 'skipped']);
+                continue;
+            }
+
+            $mail = new ReviewInviteMail($review, $step);
+
+            try {
+                Mail::to($review->email)->send($mail);
+                $log->update([
+                    'email' => $review->email,
+                    'subject' => $mail->subjectLine(),
+                    'status' => 'sent',
+                    'error' => null,
+                    'sent_at' => now(),
+                ]);
+            } catch (\Throwable $e) {
+                $log->update([
+                    'status' => 'failed',
+                    'error' => mb_substr($e->getMessage(), 0, 500),
+                    'sent_at' => now(),
+                ]);
+            }
+        }
+
+        return $due->count();
+    }
+
+    private function scheduleFollowUps(Review $review, $steps): void
+    {
+        foreach ($steps as $step) {
+            $already = ReviewMailLog::query()
+                ->where('review_id', $review->id)
+                ->where('email_step_id', $step->id)
+                ->whereIn('status', ['scheduled', 'sent'])
+                ->exists();
+
+            if ($already) {
+                continue;
+            }
+
+            $mail = new ReviewInviteMail($review, $step);
+            ReviewMailLog::query()->create([
+                'review_id' => $review->id,
+                'email_step_id' => $step->id,
+                'email' => $review->email,
+                'subject' => $mail->subjectLine(),
+                'status' => 'scheduled',
+                'scheduled_at' => now()->addDays((int) $step->delay_days),
+            ]);
+        }
+    }
+
+    private function reviewSteps()
     {
         $sequence = EmailSequence::query()->where('name', 'Review Shield')->first();
         if (! $sequence) {
             try {
                 (new EmailSequenceSeeder)->run();
             } catch (\Throwable) {
-                return null;
+                return collect();
             }
             $sequence = EmailSequence::query()->where('name', 'Review Shield')->first();
         }
 
-        return $sequence?->steps()->where('is_active', true)->orderBy('position')->first();
+        return $sequence
+            ? $sequence->steps()->where('is_active', true)->orderBy('position')->get()
+            : collect();
     }
 
     public function googleUrl(): string

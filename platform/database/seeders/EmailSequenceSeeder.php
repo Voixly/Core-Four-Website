@@ -159,18 +159,42 @@ class EmailSequenceSeeder extends Seeder
 
     protected function seedReviewShield(): void
     {
+        $replace = false;
+        try {
+            $replace = Setting::get('review_email_copy_v1') !== '1';
+        } catch (\Throwable) {
+            $replace = false;
+        }
+
         $sequence = EmailSequence::query()->firstOrCreate(
             ['name' => 'Review Shield'],
             [
                 'audience' => 'residential',
                 'is_active' => true,
-                'description' => 'The private rating email. It goes out only when someone checks Email them the link in Review Shield.',
+                'description' => 'Four short notes after a finished job. The first goes when you check Email them the link. The rest follow on day 3, day 7, and day 14, and they stop if the customer already rated.',
             ]
         );
 
+        if ($replace) {
+            $sequence->update([
+                'description' => 'Four short notes after a finished job. The first goes when you check Email them the link. The rest follow on day 3, day 7, and day 14, and they stop if the customer already rated.',
+            ]);
+        }
+
         $this->writeSteps($sequence, [
-            [0, 'How did Core Four do on your roof?', "Hi {{first_name}},\n\nThis stays between you and Core Four first. It is not a Google or Yelp review. It is a 10-second check so we know if the job landed right.\n\nJob: {{job}} in {{city}}.\n\nTap the button, pick 1–5 stars, and we will take it from there.\n\n— Core Four Roofing"],
-        ]);
+            [0, 'How did the roof turn out, {{first_name}}?', "Hi {{first_name}},\n\nThank you for letting us work on {{job}}. We hope the place looks the way you wanted when we pulled out of the driveway.\n\nIf you have a minute, tell us how it actually went. It stays with us first. It is not a public review unless you decide it should be.\n\n— Bryan\nCore Four Roofing\n(281) 541-0027"],
+            [3, 'Still thinking about {{job}}', "Hi {{first_name}},\n\nJust me again. A lot of people mean to answer and then the week gets away from them.\n\nIf the work at {{job}} in {{city}} went well, or if something is still bothering you, I want to hear it. The link takes about a minute.\n\n— Bryan"],
+            [7, 'The next homeowner in {{city}} will ask', "Hi {{first_name}},\n\nPeople trust a neighbor more than an ad. If we earned it on {{job}}, a short honest rating helps the next person in {{city}} pick a crew. If we missed something, say that too. I would rather hear it from you.\n\n— Bryan\nCore Four Roofing"],
+            [14, 'Last note from me, {{first_name}}', "Hi {{first_name}},\n\nThis is the last email I will send about a rating. I will not keep popping up.\n\nIf {{job}} is sitting right, the link is still there. If it is not, call me at (281) 541-0027 and we will make it right. Either way, thank you for the work.\n\n— Bryan"],
+        ], $replace);
+
+        if ($replace) {
+            try {
+                Setting::put('review_email_copy_v1', '1');
+            } catch (\Throwable) {
+                // The new notes are still saved for this boot.
+            }
+        }
     }
 
     protected function refreshProspectCopyOnce(): void
