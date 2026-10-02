@@ -11,6 +11,23 @@
     <p>Private rating first. Nothing auto-posts. 4–5★ get Google / Yelp. 1–3★ stay here for a same-day callback.</p>
     <p><a href="{{ url('/reviews/') }}" target="_blank">Open public review page</a></p>
 </div>
+<div class="panel" id="review-emails">
+    <h3>The review emails</h3>
+    <p>Customers get these in order. The first goes when you send the link. The later ones follow on their own and stop if the customer rates.</p>
+    @forelse($reviewSteps as $step)
+        <article class="email-step" id="review-email-{{ $step->id }}">
+            <p class="email-step-meta">Email {{ $loop->iteration }} of {{ $reviewSteps->count() }} · Day {{ $step->delay_days }} · {{ $step->is_active ? 'active' : 'paused' }}</p>
+            <h4>{{ $step->subject }}</h4>
+            <div class="email-step-body">{{ $step->body }}</div>
+            <p>
+                <a class="btn" href="{{ route('admin.email.edit', $step) }}">Edit</a>
+                <a href="{{ route('admin.email.preview', $step) }}" target="_blank">Preview</a>
+            </p>
+        </article>
+    @empty
+        <p>The review emails are not set up yet.</p>
+    @endforelse
+</div>
 <div class="panel">
     <h3>Rating emails</h3>
     <p>{{ $mailsSent }} {{ $mailsSent === 1 ? 'email has' : 'emails have' }} been sent to ask for a review.@if($mailsFailed) {{ $mailsFailed }} did not send.@endif The first note goes when you check the box, or when you send everyone who is still waiting. Three more follow, and they stop if the customer rates. <a href="{{ route('admin.email.index') }}">Open the review flow</a></p>

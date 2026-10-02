@@ -9,7 +9,7 @@
         <label>Subject <input name="subject" value="{{ $step->subject }}" required></label>
         <label>Body <textarea name="body" rows="12" required>{{ $step->body }}</textarea></label>
         <label><input type="checkbox" name="is_active" value="1" style="width:auto" @checked($step->is_active)> Active</label>
-        <p>Tokens: <code>{{ '{{first_name}}' }}</code> <code>{{ '{{name}}' }}</code> <code>{{ '{{city}}' }}</code></p>
+        <p>Tokens: <code>{{ '{{first_name}}' }}</code> <code>{{ '{{name}}' }}</code> <code>{{ '{{city}}' }}</code> <code>{{ '{{job}}' }}</code></p>
         <button class="btn" type="submit">Save</button>
         <a class="btn" href="{{ route('admin.email.preview', $step) }}" target="_blank">Preview</a>
     </form>

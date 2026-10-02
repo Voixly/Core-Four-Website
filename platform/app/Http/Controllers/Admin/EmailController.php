@@ -29,6 +29,12 @@ class EmailController extends Controller
             'Commercial coatings prospect outreach',
             'Review Shield',
         ];
+        try {
+            (new EmailSequenceSeeder)->ensureReviewShield();
+        } catch (\Throwable) {
+            // The page still lists whatever emails already exist.
+        }
+
         $present = EmailSequence::query()->whereIn('name', $required)->pluck('name');
         if ($present->count() < count($required)) {
             try {
@@ -38,7 +44,7 @@ class EmailController extends Controller
             }
         }
 
-        $sequences = EmailSequence::query()->withCount('steps')->get()->sortBy(function (EmailSequence $sequence) use ($required) {
+        $sequences = EmailSequence::query()->with('steps')->withCount('steps')->get()->sortBy(function (EmailSequence $sequence) use ($required) {
             $place = array_search($sequence->name, $required, true);
 
             return $place === false ? 100 : $place;
@@ -76,6 +82,11 @@ class EmailController extends Controller
         ]);
         $data['is_active'] = $request->boolean('is_active');
         $step->update($data);
+        $step->loadMissing('sequence');
+
+        if (str_contains(strtolower((string) $step->sequence?->name), 'review')) {
+            return redirect()->to(route('admin.reviews.index').'#review-email-'.$step->id)->with('success', 'Email saved.');
+        }
 
         return redirect()->to(route('admin.email.show', $step->email_sequence_id).'#step-'.$step->id)->with('success', 'Step saved.');
     }

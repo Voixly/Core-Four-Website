@@ -21,6 +21,11 @@ class EmailSequenceSeeder extends Seeder
         $this->refreshProspectCopyOnce();
     }
 
+    public function ensureReviewShield(): void
+    {
+        $this->seedReviewShield();
+    }
+
     protected function seedResidential(): void
     {
         $sequence = EmailSequence::query()->firstOrCreate(
@@ -161,7 +166,7 @@ class EmailSequenceSeeder extends Seeder
     {
         $replace = false;
         try {
-            $replace = Setting::get('review_email_copy_v1') !== '1';
+            $replace = Setting::get('review_email_copy_v2') !== '1';
         } catch (\Throwable) {
             $replace = false;
         }
@@ -190,7 +195,7 @@ class EmailSequenceSeeder extends Seeder
 
         if ($replace) {
             try {
-                Setting::put('review_email_copy_v1', '1');
+                Setting::put('review_email_copy_v2', '1');
             } catch (\Throwable) {
                 // The new notes are still saved for this boot.
             }

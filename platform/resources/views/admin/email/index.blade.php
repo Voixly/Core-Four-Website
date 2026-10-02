@@ -13,6 +13,23 @@
 ] as $heading => $group)
     @if($group->isNotEmpty())
         <h2>{{ $heading }}</h2>
+        @if($heading === 'Review Shield')
+            <table>
+                <tr><th>Email</th><th>When</th><th></th></tr>
+                @foreach($group as $sequence)
+                    @foreach($sequence->steps as $step)
+                        <tr>
+                            <td>
+                                <strong>{{ $step->subject }}</strong>
+                                @if($step->body)<br><small>{{ \Illuminate\Support\Str::limit(preg_replace('/\s+/', ' ', $step->body), 140) }}</small>@endif
+                            </td>
+                            <td>Day {{ $step->delay_days }}</td>
+                            <td><a class="btn" href="{{ route('admin.email.edit', $step) }}">Edit</a></td>
+                        </tr>
+                    @endforeach
+                @endforeach
+            </table>
+        @else
         <table>
             <tr><th>Flow</th><th>Emails</th><th></th></tr>
             @foreach($group as $sequence)
@@ -26,6 +43,7 @@
                 </tr>
             @endforeach
         </table>
+        @endif
     @endif
 @endforeach
 </div>

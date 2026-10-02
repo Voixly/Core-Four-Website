@@ -3,10 +3,12 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\EmailSequence;
 use App\Models\Lead;
 use App\Models\Review;
 use App\Models\ReviewMailLog;
 use App\Support\ReviewMailSchema;
+use Database\Seeders\EmailSequenceSeeder;
 use App\Models\User;
 use App\Services\JobNimbusService;
 use App\Services\ReviewService;
@@ -34,6 +36,13 @@ class ReviewController extends Controller
             ->withQueryString();
 
         ReviewMailSchema::ensure();
+        try {
+            (new EmailSequenceSeeder)->ensureReviewShield();
+        } catch (\Throwable) {
+            // The page still loads if the email rows cannot be written.
+        }
+
+        $reviewSteps = EmailSequence::query()->where('name', 'Review Shield')->first()?->steps ?? collect();
 
         return view('admin.reviews.index', [
             'reviews' => $reviews,
@@ -44,6 +53,7 @@ class ReviewController extends Controller
             'mailsSent' => ReviewMailLog::query()->where('status', 'sent')->count(),
             'mailsFailed' => ReviewMailLog::query()->where('status', 'failed')->count(),
             'mailLog' => ReviewMailLog::query()->with('review')->orderByRaw('coalesce(sent_at, scheduled_at, created_at) desc')->limit(15)->get(),
+            'reviewSteps' => $reviewSteps,
             'pendingUnsent' => Review::query()
                 ->where('status', 'pending')
                 ->whereNull('stars')
