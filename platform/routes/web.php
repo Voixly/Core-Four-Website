@@ -179,6 +179,7 @@ Route::prefix('admin')->name('admin.')->middleware(['auth', 'role:admin,agency,o
 
     Route::get('/reviews', [AdminReviewController::class, 'index'])->name('reviews.index');
     Route::post('/reviews/jobnimbus', [AdminReviewController::class, 'syncJobNimbus'])->name('reviews.jobnimbus');
+    Route::post('/reviews/send-pending', [AdminReviewController::class, 'sendPending'])->name('reviews.send-pending');
     Route::post('/reviews', [AdminReviewController::class, 'store'])->name('reviews.store');
     Route::get('/reviews/{review}', [AdminReviewController::class, 'show'])->name('reviews.show');
     Route::patch('/reviews/{review}', [AdminReviewController::class, 'update'])->name('reviews.update');

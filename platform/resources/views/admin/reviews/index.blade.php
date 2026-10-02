@@ -13,7 +13,11 @@
 </div>
 <div class="panel">
     <h3>Rating emails</h3>
-    <p>{{ $mailsSent }} {{ $mailsSent === 1 ? 'email has' : 'emails have' }} been sent to ask for a review.@if($mailsFailed) {{ $mailsFailed }} did not send.@endif The first note goes when you check the box. Three more follow, and they stop if the customer rates. <a href="{{ route('admin.email.index') }}">Open the review flow</a></p>
+    <p>{{ $mailsSent }} {{ $mailsSent === 1 ? 'email has' : 'emails have' }} been sent to ask for a review.@if($mailsFailed) {{ $mailsFailed }} did not send.@endif The first note goes when you check the box, or when you send everyone who is still waiting. Three more follow, and they stop if the customer rates. <a href="{{ route('admin.email.index') }}">Open the review flow</a></p>
+    <form method="post" action="{{ route('admin.reviews.send-pending') }}" onsubmit="return confirm('Send the first rating note to every waiting customer who has an email and has not been emailed yet?')">
+        @csrf
+        <button class="btn" type="submit">Send all pending@if($pendingUnsent) ({{ $pendingUnsent }})@endif</button>
+    </form>
     @if($mailLog->isEmpty())
         <p>No rating emails yet. Check “Email them the link” when you create an invite.</p>
     @else

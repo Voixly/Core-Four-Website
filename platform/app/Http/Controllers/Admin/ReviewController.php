@@ -44,6 +44,15 @@ class ReviewController extends Controller
             'mailsSent' => ReviewMailLog::query()->where('status', 'sent')->count(),
             'mailsFailed' => ReviewMailLog::query()->where('status', 'failed')->count(),
             'mailLog' => ReviewMailLog::query()->with('review')->orderByRaw('coalesce(sent_at, scheduled_at, created_at) desc')->limit(15)->get(),
+            'pendingUnsent' => Review::query()
+                ->where('status', 'pending')
+                ->whereNull('stars')
+                ->whereNotNull('email')
+                ->where('email', '!=', '')
+                ->whereDoesntHave('mailLogs', function ($query) {
+                    $query->whereIn('status', ['sent', 'scheduled']);
+                })
+                ->count(),
         ]);
     }
 
@@ -53,6 +62,27 @@ class ReviewController extends Controller
         $staff = User::query()->where('is_active', true)->orderBy('name')->get();
 
         return view('admin.reviews.show', compact('review', 'staff'));
+    }
+
+    public function sendPending(ReviewService $reviews): RedirectResponse
+    {
+        $result = $reviews->sendPending();
+        $parts = [];
+
+        if ($result['sent'] > 0) {
+            $parts[] = 'Sent the first note to '.$result['sent'].' '.($result['sent'] === 1 ? 'customer' : 'customers').'. Three more follow unless they rate.';
+        }
+        if ($result['failed'] > 0) {
+            $parts[] = $result['failed'].' did not send.';
+        }
+        if ($result['missing_email'] > 0) {
+            $parts[] = $result['missing_email'].' '.($result['missing_email'] === 1 ? 'has' : 'have').' no email address.';
+        }
+        if ($parts === []) {
+            $parts[] = 'Every waiting customer has already been emailed.';
+        }
+
+        return back()->with($result['sent'] === 0 && $result['failed'] > 0 ? 'error' : 'success', implode(' ', $parts));
     }
 
     public function syncJobNimbus(JobNimbusService $jobNimbus): RedirectResponse

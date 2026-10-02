@@ -93,6 +93,54 @@ class ReviewService
     }
 
     /**
+     * Email every unrated invite that has an address and has not already been sent the series.
+     *
+     * @return array{sent: int, failed: int, missing_email: int}
+     */
+    public function sendPending(): array
+    {
+        ReviewMailSchema::ensure();
+
+        $missingEmail = Review::query()
+            ->where('status', 'pending')
+            ->whereNull('stars')
+            ->where(function ($query) {
+                $query->whereNull('email')->orWhere('email', '');
+            })
+            ->count();
+
+        $reviews = Review::query()
+            ->where('status', 'pending')
+            ->whereNull('stars')
+            ->whereNotNull('email')
+            ->where('email', '!=', '')
+            ->whereDoesntHave('mailLogs', function ($query) {
+                $query->whereIn('status', ['sent', 'scheduled']);
+            })
+            ->orderBy('id')
+            ->limit(200)
+            ->get();
+
+        $sent = 0;
+        $failed = 0;
+
+        foreach ($reviews as $review) {
+            $result = $this->emailCustomer($review);
+            if ($result === 'sent') {
+                $sent++;
+            } elseif ($result === 'failed') {
+                $failed++;
+            }
+        }
+
+        return [
+            'sent' => $sent,
+            'failed' => $failed,
+            'missing_email' => $missingEmail,
+        ];
+    }
+
+    /**
      * Send the first Review Shield note now and line up the rest.
      * sent, failed, skipped when there is no address, or rated when they already answered.
      */
