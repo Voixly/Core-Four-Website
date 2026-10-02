@@ -22,7 +22,7 @@
         @if($errors->any())
             <div class="flash is-error">{{ $errors->first() }}</div>
         @endif
-        <form method="post" action="{{ route('login') }}">
+        <form method="post" action="{{ route('login') }}" data-fresh-login>
             @csrf
             <label>Email <input type="email" name="email" value="{{ old('email') }}" required autocomplete="username"></label>
             <label>Password <input type="password" name="password" required autocomplete="current-password"></label>
@@ -31,5 +31,27 @@
         </form>
         <a class="alt-link" href="{{ route('password.request') }}">Forgot password?</a>
     </div>
+    <script>
+        document.querySelector('[data-fresh-login]')?.addEventListener('submit', async function (event) {
+            if (this.dataset.ready === '1') {
+                return;
+            }
+            event.preventDefault();
+            try {
+                const response = await fetch(@json(route('login')), {
+                    headers: { 'Accept': 'application/json' },
+                    credentials: 'same-origin',
+                });
+                const data = await response.json();
+                const token = this.querySelector('input[name="_token"]');
+                if (token && data.token) {
+                    token.value = data.token;
+                }
+            } catch (error) {
+            }
+            this.dataset.ready = '1';
+            this.submit();
+        });
+    </script>
 </body>
 </html>

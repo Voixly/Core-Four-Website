@@ -31,11 +31,25 @@ return Application::configure(basePath: dirname(__DIR__))
     })
     ->withExceptions(function (Exceptions $exceptions) {
         $exceptions->render(function (\Throwable $e, $request) {
+            $expired = $e instanceof \Illuminate\Session\TokenMismatchException
+                || ($e instanceof \Symfony\Component\HttpKernel\Exception\HttpExceptionInterface && $e->getStatusCode() === 419);
+
+            if ($expired) {
+                if ($request->expectsJson()) {
+                    return response()->json(['message' => 'Page expired. Sign in again.'], 419);
+                }
+
+                $account = str_starts_with($request->path(), 'account');
+
+                return redirect()
+                    ->route($account ? 'account.login' : 'login')
+                    ->with('status', 'That page sat too long. Sign in again.');
+            }
+
             if (config('app.debug')
                 || $e instanceof \Illuminate\Auth\AuthenticationException
                 || $e instanceof \Illuminate\Auth\Access\AuthorizationException
                 || $e instanceof \Illuminate\Validation\ValidationException
-                || $e instanceof \Illuminate\Session\TokenMismatchException
                 || $e instanceof \Illuminate\Database\Eloquent\ModelNotFoundException
                 || $e instanceof \Symfony\Component\HttpKernel\Exception\HttpExceptionInterface) {
                 return null;

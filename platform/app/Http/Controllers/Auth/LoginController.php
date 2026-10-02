@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -10,8 +11,12 @@ use Illuminate\View\View;
 
 class LoginController extends Controller
 {
-    public function show(): View
+    public function show(Request $request): View|JsonResponse
     {
+        if ($request->expectsJson()) {
+            return response()->json(['token' => csrf_token()]);
+        }
+
         return view('auth.login');
     }
 
@@ -37,8 +42,9 @@ class LoginController extends Controller
         }
 
         $request->session()->regenerate();
+        $request->session()->forget('url.intended');
 
-        return redirect()->intended(route('admin.dashboard'));
+        return redirect()->route('admin.dashboard');
     }
 
     public function destroy(Request $request): RedirectResponse
