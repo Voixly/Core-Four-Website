@@ -149,10 +149,30 @@
                 </article>
             @endforeach
         </div>
-        <div class="panel" style="overflow-x:auto">
+        <div class="panel">
             <h3>Side-by-side (steady state)</h3>
             <p class="perf-sub">Media only · not management time · conversion tracking must be live or these numbers miss</p>
-            <table>
+            @php
+                $compare = [
+                    ['Annual media', '$24,000', '$60,000', '$120,000'],
+                    ['Search campaigns live', 'Metal + Tile', 'All four', 'All four + full ring'],
+                    ['Leads / month', '4–6', '9–14', '16–24'],
+                    ['Closed jobs / year', '6–10', '14–22', '22–34'],
+                    ['Conservative revenue / year', '$130k–$220k', '$310k–$485k', '$485k–$750k'],
+                    ['Media-to-revenue', '5.4–9.2×', '5.2–8.1×', '4.0–6.3×'],
+                ];
+            @endphp
+            <div class="ads-side-cards">
+                @foreach($ads['tiers'] as $index => $tier)
+                    <article>
+                        <h4>{{ $tier['amount'] }} / mo <small>{{ $tier['label'] }}</small></h4>
+                        @foreach($compare as $row)
+                            <div><span>{{ $row[0] }}</span><b>{{ $row[$index + 1] }}</b></div>
+                        @endforeach
+                    </article>
+                @endforeach
+            </div>
+            <table class="ads-side-table">
                 <tr>
                     <th>Metric</th>
                     @foreach($ads['tiers'] as $tier)

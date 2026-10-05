@@ -9,7 +9,11 @@
                 <p>Mail from address is set in <code>.env</code>: {{ $value }}</p>
             @else
                 <label>{{ str_replace('_', ' ', $key) }}
-                    <input name="{{ $key }}" value="{{ $value }}">
+                    @if(in_array($key, ['office_address', 'hours', 'notify_emails', 'chat_offline', 'google_review_url', 'yelp_review_url'], true))
+                        <textarea name="{{ $key }}" rows="3">{{ $value }}</textarea>
+                    @else
+                        <input name="{{ $key }}" value="{{ $value }}">
+                    @endif
                 </label>
             @endif
         @endforeach
