@@ -445,7 +445,9 @@ input:focus, select:focus, textarea:focus {
 .chat-note a { word-break: break-all; }
 .nav-count { display: inline-grid; place-items: center; min-width: 1.15rem; height: 1.15rem; margin-left: 0.35rem; padding: 0 0.28rem; border-radius: 999px; background: var(--lime-green); color: var(--forest-green); font-size: 0.68rem; font-style: normal; }
 
+.chat-filters { display: flex; flex-wrap: wrap; gap: 0.45rem; margin-bottom: 1rem; }
 .chat-inbox { display: grid; gap: 0.55rem; }
+.chat-row-main { min-width: 0; }
 .chat-row {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
@@ -942,8 +944,9 @@ input:focus, select:focus, textarea:focus {
   .bottom-nav a.is-on i { background: none; color: var(--lime-green); }
   .bottom-count {
     position: absolute;
-    top: 0.28rem;
-    right: calc(50% - 1.35rem);
+    top: 0.18rem;
+    left: calc(50% + 0.45rem);
+    right: auto;
     min-width: 1.05rem;
     height: 1.05rem;
     padding: 0 0.25rem;
@@ -971,7 +974,18 @@ input:focus, select:focus, textarea:focus {
     grid-template-columns: minmax(0, 1fr);
     overflow: visible;
   }
-  .page-title { font-size: 1.35rem; }
+  .page-title { font-size: 1.35rem; overflow-wrap: anywhere; }
+  .chat-filters .kind-pill { padding: 0.55rem 0.85rem; font-size: 0.8rem; }
+  .chat-row-main, .chat-note, .chat-row-email, .bubble, .bubble-body, .chat-head h2 { min-width: 0; max-width: 100%; overflow-wrap: anywhere; }
+  .chat-preview { white-space: normal; }
+  .chat-row, .chat-head, .chat-send { grid-template-columns: minmax(0, 1fr); }
+  .chat-row-side, .chat-actions { justify-items: start; justify-content: flex-start; text-align: left; width: 100%; }
+  .chat-actions form { width: 100%; }
+  .bubble { max-width: 100%; }
+  .bubble.staff { max-width: 92%; }
+  .bubble-meta { flex-wrap: wrap; }
+  .chat-log { min-height: 0; max-height: none; overflow: visible; }
+  .chat-canned .chip { white-space: normal; text-align: left; max-width: 100%; line-height: 1.35; }
   .page-meta, .panel, .flash, .email-step-body, td, th, p, h3, h4, a, code {
     overflow-wrap: break-word;
   }

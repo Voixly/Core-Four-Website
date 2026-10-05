@@ -2,7 +2,7 @@
 @section('title', 'Chat inbox')
 @section('meta', $counts['waiting'] ? $counts['waiting'].' email '.($counts['waiting'] === 1 ? 'reply needs' : 'replies need').' an answer' : 'Website chats and email replies')
 @section('content')
-<div class="filters">
+<div class="chat-filters">
     <a class="kind-pill {{ $channel ? '' : 'is-on' }}" href="{{ route('admin.chat.index') }}">All {{ $counts['all'] }}</a>
     <a class="kind-pill {{ $channel === 'chat' ? 'is-on' : '' }}" href="{{ route('admin.chat.index', ['channel' => 'chat']) }}">Live chat {{ $counts['chat'] }}</a>
     <a class="kind-pill is-email {{ $channel === 'email' ? 'is-on' : '' }}" href="{{ route('admin.chat.index', ['channel' => 'email']) }}">Email {{ $counts['email'] }}</a>
