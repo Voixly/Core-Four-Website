@@ -129,6 +129,21 @@ h1, h2, h3, h4, strong.page-title {
   margin-bottom: 1.3rem;
 }
 
+.top-copy { min-width: 0; }
+
+.nav-toggle,
+.nav-backdrop { display: none; }
+
+.split,
+.grid-3 {
+  display: grid;
+  gap: 1rem;
+}
+
+.split { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+
+.grid-3 { grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); }
+
 .page-title {
   display: block;
   font-size: 1.65rem;
@@ -825,13 +840,117 @@ input:focus, select:focus, textarea:focus {
   .perf-split, .perf-landings { grid-template-columns: 1fr; }
 }
 @media (max-width: 800px) {
+  html, body { max-width: 100%; overflow-x: clip; }
   .admin { grid-template-columns: minmax(0, 1fr); max-width: 100%; }
-  .side { display: none; }
-  .cards { grid-template-columns: 1fr 1fr; }
-  .bottom-nav { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); }
-  .main { padding: 1.2rem 1rem 5rem; min-width: 0; max-width: 100%; }
-  .perf-compare, .perf-stories { grid-template-columns: 1fr; }
+  .nav-toggle {
+    display: inline-flex;
+    flex: 0 0 auto;
+    background: var(--white);
+    color: var(--forest-green);
+    border: 1px solid var(--divider);
+    box-shadow: none;
+  }
+  .nav-backdrop {
+    display: block;
+    position: fixed;
+    inset: 0;
+    z-index: 30;
+    background: rgba(15, 36, 24, 0.45);
+  }
+  .nav-backdrop[hidden] { display: none; }
+  .side {
+    display: flex;
+    position: fixed;
+    z-index: 40;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: min(18.5rem, 86vw);
+    overflow-y: auto;
+    transform: translateX(-105%);
+    transition: transform 0.2s ease;
+  }
+  .side.is-open { transform: none; }
+  body.nav-open { overflow: hidden; }
+  .cards, .job-money { grid-template-columns: 1fr 1fr; }
+  .split, .job-split, .grid-3, .ads-campaigns, .ads-tiers { grid-template-columns: 1fr; }
+  .bottom-nav {
+    display: flex;
+    overflow-x: auto;
+    gap: 0.15rem;
+    padding-bottom: calc(0.55rem + env(safe-area-inset-bottom));
+  }
+  .bottom-nav a {
+    flex: 1 0 3.1rem;
+    min-width: 0;
+    font-size: 0.62rem;
+    line-height: 1.15;
+    overflow-wrap: anywhere;
+  }
+  .main {
+    padding: 1rem 0.9rem calc(5.6rem + env(safe-area-inset-bottom));
+    min-width: 0;
+    max-width: 100%;
+  }
+  .top { flex-wrap: wrap; align-items: flex-start; }
+  .nav-toggle { margin-top: 0.15rem; }
+  .top-copy { flex: 1 1 0; min-width: 0; }
+  .top-actions { flex: 1 0 100%; }
+  body.nav-open .bottom-nav { display: none; }
+  .stat b { font-size: clamp(1.15rem, 5.4vw, 1.7rem); white-space: nowrap; }
+  .kanban {
+    grid-auto-flow: row;
+    grid-template-columns: minmax(0, 1fr);
+    overflow: visible;
+  }
+  .page-title { font-size: 1.35rem; }
+  .page-meta, .panel, .flash, .email-step-body, td, th, p, h3, h4, a, code {
+    overflow-wrap: break-word;
+  }
+  .panel { padding: 0.95rem; }
+  .filters { display: grid; grid-template-columns: minmax(0, 1fr); }
+  .filters input, .filters select, .filters .btn { width: 100%; min-width: 0; }
+  .filters input[type="checkbox"], .remember input { width: auto; }
+  .kanban, .cal-week, .perf-nav { min-width: 0; max-width: 100%; }
+  .perf-compare, .perf-stories, .perf-split, .perf-landings { grid-template-columns: 1fr; }
+  .perf-metrics strong { white-space: normal; }
   .perf-nav { top: 0; border-radius: 12px; }
+  input, select, textarea { font-size: 16px; }
+  .btn { max-width: 100%; white-space: normal; text-align: center; }
+  img, svg, video { max-width: 100%; height: auto; }
+  table.is-stacked {
+    display: block;
+    width: 100%;
+    overflow: visible;
+    background: transparent;
+    border: 0;
+  }
+  table.is-stacked tr:first-child:has(th) { display: none; }
+  table.is-stacked tr {
+    display: block;
+    background: var(--white);
+    border: 1px solid var(--divider);
+    border-radius: 16px;
+    margin: 0 0 0.75rem;
+    padding: 0.35rem 0;
+  }
+  table.is-stacked td {
+    display: block;
+    width: 100%;
+    border: 0;
+    padding: 0.45rem 0.85rem;
+  }
+  table.is-stacked td[data-label]::before {
+    content: attr(data-label);
+    display: block;
+    margin-bottom: 0.12rem;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--muted-green);
+  }
+  .login-card { padding: 1.4rem 1rem; }
 }
 @media (max-width: 640px) {
   .perf-gains { grid-template-columns: 1fr; }
@@ -1060,6 +1179,12 @@ input:focus, select:focus, textarea:focus {
 @media (max-width: 1100px) {
   .ads-campaigns, .ads-tiers { grid-template-columns: 1fr; }
   .job-money, .job-split, .cal-week { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 800px) {
+  .job-money { grid-template-columns: 1fr 1fr; }
+  .job-inline { grid-template-columns: 1fr; }
+  .cal-day { min-height: 0; }
 }
 
 @media print {

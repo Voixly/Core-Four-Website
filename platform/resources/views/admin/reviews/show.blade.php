@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 @section('title', ($review->name ?: 'Review').' · Review Shield')
 @section('content')
-<div class="grid" style="display:grid;grid-template-columns:1fr 1fr;gap:1rem">
+<div class="split">
     <div class="panel">
         <p><span class="tag tag-{{ $review->status }}">{{ $review->status }}</span> · {{ $review->stars ? $review->stars.'★' : 'not rated' }} · {{ $review->type }}</p>
         <p><strong>{{ $review->name ?: 'Unnamed customer' }}</strong><br>

@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 @section('title', $lead->name)
 @section('content')
-<div class="grid" style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:1rem">
+<div class="split">
     <div class="panel">
         @if($lead->source === 'hiring')
             <p>Hiring application · {{ $lead->need }} · {{ $lead->city }} {{ $lead->zip }}</p>

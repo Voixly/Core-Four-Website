@@ -20,7 +20,8 @@
         : 0;
 @endphp
 <div class="admin">
-    <aside class="side">
+    <div class="nav-backdrop" hidden></div>
+    <aside class="side" id="admin-menu">
         <a class="side-brand" href="{{ route('admin.dashboard') }}">
             <img src="/images/logo-live.svg" alt="Core Four Roofing">
         </a>
@@ -62,7 +63,10 @@
     </aside>
     <div class="main">
         <div class="top">
-            <div>
+            <button class="nav-toggle" type="button" aria-controls="admin-menu" aria-expanded="false">
+                <i class="fas fa-bars"></i> Menu
+            </button>
+            <div class="top-copy">
                 <strong class="page-title">@yield('title', 'Dashboard')</strong>
                 <div class="page-meta">@yield('meta', 'Core Four Roofing · Tomball HQ')</div>
             </div>
@@ -98,5 +102,37 @@
     @endif
 </nav>
 @stack('scripts')
+<script>
+document.querySelectorAll('table').forEach(function (table) {
+    var heads = Array.from(table.querySelectorAll('tr:first-child th')).map(function (cell) {
+        return cell.textContent.trim();
+    });
+    if (!heads.length) return;
+    table.classList.add('is-stacked');
+    table.querySelectorAll('tr').forEach(function (row) {
+        if (row.querySelector('th')) return;
+        Array.from(row.children).forEach(function (cell, index) {
+            if (heads[index]) cell.setAttribute('data-label', heads[index]);
+        });
+    });
+});
+(function () {
+    var menu = document.getElementById('admin-menu');
+    var toggle = document.querySelector('.nav-toggle');
+    var backdrop = document.querySelector('.nav-backdrop');
+    if (!menu || !toggle || !backdrop) return;
+    var setOpen = function (open) {
+        menu.classList.toggle('is-open', open);
+        document.body.classList.toggle('nav-open', open);
+        toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+        backdrop.hidden = !open;
+    };
+    toggle.addEventListener('click', function () { setOpen(!menu.classList.contains('is-open')); });
+    backdrop.addEventListener('click', function () { setOpen(false); });
+    menu.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', function () { setOpen(false); });
+    });
+})();
+</script>
 </body>
 </html>
