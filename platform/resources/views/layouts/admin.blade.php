@@ -89,19 +89,12 @@
     </div>
 </div>
 <nav class="bottom-nav">
-    <a class="{{ request()->routeIs('admin.dashboard') ? 'is-on' : '' }}" href="{{ route('admin.dashboard') }}"><i class="fas fa-house"></i> Home</a>
-    <a class="{{ request()->routeIs('admin.leads.*') ? 'is-on' : '' }}" href="{{ route('admin.leads.index') }}"><i class="fas fa-users"></i> Leads</a>
-    <a class="{{ request()->routeIs('admin.jobs.*') ? 'is-on' : '' }}" href="{{ route('admin.jobs.index') }}"><i class="fas fa-diagram-project"></i> Jobs</a>
-    <a class="{{ request()->routeIs('admin.schedule') ? 'is-on' : '' }}" href="{{ route('admin.schedule') }}"><i class="fas fa-calendar-days"></i> Days</a>
-    <a class="{{ request()->routeIs('admin.chat.*') ? 'is-on' : '' }}" href="{{ route('admin.chat.index') }}"><i class="fas fa-comments"></i> Chat
-        @if($emailWaiting > 0) ({{ $emailWaiting }})@endif
+    <a class="{{ request()->routeIs('admin.dashboard') ? 'is-on' : '' }}" href="{{ route('admin.dashboard') }}"><i class="fas fa-house"></i><span>Home</span></a>
+    <a class="{{ request()->routeIs('admin.jobs.*') ? 'is-on' : '' }}" href="{{ route('admin.jobs.index') }}"><i class="fas fa-diagram-project"></i><span>Jobs</span></a>
+    <a class="{{ request()->routeIs('admin.schedule') ? 'is-on' : '' }}" href="{{ route('admin.schedule') }}"><i class="fas fa-calendar-days"></i><span>Days</span></a>
+    <a class="{{ request()->routeIs('admin.chat.*') ? 'is-on' : '' }}" href="{{ route('admin.chat.index') }}"><i class="fas fa-comments"></i><span>Chat</span>
+        @if($emailWaiting > 0)<em class="bottom-count">{{ $emailWaiting }}</em>@endif
     </a>
-    <a class="{{ request()->routeIs('admin.reviews.*') ? 'is-on' : '' }}" href="{{ route('admin.reviews.index') }}"><i class="fas fa-shield-heart"></i> Shield</a>
-    @if(auth()->user()->canManageReports())
-        <a class="{{ request()->routeIs('admin.reports.*') ? 'is-on' : '' }}" href="{{ route('admin.reports.index') }}"><i class="fas fa-file-lines"></i> Reports</a>
-    @else
-        <a href="tel:+1{{ $officePhoneTel }}"><i class="fas fa-phone"></i> Call</a>
-    @endif
 </nav>
 @stack('scripts')
 <script>

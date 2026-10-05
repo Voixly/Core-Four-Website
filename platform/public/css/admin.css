@@ -908,30 +908,53 @@ input:focus, select:focus, textarea:focus {
   .cards, .job-money { grid-template-columns: 1fr 1fr; }
   .split, .job-split, .grid-3, .ads-campaigns, .ads-tiers { grid-template-columns: 1fr; }
   .bottom-nav {
-    display: flex;
-    overflow-x: auto;
-    gap: 0.15rem;
-    padding-bottom: calc(0.55rem + env(safe-area-inset-bottom));
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0.25rem;
+    padding: 0.45rem 0.55rem calc(0.45rem + env(safe-area-inset-bottom));
+    overflow: visible;
   }
   .bottom-nav a {
-    flex: 1 0 auto;
-    min-width: 2.8rem;
-    min-height: 2.7rem;
+    position: relative;
+    flex: none;
+    min-width: 0;
+    min-height: 3.35rem;
     justify-content: center;
-    font-size: 0.68rem;
-    line-height: 1.1;
+    gap: 0.28rem;
+    padding: 0.35rem 0.2rem;
+    border-radius: 14px;
+    font-size: 0.78rem;
+    line-height: 1;
+    letter-spacing: 0.02em;
     white-space: nowrap;
   }
   .bottom-nav a i {
-    width: 1.7rem;
-    height: 1.35rem;
-    display: grid;
-    place-items: center;
-    border-radius: 999px;
-    font-size: 0.95rem;
+    width: auto;
+    height: auto;
+    display: block;
+    border-radius: 0;
+    font-size: 1.2rem;
   }
-  .bottom-nav a.is-on { color: var(--white); }
-  .bottom-nav a.is-on i { background: var(--lime-green); color: var(--forest-green); }
+  .bottom-nav a.is-on {
+    background: rgba(191, 232, 102, 0.16);
+    color: var(--white);
+  }
+  .bottom-nav a.is-on i { background: none; color: var(--lime-green); }
+  .bottom-count {
+    position: absolute;
+    top: 0.28rem;
+    right: calc(50% - 1.35rem);
+    min-width: 1.05rem;
+    height: 1.05rem;
+    padding: 0 0.25rem;
+    border-radius: 999px;
+    background: var(--lime-green);
+    color: var(--forest-green);
+    font-style: normal;
+    font-size: 0.65rem;
+    font-weight: 700;
+    line-height: 1.05rem;
+  }
   .main {
     padding: 1rem 0.9rem calc(5.6rem + env(safe-area-inset-bottom));
     min-width: 0;
