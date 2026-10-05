@@ -22,6 +22,7 @@
 <div class="admin">
     <div class="nav-backdrop" hidden></div>
     <aside class="side" id="admin-menu">
+        <button class="nav-close" type="button">Close</button>
         <a class="side-brand" href="{{ route('admin.dashboard') }}">
             <img src="/images/logo-live.svg" alt="Core Four Roofing">
         </a>
@@ -62,10 +63,11 @@
         </div>
     </aside>
     <div class="main">
+        <button class="nav-toggle" type="button" aria-controls="admin-menu" aria-expanded="false">
+            <i class="fas fa-bars" aria-hidden="true"></i>
+            <span>Menu</span>
+        </button>
         <div class="top">
-            <button class="nav-toggle" type="button" aria-controls="admin-menu" aria-expanded="false">
-                <i class="fas fa-bars"></i> Menu
-            </button>
             <div class="top-copy">
                 <strong class="page-title">@yield('title', 'Dashboard')</strong>
                 <div class="page-meta">@yield('meta', 'Core Four Roofing · Tomball HQ')</div>
@@ -87,16 +89,16 @@
     </div>
 </div>
 <nav class="bottom-nav">
-    <a href="{{ route('admin.dashboard') }}"><i class="fas fa-house"></i> Home</a>
-    <a href="{{ route('admin.leads.index') }}"><i class="fas fa-users"></i> Leads</a>
-    <a href="{{ route('admin.jobs.index') }}"><i class="fas fa-diagram-project"></i> Jobs</a>
-    <a href="{{ route('admin.schedule') }}"><i class="fas fa-calendar-days"></i> Days</a>
-    <a href="{{ route('admin.chat.index') }}"><i class="fas fa-comments"></i> Chat
+    <a class="{{ request()->routeIs('admin.dashboard') ? 'is-on' : '' }}" href="{{ route('admin.dashboard') }}"><i class="fas fa-house"></i> Home</a>
+    <a class="{{ request()->routeIs('admin.leads.*') ? 'is-on' : '' }}" href="{{ route('admin.leads.index') }}"><i class="fas fa-users"></i> Leads</a>
+    <a class="{{ request()->routeIs('admin.jobs.*') ? 'is-on' : '' }}" href="{{ route('admin.jobs.index') }}"><i class="fas fa-diagram-project"></i> Jobs</a>
+    <a class="{{ request()->routeIs('admin.schedule') ? 'is-on' : '' }}" href="{{ route('admin.schedule') }}"><i class="fas fa-calendar-days"></i> Days</a>
+    <a class="{{ request()->routeIs('admin.chat.*') ? 'is-on' : '' }}" href="{{ route('admin.chat.index') }}"><i class="fas fa-comments"></i> Chat
         @if($emailWaiting > 0) ({{ $emailWaiting }})@endif
     </a>
-    <a href="{{ route('admin.reviews.index') }}"><i class="fas fa-shield-heart"></i> Shield</a>
+    <a class="{{ request()->routeIs('admin.reviews.*') ? 'is-on' : '' }}" href="{{ route('admin.reviews.index') }}"><i class="fas fa-shield-heart"></i> Shield</a>
     @if(auth()->user()->canManageReports())
-        <a href="{{ route('admin.reports.index') }}"><i class="fas fa-file-lines"></i> Reports</a>
+        <a class="{{ request()->routeIs('admin.reports.*') ? 'is-on' : '' }}" href="{{ route('admin.reports.index') }}"><i class="fas fa-file-lines"></i> Reports</a>
     @else
         <a href="tel:+1{{ $officePhoneTel }}"><i class="fas fa-phone"></i> Call</a>
     @endif
@@ -107,12 +109,13 @@ document.querySelectorAll('table').forEach(function (table) {
     var heads = Array.from(table.querySelectorAll('tr:first-child th')).map(function (cell) {
         return cell.textContent.trim();
     });
-    if (!heads.length) return;
     table.classList.add('is-stacked');
     table.querySelectorAll('tr').forEach(function (row) {
-        if (row.querySelector('th')) return;
+        if (row.querySelector('th') && row === table.querySelector('tr')) return;
         Array.from(row.children).forEach(function (cell, index) {
             if (heads[index]) cell.setAttribute('data-label', heads[index]);
+            var text = cell.textContent.replace(/\s+/g, '').length;
+            if (!text && !cell.querySelector('a, button, input, select, img')) cell.classList.add('is-empty');
         });
     });
 });
@@ -120,6 +123,7 @@ document.querySelectorAll('table').forEach(function (table) {
     var menu = document.getElementById('admin-menu');
     var toggle = document.querySelector('.nav-toggle');
     var backdrop = document.querySelector('.nav-backdrop');
+    var closer = document.querySelector('.nav-close');
     if (!menu || !toggle || !backdrop) return;
     var setOpen = function (open) {
         menu.classList.toggle('is-open', open);
@@ -129,6 +133,7 @@ document.querySelectorAll('table').forEach(function (table) {
     };
     toggle.addEventListener('click', function () { setOpen(!menu.classList.contains('is-open')); });
     backdrop.addEventListener('click', function () { setOpen(false); });
+    if (closer) closer.addEventListener('click', function () { setOpen(false); });
     menu.querySelectorAll('a').forEach(function (link) {
         link.addEventListener('click', function () { setOpen(false); });
     });
