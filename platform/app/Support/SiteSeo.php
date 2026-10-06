@@ -145,6 +145,7 @@ class SiteSeo
             'the-flat-roof-lifespan-battle-choosing-the-right-system-for-your-texas-facility' => 'Choosing a Flat Roof System in Texas | Core Four',
             'decoding-commercial-roof-inspections-protecting-your-texas-facility-and-investment' => 'What a Commercial Roof Inspection Shows | Core Four',
             'paying-for-a-roof-without-draining-savings' => 'Paying for a Roof Without Draining Savings | Core Four',
+            'invest-92l-gulf-storm-and-your-roof' => 'Invest 92L: Check the Roof Before Friday | Core Four',
             'kickout-flashing-at-the-sidewall' => 'Kickout Flashing at the Sidewall | Core Four',
             'when-a-houston-roof-needs-a-permit' => 'Houston Roof Permit Rules | Core Four Roofing',
             'black-streaks-on-houston-shingles' => 'Black Streaks on Houston Shingles | Core Four',
