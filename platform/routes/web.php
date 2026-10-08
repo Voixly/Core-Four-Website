@@ -138,6 +138,7 @@ Route::prefix('admin')->name('admin.')->middleware(['auth', 'role:admin,agency,o
     Route::post('/prospects/{lead}/respond', [LeadController::class, 'respond'])->name('prospects.respond');
 
     Route::get('/leads', [LeadController::class, 'index'])->name('leads.index');
+    Route::post('/leads/bulk', [LeadController::class, 'bulk'])->name('leads.bulk');
     Route::get('/leads/{lead}', [LeadController::class, 'show'])->name('leads.show');
     Route::patch('/leads/{lead}', [LeadController::class, 'update'])->name('leads.update');
     Route::post('/leads/{lead}/notes', [LeadController::class, 'note'])->name('leads.note');

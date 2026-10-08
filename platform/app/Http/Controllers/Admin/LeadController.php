@@ -35,7 +35,9 @@ class LeadController extends Controller
             ->paginate(25)
             ->withQueryString();
 
-        return view('admin.leads.index', compact('leads'));
+        $staff = User::staff()->orderBy('name')->get();
+
+        return view('admin.leads.index', compact('leads', 'staff'));
     }
 
     public function prospects(Request $request): View
@@ -122,6 +124,61 @@ class LeadController extends Controller
         $lead->log($request->user(), 'note', $data['body']);
 
         return back()->with('success', 'Note added.');
+    }
+
+    public function bulk(Request $request): RedirectResponse
+    {
+        $data = $request->validate([
+            'ids' => ['required', 'array', 'min:1', 'max:100'],
+            'ids.*' => ['integer'],
+            'action' => ['required', 'in:status,assign,delete'],
+            'status' => ['required_if:action,status', 'nullable', 'in:'.implode(',', Lead::STATUSES)],
+            'assigned_to' => ['required_if:action,assign', 'nullable', 'string', 'max:20'],
+        ], [
+            'ids.required' => 'Select at least one lead.',
+            'action.required' => 'Choose what to do with the selected leads.',
+            'status.required_if' => 'Choose a status.',
+            'assigned_to.required_if' => 'Choose who should own these leads.',
+        ]);
+
+        $leads = Lead::query()->exceptProspects()->whereIn('id', $data['ids'])->get();
+        if ($leads->isEmpty()) {
+            return back()->with('error', 'Those leads are no longer on this list.');
+        }
+
+        if ($data['action'] === 'delete') {
+            $count = $leads->count();
+            $leads->each->delete();
+
+            return back()->with('success', $count.' '.($count === 1 ? 'lead was' : 'leads were').' deleted.');
+        }
+
+        if ($data['action'] === 'status') {
+            foreach ($leads as $lead) {
+                if ($lead->status === $data['status']) {
+                    continue;
+                }
+                $lead->update(['status' => $data['status']]);
+                $lead->log($request->user(), 'updated', 'status → '.$data['status']);
+            }
+
+            return back()->with('success', $leads->count().' '.($leads->count() === 1 ? 'lead is' : 'leads are').' now '.$data['status'].'.');
+        }
+
+        $owner = $data['assigned_to'] === 'none' ? null : (int) $data['assigned_to'];
+        if ($owner !== null && ! User::query()->whereKey($owner)->exists()) {
+            return back()->with('error', 'Choose who should own these leads.');
+        }
+        $ownerName = $owner ? User::query()->whereKey($owner)->value('name') : 'Unassigned';
+        foreach ($leads as $lead) {
+            if ((int) $lead->assigned_to === (int) $owner) {
+                continue;
+            }
+            $lead->update(['assigned_to' => $owner]);
+            $lead->log($request->user(), 'updated', 'assigned_to → '.$ownerName);
+        }
+
+        return back()->with('success', $leads->count().' '.($leads->count() === 1 ? 'lead assigned' : 'leads assigned').' to '.$ownerName.'.');
     }
 
     public function destroy(Request $request, Lead $lead): RedirectResponse
