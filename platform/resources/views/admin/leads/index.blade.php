@@ -48,18 +48,18 @@
         <span class="bulk-count"></span>
     </div>
 @endif
-<table>
+<table class="lead-list">
     <tr><th>Select</th><th>Name</th><th>Phone</th><th>City</th><th>Type</th><th>Source</th><th>Status</th><th>Owner</th></tr>
     @foreach($leads as $lead)
         <tr>
-            <td><input class="lead-pick" type="checkbox" name="ids[]" value="{{ $lead->id }}"></td>
-            <td><a href="{{ route('admin.leads.show', $lead) }}">{{ $lead->name }}</a></td>
-            <td>@if($lead->phone)<a href="tel:{{ $lead->phone }}">{{ $lead->phone }}</a>@endif</td>
-            <td>{{ $lead->city }}</td>
-            <td>{{ $lead->source === 'hiring' ? 'Hiring' : $lead->type }}</td>
-            <td>{{ $lead->source }}</td>
-            <td><span class="tag tag-{{ $lead->status }}">{{ $lead->status }}</span></td>
-            <td>{{ $lead->assignee?->name }}</td>
+            <td class="pick"><input class="lead-pick" type="checkbox" name="ids[]" value="{{ $lead->id }}"></td>
+            <td class="name"><a href="{{ route('admin.leads.show', $lead) }}">{{ $lead->name }}</a></td>
+            <td class="phone">@if($lead->phone)<a href="tel:{{ $lead->phone }}">{{ $lead->phone }}</a>@endif</td>
+            <td class="city">{{ $lead->city }}</td>
+            <td class="type">{{ $lead->source === 'hiring' ? 'Hiring' : $lead->type }}</td>
+            <td class="source">{{ $lead->source }}</td>
+            <td class="status"><span class="tag tag-{{ $lead->status }}">{{ $lead->status }}</span></td>
+            <td class="owner">{{ $lead->assignee?->name }}</td>
         </tr>
     @endforeach
 </table>

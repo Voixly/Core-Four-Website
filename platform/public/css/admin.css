@@ -1031,7 +1031,8 @@ input.lead-pick, input.lead-check-all { width: 1.15rem; height: 1.15rem; accent-
   .user-actions { justify-content: flex-start; }
   .user-actions .btn { width: auto; }
   img, svg, video { max-width: 100%; height: auto; }
-  table.is-stacked {
+  table.is-stacked,
+  table.is-stacked tbody {
     display: block;
     width: 100%;
     overflow: visible;
@@ -1041,6 +1042,7 @@ input.lead-pick, input.lead-check-all { width: 1.15rem; height: 1.15rem; accent-
   table.is-stacked tr:first-child:has(th) { display: none; }
   table.is-stacked tr {
     display: block;
+    width: 100%;
     background: var(--white);
     border: 1px solid var(--divider);
     border-radius: 16px;
@@ -1053,6 +1055,35 @@ input.lead-pick, input.lead-check-all { width: 1.15rem; height: 1.15rem; accent-
     border: 0;
     padding: 0.45rem 0.85rem;
   }
+  table.lead-list.is-stacked tr {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 0.05rem 0.75rem;
+    padding: 0.55rem 0.75rem 0.65rem;
+    margin-bottom: 0.4rem;
+  }
+  table.lead-list.is-stacked td {
+    width: auto;
+    min-width: 0;
+    padding: 0.18rem 0;
+  }
+  table.lead-list.is-stacked td.pick { grid-area: pick; display: flex; align-items: center; gap: 0.45rem; padding-bottom: 0.05rem; }
+  table.lead-list.is-stacked td.name { grid-area: name; }
+  table.lead-list.is-stacked td.phone { grid-area: phone; }
+  table.lead-list.is-stacked td.city { grid-area: city; }
+  table.lead-list.is-stacked td.type { grid-area: type; }
+  table.lead-list.is-stacked td.source { grid-area: source; }
+  table.lead-list.is-stacked td.status { grid-area: status; }
+  table.lead-list.is-stacked td.owner { grid-area: owner; }
+  table.lead-list.is-stacked tr {
+    grid-template-areas:
+      "pick pick"
+      "name phone"
+      "city type"
+      "source status"
+      "owner owner";
+  }
+  table.lead-list.is-stacked td.pick::before { display: inline; margin: 0; }
   table.is-stacked td.is-empty { display: none; }
   table.is-stacked td[data-label]::before {
     content: attr(data-label);
