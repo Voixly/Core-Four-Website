@@ -8,6 +8,10 @@
         <p class="kicker">Thank you</p>
         <h1>A Core Four estimator will call you shortly.</h1>
         <p class="review-lede">If water is coming in now, do not wait. Call {{ $officePhone }} for a same-day tarp.</p>
+        @if(session('guide_download'))
+            <p class="review-lede">Your guide is downloading. If it does not start, <a href="{{ route('guides.file', session('guide_download')) }}">download it here</a>.</p>
+            <iframe hidden src="{{ route('guides.file', session('guide_download')) }}" title="Guide download"></iframe>
+        @endif
         <p>
             <a class="btn" href="tel:+1{{ $officePhoneTel }}">Call {{ $officePhone }}</a>
             <a class="btn btn--white" href="{{ url('/contact-core-four-roofing/') }}">Contact the office</a>

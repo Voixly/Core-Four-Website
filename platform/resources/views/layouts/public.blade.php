@@ -9,6 +9,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script>
+        !function(w,d,s,u){if(w.oaiq)return;var q=function(){q.q.push(arguments)};q.q=[];w.oaiq=q;var j=d.createElement(s);j.async=1;j.src=u;var f=d.getElementsByTagName(s)[0];f.parentNode.insertBefore(j,f)}(window,document,"script","https://bzrcdn.openai.com/sdk/oaiq.min.js");
+        oaiq("init",{pixelId:"YBTSntYAJvAaEKGCCSpymM",debug:true});
+        @if(is_array(session('openai_lead')))
+        oaiq("init",{pixelId:"YBTSntYAJvAaEKGCCSpymM",user:{!! json_encode(session('openai_lead.user'), JSON_UNESCAPED_SLASHES | JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT) !!}});
+        oaiq("measure","lead_created",{type:"customer_action"},{event_id:"lead-{{ (int) session('openai_lead.id') }}"});
+        @endif
+    </script>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-FNPBYXRVPE"></script>
     <script>

@@ -99,6 +99,7 @@ Route::get('/prospects/', [ProspectIntakeController::class, 'create'])->name('pr
 Route::post('/prospects', [ProspectIntakeController::class, 'store'])->middleware('throttle:30,1');
 Route::post('/prospects/', [ProspectIntakeController::class, 'store'])->middleware('throttle:30,1')->name('prospects.store');
 Route::post('/guides/{slug}/download', [LeadFormController::class, 'download'])->middleware('throttle:6,1')->name('guides.download');
+Route::get('/guides/{slug}/file/', [LeadFormController::class, 'file'])->middleware('throttle:12,1')->name('guides.file');
 
 Route::prefix('chat')->middleware('throttle:40,1')->group(function () {
     Route::post('/start', [ChatWidgetController::class, 'start'])->name('chat.start');
