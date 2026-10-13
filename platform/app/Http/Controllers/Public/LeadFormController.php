@@ -4,8 +4,8 @@ namespace App\Http\Controllers\Public;
 
 use App\Http\Controllers\Controller;
 use App\Models\Guide;
-use App\Models\Lead;
 use App\Services\LeadService;
+use App\Services\OpenAiConversions;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\StreamedResponse;
@@ -20,7 +20,7 @@ class LeadFormController extends Controller
         'Office',
     ];
 
-    public function store(Request $request, LeadService $leads): RedirectResponse
+    public function store(Request $request, LeadService $leads, OpenAiConversions $openai): RedirectResponse
     {
         if ($request->filled('website')) {
             return redirect()->route('thanks');
@@ -56,8 +56,12 @@ class LeadFormController extends Controller
         ]);
 
         $request->session()->forget('guide_download');
+        $openai->sendLead($lead, $request);
 
-        return redirect()->route('thanks')->with('openai_lead', $this->pixelLead($lead));
+        return redirect()->route('thanks')->with('openai_lead', [
+            'id' => $lead->id,
+            'user' => $openai->browserUser($lead),
+        ]);
     }
 
     public function hiring(Request $request, LeadService $leads): RedirectResponse
@@ -93,7 +97,7 @@ class LeadFormController extends Controller
         return redirect()->route('careers.thanks');
     }
 
-    public function download(Request $request, string $slug, LeadService $leads)
+    public function download(Request $request, string $slug, LeadService $leads, OpenAiConversions $openai)
     {
         $guide = Guide::query()->where('slug', $slug)->where('is_active', true)->firstOrFail();
 
@@ -120,8 +124,12 @@ class LeadFormController extends Controller
         $this->ensureGuideFile($guide);
 
         $request->session()->put('guide_download', $guide->slug);
+        $openai->sendLead($lead, $request);
 
-        return redirect()->route('thanks')->with('openai_lead', $this->pixelLead($lead));
+        return redirect()->route('thanks')->with('openai_lead', [
+            'id' => $lead->id,
+            'user' => $openai->browserUser($lead),
+        ]);
     }
 
     public function file(Request $request, string $slug): StreamedResponse
@@ -133,49 +141,6 @@ class LeadFormController extends Controller
         $guide = Guide::query()->where('slug', $slug)->where('is_active', true)->firstOrFail();
 
         return $this->guideFile($guide);
-    }
-
-    private function pixelLead(Lead $lead): array
-    {
-        $user = [
-            'country' => 'US',
-            'region' => 'Texas',
-            'external_id_sha256' => hash('sha256', (string) $lead->id),
-        ];
-
-        $email = strtolower(trim((string) $lead->email));
-        if ($email !== '') {
-            $user['email_sha256'] = hash('sha256', $email);
-        }
-
-        $phone = ltrim((string) preg_replace('/\D/', '', (string) $lead->phone), '0');
-        if (strlen($phone) === 10) {
-            $phone = '1'.$phone;
-        }
-        if (strlen($phone) >= 8 && strlen($phone) <= 15) {
-            $user['phone_number_sha256'] = hash('sha256', $phone);
-        }
-
-        $parts = preg_split('/\s+/', trim((string) $lead->name), 2) ?: [];
-        $first = strtolower((string) preg_replace('/[[:punct:]\s]+/', '', $parts[0] ?? ''));
-        if ($first !== '') {
-            $user['first_name_sha256'] = hash('sha256', $first);
-        }
-        $last = strtolower((string) preg_replace('/[[:punct:]\s]+/', '', $parts[1] ?? ''));
-        if ($last !== '') {
-            $user['last_name_sha256'] = hash('sha256', $last);
-        }
-
-        $city = trim((string) $lead->city);
-        if ($city !== '') {
-            $user['city'] = mb_substr($city, 0, 128);
-        }
-        $zip = trim((string) preg_replace('/[^A-Za-z0-9 \-]/', '', (string) $lead->zip));
-        if ($zip !== '') {
-            $user['postal_code'] = mb_substr($zip, 0, 32);
-        }
-
-        return ['id' => $lead->id, 'user' => $user];
     }
 
     private function ensureGuideFile(Guide $guide): void

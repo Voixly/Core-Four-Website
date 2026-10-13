@@ -17,6 +17,10 @@ return Application::configure(basePath: dirname(__DIR__))
             'role' => \App\Http\Middleware\EnsureRole::class,
         ]);
         $middleware->trustProxies(at: '*');
+        $middleware->encryptCookies(except: [
+            '__oppref',
+            '__obref',
+        ]);
         $middleware->validateCsrfTokens(except: [
             'prospects',
             'prospects/',

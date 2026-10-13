@@ -11,6 +11,10 @@ return [
         'key' => env('RESEND_API_KEY', env('RESEND_KEY')),
         'webhook_secret' => env('RESEND_WEBHOOK_SECRET'),
     ],
+    'openai' => [
+        'pixel_id' => env('OPENAI_PIXEL_ID', 'YBTSntYAJvAaEKGCCSpymM'),
+        'conversions_key' => env('OPENAI_CONVERSIONS_API_KEY'),
+    ],
     'jobnimbus' => [
         'key' => env('JOBNIMBUS_API_KEY'),
         'actor' => env('JOBNIMBUS_ACTOR', 'bmedina@corefourroofing.com'),
