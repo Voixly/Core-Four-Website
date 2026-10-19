@@ -40,9 +40,9 @@
             </article>
             <article class="perf-gain">
                 <span>Website visitors gained</span>
-                <b data-count="1222">1,222</b>
-                <em>+11.8% · last Analytics export</em>
-                <small>Active users through Sep 21</small>
+                <b data-count="8741">8,741</b>
+                <em>7,815 first visits from t.co</em>
+                <small>Active users · Sep 21 – Oct 18</small>
             </article>
             <article class="perf-gain">
                 <span>GBP profile views</span>
@@ -141,50 +141,50 @@
 
     <section class="perf-section" id="website">
         <p class="perf-kicker">Website · Google Analytics 4</p>
-        <h2>Traffic through September 21</h2>
-        <p class="perf-lead">No new Analytics export arrived with this update. From Aug 28 to Sep 21 the site added <strong>375 active users — up 11.9%</strong> versus the prior window. Views rose <strong>14.2%</strong> and events <strong>9.8%</strong>. Year-to-date through that export, Core Four had welcomed about <strong>1,222 active users</strong> since tracking launched mid-May.</p>
+        <h2>A spike, mostly from t.co</h2>
+        <p class="perf-lead">From Sep 21 to Oct 18, Analytics recorded <strong>8,741 active users</strong>, <strong>9,706 new users</strong>, and <strong>9,061 sessions</strong>. <strong>7,994 sessions — about 88% — came from t.co</strong>, the Twitter link shortener. Average engagement was <strong>4.2 seconds</strong>. Direct sessions were <strong>916</strong>, up from 295 in the prior window. Google organic was <strong>67</strong>, down from 80.</p>
         <div class="perf-compare">
-            <div><span>Active users</span><b>375</b><em>↑ 11.9% vs prior period</em></div>
-            <div><span>Page views</span><b>622</b><em>↑ 14.2% vs prior period</em></div>
-            <div><span>Event count</span><b>1.8K</b><em>↑ 9.8% vs prior period</em></div>
+            <div><span>Active users</span><b>8,741</b><em>Sep 21 – Oct 18</em></div>
+            <div><span>Sessions from t.co</span><b>7,994</b><em>About 88% of 9,061 sessions</em></div>
+            <div><span>Avg. engagement</span><b>4.2s</b><em>Per active user</em></div>
         </div>
         <div class="perf-split">
             <div class="panel">
-                <h3>Active users · latest window</h3>
-                <p class="perf-sub">{{ $perf['meta']['ga_window'] }} · vs previous period · Source: GA4</p>
+                <h3>Active users · prior window</h3>
+                <p class="perf-sub">Aug 28 – Sep 21 · daily series from the previous export · Source: GA4</p>
                 <div class="perf-chart tall"><canvas id="gaChart"></canvas></div>
             </div>
             <div class="panel">
-                <h3>Audience gained</h3>
-                <p class="perf-sub">Latest window + year-to-date</p>
+                <h3>This window</h3>
+                <p class="perf-sub">{{ $perf['meta']['ga_window'] }} · Source: GA4 snapshot</p>
                 <div class="perf-metrics">
-                    <div><span>Active users (Aug 28 – Sep 21)</span><strong>375 <small class="up">↑ 11.9%</small></strong></div>
-                    <div><span>New users this window</span><strong>364 <small>97% new</small></strong></div>
-                    <div><span>Sessions</span><strong>421</strong></div>
-                    <div><span>YTD active users</span><strong>1,222 <small class="up">since May</small></strong></div>
-                    <div><span>YTD new users</span><strong>1,206</strong></div>
+                    <div><span>Active users</span><strong>8,741</strong></div>
+                    <div><span>New users</span><strong>9,706</strong></div>
+                    <div><span>Sessions</span><strong>9,061</strong></div>
+                    <div><span>First visits from t.co</span><strong>7,815</strong></div>
+                    <div><span>Prior window active users</span><strong>375 <small>Aug 28 – Sep 21</small></strong></div>
                 </div>
                 <div class="perf-callout" style="margin-top:1.1rem">
-                    <strong>Improvement lens:</strong>
-                    Almost every visitor in this window was new (364 of 375). The site is still expanding the audience — not just recycling the same people.
+                    <strong>Read this carefully:</strong>
+                    The jump is not a wave of homeowners. t.co sent most of the sessions, and the average visit lasted about 4 seconds. Key events are still 0.
                 </div>
             </div>
         </div>
         <div class="perf-split">
             <div class="panel">
                 <h3>How people arrived</h3>
-                <p class="perf-sub">Sessions by source / medium · Aug 28 – Sep 21</p>
+                <p class="perf-sub">Sessions by source / medium · {{ $perf['meta']['ga_window'] }}</p>
                 <div class="perf-chart"><canvas id="gaSourceChart"></canvas></div>
             </div>
             <div class="panel">
                 <h3>Channel mix</h3>
-                <p class="perf-sub">421 sessions · Source: GA4</p>
+                <p class="perf-sub">9,061 sessions · Source: GA4</p>
                 <div class="perf-metrics">
-                    <div><span>Direct</span><strong>295 <small>70%</small></strong></div>
-                    <div><span>Google organic</span><strong>80 <small class="up">search demand</small></strong></div>
-                    <div><span>Facebook referral</span><strong>12 <small>social → site</small></strong></div>
-                    <div><span>Bing organic</span><strong>7</strong></div>
-                    <div><span>Key events tracked</span><strong>0 <small>next setup</small></strong></div>
+                    <div><span>t.co / referral</span><strong>7,994 <small>Twitter links</small></strong></div>
+                    <div><span>Direct</span><strong>916 <small>was 295</small></strong></div>
+                    <div><span>Google organic</span><strong>67 <small>was 80</small></strong></div>
+                    <div><span>Facebook referral</span><strong>13 <small>facebook.com + l.facebook.com</small></strong></div>
+                    <div><span>Key events tracked</span><strong>0</strong></div>
                 </div>
             </div>
         </div>

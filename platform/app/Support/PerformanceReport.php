@@ -13,7 +13,7 @@ class PerformanceReport
 
     public string $gbpWindow = 'Aug 30 – Sep 21, 2026';
 
-    public string $gaWindow = 'Aug 28 – Sep 21, 2026';
+    public string $gaWindow = 'Sep 21 – Oct 18, 2026';
 
     public string $ytd = 'Search and social through Oct 18, 2026';
 
@@ -217,8 +217,8 @@ class PerformanceReport
                 'calls' => [0, 1, 2, 0, 1, 3, 0],
             ],
             'sources' => [
-                'labels' => ['Direct 295', 'Google organic 80', 'Facebook 12', 'Bing 7', 'Other 28'],
-                'data' => [295, 80, 12, 7, 28],
+                'labels' => ['t.co 7,994', 'Direct 916', 'Google organic 67', 'Facebook 13', 'Bing 6', 'Other 65'],
+                'data' => [7994, 916, 67, 13, 6, 65],
             ],
             'countries' => [
                 'labels' => ['United States 89%', 'Pakistan 7%', 'United Kingdom 2%', 'Philippines 2%'],

@@ -1,0 +1,97 @@
+# ----------------------------------------
+# Reports snapshot
+# Account: Dock Line 3.0
+# Property: corefourroofing.com
+# ----------------------------------------
+#  
+# Start date: 20260921
+# End date: 20261018
+Active users,New users,Average engagement time per active user,Sessions
+8741,9706,4.160393547649011,9061
+
+#  
+# Start date: 20260921
+# End date: 20261018
+Session source / medium,Sessions,Key events,Total revenue
+t.co / referral,7994,0,0
+(direct) / (none),916,0,0
+google / organic,67,0,0
+search.google.com / referral,15,0,0
+facebook.com / referral,7,0,0
+bing / organic,6,0,0
+l.facebook.com / referral,6,0,0
+app.centerpointconnect.com / referral,3,0,0
+(not set) / Scamadviser.com,2,0,0
+homeservicebase.com / referral,2,0,0
+thenetnetworking.com / referral,2,0,0
+webdig.asia / referral,2,0,0
+127.0.0.1:8765 / referral,1,0,0
+api.microsoft.ai / referral,1,0,0
+app.sourcescrub.com / referral,1,0,0
+expertise.com / referral,1,0,0
+hpanel.hostinger.com / referral,1,0,0
+ig / social,1,0,0
+indexsy.spp.io / referral,1,0,0
+lycos.com / referral,1,0,0
+manta.com / referral,1,0,0
+merobase.com / referral,1,0,0
+yahoo / organic,1,0,0
+
+#  
+# Start date: 20260921
+# End date: 20261018
+First user source / medium,Active users
+t.co / referral,7815
+(direct) / (none),821
+google / organic,42
+facebook.com / referral,7
+bing / organic,6
+(not set) / Scamadviser.com,2
+homeservicebase.com / referral,2
+l.facebook.com / referral,2
+webdig.asia / referral,2
+127.0.0.1:8765 / referral,1
+api.microsoft.ai / referral,1
+app.sourcescrub.com / referral,1
+expertise.com / referral,1
+hpanel.hostinger.com / referral,1
+ig / social,1
+indexsy.spp.io / referral,1
+lycos.com / referral,1
+manta.com / referral,1
+merobase.com / referral,1
+thenetnetworking.com / referral,1
+yahoo / organic,1
+
+#  
+# Start date: 20260921
+# End date: 20261018
+Session source / medium,Sessions
+t.co / referral,7994
+(direct) / (none),916
+google / organic,67
+search.google.com / referral,15
+facebook.com / referral,7
+bing / organic,6
+l.facebook.com / referral,6
+app.centerpointconnect.com / referral,3
+(not set) / Scamadviser.com,2
+homeservicebase.com / referral,2
+thenetnetworking.com / referral,2
+webdig.asia / referral,2
+127.0.0.1:8765 / referral,1
+api.microsoft.ai / referral,1
+app.sourcescrub.com / referral,1
+expertise.com / referral,1
+hpanel.hostinger.com / referral,1
+ig / social,1
+indexsy.spp.io / referral,1
+lycos.com / referral,1
+manta.com / referral,1
+merobase.com / referral,1
+yahoo / organic,1
+
+#  
+# Start date: 20260921
+# End date: 20261018
+Session Google Ads campaign,Sessions

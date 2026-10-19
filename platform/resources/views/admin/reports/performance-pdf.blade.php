@@ -55,7 +55,7 @@
         <table class="cards">
             <tr>
                 <td><div class="k">Facebook post views</div><div class="v">1,608</div><div class="d">12 posts · Sep 21 – Oct 18</div></td>
-                <td><div class="k">Website visitors gained</div><div class="v">1,222</div><div class="d">Through Sep 21 · last Analytics export</div></td>
+                <td><div class="k">Website active users</div><div class="v">8,741</div><div class="d">88% of sessions from t.co</div></td>
                 <td><div class="k">GBP profile views</div><div class="v">270</div><div class="d">Aug 30 – Sep 21 · last export</div></td>
                 <td><div class="k">Brand query clicks</div><div class="v">24</div><div class="d">+60% · last 28 days</div></td>
             </tr>
@@ -115,44 +115,45 @@
 
     <div class="section page-break">
         <div class="kicker">Website · Google Analytics 4</div>
-        <h2>Traffic through September 21</h2>
-        <p>No new Analytics export arrived with this update. From Aug 28 to Sep 21 the site added <strong>375 active users — up 11.9%</strong>. Views rose <strong>14.2%</strong> and events <strong>9.8%</strong>. Through that export: about <strong>1,222 active users</strong> since tracking launched mid-May.</p>
+        <h2>A spike, mostly from t.co</h2>
+        <p>From Sep 21 to Oct 18, Analytics recorded <strong>8,741 active users</strong>, <strong>9,706 new users</strong>, and <strong>9,061 sessions</strong>. <strong>7,994 sessions — about 88% — came from t.co</strong>. Average engagement was <strong>4.2 seconds</strong>. Direct sessions were 916, up from 295. Google organic was 67, down from 80.</p>
         <table class="cards">
             <tr>
-                <td><div class="k">Active users</div><div class="v">375</div><div class="d">+11.9% vs prior</div></td>
-                <td><div class="k">Page views</div><div class="v">622</div><div class="d">+14.2% vs prior</div></td>
-                <td><div class="k">Event count</div><div class="v">1.8K</div><div class="d">+9.8% vs prior</div></td>
-                <td><div class="k">New users this window</div><div class="v">364</div><div class="d">97% new</div></td>
+                <td><div class="k">Active users</div><div class="v">8,741</div><div class="d">Sep 21 – Oct 18</div></td>
+                <td><div class="k">Sessions from t.co</div><div class="v">7,994</div><div class="d">About 88% of sessions</div></td>
+                <td><div class="k">Avg. engagement</div><div class="v">4.2s</div><div class="d">Per active user</div></td>
+                <td><div class="k">New users</div><div class="v">9,706</div><div class="d">Key events still 0</div></td>
             </tr>
         </table>
         <table class="split">
             <tr>
                 <td>
                     <div class="box">
-                        <h3>Audience gained</h3>
+                        <h3>This window</h3>
                         <table class="row">
-                            <tr><td>Active users (window)</td><td class="val">375</td></tr>
-                            <tr><td>Sessions</td><td class="val">421</td></tr>
-                            <tr><td>YTD active users</td><td class="val">1,222</td></tr>
-                            <tr><td>YTD new users</td><td class="val">1,206</td></tr>
+                            <tr><td>Active users</td><td class="val">8,741</td></tr>
+                            <tr><td>New users</td><td class="val">9,706</td></tr>
+                            <tr><td>Sessions</td><td class="val">9,061</td></tr>
+                            <tr><td>First visits from t.co</td><td class="val">7,815</td></tr>
+                            <tr><td>Prior window active users</td><td class="val">375</td></tr>
                         </table>
                     </div>
                 </td>
                 <td>
                     <div class="box">
-                        <h3>Channel mix · 421 sessions</h3>
+                        <h3>Channel mix · 9,061 sessions</h3>
                         <table class="row">
-                            <tr><td>Direct</td><td class="val">295 · 70%</td></tr>
-                            <tr><td>Google organic</td><td class="val">80</td></tr>
-                            <tr><td>Facebook referral</td><td class="val">12</td></tr>
-                            <tr><td>Bing organic</td><td class="val">7</td></tr>
+                            <tr><td>t.co / referral</td><td class="val">7,994</td></tr>
+                            <tr><td>Direct</td><td class="val">916 · was 295</td></tr>
+                            <tr><td>Google organic</td><td class="val">67 · was 80</td></tr>
+                            <tr><td>Facebook referral</td><td class="val">13</td></tr>
                             <tr><td>Key events tracked</td><td class="val">0</td></tr>
                         </table>
                     </div>
                 </td>
             </tr>
         </table>
-        <div class="callout"><strong>Improvement lens:</strong> Almost every visitor in this window was new (364 of 375). The site is still expanding the audience — not just recycling the same people.</div>
+        <div class="callout"><strong>Read this carefully:</strong> The jump is not a wave of homeowners. t.co sent most of the sessions, and the average visit lasted about 4 seconds. Key events are still 0.</div>
     </div>
 
     <div class="section">
