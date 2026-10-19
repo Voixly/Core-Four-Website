@@ -33,54 +33,54 @@
         <p class="perf-lead">Since analytics and local optimization went live mid-May, Core Four Roofing built a measurable digital footprint — across Maps, Search, the website, and Facebook brand discovery.</p>
         <div class="perf-gains">
             <article class="perf-gain">
-                <span>Facebook views YTD</span>
-                <b>35.1K</b>
-                <em>+13.1% vs last window</em>
-                <small>Apr 24 – Sep 21 · Meta Insights + post views</small>
+                <span>Facebook post views</span>
+                <b>1,608</b>
+                <em>12 posts · 58 clicks</em>
+                <small>Sep 21 – Oct 18 · Meta post export</small>
             </article>
             <article class="perf-gain">
                 <span>Website visitors gained</span>
                 <b data-count="1222">1,222</b>
-                <em>+11.8% · 1,222 YTD</em>
+                <em>+11.8% · last Analytics export</em>
                 <small>Active users through Sep 21</small>
             </article>
             <article class="perf-gain">
                 <span>GBP profile views</span>
                 <b data-count="270">270</b>
                 <em>+10.4% vs prior period</em>
-                <small>Aug 30 – Sep 21 · Google Business Profile</small>
+                <small>Aug 30 – Sep 21 · last Business Profile export</small>
             </article>
             <article class="perf-gain">
-                <span>Brand search position</span>
-                <b>1.07</b>
-                <em>Was 2.35 · now page one, slot one</em>
-                <small>“core four roofing” · Aug 28 – Sep 21</small>
+                <span>Brand query clicks</span>
+                <b>24</b>
+                <em>+60% vs the prior 28 days</em>
+                <small>“core four roofing” · Sep 21 – Oct 18</small>
             </article>
         </div>
         <div class="perf-callout">
             <strong>Client takeaway:</strong>
-            Brand discovery is accelerating — Facebook views are up 13% in this window, website traffic is still climbing (+11.8%), and Maps plus search keep compounding. More homeowners and commercial prospects are finding Core Four Roofing.
+            Search impressions rose 36% and clicks rose 21% in the last 28 days. The homepage still takes almost every click. Facebook kept posting, and the Oct 2 house — open deck to finished aerial — carried the window with 424 views and 34 clicks.
         </div>
         <div class="perf-stories">
             <article>
                 <h3>Social discovery</h3>
-                <p><strong>35.1K</strong> Facebook views YTD, plus <strong>3,212</strong> new post views and <strong>178 clicks</strong> since Aug 28 — the page is still earning attention, up 13% this window.</p>
+                <p><strong>1,608</strong> Facebook views and <strong>58 clicks</strong> across 12 posts. That is quieter than the 3,212 views in the Aug 28 – Sep 21 window. Instagram added <strong>367 views</strong>.</p>
             </article>
             <article>
                 <h3>Local presence</h3>
-                <p>Search mobile views on the listing are up <strong>+14.8%</strong>. This window added <strong>63 direction requests</strong> and a <strong>5.0★</strong> average rating.</p>
+                <p>The Google listing figures are still the Aug 30 – Sep 21 export: <strong>270 views</strong>, <strong>63 direction requests</strong>, and a <strong>5.0★</strong> average. No newer Business Profile file came in with this update.</p>
             </article>
             <article>
                 <h3>Brand ownership</h3>
-                <p>Brand query <em>core four roofing</em> now ranks at <strong>position 1.07</strong> with a <strong>28% CTR</strong> — you own the search for your name.</p>
+                <p><em>core four roofing</em> led search with <strong>24 clicks, up 60%</strong>. Position was last measured at <strong>1.07</strong> on Sep 21. This Insights pull did not include a new position.</p>
             </article>
         </div>
     </section>
 
     <section class="perf-section" id="gbp">
         <p class="perf-kicker">Google Business Profile</p>
-        <h2>The listing is still gaining ground</h2>
-        <p class="perf-lead">From Aug 30 to Sep 21 the Tomball profile earned <strong>270 views — up 10.4%</strong> — and <strong>100 interactions, up 13.5%</strong>. Search discovery is the engine: Google Search views rose <strong>9.7%</strong>, and mobile search kept the lead. Daily actions climbed through September after a quieter start.</p>
+        <h2>The listing, through September 21</h2>
+        <p class="perf-lead">No new Business Profile export arrived with this update. From Aug 30 to Sep 21 the Tomball profile earned <strong>270 views — up 10.4%</strong> — and <strong>100 interactions, up 13.5%</strong>. Search discovery was the engine: Google Search views rose <strong>9.7%</strong>, and mobile search kept the lead.</p>
         <div class="perf-compare">
             <div><span>Profile views</span><b>270</b><em>↑ 10.4% vs prior period</em></div>
             <div><span>Interactions</span><b>100</b><em>↑ 13.5% vs prior (88)</em></div>
@@ -141,8 +141,8 @@
 
     <section class="perf-section" id="website">
         <p class="perf-kicker">Website · Google Analytics 4</p>
-        <h2>Traffic is still climbing</h2>
-        <p class="perf-lead">From Aug 28 to Sep 21 the site added <strong>375 active users — up 11.9%</strong> versus the prior window. Views rose <strong>14.2%</strong> and events <strong>9.8%</strong>. Year-to-date, Core Four has now welcomed about <strong>1,222 active users</strong> since tracking launched mid-May.</p>
+        <h2>Traffic through September 21</h2>
+        <p class="perf-lead">No new Analytics export arrived with this update. From Aug 28 to Sep 21 the site added <strong>375 active users — up 11.9%</strong> versus the prior window. Views rose <strong>14.2%</strong> and events <strong>9.8%</strong>. Year-to-date through that export, Core Four had welcomed about <strong>1,222 active users</strong> since tracking launched mid-May.</p>
         <div class="perf-compare">
             <div><span>Active users</span><b>375</b><em>↑ 11.9% vs prior period</em></div>
             <div><span>Page views</span><b>622</b><em>↑ 14.2% vs prior period</em></div>
@@ -151,7 +151,7 @@
         <div class="perf-split">
             <div class="panel">
                 <h3>Active users · latest window</h3>
-                <p class="perf-sub">{{ $perf['meta']['window'] }} · vs previous period · Source: GA4</p>
+                <p class="perf-sub">{{ $perf['meta']['ga_window'] }} · vs previous period · Source: GA4</p>
                 <div class="perf-chart tall"><canvas id="gaChart"></canvas></div>
             </div>
             <div class="panel">
@@ -192,50 +192,50 @@
 
     <section class="perf-section" id="facebook">
         <p class="perf-kicker">Facebook &amp; Instagram · Meta</p>
-        <h2>The awareness surge kept going</h2>
-        <p class="perf-lead">Through Aug 27 the page had already delivered <strong>31,849 views</strong>. From Aug 28 to Sep 21, Core Four kept posting: <strong>13 Facebook posts</strong> added <strong>3,212 views — up 13.1%</strong>, <strong>1,728 reach</strong>, and <strong>178 clicks</strong>. Year-to-date Facebook views now sit at <strong>35.1K</strong>.</p>
+        <h2>Twelve posts, one house out in front</h2>
+        <p class="perf-lead">From Sep 21 to Oct 18, Core Four published <strong>12 Facebook posts</strong> with <strong>1,608 views</strong>, <strong>976 reach</strong>, and <strong>58 clicks</strong>. That is below the prior window’s 3,212 views and 178 clicks. The Oct 2 residential project — open deck through the finished aerial — did the heavy lifting.</p>
         <div class="perf-compare">
-            <div><span>Facebook views YTD</span><b>35.1K</b><em>31,849 through Aug 27 + 3,212 since</em></div>
-            <div><span>Latest window · post views</span><b>3,212</b><em>Aug 28 – Sep 21 · 13 photo posts · ↑ 13.1%</em></div>
-            <div><span>Clicks on posts</span><b>178</b><em>People acting on the content</em></div>
+            <div><span>Post views</span><b>1,608</b><em>12 photo posts · Sep 21 – Oct 18</em></div>
+            <div><span>Reach</span><b>976</b><em>Lifetime reach on those posts</em></div>
+            <div><span>Clicks on posts</span><b>58</b><em>34 of them on the Oct 2 house</em></div>
         </div>
         <div class="perf-callout">
             <strong>Why this matters:</strong>
-            The awareness climb was not a one-off. Posting stayed on a near-daily cadence through mid-September, with zero negative feedback in the window — and the Sep 3 tile-repair story alone earned 910 views.
+            The page kept a steady photo cadence, about every other day. Views concentrated on finished work. The Oct 2 house earned 424 views. The next post, on Oct 9, earned 177.
         </div>
         <div class="perf-split">
             <div class="panel">
-                <h3>Daily unique engagements</h3>
-                <p class="perf-sub">Aug 28 – Sep 21 · Unique people who engaged · Source: Meta page insights</p>
+                <h3>Views by post</h3>
+                <p class="perf-sub">Sep 21 – Oct 18 · Lifetime views · Source: Meta post export</p>
                 <div class="perf-chart tall"><canvas id="fbViewsChart"></canvas></div>
             </div>
             <div class="panel">
                 <h3>Latest window snapshot</h3>
-                <p class="perf-sub">Facebook posts published Aug 28 – Sep 21</p>
+                <p class="perf-sub">Facebook posts published Sep 21 – Oct 17</p>
                 <div class="perf-metrics">
-                    <div><span>Posts published</span><strong>13</strong></div>
-                    <div><span>Post reach</span><strong>1,728</strong></div>
-                    <div><span>Unique engagers</span><strong>157</strong></div>
-                    <div><span>Reactions · comments · shares</span><strong>82</strong></div>
-                    <div><span>Negative feedback</span><strong>0 <small class="up">clean window</small></strong></div>
+                    <div><span>Posts published</span><strong>12</strong></div>
+                    <div><span>Post reach</span><strong>976</strong></div>
+                    <div><span>Reactions</span><strong>34</strong></div>
+                    <div><span>Comments</span><strong>3</strong></div>
+                    <div><span>Shares</span><strong>0</strong></div>
                 </div>
             </div>
         </div>
         <div class="perf-split">
             <div class="panel">
                 <h3>Engagement mix</h3>
-                <p class="perf-sub">Aug 28 – Sep 21 Facebook posts</p>
+                <p class="perf-sub">Sep 21 – Oct 18 Facebook posts</p>
                 <div class="perf-metrics">
-                    <div><span>Reactions</span><strong>68</strong></div>
-                    <div><span>Comments</span><strong>11 <small class="up">conversation</small></strong></div>
-                    <div><span>Shares</span><strong>2</strong></div>
-                    <div><span>Link / photo clicks</span><strong>178 <small class="up">highest action</small></strong></div>
-                    <div><span>Prior 90-day engagement</span><strong>683 <small>+10.4%</small></strong></div>
+                    <div><span>Reactions</span><strong>34</strong></div>
+                    <div><span>Comments</span><strong>3</strong></div>
+                    <div><span>Shares</span><strong>0</strong></div>
+                    <div><span>Link / photo clicks</span><strong>58</strong></div>
+                    <div><span>Prior window post views</span><strong>3,212 <small>Aug 28 – Sep 21</small></strong></div>
                 </div>
             </div>
             <div class="panel">
-                <h3>Top posts since Aug 28</h3>
-                <p class="perf-sub">Proof-of-work and “how not to repair” content leading</p>
+                <h3>Top posts this window</h3>
+                <p class="perf-sub">Engagement is reactions, comments, and shares</p>
                 <table>
                     <tr><th>Posted</th><th>Theme</th><th>Views</th><th>Eng.</th></tr>
                     @foreach($perf['posts'] as $post)
@@ -249,52 +249,52 @@
                 </table>
                 <div class="perf-callout" style="margin-top:1.1rem">
                     <strong>Content win:</strong>
-                    The Sep 3 contractor-fail / tile repair story is the standout — 910 views and 82 clicks. Problem-solution posts plus jobsite photography are what this audience stops for.
+                    The Oct 2 house is the standout — 424 views and 34 clicks. The in-progress deck and the finished aerial did more than the surrounding posts combined.
                 </div>
             </div>
         </div>
         <div class="perf-split">
             <div class="panel">
                 <h3>Instagram · same window</h3>
-                <p class="perf-sub">Aug 28 – Sep 21 · 13 posts · Source: Meta IG insights</p>
+                <p class="perf-sub">Sep 21 – Oct 18 · 12 posts · Source: Meta IG insights</p>
                 <div class="perf-chart"><canvas id="igReachChart"></canvas></div>
             </div>
             <div class="panel">
                 <h3>Instagram snapshot</h3>
                 <p class="perf-sub">Cross-posted project content picking up a second audience</p>
                 <div class="perf-metrics">
-                    <div><span>IG views</span><strong>945</strong></div>
-                    <div><span>IG reach</span><strong>521</strong></div>
-                    <div><span>Likes</span><strong>44</strong></div>
-                    <div><span>Comments · shares</span><strong>9</strong></div>
-                    <div><span>Top IG post</span><strong>211 <small>tile carousel</small></strong></div>
+                    <div><span>IG views</span><strong>367</strong></div>
+                    <div><span>IG reach</span><strong>189</strong></div>
+                    <div><span>Likes</span><strong>30</strong></div>
+                    <div><span>Comments</span><strong>2</strong></div>
+                    <div><span>Top IG post</span><strong>85 <small>Oct 2 carousel</small></strong></div>
                 </div>
             </div>
         </div>
         <div class="perf-stories">
             <article>
                 <h3>YTD awareness</h3>
-                <p>The page kept compounding after the summer surge, then another <strong>3.2K</strong> post views landed by Sep 21 — <strong>+13.1%</strong> this window.</p>
+                <p>Through Sep 21 the page total stood at <strong>35.1K</strong> views. This export is lifetime views on the 12 new posts, <strong>1,608</strong>, not a new page-wide year-to-date.</p>
             </article>
             <article>
                 <h3>Clicks, not just likes</h3>
-                <p><strong>178 clicks</strong> on the latest posts beat reactions — people are tapping through, not only scrolling past.</p>
+                <p><strong>58 clicks</strong> still beat the 34 reactions. Most of those clicks sat on the Oct 2 house.</p>
             </article>
             <article>
                 <h3>Photos still win</h3>
-                <p>All 13 latest Facebook posts were photos. Project visuals remain the engagement engine; keep pairing them with a clear next step.</p>
+                <p>All 12 Facebook posts were photos. The matching Instagram posts added 367 views, led by the same Oct 2 carousel at 85.</p>
             </article>
         </div>
     </section>
 
     <section class="perf-section" id="search">
         <p class="perf-kicker">Google Search Console</p>
-        <h2>More visibility. Brand locked at #1.</h2>
-        <p class="perf-lead">From Aug 28 to Sep 21 the site earned <strong>67 clicks</strong> and <strong>8,928 impressions</strong> — about <strong>357 impressions a day</strong>, up 11.9% from ~319 in the prior window. Brand query <em>core four roofing</em> held at <strong>1.07</strong>.</p>
+        <h2>Impressions up. The homepage still takes the click.</h2>
+        <p class="perf-lead">In the last 28 days, Sep 21 – Oct 18, Search Console shows <strong>46 clicks, up 21%</strong>, and <strong>9.41K impressions, up 36%</strong>. That is about <strong>336 impressions a day</strong> and <strong>1.6 clicks a day</strong>. <em>core four roofing</em> accounted for <strong>24</strong> of the clicks, up 60%.</p>
         <div class="perf-compare">
-            <div><span>Impressions / day</span><b>357</b><em>↑ 11.9% vs ~319 in the prior window</em></div>
-            <div><span>Brand query position</span><b>1.07</b><em>Was 2.35 · 28% CTR</em></div>
-            <div><span>City landings in Google</span><b>69</b><em>1,993 impressions already · 13 clicks</em></div>
+            <div><span>Impressions</span><b>9.41K</b><em>↑ 36% vs the prior 28 days</em></div>
+            <div><span>Clicks</span><b>46</b><em>↑ 21% · about 1.6 a day</em></div>
+            <div><span>Homepage clicks</span><b>42</b><em>38 on the main URL · 4 on www</em></div>
         </div>
         <div class="perf-tabs" role="tablist" aria-label="Search charts">
             <button class="perf-tab active" type="button" data-gsc="position">Avg. position</button>
@@ -304,24 +304,24 @@
         </div>
         <div class="panel">
             <h3 id="gscTitle">Daily average position</h3>
-            <p class="perf-sub" id="gscSub">{{ $perf['meta']['window'] }} · Lower is better · Source: Google Search Console</p>
+            <p class="perf-sub" id="gscSub">Aug 28 – Sep 21, 2026 · daily series from the previous export · Source: Google Search Console</p>
             <div class="perf-chart tall"><canvas id="gscChart"></canvas></div>
         </div>
         <div class="perf-split">
             <div class="panel">
                 <h3>Latest window snapshot</h3>
-                <p class="perf-sub">Aug 28 – Sep 21 · Domain property</p>
+                <p class="perf-sub">Sep 21 – Oct 18 · Search Console Insights</p>
                 <div class="perf-metrics">
-                    <div><span>Clicks</span><strong>67 <small>~2.7 / day</small></strong></div>
-                    <div><span>Impressions</span><strong>8,928</strong></div>
-                    <div><span>CTR</span><strong>0.75%</strong></div>
-                    <div><span>Mobile avg. position</span><strong>13.7 <small class="up">stronger than desktop</small></strong></div>
-                    <div><span>YTD clicks (Apr 22 – Sep 21)</span><strong>302</strong></div>
+                    <div><span>Clicks</span><strong>46 <small>↑ 21%</small></strong></div>
+                    <div><span>Impressions</span><strong>9.41K <small>↑ 36%</small></strong></div>
+                    <div><span>Brand query clicks</span><strong>24 <small>↑ 60%</small></strong></div>
+                    <div><span>Image search clicks</span><strong>1</strong></div>
+                    <div><span>Prior window clicks</span><strong>67 <small>Aug 28 – Sep 21</small></strong></div>
                 </div>
             </div>
             <div class="panel">
-                <h3>Device mix</h3>
-                <p class="perf-sub">Clicks by device · Aug 28 – Sep 21</p>
+                <h3>Where the clicks came from</h3>
+                <p class="perf-sub">Share of clicks by country · last 28 days</p>
                 <div class="perf-chart"><canvas id="deviceChart"></canvas></div>
             </div>
         </div>
@@ -329,20 +329,19 @@
 
     <section class="perf-section" id="keywords">
         <p class="perf-kicker">Queries &amp; pages</p>
-        <h2>City pages are starting to rank</h2>
-        <p class="perf-lead">Brand is locked. Local commercial landings are already in Google — League City and Humble both picked up clicks, and 69 city URLs have impression share.</p>
+        <h2>The brand query, then the homepage</h2>
+        <p class="perf-lead">Search Console’s top list is short. <em>core four roofing</em> led with 24 clicks. The homepage took 38, and the www address took 4 more. About, commercial coatings, and contact each recorded a first click.</p>
         <div class="perf-split">
             <div class="panel">
                 <h3>Top search queries</h3>
                 <p class="perf-sub">{{ $perf['meta']['window'] }} · Google Search Console</p>
                 <table>
-                    <tr><th>Query</th><th>Clicks</th><th>Impr.</th><th>Pos.</th></tr>
+                    <tr><th>Query</th><th>Clicks</th><th>Vs prior 28 days</th></tr>
                     @foreach($perf['queries'] as $query)
                         <tr>
                             <td>{{ $query['query'] }}</td>
                             <td>{{ $query['clicks'] }}</td>
-                            <td>{{ number_format($query['impressions']) }}</td>
-                            <td @class(['perf-pos' => $query['position'] <= 10])>{{ number_format($query['position'], 1) }}</td>
+                            <td>{{ $query['change'] }}</td>
                         </tr>
                     @endforeach
                 </table>
@@ -351,12 +350,12 @@
                 <h3>Top landing pages</h3>
                 <p class="perf-sub">Highest click &amp; impression pages this window</p>
                 <table>
-                    <tr><th>Page</th><th>Clicks</th><th>Impr.</th></tr>
+                    <tr><th>Page</th><th>Clicks</th><th>Vs prior 28 days</th></tr>
                     @foreach($perf['pages'] as $page)
                         <tr>
                             <td>{{ $page['page'] }}</td>
                             <td>{{ $page['clicks'] }}</td>
-                            <td>{{ number_format($page['impressions']) }}</td>
+                            <td>{{ $page['change'] }}</td>
                         </tr>
                     @endforeach
                 </table>
@@ -393,8 +392,8 @@
         <h2>Growing residential &amp; commercial landing pages</h2>
         <p class="perf-lead">We’ve published <strong>71 city landing pages</strong> — {{ $perf['landings']['residential']['count'] }} residential in Houston metro and {{ $perf['landings']['commercial']['count'] }} commercial across Houston, Austin, and Dallas–Fort Worth — so Core Four Roofing can rank for local “roofing near me” demand in every priority market.</p>
         <div class="perf-compare">
-            <div><span>Residential landings</span><b>{{ $perf['landings']['residential']['count'] }}</b><em>Houston metro · updated Sep 21, 2026</em></div>
-            <div><span>Commercial landings</span><b>{{ $perf['landings']['commercial']['count'] }}</b><em>Houston · Austin · DFW · updated Sep 21, 2026</em></div>
+            <div><span>Residential landings</span><b>{{ $perf['landings']['residential']['count'] }}</b><em>Houston metro · live list, Oct 20, 2026</em></div>
+            <div><span>Commercial landings</span><b>{{ $perf['landings']['commercial']['count'] }}</b><em>Houston · Austin · DFW · live list, Oct 20, 2026</em></div>
             <div><span>Texas markets covered</span><b>3</b><em>Houston · Austin · DFW metros</em></div>
         </div>
         <div class="perf-callout">
@@ -559,10 +558,10 @@ new Chart(document.getElementById('gaSourceChart'), {
 
 let gscChart;
 const gscMeta = {
-  position: { title: 'Daily average position', sub: '{{ $perf['meta']['window'] }} · Lower is better · Source: Google Search Console', y: 'Avg. position', reverse: true, color: brandMid, key: 'position' },
-  ctr: { title: 'Daily click-through rate', sub: '{{ $perf['meta']['window'] }} · Source: Google Search Console', y: 'CTR (%)', reverse: false, color: brand, key: 'ctr' },
-  clicks: { title: 'Daily clicks', sub: '{{ $perf['meta']['window'] }} · Source: Google Search Console', y: 'Clicks', reverse: false, color: brand, key: 'clicks' },
-  impressions: { title: 'Daily impressions', sub: '{{ $perf['meta']['window'] }} · Source: Google Search Console', y: 'Impressions', reverse: false, color: muted, key: 'impressions' }
+  position: { title: 'Daily average position', sub: 'Aug 28 – Sep 21, 2026 · previous export · Lower is better', y: 'Avg. position', reverse: true, color: brandMid, key: 'position' },
+  ctr: { title: 'Daily click-through rate', sub: 'Aug 28 – Sep 21, 2026 · previous export', y: 'CTR (%)', reverse: false, color: brand, key: 'ctr' },
+  clicks: { title: 'Daily clicks', sub: 'Aug 28 – Sep 21, 2026 · previous export', y: 'Clicks', reverse: false, color: brand, key: 'clicks' },
+  impressions: { title: 'Daily impressions', sub: 'Aug 28 – Sep 21, 2026 · previous export', y: 'Impressions', reverse: false, color: muted, key: 'impressions' }
 };
 
 function renderGsc(mode = 'position') {
@@ -590,7 +589,7 @@ document.querySelectorAll('[data-gsc]').forEach((btn) => {
 
 new Chart(document.getElementById('deviceChart'), {
   type: 'doughnut',
-  data: { labels: data.devices.labels, datasets: [{ data: data.devices.data, backgroundColor: [brandMid, brand], borderWidth: 0 }] },
+  data: { labels: data.countries.labels, datasets: [{ data: data.countries.data, backgroundColor: [brand, brandMid, lime, '#45664f'], borderWidth: 0 }] },
   options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'bottom', labels: { boxWidth: 12, usePointStyle: true } } }, cutout: '62%' }
 });
 
@@ -598,9 +597,9 @@ new Chart(document.getElementById('fbViewsChart'), {
   type: 'line',
   data: {
     labels: data.facebook.map((d) => d.d),
-    datasets: [{ label: 'Unique user engagements', data: data.facebook.map((d) => d.v), borderColor: brand, backgroundColor: 'rgba(191,232,102,0.25)', fill: true, tension: 0.3, pointRadius: 2.5, borderWidth: 2.5 }]
+    datasets: [{ label: 'Post views', data: data.facebook.map((d) => d.v), borderColor: brand, backgroundColor: 'rgba(191,232,102,0.25)', fill: true, tension: 0.3, pointRadius: 2.5, borderWidth: 2.5 }]
   },
-  options: lineOpts('Unique engagements')
+  options: lineOpts('Post views')
 });
 
 new Chart(document.getElementById('igReachChart'), {

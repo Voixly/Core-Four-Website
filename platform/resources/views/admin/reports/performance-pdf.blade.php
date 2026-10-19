@@ -54,26 +54,26 @@
         <p>Since analytics and local optimization went live mid-May, Core Four Roofing built a measurable digital footprint — across Maps, Search, the website, and Facebook brand discovery.</p>
         <table class="cards">
             <tr>
-                <td><div class="k">Facebook views YTD</div><div class="v">35.1K</div><div class="d">+13.1% vs last window</div></td>
-                <td><div class="k">Website visitors gained</div><div class="v">1,222</div><div class="d">+11.8% · 1,222 YTD</div></td>
-                <td><div class="k">GBP profile views</div><div class="v">270</div><div class="d">+10.4% vs prior period</div></td>
-                <td><div class="k">Brand search position</div><div class="v">1.07</div><div class="d">Was 2.35 · page one, slot one</div></td>
+                <td><div class="k">Facebook post views</div><div class="v">1,608</div><div class="d">12 posts · Sep 21 – Oct 18</div></td>
+                <td><div class="k">Website visitors gained</div><div class="v">1,222</div><div class="d">Through Sep 21 · last Analytics export</div></td>
+                <td><div class="k">GBP profile views</div><div class="v">270</div><div class="d">Aug 30 – Sep 21 · last export</div></td>
+                <td><div class="k">Brand query clicks</div><div class="v">24</div><div class="d">+60% · last 28 days</div></td>
             </tr>
         </table>
-        <div class="callout"><strong>Client takeaway:</strong> Brand discovery is accelerating — Facebook views are up 13% this window, website traffic is still climbing (+11.8%), and Maps plus search keep compounding.</div>
+        <div class="callout"><strong>Client takeaway:</strong> Search impressions rose 36% and clicks rose 21% in the last 28 days. The homepage still takes almost every click. The Oct 2 house carried Facebook with 424 views and 34 clicks.</div>
         <table class="split">
             <tr>
-                <td><div class="box"><h3>Social discovery</h3><p><strong>35.1K</strong> Facebook views YTD, plus <strong>3,212</strong> new post views and <strong>178 clicks</strong> since Aug 28.</p></div></td>
-                <td><div class="box"><h3>Local presence</h3><p>Search mobile views are up <strong>+14.8%</strong>. This window added <strong>63 direction requests</strong> and a <strong>5.0</strong> average rating.</p></div></td>
+                <td><div class="box"><h3>Social discovery</h3><p><strong>1,608</strong> Facebook views and <strong>58 clicks</strong> across 12 posts. Instagram added <strong>367</strong> views.</p></div></td>
+                <td><div class="box"><h3>Local presence</h3><p>The listing export is still Aug 30 – Sep 21: <strong>270 views</strong>, <strong>63 direction requests</strong>, and a <strong>5.0</strong> average.</p></div></td>
             </tr>
         </table>
-        <div class="box" style="margin-top:8px"><h3>Brand ownership</h3><p>Brand query <em>core four roofing</em> now ranks at <strong>position 1.07</strong> with a <strong>28% CTR</strong> — you own the search for your name.</p></div>
+        <div class="box" style="margin-top:8px"><h3>Brand ownership</h3><p><em>core four roofing</em> led with <strong>24 clicks, up 60%</strong>. Position was last measured at <strong>1.07</strong> on Sep 21. This pull did not include a new position.</p></div>
     </div>
 
     <div class="section">
         <div class="kicker">Google Business Profile</div>
-        <h2>The listing is still gaining ground</h2>
-        <p>From Aug 30 to Sep 21 the Tomball profile earned <strong>270 views — up 10.4%</strong> — and <strong>100 interactions, up 13.5%</strong>. Search discovery is the engine: Google Search views rose <strong>9.7%</strong>, and mobile search kept the lead.</p>
+        <h2>The listing, through September 21</h2>
+        <p>No new Business Profile export arrived with this update. From Aug 30 to Sep 21 the Tomball profile earned <strong>270 views — up 10.4%</strong> — and <strong>100 interactions, up 13.5%</strong>. Google Search views rose <strong>9.7%</strong>, and mobile search kept the lead.</p>
         <table class="cards">
             <tr>
                 <td><div class="k">Profile views</div><div class="v">270</div><div class="d">Up 10.4% vs prior</div></td>
@@ -115,8 +115,8 @@
 
     <div class="section page-break">
         <div class="kicker">Website · Google Analytics 4</div>
-        <h2>Traffic is still climbing</h2>
-        <p>From Aug 28 to Sep 21 the site added <strong>375 active users — up 11.9%</strong>. Views rose <strong>14.2%</strong> and events <strong>9.8%</strong>. Year-to-date: about <strong>1,222 active users</strong> since tracking launched mid-May.</p>
+        <h2>Traffic through September 21</h2>
+        <p>No new Analytics export arrived with this update. From Aug 28 to Sep 21 the site added <strong>375 active users — up 11.9%</strong>. Views rose <strong>14.2%</strong> and events <strong>9.8%</strong>. Through that export: about <strong>1,222 active users</strong> since tracking launched mid-May.</p>
         <table class="cards">
             <tr>
                 <td><div class="k">Active users</div><div class="v">375</div><div class="d">+11.9% vs prior</div></td>
@@ -157,14 +157,14 @@
 
     <div class="section">
         <div class="kicker">Facebook &amp; Instagram · Meta</div>
-        <h2>The awareness surge kept going</h2>
-        <p>Through Aug 27 the page had already delivered <strong>31,849 views</strong>. From Aug 28 to Sep 21, 13 Facebook posts added <strong>3,212 views — up 13.1%</strong>, <strong>1,728 reach</strong>, and <strong>178 clicks</strong>. YTD Facebook views: <strong>35.1K</strong>.</p>
+        <h2>Twelve posts, one house out in front</h2>
+        <p>From Sep 21 to Oct 18, 12 Facebook posts added <strong>1,608 views</strong>, <strong>976 reach</strong>, and <strong>58 clicks</strong>. That is below the prior window’s 3,212 views and 178 clicks. Instagram added <strong>367 views</strong> and <strong>189 reach</strong>.</p>
         <table class="cards">
             <tr>
-                <td><div class="k">Facebook views YTD</div><div class="v">35.1K</div><div class="d">31,849 + 3,212</div></td>
-                <td><div class="k">Latest post views</div><div class="v">3,212</div><div class="d">13 photo posts · +13.1%</div></td>
-                <td><div class="k">Clicks on posts</div><div class="v">178</div><div class="d">Highest action</div></td>
-                <td><div class="k">IG views / reach</div><div class="v">945 / 521</div><div class="d">13 IG posts</div></td>
+                <td><div class="k">Facebook post views</div><div class="v">1,608</div><div class="d">12 photo posts</div></td>
+                <td><div class="k">Reach</div><div class="v">976</div><div class="d">Lifetime on those posts</div></td>
+                <td><div class="k">Clicks on posts</div><div class="v">58</div><div class="d">34 on the Oct 2 house</div></td>
+                <td><div class="k">IG views / reach</div><div class="v">367 / 189</div><div class="d">12 IG posts</div></td>
             </tr>
         </table>
         <table class="split">
@@ -173,11 +173,11 @@
                     <div class="box">
                         <h3>Latest Facebook window</h3>
                         <table class="row">
-                            <tr><td>Posts published</td><td class="val">13</td></tr>
-                            <tr><td>Post reach</td><td class="val">1,728</td></tr>
-                            <tr><td>Unique engagers</td><td class="val">157</td></tr>
-                            <tr><td>Reactions / comments / shares</td><td class="val">82</td></tr>
-                            <tr><td>Negative feedback</td><td class="val">0</td></tr>
+                            <tr><td>Posts published</td><td class="val">12</td></tr>
+                            <tr><td>Post reach</td><td class="val">976</td></tr>
+                            <tr><td>Reactions</td><td class="val">34</td></tr>
+                            <tr><td>Comments</td><td class="val">3</td></tr>
+                            <tr><td>Shares</td><td class="val">0</td></tr>
                         </table>
                     </div>
                 </td>
@@ -185,17 +185,17 @@
                     <div class="box">
                         <h3>Instagram snapshot</h3>
                         <table class="row">
-                            <tr><td>Views</td><td class="val">945</td></tr>
-                            <tr><td>Reach</td><td class="val">521</td></tr>
-                            <tr><td>Likes</td><td class="val">44</td></tr>
-                            <tr><td>Comments · shares</td><td class="val">9</td></tr>
-                            <tr><td>Top IG post (tile carousel)</td><td class="val">211</td></tr>
+                            <tr><td>Views</td><td class="val">367</td></tr>
+                            <tr><td>Reach</td><td class="val">189</td></tr>
+                            <tr><td>Likes</td><td class="val">30</td></tr>
+                            <tr><td>Comments</td><td class="val">2</td></tr>
+                            <tr><td>Top IG post (Oct 2 carousel)</td><td class="val">85</td></tr>
                         </table>
                     </div>
                 </td>
             </tr>
         </table>
-        <h3 style="margin-top:10px">Top posts since Aug 28</h3>
+        <h3 style="margin-top:10px">Top posts, Sep 21 – Oct 18</h3>
         <table class="data">
             <tr><th>Posted</th><th>Theme</th><th class="num">Views</th><th class="num">Eng.</th></tr>
             @foreach($perf['posts'] as $post)
@@ -207,19 +207,19 @@
                 </tr>
             @endforeach
         </table>
-        <div class="callout"><strong>Content win:</strong> The Sep 3 contractor-fail / tile repair story is the standout — 910 views and 82 clicks. Problem-solution posts plus jobsite photography are what this audience stops for.</div>
+        <div class="callout"><strong>Content win:</strong> The Oct 2 house is the standout — 424 views and 34 clicks. The in-progress deck and the finished aerial did more than the surrounding posts combined.</div>
     </div>
 
     <div class="section page-break">
         <div class="kicker">Google Search Console</div>
-        <h2>More visibility. Brand locked at #1.</h2>
-        <p>From Aug 28 to Sep 21 the site earned <strong>67 clicks</strong> and <strong>8,928 impressions</strong> — about <strong>357 impressions a day</strong>, up 11.9% from ~319. Brand query <em>core four roofing</em> held at <strong>1.07</strong>.</p>
+        <h2>Impressions up. The homepage still takes the click.</h2>
+        <p>From Sep 21 to Oct 18, Search Console shows <strong>46 clicks, up 21%</strong>, and <strong>9.41K impressions, up 36%</strong>. That is about 336 impressions a day. <em>core four roofing</em> accounted for <strong>24</strong> of the clicks, up 60%.</p>
         <table class="cards">
             <tr>
-                <td><div class="k">Impressions / day</div><div class="v">357</div><div class="d">↑ 11.9% vs ~319 prior window</div></td>
-                <td><div class="k">Brand query position</div><div class="v">1.07</div><div class="d">28% CTR</div></td>
-                <td><div class="k">Clicks this window</div><div class="v">67</div><div class="d">~2.7 / day</div></td>
-                <td><div class="k">YTD clicks</div><div class="v">302</div><div class="d">Apr 22 – Sep 21</div></td>
+                <td><div class="k">Impressions</div><div class="v">9.41K</div><div class="d">↑ 36% vs the prior 28 days</div></td>
+                <td><div class="k">Clicks</div><div class="v">46</div><div class="d">↑ 21% · about 1.6 / day</div></td>
+                <td><div class="k">Homepage clicks</div><div class="v">42</div><div class="d">38 on the main URL · 4 on www</div></td>
+                <td><div class="k">Brand query clicks</div><div class="v">24</div><div class="d">+60%</div></td>
             </tr>
         </table>
         <table class="split">
@@ -228,20 +228,23 @@
                     <div class="box">
                         <h3>Window snapshot</h3>
                         <table class="row">
-                            <tr><td>Impressions</td><td class="val">8,928</td></tr>
-                            <tr><td>CTR</td><td class="val">0.75%</td></tr>
-                            <tr><td>Mobile avg. position</td><td class="val">13.7</td></tr>
-                            <tr><td>City landings in Google</td><td class="val">69</td></tr>
-                            <tr><td>City landing impressions</td><td class="val">1,993</td></tr>
+                            <tr><td>Clicks</td><td class="val">46 · +21%</td></tr>
+                            <tr><td>Impressions</td><td class="val">9.41K · +36%</td></tr>
+                            <tr><td>Image search clicks</td><td class="val">1</td></tr>
+                            <tr><td>United States share</td><td class="val">89%</td></tr>
+                            <tr><td>Prior window clicks</td><td class="val">67 · Aug 28 – Sep 21</td></tr>
                         </table>
                     </div>
                 </td>
                 <td>
                     <div class="box">
-                        <h3>Device mix · clicks</h3>
+                        <h3>Clicks by country</h3>
                         <table class="row">
-                            <tr><td>Mobile</td><td class="val">37</td></tr>
-                            <tr><td>Desktop</td><td class="val">30</td></tr>
+                            <tr><td>United States</td><td class="val">89%</td></tr>
+                            <tr><td>Pakistan</td><td class="val">7%</td></tr>
+                            <tr><td>United Kingdom</td><td class="val">2%</td></tr>
+                            <tr><td>Philippines</td><td class="val">2%</td></tr>
+                            <tr><td>Albania</td><td class="val">&lt;1%</td></tr>
                         </table>
                     </div>
                 </td>
@@ -251,20 +254,19 @@
 
     <div class="section">
         <div class="kicker">Queries &amp; pages</div>
-        <h2>City pages are starting to rank</h2>
-        <p>Brand is locked. Local commercial landings are already in Google — League City and Humble both picked up clicks, and 69 city URLs have impression share.</p>
+        <h2>The brand query, then the homepage</h2>
+        <p>Search Console’s top list is short. <em>core four roofing</em> led with 24 clicks. The homepage took 38, and the www address took 4 more. About, commercial coatings, and contact each recorded a first click.</p>
         <table class="split">
             <tr>
                 <td>
                     <h3>Top search queries</h3>
                     <table class="data">
-                        <tr><th>Query</th><th class="num">Clicks</th><th class="num">Impr.</th><th class="num">Pos.</th></tr>
+                        <tr><th>Query</th><th class="num">Clicks</th><th class="num">Vs prior</th></tr>
                         @foreach($perf['queries'] as $query)
                             <tr>
                                 <td>{{ $query['query'] }}</td>
                                 <td class="num">{{ $query['clicks'] }}</td>
-                                <td class="num">{{ number_format($query['impressions']) }}</td>
-                                <td class="num">{{ number_format($query['position'], 1) }}</td>
+                                <td class="num">{{ $query['change'] }}</td>
                             </tr>
                         @endforeach
                     </table>
@@ -272,12 +274,12 @@
                 <td>
                     <h3>Top landing pages</h3>
                     <table class="data">
-                        <tr><th>Page</th><th class="num">Clicks</th><th class="num">Impr.</th></tr>
+                        <tr><th>Page</th><th class="num">Clicks</th><th class="num">Vs prior</th></tr>
                         @foreach($perf['pages'] as $page)
                             <tr>
                                 <td>{{ $page['page'] }}</td>
                                 <td class="num">{{ $page['clicks'] }}</td>
-                                <td class="num">{{ number_format($page['impressions']) }}</td>
+                                <td class="num">{{ $page['change'] }}</td>
                             </tr>
                         @endforeach
                     </table>
@@ -307,7 +309,7 @@
                 <td><div class="k">Residential landings</div><div class="v">{{ $perf['landings']['residential']['count'] }}</div><div class="d">Houston metro</div></td>
                 <td><div class="k">Commercial landings</div><div class="v">{{ $perf['landings']['commercial']['count'] }}</div><div class="d">Houston · Austin · DFW</div></td>
                 <td><div class="k">Texas markets</div><div class="v">3</div><div class="d">Houston · Austin · DFW</div></td>
-                <td><div class="k">Updated</div><div class="v">Sep 21</div><div class="d">2026</div></td>
+                <td><div class="k">Updated</div><div class="v">Oct 20</div><div class="d">2026</div></td>
             </tr>
         </table>
         @foreach(['residential' => 'Residential landing pages', 'commercial' => 'Commercial landing pages'] as $type => $title)

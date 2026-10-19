@@ -9,13 +9,15 @@ class PerformanceReport
 {
     public string $title = 'Performance report 2026';
 
-    public string $window = 'Aug 28 – Sep 21, 2026';
+    public string $window = 'Sep 21 – Oct 18, 2026';
 
     public string $gbpWindow = 'Aug 30 – Sep 21, 2026';
 
-    public string $ytd = 'Jan – Sep 21, 2026';
+    public string $gaWindow = 'Aug 28 – Sep 21, 2026';
 
-    public string $prepared = 'Sep 21, 2026';
+    public string $ytd = 'Search and social through Oct 18, 2026';
+
+    public string $prepared = 'Oct 20, 2026';
 
     public string $filename = 'core-four-performance-report-2026.pdf';
 
@@ -31,6 +33,7 @@ class PerformanceReport
                 'title' => $report->title,
                 'window' => $report->window,
                 'gbp_window' => $report->gbpWindow,
+                'ga_window' => $report->gaWindow,
                 'ytd' => $report->ytd,
                 'prepared' => $report->prepared,
                 'filename' => $report->filename,
@@ -52,15 +55,10 @@ class PerformanceReport
     public function queries(): array
     {
         return [
-            ['query' => 'core four roofing', 'clicks' => 27, 'impressions' => 96, 'position' => 1.07],
-            ['query' => 'core roofing', 'clicks' => 3, 'impressions' => 25, 'position' => 4.79],
-            ['query' => 'roofers close to me', 'clicks' => 2, 'impressions' => 6, 'position' => 3.00],
-            ['query' => 'roof repair tomball', 'clicks' => 3, 'impressions' => 75, 'position' => 1.00],
-            ['query' => 'commercial roofing', 'clicks' => 2, 'impressions' => 52, 'position' => 2.46],
-            ['query' => 'commercial roof repair humble tx', 'clicks' => 2, 'impressions' => 99, 'position' => 10.22],
-            ['query' => 'commercial roofing services humble tx', 'clicks' => 1, 'impressions' => 38, 'position' => 9.26],
-            ['query' => 'roof estimate tomball texas', 'clicks' => 2, 'impressions' => 37, 'position' => 1.64],
-            ['query' => 'residential roofing grapevine tx', 'clicks' => 1, 'impressions' => 63, 'position' => 1.00],
+            ['query' => 'core four roofing', 'clicks' => 24, 'change' => '+60%'],
+            ['query' => 'roofing contractors in austin texas', 'clicks' => 2, 'change' => '+100%'],
+            ['query' => 'core roofing', 'clicks' => 1, 'change' => 'New'],
+            ['query' => 'roofers in flower mound tx', 'clicks' => 1, 'change' => 'New'],
         ];
     }
 
@@ -70,15 +68,11 @@ class PerformanceReport
     public function pages(): array
     {
         return [
-            ['page' => '/', 'clicks' => 47, 'impressions' => 3268],
-            ['page' => '/commercial-roofing-in-league-city-tx/', 'clicks' => 4, 'impressions' => 54],
-            ['page' => '/commercial-roofing-in-humble-tx/', 'clicks' => 3, 'impressions' => 168],
-            ['page' => '/commercial-roofing-in-houston-tx/', 'clicks' => 3, 'impressions' => 69],
-            ['page' => '/about-core-four-roofing/', 'clicks' => 2, 'impressions' => 158],
-            ['page' => '/residential-roofing/metal-roofs/', 'clicks' => 2, 'impressions' => 128],
-            ['page' => '/commercial-roofing-in-tomball-tx/', 'clicks' => 2, 'impressions' => 46],
-            ['page' => '/service-areas/', 'clicks' => 1, 'impressions' => 190],
-            ['page' => '/residential-roofing/', 'clicks' => 1, 'impressions' => 133],
+            ['page' => '/', 'clicks' => 38, 'change' => '+23%'],
+            ['page' => 'www.corefourroofing.com/', 'clicks' => 4, 'change' => '−20%'],
+            ['page' => '/about-core-four-roofing/', 'clicks' => 1, 'change' => 'New'],
+            ['page' => '/commercial-roofing/coatings-restoration/', 'clicks' => 1, 'change' => 'New'],
+            ['page' => '/contact-core-four-roofing/', 'clicks' => 1, 'change' => 'New'],
         ];
     }
 
@@ -88,11 +82,11 @@ class PerformanceReport
     public function posts(): array
     {
         return [
-            ['posted' => 'Sep 3', 'theme' => 'Botched tile repair — making it right', 'views' => 910, 'engagement' => 15],
-            ['posted' => 'Aug 28', 'theme' => 'Culture on the jobsite', 'views' => 734, 'engagement' => 16],
-            ['posted' => 'Aug 28', 'theme' => 'Irving commercial TPO replacement', 'views' => 542, 'engagement' => 19],
-            ['posted' => 'Sep 1', 'theme' => 'Retail center — complex commercial', 'views' => 144, 'engagement' => 6],
-            ['posted' => 'Sep 18', 'theme' => 'Houston · Dallas · Austin coverage', 'views' => 130, 'engagement' => 2],
+            ['posted' => 'Oct 2', 'theme' => 'Large home, from open deck to the aerial', 'views' => 424, 'engagement' => 9],
+            ['posted' => 'Oct 9', 'theme' => 'How the roof reads from the street', 'views' => 177, 'engagement' => 5],
+            ['posted' => 'Sep 23', 'theme' => 'Telehandler on a big residential roof', 'views' => 154, 'engagement' => 2],
+            ['posted' => 'Oct 11', 'theme' => 'Dealership roof, finished white', 'views' => 128, 'engagement' => 4],
+            ['posted' => 'Sep 30', 'theme' => 'Roofing around an open business', 'views' => 112, 'engagement' => 3],
         ];
     }
 
@@ -226,24 +220,19 @@ class PerformanceReport
                 'labels' => ['Direct 295', 'Google organic 80', 'Facebook 12', 'Bing 7', 'Other 28'],
                 'data' => [295, 80, 12, 7, 28],
             ],
-            'devices' => [
-                'labels' => ['Mobile (37)', 'Desktop (30)'],
-                'data' => [37, 30],
+            'countries' => [
+                'labels' => ['United States 89%', 'Pakistan 7%', 'United Kingdom 2%', 'Philippines 2%'],
+                'data' => [89, 7, 2, 2],
             ],
             'facebook' => [
-                ['d' => 'Aug 28', 'v' => 0], ['d' => 'Aug 29', 'v' => 27], ['d' => 'Aug 30', 'v' => 13],
-                ['d' => 'Aug 31', 'v' => 10], ['d' => 'Sep 1', 'v' => 3], ['d' => 'Sep 2', 'v' => 7],
-                ['d' => 'Sep 3', 'v' => 2], ['d' => 'Sep 4', 'v' => 47], ['d' => 'Sep 5', 'v' => 4],
-                ['d' => 'Sep 6', 'v' => 2], ['d' => 'Sep 7', 'v' => 1], ['d' => 'Sep 8', 'v' => 4],
-                ['d' => 'Sep 9', 'v' => 1], ['d' => 'Sep 10', 'v' => 7], ['d' => 'Sep 11', 'v' => 0],
-                ['d' => 'Sep 12', 'v' => 6], ['d' => 'Sep 13', 'v' => 1], ['d' => 'Sep 14', 'v' => 0],
-                ['d' => 'Sep 15', 'v' => 2], ['d' => 'Sep 16', 'v' => 1], ['d' => 'Sep 17', 'v' => 6],
-                ['d' => 'Sep 18', 'v' => 0], ['d' => 'Sep 19', 'v' => 6], ['d' => 'Sep 20', 'v' => 1],
-                ['d' => 'Sep 21', 'v' => 4],
+                ['d' => 'Sep 21', 'v' => 95], ['d' => 'Sep 23', 'v' => 154], ['d' => 'Sep 25', 'v' => 112],
+                ['d' => 'Sep 28', 'v' => 104], ['d' => 'Sep 30', 'v' => 112], ['d' => 'Oct 2', 'v' => 424],
+                ['d' => 'Oct 8', 'v' => 72], ['d' => 'Oct 9', 'v' => 177], ['d' => 'Oct 10', 'v' => 85],
+                ['d' => 'Oct 11', 'v' => 128], ['d' => 'Oct 14', 'v' => 107], ['d' => 'Oct 17', 'v' => 38],
             ],
             'instagram' => [
-                'labels' => ['Aug 28', 'Aug 28', 'Aug 31', 'Sep 1', 'Sep 3', 'Sep 5', 'Sep 7', 'Sep 9', 'Sep 11', 'Sep 14', 'Sep 16', 'Sep 18', 'Sep 21'],
-                'data' => [86, 136, 53, 99, 211, 177, 21, 39, 43, 25, 19, 30, 8],
+                'labels' => ['Sep 21', 'Sep 23', 'Sep 25', 'Sep 28', 'Sep 30', 'Oct 2', 'Oct 8', 'Oct 9', 'Oct 10', 'Oct 11', 'Oct 14', 'Oct 17'],
+                'data' => [26, 30, 28, 19, 27, 85, 16, 30, 27, 52, 17, 10],
             ],
         ];
     }
