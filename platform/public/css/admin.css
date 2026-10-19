@@ -1101,6 +1101,28 @@ input.lead-pick, input.lead-check-all { width: 1.15rem; height: 1.15rem; accent-
   .perf-gains { grid-template-columns: 1fr; }
 }
 
+.ads-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin: 0 0 1rem;
+}
+.ads-options a {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid var(--divider);
+  background: var(--white);
+  color: var(--forest-green);
+  font-weight: 700;
+  text-decoration: none;
+}
+.ads-options a.is-on {
+  background: var(--forest-green);
+  color: #fff;
+  border-color: var(--forest-green);
+}
 .ads-campaigns {
   display: grid;
   grid-template-columns: 1fr 1fr;

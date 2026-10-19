@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Support\AdsPlan;
+use App\Support\ChatGptAdsPlan;
 use Barryvdh\DomPDF\Facade\Pdf;
 use Illuminate\Http\Response;
 use Illuminate\View\View;
@@ -23,6 +24,27 @@ class AdsController extends Controller
         $ads = AdsPlan::make();
 
         return Pdf::loadView('admin.ads.pdf', compact('ads'))
+            ->setPaper('letter')
+            ->setOptions([
+                'defaultFont' => 'DejaVu Sans',
+                'isRemoteEnabled' => false,
+                'isHtml5ParserEnabled' => true,
+            ])
+            ->download($ads['meta']['filename']);
+    }
+
+    public function chatgpt(): View
+    {
+        $ads = ChatGptAdsPlan::make();
+
+        return view('admin.ads.chatgpt', compact('ads'));
+    }
+
+    public function chatgptPdf(): Response|StreamedResponse
+    {
+        $ads = ChatGptAdsPlan::make();
+
+        return Pdf::loadView('admin.ads.chatgpt-pdf', compact('ads'))
             ->setPaper('letter')
             ->setOptions([
                 'defaultFont' => 'DejaVu Sans',

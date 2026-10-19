@@ -38,7 +38,7 @@
         <a class="nav-link {{ request()->routeIs('admin.reviews.*') ? 'active' : '' }}" href="{{ route('admin.reviews.index') }}"><i class="fas fa-shield-heart"></i> Review Shield</a>
         @if(auth()->user()->canManageReports())
             <div class="side-label">Growth</div>
-            <a class="nav-link {{ request()->routeIs('admin.ads') ? 'active' : '' }}" href="{{ route('admin.ads') }}"><i class="fas fa-bullhorn"></i> Ads</a>
+            <a class="nav-link {{ request()->routeIs('admin.ads', 'admin.ads.chatgpt') ? 'active' : '' }}" href="{{ route('admin.ads') }}"><i class="fas fa-bullhorn"></i> Ads</a>
             <a class="nav-link {{ request()->routeIs('admin.reports.*') ? 'active' : '' }}" href="{{ route('admin.reports.index') }}"><i class="fas fa-file-lines"></i> Reports</a>
             <a class="nav-link {{ request()->routeIs('admin.email.*') ? 'active' : '' }}" href="{{ route('admin.email.index') }}"><i class="fas fa-envelope"></i> Email</a>
             <a class="nav-link {{ request()->routeIs('admin.guides.*') ? 'active' : '' }}" href="{{ route('admin.guides.index') }}"><i class="fas fa-book"></i> Guides</a>

@@ -196,6 +196,8 @@ Route::prefix('admin')->name('admin.')->middleware(['auth', 'role:admin,agency,o
     Route::middleware('role:admin,agency,owner')->group(function () {
         Route::get('/ads', [AdsController::class, 'index'])->name('ads');
         Route::get('/ads/pdf', [AdsController::class, 'pdf'])->name('ads.pdf');
+        Route::get('/ads/chatgpt', [AdsController::class, 'chatgpt'])->name('ads.chatgpt');
+        Route::get('/ads/chatgpt/pdf', [AdsController::class, 'chatgptPdf'])->name('ads.chatgpt.pdf');
 
         Route::get('/reports', [ReportController::class, 'index'])->name('reports.index');
         Route::get('/reports/{slug}/pdf', [ReportController::class, 'pdf'])->name('reports.pdf');

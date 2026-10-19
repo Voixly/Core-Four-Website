@@ -7,6 +7,7 @@
 
 @section('content')
 <div class="perf ads-plan">
+    @include('admin.ads.partials.options')
     <div class="perf-hero">
         <p class="perf-kicker">Prepared {{ $ads['meta']['prepared'] }} · Residential only</p>
         <h2>Four homeowner campaigns. No cheap shingle auction.</h2>
