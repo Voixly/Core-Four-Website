@@ -11,7 +11,7 @@ class PerformanceReport
 
     public string $window = 'Sep 21 – Oct 18, 2026';
 
-    public string $gbpWindow = 'Aug 30 – Sep 21, 2026';
+    public string $gbpWindow = 'May – Oct 2026';
 
     public string $gaWindow = 'Sep 21 – Oct 18, 2026';
 
@@ -207,14 +207,14 @@ class PerformanceReport
                 'previous' => [14, 18, 16, 22, 15, 28, 18, 16, 20, 26, 14, 9],
             ],
             'gbp' => [
-                'labels' => ['Aug 30', 'Aug 31', 'Sep 2', 'Sep 4', 'Sep 6', 'Sep 8', 'Sep 10', 'Sep 12', 'Sep 14', 'Sep 16', 'Sep 18', 'Sep 21'],
-                'current' => [6, 7, 6, 7, 8, 8, 9, 9, 10, 10, 10, 11],
-                'previous' => [5, 6, 5, 6, 7, 7, 8, 8, 9, 9, 9, 10],
-                'views' => [
-                    'labels' => ['Search desktop 93', 'Search mobile 68', 'Maps desktop 77', 'Maps mobile 31'],
-                    'data' => [93, 68, 77, 31],
+                'actions' => [
+                    'labels' => ['Directions', 'Website', 'Calls', 'Chat'],
+                    'data' => [333, 127, 49, 5],
                 ],
-                'calls' => [0, 1, 2, 0, 1, 3, 0],
+                'views' => [
+                    'labels' => ['Search desktop 589', 'Maps desktop 522', 'Search mobile 283', 'Maps mobile 280'],
+                    'data' => [589, 522, 283, 280],
+                ],
             ],
             'sources' => [
                 'labels' => ['t.co 7,994', 'Direct 916', 'Google organic 67', 'Facebook 13', 'Bing 6', 'Other 65'],

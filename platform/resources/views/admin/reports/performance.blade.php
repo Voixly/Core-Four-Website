@@ -46,9 +46,9 @@
             </article>
             <article class="perf-gain">
                 <span>GBP profile views</span>
-                <b data-count="270">270</b>
-                <em>+10.4% vs prior period</em>
-                <small>Aug 30 – Sep 21 · last Business Profile export</small>
+                <b data-count="1674">1,674</b>
+                <em>333 asked for directions</em>
+                <small>May – Oct · about 1 in 3 viewers acted</small>
             </article>
             <article class="perf-gain">
                 <span>Brand query clicks</span>
@@ -68,7 +68,7 @@
             </article>
             <article>
                 <h3>Local presence</h3>
-                <p>The Google listing figures are still the Aug 30 – Sep 21 export: <strong>270 views</strong>, <strong>63 direction requests</strong>, and a <strong>5.0★</strong> average. No newer Business Profile file came in with this update.</p>
+                <p>From May through October the Tomball listing was viewed <strong>1,674 times</strong>. <strong>514 people acted</strong>, and <strong>333 of those actions were direction requests</strong> — someone asking Google how to get to the shop.</p>
             </article>
             <article>
                 <h3>Brand ownership</h3>
@@ -79,61 +79,67 @@
 
     <section class="perf-section" id="gbp">
         <p class="perf-kicker">Google Business Profile</p>
-        <h2>The listing, through September 21</h2>
-        <p class="perf-lead">No new Business Profile export arrived with this update. From Aug 30 to Sep 21 the Tomball profile earned <strong>270 views — up 10.4%</strong> — and <strong>100 interactions, up 13.5%</strong>. Search discovery was the engine: Google Search views rose <strong>9.7%</strong>, and mobile search kept the lead.</p>
+        <h2>People who find the listing try to get to the shop</h2>
+        <p class="perf-lead">From May through October the Tomball profile was viewed <strong>1,674 times</strong>. <strong>514 people did something with it — about 1 in 3.</strong> Direction requests were <strong>333</strong>, about 2 in 3 of every action. Another <strong>49 called</strong> straight from the listing and <strong>127 clicked through</strong> to the website.</p>
         <div class="perf-compare">
-            <div><span>Profile views</span><b>270</b><em>↑ 10.4% vs prior period</em></div>
-            <div><span>Interactions</span><b>100</b><em>↑ 13.5% vs prior (88)</em></div>
-            <div><span>Average rating</span><b>5.0★</b><em>Perfect score this window</em></div>
+            <div><span>Profile views</span><b>1,674</b><em>May – Oct 2026</em></div>
+            <div><span>People who acted</span><b>514</b><em>About 1 in 3 viewers</em></div>
+            <div><span>Direction requests</span><b>333</b><em>About 2 in 3 of all actions</em></div>
         </div>
         <div class="perf-split">
             <div class="panel">
-                <h3>Daily interactions</h3>
-                <p class="perf-sub">{{ $perf['meta']['gbp_window'] }} · trending up vs previous period · Source: GBP Insights</p>
+                <h3>What people did</h3>
+                <p class="perf-sub">{{ $perf['meta']['gbp_window'] }} · 514 actions · Source: Business Profile</p>
                 <div class="perf-chart tall"><canvas id="gbpChart"></canvas></div>
             </div>
             <div class="panel">
                 <h3>Action breakdown</h3>
-                <p class="perf-sub">How customers used the listing this window</p>
+                <p class="perf-sub">Directions first, then the website, then the phone</p>
                 <div class="perf-metrics">
-                    <div><span>Direction requests</span><strong>63 <small>navigating to you</small></strong></div>
-                    <div><span>Website visits from GBP</span><strong>30</strong></div>
-                    <div><span>Phone calls</span><strong>7</strong></div>
-                    <div><span>Messaging</span><strong>0</strong></div>
-                    <div><span>YTD interactions</span><strong>522 <small>422 + 100</small></strong></div>
+                    <div><span>Direction requests</span><strong>333 <small>65% of actions</small></strong></div>
+                    <div><span>Website clicks</span><strong>127</strong></div>
+                    <div><span>Phone calls</span><strong>49</strong></div>
+                    <div><span>Chat clicks</span><strong>5</strong></div>
+                    <div><span>Actions per 100 views</span><strong>31</strong></div>
                 </div>
             </div>
         </div>
         <div class="perf-split">
             <div class="panel">
                 <h3>Where views came from</h3>
-                <p class="perf-sub">270 views · Search vs Maps · mobile vs desktop</p>
+                <p class="perf-sub">1,674 views · Search 872 · Maps 802</p>
                 <div class="perf-chart"><canvas id="gbpViewsMixChart"></canvas></div>
             </div>
             <div class="panel">
                 <h3>Discovery mix</h3>
-                <p class="perf-sub">Search is carrying growth this window</p>
+                <p class="perf-sub">Maps is almost half of how people find the shop</p>
                 <div class="perf-metrics">
-                    <div><span>Search · Mobile</span><strong>68 <small class="up">↑ 14.8%</small></strong></div>
-                    <div><span>Search · Desktop</span><strong>93 <small class="up">↑ 8.1%</small></strong></div>
-                    <div><span>Maps · Desktop</span><strong>77 <small class="up">↑ 15.2%</small></strong></div>
-                    <div><span>Maps · Mobile</span><strong>31 <small class="up">↑ 6.9%</small></strong></div>
-                    <div><span>Google Search views total</span><strong>161 <small class="up">↑ 9.7%</small></strong></div>
+                    <div><span>Search · Desktop</span><strong>589 <small>35%</small></strong></div>
+                    <div><span>Maps · Desktop</span><strong>522 <small>31%</small></strong></div>
+                    <div><span>Search · Mobile</span><strong>283 <small>17%</small></strong></div>
+                    <div><span>Maps · Mobile</span><strong>280 <small>17%</small></strong></div>
+                    <div><span>Maps, desktop and mobile</span><strong>802 <small>48% of views</small></strong></div>
                 </div>
             </div>
         </div>
         <div class="perf-split">
             <div class="panel">
-                <h3>Phone calls by weekday</h3>
-                <p class="perf-sub">7 calls · Tuesday and Friday led · Source: GBP Insights</p>
-                <div class="perf-chart"><canvas id="gbpCallsChart"></canvas></div>
+                <h3>Searches that showed the listing</h3>
+                <p class="perf-sub">Google’s counted terms · May – Oct</p>
+                <div class="perf-metrics">
+                    <div><span>core four roofing</span><strong>25 <small>the brand</small></strong></div>
+                    <div><span>roofers cypress tx</span><strong>24 <small>a city search, not the name</small></strong></div>
+                    <div><span>Shop address in Tomball</span><strong>&lt; 15</strong></div>
+                    <div><span>best roofing company 77070</span><strong>&lt; 15</strong></div>
+                    <div><span>best roofing company 77373</span><strong>&lt; 15</strong></div>
+                </div>
             </div>
             <div class="panel">
                 <h3>What this means</h3>
-                <p class="perf-sub">High-intent local demand, not just profile glances</p>
+                <p class="perf-sub">The listing is doing the job of a storefront</p>
                 <div class="perf-callout" style="margin-top:0.25rem">
                     <strong>Client takeaway:</strong>
-                    Most actions are direction requests (63 of 100). People aren’t just viewing the listing — they’re routing to the shop. Search mobile up 14.8% is the awareness unlock to keep feeding with photos, posts, and review replies.
+                    About 1 in 3 people who saw the profile took an action, and most of those actions were direction requests. “roofers cypress tx” showed the listing 24 times — one shy of the brand search. People are finding Core Four when they look for a roofer, not only when they already know the name. October is still open, so this is the season so far, not a finished month.
                 </div>
             </div>
         </div>
@@ -370,7 +376,7 @@
         <div class="perf-stories">
             <article>
                 <h3>Double down on Maps</h3>
-                <p>Search mobile views on the listing are up 14.8%. Keep photos, posts, and review replies coming so that discovery turns into more direction requests and calls.</p>
+                <p>Maps already accounts for 802 of 1,674 listing views, and direction requests are the main action at 333 since May. Photos, posts, and review replies are what keep that path full.</p>
             </article>
             <article>
                 <h3>Activate city landings</h3>
@@ -501,20 +507,19 @@ function lineOpts(yTitle, reverse = false) {
 }
 
 new Chart(document.getElementById('gbpChart'), {
-  type: 'line',
+  type: 'bar',
   data: {
-    labels: data.gbp.labels,
+    labels: data.gbp.actions.labels,
     datasets: [
-      { label: 'This period', data: data.gbp.current, borderColor: brand, backgroundColor: 'rgba(191,232,102,0.22)', fill: true, tension: 0.35, pointRadius: 3, borderWidth: 2.5 },
-      { label: 'Previous period', data: data.gbp.previous, borderColor: '#8aa890', borderDash: [6, 4], fill: false, tension: 0.35, pointRadius: 0, borderWidth: 2 }
+      { label: 'Actions', data: data.gbp.actions.data, backgroundColor: [brand, brandMid, lime, '#45664f'], borderRadius: 6, maxBarThickness: 72 }
     ]
   },
   options: {
-    responsive: true, maintainAspectRatio: false, interaction: { mode: 'index', intersect: false },
-    plugins: { legend: { position: 'bottom', labels: { boxWidth: 12, usePointStyle: true } } },
+    responsive: true, maintainAspectRatio: false,
+    plugins: { legend: { display: false } },
     scales: {
       x: { grid: { display: false } },
-      y: { title: { display: true, text: 'Interactions', color: muted, font: { size: 11, weight: '600' } }, grid: { color: 'rgba(219,215,207,0.7)' }, ticks: { precision: 0 } }
+      y: { title: { display: true, text: 'Actions', color: muted, font: { size: 11, weight: '600' } }, grid: { color: 'rgba(219,215,207,0.7)' }, ticks: { precision: 0 } }
     }
   }
 });
@@ -523,12 +528,6 @@ new Chart(document.getElementById('gbpViewsMixChart'), {
   type: 'doughnut',
   data: { labels: data.gbp.views.labels, datasets: [{ data: data.gbp.views.data, backgroundColor: [brand, brandMid, lime, '#45664f'], borderWidth: 0 }] },
   options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'bottom', labels: { boxWidth: 10, usePointStyle: true, font: { size: 11 } } } }, cutout: '58%' }
-});
-
-new Chart(document.getElementById('gbpCallsChart'), {
-  type: 'bar',
-  data: { labels: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'], datasets: [{ label: 'Phone calls', data: data.gbp.calls, backgroundColor: brand, borderRadius: 2 }] },
-  options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } }, scales: { x: { grid: { display: false } }, y: { title: { display: true, text: 'Calls', color: muted, font: { size: 11, weight: '600' } }, ticks: { stepSize: 1, precision: 0 }, grid: { color: 'rgba(219,215,207,0.7)' } } } }
 });
 
 new Chart(document.getElementById('gaChart'), {

@@ -56,7 +56,7 @@
             <tr>
                 <td><div class="k">Facebook post views</div><div class="v">1,608</div><div class="d">12 posts · Sep 21 – Oct 18</div></td>
                 <td><div class="k">Website active users</div><div class="v">8,741</div><div class="d">88% of sessions from t.co</div></td>
-                <td><div class="k">GBP profile views</div><div class="v">270</div><div class="d">Aug 30 – Sep 21 · last export</div></td>
+                <td><div class="k">GBP profile views</div><div class="v">1,674</div><div class="d">333 direction requests · May – Oct</div></td>
                 <td><div class="k">Brand query clicks</div><div class="v">24</div><div class="d">+60% · last 28 days</div></td>
             </tr>
         </table>
@@ -64,7 +64,7 @@
         <table class="split">
             <tr>
                 <td><div class="box"><h3>Social discovery</h3><p><strong>1,608</strong> Facebook views and <strong>58 clicks</strong> across 12 posts. Instagram added <strong>367</strong> views.</p></div></td>
-                <td><div class="box"><h3>Local presence</h3><p>The listing export is still Aug 30 – Sep 21: <strong>270 views</strong>, <strong>63 direction requests</strong>, and a <strong>5.0</strong> average.</p></div></td>
+                <td><div class="box"><h3>Local presence</h3><p>From May through October the listing was viewed <strong>1,674 times</strong>. <strong>514 people acted</strong>, and <strong>333</strong> of those actions were direction requests.</p></div></td>
             </tr>
         </table>
         <div class="box" style="margin-top:8px"><h3>Brand ownership</h3><p><em>core four roofing</em> led with <strong>24 clicks, up 60%</strong>. Position was last measured at <strong>1.07</strong> on Sep 21. This pull did not include a new position.</p></div>
@@ -72,14 +72,14 @@
 
     <div class="section">
         <div class="kicker">Google Business Profile</div>
-        <h2>The listing, through September 21</h2>
-        <p>No new Business Profile export arrived with this update. From Aug 30 to Sep 21 the Tomball profile earned <strong>270 views — up 10.4%</strong> — and <strong>100 interactions, up 13.5%</strong>. Google Search views rose <strong>9.7%</strong>, and mobile search kept the lead.</p>
+        <h2>People who find the listing try to get to the shop</h2>
+        <p>From May through October the Tomball profile was viewed <strong>1,674 times</strong>. <strong>514 people did something with it — about 1 in 3.</strong> Direction requests were <strong>333</strong>, about 2 in 3 of every action. Another <strong>49 called</strong> from the listing and <strong>127 clicked through</strong> to the website.</p>
         <table class="cards">
             <tr>
-                <td><div class="k">Profile views</div><div class="v">270</div><div class="d">Up 10.4% vs prior</div></td>
-                <td><div class="k">Interactions</div><div class="v">100</div><div class="d">Up 13.5% vs prior (88)</div></td>
-                <td><div class="k">Average rating</div><div class="v">5.0</div><div class="d">Perfect score this window</div></td>
-                <td><div class="k">Direction requests</div><div class="v">63</div><div class="d">of 100 total actions</div></td>
+                <td><div class="k">Profile views</div><div class="v">1,674</div><div class="d">May – Oct 2026</div></td>
+                <td><div class="k">People who acted</div><div class="v">514</div><div class="d">About 1 in 3 viewers</div></td>
+                <td><div class="k">Direction requests</div><div class="v">333</div><div class="d">About 2 in 3 of actions</div></td>
+                <td><div class="k">Phone calls</div><div class="v">49</div><div class="d">From the listing</div></td>
             </tr>
         </table>
         <table class="split">
@@ -88,29 +88,33 @@
                     <div class="box">
                         <h3>Action breakdown</h3>
                         <table class="row">
-                            <tr><td>Direction requests</td><td class="val">63</td></tr>
-                            <tr><td>Website visits from GBP</td><td class="val">30</td></tr>
-                            <tr><td>Phone calls</td><td class="val">7</td></tr>
-                            <tr><td>Messaging</td><td class="val">0</td></tr>
-                            <tr><td>YTD interactions</td><td class="val">522</td></tr>
+                            <tr><td>Direction requests</td><td class="val">333 · 65%</td></tr>
+                            <tr><td>Website clicks</td><td class="val">127</td></tr>
+                            <tr><td>Phone calls</td><td class="val">49</td></tr>
+                            <tr><td>Chat clicks</td><td class="val">5</td></tr>
+                            <tr><td>Actions per 100 views</td><td class="val">31</td></tr>
                         </table>
                     </div>
                 </td>
                 <td>
                     <div class="box">
-                        <h3>Discovery mix</h3>
+                        <h3>Discovery mix · 1,674 views</h3>
                         <table class="row">
-                            <tr><td>Search · Mobile</td><td class="val">68 · +14.8%</td></tr>
-                            <tr><td>Search · Desktop</td><td class="val">93 · +8.1%</td></tr>
-                            <tr><td>Maps · Desktop</td><td class="val">77 · +15.2%</td></tr>
-                            <tr><td>Maps · Mobile</td><td class="val">31 · +6.9%</td></tr>
-                            <tr><td>Google Search views</td><td class="val">161 · +9.7%</td></tr>
+                            <tr><td>Search · Desktop</td><td class="val">589 · 35%</td></tr>
+                            <tr><td>Maps · Desktop</td><td class="val">522 · 31%</td></tr>
+                            <tr><td>Search · Mobile</td><td class="val">283 · 17%</td></tr>
+                            <tr><td>Maps · Mobile</td><td class="val">280 · 17%</td></tr>
+                            <tr><td>Maps, both devices</td><td class="val">802 · 48%</td></tr>
                         </table>
                     </div>
                 </td>
             </tr>
         </table>
-        <div class="callout"><strong>Client takeaway:</strong> Most actions are direction requests (63 of 100). People aren’t just viewing the listing — they’re routing to the shop. Phone calls clustered on Tuesday and Friday.</div>
+        <div class="box" style="margin-top:8px">
+            <h3>Searches that showed the listing</h3>
+            <p><em>core four roofing</em> 25 · <em>roofers cypress tx</em> 24. Three more stayed under 15: the Tomball shop address, best roofing company 77070, and best roofing company 77373.</p>
+        </div>
+        <div class="callout"><strong>Client takeaway:</strong> About 1 in 3 people who saw the profile took an action, and most of those actions were direction requests. “roofers cypress tx” showed the listing 24 times — one shy of the brand search. October is still open, so this is the season so far.</div>
     </div>
 
     <div class="section page-break">
@@ -294,7 +298,7 @@
         <h2>Keep the momentum</h2>
         <table class="split">
             <tr>
-                <td><div class="box"><h3>Double down on Maps</h3><p>Search mobile views are up 14.8%. Keep photos, posts, and review replies coming so discovery turns into more direction requests and calls.</p></div></td>
+                <td><div class="box"><h3>Double down on Maps</h3><p>Maps already accounts for 802 of 1,674 listing views, and direction requests are the main action at 333 since May. Photos, posts, and review replies keep that path full.</p></div></td>
                 <td><div class="box"><h3>Activate city landings</h3><p>71 residential &amp; commercial city pages are live. Next: internal links, GBP area posts, and local content so each market starts ranking.</p></div></td>
             </tr>
         </table>
