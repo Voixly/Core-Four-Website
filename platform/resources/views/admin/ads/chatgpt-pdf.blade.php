@@ -16,7 +16,10 @@
         .cover h1 { color: #fff; }
         .cover p { color: #d7e4d4; margin: 0; }
         .meta { color: #bfe866; font-size: 10px; margin-bottom: 10px; }
-        .section { margin: 0 0 16px; }
+        .section { margin: 0 0 12px; }
+        h2, h3, .kicker { page-break-after: avoid; }
+        .box, .callout, .cards { page-break-inside: avoid; }
+        p, li, td, h3 { word-wrap: break-word; }
         .cards { width: 100%; border-collapse: collapse; margin: 8px 0 10px; }
         .cards td { width: 25%; background: #f7f6f2; border: 1px solid #dbd7cf; padding: 8px 9px; vertical-align: top; }
         .cards .k { font-size: 8px; text-transform: uppercase; letter-spacing: 0.06em; color: #3d6b4a; }
@@ -24,9 +27,7 @@
         .cards .d { font-size: 9px; color: #144b24; font-weight: 700; }
         .callout { background: #0f2418; color: #fff; padding: 10px 12px; margin: 8px 0 10px; border-left: 4px solid #bfe866; }
         .box { border: 1px solid #dbd7cf; padding: 8px 10px; background: #fff; margin-bottom: 8px; }
-        .split { width: 100%; border-collapse: collapse; }
-        .split > td { width: 50%; vertical-align: top; padding: 0 8px 0 0; }
-        .split > td + td { padding: 0 0 0 8px; }
+        .url { word-break: break-all; }
         .chip { display: inline-block; padding: 2px 7px; margin: 0 3px 4px 0; border: 1px solid #dbd7cf; background: #f3f0e9; font-size: 9px; }
         .foot { margin-top: 12px; padding-top: 8px; border-top: 1px solid #dbd7cf; font-size: 8px; color: #3d6b4a; }
         ul { margin: 0 0 8px 16px; color: #45664f; }
@@ -58,27 +59,21 @@
         <div class="kicker">Setup</div>
         <h2>Conversions on Lead created</h2>
         <p>Objective Conversions. Billing is valid clicks (oCPC). Max bid $4, inside OpenAI’s $3–$5 starting range. The pixel on the site already records lead_created when an inspection request is saved. If that event is not selectable yet, wait. Changing the objective later means a new campaign.</p>
-        <table class="split">
-            <tr>
-                @foreach($ads['groups'] as $group)
-                    <td>
-                        <div class="box">
-                            <h3>{{ $group['name'] }}</h3>
-                            <p>{{ $group['job'] }}</p>
-                            <p><strong>{{ $group['landing'] }}</strong><br>{{ $group['utm'] }}</p>
-                            <ul>
-                                @foreach($group['hints'] as $hint)
-                                    <li>{{ $hint }}</li>
-                                @endforeach
-                            </ul>
-                            @foreach($group['ads'] as $ad)
-                                <p class="ad"><strong>{{ $ad['title'] }}</strong><br>{{ $ad['copy'] }}</p>
-                            @endforeach
-                        </div>
-                    </td>
+        @foreach($ads['groups'] as $group)
+            <div class="box">
+                <h3>{{ $group['name'] }}</h3>
+                <p>{{ $group['job'] }}</p>
+                <p><strong>{{ $group['landing'] }}</strong><br><span class="url">{{ $group['utm'] }}</span></p>
+                <ul>
+                    @foreach($group['hints'] as $hint)
+                        <li>{{ $hint }}</li>
+                    @endforeach
+                </ul>
+                @foreach($group['ads'] as $ad)
+                    <p class="ad"><strong>{{ $ad['title'] }}</strong><br>{{ $ad['copy'] }}</p>
                 @endforeach
-            </tr>
-        </table>
+            </div>
+        @endforeach
     </div>
 
     <div class="section">

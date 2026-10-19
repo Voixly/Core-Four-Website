@@ -16,7 +16,10 @@
         .cover h1 { color: #fff; }
         .cover p { color: #d7e4d4; margin: 0; }
         .meta { color: #bfe866; font-size: 10px; margin-bottom: 10px; }
-        .section { margin: 0 0 16px; page-break-inside: avoid; }
+        .section { margin: 0 0 12px; }
+        h2, h3, .kicker { page-break-after: avoid; }
+        .box, .callout, .cards, table.data { page-break-inside: avoid; }
+        p, li, td { word-wrap: break-word; }
         .cards { width: 100%; border-collapse: collapse; margin: 8px 0 10px; }
         .cards td { width: 25%; background: #f7f6f2; border: 1px solid #dbd7cf; padding: 8px 9px; vertical-align: top; }
         .cards .k { font-size: 8px; text-transform: uppercase; letter-spacing: 0.06em; color: #3d6b4a; }
@@ -32,7 +35,6 @@
         .split > td + td { padding: 0 0 0 8px; }
         .chip { display: inline-block; padding: 2px 7px; margin: 0 3px 4px 0; border: 1px solid #dbd7cf; background: #f3f0e9; font-size: 9px; }
         .foot { margin-top: 12px; padding-top: 8px; border-top: 1px solid #dbd7cf; font-size: 8px; color: #3d6b4a; }
-        .page-break { page-break-before: always; }
         ul { margin: 0 0 8px 16px; color: #45664f; }
         li { margin-bottom: 3px; }
     </style>
@@ -60,7 +62,7 @@
         <div class="callout"><strong>Why not “roofers near me”:</strong> That auction is cheap-shingle lead-gen. These four materials raise qualification and ticket. Click volume is lower on purpose.</div>
     </div>
 
-    <div class="section page-break">
+    <div class="section">
         <div class="kicker">Budgets</div>
         <h2>Modeled $2k / $5k / $10k</h2>
         <p>Conservative month-3+ run rate. CPC ~$18 · 7.5% click to lead · 80% qualified · 20% close · $22k average job.</p>
@@ -68,7 +70,7 @@
             <tr>
                 @foreach($ads['tiers'] as $tier)
                     <td>
-                        <div class="k">{{ $tier['label'] }}{{ !empty($tier['featured']) ? ' · recommended' : '' }}</div>
+                        <div class="k">{{ $tier['label'] }}</div>
                         <div class="v">{{ $tier['amount'] }}</div>
                         <div class="d">{{ $tier['leads'] }} leads/mo · {{ $tier['jobs_year'] }} jobs/yr</div>
                         <p style="margin-top:6px;font-size:9px">{{ $tier['on'] }}</p>
