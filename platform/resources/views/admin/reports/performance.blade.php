@@ -20,6 +20,7 @@
         <a href="#facebook">Social</a>
         <a href="#search">Search</a>
         <a href="#keywords">Keywords</a>
+        <a href="#press">Press</a>
         <a href="#outlook">Outlook</a>
         <a href="#landings">Landings</a>
         <a href="#listings">Listings</a>
@@ -366,6 +367,25 @@
                     @endforeach
                 </table>
             </div>
+        </div>
+    </section>
+
+    <section class="perf-section" id="press">
+        <p class="perf-kicker">Press</p>
+        <h2>Seven articles this month name Core Four</h2>
+        <p class="perf-lead">Two ran in the Texas Gazette on Oct 19. Five ran in Dock Line Magazine between Oct 2 and Oct 13. The Gazette labels its pieces as partner articles. Each link opens the story.</p>
+        <div class="panel">
+            <table>
+                <tr><th>Date</th><th>Publication</th><th>Article</th><th></th></tr>
+                @foreach($perf['press'] as $story)
+                    <tr>
+                        <td>{{ $story['date'] }}</td>
+                        <td>{{ $story['publication'] }}</td>
+                        <td>{{ $story['title'] }}</td>
+                        <td><a href="{{ $story['url'] }}" target="_blank" rel="noopener">Read</a></td>
+                    </tr>
+                @endforeach
+            </table>
         </div>
     </section>
 

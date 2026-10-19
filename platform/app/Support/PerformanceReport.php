@@ -45,6 +45,7 @@ class PerformanceReport
             'posts' => $report->posts(),
             'landings' => $report->landings(),
             'listings' => $report->listings(),
+            'press' => $report->press(),
             'charts' => $report->charts(),
         ];
     }
@@ -73,6 +74,59 @@ class PerformanceReport
             ['page' => '/about-core-four-roofing/', 'clicks' => 1, 'change' => 'New'],
             ['page' => '/commercial-roofing/coatings-restoration/', 'clicks' => 1, 'change' => 'New'],
             ['page' => '/contact-core-four-roofing/', 'clicks' => 1, 'change' => 'New'],
+        ];
+    }
+
+    /**
+     * Articles that name Core Four, checked on the publications’ sites Oct 19, 2026.
+     *
+     * @return list<array{date: string, publication: string, title: string, url: string}>
+     */
+    public function press(): array
+    {
+        return [
+            [
+                'date' => 'Oct 19, 2026',
+                'publication' => 'Texas Gazette',
+                'title' => 'Commercial Roofing in Houston: TPO, Metal or a Roof Coating?',
+                'url' => 'https://txgazette.com/articles/commercial-roofing-in-houston-tpo-metal-or-a-roof-coating',
+            ],
+            [
+                'date' => 'Oct 19, 2026',
+                'publication' => 'Texas Gazette',
+                'title' => 'Roof Replacement in Tomball, TX: How to Tell Your Roof Is Finished',
+                'url' => 'https://txgazette.com/articles/roof-replacement-in-tomball-tx-how-to-tell-your-roof-is-finished',
+            ],
+            [
+                'date' => 'Oct 13, 2026',
+                'publication' => 'Dock Line Magazine',
+                'title' => 'Four Questions Before Anyone Touches the Roof on a North Houston House',
+                'url' => 'https://docklinemagazine.com/business/four-questions-residential-roof-tomball-woodlands-conroe',
+            ],
+            [
+                'date' => 'Oct 10, 2026',
+                'publication' => 'Dock Line Magazine',
+                'title' => 'Repair or replace: shingles, metal, and stone-coated steel on Houston-area houses',
+                'url' => 'https://docklinemagazine.com/business/repair-or-replace-houston-roof-shingles-metal-steel',
+            ],
+            [
+                'date' => 'Oct 9, 2026',
+                'publication' => 'Dock Line Magazine',
+                'title' => 'When a Houston commercial roof is leaking, coat it or replace it',
+                'url' => 'https://docklinemagazine.com/business/houston-commercial-roof-leak-coat-or-replace',
+            ],
+            [
+                'date' => 'Oct 7, 2026',
+                'publication' => 'Dock Line Magazine',
+                'title' => 'What to do in the first two days after hail hits a north Houston roof',
+                'url' => 'https://docklinemagazine.com/business/hail-damage-roof-tomball-woodlands-conroe',
+            ],
+            [
+                'date' => 'Oct 2, 2026',
+                'publication' => 'Dock Line Magazine',
+                'title' => 'After Thursday night’s Houston storms, how to check a roof for leaks',
+                'url' => 'https://docklinemagazine.com/community/houston-storm-roof-check-katy-cypress-woodlands',
+            ],
         ];
     }
 

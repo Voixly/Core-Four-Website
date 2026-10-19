@@ -294,6 +294,23 @@
     </div>
 
     <div class="section">
+        <div class="kicker">Press</div>
+        <h2>Seven articles this month name Core Four</h2>
+        <p>Two ran in the Texas Gazette on Oct 19. Five ran in Dock Line Magazine between Oct 2 and Oct 13. The Gazette labels its pieces as partner articles.</p>
+        <table class="data">
+            <tr><th>Date</th><th>Publication</th><th>Article</th><th></th></tr>
+            @foreach($perf['press'] as $story)
+                <tr>
+                    <td>{{ $story['date'] }}</td>
+                    <td>{{ $story['publication'] }}</td>
+                    <td>{{ $story['title'] }}</td>
+                    <td><a href="{{ $story['url'] }}">Read</a></td>
+                </tr>
+            @endforeach
+        </table>
+    </div>
+
+    <div class="section">
         <div class="kicker">Forward look</div>
         <h2>Keep the momentum</h2>
         <table class="split">
