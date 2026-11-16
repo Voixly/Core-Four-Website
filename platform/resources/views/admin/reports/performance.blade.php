@@ -41,9 +41,9 @@
             </article>
             <article class="perf-gain">
                 <span>Website visitors gained</span>
-                <b data-count="8741">8,741</b>
-                <em>7,815 first visits from t.co</em>
-                <small>Active users · Sep 21 – Oct 18</small>
+                <b data-count="84846">84,846</b>
+                <em>84,080 first visits from t.co</em>
+                <small>Active users · Oct 19 – Nov 15</small>
             </article>
             <article class="perf-gain">
                 <span>GBP profile views</span>
@@ -53,14 +53,14 @@
             </article>
             <article class="perf-gain">
                 <span>Brand query clicks</span>
-                <b>24</b>
-                <em>+60% vs the prior 28 days</em>
-                <small>“core four roofing” · Sep 21 – Oct 18</small>
+                <b>34</b>
+                <em>+42% vs Sep 21 – Oct 18</em>
+                <small>“core four roofing” · Oct 19 – Nov 14</small>
             </article>
         </div>
         <div class="perf-callout">
             <strong>Client takeaway:</strong>
-            Search impressions rose 36% and clicks rose 21% in the last 28 days. The homepage still takes almost every click. Facebook kept posting, and the Oct 2 house — open deck to finished aerial — carried the window with 424 views and 34 clicks.
+            Search clicks rose 35% and impressions slipped 4%. The homepage still takes almost every click. Analytics jumped again, and about 99% of sessions still came from t.co. Facebook in this report is still the Sep 21 – Oct 18 export.
         </div>
         <div class="perf-stories">
             <article>
@@ -73,7 +73,7 @@
             </article>
             <article>
                 <h3>Brand ownership</h3>
-                <p><em>core four roofing</em> led search with <strong>24 clicks, up 60%</strong>. Position was last measured at <strong>1.07</strong> on Sep 21. This Insights pull did not include a new position.</p>
+                <p><em>core four roofing</em> led search with <strong>34 clicks, up from 24</strong>. The average position for that query moved from <strong>1.6 to 3.3</strong>.</p>
             </article>
         </div>
     </section>
@@ -140,7 +140,7 @@
                 <p class="perf-sub">The listing is doing the job of a storefront</p>
                 <div class="perf-callout" style="margin-top:0.25rem">
                     <strong>Client takeaway:</strong>
-                    About 1 in 3 people who saw the profile took an action, and most of those actions were direction requests. “roofers cypress tx” showed the listing 24 times — one shy of the brand search. People are finding Core Four when they look for a roofer, not only when they already know the name. October is still open, so this is the season so far, not a finished month.
+                    About 1 in 3 people who saw the profile took an action, and most of those actions were direction requests. “roofers cypress tx” showed the listing 24 times — one shy of the brand search. People are finding Core Four when they look for a roofer, not only when they already know the name. This section is still the May–October pull. November is not in it.
                 </div>
             </div>
         </div>
@@ -149,31 +149,31 @@
     <section class="perf-section" id="website">
         <p class="perf-kicker">Website · Google Analytics 4</p>
         <h2>A spike, mostly from t.co</h2>
-        <p class="perf-lead">From Sep 21 to Oct 18, Analytics recorded <strong>8,741 active users</strong>, <strong>9,706 new users</strong>, and <strong>9,061 sessions</strong>. <strong>7,994 sessions — about 88% — came from t.co</strong>, the Twitter link shortener. Average engagement was <strong>4.2 seconds</strong>. Direct sessions were <strong>916</strong>, up from 295 in the prior window. Google organic was <strong>67</strong>, down from 80.</p>
+        <p class="perf-lead">From Oct 19 to Nov 15, Analytics recorded <strong>84,846 active users</strong>, <strong>97,835 new users</strong>, and <strong>90,305 sessions</strong>. <strong>89,455 sessions — about 99% — came from t.co</strong>, the Twitter link shortener. Average engagement was <strong>2.3 seconds</strong>. Direct sessions were <strong>724</strong>, down from 916. Google organic was <strong>88</strong>, up from 67.</p>
         <div class="perf-compare">
-            <div><span>Active users</span><b>8,741</b><em>Sep 21 – Oct 18</em></div>
-            <div><span>Sessions from t.co</span><b>7,994</b><em>About 88% of 9,061 sessions</em></div>
-            <div><span>Avg. engagement</span><b>4.2s</b><em>Per active user</em></div>
+            <div><span>Active users</span><b>84,846</b><em>Oct 19 – Nov 15</em></div>
+            <div><span>Sessions from t.co</span><b>89,455</b><em>About 99% of 90,305 sessions</em></div>
+            <div><span>Avg. engagement</span><b>2.3s</b><em>Per active user</em></div>
         </div>
         <div class="perf-split">
             <div class="panel">
-                <h3>Active users · prior window</h3>
-                <p class="perf-sub">Aug 28 – Sep 21 · daily series from the previous export · Source: GA4</p>
+                <h3>Active users · this window</h3>
+                <p class="perf-sub">{{ $perf['meta']['ga_window'] }} · daily active users · Source: GA4</p>
                 <div class="perf-chart tall"><canvas id="gaChart"></canvas></div>
             </div>
             <div class="panel">
                 <h3>This window</h3>
                 <p class="perf-sub">{{ $perf['meta']['ga_window'] }} · Source: GA4 snapshot</p>
                 <div class="perf-metrics">
-                    <div><span>Active users</span><strong>8,741</strong></div>
-                    <div><span>New users</span><strong>9,706</strong></div>
-                    <div><span>Sessions</span><strong>9,061</strong></div>
-                    <div><span>First visits from t.co</span><strong>7,815</strong></div>
-                    <div><span>Prior window active users</span><strong>375 <small>Aug 28 – Sep 21</small></strong></div>
+                    <div><span>Active users</span><strong>84,846</strong></div>
+                    <div><span>New users</span><strong>97,835</strong></div>
+                    <div><span>Sessions</span><strong>90,305</strong></div>
+                    <div><span>First visits from t.co</span><strong>84,080</strong></div>
+                    <div><span>Prior window active users</span><strong>8,741 <small>Sep 21 – Oct 18</small></strong></div>
                 </div>
                 <div class="perf-callout" style="margin-top:1.1rem">
                     <strong>Read this carefully:</strong>
-                    The jump is not a wave of homeowners. t.co sent most of the sessions, and the average visit lasted about 4 seconds. Key events are still 0.
+                    The jump is not a wave of homeowners. t.co sent about 99% of the sessions, and the average visit lasted about 2.3 seconds. Key events are still 0. One session came from chatgpt.com.
                 </div>
             </div>
         </div>
@@ -185,12 +185,12 @@
             </div>
             <div class="panel">
                 <h3>Channel mix</h3>
-                <p class="perf-sub">9,061 sessions · Source: GA4</p>
+                <p class="perf-sub">90,305 sessions · Source: GA4</p>
                 <div class="perf-metrics">
-                    <div><span>t.co / referral</span><strong>7,994 <small>Twitter links</small></strong></div>
-                    <div><span>Direct</span><strong>916 <small>was 295</small></strong></div>
-                    <div><span>Google organic</span><strong>67 <small>was 80</small></strong></div>
-                    <div><span>Facebook referral</span><strong>13 <small>facebook.com + l.facebook.com</small></strong></div>
+                    <div><span>t.co / referral</span><strong>89,455 <small>Twitter links</small></strong></div>
+                    <div><span>Direct</span><strong>724 <small>was 916</small></strong></div>
+                    <div><span>Google organic</span><strong>88 <small>was 67</small></strong></div>
+                    <div><span>Bing organic</span><strong>16 <small>was 6</small></strong></div>
                     <div><span>Key events tracked</span><strong>0</strong></div>
                 </div>
             </div>
@@ -200,7 +200,7 @@
     <section class="perf-section" id="facebook">
         <p class="perf-kicker">Facebook &amp; Instagram · Meta</p>
         <h2>Twelve posts, one house out in front</h2>
-        <p class="perf-lead">From Sep 21 to Oct 18, Core Four published <strong>12 Facebook posts</strong> with <strong>1,608 views</strong>, <strong>976 reach</strong>, and <strong>58 clicks</strong>. That is below the prior window’s 3,212 views and 178 clicks. The Oct 2 residential project — open deck through the finished aerial — did the heavy lifting.</p>
+        <p class="perf-lead">From Sep 21 to Oct 18, Core Four published <strong>12 Facebook posts</strong> with <strong>1,608 views</strong>, <strong>976 reach</strong>, and <strong>58 clicks</strong>. That is below the prior window’s 3,212 views and 178 clicks. The Oct 2 residential project — open deck through the finished aerial — did the heavy lifting. This social section is still that export. The connected Facebook account does not manage the Core Four page.</p>
         <div class="perf-compare">
             <div><span>Post views</span><b>1,608</b><em>12 photo posts · Sep 21 – Oct 18</em></div>
             <div><span>Reach</span><b>976</b><em>Lifetime reach on those posts</em></div>
@@ -296,12 +296,12 @@
 
     <section class="perf-section" id="search">
         <p class="perf-kicker">Google Search Console</p>
-        <h2>Impressions up. The homepage still takes the click.</h2>
-        <p class="perf-lead">In the last 28 days, Sep 21 – Oct 18, Search Console shows <strong>46 clicks, up 21%</strong>, and <strong>9.41K impressions, up 36%</strong>. That is about <strong>336 impressions a day</strong> and <strong>1.6 clicks a day</strong>. <em>core four roofing</em> accounted for <strong>24</strong> of the clicks, up 60%.</p>
+        <h2>Clicks up. Impressions slipped. The homepage still takes the click.</h2>
+        <p class="perf-lead">Final Search Console data runs Oct 19 – Nov 14, one day short of yesterday. It shows <strong>62 clicks, up 35%</strong> from 46, and <strong>9,097 impressions, down 4%</strong> from 9,491. That is about <strong>337 impressions a day</strong> and <strong>2.3 clicks a day</strong>. <em>core four roofing</em> accounted for <strong>34</strong> of the clicks, up from 24.</p>
         <div class="perf-compare">
-            <div><span>Impressions</span><b>9.41K</b><em>↑ 36% vs the prior 28 days</em></div>
-            <div><span>Clicks</span><b>46</b><em>↑ 21% · about 1.6 a day</em></div>
-            <div><span>Homepage clicks</span><b>42</b><em>38 on the main URL · 4 on www</em></div>
+            <div><span>Impressions</span><b>9,097</b><em>↓ 4% vs Sep 21 – Oct 18</em></div>
+            <div><span>Clicks</span><b>62</b><em>↑ 35% · about 2.3 a day</em></div>
+            <div><span>Homepage clicks</span><b>54</b><em>46 on the main URL · 5 on www · 3 on http www</em></div>
         </div>
         <div class="perf-tabs" role="tablist" aria-label="Search charts">
             <button class="perf-tab active" type="button" data-gsc="position">Avg. position</button>
@@ -311,24 +311,24 @@
         </div>
         <div class="panel">
             <h3 id="gscTitle">Daily average position</h3>
-            <p class="perf-sub" id="gscSub">Aug 28 – Sep 21, 2026 · daily series from the previous export · Source: Google Search Console</p>
+            <p class="perf-sub" id="gscSub">Oct 19 – Nov 14, 2026 · final data · Source: Google Search Console</p>
             <div class="perf-chart tall"><canvas id="gscChart"></canvas></div>
         </div>
         <div class="perf-split">
             <div class="panel">
                 <h3>Latest window snapshot</h3>
-                <p class="perf-sub">Sep 21 – Oct 18 · Search Console Insights</p>
+                <p class="perf-sub">Oct 19 – Nov 14 · domain property · final data</p>
                 <div class="perf-metrics">
-                    <div><span>Clicks</span><strong>46 <small>↑ 21%</small></strong></div>
-                    <div><span>Impressions</span><strong>9.41K <small>↑ 36%</small></strong></div>
-                    <div><span>Brand query clicks</span><strong>24 <small>↑ 60%</small></strong></div>
-                    <div><span>Image search clicks</span><strong>1</strong></div>
-                    <div><span>Prior window clicks</span><strong>67 <small>Aug 28 – Sep 21</small></strong></div>
+                    <div><span>Clicks</span><strong>62 <small>↑ 35%</small></strong></div>
+                    <div><span>Impressions</span><strong>9,097 <small>↓ 4%</small></strong></div>
+                    <div><span>Brand query clicks</span><strong>34 <small>↑ 42%</small></strong></div>
+                    <div><span>Image search</span><strong>0 clicks <small>78 impressions</small></strong></div>
+                    <div><span>Prior window clicks</span><strong>46 <small>Sep 21 – Oct 18</small></strong></div>
                 </div>
             </div>
             <div class="panel">
                 <h3>Where the clicks came from</h3>
-                <p class="perf-sub">Share of clicks by country · last 28 days</p>
+                <p class="perf-sub">Clicks by country · Oct 19 – Nov 14 · 62 clicks</p>
                 <div class="perf-chart"><canvas id="deviceChart"></canvas></div>
             </div>
         </div>
@@ -337,13 +337,13 @@
     <section class="perf-section" id="keywords">
         <p class="perf-kicker">Queries &amp; pages</p>
         <h2>The brand query, then the homepage</h2>
-        <p class="perf-lead">Search Console’s top list is short. <em>core four roofing</em> led with 24 clicks. The homepage took 38, and the www address took 4 more. About, commercial coatings, and contact each recorded a first click.</p>
+        <p class="perf-lead">Search Console attached 43 of the 62 clicks to a query. <em>core four roofing</em> led with 34. The homepage addresses took 54 clicks. Sugar Land, financing, service areas, and Conroe also recorded clicks. Two of the single clicks were job queries, not roofing searches.</p>
         <div class="perf-split">
             <div class="panel">
                 <h3>Top search queries</h3>
                 <p class="perf-sub">{{ $perf['meta']['window'] }} · Google Search Console</p>
                 <table>
-                    <tr><th>Query</th><th>Clicks</th><th>Vs prior 28 days</th></tr>
+                    <tr><th>Query</th><th>Clicks</th><th>Vs Sep 21 – Oct 18</th></tr>
                     @foreach($perf['queries'] as $query)
                         <tr>
                             <td>{{ $query['query'] }}</td>
@@ -357,7 +357,7 @@
                 <h3>Top landing pages</h3>
                 <p class="perf-sub">Highest click &amp; impression pages this window</p>
                 <table>
-                    <tr><th>Page</th><th>Clicks</th><th>Vs prior 28 days</th></tr>
+                    <tr><th>Page</th><th>Clicks</th><th>Vs Sep 21 – Oct 18</th></tr>
                     @foreach($perf['pages'] as $page)
                         <tr>
                             <td>{{ $page['page'] }}</td>
@@ -555,8 +555,7 @@ new Chart(document.getElementById('gaChart'), {
   data: {
     labels: data.ga.labels,
     datasets: [
-      { label: 'Aug 28 – Sep 21', data: data.ga.current, borderColor: brand, backgroundColor: 'rgba(191,232,102,0.22)', fill: true, tension: 0.3, pointRadius: 2.5, borderWidth: 2.5 },
-      { label: 'Previous period', data: data.ga.previous, borderColor: '#8aa890', borderDash: [6, 4], fill: false, tension: 0.3, pointRadius: 0, borderWidth: 2 }
+      { label: 'Oct 19 – Nov 15', data: data.ga.current, borderColor: brand, backgroundColor: 'rgba(191,232,102,0.22)', fill: true, tension: 0.3, pointRadius: 2.5, borderWidth: 2.5 }
     ]
   },
   options: {
@@ -571,16 +570,16 @@ new Chart(document.getElementById('gaChart'), {
 
 new Chart(document.getElementById('gaSourceChart'), {
   type: 'doughnut',
-  data: { labels: data.sources.labels, datasets: [{ data: data.sources.data, backgroundColor: [brand, brandMid, lime, '#45664f', '#dbd7cf'], borderWidth: 0 }] },
+  data: { labels: data.sources.labels, datasets: [{ data: data.sources.data, backgroundColor: [brand, brandMid, lime, '#45664f', '#8aa890', '#dbd7cf'], borderWidth: 0 }] },
   options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'bottom', labels: { boxWidth: 10, usePointStyle: true, font: { size: 11 } } } }, cutout: '58%' }
 });
 
 let gscChart;
 const gscMeta = {
-  position: { title: 'Daily average position', sub: 'Aug 28 – Sep 21, 2026 · previous export · Lower is better', y: 'Avg. position', reverse: true, color: brandMid, key: 'position' },
-  ctr: { title: 'Daily click-through rate', sub: 'Aug 28 – Sep 21, 2026 · previous export', y: 'CTR (%)', reverse: false, color: brand, key: 'ctr' },
-  clicks: { title: 'Daily clicks', sub: 'Aug 28 – Sep 21, 2026 · previous export', y: 'Clicks', reverse: false, color: brand, key: 'clicks' },
-  impressions: { title: 'Daily impressions', sub: 'Aug 28 – Sep 21, 2026 · previous export', y: 'Impressions', reverse: false, color: muted, key: 'impressions' }
+  position: { title: 'Daily average position', sub: 'Oct 19 – Nov 14, 2026 · final data · Lower is better', y: 'Avg. position', reverse: true, color: brandMid, key: 'position' },
+  ctr: { title: 'Daily click-through rate', sub: 'Oct 19 – Nov 14, 2026 · final data', y: 'CTR (%)', reverse: false, color: brand, key: 'ctr' },
+  clicks: { title: 'Daily clicks', sub: 'Oct 19 – Nov 14, 2026 · final data', y: 'Clicks', reverse: false, color: brand, key: 'clicks' },
+  impressions: { title: 'Daily impressions', sub: 'Oct 19 – Nov 14, 2026 · final data', y: 'Impressions', reverse: false, color: muted, key: 'impressions' }
 };
 
 function renderGsc(mode = 'position') {
@@ -608,7 +607,7 @@ document.querySelectorAll('[data-gsc]').forEach((btn) => {
 
 new Chart(document.getElementById('deviceChart'), {
   type: 'doughnut',
-  data: { labels: data.countries.labels, datasets: [{ data: data.countries.data, backgroundColor: [brand, brandMid, lime, '#45664f'], borderWidth: 0 }] },
+  data: { labels: data.countries.labels, datasets: [{ data: data.countries.data, backgroundColor: [brand, brandMid, lime, '#45664f', '#8aa890', '#dbd7cf'], borderWidth: 0 }] },
   options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'bottom', labels: { boxWidth: 12, usePointStyle: true } } }, cutout: '62%' }
 });
 

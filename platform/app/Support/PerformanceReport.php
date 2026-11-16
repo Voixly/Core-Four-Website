@@ -9,15 +9,15 @@ class PerformanceReport
 {
     public string $title = 'Performance report 2026';
 
-    public string $window = 'Sep 21 – Oct 18, 2026';
+    public string $window = 'Oct 19 – Nov 14, 2026';
 
     public string $gbpWindow = 'May – Oct 2026';
 
-    public string $gaWindow = 'Sep 21 – Oct 18, 2026';
+    public string $gaWindow = 'Oct 19 – Nov 15, 2026';
 
-    public string $ytd = 'Search and social through Oct 18, 2026';
+    public string $ytd = 'Search through Nov 14, 2026 · social still through Oct 18';
 
-    public string $prepared = 'Oct 20, 2026';
+    public string $prepared = 'Nov 16, 2026';
 
     public string $filename = 'core-four-performance-report-2026.pdf';
 
@@ -56,10 +56,14 @@ class PerformanceReport
     public function queries(): array
     {
         return [
-            ['query' => 'core four roofing', 'clicks' => 24, 'change' => '+60%'],
-            ['query' => 'roofing contractors in austin texas', 'clicks' => 2, 'change' => '+100%'],
-            ['query' => 'core roofing', 'clicks' => 1, 'change' => 'New'],
-            ['query' => 'roofers in flower mound tx', 'clicks' => 1, 'change' => 'New'],
+            ['query' => 'core four roofing', 'clicks' => 34, 'change' => '+42%'],
+            ['query' => 'tile roofing sugar land', 'clicks' => 3, 'change' => 'New'],
+            ['query' => 'core roofing systems', 'clicks' => 1, 'change' => 'New'],
+            ['query' => 'roofing companies in houston tx', 'clicks' => 1, 'change' => 'New'],
+            ['query' => 'roofing contractors in austin', 'clicks' => 1, 'change' => 'New'],
+            ['query' => 'paid training jobs near me', 'clicks' => 1, 'change' => 'New'],
+            ['query' => 'project coordinator jobs near me', 'clicks' => 1, 'change' => 'New'],
+            ['query' => 'where can i get a personal loan of up to $15000 to repair my roof in texas?', 'clicks' => 1, 'change' => 'New'],
         ];
     }
 
@@ -69,11 +73,13 @@ class PerformanceReport
     public function pages(): array
     {
         return [
-            ['page' => '/', 'clicks' => 38, 'change' => '+23%'],
-            ['page' => 'www.corefourroofing.com/', 'clicks' => 4, 'change' => '−20%'],
-            ['page' => '/about-core-four-roofing/', 'clicks' => 1, 'change' => 'New'],
-            ['page' => '/commercial-roofing/coatings-restoration/', 'clicks' => 1, 'change' => 'New'],
-            ['page' => '/contact-core-four-roofing/', 'clicks' => 1, 'change' => 'New'],
+            ['page' => '/', 'clicks' => 46, 'change' => '+21%'],
+            ['page' => 'www.corefourroofing.com/', 'clicks' => 5, 'change' => '+25%'],
+            ['page' => 'http://www.corefourroofing.com/', 'clicks' => 3, 'change' => 'New'],
+            ['page' => '/residential-roofing-in-sugar-land-tx/', 'clicks' => 3, 'change' => 'New'],
+            ['page' => '/financing/', 'clicks' => 2, 'change' => 'New'],
+            ['page' => '/service-areas/', 'clicks' => 2, 'change' => '+100%'],
+            ['page' => '/residential-roofing-in-conroe-tx/', 'clicks' => 1, 'change' => 'New'],
         ];
     }
 
@@ -229,36 +235,38 @@ class PerformanceReport
     {
         return [
             'gsc' => [
-                ['week' => 'Aug 28', 'clicks' => 3, 'impressions' => 242, 'position' => 36.0, 'ctr' => 1.24],
-                ['week' => 'Aug 29', 'clicks' => 3, 'impressions' => 538, 'position' => 21.8, 'ctr' => 0.56],
-                ['week' => 'Aug 30', 'clicks' => 2, 'impressions' => 553, 'position' => 19.4, 'ctr' => 0.36],
-                ['week' => 'Aug 31', 'clicks' => 2, 'impressions' => 601, 'position' => 21.8, 'ctr' => 0.33],
-                ['week' => 'Sep 1', 'clicks' => 6, 'impressions' => 392, 'position' => 20.1, 'ctr' => 1.53],
-                ['week' => 'Sep 2', 'clicks' => 3, 'impressions' => 361, 'position' => 27.5, 'ctr' => 0.83],
-                ['week' => 'Sep 3', 'clicks' => 2, 'impressions' => 256, 'position' => 21.3, 'ctr' => 0.78],
-                ['week' => 'Sep 4', 'clicks' => 2, 'impressions' => 992, 'position' => 55.4, 'ctr' => 0.20],
-                ['week' => 'Sep 5', 'clicks' => 2, 'impressions' => 270, 'position' => 35.4, 'ctr' => 0.74],
-                ['week' => 'Sep 6', 'clicks' => 2, 'impressions' => 228, 'position' => 34.8, 'ctr' => 0.88],
-                ['week' => 'Sep 7', 'clicks' => 2, 'impressions' => 370, 'position' => 43.0, 'ctr' => 0.54],
-                ['week' => 'Sep 8', 'clicks' => 1, 'impressions' => 421, 'position' => 49.8, 'ctr' => 0.24],
-                ['week' => 'Sep 9', 'clicks' => 3, 'impressions' => 418, 'position' => 39.6, 'ctr' => 0.72],
-                ['week' => 'Sep 10', 'clicks' => 2, 'impressions' => 328, 'position' => 41.3, 'ctr' => 0.61],
-                ['week' => 'Sep 11', 'clicks' => 3, 'impressions' => 328, 'position' => 44.3, 'ctr' => 0.91],
-                ['week' => 'Sep 12', 'clicks' => 1, 'impressions' => 235, 'position' => 40.3, 'ctr' => 0.43],
-                ['week' => 'Sep 13', 'clicks' => 1, 'impressions' => 218, 'position' => 38.5, 'ctr' => 0.46],
-                ['week' => 'Sep 14', 'clicks' => 2, 'impressions' => 265, 'position' => 51.1, 'ctr' => 0.75],
-                ['week' => 'Sep 15', 'clicks' => 2, 'impressions' => 405, 'position' => 21.3, 'ctr' => 0.49],
-                ['week' => 'Sep 16', 'clicks' => 3, 'impressions' => 311, 'position' => 35.2, 'ctr' => 0.96],
-                ['week' => 'Sep 17', 'clicks' => 3, 'impressions' => 303, 'position' => 39.5, 'ctr' => 0.99],
-                ['week' => 'Sep 18', 'clicks' => 3, 'impressions' => 278, 'position' => 42.8, 'ctr' => 1.08],
-                ['week' => 'Sep 19', 'clicks' => 4, 'impressions' => 231, 'position' => 38.9, 'ctr' => 1.73],
-                ['week' => 'Sep 20', 'clicks' => 2, 'impressions' => 134, 'position' => 39.3, 'ctr' => 1.49],
-                ['week' => 'Sep 21', 'clicks' => 2, 'impressions' => 246, 'position' => 32.2, 'ctr' => 0.81],
+                ['week' => 'Oct 19', 'clicks' => 8, 'impressions' => 455, 'position' => 23.4, 'ctr' => 1.76],
+                ['week' => 'Oct 20', 'clicks' => 3, 'impressions' => 242, 'position' => 40.3, 'ctr' => 1.24],
+                ['week' => 'Oct 21', 'clicks' => 3, 'impressions' => 282, 'position' => 42.1, 'ctr' => 1.06],
+                ['week' => 'Oct 22', 'clicks' => 1, 'impressions' => 345, 'position' => 33.7, 'ctr' => 0.29],
+                ['week' => 'Oct 23', 'clicks' => 4, 'impressions' => 275, 'position' => 42.9, 'ctr' => 1.45],
+                ['week' => 'Oct 24', 'clicks' => 2, 'impressions' => 309, 'position' => 40.5, 'ctr' => 0.65],
+                ['week' => 'Oct 25', 'clicks' => 1, 'impressions' => 378, 'position' => 39.2, 'ctr' => 0.26],
+                ['week' => 'Oct 26', 'clicks' => 1, 'impressions' => 360, 'position' => 34.7, 'ctr' => 0.28],
+                ['week' => 'Oct 27', 'clicks' => 5, 'impressions' => 363, 'position' => 39.2, 'ctr' => 1.38],
+                ['week' => 'Oct 28', 'clicks' => 2, 'impressions' => 342, 'position' => 39.2, 'ctr' => 0.58],
+                ['week' => 'Oct 29', 'clicks' => 6, 'impressions' => 499, 'position' => 32.1, 'ctr' => 1.20],
+                ['week' => 'Oct 30', 'clicks' => 2, 'impressions' => 502, 'position' => 37.4, 'ctr' => 0.40],
+                ['week' => 'Oct 31', 'clicks' => 2, 'impressions' => 336, 'position' => 43.1, 'ctr' => 0.60],
+                ['week' => 'Nov 1', 'clicks' => 2, 'impressions' => 476, 'position' => 39.0, 'ctr' => 0.42],
+                ['week' => 'Nov 2', 'clicks' => 3, 'impressions' => 455, 'position' => 36.0, 'ctr' => 0.66],
+                ['week' => 'Nov 3', 'clicks' => 2, 'impressions' => 340, 'position' => 38.9, 'ctr' => 0.59],
+                ['week' => 'Nov 4', 'clicks' => 6, 'impressions' => 579, 'position' => 33.0, 'ctr' => 1.04],
+                ['week' => 'Nov 5', 'clicks' => 1, 'impressions' => 350, 'position' => 36.6, 'ctr' => 0.29],
+                ['week' => 'Nov 6', 'clicks' => 0, 'impressions' => 196, 'position' => 18.3, 'ctr' => 0],
+                ['week' => 'Nov 7', 'clicks' => 0, 'impressions' => 196, 'position' => 19.5, 'ctr' => 0],
+                ['week' => 'Nov 8', 'clicks' => 0, 'impressions' => 292, 'position' => 23.8, 'ctr' => 0],
+                ['week' => 'Nov 9', 'clicks' => 2, 'impressions' => 234, 'position' => 15.1, 'ctr' => 0.85],
+                ['week' => 'Nov 10', 'clicks' => 3, 'impressions' => 236, 'position' => 23.9, 'ctr' => 1.27],
+                ['week' => 'Nov 11', 'clicks' => 0, 'impressions' => 289, 'position' => 24.9, 'ctr' => 0],
+                ['week' => 'Nov 12', 'clicks' => 0, 'impressions' => 228, 'position' => 25.9, 'ctr' => 0],
+                ['week' => 'Nov 13', 'clicks' => 3, 'impressions' => 258, 'position' => 35.9, 'ctr' => 1.16],
+                ['week' => 'Nov 14', 'clicks' => 0, 'impressions' => 280, 'position' => 28.9, 'ctr' => 0],
             ],
             'ga' => [
-                'labels' => ['Aug 28', 'Aug 29', 'Aug 31', 'Sep 2', 'Sep 4', 'Sep 7', 'Sep 9', 'Sep 11', 'Sep 14', 'Sep 17', 'Sep 19', 'Sep 21'],
-                'current' => [16, 20, 18, 25, 17, 31, 20, 18, 22, 29, 16, 10],
-                'previous' => [14, 18, 16, 22, 15, 28, 18, 16, 20, 26, 14, 9],
+                'labels' => ['Oct 19', 'Oct 20', 'Oct 21', 'Oct 22', 'Oct 23', 'Oct 24', 'Oct 25', 'Oct 26', 'Oct 27', 'Oct 28', 'Oct 29', 'Oct 30', 'Oct 31', 'Nov 1', 'Nov 2', 'Nov 3', 'Nov 4', 'Nov 5', 'Nov 6', 'Nov 7', 'Nov 8', 'Nov 9', 'Nov 10', 'Nov 11', 'Nov 12', 'Nov 13', 'Nov 14', 'Nov 15'],
+                'current' => [22, 6316, 24, 16, 12641, 22, 14, 6649, 6851, 35, 12229, 26, 28, 7480, 32, 26, 6184, 39, 24, 7218, 9, 24, 7090, 22, 5715, 34, 6184, 11],
+                'previous' => [],
             ],
             'gbp' => [
                 'actions' => [
@@ -271,12 +279,12 @@ class PerformanceReport
                 ],
             ],
             'sources' => [
-                'labels' => ['t.co 7,994', 'Direct 916', 'Google organic 67', 'Facebook 13', 'Bing 6', 'Other 65'],
-                'data' => [7994, 916, 67, 13, 6, 65],
+                'labels' => ['t.co 89,455', 'Direct 724', 'Not set 95', 'Google organic 88', 'Bing 16', 'Facebook 6'],
+                'data' => [89455, 724, 95, 88, 16, 6],
             ],
             'countries' => [
-                'labels' => ['United States 89%', 'Pakistan 7%', 'United Kingdom 2%', 'Philippines 2%'],
-                'data' => [89, 7, 2, 2],
+                'labels' => ['United States 54', 'Pakistan 3', 'United Kingdom 2', 'Bangladesh 1', 'India 1', 'Mexico 1'],
+                'data' => [54, 3, 2, 1, 1, 1],
             ],
             'facebook' => [
                 ['d' => 'Sep 21', 'v' => 95], ['d' => 'Sep 23', 'v' => 154], ['d' => 'Sep 25', 'v' => 112],

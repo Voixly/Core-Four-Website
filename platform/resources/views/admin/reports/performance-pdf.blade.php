@@ -55,19 +55,19 @@
         <table class="cards">
             <tr>
                 <td><div class="k">Facebook post views</div><div class="v">1,608</div><div class="d">12 posts · Sep 21 – Oct 18</div></td>
-                <td><div class="k">Website active users</div><div class="v">8,741</div><div class="d">88% of sessions from t.co</div></td>
+                <td><div class="k">Website active users</div><div class="v">84,846</div><div class="d">99% of sessions from t.co</div></td>
                 <td><div class="k">GBP profile views</div><div class="v">1,674</div><div class="d">333 direction requests · May – Oct</div></td>
-                <td><div class="k">Brand query clicks</div><div class="v">24</div><div class="d">+60% · last 28 days</div></td>
+                <td><div class="k">Brand query clicks</div><div class="v">34</div><div class="d">+42% · Oct 19 – Nov 14</div></td>
             </tr>
         </table>
-        <div class="callout"><strong>Client takeaway:</strong> Search impressions rose 36% and clicks rose 21% in the last 28 days. The homepage still takes almost every click. The Oct 2 house carried Facebook with 424 views and 34 clicks.</div>
+        <div class="callout"><strong>Client takeaway:</strong> Search clicks rose 35% and impressions slipped 4%. The homepage still takes almost every click. Analytics jumped again, and about 99% of sessions still came from t.co. Facebook in this report is still the Sep 21 – Oct 18 export.</div>
         <table class="split">
             <tr>
                 <td><div class="box"><h3>Social discovery</h3><p><strong>1,608</strong> Facebook views and <strong>58 clicks</strong> across 12 posts. Instagram added <strong>367</strong> views.</p></div></td>
                 <td><div class="box"><h3>Local presence</h3><p>From May through October the listing was viewed <strong>1,674 times</strong>. <strong>514 people acted</strong>, and <strong>333</strong> of those actions were direction requests.</p></div></td>
             </tr>
         </table>
-        <div class="box" style="margin-top:8px"><h3>Brand ownership</h3><p><em>core four roofing</em> led with <strong>24 clicks, up 60%</strong>. Position was last measured at <strong>1.07</strong> on Sep 21. This pull did not include a new position.</p></div>
+        <div class="box" style="margin-top:8px"><h3>Brand ownership</h3><p><em>core four roofing</em> led with <strong>34 clicks, up from 24</strong>. The average position for that query moved from <strong>1.6 to 3.3</strong>.</p></div>
     </div>
 
     <div class="section">
@@ -114,19 +114,19 @@
             <h3>Searches that showed the listing</h3>
             <p><em>core four roofing</em> 25 · <em>roofers cypress tx</em> 24. Three more stayed under 15: the Tomball shop address, best roofing company 77070, and best roofing company 77373.</p>
         </div>
-        <div class="callout"><strong>Client takeaway:</strong> About 1 in 3 people who saw the profile took an action, and most of those actions were direction requests. “roofers cypress tx” showed the listing 24 times — one shy of the brand search. October is still open, so this is the season so far.</div>
+        <div class="callout"><strong>Client takeaway:</strong> About 1 in 3 people who saw the profile took an action, and most of those actions were direction requests. “roofers cypress tx” showed the listing 24 times — one shy of the brand search. This section is still the May–October pull. November is not in it.</div>
     </div>
 
     <div class="section page-break">
         <div class="kicker">Website · Google Analytics 4</div>
         <h2>A spike, mostly from t.co</h2>
-        <p>From Sep 21 to Oct 18, Analytics recorded <strong>8,741 active users</strong>, <strong>9,706 new users</strong>, and <strong>9,061 sessions</strong>. <strong>7,994 sessions — about 88% — came from t.co</strong>. Average engagement was <strong>4.2 seconds</strong>. Direct sessions were 916, up from 295. Google organic was 67, down from 80.</p>
+        <p>From Oct 19 to Nov 15, Analytics recorded <strong>84,846 active users</strong>, <strong>97,835 new users</strong>, and <strong>90,305 sessions</strong>. <strong>89,455 sessions — about 99% — came from t.co</strong>. Average engagement was <strong>2.3 seconds</strong>. Direct sessions were 724, down from 916. Google organic was 88, up from 67.</p>
         <table class="cards">
             <tr>
-                <td><div class="k">Active users</div><div class="v">8,741</div><div class="d">Sep 21 – Oct 18</div></td>
-                <td><div class="k">Sessions from t.co</div><div class="v">7,994</div><div class="d">About 88% of sessions</div></td>
-                <td><div class="k">Avg. engagement</div><div class="v">4.2s</div><div class="d">Per active user</div></td>
-                <td><div class="k">New users</div><div class="v">9,706</div><div class="d">Key events still 0</div></td>
+                <td><div class="k">Active users</div><div class="v">84,846</div><div class="d">Oct 19 – Nov 15</div></td>
+                <td><div class="k">Sessions from t.co</div><div class="v">89,455</div><div class="d">About 99% of sessions</div></td>
+                <td><div class="k">Avg. engagement</div><div class="v">2.3s</div><div class="d">Per active user</div></td>
+                <td><div class="k">New users</div><div class="v">97,835</div><div class="d">Key events still 0</div></td>
             </tr>
         </table>
         <table class="split">
@@ -135,35 +135,35 @@
                     <div class="box">
                         <h3>This window</h3>
                         <table class="row">
-                            <tr><td>Active users</td><td class="val">8,741</td></tr>
-                            <tr><td>New users</td><td class="val">9,706</td></tr>
-                            <tr><td>Sessions</td><td class="val">9,061</td></tr>
-                            <tr><td>First visits from t.co</td><td class="val">7,815</td></tr>
-                            <tr><td>Prior window active users</td><td class="val">375</td></tr>
+                            <tr><td>Active users</td><td class="val">84,846</td></tr>
+                            <tr><td>New users</td><td class="val">97,835</td></tr>
+                            <tr><td>Sessions</td><td class="val">90,305</td></tr>
+                            <tr><td>First visits from t.co</td><td class="val">84,080</td></tr>
+                            <tr><td>Prior window active users</td><td class="val">8,741</td></tr>
                         </table>
                     </div>
                 </td>
                 <td>
                     <div class="box">
-                        <h3>Channel mix · 9,061 sessions</h3>
+                        <h3>Channel mix · 90,305 sessions</h3>
                         <table class="row">
-                            <tr><td>t.co / referral</td><td class="val">7,994</td></tr>
-                            <tr><td>Direct</td><td class="val">916 · was 295</td></tr>
-                            <tr><td>Google organic</td><td class="val">67 · was 80</td></tr>
-                            <tr><td>Facebook referral</td><td class="val">13</td></tr>
+                            <tr><td>t.co / referral</td><td class="val">89,455</td></tr>
+                            <tr><td>Direct</td><td class="val">724 · was 916</td></tr>
+                            <tr><td>Google organic</td><td class="val">88 · was 67</td></tr>
+                            <tr><td>Bing organic</td><td class="val">16 · was 6</td></tr>
                             <tr><td>Key events tracked</td><td class="val">0</td></tr>
                         </table>
                     </div>
                 </td>
             </tr>
         </table>
-        <div class="callout"><strong>Read this carefully:</strong> The jump is not a wave of homeowners. t.co sent most of the sessions, and the average visit lasted about 4 seconds. Key events are still 0.</div>
+        <div class="callout"><strong>Read this carefully:</strong> The jump is not a wave of homeowners. t.co sent about 99% of the sessions, and the average visit lasted about 2.3 seconds. Key events are still 0. One session came from chatgpt.com.</div>
     </div>
 
     <div class="section">
         <div class="kicker">Facebook &amp; Instagram · Meta</div>
         <h2>Twelve posts, one house out in front</h2>
-        <p>From Sep 21 to Oct 18, 12 Facebook posts added <strong>1,608 views</strong>, <strong>976 reach</strong>, and <strong>58 clicks</strong>. That is below the prior window’s 3,212 views and 178 clicks. Instagram added <strong>367 views</strong> and <strong>189 reach</strong>.</p>
+        <p>From Sep 21 to Oct 18, 12 Facebook posts added <strong>1,608 views</strong>, <strong>976 reach</strong>, and <strong>58 clicks</strong>. That is below the prior window’s 3,212 views and 178 clicks. Instagram added <strong>367 views</strong> and <strong>189 reach</strong>. This social section is still that export. The connected Facebook account does not manage the Core Four page.</p>
         <table class="cards">
             <tr>
                 <td><div class="k">Facebook post views</div><div class="v">1,608</div><div class="d">12 photo posts</div></td>
@@ -217,14 +217,14 @@
 
     <div class="section page-break">
         <div class="kicker">Google Search Console</div>
-        <h2>Impressions up. The homepage still takes the click.</h2>
-        <p>From Sep 21 to Oct 18, Search Console shows <strong>46 clicks, up 21%</strong>, and <strong>9.41K impressions, up 36%</strong>. That is about 336 impressions a day. <em>core four roofing</em> accounted for <strong>24</strong> of the clicks, up 60%.</p>
+        <h2>Clicks up. Impressions slipped. The homepage still takes the click.</h2>
+        <p>Final Search Console data runs Oct 19 – Nov 14, one day short of yesterday. It shows <strong>62 clicks, up 35%</strong> from 46, and <strong>9,097 impressions, down 4%</strong> from 9,491. That is about 337 impressions a day. <em>core four roofing</em> accounted for <strong>34</strong> of the clicks, up from 24.</p>
         <table class="cards">
             <tr>
-                <td><div class="k">Impressions</div><div class="v">9.41K</div><div class="d">↑ 36% vs the prior 28 days</div></td>
-                <td><div class="k">Clicks</div><div class="v">46</div><div class="d">↑ 21% · about 1.6 / day</div></td>
-                <td><div class="k">Homepage clicks</div><div class="v">42</div><div class="d">38 on the main URL · 4 on www</div></td>
-                <td><div class="k">Brand query clicks</div><div class="v">24</div><div class="d">+60%</div></td>
+                <td><div class="k">Impressions</div><div class="v">9,097</div><div class="d">↓ 4% vs Sep 21 – Oct 18</div></td>
+                <td><div class="k">Clicks</div><div class="v">62</div><div class="d">↑ 35% · about 2.3 / day</div></td>
+                <td><div class="k">Homepage clicks</div><div class="v">54</div><div class="d">46 main · 5 www · 3 http www</div></td>
+                <td><div class="k">Brand query clicks</div><div class="v">34</div><div class="d">+42%</div></td>
             </tr>
         </table>
         <table class="split">
@@ -233,11 +233,11 @@
                     <div class="box">
                         <h3>Window snapshot</h3>
                         <table class="row">
-                            <tr><td>Clicks</td><td class="val">46 · +21%</td></tr>
-                            <tr><td>Impressions</td><td class="val">9.41K · +36%</td></tr>
-                            <tr><td>Image search clicks</td><td class="val">1</td></tr>
-                            <tr><td>United States share</td><td class="val">89%</td></tr>
-                            <tr><td>Prior window clicks</td><td class="val">67 · Aug 28 – Sep 21</td></tr>
+                            <tr><td>Clicks</td><td class="val">62 · +35%</td></tr>
+                            <tr><td>Impressions</td><td class="val">9,097 · −4%</td></tr>
+                            <tr><td>Image search</td><td class="val">0 clicks · 78 impressions</td></tr>
+                            <tr><td>United States clicks</td><td class="val">54 of 62</td></tr>
+                            <tr><td>Prior window clicks</td><td class="val">46 · Sep 21 – Oct 18</td></tr>
                         </table>
                     </div>
                 </td>
@@ -245,11 +245,12 @@
                     <div class="box">
                         <h3>Clicks by country</h3>
                         <table class="row">
-                            <tr><td>United States</td><td class="val">89%</td></tr>
-                            <tr><td>Pakistan</td><td class="val">7%</td></tr>
-                            <tr><td>United Kingdom</td><td class="val">2%</td></tr>
-                            <tr><td>Philippines</td><td class="val">2%</td></tr>
-                            <tr><td>Albania</td><td class="val">&lt;1%</td></tr>
+                            <tr><td>United States</td><td class="val">54</td></tr>
+                            <tr><td>Pakistan</td><td class="val">3</td></tr>
+                            <tr><td>United Kingdom</td><td class="val">2</td></tr>
+                            <tr><td>Bangladesh</td><td class="val">1</td></tr>
+                            <tr><td>India</td><td class="val">1</td></tr>
+                            <tr><td>Mexico</td><td class="val">1</td></tr>
                         </table>
                     </div>
                 </td>
@@ -260,7 +261,7 @@
     <div class="section">
         <div class="kicker">Queries &amp; pages</div>
         <h2>The brand query, then the homepage</h2>
-        <p>Search Console’s top list is short. <em>core four roofing</em> led with 24 clicks. The homepage took 38, and the www address took 4 more. About, commercial coatings, and contact each recorded a first click.</p>
+        <p>Search Console attached 43 of the 62 clicks to a query. <em>core four roofing</em> led with 34. The homepage addresses took 54 clicks. Sugar Land, financing, service areas, and Conroe also recorded clicks. Two of the single clicks were job queries, not roofing searches.</p>
         <table class="split">
             <tr>
                 <td>
