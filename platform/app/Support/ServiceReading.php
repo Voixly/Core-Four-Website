@@ -23,9 +23,21 @@ class ServiceReading
                 ['href' => '/tile-roofs-in-houston-suburbs/', 'title' => 'Tile roofs in Houston suburbs', 'body' => 'Katy, Cypress, and the leak that starts under a tile that still looks fine.'],
             ],
             'residential-roofing--roof-repair' => [
-                ['href' => '/residential-roofing/tile-roofs/', 'title' => 'Tile roof repair', 'body' => 'Broken tiles and failed underlayment on Houston suburb houses.'],
+                ['href' => '/what-roof-repair-near-me-should-mean/', 'title' => 'What roof repair near me should mean', 'body' => 'A local crew that finds the leak, not a form that sells the address.'],
+                ['href' => '/when-a-roof-leak-is-an-emergency/', 'title' => 'When a roof leak is an emergency', 'body' => 'Water still coming in tonight is a tarp. A dry stain can wait.'],
                 ['href' => '/kickout-flashing-at-the-sidewall/', 'title' => 'Kickout flashing at the sidewall', 'body' => 'The small metal turn that keeps rain out from behind the siding.'],
+                ['href' => '/residential-roofing/tile-roofs/', 'title' => 'Tile roof repair', 'body' => 'Broken tiles and failed underlayment on Houston suburb houses.'],
                 ['href' => '/skylight-leak-that-is-the-flashing/', 'title' => 'When the skylight leak is the flashing', 'body' => 'New glass in the same hole does not fix a bad curb.'],
+            ],
+            'residential-roofing--roof-installation' => [
+                ['href' => '/replacing-a-roof-in-tomball/', 'title' => 'Replacing a roof in Tomball', 'body' => 'Tear-off, a look at the deck, and a dry-in before the new shingles.'],
+                ['href' => '/what-changes-the-price-of-a-houston-roof/', 'title' => 'What changes the price of a Houston roof', 'body' => 'Pitch, layers, deck, and access move the number. A street photo does not.'],
+                ['href' => '/when-to-replace-a-roof-in-houston/', 'title' => 'When to replace a roof in Houston', 'body' => 'Pick a dry stretch. Do not open the roof the week a storm is named.'],
+            ],
+            'commercial-roofing--coatings-restoration' => [
+                ['href' => '/when-a-commercial-roof-gets-a-coating/', 'title' => 'When a commercial roof gets a coating', 'body' => 'A dry, attached roof can take a coating. Wet insulation cannot.'],
+                ['href' => '/ponding-water-on-a-low-slope-roof/', 'title' => 'Ponding water on a low-slope roof', 'body' => 'Water still there two days later, even when the drains are open.'],
+                ['href' => '/tpo-seams-in-texas-heat/', 'title' => 'TPO seams in Texas heat', 'body' => 'The weld opens while the white field still looks new.'],
             ],
             'residential-roofing' => [
                 ['href' => '/residential-roofing/tile-roofs/', 'title' => 'Tile roofs', 'body' => 'Repair and replacement for concrete and clay tile in the Houston suburbs.'],

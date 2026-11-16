@@ -51,6 +51,7 @@ class MaterialPage
                 ['q' => 'Should a failed tile roof become stone-coated steel?', 'a' => 'When the frame should not carry another concrete roof, or the tile cannot be matched. If the tiles and the structure are sound, we put tile back.'],
             ],
             reads: [
+                ['href' => '/tile-roofing-in-sugar-land/', 'title' => 'Tile roofing in Sugar Land', 'body' => 'The tile still looks sharp. The sheet under it is what Sugar Land houses lose first.'],
                 ['href' => '/tile-roofs-in-houston-suburbs/', 'title' => 'Tile roofs in Houston suburbs', 'body' => 'Why the underlayment, not the tile you can see, is the water barrier.'],
                 ['href' => '/stone-coated-steel-instead-of-tile/', 'title' => 'Stone-coated steel instead of tile', 'body' => 'The lighter roof when the house should not carry concrete again.'],
                 ['href' => '/residential-roofing/stone-coated-steel/', 'title' => 'Stone-coated steel', 'body' => 'The system we install when tile is the look and steel is the structure.'],
