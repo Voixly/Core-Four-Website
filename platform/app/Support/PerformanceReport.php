@@ -11,7 +11,7 @@ class PerformanceReport
 
     public string $window = 'Oct 19 – Nov 14, 2026';
 
-    public string $gbpWindow = 'May – Oct 2026';
+    public string $gbpWindow = 'Oct 19 – Nov 13, 2026';
 
     public string $gaWindow = 'Oct 19 – Nov 15, 2026';
 
@@ -270,12 +270,12 @@ class PerformanceReport
             ],
             'gbp' => [
                 'actions' => [
-                    'labels' => ['Directions', 'Website', 'Calls', 'Chat'],
-                    'data' => [333, 127, 49, 5],
+                    'labels' => ['Directions', 'Website', 'Calls', 'Messages'],
+                    'data' => [51, 26, 5, 0],
                 ],
                 'views' => [
-                    'labels' => ['Search desktop 589', 'Maps desktop 522', 'Search mobile 283', 'Maps mobile 280'],
-                    'data' => [589, 522, 283, 280],
+                    'labels' => ['Maps desktop 82', 'Search mobile 53', 'Maps mobile 38', 'Search desktop 34'],
+                    'data' => [82, 53, 38, 34],
                 ],
             ],
             'sources' => [

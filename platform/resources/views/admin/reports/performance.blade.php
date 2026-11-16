@@ -46,10 +46,10 @@
                 <small>Active users · Oct 19 – Nov 15</small>
             </article>
             <article class="perf-gain">
-                <span>GBP profile views</span>
-                <b data-count="1674">1,674</b>
-                <em>333 asked for directions</em>
-                <small>May – Oct · about 1 in 3 viewers acted</small>
+                <span>GBP interactions</span>
+                <b data-count="82">82</b>
+                <em>51 asked for directions</em>
+                <small>Oct 19 – Nov 13 · up 52%</small>
             </article>
             <article class="perf-gain">
                 <span>Brand query clicks</span>
@@ -60,7 +60,7 @@
         </div>
         <div class="perf-callout">
             <strong>Client takeaway:</strong>
-            Search clicks rose 35% and impressions slipped 4%. The homepage still takes almost every click. Analytics jumped again, and about 99% of sessions still came from t.co. Facebook’s 12 posts drew 1,122 views, down from 1,608, while Instagram rose to 529 views.
+            Search clicks rose 35% and impressions slipped 4%. The homepage still takes almost every click. Analytics jumped again, and about 99% of sessions still came from t.co. On the listing, interactions rose 52% even though views slipped 5%. Facebook’s 12 posts drew 1,122 views, while Instagram rose to 529.
         </div>
         <div class="perf-stories">
             <article>
@@ -69,7 +69,7 @@
             </article>
             <article>
                 <h3>Local presence</h3>
-                <p>From May through October the Tomball listing was viewed <strong>1,674 times</strong>. <strong>514 people acted</strong>, and <strong>333 of those actions were direction requests</strong> — someone asking Google how to get to the shop.</p>
+                <p>From Oct 19 to Nov 13 the Tomball listing was viewed <strong>207 times, down 5%</strong>. <strong>82 people acted, up 52%</strong>, and <strong>51 of those actions were direction requests</strong>.</p>
             </article>
             <article>
                 <h3>Brand ownership</h3>
@@ -80,67 +80,66 @@
 
     <section class="perf-section" id="gbp">
         <p class="perf-kicker">Google Business Profile</p>
-        <h2>People who find the listing try to get to the shop</h2>
-        <p class="perf-lead">From May through October the Tomball profile was viewed <strong>1,674 times</strong>. <strong>514 people did something with it — about 1 in 3.</strong> Direction requests were <strong>333</strong>, about 2 in 3 of every action. Another <strong>49 called</strong> straight from the listing and <strong>127 clicked through</strong> to the website.</p>
+        <h2>Fewer people saw it. More of them acted.</h2>
+        <p class="perf-lead">From Oct 19 to Nov 13 the Tomball profile was viewed <strong>207 times, down 5%</strong>. <strong>82 people did something with it, up 52% from 54</strong> — about 2 in 5 viewers. Direction requests were <strong>51</strong>. Another <strong>26 clicked through</strong> to the website and <strong>5 called</strong>. Messaging was 0.</p>
         <div class="perf-compare">
-            <div><span>Profile views</span><b>1,674</b><em>May – Oct 2026</em></div>
-            <div><span>People who acted</span><b>514</b><em>About 1 in 3 viewers</em></div>
-            <div><span>Direction requests</span><b>333</b><em>About 2 in 3 of all actions</em></div>
+            <div><span>Profile views</span><b>207</b><em>↓ 5% · Oct 19 – Nov 13</em></div>
+            <div><span>People who acted</span><b>82</b><em>↑ 52% · about 2 in 5 viewers</em></div>
+            <div><span>Direction requests</span><b>51</b><em>62% of all actions</em></div>
         </div>
         <div class="perf-split">
             <div class="panel">
                 <h3>What people did</h3>
-                <p class="perf-sub">{{ $perf['meta']['gbp_window'] }} · 514 actions · Source: Business Profile</p>
+                <p class="perf-sub">{{ $perf['meta']['gbp_window'] }} · 82 actions · Source: Business Profile</p>
                 <div class="perf-chart tall"><canvas id="gbpChart"></canvas></div>
             </div>
             <div class="panel">
                 <h3>Action breakdown</h3>
                 <p class="perf-sub">Directions first, then the website, then the phone</p>
                 <div class="perf-metrics">
-                    <div><span>Direction requests</span><strong>333 <small>65% of actions</small></strong></div>
-                    <div><span>Website clicks</span><strong>127</strong></div>
-                    <div><span>Phone calls</span><strong>49</strong></div>
-                    <div><span>Chat clicks</span><strong>5</strong></div>
-                    <div><span>Actions per 100 views</span><strong>31</strong></div>
+                    <div><span>Direction requests</span><strong>51 <small>62% of actions</small></strong></div>
+                    <div><span>Website clicks</span><strong>26</strong></div>
+                    <div><span>Phone calls</span><strong>5 <small>3 on Wednesday</small></strong></div>
+                    <div><span>Messages</span><strong>0</strong></div>
+                    <div><span>Actions per 100 views</span><strong>40</strong></div>
                 </div>
             </div>
         </div>
         <div class="perf-split">
             <div class="panel">
                 <h3>Where views came from</h3>
-                <p class="perf-sub">1,674 views · Search 872 · Maps 802</p>
+                <p class="perf-sub">207 views · Search 87, down 32% · Maps 120, up 32%</p>
                 <div class="perf-chart"><canvas id="gbpViewsMixChart"></canvas></div>
             </div>
             <div class="panel">
                 <h3>Discovery mix</h3>
-                <p class="perf-sub">Maps is almost half of how people find the shop</p>
+                <p class="perf-sub">Change versus the previous period</p>
                 <div class="perf-metrics">
-                    <div><span>Search · Desktop</span><strong>589 <small>35%</small></strong></div>
-                    <div><span>Maps · Desktop</span><strong>522 <small>31%</small></strong></div>
-                    <div><span>Search · Mobile</span><strong>283 <small>17%</small></strong></div>
-                    <div><span>Maps · Mobile</span><strong>280 <small>17%</small></strong></div>
-                    <div><span>Maps, desktop and mobile</span><strong>802 <small>48% of views</small></strong></div>
+                    <div><span>Maps · Desktop</span><strong>82 <small>↑ 41%</small></strong></div>
+                    <div><span>Search · Mobile</span><strong>53 <small>↑ 56%</small></strong></div>
+                    <div><span>Maps · Mobile</span><strong>38 <small>↑ 15%</small></strong></div>
+                    <div><span>Search · Desktop</span><strong>34 <small>↓ 64%</small></strong></div>
+                    <div><span>Maps, desktop and mobile</span><strong>120 <small>↑ 32% · 58% of views</small></strong></div>
                 </div>
             </div>
         </div>
         <div class="perf-split">
             <div class="panel">
-                <h3>Searches that showed the listing</h3>
-                <p class="perf-sub">Google’s counted terms · May – Oct</p>
+                <h3>The rating</h3>
+                <p class="perf-sub">Shown on the profile · this window’s insights card is separate</p>
                 <div class="perf-metrics">
-                    <div><span>core four roofing</span><strong>25 <small>the brand</small></strong></div>
-                    <div><span>roofers cypress tx</span><strong>24 <small>a city search, not the name</small></strong></div>
-                    <div><span>Shop address in Tomball</span><strong>&lt; 15</strong></div>
-                    <div><span>best roofing company 77070</span><strong>&lt; 15</strong></div>
-                    <div><span>best roofing company 77373</span><strong>&lt; 15</strong></div>
+                    <div><span>Profile rating</span><strong>4.9 <small>108 reviews</small></strong></div>
+                    <div><span>New reviews</span><strong>9+ <small>on the profile</small></strong></div>
+                    <div><span>Insights average</span><strong>5 <small>↑ 5 this window</small></strong></div>
+                    <div><span>Calls</span><strong>5 <small>Wednesday 3 · Tuesday 1 · Friday 1</small></strong></div>
                 </div>
             </div>
             <div class="panel">
                 <h3>What this means</h3>
-                <p class="perf-sub">The listing is doing the job of a storefront</p>
+                <p class="perf-sub">A smaller audience did more with the listing</p>
                 <div class="perf-callout" style="margin-top:0.25rem">
                     <strong>Client takeaway:</strong>
-                    About 1 in 3 people who saw the profile took an action, and most of those actions were direction requests. “roofers cypress tx” showed the listing 24 times — one shy of the brand search. People are finding Core Four when they look for a roofer, not only when they already know the name. This section is still the May–October pull. November is not in it.
+                    Views slipped 5%, and interactions rose 52%. About 2 in 5 people who saw the profile took an action, and 51 of those 82 actions were direction requests. Maps views rose 32% while search views fell 32%, mostly because desktop search dropped. The profile shows 4.9 from 108 reviews.
                 </div>
             </div>
         </div>
@@ -396,7 +395,7 @@
         <div class="perf-stories">
             <article>
                 <h3>Double down on Maps</h3>
-                <p>Maps already accounts for 802 of 1,674 listing views, and direction requests are the main action at 333 since May. Photos, posts, and review replies are what keep that path full.</p>
+                <p>Maps accounts for 120 of 207 listing views in this window, up 32%, and 51 of the 82 actions were direction requests. Photos, posts, and review replies are what keep that path full.</p>
             </article>
             <article>
                 <h3>Activate city landings</h3>
@@ -409,7 +408,7 @@
         </div>
         <div class="perf-callout">
             <strong>Next move:</strong>
-            Paid residential leads for tile, stone-coated steel, metal, and slate homeowners are on the <a href="{{ route('admin.ads') }}">ads plan</a>. Protecting the 5.0★ listing while asking every finished job for a review is on <a href="{{ route('admin.reviews.index') }}">Review Shield</a>.
+            Paid residential leads for tile, stone-coated steel, metal, and slate homeowners are on the <a href="{{ route('admin.ads') }}">ads plan</a>. The listing is 4.9 from 108 reviews. Asking every finished job for a review is on <a href="{{ route('admin.reviews.index') }}">Review Shield</a>.
         </div>
     </section>
 
