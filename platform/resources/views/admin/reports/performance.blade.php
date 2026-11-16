@@ -35,9 +35,9 @@
         <div class="perf-gains">
             <article class="perf-gain">
                 <span>Facebook post views</span>
-                <b>1,608</b>
-                <em>12 posts · 58 clicks</em>
-                <small>Sep 21 – Oct 18 · Meta post export</small>
+                <b>1,122</b>
+                <em>12 posts · 29 clicks</em>
+                <small>Oct 19 – Nov 14 · Meta post export</small>
             </article>
             <article class="perf-gain">
                 <span>Website visitors gained</span>
@@ -60,12 +60,12 @@
         </div>
         <div class="perf-callout">
             <strong>Client takeaway:</strong>
-            Search clicks rose 35% and impressions slipped 4%. The homepage still takes almost every click. Analytics jumped again, and about 99% of sessions still came from t.co. Facebook in this report is still the Sep 21 – Oct 18 export.
+            Search clicks rose 35% and impressions slipped 4%. The homepage still takes almost every click. Analytics jumped again, and about 99% of sessions still came from t.co. Facebook’s 12 posts drew 1,122 views, down from 1,608, while Instagram rose to 529 views.
         </div>
         <div class="perf-stories">
             <article>
                 <h3>Social discovery</h3>
-                <p><strong>1,608</strong> Facebook views and <strong>58 clicks</strong> across 12 posts. That is quieter than the 3,212 views in the Aug 28 – Sep 21 window. Instagram added <strong>367 views</strong>.</p>
+                <p><strong>1,122</strong> Facebook views and <strong>29 clicks</strong> across 12 posts. That is quieter than the 1,608 views and 58 clicks in the Sep 21 – Oct 18 window. Instagram rose to <strong>529 views</strong>.</p>
             </article>
             <article>
                 <h3>Local presence</h3>
@@ -199,45 +199,45 @@
 
     <section class="perf-section" id="facebook">
         <p class="perf-kicker">Facebook &amp; Instagram · Meta</p>
-        <h2>Twelve posts, one house out in front</h2>
-        <p class="perf-lead">From Sep 21 to Oct 18, Core Four published <strong>12 Facebook posts</strong> with <strong>1,608 views</strong>, <strong>976 reach</strong>, and <strong>58 clicks</strong>. That is below the prior window’s 3,212 views and 178 clicks. The Oct 2 residential project — open deck through the finished aerial — did the heavy lifting. This social section is still that export. The connected Facebook account does not manage the Core Four page.</p>
+        <h2>Twelve posts, one commercial plan out in front</h2>
+        <p class="perf-lead">From Oct 19 to Nov 14, Core Four published <strong>12 Facebook posts</strong> with <strong>1,122 views</strong>, <strong>608 reach</strong>, and <strong>29 clicks</strong>. That is below the prior window’s 1,608 views and 58 clicks. The Oct 30 post — a commercial roof treated as a long-term property asset — did the heavy lifting.</p>
         <div class="perf-compare">
-            <div><span>Post views</span><b>1,608</b><em>12 photo posts · Sep 21 – Oct 18</em></div>
-            <div><span>Reach</span><b>976</b><em>Lifetime reach on those posts</em></div>
-            <div><span>Clicks on posts</span><b>58</b><em>34 of them on the Oct 2 house</em></div>
+            <div><span>Post views</span><b>1,122</b><em>12 photo posts · Oct 19 – Nov 14</em></div>
+            <div><span>Reach</span><b>608</b><em>Lifetime reach on those posts</em></div>
+            <div><span>Clicks on posts</span><b>29</b><em>10 of them on the Oct 30 post</em></div>
         </div>
         <div class="perf-callout">
             <strong>Why this matters:</strong>
-            The page kept a steady photo cadence, about every other day. Views concentrated on finished work. The Oct 2 house earned 424 views. The next post, on Oct 9, earned 177.
+            The page kept a photo cadence of about every other day. The Oct 30 commercial-planning post earned 347 views. The next post, on Oct 25, earned 112.
         </div>
         <div class="perf-split">
             <div class="panel">
                 <h3>Views by post</h3>
-                <p class="perf-sub">Sep 21 – Oct 18 · Lifetime views · Source: Meta post export</p>
+                <p class="perf-sub">Oct 19 – Nov 14 · Lifetime views · Source: Meta post export</p>
                 <div class="perf-chart tall"><canvas id="fbViewsChart"></canvas></div>
             </div>
             <div class="panel">
                 <h3>Latest window snapshot</h3>
-                <p class="perf-sub">Facebook posts published Sep 21 – Oct 17</p>
+                <p class="perf-sub">Facebook posts published Oct 19 – Nov 14</p>
                 <div class="perf-metrics">
                     <div><span>Posts published</span><strong>12</strong></div>
-                    <div><span>Post reach</span><strong>976</strong></div>
-                    <div><span>Reactions</span><strong>34</strong></div>
+                    <div><span>Post reach</span><strong>608</strong></div>
+                    <div><span>Reactions</span><strong>26</strong></div>
                     <div><span>Comments</span><strong>3</strong></div>
-                    <div><span>Shares</span><strong>0</strong></div>
+                    <div><span>Shares</span><strong>2</strong></div>
                 </div>
             </div>
         </div>
         <div class="perf-split">
             <div class="panel">
                 <h3>Engagement mix</h3>
-                <p class="perf-sub">Sep 21 – Oct 18 Facebook posts</p>
+                <p class="perf-sub">Oct 19 – Nov 14 Facebook posts</p>
                 <div class="perf-metrics">
-                    <div><span>Reactions</span><strong>34</strong></div>
+                    <div><span>Reactions</span><strong>26</strong></div>
                     <div><span>Comments</span><strong>3</strong></div>
-                    <div><span>Shares</span><strong>0</strong></div>
-                    <div><span>Link / photo clicks</span><strong>58</strong></div>
-                    <div><span>Prior window post views</span><strong>3,212 <small>Aug 28 – Sep 21</small></strong></div>
+                    <div><span>Shares</span><strong>2</strong></div>
+                    <div><span>Link / photo clicks</span><strong>29</strong></div>
+                    <div><span>Prior window post views</span><strong>1,608 <small>Sep 21 – Oct 18</small></strong></div>
                 </div>
             </div>
             <div class="panel">
@@ -256,40 +256,40 @@
                 </table>
                 <div class="perf-callout" style="margin-top:1.1rem">
                     <strong>Content win:</strong>
-                    The Oct 2 house is the standout — 424 views and 34 clicks. The in-progress deck and the finished aerial did more than the surrounding posts combined.
+                    The Oct 30 commercial-planning post is the standout — 347 views and 10 clicks. The Oct 25 repair post was next, at 112 views.
                 </div>
             </div>
         </div>
         <div class="perf-split">
             <div class="panel">
                 <h3>Instagram · same window</h3>
-                <p class="perf-sub">Sep 21 – Oct 18 · 12 posts · Source: Meta IG insights</p>
+                <p class="perf-sub">Oct 19 – Nov 14 · 12 posts · Source: Meta IG insights</p>
                 <div class="perf-chart"><canvas id="igReachChart"></canvas></div>
             </div>
             <div class="panel">
                 <h3>Instagram snapshot</h3>
                 <p class="perf-sub">Cross-posted project content picking up a second audience</p>
                 <div class="perf-metrics">
-                    <div><span>IG views</span><strong>367</strong></div>
-                    <div><span>IG reach</span><strong>189</strong></div>
-                    <div><span>Likes</span><strong>30</strong></div>
-                    <div><span>Comments</span><strong>2</strong></div>
-                    <div><span>Top IG post</span><strong>85 <small>Oct 2 carousel</small></strong></div>
+                    <div><span>IG views</span><strong>529</strong></div>
+                    <div><span>IG reach</span><strong>345</strong></div>
+                    <div><span>Likes</span><strong>25</strong></div>
+                    <div><span>Comments</span><strong>4</strong></div>
+                    <div><span>Top IG post</span><strong>199 <small>Oct 30 commercial plan</small></strong></div>
                 </div>
             </div>
         </div>
         <div class="perf-stories">
             <article>
                 <h3>YTD awareness</h3>
-                <p>Through Sep 21 the page total stood at <strong>35.1K</strong> views. This export is lifetime views on the 12 new posts, <strong>1,608</strong>, not a new page-wide year-to-date.</p>
+                <p>Through Sep 21 the page total stood at <strong>35.1K</strong> views. This export is lifetime views on the 12 new posts, <strong>1,122</strong>, not a new page-wide year-to-date.</p>
             </article>
             <article>
                 <h3>Clicks, not just likes</h3>
-                <p><strong>58 clicks</strong> still beat the 34 reactions. Most of those clicks sat on the Oct 2 house.</p>
+                <p><strong>29 clicks</strong> still beat the 26 reactions. Ten of those clicks sat on the Oct 30 post.</p>
             </article>
             <article>
                 <h3>Photos still win</h3>
-                <p>All 12 Facebook posts were photos. The matching Instagram posts added 367 views, led by the same Oct 2 carousel at 85.</p>
+                <p>All 12 Facebook posts were photos. The matching Instagram posts added 529 views, led by the same Oct 30 post at 199. Veterans Day was next on Instagram, at 125.</p>
             </article>
         </div>
     </section>

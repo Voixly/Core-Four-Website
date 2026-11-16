@@ -15,7 +15,7 @@ class PerformanceReport
 
     public string $gaWindow = 'Oct 19 – Nov 15, 2026';
 
-    public string $ytd = 'Search through Nov 14, 2026 · social still through Oct 18';
+    public string $ytd = 'Search and social through Nov 14, 2026';
 
     public string $prepared = 'Nov 16, 2026';
 
@@ -142,11 +142,11 @@ class PerformanceReport
     public function posts(): array
     {
         return [
-            ['posted' => 'Oct 2', 'theme' => 'Large home, from open deck to the aerial', 'views' => 424, 'engagement' => 9],
-            ['posted' => 'Oct 9', 'theme' => 'How the roof reads from the street', 'views' => 177, 'engagement' => 5],
-            ['posted' => 'Sep 23', 'theme' => 'Telehandler on a big residential roof', 'views' => 154, 'engagement' => 2],
-            ['posted' => 'Oct 11', 'theme' => 'Dealership roof, finished white', 'views' => 128, 'engagement' => 4],
-            ['posted' => 'Sep 30', 'theme' => 'Roofing around an open business', 'views' => 112, 'engagement' => 3],
+            ['posted' => 'Oct 30', 'theme' => 'A commercial roof as a long-term property asset', 'views' => 347, 'engagement' => 8],
+            ['posted' => 'Oct 25', 'theme' => 'How a commercial repair meets the existing roof', 'views' => 112, 'engagement' => 1],
+            ['posted' => 'Oct 21', 'theme' => 'What sits under a residential roof', 'views' => 104, 'engagement' => 3],
+            ['posted' => 'Oct 28', 'theme' => 'Checking a roof after severe weather', 'views' => 79, 'engagement' => 2],
+            ['posted' => 'Oct 23', 'theme' => 'Roofing an outdoor structure', 'views' => 78, 'engagement' => 4],
         ];
     }
 
@@ -287,14 +287,14 @@ class PerformanceReport
                 'data' => [54, 3, 2, 1, 1, 1],
             ],
             'facebook' => [
-                ['d' => 'Sep 21', 'v' => 95], ['d' => 'Sep 23', 'v' => 154], ['d' => 'Sep 25', 'v' => 112],
-                ['d' => 'Sep 28', 'v' => 104], ['d' => 'Sep 30', 'v' => 112], ['d' => 'Oct 2', 'v' => 424],
-                ['d' => 'Oct 8', 'v' => 72], ['d' => 'Oct 9', 'v' => 177], ['d' => 'Oct 10', 'v' => 85],
-                ['d' => 'Oct 11', 'v' => 128], ['d' => 'Oct 14', 'v' => 107], ['d' => 'Oct 17', 'v' => 38],
+                ['d' => 'Oct 19', 'v' => 70], ['d' => 'Oct 21', 'v' => 104], ['d' => 'Oct 23', 'v' => 78],
+                ['d' => 'Oct 25', 'v' => 112], ['d' => 'Oct 28', 'v' => 79], ['d' => 'Oct 30', 'v' => 347],
+                ['d' => 'Nov 4', 'v' => 75], ['d' => 'Nov 6', 'v' => 63], ['d' => 'Nov 7', 'v' => 66],
+                ['d' => 'Nov 9', 'v' => 70], ['d' => 'Nov 11', 'v' => 31], ['d' => 'Nov 14', 'v' => 27],
             ],
             'instagram' => [
-                'labels' => ['Sep 21', 'Sep 23', 'Sep 25', 'Sep 28', 'Sep 30', 'Oct 2', 'Oct 8', 'Oct 9', 'Oct 10', 'Oct 11', 'Oct 14', 'Oct 17'],
-                'data' => [26, 30, 28, 19, 27, 85, 16, 30, 27, 52, 17, 10],
+                'labels' => ['Oct 19', 'Oct 21', 'Oct 23', 'Oct 25', 'Oct 28', 'Oct 30', 'Nov 4', 'Nov 6', 'Nov 7', 'Nov 9', 'Nov 11', 'Nov 14'],
+                'data' => [35, 24, 31, 32, 12, 199, 10, 18, 19, 17, 125, 7],
             ],
         ];
     }

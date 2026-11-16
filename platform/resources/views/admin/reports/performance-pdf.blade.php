@@ -54,16 +54,16 @@
         <p>Since analytics and local optimization went live mid-May, Core Four Roofing built a measurable digital footprint — across Maps, Search, the website, and Facebook brand discovery.</p>
         <table class="cards">
             <tr>
-                <td><div class="k">Facebook post views</div><div class="v">1,608</div><div class="d">12 posts · Sep 21 – Oct 18</div></td>
+                <td><div class="k">Facebook post views</div><div class="v">1,122</div><div class="d">12 posts · Oct 19 – Nov 14</div></td>
                 <td><div class="k">Website active users</div><div class="v">84,846</div><div class="d">99% of sessions from t.co</div></td>
                 <td><div class="k">GBP profile views</div><div class="v">1,674</div><div class="d">333 direction requests · May – Oct</div></td>
                 <td><div class="k">Brand query clicks</div><div class="v">34</div><div class="d">+42% · Oct 19 – Nov 14</div></td>
             </tr>
         </table>
-        <div class="callout"><strong>Client takeaway:</strong> Search clicks rose 35% and impressions slipped 4%. The homepage still takes almost every click. Analytics jumped again, and about 99% of sessions still came from t.co. Facebook in this report is still the Sep 21 – Oct 18 export.</div>
+        <div class="callout"><strong>Client takeaway:</strong> Search clicks rose 35% and impressions slipped 4%. The homepage still takes almost every click. Analytics jumped again, and about 99% of sessions still came from t.co. Facebook’s 12 posts drew 1,122 views, down from 1,608, while Instagram rose to 529 views.</div>
         <table class="split">
             <tr>
-                <td><div class="box"><h3>Social discovery</h3><p><strong>1,608</strong> Facebook views and <strong>58 clicks</strong> across 12 posts. Instagram added <strong>367</strong> views.</p></div></td>
+                <td><div class="box"><h3>Social discovery</h3><p><strong>1,122</strong> Facebook views and <strong>29 clicks</strong> across 12 posts. Instagram rose to <strong>529</strong> views.</p></div></td>
                 <td><div class="box"><h3>Local presence</h3><p>From May through October the listing was viewed <strong>1,674 times</strong>. <strong>514 people acted</strong>, and <strong>333</strong> of those actions were direction requests.</p></div></td>
             </tr>
         </table>
@@ -162,14 +162,14 @@
 
     <div class="section">
         <div class="kicker">Facebook &amp; Instagram · Meta</div>
-        <h2>Twelve posts, one house out in front</h2>
-        <p>From Sep 21 to Oct 18, 12 Facebook posts added <strong>1,608 views</strong>, <strong>976 reach</strong>, and <strong>58 clicks</strong>. That is below the prior window’s 3,212 views and 178 clicks. Instagram added <strong>367 views</strong> and <strong>189 reach</strong>. This social section is still that export. The connected Facebook account does not manage the Core Four page.</p>
+        <h2>Twelve posts, one commercial plan out in front</h2>
+        <p>From Oct 19 to Nov 14, 12 Facebook posts added <strong>1,122 views</strong>, <strong>608 reach</strong>, and <strong>29 clicks</strong>. That is below the prior window’s 1,608 views and 58 clicks. Instagram rose to <strong>529 views</strong> and <strong>345 reach</strong>.</p>
         <table class="cards">
             <tr>
-                <td><div class="k">Facebook post views</div><div class="v">1,608</div><div class="d">12 photo posts</div></td>
-                <td><div class="k">Reach</div><div class="v">976</div><div class="d">Lifetime on those posts</div></td>
-                <td><div class="k">Clicks on posts</div><div class="v">58</div><div class="d">34 on the Oct 2 house</div></td>
-                <td><div class="k">IG views / reach</div><div class="v">367 / 189</div><div class="d">12 IG posts</div></td>
+                <td><div class="k">Facebook post views</div><div class="v">1,122</div><div class="d">12 photo posts</div></td>
+                <td><div class="k">Reach</div><div class="v">608</div><div class="d">Lifetime on those posts</div></td>
+                <td><div class="k">Clicks on posts</div><div class="v">29</div><div class="d">10 on the Oct 30 post</div></td>
+                <td><div class="k">IG views / reach</div><div class="v">529 / 345</div><div class="d">12 IG posts</div></td>
             </tr>
         </table>
         <table class="split">
@@ -179,10 +179,10 @@
                         <h3>Latest Facebook window</h3>
                         <table class="row">
                             <tr><td>Posts published</td><td class="val">12</td></tr>
-                            <tr><td>Post reach</td><td class="val">976</td></tr>
-                            <tr><td>Reactions</td><td class="val">34</td></tr>
+                            <tr><td>Post reach</td><td class="val">608</td></tr>
+                            <tr><td>Reactions</td><td class="val">26</td></tr>
                             <tr><td>Comments</td><td class="val">3</td></tr>
-                            <tr><td>Shares</td><td class="val">0</td></tr>
+                            <tr><td>Shares</td><td class="val">2</td></tr>
                         </table>
                     </div>
                 </td>
@@ -190,17 +190,17 @@
                     <div class="box">
                         <h3>Instagram snapshot</h3>
                         <table class="row">
-                            <tr><td>Views</td><td class="val">367</td></tr>
-                            <tr><td>Reach</td><td class="val">189</td></tr>
-                            <tr><td>Likes</td><td class="val">30</td></tr>
-                            <tr><td>Comments</td><td class="val">2</td></tr>
-                            <tr><td>Top IG post (Oct 2 carousel)</td><td class="val">85</td></tr>
+                            <tr><td>Views</td><td class="val">529</td></tr>
+                            <tr><td>Reach</td><td class="val">345</td></tr>
+                            <tr><td>Likes</td><td class="val">25</td></tr>
+                            <tr><td>Comments</td><td class="val">4</td></tr>
+                            <tr><td>Top IG post (Oct 30)</td><td class="val">199</td></tr>
                         </table>
                     </div>
                 </td>
             </tr>
         </table>
-        <h3 style="margin-top:10px">Top posts, Sep 21 – Oct 18</h3>
+        <h3 style="margin-top:10px">Top posts, Oct 19 – Nov 14</h3>
         <table class="data">
             <tr><th>Posted</th><th>Theme</th><th class="num">Views</th><th class="num">Eng.</th></tr>
             @foreach($perf['posts'] as $post)
@@ -212,7 +212,7 @@
                 </tr>
             @endforeach
         </table>
-        <div class="callout"><strong>Content win:</strong> The Oct 2 house is the standout — 424 views and 34 clicks. The in-progress deck and the finished aerial did more than the surrounding posts combined.</div>
+        <div class="callout"><strong>Content win:</strong> The Oct 30 commercial-planning post is the standout — 347 views and 10 clicks. The Oct 25 repair post was next, at 112 views.</div>
     </div>
 
     <div class="section page-break">
